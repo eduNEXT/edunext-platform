@@ -130,7 +130,7 @@ class ResetPasswordTests(TestCase):
             If LMS tests print this message, that needs to be fixed.
         """)
     )
-    @patch('django.core.mail.send_mail')
+    @patch('mail.send_mail')
     @ddt.data((False, 'http://'), (True, 'https://'))
     @ddt.unpack
     def test_reset_password_email_https(self, is_secure, protocol, send_email):
