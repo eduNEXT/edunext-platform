@@ -94,6 +94,32 @@ CC_PROCESSOR = {
     }
 }
 
+########################### MICROSITES #################################
+
+MICROSITE_CONFIGURATION = {
+    "devsite": {
+        "domain_prefix": "devsite",
+        "university": "devsite",
+        "platform_name": "Development microsite",
+        "logo_image_url": "devsite/images/header-logo.png",
+        "email_from_address": "devsite@edunext.co",
+        "payment_support_email": "devsite@edunext.co",
+        "ENABLE_MKTG_SITE": False,
+        "SITE_NAME": "devsite.devstack",
+        "course_org_filter": "DevX",
+        "course_about_show_social_links": False,
+        "css_overrides_file": "devsite/css/microsite.css",
+        "show_partners": False,
+        "show_homepage_promo_video": False,
+        "course_index_overlay_text": "",
+        "course_index_overlay_logo_file": "devsite/images/header-logo.png",
+        "homepage_overlay_html": ""
+    }
+}
+
+MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
+FEATURES['USE_MICROSITES'] = True
+
 #####################################################################
 # See if the developer has any local overrides.
 try:
