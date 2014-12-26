@@ -723,6 +723,21 @@ def course_about(request, course_id):
 
 @ensure_csrf_cookie
 @cache_if_anonymous
+def mktg_dashboard(request):
+    """
+    This is the button that checks if we should redirect to dashboard or login
+    """
+    to_dashboard = False
+    if settings.COURSEWARE_ENABLED and request.user.is_authenticated():
+        to_dashboard = True
+
+    return render_to_response(
+        'courseware/mktg_dashboard.html', {'link_to_dashboard': to_dashboard}
+    )
+
+
+@ensure_csrf_cookie
+@cache_if_anonymous
 @verify_course_id
 def mktg_course_about(request, course_id):
     """
@@ -777,6 +792,7 @@ def mktg_course_about(request, course_id):
         # Just to be safe, reset the language if we forced it to be English.
         if force_english:
             translation.deactivate()
+
 
 @login_required
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
