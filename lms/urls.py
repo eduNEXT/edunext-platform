@@ -251,6 +251,8 @@ if settings.COURSEWARE_ENABLED:
         url(r'^courses/{}/mktg-about$'.format(settings.COURSE_ID_PATTERN),
             'courseware.views.mktg_course_about', name="mktg_about_course"),
         #View for mktg site
+        url(r'^mktg/dashboard$',
+            'courseware.views.mktg_dashboard', name="mktg_dashboard"),
         url(r'^mktg/{}/?$'.format(settings.COURSE_ID_PATTERN),
             'courseware.views.mktg_course_about', name="mktg_about_course"),
 
