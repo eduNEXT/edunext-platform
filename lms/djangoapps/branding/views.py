@@ -37,9 +37,10 @@ def index(request):
         'ENABLE_MKTG_SITE',
         settings.FEATURES.get('ENABLE_MKTG_SITE', False)
     )
-
+    mktg_urls = microsite.get_value('MKTG_URLS', settings.MKTG_URLS)
+    
     if enable_mktg_site:
-        return redirect(settings.MKTG_URLS.get('ROOT'))
+        return redirect(mktg_urls.get('ROOT'))
 
     domain = request.META.get('HTTP_HOST')
 

@@ -114,7 +114,36 @@ MICROSITE_CONFIGURATION = {
         "course_index_overlay_text": "",
         "course_index_overlay_logo_file": "devsite/images/header-logo.png",
         "homepage_overlay_html": ""
-    }
+    },
+    "devmktg": {
+        "domain_prefix": "devmktg",
+        "university": "devmktg",
+        "platform_name": "Development microsite",
+        "logo_image_url": "devmktg/images/header-logo.png",
+        "email_from_address": "devmktg@edunext.co",
+        "payment_support_email": "devmktg@edunext.co",
+        "SITE_NAME": "devmktg.devstack",
+        "course_org_filter": "DevX",
+        "course_about_show_social_links": False,
+        "css_overrides_file": "devmktg/css/microsite.css",
+        "show_partners": False,
+        "show_homepage_promo_video": False,
+        "course_index_overlay_text": "",
+        "course_index_overlay_logo_file": "devmktg/images/header-logo.png",
+        "homepage_overlay_html": "",
+        "ENABLE_MKTG_SITE": True,
+        "MKTG_URLS": {
+            'ABOUT': '/about-us',
+            'CONTACT': '/contact-us',
+            'FAQ': '/student-faq',
+            'COURSES': '/courses',
+            'ROOT': 'http://www.edunext.co',
+            'TOS': '/edx-terms-service',
+            'HONOR': '/terms',
+            'PRIVACY': '/edx-privacy-policy',
+            'WHAT_IS_VERIFIED_CERT': '/verified-certificate',
+        }
+    },
 }
 
 MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
