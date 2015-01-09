@@ -745,6 +745,12 @@ def change_enrollment(request, auto_register=False):
                     reverse("course_modes_choose", kwargs={'course_id': unicode(course_id)})
                 )
 
+            # If the only mode remaining is edunext-manual then redirect
+            if "manual" in available_modes:
+                return HttpResponse(
+                    reverse("course_modes_manual", kwargs={'course_id': unicode(course_id)})
+                )
+
             # Otherwise, there is only one mode available (the default)
             return HttpResponse()
 
@@ -761,6 +767,13 @@ def change_enrollment(request, auto_register=False):
                 )
 
             current_mode = available_modes[0]
+
+            # If the mode is edunext-manual redirect
+            if current_mode.slug == "manual":
+                return HttpResponse(
+                    reverse("course_modes_manual", kwargs={'course_id': unicode(course_id)})
+                )
+
             # only automatically enroll people if the only mode is 'honor'
             if current_mode.slug != 'honor':
                 return HttpResponse(
