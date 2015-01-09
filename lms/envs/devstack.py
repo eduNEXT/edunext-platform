@@ -16,6 +16,10 @@ SITE_NAME = 'localhost:8000'
 # By default don't use a worker, execute tasks as if they were local functions
 CELERY_ALWAYS_EAGER = True
 
+###############################LANG########################
+LANGUAGE_CODE = 'es-419'
+TIME_ZONE = 'America/Bogota'
+
 ################################ LOGGERS ######################################
 
 import logging
