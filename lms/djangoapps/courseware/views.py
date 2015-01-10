@@ -703,6 +703,12 @@ def course_about(request, course_id):
 
     is_shib_course = uses_shib(course)
 
+    # The default_mode is used for edunext-manual about pages
+    available_modes = CourseMode.modes_for_course(course.id)
+    default_mode = available_modes[0]
+    if len(available_modes) > 1:
+        default_mode = None
+
     return render_to_response('courseware/course_about.html', {
         'course': course,
         'staff_access': staff_access,
@@ -718,6 +724,7 @@ def course_about(request, course_id):
         'invitation_only': invitation_only,
         'active_reg_button': active_reg_button,
         'is_shib_course': is_shib_course,
+        'default_mode': default_mode,
     })
 
 

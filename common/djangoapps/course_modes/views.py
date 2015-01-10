@@ -10,8 +10,9 @@ from django.views.generic.base import View
 from django.utils.translation import ugettext as _
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from datetime import datetime
 
-from edxmako.shortcuts import render_to_response
+from edxmako.shortcuts import render_to_response, render_to_string
 
 from course_modes.models import CourseMode
 from courseware.access import has_access
@@ -19,6 +20,9 @@ from student.models import CourseEnrollment
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from xmodule.modulestore.django import modulestore
 
+from microsite_configuration import microsite
+from django.core.mail import send_mail
+from smtplib import SMTPException
 
 class ChooseModeView(View):
     """
@@ -140,9 +144,12 @@ class ChooseModeView(View):
         if requested_mode not in allowed_modes:
             return HttpResponseBadRequest(_("Enrollment mode not supported"))
 
-        if requested_mode in ("audit", "honor"):
+        if requested_mode in ("audit", "honor", "free"):
             CourseEnrollment.enroll(user, course_key, requested_mode)
             return redirect('dashboard')
+
+        if requested_mode == "manual":
+            return redirect('course_modes_manual', course_id=course_id)
 
         mode_info = allowed_modes[requested_mode]
 
@@ -175,9 +182,84 @@ class ChooseModeView(View):
         Given the request object of `user_choice`, return the
         corresponding course mode slug
         """
+        if 'manual_mode' in request_dict:
+            return 'manual'
+        if 'free_mode' in request_dict:
+            return 'free'
         if 'audit_mode' in request_dict:
             return 'audit'
         if 'certificate_mode' and request_dict.get("honor-code"):
             return 'honor'
         if 'certificate_mode' in request_dict:
             return 'verified'
+
+
+class ChosedManualView(View):
+    """
+    View used when the user chooses the manual mode
+
+    When a get request is used, shows the contact form.
+    When a post request is used, assumes that it is a form submission
+        from the contact page
+    """
+    @method_decorator(login_required)
+    def get(self, request, course_id, error=None):
+        """ Displays a contact form page """
+        course_key = SlashSeparatedCourseKey.from_deprecated_string(course_id)
+        enrollment_mode, is_active = CourseEnrollment.enrollment_mode_for_user(request.user, course_key)
+
+        # registered users do not need to re-register
+        if enrollment_mode is not None:
+            return redirect(reverse('dashboard'))
+
+        self.notify_course_support(request, course_id)
+
+        modes = CourseMode.modes_for_course_dict(course_key)
+        course = modulestore().get_course(course_key)
+        context = {
+            "course_id": course_id,
+            "modes": modes,
+            "course_name": course.display_name_with_default,
+            "course_org": course.display_org_with_default,
+            "course_num": course.display_number_with_default,
+            "error": error,
+        }
+
+        return render_to_response("course_modes/manual.html", context)
+
+    def notify_course_support(self, request, course_id):
+        """ Emails the course staff from the site/microsite """
+        to_address = microsite.get_value(
+            'registration_email',
+            'cursos@edunext.co'
+        )
+        site_name = microsite.get_value(
+            'platform_name',
+            'edunext'
+        )
+        user = request.user
+        time = datetime.now()
+        context = {
+            'user_name': user.username,
+            'user_realname': user.profile.name,
+            'user_email': user.email,
+            'course_id': course_id,
+            'site_name':site_name,
+            'to_address':to_address,
+            'time':time,
+        }
+
+        subject = render_to_string('emails/manual_registration_course_subject.txt', context)
+        subject = ''.join(subject.splitlines())
+        message = render_to_string('emails/manual_registration_course.txt', context)
+
+        try:
+            send_mail(
+                subject,
+                message,
+                'no-reply@edunext.co',
+                [to_address],
+                fail_silently=False
+            )
+        except SMTPException:
+            log.warning("Failure sending 'manual registration' e-mail for %s to %s at %s", user.email, to_address, course_id)
