@@ -56,6 +56,8 @@ urlpatterns = ('',  # nopep8
         name='auth_password_reset_complete'),
     url(r'^password_reset_done/$', django.contrib.auth.views.password_reset_done,
         name='auth_password_reset_done'),
+               
+    
 
     url(r'^heartbeat$', include('heartbeat.urls')),
 
@@ -64,6 +66,8 @@ urlpatterns = ('',  # nopep8
     url(r'^lang_pref/', include('lang_pref.urls')),
 
     url(r'^', include('waffle.urls')),
+    
+    url(r'^', include('edraak_i18n.urls')),
 
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
