@@ -10421,7 +10421,7 @@ msgstr "Este enlace abrirá/descargará un documento PDF"
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Download Your {cert_name_short} (PDF)"
-msgstr "Descargue se {cert_name_short} (PDF)"
+msgstr "Descargue su {cert_name_short} (PDF)"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid ""
