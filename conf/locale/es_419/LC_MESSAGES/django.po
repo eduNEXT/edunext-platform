@@ -7190,7 +7190,7 @@ msgstr "Administrador"
 #: cms/templates/manage_users.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Staff"
-msgstr ""
+msgstr "Equipo"
 
 #: cms/templates/register.html cms/templates/widgets/header.html
 #: lms/templates/index.html
@@ -7645,7 +7645,7 @@ msgstr "editar"
 #. their edX account.
 #: lms/templates/dashboard.html
 msgid "Connected Accounts"
-msgstr ""
+msgstr "Cuentas"
 
 #: lms/templates/dashboard.html
 msgid "Linked"
@@ -8790,7 +8790,7 @@ msgstr "Nombre para mostrar:"
 
 #: lms/templates/register.html
 msgid "Additional Personal Information"
-msgstr ""
+msgstr "Información personal adicional"
 
 #: lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -10765,23 +10765,23 @@ msgstr "Buscar todas las publicaciones"
 #. Translators: This labels a filter menu in forum navigation
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Filter:"
-msgstr ""
+msgstr "Filtro:"
 
 #. Translators: This is a menu option for showing all forum threads unfiltered
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Show all"
-msgstr ""
+msgstr "Mostrar todos"
 
 #. Translators: This is a menu option for showing only unread forum threads
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Unread"
-msgstr ""
+msgstr "No leidos"
 
 #. Translators: This is a menu option for showing only forum threads flagged
 #. for abuse
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Flagged"
-msgstr ""
+msgstr "Reportados"
 
 #. Translators: This labels a cohort menu in forum navigation
 #: lms/templates/discussion/_thread_list_template.html
@@ -10838,7 +10838,7 @@ msgstr "Contraer discusión"
 #. has passed since the post was created (e.g. "4 hours ago")
 #: lms/templates/discussion/_underscore_templates.html
 msgid "{post_type} posted {time_ago} by {author}"
-msgstr ""
+msgstr "{post_type} publicada {time_ago} por {author}"
 
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
@@ -10849,7 +10849,7 @@ msgstr "Marcado"
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Reported"
-msgstr ""
+msgstr "Reportado"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "(this post is about %(courseware_title_linked)s)"
@@ -10875,7 +10875,7 @@ msgstr "Actualizar entrada"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Show Comments (%(num_comments)s)"
-msgstr ""
+msgstr "Mostrar comentarios (%(num_comments)s)"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Add a comment"
@@ -10887,19 +10887,19 @@ msgstr "Añadir un comentario..."
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "marked as answer %(time_ago)s by %(user)s"
-msgstr ""
+msgstr "marcada como respuesta %(time_ago)s por %(user)s"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "marked as answer %(time_ago)s"
-msgstr ""
+msgstr "marcada como respuesta %(time_ago)s"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "endorsed %(time_ago)s by %(user)s"
-msgstr ""
+msgstr "respaldada %(time_ago)s por %(user)s"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "endorsed %(time_ago)s"
-msgstr ""
+msgstr "respaldada %(time_ago)s"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Editing response"
@@ -10911,7 +10911,7 @@ msgstr "Actualizar respuesta"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "posted %(time_ago)s by %(author)s"
-msgstr ""
+msgstr "publicada %(time_ago)s por %(author)s"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Editing comment"
@@ -10923,15 +10923,15 @@ msgstr "Actualizar comentario"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "discussion"
-msgstr ""
+msgstr "discusión"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "answered question"
-msgstr ""
+msgstr "pregunta resuelta"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "unanswered question"
-msgstr ""
+msgstr "pregunta no resuelta"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "By: Staff"
@@ -11018,38 +11018,39 @@ msgstr ""
 #. select a forum post type
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Post type:"
-msgstr ""
+msgstr "Tipo de publicación:"
 
 #. Translators: This is a forum post type
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Question"
-msgstr ""
+msgstr "Pregunta"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid ""
 "Questions raise issues that need answers. Discussions share ideas and start "
 "conversations."
-msgstr ""
+msgstr "Las preguntas buscan obtener una respuesta. Las discusiones comparten ideas y dan inicio a "
+"conversaciones."
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Topic Area:"
-msgstr ""
+msgstr "Tema:"
 
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Filter topics"
-msgstr ""
+msgstr "Filtrar temas"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Add your post to a relevant topic to help others find it."
-msgstr ""
+msgstr "Selecciona un tema relevante para que otros puedan encontrar tu publicación más fácilmente."
 
 #. Translators: This labels the selector for which group of students can view
 #. a
 #. post
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Visible To:"
-msgstr ""
+msgstr "Visible para:"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "All Groups"
@@ -11063,11 +11064,11 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Title:"
-msgstr ""
+msgstr "Título:"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Add a clear and descriptive title to encourage participation."
-msgstr ""
+msgstr "Añade un título claro y descriptivo para fomentar la participación."
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Enter your question or comment…"
@@ -11087,63 +11088,63 @@ msgstr "publicar anónimamente a mis compañeros de curso"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Add Post"
-msgstr ""
+msgstr "Publicar"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Endorse"
-msgstr ""
+msgstr "Respaldar"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Unendorse"
-msgstr ""
+msgstr "Dejar de respaldar"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Mark as Answer"
-msgstr ""
+msgstr "Marcar como respuesta"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Unmark as Answer"
-msgstr ""
+msgstr "Desmarcar como respuesta"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Follow"
-msgstr ""
+msgstr "Seguir"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Unfollow"
-msgstr ""
+msgstr "Dejar de seguir"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Vote"
-msgstr ""
+msgstr "Votar"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Report abuse"
-msgstr ""
+msgstr "Reportar abuso"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Report"
-msgstr ""
+msgstr "Reportar"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Unreport"
-msgstr ""
+msgstr "Borrar el reporte"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Pin"
-msgstr ""
+msgstr "Agregar pin"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Unpin"
-msgstr ""
+msgstr "Quitar pin"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Open"
-msgstr ""
+msgstr "Abrir"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "More"
-msgstr ""
+msgstr "Más opciones"
 
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
