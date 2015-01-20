@@ -10718,7 +10718,7 @@ msgstr "Temas de discusión; la selección actual es: "
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Search all posts"
-msgstr "Buscar todas las publicaciones"
+msgstr "Buscar todos"
 
 #. Translators: This labels a filter menu in forum navigation
 #: lms/templates/discussion/_thread_list_template.html
@@ -10971,7 +10971,7 @@ msgstr ""
 #. select a forum post type
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Post type:"
-msgstr "Tipo de publicación:"
+msgstr "Tipo:"
 
 #. Translators: This is a forum post type
 #: lms/templates/discussion/_underscore_templates.html
