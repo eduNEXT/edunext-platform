@@ -10888,11 +10888,11 @@ msgstr "pregunta no resuelta"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "By: Staff"
-msgstr "Por: equipo"
+msgstr "Por: Moderador"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "By: Community TA"
-msgstr "Por: Profesores asistentes de la comunidad"
+msgstr "Por: Tutor asistente"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "%(votes_up_count)s%(span_sr_open)s votes %(span_close)s"
@@ -11806,7 +11806,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Download profile information as a CSV"
-msgstr "Descargar la informaicón de perfíl como archivo CSV"
+msgstr "Descargar la información de perfíl como archivo CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid ""
