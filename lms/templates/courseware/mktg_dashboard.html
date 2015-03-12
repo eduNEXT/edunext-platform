@@ -1,0 +1,34 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%!
+  from django.core.urlresolvers import reverse
+  from courseware.courses import course_image_url, get_course_about_section
+%>
+<%namespace name='static' file='../static_content.html'/>
+
+<%inherit file="../mktg_iframe.html" />
+
+<%block name="pagetitle">${_("About {course_id}").format(course_id=course_id)}</%block>
+
+<%block name="bodyclass">view-iframe-content view-partial-mktgregister</%block>
+
+
+<%block name="headextra">
+  <%include file="../google_analytics.html" />
+</%block>
+
+<%block name="content">
+
+  <script src="${static.url('js/course_info.js')}"></script>
+
+
+  <ul class="list-actions register">
+    <li class="item">
+    % if link_to_dashboard:
+      <a class="action access-courseware" href="/dashboard">${_("Dashboard")}</a>
+    % else:
+      <a class="action action-register" href="/login">${_("Log in")}</a>
+    % endif
+    </li>
+  </ul>
+
+</%block>
