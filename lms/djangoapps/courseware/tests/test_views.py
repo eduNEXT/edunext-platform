@@ -367,6 +367,15 @@ class ViewsTestCase(TestCase):
         response = self._load_mktg_about(language='eo')
         self.assertContains(response, u"Énröll ïn".encode('utf-8'))
 
+    # TODO: fmo | decide how can we test the new behavior using the public edraak lang force
+    # @patch.dict(settings.FEATURES, {'IS_EDX_DOMAIN': False})
+    # def test_mktg_about_language_openedx(self):
+    #     # If we're in an OpenEdX installation,
+    #     # may want to support languages other than English,
+    #     # so respect the language code.
+    #     response = self._load_mktg_about(language='eo')
+    #     self.assertContains(response, u"Régïstér för".encode('utf-8'))
+
     def test_submission_history_accepts_valid_ids(self):
         # log into a staff account
         admin = AdminFactory()

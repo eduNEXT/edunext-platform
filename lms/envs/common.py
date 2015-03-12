@@ -731,7 +731,7 @@ FAVICON_PATH = 'images/favicon.ico'
 
 # Locale/Internationalization
 TIME_ZONE = 'America/New_York'  # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-LANGUAGE_CODE = 'en'  # http://www.i18nguy.com/unicode/language-identifiers.html
+LANGUAGE_CODE = 'es-419'  # http://www.i18nguy.com/unicode/language-identifiers.html
 # these languages display right to left
 LANGUAGES_BIDI = ("en@rtl", "he", "ar", "fa", "ur", "fa-ir")
 
@@ -985,7 +985,11 @@ MIDDLEWARE_CLASSES = (
     'track.middleware.TrackMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'splash.middleware.SplashMiddleware',
-
+    
+    # Make One language the default one
+    'edraak_i18n.middleware.ForceLangMiddleware',
+    'edraak_i18n.middleware.SessionBasedLocaleMiddleware',
+    
     # Allows us to dark-launch particular languages
     'dark_lang.middleware.DarkLangMiddleware',
     'geoinfo.middleware.CountryMiddleware',
@@ -1611,6 +1615,9 @@ INSTALLED_APPS = (
     'survey',
 
     'lms.djangoapps.lms_xblock',
+    
+    # eduNEXT modules
+    'edraak_i18n'
 )
 
 ######################### MARKETING SITE ###############################

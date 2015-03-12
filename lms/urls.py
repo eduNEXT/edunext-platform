@@ -66,6 +66,8 @@ urlpatterns = ('',  # nopep8
 
     url(r'^lang_pref/', include('lang_pref.urls')),
 
+    url(r'^', include('edraak_i18n.urls')),
+
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
     url(r'^embargo$', 'student.views.embargo', name="embargo"),
