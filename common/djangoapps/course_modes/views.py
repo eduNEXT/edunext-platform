@@ -229,7 +229,7 @@ class ChooseModeView(View):
             None if the choice in the POST parameters is missing or is an unsupported mode.
 
         """
-		if 'manual_mode' in request_dict:
+        if 'manual_mode' in request_dict:
             return 'manual'
         if 'free_mode' in request_dict:
             return 'free'
