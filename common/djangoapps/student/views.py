@@ -904,6 +904,12 @@ def change_enrollment(request, check_access=True):
                 reverse("course_modes_choose", kwargs={'course_id': unicode(course_id)})
             )
 
+        # If the mode is edunext-manual redirect
+        if current_mode.slug == "manual":
+            return HttpResponse(
+                reverse("course_modes_manual", kwargs={'course_id': unicode(course_id)})
+            )
+
         # Otherwise, there is only one mode available (the default)
         return HttpResponse()
 

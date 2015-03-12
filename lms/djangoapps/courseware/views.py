@@ -811,6 +811,12 @@ def course_about(request, course_id):
         # get prerequisite courses display names
         pre_requisite_courses = get_prerequisite_courses_display(course)
 
+    # The default_mode is used for edunext-manual about pages
+    available_modes = CourseMode.modes_for_course(course.id)
+    default_mode = available_modes[0]
+    if len(available_modes) > 1:
+        default_mode = None
+
         return render_to_response('courseware/course_about.html', {
             'course': course,
             'staff_access': staff_access,
@@ -827,6 +833,7 @@ def course_about(request, course_id):
             'invitation_only': invitation_only,
             'active_reg_button': active_reg_button,
             'is_shib_course': is_shib_course,
+            'default_mode': default_mode,
             # We do not want to display the internal courseware header, which is used when the course is found in the
             # context. This value is therefor explicitly set to render the appropriate header.
             'disable_courseware_header': True,
