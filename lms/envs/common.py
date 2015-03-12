@@ -985,11 +985,11 @@ MIDDLEWARE_CLASSES = (
     'track.middleware.TrackMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'splash.middleware.SplashMiddleware',
-    
+
     # Make One language the default one
     'edraak_i18n.middleware.ForceLangMiddleware',
     'edraak_i18n.middleware.SessionBasedLocaleMiddleware',
-    
+
     # Allows us to dark-launch particular languages
     'dark_lang.middleware.DarkLangMiddleware',
     'geoinfo.middleware.CountryMiddleware',
