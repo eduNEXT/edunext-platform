@@ -68,11 +68,12 @@ def marketing_link_context_processor(request):
     marketing_link method.
     """
     mktg_urls = microsite.get_value('MKTG_URLS', settings.MKTG_URLS)
+    mktg_link_map = microsite.get_value('MKTG_URL_LINK_MAP', settings.MKTG_URL_LINK_MAP)
     return dict(
         [
             ("MKTG_URL_" + k, marketing_link(k))
             for k in (
-                settings.MKTG_URL_LINK_MAP.viewkeys() |
+                mktg_link_map.viewkeys() |
                 mktg_urls.viewkeys()
             )
         ]
