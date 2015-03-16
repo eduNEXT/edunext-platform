@@ -1894,7 +1894,10 @@ def password_reset(request):
     form = PasswordResetFormNoActive(request.POST)
     if form.is_valid():
         form.save(use_https=request.is_secure(),
-                  from_email=settings.DEFAULT_FROM_EMAIL,
+                  from_email=microsite.get_value(
+                      'email_from_address',
+                      settings.DEFAULT_FROM_EMAIL
+                  ),
                   request=request,
                   domain_override=request.get_host())
     else:
@@ -2026,7 +2029,7 @@ def reactivation_email_for_user(user):
     try:
         send_mail(subject, message, from_address, [user.email], html_message=message_html)
     except Exception:  # pylint: disable=broad-except
-        log.error('Unable to send reactivation email from "{from_address}"'.format(from_address=settings.DEFAULT_FROM_EMAIL), exc_info=True)
+        log.error('Unable to send reactivation email from "{from_address}"'.format(from_address=from_address), exc_info=True)
         return JsonResponse({
             "success": False,
             "error": _('Unable to send reactivation email')
