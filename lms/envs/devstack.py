@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 Specific overrides to the base prod settings to make development easier.
 """
@@ -16,7 +18,13 @@ SITE_NAME = 'localhost:8000'
 # By default don't use a worker, execute tasks as if they were local functions
 CELERY_ALWAYS_EAGER = True
 
-###############################LANG########################
+############################### THEME ########################
+
+FEATURES['USE_CUSTOM_THEME'] = True
+THEME_NAME = 'edunext'
+
+############################### LANG ########################
+
 LANGUAGE_CODE = 'es-419'
 TIME_ZONE = 'America/Bogota'
 
