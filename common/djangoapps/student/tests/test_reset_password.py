@@ -137,7 +137,7 @@ class ResetPasswordTests(TestCase):
         self.assertIn(expected_msg, msg)
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', "Test only valid in LMS")
-    @patch('django.core.mail.send_mail')
+    @patch('mail.send_mail')
     @ddt.data(('Crazy Awesome Site', 'Crazy Awesome Site'), (None, 'edX'))
     @ddt.unpack
     def test_reset_password_email_domain(self, domain_override, platform_name, send_email):
@@ -166,7 +166,7 @@ class ResetPasswordTests(TestCase):
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', "Test only valid in LMS")
     @patch("microsite_configuration.microsite.get_value", fake_site_name)
-    @patch('django.core.mail.send_mail')
+    @patch('mail.send_mail')
     def test_reset_password_email_microsite(self, send_email):
         """
         Tests that the right url domain and platform name is included in

@@ -747,7 +747,6 @@ def course_about(request, course_id):
 
     Assumes the course_id is in a valid format.
     """
-
     course_key = SlashSeparatedCourseKey.from_deprecated_string(course_id)
 
     with modulestore().bulk_operations(course_key):
@@ -817,30 +816,30 @@ def course_about(request, course_id):
     if len(available_modes) > 1:
         default_mode = None
 
-        return render_to_response('courseware/course_about.html', {
-            'course': course,
-            'staff_access': staff_access,
-            'studio_url': studio_url,
-            'registered': registered,
-            'course_target': course_target,
-            'registration_price': registration_price,
-            'currency_symbol': settings.PAID_COURSE_REGISTRATION_CURRENCY[1],
-            'in_cart': in_cart,
-            'reg_then_add_to_cart_link': reg_then_add_to_cart_link,
-            'show_courseware_link': show_courseware_link,
-            'is_course_full': is_course_full,
-            'can_enroll': can_enroll,
-            'invitation_only': invitation_only,
-            'active_reg_button': active_reg_button,
-            'is_shib_course': is_shib_course,
-            'default_mode': default_mode,
-            # We do not want to display the internal courseware header, which is used when the course is found in the
-            # context. This value is therefor explicitly set to render the appropriate header.
-            'disable_courseware_header': True,
-            'is_shopping_cart_enabled': _is_shopping_cart_enabled,
-            'cart_link': reverse('shoppingcart.views.show_cart'),
-            'pre_requisite_courses': pre_requisite_courses
-        })
+    return render_to_response('courseware/course_about.html', {
+        'course': course,
+        'staff_access': staff_access,
+        'studio_url': studio_url,
+        'registered': registered,
+        'course_target': course_target,
+        'registration_price': registration_price,
+        'currency_symbol': settings.PAID_COURSE_REGISTRATION_CURRENCY[1],
+        'in_cart': in_cart,
+        'reg_then_add_to_cart_link': reg_then_add_to_cart_link,
+        'show_courseware_link': show_courseware_link,
+        'is_course_full': is_course_full,
+        'can_enroll': can_enroll,
+        'invitation_only': invitation_only,
+        'active_reg_button': active_reg_button,
+        'is_shib_course': is_shib_course,
+        'default_mode': default_mode,
+        # We do not want to display the internal courseware header, which is used when the course is found in the
+        # context. This value is therefor explicitly set to render the appropriate header.
+        'disable_courseware_header': True,
+        'is_shopping_cart_enabled': _is_shopping_cart_enabled,
+        'cart_link': reverse('shoppingcart.views.show_cart'),
+        'pre_requisite_courses': pre_requisite_courses
+    })
 
 
 @ensure_csrf_cookie

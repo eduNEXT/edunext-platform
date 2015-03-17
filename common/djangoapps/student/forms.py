@@ -64,9 +64,9 @@ class PasswordResetFormNoActive(PasswordResetForm):
                     settings.SITE_NAME
                 )
                 current_site = get_current_site(request)                
-                domain = current_site.domai
+                domain = current_site.domain
             else:
-                site_name = domain_override
+                site_name = domain = domain_override
             context = {
                 'email': user.email,
                 'domain': domain,

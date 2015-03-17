@@ -60,7 +60,7 @@ class CourseMode(models.Model):
     DEFAULT_MODE_SLUG = 'honor'
 
     # Modes that allow a student to pursue a verified certificate
-    VERIFIED_MODES = ["verified", "professional"]
+    VERIFIED_MODES = ["verified", "professional","manual"]
 
     class Meta:
         """ meta attributes of this model """
