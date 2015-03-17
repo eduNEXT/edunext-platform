@@ -434,7 +434,9 @@ class ViewsTestCase(TestCase):
         # If provided, set the language header
         headers = {}
         if language is not None:
-            headers['HTTP_ACCEPT_LANGUAGE'] = language
+            #headers['HTTP_ACCEPT_LANGUAGE'] = language
+            #EDUNEXT:LC 
+            response = self.client.post('/changelang/', {"language":language})
 
         url = reverse('mktg_about_course', kwargs={'course_id': unicode(self.course_key)})
         if org:

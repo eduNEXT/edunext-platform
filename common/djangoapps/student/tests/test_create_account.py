@@ -47,14 +47,7 @@ class TestCreateAccount(TestCase):
             self.assertEqual(response.status_code, 200)
             user = User.objects.get(username=self.username)
             self.assertEqual(UserPreference.get_preference(user, LANGUAGE_KEY), lang)
-
-    # TODO: fmo | decide how can we test the new behavior using the public edraak lang force
-    # @ddt.data("en", "eo")
-    # def test_header_lang_pref_saved(self, lang):
-    #     response = self.client.post(self.url, self.params, LANG=lang)
-    #     self.assertEqual(response.status_code, 200)
-    #     user = User.objects.get(username=self.username)
-    #     self.assertEqual(UserPreference.get_preference(user, LANGUAGE_KEY), lang)
+    #TODO: fmo , here was a todo, for the test befor, but it now seems its not needed
 
     def base_extauth_bypass_sending_activation_email(self, bypass_activation_email_for_extauth_setting):
         """
