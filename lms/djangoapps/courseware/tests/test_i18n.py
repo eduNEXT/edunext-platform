@@ -20,16 +20,23 @@ class I18nTestCase(TestCase):
         self.assertEqual(response['Content-Language'], 'en')
         self.assertTrue(re.search('<body.*class=".*lang_en">', response.content))
 
-
+    #EDUNEXT:LC the language wont depend on the http accept language, but the language set by the user
+    # which normaly is changed via '/changelang/'
+    # Language should not change wit accept language 
+    def test_accept_language_wont_change_language(self):
+         response = self.client.get('/', HTTP_ACCEPT_LANGUAGE='eo')
+         self.assertIn('<html lang="en">', response.content)
+         self.assertEqual(response['Content-Language'], 'en')
+         self.assertTrue(re.search('<body.*class=".*lang_en">', response.content))
+         
+    #EDUNEXT:LC /changelang/ should work and language should change acordingly
     def test_esperanto(self):
-        response = self.client.get('/', HTTP_ACCEPT_LANGUAGE='eo')
+        response = self.client.post('/changelang/', {"language":"eo"})
+        self.failUnlessEqual(response.status_code, 302) 
+        response = self.client.get('/')
         self.assertIn('<html lang="eo">', response.content)
         self.assertEqual(response['Content-Language'], 'eo')
         self.assertTrue(re.search('<body.*class=".*lang_eo">', response.content))
 
-    # TODO: fmo | decide how can we test the new behavior using the public edraak lang force
-    # def test_esperanto(self):
-    #     response = self.client.get('/', HTTP_ACCEPT_LANGUAGE='eo')
-    #     self.assertIn('<html lang="eo">', response.content)
-    #     self.assertEqual(response['Content-Language'], 'eo')
-    #     self.assertTrue(re.search('<body.*class=".*lang_eo">', response.content))
+    
+    
