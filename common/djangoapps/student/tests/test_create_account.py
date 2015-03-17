@@ -2,6 +2,7 @@
 
 import ddt
 import unittest
+from mail import send_mail
 from django.contrib.auth.models import User
 from django.test.client import RequestFactory
 from django.conf import settings
@@ -70,15 +71,16 @@ class TestCreateAccount(TestCase):
                                   external_domain='shib:https://idp.stanford.edu/')
         request.session['ExternalAuthMap'] = extauth
         request.user = AnonymousUser()
-
         mako_middleware_process_request(request)
-        with mock.patch('django.contrib.auth.models.User.email_user') as mock_send_mail:
+        #EDUNEXT:HE
+        with mock.patch('student.views.send_mail') as mock_send_mail:
             student.views.create_account(request)
 
         # check that send_mail is called
         if bypass_activation_email_for_extauth_setting:
             self.assertFalse(mock_send_mail.called)
         else:
+            print mock_send_mail.called
             self.assertTrue(mock_send_mail.called)
 
     @unittest.skipUnless(settings.FEATURES.get('AUTH_USE_SHIB'), "AUTH_USE_SHIB not set")
