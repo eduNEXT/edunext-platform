@@ -906,10 +906,10 @@ def change_enrollment(request, check_access=True):
         #TODO: LAQ maybe better with the verfied mode 
         #UPDATE: Added to coursemodes/models.py VERIFIED_MODES, but manual still not tested
         # If the only mode remaining is edunext-manual then redirect
-        #if "manual" in available_modes:
-        #    return HttpResponse(
-        #        reverse("course_modes_manual", kwargs={'course_id': unicode(course_id)})
-        #    )
+        if "manual" in available_modes:
+            return HttpResponse(
+                reverse("course_modes_manual", kwargs={'course_id': unicode(course_id)})
+            )
 
         # Otherwise, there is only one mode available (the default)
         return HttpResponse()

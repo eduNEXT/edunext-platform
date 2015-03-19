@@ -36,6 +36,8 @@ def fakex_microsite(name, default=None):  # pylint: disable=unused-argument
     """
     create a fake microsite site name
     """
+    if name == 'MKTG_URL_LINK_MAP' or name == 'MKTG_URLS':
+        return {}
     return 'fakeX'
 
 
@@ -43,7 +45,7 @@ def non_microsite(name, default=None):  # pylint: disable=unused-argument
     """
     create a fake microsite site name
     """
-    return None
+    return {}.get(name,default)
 
 
 @override_settings(MODULESTORE=MODULESTORE_CONFIG)
