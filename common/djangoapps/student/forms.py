@@ -12,6 +12,14 @@ from django.contrib.sites.models import get_current_site
 
 from edxmako.shortcuts import render_to_string
 
+from django.utils.http import int_to_base36
+from django.template import loader
+
+from django.conf import settings
+from microsite_configuration import microsite
+
+
+
 class PasswordResetFormNoActive(PasswordResetForm):
     def clean_email(self):
         """
@@ -29,25 +37,33 @@ class PasswordResetFormNoActive(PasswordResetForm):
             raise forms.ValidationError(self.error_messages['unusable'])
         return email
 
-    # pylint: disable=W0221
-    def save(self, domain_override=None,
-             subject_template_name='registration/password_reset_subject.txt',
-             email_template_name='registration/password_reset_email.html',
+
+    def save(
+            self,
+            domain_override=None,
+            subject_template_name='registration/password_reset_subject.txt',
+            email_template_name='registration/password_reset_email.html',
              html_email_template_name='registration/password_reset_email_html.html',
-             use_https=False, token_generator=default_token_generator,
-             from_email=None, request=None):
+            use_https=False,
+            token_generator=default_token_generator,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            request=None
+    ):
         """
-        This is a copy from Django 1.4.5's django.contrib.auth.forms.PasswordResetForm
-        Except it adds support for multipart email
         Generates a one-use only link for resetting password and sends to the
         user.
         """
+        # This import is here because we are copying and modifying the .save from Django 1.4.5's
+        # django.contrib.auth.forms.PasswordResetForm directly, which has this import in this place.
         from mail import send_mail
         from django.conf import settings
         for user in self.users_cache:
             if not domain_override:
-                current_site = get_current_site(request)
-                site_name = current_site.name
+                site_name = microsite.get_value(
+                    'SITE_NAME',
+                    settings.SITE_NAME
+                )
+                current_site = get_current_site(request)                
                 domain = current_site.domain
             else:
                 site_name = domain = domain_override
@@ -58,7 +74,8 @@ class PasswordResetFormNoActive(PasswordResetForm):
                 'uid': int_to_base36(user.id),
                 'user': user,
                 'token': token_generator.make_token(user),
-                'protocol': use_https and 'https' or 'http',
+                'protocol': 'https' if use_https else 'http',
+                'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME)
             }
             subject = loader.render_to_string(subject_template_name, context)
             # Email subject *must not* contain newlines
@@ -68,3 +85,4 @@ class PasswordResetFormNoActive(PasswordResetForm):
             if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
                 email_html = render_to_string(html_email_template_name, context)
             send_mail(subject, email, from_email, [user.email], html_message=email_html)
+
