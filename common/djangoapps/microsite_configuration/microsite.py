@@ -56,7 +56,7 @@ def has_override_value(val_name):
     return val_name in configuration
 
 
-def get_template_path(relative_path):
+def get_template_path(relative_path, leading_slash=False):
     """
     Returns a path (string) to a Mako template, which can either be in
     a microsite directory (as an override) or will just return what is passed in which is
@@ -64,7 +64,7 @@ def get_template_path(relative_path):
     """
 
     if not is_request_in_microsite():
-        return relative_path
+        return '/' + relative_path if leading_slash else relative_path
 
     microsite_template_path = str(get_value('template_dir'))
 
@@ -78,7 +78,7 @@ def get_template_path(relative_path):
             )
             return path
 
-    return relative_path
+    return '/' + relative_path if leading_slash else relative_path
 
 
 def get_value_for_org(org, val_name, default=None):
