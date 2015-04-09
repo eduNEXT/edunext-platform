@@ -357,12 +357,12 @@
       <form id="change_name_form">
         <div id="change_name_error" class="modal-form-error"> </div>
         ## Translators: note that {platform} {cert_name_short} will look something like: "edX certificate". Please do not change the order of these placeholders.
-        <p>${_("To uphold the credibility of your {platform} {cert_name_short}, all name changes will be recorded.").format(platform=settings.PLATFORM_NAME, cert_name_short=cert_name_short)}</p>
+        <p>${_("To uphold the credibility of your {platform} {cert_name_short}, all name changes will be recorded.").format(platform=microsite.get_value('platform_name', settings.PLATFORM_NAME), cert_name_short=cert_name_short)}</p>
         <br/>
         <fieldset>
           <div class="input-group">
             ## Translators: note that {platform} {cert_name_short} will look something like: "edX certificate". Please do not change the order of these placeholders.
-            <label>${_("Enter your desired full name, as it will appear on your {platform} {cert_name_short}:").format(platform=settings.PLATFORM_NAME, cert_name_short=cert_name_short)}</label>
+            <label>${_("Enter your desired full name, as it will appear on your {platform} {cert_name_short}:").format(platform=microsite.get_value('platform_name', settings.PLATFORM_NAME), cert_name_short=cert_name_short)}</label>
             <input id="new_name_field" value="" type="text" />
             <label>${_("Reason for name change:")}</label>
             <textarea id="name_rationale_field" value=""></textarea>

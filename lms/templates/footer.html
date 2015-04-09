@@ -1,5 +1,6 @@
 ## mako
 <%! from django.core.urlresolvers import reverse %>
+<%! from microsite_configuration.middleware import microsite %>
 <%! from django.utils.translation import ugettext as _ %>
 <%namespace name='static' file='static_content.html'/>
 <%! from microsite_configuration.templatetags.microsite import platform_name %>
@@ -51,7 +52,7 @@
         </p>
       </div>
 
-      <p class="copyright">&copy; ${settings.COPYRIGHT_YEAR} ${settings.PLATFORM_NAME}.</p>
+      <p class="copyright">&copy; ${settings.COPYRIGHT_YEAR} ${microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)}.</p>
 
       ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
       <p class="copyright">

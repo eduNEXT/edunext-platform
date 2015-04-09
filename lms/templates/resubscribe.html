@@ -2,6 +2,7 @@
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django.conf import settings
+from microsite_configuration import microsite
 %>
 <%inherit file="main.html" />
 
@@ -16,7 +17,7 @@ from django.conf import settings
     <p>
       ${_("You have re-enabled forum notification emails from {platform_name}. "
           "Click {dashboard_link_start}here{link_end} to return to your dashboard. ").format(
-             platform_name=settings.PLATFORM_NAME,
+             platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME),
              dashboard_link_start="<a href='{}'>".format(reverse('dashboard')),
              link_end="</a>",)}
     </p>

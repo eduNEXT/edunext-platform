@@ -44,8 +44,8 @@
     <div class="hint auto-enroll-hint">
       <span class="hint-caret"></span>
       <p>
-	${_("If this option is <em>checked</em>, users who have not yet registered for {platform_name} will be automatically enrolled.").format(platform_name=settings.PLATFORM_NAME)}
-	${_("If this option is left <em>unchecked</em>, users who have not yet registered for {platform_name} will not be enrolled, but will be allowed to enroll once they make an account.").format(platform_name=settings.PLATFORM_NAME)}
+	${_("If this option is <em>checked</em>, users who have not yet registered for {platform_name} will be automatically enrolled.").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
+	${_("If this option is left <em>unchecked</em>, users who have not yet registered for {platform_name} will not be enrolled, but will be allowed to enroll once they make an account.").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
 	<br /><br />
 	${_("Checking this box has no effect if 'Unenroll' is selected.")}
       </p>
@@ -103,7 +103,7 @@
   <p>
     <label for="student-ids-for-beta">
       ${_("Enter email addresses and/or usernames separated by new lines or commas.")}<br/>
-      ${_("Note: Users must have an activated {platform_name} account before they can be enrolled as a beta tester.").format(platform_name=settings.PLATFORM_NAME)}
+      ${_("Note: Users must have an activated {platform_name} account before they can be enrolled as a beta tester.").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
     </label>
 
   <textarea rows="6" cols="50" name="student-ids-for-beta" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false"></textarea>

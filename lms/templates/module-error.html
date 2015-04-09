@@ -1,9 +1,10 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from microsite_configuration import microsite %>
 
 <section class="outside-app">
   <h1>
     ${_("There has been an error on the {platform_name} servers").format(
-        platform_name=u"<em>{}</em>".format(settings.PLATFORM_NAME)
+        platform_name=u"<em>{}</em>".format(microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME))
     )}
   </h1>
   <p>
