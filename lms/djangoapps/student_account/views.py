@@ -77,7 +77,7 @@ def login_and_registration_form(request, initial_mode="login"):
         'disable_courseware_js': True,
         'initial_mode': initial_mode,
         'third_party_auth': json.dumps(_third_party_auth_context(request)),
-        'platform_name': settings.PLATFORM_NAME,
+        'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
         'responsive': True,
 
         # Include form descriptions retrieved from the user API.

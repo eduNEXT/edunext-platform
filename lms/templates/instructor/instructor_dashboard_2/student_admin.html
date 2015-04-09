@@ -1,4 +1,5 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from microsite_configuration import microsite %>
 <%page args="section_data"/>
 
 <div>
@@ -20,7 +21,7 @@
   <h2>${_("Student-specific grade inspection")}</h2>
   <div class="request-response-error"></div>
   <p>
-  ${_("Specify the {platform_name} email address or username of a student here:").format(platform_name=settings.PLATFORM_NAME)}
+  ${_("Specify the {platform_name} email address or username of a student here:").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
   <input type="text" name="student-select-progress" placeholder="${_("Student Email or Username")}">
   </p>
   <br>
@@ -40,7 +41,7 @@
   <h2>${_("Student-specific grade adjustment")}</h2>
   <div class="request-response-error"></div>
   <p>
-  ${_("Specify the {platform_name} email address or username of a student here:").format(platform_name=settings.PLATFORM_NAME)}
+  ${_("Specify the {platform_name} email address or username of a student here:").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
   <input type="text" name="student-select-grade" placeholder="${_("Student Email or Username")}">
   </p>
   <br>

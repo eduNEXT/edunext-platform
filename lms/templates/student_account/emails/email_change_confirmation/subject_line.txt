@@ -1,3 +1,4 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from microsite_configuration import microsite %>
 
-${_("{platform_name} Email Change Successful").format(platform_name=settings.PLATFORM_NAME)}
+${_("{platform_name} Email Change Successful").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}

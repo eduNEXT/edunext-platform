@@ -1,6 +1,7 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%!
   from django.core.urlresolvers import reverse
+  from microsite_configuration import microsite
 %>
 
 <%namespace name='static' file='../static_content.html'/>
@@ -40,7 +41,7 @@
 
 %if verification_status in ['must_reverify', 'expired']:
 <li class="status status-verification is-denied">
-<span class="title status-title">${_("{platform_name} Verification Status").format(platform_name=settings.PLATFORM_NAME)}</span>
+<span class="title status-title">${_("{platform_name} Verification Status").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}</span>
 
   <div class="status-data">
     <span class="status-data-message">${verification_msg}</span>

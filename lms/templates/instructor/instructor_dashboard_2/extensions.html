@@ -1,4 +1,5 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from microsite_configuration import microsite %>
 <%page args="section_data"/>
 
 <div id="set-extension">
@@ -11,7 +12,7 @@
   </p>
   <p>
     ${_("Specify the {platform_name} email address or username of a student "
-        "here:").format(platform_name=settings.PLATFORM_NAME)}
+        "here:").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
     <input type="text" name="student" placeholder="${_("Student Email or Username")}">
   </p>
   <p>
@@ -66,7 +67,7 @@
   </p>
   <p>
     ${_("Specify the {platform_name} email address or username of a student "
-        "here:").format(platform_name=settings.PLATFORM_NAME)}
+        "here:").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
     <input type="text" name="student" placeholder="${_("Student Email or Username")}">
     <input type="button" name="show-student-extensions" 
            value="${_("List date extensions for student")}"
@@ -89,7 +90,7 @@
   </p>
   <p>
     ${_("Specify the {platform_name} email address or username of a student "
-        "here:").format(platform_name=settings.PLATFORM_NAME)}
+        "here:").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
     <input type="text" name="student" placeholder="${_("Student Email or Username")}">
   </p>
   <p>

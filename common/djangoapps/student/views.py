@@ -531,7 +531,7 @@ def dashboard(request):
     if not user.is_active:
         message = render_to_string(
             'registration/activate_account_notice.html',
-            {'email': user.email, 'platform_name': settings.PLATFORM_NAME}
+            {'email': user.email, 'platform_name': microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)}
         )
 
     # Global staff can see what courses errored on their dashboard
@@ -688,7 +688,7 @@ def dashboard(request):
         'user': user,
         'duplicate_provider': None,
         'logout_url': reverse(logout_user),
-        'platform_name': settings.PLATFORM_NAME,
+        'platform_name': microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
         'enrolled_courses_either_paid': enrolled_courses_either_paid,
         'provider_states': [],
         'order_history_list': order_history_list,
@@ -730,7 +730,7 @@ def _create_recent_enrollment_message(course_enrollment_pairs, course_modes):
 
         return render_to_string(
             'enrollment/course_enrollment_message.html',
-            {'course_enrollment_messages': messages, 'platform_name': settings.PLATFORM_NAME}
+            {'course_enrollment_messages': messages, 'platform_name': microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)}
         )
 
 
@@ -989,7 +989,7 @@ def accounts_login(request):
     context = {
         'pipeline_running': 'false',
         'pipeline_url': auth_pipeline_urls(pipeline.AUTH_ENTRY_LOGIN, redirect_url=redirect_to),
-        'platform_name': settings.PLATFORM_NAME,
+        'platform_name': microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
     }
     return render_to_response('login.html', context)
 
@@ -1029,16 +1029,16 @@ def login_user(request, error=""):  # pylint: disable-msg=too-many-statements,un
                     username=username, backend_name=backend_name))
             return HttpResponse(
                 _("You've successfully logged into your {provider_name} account, but this account isn't linked with an {platform_name} account yet.").format(
-                    platform_name=settings.PLATFORM_NAME, provider_name=requested_provider.NAME
+                    platform_name=microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME), provider_name=requested_provider.NAME
                 )
                 + "<br/><br/>" +
                 _("Use your {platform_name} username and password to log into {platform_name} below, "
                   "and then link your {platform_name} account with {provider_name} from your dashboard.").format(
-                      platform_name=settings.PLATFORM_NAME, provider_name=requested_provider.NAME
+                      platform_name=microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME), provider_name=requested_provider.NAME
                 )
                 + "<br/><br/>" +
                 _("If you don't have an {platform_name} account yet, click <strong>Register Now</strong> at the top of the page.").format(
-                    platform_name=settings.PLATFORM_NAME
+                    platform_name=microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
                 ),
                 content_type="text/plain",
                 status=403
@@ -1976,7 +1976,7 @@ def password_reset_confirm_wrapper(
         return TemplateResponse(request, 'registration/password_reset_confirm.html', context)
     else:
         # we also want to pass settings.PLATFORM_NAME in as extra_context
-        extra_context = {"platform_name": settings.PLATFORM_NAME}
+        extra_context = {"platform_name": microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)}
 
         if request.method == 'POST':
             # remember what the old password hash is before we call down
