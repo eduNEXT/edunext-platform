@@ -660,7 +660,7 @@ msgstr "Correo electrónico o contraseña incorrectos."
 #: common/djangoapps/student/views.py
 msgid ""
 "This account has not been activated. We have sent another activation "
-"message. Please check your email for the activation instructions."
+"message. Please check your e-mail for the activation instructions."
 msgstr ""
 "Esta cuenta no ha sido activada. Hemos enviado nuevamente el correo de "
 "activación. Por favor verifique su buzón de correo y siga las instrucciones "
