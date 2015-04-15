@@ -23,7 +23,7 @@
       <header>
         <h2>
 	  ${_('Sign Up for {platform_name}').format(
-	      platform_name=u'<span class="edx">{}</span>'.format(microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME))
+	      platform_name=u'<span class="edx">{}</span>'.format(microsite.get_value('platform_name', settings.PLATFORM_NAME))
 	  )}
 	</h2>
         <hr>
@@ -119,7 +119,7 @@
           % endif
 
           % if settings.REGISTRATION_EXTRA_FIELDS['goals'] != 'hidden':
-          <label data-field="goals" for="signup_goals">${_("Goals in signing up for {platform_name}").format(platform_name=microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME))}</label>
+          <label data-field="goals" for="signup_goals">${_("Goals in signing up for {platform_name}").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}</label>
 	    <textarea name="goals" id="signup_goals"></textarea>
           % endif
 

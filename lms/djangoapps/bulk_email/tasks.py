@@ -151,7 +151,7 @@ def _get_course_email_context(course):
         'course_url': course_url,
         'course_image_url': image_url,
         'account_settings_url': 'https://{}{}'.format(settings.SITE_NAME, reverse('dashboard')),
-        'platform_name': microsite.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
+        'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
     }
     return email_context
 
