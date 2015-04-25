@@ -5,6 +5,7 @@ from rest_framework.parsers import JSONParser
 
 from microsite_configuration.models import Microsite
 from microsite_api.serializers import MicrositeSerializer, MicrositeMinimalSerializer
+from microsite_api.authenticators import MicrositeManagerAuthentication
 
 
 # TODO: do we need this. I just had it so from the tutorial
@@ -23,6 +24,9 @@ class MicrositeList(APIView):
     """
     List all microsites, or create a new microsite.
     """
+
+    authentication_classes = (MicrositeManagerAuthentication,)
+
     def get(self, request, format=None):
         microsite = Microsite.objects.all()
         serializer = MicrositeMinimalSerializer(microsite, many=True)
@@ -41,6 +45,9 @@ class MicrositeDetail(APIView):
     """
     Retrieve, update or delete a microsite.
     """
+
+    authentication_classes = (MicrositeManagerAuthentication,)
+
     def get_microsite(self, key):
         try:
             return Microsite.objects.get(key=key)

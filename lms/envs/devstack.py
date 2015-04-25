@@ -182,6 +182,11 @@ MICROSITE_CONFIGURATION = {
 
 MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
 FEATURES['USE_MICROSITES'] = True
+MICROSITE_API_ALLOWED_REMOTES = [
+    '*',
+]
+MICROSITE_API_SECRET = 'secret_key'
+MICROSITE_API_MANAGER = 'staff'
 
 
 #####################################################################
