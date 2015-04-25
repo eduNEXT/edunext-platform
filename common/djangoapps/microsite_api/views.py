@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from rest_framework.decorators import api_view
+from rest_framework.views import APIView
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
@@ -19,17 +19,16 @@ class JSONResponse(HttpResponse):
         super(JSONResponse, self).__init__(content, **kwargs)
 
 
-@api_view(['GET', 'POST'])
-def microsite_list(request):
+class MicrositeList(APIView):
     """
     List all microsites, or create a new microsite.
     """
-    if request.method == 'GET':
+    def get(self, request, format=None):
         microsite = Microsite.objects.all()
         serializer = MicrositeMinimalSerializer(microsite, many=True)
         return JSONResponse(serializer.data)
 
-    elif request.method == 'POST':
+    def post(self, request, format=None):
         data = JSONParser().parse(request)
         serializer = MicrositeSerializer(data=data)
         if serializer.is_valid():
@@ -38,21 +37,23 @@ def microsite_list(request):
         return JSONResponse(serializer.errors, status=400)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def microsite_detail(request, key):
+class MicrositeDetail(APIView):
     """
     Retrieve, update or delete a microsite.
     """
-    try:
-        microsite = Microsite.objects.get(key=key)
-    except Microsite.DoesNotExist:
-        return HttpResponse(status=404)
+    def get_microsite(self, key):
+        try:
+            return Microsite.objects.get(key=key)
+        except Microsite.DoesNotExist:
+            return HttpResponse(status=404)
 
-    if request.method == 'GET':
+    def get(self, request, key, format=None):
+        microsite = self.get_microsite(key)
         serializer = MicrositeSerializer(microsite)
         return JSONResponse(serializer.data)
 
-    elif request.method == 'PUT':
+    def put(self, request, key, format=None):
+        microsite = self.get_microsite(key)
         data = JSONParser().parse(request)
 
         # Don't want this altering the keys for now.
@@ -66,6 +67,7 @@ def microsite_detail(request, key):
             return JSONResponse(serializer.data)
         return JSONResponse(serializer.errors, status=400)
 
-    elif request.method == 'DELETE':
+    def delete(self, request, key, format=None):
+        microsite = self.get_microsite(key)
         microsite.delete()
         return HttpResponse(status=204)
