@@ -185,7 +185,7 @@ FEATURES['USE_MICROSITES'] = True
 MICROSITE_API_ALLOWED_REMOTES = [
     '*',
 ]
-MICROSITE_API_SIGNING_KEY = '/var/tmp/keys/microsite_api_rsa.pub'
+MICROSITE_API_SIGNING_KEY = open('/var/tmp/keys/microsite_api_rsa.pub' , "r").read()
 MICROSITE_API_MANAGER = 'staff'
 
 

@@ -20,7 +20,7 @@ def decode_token(data):
     return data_base64ed
 
 
-def verify_sign(public_key_loc, signature, data):
+def verify_sign(public_key, signature, data):
     '''
     Verifies with a public key from whom the data came that it was indeed
     signed by their private key
@@ -31,7 +31,7 @@ def verify_sign(public_key_loc, signature, data):
     from Crypto.PublicKey import RSA
     from Crypto.Signature import PKCS1_v1_5
     from Crypto.Hash import SHA256
-    pub_key = open(public_key_loc, "r").read()
+    pub_key = public_key
     rsakey = RSA.importKey(pub_key)
     signer = PKCS1_v1_5.new(rsakey)
     digest = SHA256.new()
