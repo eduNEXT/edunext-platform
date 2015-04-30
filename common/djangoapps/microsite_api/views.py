@@ -26,6 +26,7 @@ class MicrositeList(APIView):
     """
 
     authentication_classes = (MicrositeManagerAuthentication,)
+    renderer_classes = [JSONRenderer]
 
     def get(self, request, format=None):
         microsite = Microsite.objects.all()
@@ -47,6 +48,7 @@ class MicrositeDetail(APIView):
     """
 
     authentication_classes = (MicrositeManagerAuthentication,)
+    renderer_classes = [JSONRenderer]
 
     def get_microsite(self, key):
         try:
