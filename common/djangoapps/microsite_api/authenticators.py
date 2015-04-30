@@ -1,5 +1,6 @@
 import json
 import time
+import traceback
 
 from base64 import b64decode
 
@@ -47,22 +48,28 @@ class MicrositeManagerAuthentication(authentication.BaseAuthentication):
     """
 
     def authenticate(self, request):
-        # First validate the host
-        self.validate_host(request)
+        try:
+            # First validate the host
+            self.validate_host(request)
 
-        # Now on to the token
-        auth = get_authorization_header(request).split()
-        if not auth or auth[0].lower() != b'token':
-            raise exceptions.AuthenticationFailed('Not allowed. Token required.')
+            # Now on to the token
+            auth = get_authorization_header(request).split()
+            if not auth or auth[0].lower() != b'token':
+                raise exceptions.AuthenticationFailed('Not allowed. Token required.')
 
-        if len(auth) == 1:
-            msg = 'Invalid token header. No credentials provided.'
-            raise exceptions.AuthenticationFailed(msg)
-        elif len(auth) > 2:
-            msg = 'Invalid token header. Token string should not contain spaces.'
-            raise exceptions.AuthenticationFailed(msg)
+            if len(auth) == 1:
+                msg = 'Invalid token header. No credentials provided.'
+                raise exceptions.AuthenticationFailed(msg)
+            elif len(auth) > 2:
+                msg = 'Invalid token header. Token string should not contain spaces.'
+                raise exceptions.AuthenticationFailed(msg)
 
-        return self.authenticate_credentials(auth[1])
+            return self.authenticate_credentials(auth[1])
+        except exceptions.AuthenticationFailed, e:
+            raise e
+        except Exception:
+            print traceback.format_exc()
+            raise exceptions.AuthenticationFailed('Unknown Error. Check your logs.')
 
     def authenticate_credentials(self, key):
         """
