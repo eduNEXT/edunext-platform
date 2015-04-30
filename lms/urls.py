@@ -81,6 +81,8 @@ urlpatterns = ('',  # nopep8
     # CourseInfo API RESTful endpoints
     url(r'^api/course/details/v0/', include('course_about.urls')),
 
+    #  Microsite management API
+    url(r'^api/microsite/', include('microsite_api.urls')),
 )
 
 if settings.FEATURES["ENABLE_MOBILE_REST_API"]:
