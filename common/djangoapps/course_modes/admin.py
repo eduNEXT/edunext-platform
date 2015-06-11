@@ -15,7 +15,8 @@ class CourseModeForm(forms.ModelForm):
 
     COURSE_MODE_SLUG_CHOICES = (
         [(CourseMode.DEFAULT_MODE_SLUG, CourseMode.DEFAULT_MODE_SLUG)] +
-        [(mode_slug, mode_slug) for mode_slug in CourseMode.VERIFIED_MODES]
+        [(mode_slug, mode_slug) for mode_slug in CourseMode.VERIFIED_MODES] +
+        [(mode_slug, mode_slug) for mode_slug in CourseMode.MANUAL_MODES]
     )
 
     mode_slug = forms.ChoiceField(choices=COURSE_MODE_SLUG_CHOICES)
