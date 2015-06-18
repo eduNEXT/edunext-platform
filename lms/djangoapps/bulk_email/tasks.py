@@ -27,7 +27,7 @@ from celery.utils.log import get_task_logger
 from celery.states import SUCCESS, FAILURE, RETRY
 from celery.exceptions import RetryTaskError
 
-from django.conf import settings
+from microsite_configuration import settings
 from django.contrib.auth.models import User
 from django.core.mail import EmailMultiAlternatives, get_connection
 from django.core.urlresolvers import reverse
@@ -141,16 +141,16 @@ def _get_course_email_context(course):
     """
     course_id = course.id.to_deprecated_string()
     course_title = course.display_name
-    course_url = 'https://{}{}'.format(
+    course_url = 'http://{}{}'.format(
         settings.SITE_NAME,
         reverse('course_root', kwargs={'course_id': course_id})
     )
-    image_url = 'https://{}{}'.format(settings.SITE_NAME, course_image_url(course))
+    image_url = 'http://{}{}'.format(settings.SITE_NAME, course_image_url(course))
     email_context = {
         'course_title': course_title,
         'course_url': course_url,
         'course_image_url': image_url,
-        'account_settings_url': 'https://{}{}'.format(settings.SITE_NAME, reverse('dashboard')),
+        'account_settings_url': 'http://{}{}'.format(settings.SITE_NAME, reverse('dashboard')),
         'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
     }
     return email_context
