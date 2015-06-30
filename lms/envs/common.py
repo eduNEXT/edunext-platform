@@ -1727,7 +1727,7 @@ INSTALLED_APPS += ('django_openid_auth',)
 ORA2_FILE_PREFIX = None
 
 # Default File Upload Storage bucket and prefix. Used by the FileUpload Service.
-FILE_UPLOAD_STORAGE_BUCKET_NAME = 'edxuploads'
+FILE_UPLOAD_STORAGE_BUCKET_NAME = 'edunextuploads'
 FILE_UPLOAD_STORAGE_PREFIX = 'submissions_attachments'
 
 ##### ACCOUNT LOCKOUT DEFAULT PARAMETERS #####
