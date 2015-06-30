@@ -767,6 +767,9 @@ OPTIONAL_APPS = (
 
     # milestones
     'milestones',
+
+    #xblocks
+    'edx_sga',
 )
 
 
@@ -831,6 +834,7 @@ ADVANCED_COMPONENT_TYPES = [
     'notes',
     'schoolyourself_review',
     'schoolyourself_lesson',
+    'edx_sga',
 ]
 
 # Adding components in this list will disable the creation of new problem for those

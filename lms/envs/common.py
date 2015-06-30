@@ -1946,6 +1946,9 @@ OPTIONAL_APPS = (
 
     # milestones
     'milestones',
+
+    #xblocks
+    'edx_sga',
 )
 
 for app_name in OPTIONAL_APPS:
