@@ -1,0 +1,4 @@
+
+#xBlocks
+-e git+https://github.com/mitodl/edx-sga@172a90fd2738f8142c10478356b2d9ed3e55334a#egg=edx-sga
+-e git+https://laqEdunext@bitbucket.org/edunext/sodexo_xblock/sodexo_game@ea23c2566c1cb7b35b3a986a9e836e699e895bd9#egg=sodexo-game-xblock
