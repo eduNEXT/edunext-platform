@@ -40,4 +40,4 @@ git+https://github.com/mitocw/django-cas.git@60a5b8e5a62e63e0d5d224a87f0b489201a
 
 #xBlock
 -e git+https://github.com/mitodl/edx-sga@172a90fd2738f8142c10478356b2d9ed3e55334a#egg=edx-sga
--e git+https://laqEdunext@bitbucket.org/edunext/sodexo_xblock@4415c5336bb3f478d1df732c502a9264467a72bc#egg=sodexo-game
+-e git+https://laqEdunext@bitbucket.org/edunext/sodexo_xblock/sodexo_game@ea23c2566c1cb7b35b3a986a9e836e699e895bd9#egg=sodexo-game-xblock
