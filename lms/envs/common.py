@@ -1949,6 +1949,7 @@ OPTIONAL_APPS = (
 
     #xblocks
     'edx_sga',
+    'sodexo_game',
 )
 
 for app_name in OPTIONAL_APPS:

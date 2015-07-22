@@ -770,6 +770,7 @@ OPTIONAL_APPS = (
 
     #xblocks
     'edx_sga',
+    'sodexo_game',
 )
 
 
@@ -835,6 +836,7 @@ ADVANCED_COMPONENT_TYPES = [
     'schoolyourself_review',
     'schoolyourself_lesson',
     'edx_sga',
+    'sodexo_game',
 ]
 
 # Adding components in this list will disable the creation of new problem for those

@@ -1,0 +1,3 @@
+#edunext Exblocks
+
+-e git+ssh://git@bitbucket.org/edunext/sodexo_xblock.git@ab9fc1bd10cd1ebe18c1cd6a6f9b6510675d037f#egg=sodexo-game-xblock
