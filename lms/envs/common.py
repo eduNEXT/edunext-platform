@@ -1465,10 +1465,10 @@ EMAIL_OPTIN_MINIMUM_AGE = 13
 
 YOUTUBE = {
     # YouTube JavaScript API
-    'API': 'www.youtube.com/iframe_api',
+    'API': 'https://www.youtube.com/iframe_api',
 
-    # URL to test YouTube availability
-    'TEST_URL': 'gdata.youtube.com/feeds/api/videos/',
+    # URL to get YouTube metadata
+    'METADATA_URL': 'https://www.googleapis.com/youtube/v3/videos/',
 
     # Current youtube api for requesting transcripts.
     # For example: http://video.google.com/timedtext?lang=en&v=j_jEn79vS3g.
@@ -1480,6 +1480,7 @@ YOUTUBE = {
         },
     },
 }
+YOUTUBE_API_KEY = None
 
 ################################### APPS ######################################
 INSTALLED_APPS = (
