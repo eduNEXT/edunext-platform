@@ -27,8 +27,10 @@ def get_visible_courses():
 
     filtered_by_org = microsite.get_value('course_org_filter')
 
-    if filtered_by_org:
+    if filtered_by_org and isinstance(filtered_by_org, basestring):
         return [course for course in courses if course.location.org == filtered_by_org]
+    if filtered_by_org and isinstance(filtered_by_org, list):
+        return [course for course in courses if course.location.org in filtered_by_org]
     if filtered_visible_ids:
         return [course for course in courses if course.id in filtered_visible_ids]
     else:

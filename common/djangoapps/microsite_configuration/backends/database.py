@@ -158,7 +158,9 @@ class DatabaseMicrositeBackend(BaseMicrositeBackend):
         for microsite in candidates:
             current = json.loads(microsite.values)
             org_filter = current.get('course_org_filter')
-            if org_filter:
+            if isinstance(org_filter, basestring):
+                org_filter = set([org_filter])
+            if org in org_filter:
                 return current.get(val_name, default)
 
         return default
@@ -177,7 +179,10 @@ class DatabaseMicrositeBackend(BaseMicrositeBackend):
         for microsite in candidates:
             current = json.loads(microsite.values)
             org_filter = current.get('course_org_filter')
-            if org_filter:
+            if org_filter and type(org_filter) is list:
+                for org in org_filter:
+                    org_filter_set.add(org)
+            else:
                 org_filter_set.add(org_filter)
 
         return org_filter_set
