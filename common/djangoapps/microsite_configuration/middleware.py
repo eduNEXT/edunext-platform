@@ -89,23 +89,6 @@ class MicrositeSessionCookieDomainMiddleware():
         return response
 
 
-class DatabaseMicrositeMiddleware(MicrositeMiddleware):
-    """
-    Middleware class which will bind configuration information regarding 'microsites' on a per request basis.
-    The actual configuration information is taken from the microsite model in the database
-    """
-
-    def process_request(self, request):
-        """
-        Middleware entry point on every request processing. This will associate a request's domain name
-        with a 'University' and any corresponding microsite configuration information
-        """
-        microsite.clear()
-        domain = request.META.get('HTTP_HOST', None)
-        microsite.set_from_db_by_domain(domain)
-        return None
-
-
 class MicrositeCrossBrandingFilterMiddleware():
     """
     Middleware class that prevents a course defined in a branded ORG trough a microsite, to be displayed
@@ -124,7 +107,7 @@ class MicrositeCrossBrandingFilterMiddleware():
         if m is None:
             return None
 
-        course_id =  m.group('course_id')
+        course_id = m.group('course_id')
         course_key = CourseKey.from_string(course_id)
 
         # If the course org is the same as the current microsite

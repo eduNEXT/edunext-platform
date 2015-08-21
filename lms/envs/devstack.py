@@ -188,6 +188,9 @@ MICROSITE_API_ALLOWED_REMOTES = [
 MICROSITE_API_SIGNING_KEY = open('/var/tmp/keys/microsite_api_rsa.pub' , "r").read()
 MICROSITE_API_MANAGER = 'staff'
 
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'microsite_configuration.backends.database.DatabaseMicrositeBackend'
+
 
 #####################################################################
 # See if the developer has any local overrides.
