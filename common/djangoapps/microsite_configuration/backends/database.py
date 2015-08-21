@@ -55,6 +55,7 @@ class DatabaseMicrositeBackend(BaseMicrositeBackend):
             subdomain = microsite.subdomain
             if subdomain and domain.startswith(subdomain):
                 values = json.loads(microsite.values)
+                values['microsite_name'] = microsite.key
                 self._set_microsite_config_from_obj(subdomain, domain, values)
                 return
 
@@ -75,22 +76,32 @@ class DatabaseMicrositeBackend(BaseMicrositeBackend):
         expected to be a string
         """
 
+        leading_slash = kwargs.get('leading_slash', False)
+
         if not self.is_request_in_microsite():
-            return relative_path
+            return '/' + relative_path if leading_slash else relative_path
 
-        microsite_template_path = str(self.get_value('template_dir', None))
+        template_dir = str(self.get_value('template_dir', self.get_value('microsite_name')))
 
-        if microsite_template_path:
-            search_path = os.path.join(microsite_template_path, relative_path)
+        if template_dir:
+            search_path = os.path.join(
+                settings.MICROSITE_ROOT_DIR,
+                template_dir,
+                'templates',
+                relative_path
+                )
+
+            print search_path
+            print os.path.isfile(search_path)
 
             if os.path.isfile(search_path):
                 path = '/{0}/templates/{1}'.format(
-                    self.get_value('microsite_name'),
+                    template_dir,
                     relative_path
                 )
                 return path
 
-        return relative_path
+        return '/' + relative_path if leading_slash else relative_path
 
     def get_value(self, val_name, default=None, **kwargs):
         """
