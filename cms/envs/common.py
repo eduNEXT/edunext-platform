@@ -882,3 +882,10 @@ XBLOCK_SETTINGS = {
         'YOUTUBE_API_KEY': YOUTUBE_API_KEY
     }
 }
+
+
+################################ Settings for Microsites ################################
+
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'microsite_configuration.backends.filebased.SettingsFileMicrositeBackend'
+

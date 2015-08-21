@@ -1,3 +1,11 @@
+"""
+Model to store a microsite in the database.
+
+The object is stored as a json representation of the python dict
+that would have been used in the settings.
+
+"""
+
 import json
 
 from django.db import models
@@ -29,5 +37,5 @@ class Microsite(models.Model):
     subdomain = models.CharField(max_length=127, db_index=True)
     values = models.TextField(null=False, blank=True, validators=[validate_json])
 
-    def __str__(self):
+    def __unicode__(self):
         return self.key
