@@ -264,6 +264,10 @@ def get_course_enrollment_pairs(user, course_org_filter, org_filter_out_set):
     Get the relevant set of (Course, CourseEnrollment) pairs to be displayed on
     a student's dashboard.
     """
+    # Make any call to this function compatible
+    if course_org_filter and isinstance(course_org_filter, basestring):
+        course_org_filter = set([course_org_filter])
+
     for enrollment in CourseEnrollment.enrollments_for_user(user):
         store = modulestore()
         with store.bulk_operations(enrollment.course_id):
@@ -272,7 +276,7 @@ def get_course_enrollment_pairs(user, course_org_filter, org_filter_out_set):
 
                 # if we are in a Microsite, then filter out anything that is not
                 # attributed (by ORG) to that Microsite
-                if course_org_filter and course_org_filter != course.location.org:
+                if course_org_filter and course.location.org not in course_org_filter:
                     continue
                 # Conversely, if we are not in a Microsite, then let's filter out any enrollments
                 # with courses attributed (by ORG) to Microsites
@@ -494,11 +498,9 @@ def dashboard(request):
 
     # Let's filter out any courses in an "org" that has been declared to be
     # in a Microsite
-    org_filter_out_set = microsite.get_all_orgs()
-
-    # remove our current Microsite from the "filter out" list, if applicable
-    if course_org_filter:
-        org_filter_out_set.remove(course_org_filter)
+    org_filter_out_set = []
+    if not course_org_filter:
+        org_filter_out_set = microsite.get_all_orgs()
 
     # Build our (course, enrollment) list for the user, but ignore any courses that no
     # longer exist (because the course IDs have changed). Still, we don't delete those

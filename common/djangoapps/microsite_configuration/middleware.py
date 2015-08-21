@@ -111,7 +111,10 @@ class MicrositeCrossBrandingFilterMiddleware():
         course_key = CourseKey.from_string(course_id)
 
         # If the course org is the same as the current microsite
-        if microsite.get_value('course_org_filter') == course_key.org:
+        org_filter = microsite.get_value('course_org_filter')
+        if isinstance(org_filter, basestring):
+            org_filter = set([org_filter])
+        if course_key.org in org_filter:
             return None
 
         # If the course does not belong to an ORG defined in a microsite
