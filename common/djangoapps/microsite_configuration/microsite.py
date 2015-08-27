@@ -80,7 +80,6 @@ def set_by_domain(domain):
     and make it available to the complete django request process
     """
     BACKEND.set_config_by_domain(domain)
-    config['microsite_config_key'] = microsite_config_key
 
 
 def enable_microsites(log):
@@ -89,10 +88,13 @@ def enable_microsites(log):
     """
     BACKEND.enable_microsites(log)
 
+
 def get_backend(backend_name=None, **kwds):
+    """
     Load a microsites backend and return an instance of it.
     If backend is None (default) settings.MICROSITE_BACKEND is used.
     Any aditional args(kwds) will be used in the constructor of the backend.
+    """
     name = backend_name or settings.MICROSITE_BACKEND
     try:
         parts = name.split('.')
@@ -108,4 +110,6 @@ def get_backend(backend_name=None, **kwds):
     except (AttributeError, ValueError):
         raise ValueError('Cannot find microsites backend %s' % module_name)
     return cls(**kwds)
+
+
 BACKEND = get_backend()
