@@ -91,9 +91,6 @@ class DatabaseMicrositeBackend(BaseMicrositeBackend):
                 relative_path
                 )
 
-            print search_path
-            print os.path.isfile(search_path)
-
             if os.path.isfile(search_path):
                 path = '/{0}/templates/{1}'.format(
                     template_dir,
