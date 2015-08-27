@@ -243,6 +243,9 @@ def get_ccx_membership_triplets(user, course_org_filter, org_filter_out_set):
     Get the relevant set of (CustomCourseForEdX, CcxMembership, Course)
     triplets to be displayed on a student's dashboard.
     """
+    if course_org_filter and isinstance(course_org_filter, basestring):
+        course_org_filter = set([course_org_filter])
+
     # only active memberships for now
     for membership in CcxMembership.memberships_for_user(user):
         ccx = membership.ccx
@@ -252,7 +255,7 @@ def get_ccx_membership_triplets(user, course_org_filter, org_filter_out_set):
             if course and not isinstance(course, ErrorDescriptor):
                 # if we are in a Microsite, then filter out anything that is not
                 # attributed (by ORG) to that Microsite
-                if course_org_filter and course_org_filter != course.location.org:
+                if course_org_filter and course.location.org not in course_org_filter:
                     continue
                 # Conversely, if we are not in a Microsite, then let's filter out any enrollments
                 # with courses attributed (by ORG) to Microsites
