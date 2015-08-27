@@ -472,6 +472,7 @@ class ViewsTestCase(ModuleStoreTestCase):
         self.assertContains(response, "Enroll in")
         self.assertContains(response, "and learn about its other programs")
 
+	# TODO: fmo | (from v5) decide how can we test the new behavior using the public edraak lang force
     @patch.dict(settings.FEATURES, {'IS_EDX_DOMAIN': False})
     def test_mktg_about_language_openedx(self):
         # If we're in an OpenEdX installation,
