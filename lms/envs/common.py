@@ -2385,6 +2385,9 @@ OPTIONAL_APPS = (
 
     # milestones
     'milestones',
+    
+    #edunext xblocks
+    'sodexo_game',
 )
 
 for app_name in OPTIONAL_APPS:
