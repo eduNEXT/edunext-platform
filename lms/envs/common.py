@@ -1881,6 +1881,7 @@ INSTALLED_APPS = (
     'dark_lang',
 
     # Microsite configuration
+    'microsite_api',
     'microsite_configuration',
 
     # Student Identity Reverification
