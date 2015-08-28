@@ -20,7 +20,7 @@ from microsite_configuration import microsite
 
 from edxmako import lookup_template
 from edxmako.middleware import get_template_request_context
-from django.conf import settings
+from openedx.conf import settings
 from django.core.urlresolvers import reverse
 log = logging.getLogger(__name__)
 
