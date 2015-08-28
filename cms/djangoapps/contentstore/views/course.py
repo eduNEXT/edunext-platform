@@ -76,7 +76,14 @@ from contentstore.push_notification import push_notification_enabled
 from course_creators.views import get_course_creator_status, add_user_with_status_unrequested
 from contentstore import utils
 from student.roles import (
-    CourseInstructorRole, CourseStaffRole, CourseCreatorRole, GlobalStaff, UserBasedRole
+    CourseInstructorRole,
+    CourseStaffRole,
+    CourseCreatorRole,
+    GlobalStaff,
+    UserBasedRole,
+    CourseRerunCreatorRole,
+    OrgRerunCreatorRole,
+    OrgCourseCreatorRole
 )
 from student import auth
 from course_action_state.models import CourseRerunState, CourseRerunUIStateManager
@@ -277,10 +284,11 @@ def course_rerun_handler(request, course_key_string):
     GET
         html: return html page with form to rerun a course for the given course id
     """
-    # Only global staff (PMs) are able to rerun courses during the soft launch
-    if not GlobalStaff().has_user(request.user):
-        raise PermissionDenied()
     course_key = CourseKey.from_string(course_key_string)
+    rerun_permission = CourseRerunCreatorRole(course_key).has_user(request.user) or OrgRerunCreatorRole(course_key.org).has_user(request.user)
+
+    if not GlobalStaff().has_user(request.user) and not rerun_permission:
+        raise PermissionDenied()
     with modulestore().bulk_operations(course_key):
         course_module = get_course_and_check_access(course_key, request.user, depth=3)
         if request.method == 'GET':
@@ -662,11 +670,13 @@ def _create_or_rerun_course(request):
     Returns the destination course_key and overriding fields for the new course.
     Raises DuplicateCourseError and InvalidKeyError
     """
-    if not auth.has_access(request.user, CourseCreatorRole()):
-        raise PermissionDenied()
-
     try:
         org = request.json.get('org')
+        rerun_permission = OrgRerunCreatorRole(org).has_user(request.user) or OrgCourseCreatorRole(org).has_user(request.user)
+
+        if not auth.has_access(request.user, CourseCreatorRole()) and not rerun_permission:
+            raise PermissionDenied()
+
         course = request.json.get('number', request.json.get('course'))
         display_name = request.json.get('display_name')
         # force the start date for reruns and allow us to override start via the client
