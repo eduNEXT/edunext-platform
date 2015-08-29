@@ -1,5 +1,6 @@
 <%namespace file="../main.html" import="stanford_theme_enabled" />
 <%! from django.utils.translation import ugettext as _ %>
+<%! from openedx.conf import settings %>
 ${_("Thank you for signing up for {platform_name}.").format(platform_name=settings.PLATFORM_NAME)}
 
 ${_("Change your life and start learning today by activating your "

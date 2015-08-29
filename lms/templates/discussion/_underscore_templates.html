@@ -3,6 +3,7 @@
 from django.utils.translation import ugettext as _
 from django.template.defaultfilters import escapejs
 from django_comment_client.permissions import has_permission
+from microsite_configuration import microsite
 %>
 
 ## IMPORTANT: In order to keep js tests valid and relevant, please be sure to update the appropriate HTML in
@@ -320,7 +321,7 @@ from django_comment_client.permissions import has_permission
 
       % if settings.FEATURES.get('ENABLE_DISCUSSION_HOME_PANEL'):
         <span class="label label-settings">
-          ${_("How to use {platform_name} discussions").format(platform_name=settings.PLATFORM_NAME)}
+          ${_("How to use {platform_name} discussions").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
         </span>
         <table class="home-helpgrid">
           <tr class="helpgrid-row helpgrid-row-navigation">

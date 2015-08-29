@@ -2171,8 +2171,8 @@ class Donation(OrderItem):
             data['name'] = unicode(self.course_id)
             data['category'] = unicode(self.course_id.org)  # pylint: disable=no-member
         else:
-            data['name'] = settings.PLATFORM_NAME
-            data['category'] = settings.PLATFORM_NAME
+            data['name'] = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+            data['category'] = microsite.get_value('platform_name', settings.PLATFORM_NAME)
         return data
 
     @property

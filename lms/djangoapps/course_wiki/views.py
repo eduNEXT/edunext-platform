@@ -17,6 +17,7 @@ from wiki.models import URLPath, Article
 from courseware.courses import get_course_by_id
 from course_wiki.utils import course_wiki_slug
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
+from microsite_configuration import microsite
 
 log = logging.getLogger(__name__)
 
@@ -124,8 +125,9 @@ def get_or_create_root():
     except NoRootURL:
         pass
 
+    platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
     starting_content = "\n".join((
-        _("Welcome to the {platform_name} Wiki").format(platform_name=settings.PLATFORM_NAME),
+        _("Welcome to the {platform_name} Wiki").format(platform_name=platform_name),
         "===",
         _("Visit a course wiki to add an article."),
     ))

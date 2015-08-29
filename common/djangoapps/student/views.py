@@ -1003,7 +1003,7 @@ def accounts_login(request):
         'login_redirect_url': redirect_to,
         'pipeline_running': 'false',
         'pipeline_url': auth_pipeline_urls(pipeline.AUTH_ENTRY_LOGIN, redirect_url=redirect_to),
-        'platform_name': settings.PLATFORM_NAME,
+        'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
     }
     return render_to_response('login.html', context)
 
@@ -1042,18 +1042,19 @@ def login_user(request, error=""):  # pylint: disable-msg=too-many-statements,un
             AUDIT_LOG.warning(
                 u'Login failed - user with username {username} has no social auth with backend_name {backend_name}'.format(
                     username=username, backend_name=backend_name))
+            platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
             return HttpResponse(
                 _("You've successfully logged into your {provider_name} account, but this account isn't linked with an {platform_name} account yet.").format(
-                    platform_name=settings.PLATFORM_NAME, provider_name=requested_provider.name
+                    platform_name=platform_name, provider_name=requested_provider.name
                 )
                 + "<br/><br/>" +
                 _("Use your {platform_name} username and password to log into {platform_name} below, "
                   "and then link your {platform_name} account with {provider_name} from your dashboard.").format(
-                      platform_name=settings.PLATFORM_NAME, provider_name=requested_provider.name
+                      platform_name=platform_name, provider_name=requested_provider.name
                 )
                 + "<br/><br/>" +
                 _("If you don't have an {platform_name} account yet, click <strong>Register Now</strong> at the top of the page.").format(
-                    platform_name=settings.PLATFORM_NAME
+                    platform_name=platform_name
                 ),
                 content_type="text/plain",
                 status=403
@@ -1996,12 +1997,14 @@ def password_reset_confirm_wrapper(
             'form': None,
             'title': _('Password reset unsuccessful'),
             'err_msg': err_msg,
-            'platform_name': settings.PLATFORM_NAME,
+            'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
         }
         return TemplateResponse(request, 'registration/password_reset_confirm.html', context)
     else:
         # we also want to pass settings.PLATFORM_NAME in as extra_context
-        extra_context = {"platform_name": settings.PLATFORM_NAME}
+        extra_context = {
+            "platform_name": microsite.get_value('platform_name', settings.PLATFORM_NAME)
+        }
 
         if request.method == 'POST':
             # remember what the old password hash is before we call down
