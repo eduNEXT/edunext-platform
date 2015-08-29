@@ -796,7 +796,7 @@ def submit_photos_for_verification(request):
 
     subject = _("Verification photos received")
     message = render_to_string('emails/photo_submission_confirmation.txt', context)
-    from_address = microsite.get_value('default_from_email', settings.DEFAULT_FROM_EMAIL)
+    from_address = microsite.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
     to_address = account_settings['email']
 
     send_mail(subject, message, from_address, [to_address], fail_silently=False)
