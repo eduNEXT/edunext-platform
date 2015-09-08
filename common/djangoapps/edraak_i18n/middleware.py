@@ -1,7 +1,6 @@
 from django.utils.cache import patch_vary_headers
 from django.utils import translation
 from django.conf import settings
-from microsite_configuration import microsite
 
 
 class ForceLangMiddleware(object):
@@ -27,11 +26,7 @@ class SessionBasedLocaleMiddleware(object):
     The SessionMiddleware has to be activated.
     """
     def process_request(self, request):
-
-        if microsite.get_value('FORCE_LANG'):
-            language = microsite.get_value('FORCE_LANG')
-            request.session['django_language'] = microsite.get_value('FORCE_LANG')
-        elif request.method == 'GET' and 'lang' in request.GET:
+        if request.method == 'GET' and 'lang' in request.GET:
             if 'language_flag' in request.session and request.session['language_flag']:
                 language = request.session['language_reference']
                 request.session['language_flag'] = False
