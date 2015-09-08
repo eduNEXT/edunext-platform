@@ -2,7 +2,7 @@
 # Imported from Django 1.8
 # pylint: disable=invalid-name
 import re
-from django.conf import settings
+from openedx.conf import settings
 from django.conf.locale import LANG_INFO
 from django.utils import translation
 
