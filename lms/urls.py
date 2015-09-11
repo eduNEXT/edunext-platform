@@ -66,6 +66,8 @@ urlpatterns = (
 
     url(r'^notifier_api/', include('notifier_api.urls')),
 
+    url(r'^', include('edraak_i18n.urls')),
+
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
     # Feedback Form endpoint
@@ -86,6 +88,9 @@ urlpatterns = (
     # Profile Images API endpoints
     url(r'^api/profile_images/', include('openedx.core.djangoapps.profile_images.urls')),
 
+    #  Microsite management API
+    url(r'^api/microsite/', include('microsite_api.urls')),
+    
     # Video Abstraction Layer used to allow video teams to manage video assets
     # independently of courseware. https://github.com/edx/edx-val
     url(r'^api/val/v0/', include('edxval.urls')),
@@ -307,6 +312,8 @@ if settings.COURSEWARE_ENABLED:
         url(r'^courses/{}/mktg-about$'.format(settings.COURSE_ID_PATTERN),
             'courseware.views.mktg_course_about', name="mktg_about_course"),
         #View for mktg site
+        url(r'^mktg/dashboard$',
+            'courseware.views.mktg_dashboard', name="mktg_dashboard"),
         url(r'^mktg/{}/?$'.format(settings.COURSE_ID_PATTERN),
             'courseware.views.mktg_course_about', name="mktg_about_course"),
 

@@ -365,7 +365,7 @@ class PayAndVerifyView(View):
             'display_steps': display_steps,
             'is_active': json.dumps(request.user.is_active),
             'message_key': message,
-            'platform_name': settings.PLATFORM_NAME,
+            'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
             'processors': processors,
             'requirements': requirements,
             'user_full_name': full_name,
@@ -791,12 +791,12 @@ def submit_photos_for_verification(request):
     # Send a confirmation email to the user
     context = {
         'full_name': account_settings['name'],
-        'platform_name': settings.PLATFORM_NAME
+        'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME)
     }
 
     subject = _("Verification photos received")
     message = render_to_string('emails/photo_submission_confirmation.txt', context)
-    from_address = microsite.get_value('default_from_email', settings.DEFAULT_FROM_EMAIL)
+    from_address = microsite.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
     to_address = account_settings['email']
 
     send_mail(subject, message, from_address, [to_address], fail_silently=False)
@@ -849,7 +849,7 @@ def _compose_message_reverification_email(
         context["verification_open"] = verification_open
         context["due_date"] = get_default_time_display(reverification_block.due)
 
-        context['platform_name'] = settings.PLATFORM_NAME
+        context['platform_name'] = microsite.get_value('platform_name', settings.PLATFORM_NAME)
         context["used_attempts"] = used_attempts
         context["allowed_attempts"] = allowed_attempts
         context["support_link"] = microsite.get_value('email_from_address', settings.CONTACT_EMAIL)
@@ -1041,7 +1041,7 @@ class ReverifyView(View):
         if status in ["must_reverify", "expired"]:
             context = {
                 "user_full_name": request.user.profile.name,
-                "platform_name": settings.PLATFORM_NAME,
+                "platform_name": microsite.get_value('platform_name', settings.PLATFORM_NAME),
                 "capture_sound": staticfiles_storage.url("audio/camera_capture.wav"),
             }
             return render_to_response("verify_student/reverify.html", context)
@@ -1116,7 +1116,7 @@ class InCourseReverifyView(View):
             'course_key': unicode(course_key),
             'course_name': course.display_name_with_default,
             'checkpoint_name': checkpoint.checkpoint_name,
-            'platform_name': settings.PLATFORM_NAME,
+            'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
             'usage_id': usage_id,
             'capture_sound': staticfiles_storage.url("audio/camera_capture.wav"),
         }

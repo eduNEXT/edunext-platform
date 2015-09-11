@@ -455,7 +455,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 EMBARGO_SITE_REDIRECT_URL = None
 
 ############################### Pipeline #######################################
-STATICFILES_STORAGE = 'cms.lib.django_require.staticstorage.OptimizedCachedRequireJsStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 from openedx.core.lib.rooted_paths import rooted_glob
 
@@ -869,6 +869,9 @@ OPTIONAL_APPS = (
 
     # milestones
     'milestones',
+
+    #edunext xblocks
+    'sodexo_game',
 )
 
 
@@ -947,6 +950,9 @@ ADVANCED_COMPONENT_TYPES = [
     # embed public google drive documents and calendars within edX units
     'google-document',
     'google-calendar',
+
+    #edunext xblocks
+    'sodexo_game',
 ]
 
 # Adding components in this list will disable the creation of new problem for those
@@ -999,6 +1005,12 @@ XBLOCK_SETTINGS = {
         'YOUTUBE_API_KEY': YOUTUBE_API_KEY
     }
 }
+
+
+################################ Settings for Microsites ################################
+
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'microsite_configuration.backends.filebased.SettingsFileMicrositeBackend'
 
 ################################ Settings for Credit Course Requirements ################################
 # Initial delay used for retrying tasks.

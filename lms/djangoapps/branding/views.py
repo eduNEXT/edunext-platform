@@ -2,7 +2,7 @@
 import logging
 import urllib
 
-from django.conf import settings
+from openedx.conf import settings
 from django.core.urlresolvers import reverse
 from django.core.cache import cache
 from django.views.decorators.cache import cache_control
@@ -33,9 +33,12 @@ def get_course_enrollments(user):
     """
     enrollments = CourseEnrollment.enrollments_for_user(user)
     microsite_org = microsite.get_value('course_org_filter')
+    if microsite_org and isinstance(microsite_org, basestring):
+        microsite_org = set([microsite_org])
+
     if microsite_org:
         site_enrollments = [
-            enrollment for enrollment in enrollments if enrollment.course_id.org == microsite_org
+            enrollment for enrollment in enrollments if enrollment.course_id.org in microsite_org
         ]
     else:
         site_enrollments = [

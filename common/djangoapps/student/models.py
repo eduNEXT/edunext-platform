@@ -53,6 +53,7 @@ from functools import total_ordering
 
 from certificates.models import GeneratedCertificate
 from course_modes.models import CourseMode
+from microsite_configuration import microsite
 
 import analytics
 
@@ -1699,7 +1700,7 @@ class LinkedInAddToProfileConfiguration(ConfigurationModel):
             cert_mode,
             _(u"{platform_name} Certificate for {course_name}")
         ).format(
-            platform_name=settings.PLATFORM_NAME,
+            platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME),
             course_name=course_name
         )
 

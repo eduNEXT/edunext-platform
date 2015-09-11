@@ -17,6 +17,10 @@ PLATFORM_NAME = ENV_TOKENS.get('PLATFORM_NAME', 'Devstack')
 # By default don't use a worker, execute tasks as if they were local functions
 CELERY_ALWAYS_EAGER = True
 
+###############################LANG########################
+LANGUAGE_CODE = 'es-419'
+TIME_ZONE = 'America/Bogota'
+
 ################################ LOGGERS ######################################
 
 import logging
@@ -28,10 +32,12 @@ for pkg_name in ['track.contexts', 'track.middleware', 'dd.dogapi']:
 
 ################################ EMAIL ########################################
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = '/edx/app/edxapp/edx-platform/email-messages'
+
 FEATURES['ENABLE_INSTRUCTOR_EMAIL'] = True     # Enable email for all Studio courses
 FEATURES['REQUIRE_COURSE_EMAIL_AUTH'] = False  # Give all courses email (don't require django-admin perms)
-
+FEATURES['ENABLE_MULTIPART_EMAIL'] = True
 
 ########################## ANALYTICS TESTING ########################
 
@@ -166,6 +172,16 @@ VERIFY_STUDENT["SOFTWARE_SECURE"] = {
     "API_SECRET_KEY": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
 }
 
+########################## Microsites #######################
+
+MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
+FEATURES['USE_MICROSITES'] = True
+MICROSITE_API_ALLOWED_REMOTES = [
+    '*',
+]
+MICROSITE_API_SIGNING_KEY = open('/var/tmp/keys/microsite_api_rsa.pub', "r").read()
+MICROSITE_API_MANAGER = 'staff'
+
 # Skip enrollment start date filtering
 SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = True
 
@@ -175,6 +191,9 @@ FEATURES['ENABLE_SHOPPING_CART'] = True
 FEATURES['STORE_BILLING_INFO'] = True
 FEATURES['ENABLE_PAID_COURSE_REGISTRATION'] = True
 FEATURES['ENABLE_COSMETIC_DISPLAY_PRICE'] = True
+
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'microsite_configuration.backends.database.DatabaseMicrositeBackend'
 
 ########################## Third Party Auth #######################
 

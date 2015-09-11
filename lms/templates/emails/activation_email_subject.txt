@@ -1,3 +1,4 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from openedx.conf import settings %>
 
 ${_("Activate Your {platform_name} Account").format(platform_name=settings.PLATFORM_NAME)}

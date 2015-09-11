@@ -909,6 +909,19 @@ def course_about(request, course_id):
             'pre_requisite_courses': pre_requisite_courses
         })
 
+@ensure_csrf_cookie
+@cache_if_anonymous('org')
+def mktg_dashboard(request):
+    """
+    This is the button that checks if we should redirect to dashboard or login
+    """
+    to_dashboard = False
+    if settings.COURSEWARE_ENABLED and request.user.is_authenticated():
+        to_dashboard = True
+
+    return render_to_response(
+        'courseware/mktg_dashboard.html', {'link_to_dashboard': to_dashboard}
+    )
 
 @ensure_csrf_cookie
 @cache_if_anonymous('org')
@@ -1387,7 +1400,7 @@ def generate_user_cert(request, course_id):
         log.info(u"Anon user trying to generate certificate for %s", course_id)
         return HttpResponseBadRequest(
             _('You must be signed in to {platform_name} to create a certificate.').format(
-                platform_name=settings.PLATFORM_NAME
+                platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME)
             )
         )
 

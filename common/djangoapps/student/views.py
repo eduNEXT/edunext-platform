@@ -1,4 +1,4 @@
-"""
+﻿"""
 Student Views
 """
 import datetime
@@ -20,7 +20,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import password_reset_confirm
 from django.contrib import messages
 from django.core.context_processors import csrf
-from django.core import mail
+import mail
 from django.core.urlresolvers import reverse
 from django.core.validators import validate_email, ValidationError
 from django.db import IntegrityError, transaction
@@ -230,6 +230,10 @@ def get_course_enrollment_pairs(user, course_org_filter, org_filter_out_set):
     Get the relevant set of (Course, CourseEnrollment) pairs to be displayed on
     a student's dashboard.
     """
+    # Make any call to this function compatible
+    if course_org_filter and isinstance(course_org_filter, basestring):
+        course_org_filter = set([course_org_filter])
+
     for enrollment in CourseEnrollment.enrollments_for_user(user):
         store = modulestore()
         with store.bulk_operations(enrollment.course_id):
@@ -238,7 +242,7 @@ def get_course_enrollment_pairs(user, course_org_filter, org_filter_out_set):
 
                 # if we are in a Microsite, then filter out anything that is not
                 # attributed (by ORG) to that Microsite
-                if course_org_filter and course_org_filter != course.location.org:
+                if course_org_filter and course.location.org not in course_org_filter:
                     continue
                 # Conversely, if we are not in a Microsite, then let's filter out any enrollments
                 # with courses attributed (by ORG) to Microsites
@@ -494,11 +498,9 @@ def dashboard(request):
 
     # Let's filter out any courses in an "org" that has been declared to be
     # in a Microsite
-    org_filter_out_set = microsite.get_all_orgs()
-
-    # remove our current Microsite from the "filter out" list, if applicable
-    if course_org_filter:
-        org_filter_out_set.remove(course_org_filter)
+    org_filter_out_set = []
+    if not course_org_filter:
+        org_filter_out_set = microsite.get_all_orgs()
 
     # Build our (course, enrollment) list for the user, but ignore any courses that no
     # longer exist (because the course IDs have changed). Still, we don't delete those
@@ -1001,7 +1003,7 @@ def accounts_login(request):
         'login_redirect_url': redirect_to,
         'pipeline_running': 'false',
         'pipeline_url': auth_pipeline_urls(pipeline.AUTH_ENTRY_LOGIN, redirect_url=redirect_to),
-        'platform_name': settings.PLATFORM_NAME,
+        'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
     }
     return render_to_response('login.html', context)
 
@@ -1040,18 +1042,19 @@ def login_user(request, error=""):  # pylint: disable-msg=too-many-statements,un
             AUDIT_LOG.warning(
                 u'Login failed - user with username {username} has no social auth with backend_name {backend_name}'.format(
                     username=username, backend_name=backend_name))
+            platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
             return HttpResponse(
                 _("You've successfully logged into your {provider_name} account, but this account isn't linked with an {platform_name} account yet.").format(
-                    platform_name=settings.PLATFORM_NAME, provider_name=requested_provider.name
+                    platform_name=platform_name, provider_name=requested_provider.name
                 )
                 + "<br/><br/>" +
                 _("Use your {platform_name} username and password to log into {platform_name} below, "
                   "and then link your {platform_name} account with {provider_name} from your dashboard.").format(
-                      platform_name=settings.PLATFORM_NAME, provider_name=requested_provider.name
+                      platform_name=platform_name, provider_name=requested_provider.name
                 )
                 + "<br/><br/>" +
                 _("If you don't have an {platform_name} account yet, click <strong>Register Now</strong> at the top of the page.").format(
-                    platform_name=settings.PLATFORM_NAME
+                    platform_name=platform_name
                 ),
                 content_type="text/plain",
                 status=403
@@ -1640,7 +1643,9 @@ def create_account_with_params(request, params):
         # Email subject *must not* contain newlines
         subject = ''.join(subject.splitlines())
         message = render_to_string('emails/activation_email.txt', context)
-
+        message_html = None
+        if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+            message_html = render_to_string('emails/html/activation_email.html', context)
         from_address = microsite.get_value(
             'email_from_address',
             settings.DEFAULT_FROM_EMAIL
@@ -1652,7 +1657,7 @@ def create_account_with_params(request, params):
                            '-' * 80 + '\n\n' + message)
                 mail.send_mail(subject, message, from_address, [dest_addr], fail_silently=False)
             else:
-                user.email_user(subject, message, from_address)
+                mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
         except Exception:  # pylint: disable=broad-except
             log.error(u'Unable to send activation email to user from "%s"', from_address, exc_info=True)
     else:
@@ -1901,8 +1906,12 @@ def password_reset(request):
 
     form = PasswordResetFormNoActive(request.POST)
     if form.is_valid():
+        from_address = microsite.get_value(
+            'email_from_address',
+            settings.DEFAULT_FROM_EMAIL
+        )
         form.save(use_https=request.is_secure(),
-                  from_email=settings.DEFAULT_FROM_EMAIL,
+                  from_email=from_address,
                   request=request,
                   domain_override=request.get_host())
         # When password change is complete, a "edx.user.settings.changed" event will be emitted.
@@ -1988,12 +1997,14 @@ def password_reset_confirm_wrapper(
             'form': None,
             'title': _('Password reset unsuccessful'),
             'err_msg': err_msg,
-            'platform_name': settings.PLATFORM_NAME,
+            'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
         }
         return TemplateResponse(request, 'registration/password_reset_confirm.html', context)
     else:
         # we also want to pass settings.PLATFORM_NAME in as extra_context
-        extra_context = {"platform_name": settings.PLATFORM_NAME}
+        extra_context = {
+            "platform_name": microsite.get_value('platform_name', settings.PLATFORM_NAME)
+        }
 
         if request.method == 'POST':
             # remember what the old password hash is before we call down
@@ -2035,11 +2046,18 @@ def reactivation_email_for_user(user):
     subject = render_to_string('emails/activation_email_subject.txt', context)
     subject = ''.join(subject.splitlines())
     message = render_to_string('emails/activation_email.txt', context)
+    message_html = None
+    if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+        message_html = render_to_string('emails/html/activation_email.html', context)
 
+    from_address = microsite.get_value(
+        'email_from_address',
+        settings.DEFAULT_FROM_EMAIL
+    )
     try:
-        user.email_user(subject, message, settings.DEFAULT_FROM_EMAIL)
+        mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
     except Exception:  # pylint: disable=broad-except
-        log.error(u'Unable to send reactivation email from "%s"', settings.DEFAULT_FROM_EMAIL, exc_info=True)
+        log.error(u'Unable to send reactivation email from "%s"', from_address, exc_info=True)
         return JsonResponse({
             "success": False,
             "error": _('Unable to send reactivation email')
@@ -2096,13 +2114,16 @@ def do_email_change_request(user, new_email, activation_key=None):
     subject = ''.join(subject.splitlines())
 
     message = render_to_string('emails/email_change.txt', context)
+    message_html = None
+    if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+        message_html = render_to_string('emails/html/email_change.html', context)
 
     from_address = microsite.get_value(
         'email_from_address',
         settings.DEFAULT_FROM_EMAIL
     )
     try:
-        mail.send_mail(subject, message, from_address, [pec.new_email])
+        mail.send_mail(subject, message, from_address, [pec.new_email], html_message=message_html)
     except Exception:  # pylint: disable=broad-except
         log.error(u'Unable to send email activation link to user from "%s"', from_address, exc_info=True)
         raise ValueError(_('Unable to send email activation link. Please try again later.'))
@@ -2152,6 +2173,13 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
         message = render_to_string('emails/confirm_email_change.txt', address_context)
         u_prof = UserProfile.objects.get(user=user)
         meta = u_prof.get_meta()
+        message_html = None
+        if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+            message_html = render_to_string('emails/html/confirm_email_change.html', address_context)
+        from_address = microsite.get_value(
+            'email_from_address',
+            settings.DEFAULT_FROM_EMAIL
+        )
         if 'old_emails' not in meta:
             meta['old_emails'] = []
         meta['old_emails'].append([user.email, datetime.datetime.now(UTC).isoformat()])
@@ -2159,7 +2187,7 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
         u_prof.save()
         # Send it to the old email...
         try:
-            user.email_user(subject, message, settings.DEFAULT_FROM_EMAIL)
+            mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
         except Exception:    # pylint: disable=broad-except
             log.warning('Unable to send confirmation email to old address', exc_info=True)
             response = render_to_response("email_change_failed.html", {'email': user.email})
@@ -2171,7 +2199,7 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
         pec.delete()
         # And send it to the new email...
         try:
-            user.email_user(subject, message, settings.DEFAULT_FROM_EMAIL)
+            mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
         except Exception:  # pylint: disable=broad-except
             log.warning('Unable to send confirmation email to new address', exc_info=True)
             response = render_to_response("email_change_failed.html", {'email': pec.new_email})

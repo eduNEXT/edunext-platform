@@ -842,7 +842,7 @@ MEDIA_URL = '/media/'
 
 # Locale/Internationalization
 TIME_ZONE = 'America/New_York'  # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-LANGUAGE_CODE = 'en'  # http://www.i18nguy.com/unicode/language-identifiers.html
+LANGUAGE_CODE = 'es-419'  # http://www.i18nguy.com/unicode/language-identifiers.html
 # these languages display right to left
 LANGUAGES_BIDI = ("he", "ar", "fa", "ur", "fa-ir", "rtl")
 
@@ -1150,6 +1150,9 @@ MIDDLEWARE_CLASSES = (
 
     'splash.middleware.SplashMiddleware',
 
+    # Make One language the default one
+    # 'edraak_i18n.middleware.ForceLangMiddleware', # should no longer be used because we want languages to be different per microsite and use browser settings
+    'edraak_i18n.middleware.SessionBasedLocaleMiddleware',
 
     'geoinfo.middleware.CountryMiddleware',
     'embargo.middleware.EmbargoMiddleware',
@@ -1876,6 +1879,7 @@ INSTALLED_APPS = (
     'dark_lang',
 
     # Microsite configuration
+    'microsite_api',
     'microsite_configuration',
 
     # Student Identity Reverification
@@ -1923,6 +1927,8 @@ INSTALLED_APPS = (
     'teams',
 
     'xblock_django',
+    # eduNEXT modules
+    'edraak_i18n'
 )
 
 ######################### CSRF #########################################
@@ -2377,6 +2383,9 @@ OPTIONAL_APPS = (
 
     # milestones
     'milestones',
+    
+    #edunext xblocks
+    'sodexo_game',
 )
 
 for app_name in OPTIONAL_APPS:
@@ -2445,6 +2454,13 @@ PDF_RECEIPT_LOGO_HEIGHT_MM = 12
 PDF_RECEIPT_COBRAND_LOGO_PATH = PROJECT_ROOT + '/static/images/default-theme/logo.png'
 # Height of the Co-brand Logo in mm
 PDF_RECEIPT_COBRAND_LOGO_HEIGHT_MM = 12
+
+
+################################ Settings for Microsites ################################
+
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'microsite_configuration.backends.filebased.SettingsFileMicrositeBackend'
+
 
 # Use None for the default search engine
 SEARCH_ENGINE = None
