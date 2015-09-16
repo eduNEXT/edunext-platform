@@ -5,6 +5,7 @@ import re
 from openedx.conf import settings
 from django.conf.locale import LANG_INFO
 from django.utils import translation
+from microsite_configuration import microsite
 
 
 # Format of Accept-Language header values. From RFC 2616, section 14.4 and 3.9.
@@ -90,6 +91,10 @@ def get_language_from_request(request, check_path=False):
     If check_path is True, the URL path prefix will be checked for a language
     code, otherwise this is skipped for backwards compatibility.
     """
+
+    if microsite.get_value('FORCE_LANG'):
+        return microsite.get_value('FORCE_LANG')
+
     if check_path:
         # Note: django 1.4 implementation of get_language_from_path is OK to use
         lang_code = translation.get_language_from_path(request.path_info)
