@@ -275,7 +275,7 @@ class OrgRerunCreatorRole(OrgRole):
 
 @register_access_role
 class OrgCourseCreatorRole(OrgRole):
-    """An ORG staff with ability to rerun all courses"""
+    """An ORG staff with ability to create new courses"""
     ROLE = 'org_course_creator_group'
 
     def __init__(self, *args, **kwargs):
