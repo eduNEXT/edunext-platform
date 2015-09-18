@@ -393,13 +393,9 @@ def send_mail_to_student(student, param_dict, language=None):
 
     subject_template, message_template, html_template = email_template_dict.get(message_type, (None, None, None))
     if subject_template is not None and message_template is not None:
-        # edunext | laq, added so that if language is None, the current language(that comes from the email sender) wont be overriden
-        if language is not None:
-            subject, message = render_message_to_string(
-                subject_template, message_template, param_dict, language=language
-            )
-        else:
-            subject, message = get_subject_and_message(subject_template, message_template, param_dict)
+        subject, message = render_message_to_string(
+            subject_template, message_template, param_dict, language=language
+        )
 
     message_html = None
     if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
@@ -428,8 +424,12 @@ def render_message_to_string(subject_template, message_template, param_dict, lan
     Returns two strings that correspond to the rendered, translated email
     subject and message.
     """
-    with override_language(language):
+    # edunext | laq, added so that if language is None, the current language(that comes from the email sender) wont be overriden
+    if language is None:
         return get_subject_and_message(subject_template, message_template, param_dict)
+    else:
+        with override_language(language):
+            return get_subject_and_message(subject_template, message_template, param_dict)
 
 
 def get_subject_and_message(subject_template, message_template, param_dict):
