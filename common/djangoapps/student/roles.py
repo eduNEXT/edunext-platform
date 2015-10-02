@@ -267,7 +267,7 @@ class CourseRerunCreatorRole(CourseRole):
 @register_access_role
 class OrgRerunCreatorRole(OrgRole):
     """An ORG staff with ability to rerun all courses"""
-    ROLE = 'rerun_creator'
+    ROLE = 'org_rerun_creator_group'
 
     def __init__(self, *args, **kwargs):
         super(OrgRerunCreatorRole, self).__init__(self.ROLE, *args, **kwargs)
