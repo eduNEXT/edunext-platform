@@ -1878,6 +1878,9 @@ INSTALLED_APPS = (
     # Dark-launching languages
     'dark_lang',
 
+    # External manager application
+    'manage_api',
+
     # Microsite configuration
     'microsite_api',
     'microsite_configuration',
