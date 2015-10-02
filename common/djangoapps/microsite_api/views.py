@@ -6,18 +6,7 @@ from rest_framework.parsers import JSONParser
 from microsite_configuration.models import Microsite
 from microsite_api.serializers import MicrositeSerializer, MicrositeMinimalSerializer
 from microsite_api.authenticators import MicrositeManagerAuthentication
-
-
-# TODO: do we need this. I just had it so from the tutorial
-# See if user_api has something quite like this
-class JSONResponse(HttpResponse):
-    """
-    An HttpResponse that renders its content into JSON.
-    """
-    def __init__(self, data, **kwargs):
-        content = JSONRenderer().render(data)
-        kwargs['content_type'] = 'application/json'
-        super(JSONResponse, self).__init__(content, **kwargs)
+from util.json_request import JsonResponse
 
 
 class MicrositeList(APIView):
@@ -31,15 +20,15 @@ class MicrositeList(APIView):
     def get(self, request, format=None):
         microsite = Microsite.objects.all()
         serializer = MicrositeMinimalSerializer(microsite, many=True)
-        return JSONResponse(serializer.data)
+        return JsonResponse(serializer.data)
 
     def post(self, request, format=None):
         data = JSONParser().parse(request)
         serializer = MicrositeSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            return JSONResponse(serializer.data, status=201)
-        return JSONResponse(serializer.errors, status=400)
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
 
 
 class MicrositeDetail(APIView):
@@ -59,7 +48,7 @@ class MicrositeDetail(APIView):
     def get(self, request, key, format=None):
         microsite = self.get_microsite(key)
         serializer = MicrositeSerializer(microsite)
-        return JSONResponse(serializer.data)
+        return JsonResponse(serializer.data)
 
     def put(self, request, key, format=None):
         microsite = self.get_microsite(key)
@@ -73,8 +62,8 @@ class MicrositeDetail(APIView):
         serializer = MicrositeSerializer(microsite, data=data)
         if serializer.is_valid():
             serializer.save()
-            return JSONResponse(serializer.data)
-        return JSONResponse(serializer.errors, status=400)
+            return JsonResponse(serializer.data)
+        return JsonResponse(serializer.errors, status=400)
 
     def delete(self, request, key, format=None):
         microsite = self.get_microsite(key)

@@ -1,21 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import json
-
-from django.http import HttpResponse
 from django.db import transaction
 from rest_framework.views import APIView
 from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
 
 from openedx.core.djangoapps.user_api.accounts.api import check_account_exists
-from student.views import create_account_with_params, _do_create_account
+from student.views import _do_create_account
 from student.forms import AccountCreationForm
 from student.models import create_comments_service_user
 from student.roles import OrgRerunCreatorRole, OrgCourseCreatorRole
 
 from microsite_api.authenticators import MicrositeManagerAuthentication
-from microsite_api.views import JSONResponse
+from util.json_request import JsonResponse
 
 
 class UserManagement(APIView):
@@ -39,7 +35,7 @@ class UserManagement(APIView):
 
         conflicts = check_account_exists(email=email, username=username)
         if conflicts:
-            return JSONResponse({'conflict_on_fields': conflicts}, status=409)
+            return JsonResponse({'conflict_on_fields': conflicts}, status=409)
 
         data = {
             'username': username,
@@ -68,4 +64,4 @@ class UserManagement(APIView):
             rerun_role = OrgRerunCreatorRole(org_manager)
             rerun_role.add_users(user)
 
-        return JSONResponse({"success": True}, status=201)
+        return JsonResponse({"success": True}, status=201)
