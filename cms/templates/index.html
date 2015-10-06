@@ -23,7 +23,7 @@
       org_course_creator_status = 'notgranted'
       org_course_creator_allowed_org = []
 
-      all_roles = UserBasedRole(request.user, 'course_creator').courses_with_role()
+      all_roles = UserBasedRole(request.user, 'org_course_creator_group').courses_with_role()
       if all_roles:
           org_course_creator_status = 'granted'
           org_course_creator_allowed_org = [x.org for x in all_roles]
