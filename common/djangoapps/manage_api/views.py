@@ -96,3 +96,28 @@ class UserManagement(APIView):
             rerun_role.add_users(user)
 
         return JsonResponse({"success": True}, status=201)
+
+
+class OrgManagement(APIView):
+    """
+    Retrieve, update or delete a microsite.
+    """
+
+    authentication_classes = (MicrositeManagerAuthentication,)
+    renderer_classes = [JSONRenderer]
+
+    def post(self, request, format=None):
+        """
+        """
+        # Gather all the request data
+        organization_name = request.POST.get('organization_name')
+
+        # Forbid org already defined in a microsite
+        orgs_in_microsites = microsite.get_all_orgs()
+        if organization_name in orgs_in_microsites:
+            return JsonResponse("Org taken", status=409)
+
+        # TODO:
+        # Find orgs that already have courses in them and forbid those too
+
+        return JsonResponse({"success": True}, status=200)
