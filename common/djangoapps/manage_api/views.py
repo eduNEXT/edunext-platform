@@ -4,14 +4,22 @@ from django.db import transaction
 from rest_framework.views import APIView
 from rest_framework.renderers import JSONRenderer
 
+import logging
+import mail
+
 from openedx.core.djangoapps.user_api.accounts.api import check_account_exists
 from student.views import _do_create_account
 from student.forms import AccountCreationForm
 from student.models import create_comments_service_user
 from student.roles import OrgRerunCreatorRole, OrgCourseCreatorRole
+from edxmako.shortcuts import render_to_string
 
 from microsite_api.authenticators import MicrositeManagerAuthentication
 from util.json_request import JsonResponse
+from openedx.conf import settings
+from microsite_configuration import microsite
+
+log = logging.getLogger("edx.student")
 
 
 class UserManagement(APIView):
@@ -32,6 +40,7 @@ class UserManagement(APIView):
         contact_name = request.POST.get('contact_name')
         activate = request.POST.get('activate', False)
         org_manager = request.POST.get('org_manager', False)
+        send_email = request.POST.get('send_email', False)
 
         conflicts = check_account_exists(email=email, username=username)
         if conflicts:
@@ -51,11 +60,33 @@ class UserManagement(APIView):
                 tos_required=False,
             )
             (user, profile, registration) = _do_create_account(form)
-            if activate:
-                user.is_active = True
-                user.save()
 
         create_comments_service_user(user)
+
+        if send_email:
+            context = {
+                'name': profile.name,
+                'key': registration.activation_key,
+            }
+
+            # composes activation email
+            subject = render_to_string('emails/activation_email_subject.txt', context)
+            subject = ''.join(subject.splitlines())
+            message = render_to_string('emails/activation_email.txt', context)
+            message_html = None
+            if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+                message_html = render_to_string('emails/html/activation_email.html', context)
+            from_address = microsite.get_value(
+                'email_from_address',
+                settings.DEFAULT_FROM_EMAIL
+            )
+            try:
+                mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
+            except Exception:  # pylint: disable=broad-except
+                log.error(u'Unable to send activation email to remotely created user from "%s"', from_address, exc_info=True)
+
+        if activate:
+            registration.activate()
 
         # Assing the user to the org management roles
         if org_manager:
