@@ -114,7 +114,7 @@ class OrgManagement(APIView):
 
         # Forbid org already defined in a microsite
         orgs_in_microsites = microsite.get_all_orgs()
-        if organization_name in orgs_in_microsites:
+        if organization_name.lower() in (org.lower() for org in orgs_in_microsites):
             return JsonResponse("Org taken", status=409)
 
         # TODO:
