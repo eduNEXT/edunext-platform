@@ -3,6 +3,7 @@
 from django.db import transaction
 from rest_framework.views import APIView
 from rest_framework.renderers import JSONRenderer
+from itertools import chain
 
 import logging
 import mail
@@ -18,13 +19,13 @@ from microsite_api.authenticators import MicrositeManagerAuthentication
 from util.json_request import JsonResponse
 from openedx.conf import settings
 from microsite_configuration import microsite
+from microsite_configuration.models import Microsite
 
 log = logging.getLogger("edx.student")
 
 
 class UserManagement(APIView):
     """
-    Retrieve, update or delete a microsite.
     """
 
     authentication_classes = (MicrositeManagerAuthentication,)
@@ -100,7 +101,6 @@ class UserManagement(APIView):
 
 class OrgManagement(APIView):
     """
-    Retrieve, update or delete a microsite.
     """
 
     authentication_classes = (MicrositeManagerAuthentication,)
@@ -121,3 +121,20 @@ class OrgManagement(APIView):
         # Find orgs that already have courses in them and forbid those too
 
         return JsonResponse({"success": True}, status=200)
+
+
+class SubdomainManagement(APIView):
+    """
+    """
+
+    authentication_classes = (MicrositeManagerAuthentication,)
+    renderer_classes = [JSONRenderer]
+
+    def post(self, request, format=None):
+        """
+        """
+        # Gather all the request data
+        subdomain = request.POST.get('subdomain')
+        objects = Microsite.objects.filter(subdomain__startswith=subdomain).values_list('subdomain')
+
+        return JsonResponse({'subdomains': list(chain.from_iterable(objects))}, status=200)
