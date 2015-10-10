@@ -86,15 +86,22 @@ class UserManagement(APIView):
             except Exception:  # pylint: disable=broad-except
                 log.error(u'Unable to send activation email to remotely created user from "%s"', from_address, exc_info=True)
 
-        if activate:
-            registration.activate()
-
         # Assing the user to the org management roles
         if org_manager:
+            # We have to make them active for the roles to stick
+            user.is_active = True
+            user.save()
+
             creator_role = OrgCourseCreatorRole(org_manager)
             creator_role.add_users(user)
             rerun_role = OrgRerunCreatorRole(org_manager)
             rerun_role.add_users(user)
+
+            user.is_active = False
+            user.save()
+
+        if activate:
+            registration.activate()
 
         return JsonResponse({"success": True}, status=201)
 
