@@ -3,7 +3,7 @@
 
 from collections import namedtuple
 
-from django.conf import settings
+from openedx.conf import settings
 from dark_lang.models import DarkLangConfig
 
 
