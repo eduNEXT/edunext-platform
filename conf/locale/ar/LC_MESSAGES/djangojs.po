@@ -1858,8 +1858,8 @@ msgid_plural "%(value)s seconds"
 msgstr[0] "%(value)s ثانية"
 msgstr[1] "%(value)s ثانية "
 msgstr[2] "%(value)s ثانية"
-msgstr[3] "%(value)s ثواني "
-msgstr[4] "%(value)s ثواني "
+msgstr[3] "%(value)s ثوانٍ"
+msgstr[4] "%(value)s ثانية"
 msgstr[5] "%(value)s ثوانٍ"
 
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
@@ -5868,19 +5868,19 @@ msgstr "تحديث الرد "
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
 msgid "marked as answer %(time_ago)s by %(user)s"
-msgstr "موسومة كإجابة منذ %(time_ago)s للمستخدم %(user)s"
+msgstr "موسومة كإجابة %(time_ago)s للمستخدم %(user)s"
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
 msgid "marked as answer %(time_ago)s"
-msgstr "موسومة كإجابة منذ %(time_ago)s"
+msgstr "موسومة كإجابة %(time_ago)s"
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
 msgid "endorsed %(time_ago)s by %(user)s"
-msgstr "مصادقة عليها منذ %(time_ago)s من قِبل %(user)s"
+msgstr "مصادقة عليها %(time_ago)s من قِبل %(user)s"
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
 msgid "endorsed %(time_ago)s"
-msgstr "مصادقة عليها منذ %(time_ago)s"
+msgstr "مصادقة عليها %(time_ago)s"
 
 #: common/static/common/templates/discussion/thread-response.underscore
 msgid "fmts"

@@ -53,9 +53,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-09-30 13:05+0000\n"
-"PO-Revision-Date: 2015-10-06 10:16+0000\n"
-"Last-Translator: Noppachai Eiamwasant <noporo@hotmail.com>\n"
+"POT-Creation-Date: 2015-10-22 18:35+0000\n"
+"PO-Revision-Date: 2015-10-26 17:24+0000\n"
+"Last-Translator: Jirayu Chamamahattana <mman2x@gmail.com>\n"
 "Language-Team: Thai (http://www.transifex.com/open-edx/edx-platform/language/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -587,9 +587,11 @@ msgstr "ล้างรูปแบบ"
 msgid "Code block"
 msgstr "บล็อคของโค้ด"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Code"
 msgstr "โค้ด"
 
@@ -2295,6 +2297,13 @@ msgid "Annotation Text"
 msgstr "ข้อความหมายเหตุ"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
+#: cms/templates/js/metadata-dict-entry.underscore
+#: cms/templates/js/metadata-file-uploader-entry.underscore
+#: cms/templates/js/metadata-list-entry.underscore
+#: cms/templates/js/metadata-number-entry.underscore
+#: cms/templates/js/metadata-option-entry.underscore
+#: cms/templates/js/metadata-string-entry.underscore
+#: cms/templates/js/video/metadata-translations-entry.underscore
 msgid "Clear"
 msgstr "ล้าง"
 
@@ -2537,7 +2546,7 @@ msgstr "ทีมทั้งหมด"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Topics"
-msgstr ""
+msgstr "หัวข้อ"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Teams"
@@ -2691,6 +2700,14 @@ msgstr "ปิดเครื่องคิดเลข"
 #: lms/static/coffee/src/customwmd.js
 msgid "Post body"
 msgstr "โพสต์ตัวเนื้อเรื่อง"
+
+#: lms/static/coffee/src/instructor_dashboard/data_download.js
+msgid "Loading data..."
+msgstr "กำลังโหลดข้อมูล"
+
+#: lms/static/coffee/src/instructor_dashboard/data_download.js
+msgid "Error getting issued certificates list."
+msgstr "ข้อผิดพลาดเกี่ยวกับรายชื่อใบรับรอง"
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error generating proctored exam results. Please try again."
@@ -3508,6 +3525,7 @@ msgid "All units"
 msgstr "หน่วยทั้งหมด"
 
 #: lms/static/js/ccx/schedule.js lms/static/js/ccx/schedule.js.c
+#: lms/templates/ccx/schedule.underscore
 msgid "Click to change"
 msgstr "คลิกเพื่อเปลี่ยนแปลง"
 
@@ -3528,6 +3546,8 @@ msgid "Enter Start Date and Time"
 msgstr "ใส่วันและเวลาเริ่มต้น"
 
 #: lms/static/js/courseware/credit_progress.js
+#: lms/templates/discovery/facet.underscore
+#: lms/templates/edxnotes/note-item.underscore
 msgid "Less"
 msgstr "น้อยลง"
 
@@ -3553,6 +3573,7 @@ msgid "We couldn't find any results for \"%s\"."
 msgstr "ไม่สามารถหาผลลัพธ์ใดๆสำหรับ \"%s\""
 
 #: lms/static/js/discovery/views/search_form.js
+#: lms/templates/search/search_error.underscore
 msgid "There was an error, try searching again."
 msgstr "เกิดข้อผิดพลาด, ลองค้นหาอีกครั้งหนึ่ง"
 
@@ -3623,6 +3644,7 @@ msgid "We've encountered an error. Refresh your browser and then try again."
 msgstr "เราพบกับความผิดพลาด รีเฟรชเบราเซอร์ของคุณและพยายามอีกครั้ง"
 
 #: lms/static/js/groups/views/cohort_editor.js
+#: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Selected tab"
 msgstr "เลือกแท็บ"
 
@@ -3691,6 +3713,7 @@ msgid "You currently have no cohorts configured"
 msgstr "ตอนนี้คุณไม่มีการกำหนดค่ากลุ่มเพื่อน"
 
 #: lms/static/js/groups/views/cohorts.js
+#: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Add Cohort"
 msgstr "เพิ่มเพื่อน"
 
@@ -4252,7 +4275,7 @@ msgstr "กำลังลบ"
 msgid "OpenAssessment Save Error"
 msgstr "บันทึกการประเมินแบบเปิดล้มเหลว"
 
-#: cms/static/js/base.js
+#: cms/static/js/base.js cms/templates/js/checklist.underscore
 msgid "This link will open in a new browser window/tab"
 msgstr "ลิงค์นี้จะเปิดในหน้าต่าง/แท็บเบราว์เซอร์ใหม่"
 
@@ -4273,16 +4296,8 @@ msgid "Signatory field(s) has invalid data."
 msgstr "ช่องการลงนาม(s) มีข้อมูลที่ไม่ถูกต้อง"
 
 #: cms/static/js/certificates/models/signatory.js
-msgid "Signatory name should not be more than 40 characters long."
-msgstr "ลายมือชื่อควรมีความยาวมากกว่า 40 ตัวอักษร"
-
-#: cms/static/js/certificates/models/signatory.js
 msgid "Signatory title should span over maximum of 2 lines."
 msgstr "คำนำหน้าชื่อไม่ควรเว้นระยะเกิน 2 บรรทัด"
-
-#: cms/static/js/certificates/models/signatory.js
-msgid "Signatory title should have maximum of 40 characters per line."
-msgstr "คำนำหน้าชื่อมีจำนวนไม่เกิน 40 ตัวอักษรต่อบรรทัด"
 
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Edit this certificate?"
@@ -4306,6 +4321,10 @@ msgstr "ใช่ อนุญาตการแก้ไขไปยังใ�
 msgid "certificate"
 msgstr "ประกาศนียบัตร"
 
+#: cms/static/js/certificates/views/certificates_list.js
+msgid "Set up your certificate"
+msgstr "ตั้งค่าใบรับรองของคุณ"
+
 #. Translators: This line refers to the initial state of the form when no data
 #. has been inserted
 #: cms/static/js/certificates/views/certificates_list.js
@@ -4326,8 +4345,8 @@ msgid "Upload signature image."
 msgstr "อัปโหลดภาพลายมือชื่อ"
 
 #: cms/static/js/certificates/views/signatory_editor.js
-msgid "Image must be 450px X 150px transparent PNG."
-msgstr "ภาพต้องเป็นแบบ 450px X 150px PNG โปร่งใส"
+msgid "Image must be in PNG format."
+msgstr "ภาพที่จะต้องอยู่ในรูปแบบ PNG"
 
 #: cms/static/js/collections/group.js
 msgid "Group %s"
@@ -4540,6 +4559,9 @@ msgstr ""
 "กรุณาเลือกไฟล์ที่ลงท้ายด้วย <%= fileExtensions %> เพื่ออัปโหลด"
 
 #: cms/static/js/models/uploads.js
+#: lms/templates/student_account/hinted_login.underscore
+#: lms/templates/student_account/institution_login.underscore
+#: lms/templates/student_account/institution_register.underscore
 msgid "or"
 msgstr "หรือ"
 
@@ -4709,6 +4731,10 @@ msgid "content group"
 msgstr "กลุ่มสาระ"
 
 #: cms/static/js/views/content_group_list.js
+msgid "Add your first content group"
+msgstr "เพิ่มกลุ่มเนื้อหาแรกของคุณ"
+
+#: cms/static/js/views/content_group_list.js
 msgid "You have not created any content groups yet."
 msgstr "คุณยังไม่ได้สร้างกลุ่มสาระ"
 
@@ -4756,6 +4782,10 @@ msgid "group configuration"
 msgstr "การกำหนดค่ากลุ่ม"
 
 #: cms/static/js/views/group_configurations_list.js
+msgid "Add your first group configuration"
+msgstr "เพิ่มการกำหนดค่ากลุ่มแรกของคุณ"
+
+#: cms/static/js/views/group_configurations_list.js
 msgid "You have not created any group configurations yet."
 msgstr "คุณไม่ได้สร้างการกำหนดค่าของกลุ่มใดๆ"
 
@@ -4771,7 +4801,7 @@ msgstr "การนำเข้าหลักสูตรผิดพลาด
 msgid "There was an error with the upload"
 msgstr "เกิดข้อผิดพลาดในการอัปโหลด"
 
-#: cms/static/js/views/license.js
+#: cms/static/js/views/license.js cms/templates/js/license-selector.underscore
 msgid "All Rights Reserved"
 msgstr "สงวนลิขสิทธิ์"
 
@@ -4922,6 +4952,8 @@ msgid "Edit section release date"
 msgstr "วันที่ออกส่วนของการแก้ไข"
 
 #: cms/static/js/views/overview_assignment_grader.js
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/grading-editor.underscore
 msgid "Not Graded"
 msgstr "ไม่ได้รับการตัดเกรด"
 
@@ -5366,7 +5398,7 @@ msgstr "หน้าหลักการสนทนา"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "How to use %(platform_name)s discussions"
-msgstr ""
+msgstr "วิธีการใช้ %(platform_name)s"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Find discussions"
@@ -5587,7 +5619,7 @@ msgstr "โดย: กลุ่มผู้ช่วยครู"
 #: common/static/common/templates/discussion/thread-list-item.underscore
 #: common/static/common/templates/discussion/thread-response-show.underscore
 msgid "fmt"
-msgstr ""
+msgstr "fmt"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 msgid ""
@@ -5627,7 +5659,7 @@ msgstr "เห็นด้วย %(time_ago)s ที่ผ่านมา"
 
 #: common/static/common/templates/discussion/thread-response.underscore
 msgid "fmts"
-msgstr ""
+msgstr "fmts"
 
 #: common/static/common/templates/discussion/thread-response.underscore
 msgid "Add a comment"
@@ -5867,11 +5899,11 @@ msgstr "วันที่เริ่ม"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "remove all"
-msgstr ""
+msgstr "ลบทั้งหมด"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "toggle chapter"
-msgstr ""
+msgstr "สลับบทเรียน"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Section"
@@ -5879,11 +5911,11 @@ msgstr "ส่วน"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "remove"
-msgstr ""
+msgstr "ลบ"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "toggle subsection"
-msgstr ""
+msgstr "สลับเซคชั่นย่อย"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Subsection"
@@ -5894,26 +5926,36 @@ msgid ""
 "You still need to visit the %(display_name)s website to complete the credit "
 "process."
 msgstr ""
+"คุณยังต้องเข้าชมเว็บไซต์ %(display_name)s "
+"เพื่อให้กระบวนการของหน่วยกิตสมบูรณ์"
 
 #: lms/templates/commerce/provider.underscore
 msgid ""
 "To finalize course credit, %(provider_id)s requires %(platform_name)s "
 "learners to submit a credit request."
 msgstr ""
+"เพื่อจบหน่วยกิตหลักสูตร %(provider_id)s จำเป็นต้องให้ผู้เรียน "
+"%(platform_name)s ส่งคำร้องขอหน่วยกิต"
 
 #: lms/templates/commerce/provider.underscore
 msgid "<img src='%s' alt='%s'></image>"
-msgstr ""
+msgstr "<img src='%s' alt='%s'></image>"
 
 #: lms/templates/commerce/provider.underscore
 msgid ""
 "<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
 "class=\"complete-course\" onClick=completeOrder(this)>%s</button>"
 msgstr ""
+"<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
+"class=\"complete-course\" onClick=completeOrder(this)>%s</button>"
+
+#: lms/templates/commerce/provider.underscore
+msgid "Get Credit"
+msgstr "รับหน่วยกิต"
 
 #: lms/templates/commerce/receipt.underscore
 msgid "Thank you! We have received your payment for %(course_name)s."
-msgstr ""
+msgstr "ขอบคุณ เราได้รับการชำระเงินจาก %(course_name)s แล้ว"
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
@@ -5966,7 +6008,7 @@ msgstr "ไม่มีใบเสร็จออกให้"
 
 #: lms/templates/commerce/receipt.underscore
 msgid "Go to Dashboard"
-msgstr ""
+msgstr "ไปที่แดชบอร์ด"
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
@@ -5975,43 +6017,45 @@ msgid ""
 "from your dashboard. You will receive periodic reminders from "
 "%(platformName)s to verify your identity."
 msgstr ""
+"ถ้าคุณไม่ยืนยันตัวตนในตอนนี้ คุณยังคงไปสำรวจหลักสูตรจากแดชบอร์ดได้ "
+"คุณจะถูกเตือนเป็นช่วงๆจาก %(platformName)s เพื่อให้ยืนยันตัวตน"
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Want to confirm your identity later?"
-msgstr ""
+msgstr "ต้องการยืนยันตัวตนของคุณในภายหลัง?"
 
 #: lms/templates/commerce/receipt.underscore
 msgid "Verify Now"
-msgstr ""
+msgstr "ทำการตรวจสอบเดี๋ยวนี้:"
 
 #: lms/templates/courseware/proctored-exam-controls.underscore
 msgid "Mark Exam As Completed"
-msgstr ""
+msgstr "ทำเครื่องหมายว่าการสอบสมบูรณ์แล้ว"
 
 #: lms/templates/courseware/proctored-exam-status.underscore
 msgid "timed"
-msgstr ""
+msgstr "จับเวลา"
 
 #: lms/templates/courseware/proctored-exam-status.underscore
 msgid "End My Exam"
-msgstr ""
+msgstr "สิ้นสุดการสอบ"
 
 #: lms/templates/discovery/course_card.underscore
 msgid "LEARN MORE"
-msgstr ""
+msgstr "เรียนรู้เพิ่มเติม"
 
 #: lms/templates/discovery/course_card.underscore
 msgid "Starts: %(start_date)s"
-msgstr ""
+msgstr "เริ่ม: %(start_date)s"
 
 #: lms/templates/discovery/course_card.underscore
 msgid "Starts"
-msgstr ""
+msgstr "เริ่ม"
 
 #: lms/templates/discovery/filter_bar.underscore
 msgid "Clear All"
-msgstr ""
+msgstr "ล้างทั้งหมด"
 
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Highlighted text"
@@ -6040,46 +6084,46 @@ msgstr "ล้างผลการสืบค้น"
 #: lms/templates/fields/field_dropdown.underscore
 #: lms/templates/fields/field_textarea.underscore
 msgid "Click to edit"
-msgstr ""
+msgstr "คลิกเพื่อแก้ไข"
 
 #: lms/templates/fields/field_text.underscore
 msgid "title"
-msgstr ""
+msgstr "ชื่อเรื่อง"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Specify whether discussion topics are divided by cohort"
-msgstr ""
+msgstr "ระบุหัวข้อการสนทนาที่ถูกแบ่งด้วยกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 msgid "Course-Wide Discussion Topics"
-msgstr ""
+msgstr "หัวข้อการสนทนาของหลักสูตร "
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 msgid ""
 "Select the course-wide discussion topics that you want to divide by cohort."
-msgstr ""
+msgstr "เลือกหัวข้อสนทนาของหลักสูตร ที่คุณต้องการจะแบ่งโดยกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid "Content-Specific Discussion Topics"
-msgstr ""
+msgstr "หัวข้อการสนทนาเฉพาะเนื้อหา"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid ""
 "Specify whether content-specific discussion topics are divided by cohort."
-msgstr ""
+msgstr "ระบุหัวข้อการสนทนาเฉพาะเนื้อหาที่แบ่งโดยกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid "Always cohort content-specific discussion topics"
-msgstr ""
+msgstr "หัวข้อการสนทนาเฉพาะเนื้อหากลุ่มเพื่อนเสมอ"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid "Cohort selected content-specific discussion topics"
-msgstr ""
+msgstr "กลุ่มที่ถูกเลือกเป็นหัวข้อการสนทนาเฉพาะเนื้อหา"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid "No content-specific discussion topics exist."
-msgstr ""
+msgstr "ไม่มีหัวข้อการสนทนาเฉพาะเนื้อหาอยู่"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-subcategory.underscore
 msgid "Cohorted"
@@ -6091,19 +6135,23 @@ msgstr "จัดการผู้เรียน"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add students to this cohort"
-msgstr ""
+msgstr "เพิ่มผู้เรียนเข้ากลุ่มนี้"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
 "Note: Students can be in only one cohort. Adding students to this group "
 "overrides any previous group assignment."
 msgstr ""
+"หมายเหตุ: ผู้เรียนสามารถอยู่ได้เพียงกลุ่มเดียว "
+"การเพิ่มผู้เรียนกลุ่มนี้จะแทนที่งานได้รับมอบหมายกลุ่มก่อนหน้านี้"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
 "Enter email addresses and/or usernames, separated by new lines or commas, "
 "for the students you want to add. *"
 msgstr ""
+"ใส่อีเมล์/หรือชื่อผู้ใช้ แบ่งโดยขึ้นบรรรทัดใหม่หรือใส่เครื่องหมายจุลภาค "
+"สำหรับผู้เรียนที่ต้องการเพิ่ม *"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
@@ -6112,13 +6160,15 @@ msgstr "(ส่วนที่ต้องมี)"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "e.g. johndoe@example.com, JaneDoe, joeydoe@example.com"
-msgstr ""
+msgstr "เช่น johndoe@example.com, JaneDoe, joeydoe@example.com"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
 "You will not receive notification for emails that bounce, so double-check "
 "your spelling."
 msgstr ""
+"คุณจะไม่ได้รับการแจ้งเตือนสำหรับอีเมลโดยมีการตีกลับ "
+"ดังนั้นโปรดตรวจสอบการสะกดคำ"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add Students"
@@ -6126,19 +6176,19 @@ msgstr "เพิ่มผู้เรียน"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Add a New Cohort"
-msgstr ""
+msgstr "เพิ่มกลุ่มใหม่"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Enter the name of the cohort"
-msgstr ""
+msgstr "ใส่ชื่อกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Cohort Name"
-msgstr ""
+msgstr "ชื่อกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Cohort Assignment Method"
-msgstr ""
+msgstr "วิธีการมอบหมายงานกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Automatic"
@@ -6146,16 +6196,16 @@ msgstr "อัตโนมัติ"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Manual"
-msgstr ""
+msgstr "ด้วยตนเอง"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
 "There must be one cohort to which students can automatically be assigned."
-msgstr ""
+msgstr "ต้องมีกลุ่มเดียวที่นักเรียนต้องถูกกำหนดโดยอัตโนมัต"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Associated Content Group"
-msgstr ""
+msgstr "กลุ่มเนื้อหาที่เกี่ยวข้อง"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "No Content Group"
@@ -6167,11 +6217,11 @@ msgstr "เลือกกลุ่มเนื้อหา"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Choose a content group to associate"
-msgstr ""
+msgstr "เลือกกลุ่มเนื้อหาที่เชื่อมโยงกัน"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Not selected"
-msgstr ""
+msgstr "ไม่ถูกเลือก"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Deleted Content Group"
@@ -6182,12 +6232,15 @@ msgid ""
 "%(screen_reader_start)sWarning:%(screen_reader_end)s The previously selected"
 " content group was deleted. Select another content group."
 msgstr ""
+"%(screen_reader_start)sWarning:%(screen_reader_end)s "
+"กลุ่มเนื้อหาที่เลือกก่อนหน้านี้ถูกลบ เลือกกลุ่มเนื้อหาอื่น"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
 "%(screen_reader_start)sWarning:%(screen_reader_end)s No content groups "
 "exist."
 msgstr ""
+"%(screen_reader_start)sWarning:%(screen_reader_end)s ไม่มีกลุ่มเนื้อหาอยู่"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Create a content group"
@@ -6196,45 +6249,46 @@ msgstr "สร้างกลุ่มเนื้อหา"
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "(contains %(student_count)s student)"
 msgid_plural "(contains %(student_count)s students)"
-msgstr[0] ""
+msgstr[0] "(contains %(student_count)s students)"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid ""
 "Students are added to this cohort only when you provide their email "
 "addresses or usernames on this page."
 msgstr ""
+"ผู้เรียนจะได้รับการเพิ่มเข้ากลุ่มต่อเมื่อคุณส่งอีเมล์หรือชื่อสกุลของผู้เรียนบนเพจนี้เท่านั้น"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "What does this mean?"
-msgstr ""
+msgstr "หมายความว่าอะไร?"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "Students are added to this cohort automatically."
-msgstr ""
+msgstr "ผู้เรียนถูกเพิ่มเข้ากลุ่มนี้โดยอัตโนมัตแล้ว"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
 msgid "Select a cohort"
-msgstr ""
+msgstr "เลือกกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
 msgid "%(cohort_name)s (%(user_count)s)"
-msgstr ""
+msgstr "%(cohort_name)s (%(user_count)s)"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Enable Cohorts"
-msgstr ""
+msgstr "เปิดการทำงานกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Select a cohort to manage"
-msgstr ""
+msgstr "เลือกกลุ่มเพื่อจัดการ"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "View Cohort"
-msgstr ""
+msgstr "ดูกลุ่ม"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Assign students to cohorts by uploading a CSV file"
-msgstr ""
+msgstr "กำหนดผู้เรียนในกลุ่มโดยอัพโหลดไฟล์ CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid ""
@@ -6242,29 +6296,32 @@ msgid ""
 "file, download course profile information or cohort results on "
 "%(link_start)s the Data Download page. %(link_end)s"
 msgstr ""
+"ตรวจงานกลุ่มผู้เรียนหรือดูผลการอัพโหลดCSV "
+"ดาวน์โหลดข้อมูลส่วนหลักสูตรหรือผลกลุ่มที่ %(link_start)s ดาวน์โหลดข้อมูลเพจ "
+"%(link_end)s"
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Used"
-msgstr ""
+msgstr "ใช้"
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Valid"
-msgstr ""
+msgstr "ถูกต้อง"
 
 #: lms/templates/search/course_search_results.underscore
 #: lms/templates/search/dashboard_search_results.underscore
 msgid "Load next %(num_items)s result"
 msgid_plural "Load next %(num_items)s results"
-msgstr[0] ""
+msgstr[0] "โหลดผลลัพธ์ %(num_items)s ถัดไป"
 
 #: lms/templates/search/course_search_results.underscore
 #: lms/templates/search/dashboard_search_results.underscore
 msgid "Sorry, no results were found."
-msgstr ""
+msgstr "เสียใจ ไม่พบผลลัพธ์"
 
 #: lms/templates/search/dashboard_search_results.underscore
 msgid "Back to Dashboard"
-msgstr ""
+msgstr "กลับไปยังแดชบอร์ด"
 
 #: lms/templates/student_account/account.underscore
 msgid "New Address"
@@ -6276,7 +6333,7 @@ msgstr "เปลี่ยนที่อยู่อีเมล์ของฉ
 
 #: lms/templates/student_account/account_settings.underscore
 msgid "Account Settings"
-msgstr ""
+msgstr "การตั้งค่าบัญชี"
 
 #: lms/templates/student_account/account_settings.underscore
 msgid ""
@@ -6284,15 +6341,17 @@ msgid ""
 "specify additional information and see your linked social accounts on this "
 "page."
 msgstr ""
+"การตั้งค่าเหล่านี้รวมถึงข้อมูลพื้นฐานเกี่ยวกับบัญชีของคุณ "
+"คุณยังสามารถระบุข้อมูลเพิ่มเติมและดูบัญชีสังคมของคุณที่เชื่อมโยงในหน้านี้"
 
 #: lms/templates/student_account/account_settings.underscore
 msgid "section.title"
-msgstr ""
+msgstr "เซคชั่น.ชื่อเรื่อง"
 
 #: lms/templates/student_account/account_settings.underscore
 #: lms/templates/student_profile/learner_profile.underscore
 msgid "An error occurred. Please reload the page."
-msgstr ""
+msgstr "เกิดข้อผิดพลาดขึ้น กรุณาลองใหม่อีกครั้ง"
 
 #: lms/templates/student_account/form_field.underscore
 msgid "Forgot password?"
@@ -6306,36 +6365,36 @@ msgstr "เข้าสู่ระบบ"
 
 #: lms/templates/student_account/hinted_login.underscore
 msgid "Would you like to sign in using your %(providerName)s credentials?"
-msgstr ""
+msgstr "คุณต้องการที่จะเข้าสู่ระบบโดยใช้ข้อมูล %(providerName)s?"
 
 #: lms/templates/student_account/hinted_login.underscore
 msgid "Sign in using %(providerName)s"
-msgstr ""
+msgstr "เข้าสู่ระบบด้วยการใช้ %(providerName)s"
 
 #: lms/templates/student_account/hinted_login.underscore
 msgid "Show me other ways to sign in or register"
-msgstr ""
+msgstr "แสดงวิธีการอื่นในการเข้าสู่ระบบหรือลงทะเบียน"
 
 #: lms/templates/student_account/institution_login.underscore
 msgid "Sign in with Institution/Campus Credentials"
-msgstr ""
+msgstr "เข้าสู่ระบบด้วยข้อมูลประจำตัวจากสถาบันการศึกษา"
 
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
 msgid "Choose your institution from the list below:"
-msgstr ""
+msgstr "เลือกสถาบันของคุณจากรายการข้างล่าง"
 
 #: lms/templates/student_account/institution_login.underscore
 msgid "Back to sign in"
-msgstr ""
+msgstr "กลับไปที่เข้าสู่ระบบ"
 
 #: lms/templates/student_account/institution_register.underscore
 msgid "Register with Institution/Campus Credentials"
-msgstr ""
+msgstr "ลงทะเบียนด้วยข้อมูลสถาบันการศึกษา"
 
 #: lms/templates/student_account/institution_register.underscore
 msgid "Register through edX"
-msgstr ""
+msgstr "ลงทะเบียนผ่าน edX"
 
 #: lms/templates/student_account/login.underscore
 msgid ""
@@ -6343,6 +6402,9 @@ msgid ""
 "%(currentProvider)s account does not have a linked %(platformName)s account."
 " To link your accounts, sign in now using your %(platformName)s password."
 msgstr ""
+"คุณได้เข้าสู่ระบบสำเร็จใน %(currentProvider)s แต่บัญชี %(currentProvider)s "
+"ของคุณไม่เชื่อมโยงกับบัญชี %(platformName)s  เพื่อเชื่อมโยงบัญชีของคุณ "
+"ลงชื่อเข้าใช้โดยใช้รหัสผ่าน %(platformName)s "
 
 #: lms/templates/student_account/login.underscore
 msgid "Password Reset Email Sent"
@@ -6353,45 +6415,48 @@ msgid ""
 "We've sent instructions for resetting your password to the email address you"
 " provided."
 msgstr ""
+"เราได้ส่งคำแนะนำในการตั้งค่ารหัสผ่านของคุณใหม่ไปยังที่อยู่อีเมล์ที่คุณให้"
 
 #: lms/templates/student_account/login.underscore
 msgid "We couldn't sign you in."
-msgstr ""
+msgstr "เราไม่สามารถเข้าระบบให้คุณ"
 
 #: lms/templates/student_account/login.underscore
 msgid "An error occurred when signing you in to %(platformName)s."
-msgstr ""
+msgstr "เกิดข้อผิดพลาดเมื่อคุณเข้าสู่ระบบ %(platformName)s"
 
 #: lms/templates/student_account/login.underscore
 msgid ""
 "Sign in here using your email address and password, or use one of the "
 "providers listed below."
 msgstr ""
+"เข้าสู่ระบบที่นี่โดยใช้อีเมล์และรหัสผ่าน "
+"หรือรายการอย่างใดอย่างหนึ่งของผู้ให้บริการด้านล่างนี้"
 
 #: lms/templates/student_account/login.underscore
 msgid "Sign in here using your email address and password."
-msgstr ""
+msgstr "เข้าสู่ระบบที่นี่ด้วยอีเมล์และรหัสผ่านของคุณ"
 
 #: lms/templates/student_account/login.underscore
 msgid "If you do not yet have an account, use the button below to register."
-msgstr ""
+msgstr "หากคุณยังไม่มีบัญชี กดปุ่มข้างล่างเพื่อลงทะเบียน"
 
 #: lms/templates/student_account/login.underscore
 msgid "or sign in with"
-msgstr ""
+msgstr "หรือเข้าสู่ระบบด้วย"
 
 #: lms/templates/student_account/login.underscore
 msgid "Sign in with %(providerName)s"
-msgstr ""
+msgstr "เข้าสู่ระบบด้วย %(providerName)s"
 
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
 msgid "Use my institution/campus credentials"
-msgstr ""
+msgstr "ใช้ข้อมูลสถาบันการศึกษาของฉัน"
 
 #: lms/templates/student_account/login.underscore
 msgid "New to %(platformName)s?"
-msgstr ""
+msgstr "มาใหม่สำหรับ %(platformName)s?"
 
 #: lms/templates/student_account/login.underscore
 msgid "Create an account"
@@ -6400,21 +6465,22 @@ msgstr "สร้างบัญชี"
 #: lms/templates/student_account/password_reset.underscore
 #: lms/templates/student_account/register.underscore
 msgid "An error occurred."
-msgstr ""
+msgstr "เกิดข้อผิดพลาด"
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Password assistance"
-msgstr ""
+msgstr "ตัวช่วยจัดการรหัสผ่าน"
 
 #: lms/templates/student_account/password_reset.underscore
 msgid ""
 "Please enter your email address below and we will send you instructions for "
 "setting a new password."
 msgstr ""
+"กรุณาใส่อีเมล์ของคุณด้านล่างนี้ แล้วเราจะส่งคำร้องเพื่อขอตั้งค่ารหัสผ่านใหม่"
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Reset my password"
-msgstr ""
+msgstr "ตั้งค่ารหัสผ่านใหม่"
 
 #: lms/templates/student_account/register.underscore
 msgid "We couldn't create your account."
@@ -6422,13 +6488,14 @@ msgstr "เราไม่สามารถสร้างบัญชีขอ
 
 #: lms/templates/student_account/register.underscore
 msgid "You've successfully signed into %(currentProvider)s."
-msgstr ""
+msgstr "คุณเข้าสู่ระบบ%(currentProvider)s สำเร็จแล้ว"
 
 #: lms/templates/student_account/register.underscore
 msgid ""
 "We just need a little more information before you start learning with "
 "%(platformName)s."
 msgstr ""
+"เราต้องการข้อมูลของคุณอีกเล็กน้อยก่อนที่คุณจะเริ่มเรียนรู้เกี่ยวกับ%(platformName)s."
 
 #: lms/templates/student_account/register.underscore
 msgid "Create an account using"
@@ -6436,11 +6503,11 @@ msgstr "สร้างบัญชีใช้งาน"
 
 #: lms/templates/student_account/register.underscore
 msgid "Create account using %(providerName)s."
-msgstr ""
+msgstr "สร้างบัญชีด้วยการใช้ %(providerName)s"
 
 #: lms/templates/student_account/register.underscore
 msgid "or create a new one here"
-msgstr ""
+msgstr "หรือสร้างบัญชีใหม่ที่นี่"
 
 #: lms/templates/student_account/register.underscore
 msgid "Create a new account"
@@ -6452,7 +6519,7 @@ msgstr "สร้างบัญชีของคุณ"
 
 #: lms/templates/student_account/register.underscore
 msgid "Required field"
-msgstr ""
+msgstr "ส่วนที่จำเป็นต้องระบุ"
 
 #: lms/templates/student_account/register.underscore
 msgid "Already have an account?"
@@ -6460,23 +6527,23 @@ msgstr "มีบัญชีผู้ใช้แล้ว?"
 
 #: lms/templates/student_profile/learner_profile.underscore
 msgid "You are currently sharing a limited profile."
-msgstr ""
+msgstr "คุณกำลังแชร์ประวัติที่ถูกจำกัด"
 
 #: lms/templates/student_profile/learner_profile.underscore
 msgid "This edX learner is currently sharing a limited profile."
-msgstr ""
+msgstr "ผู้เรียน edX นี้กำลังแชร์ประวัติที่ถูกจำกัด"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Congratulations! You are now verified on %(platformName)s!"
-msgstr ""
+msgstr "ยินดีด้วย! คุณได้รับการยืนยันบน %(platformName)s แล้ว!"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "You are now enrolled as a verified student for:"
-msgstr ""
+msgstr "คุณได้ลงทะเบียนเป็นผู้เรียนที่ได้รับการยืนยัน:"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "A list of courses you have just enrolled in as a verified student"
-msgstr ""
+msgstr "รายชื่อหลักสูตรที่คุณได้ทำการลงทะเบียนเป็นนักเรียนที่ได้รับการยืนยัน"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Course"
@@ -6492,7 +6559,7 @@ msgstr "สำรวจหลักสูตรของคุณ"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Go to your Dashboard"
-msgstr ""
+msgstr "ไปที่แดชบอร์ดของคุณ"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Verified Status"
@@ -6505,6 +6572,10 @@ msgid ""
 "certificates. Verification is good for one year. After one year, you must "
 "submit photos for verification again."
 msgstr ""
+"ขอบคุณสำหรับการส่งรูปของคุณมา เราจะได้รับเร็วๆนี้ "
+"คุณสามารถเข้าสู่ระบบสำหรับหลักสูตร%(platformName)sที่เสนอใบรับรองการตรวจสอบ "
+"การตรวจสอบครอบคลุมเป็นเวลาหนึ่งปี หลังจากหนึ่งปี "
+"คุณจะต้องส่งภาพถ่ายสำหรับการตรวจสอบอีกครั้ง"
 
 #: lms/templates/verify_student/error.underscore
 msgid "Error:"
@@ -6512,7 +6583,7 @@ msgstr "ผิดพลาด:"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid "What You Need for Verification"
-msgstr ""
+msgstr "สิ่งที่คุณต้องใช้สำหรับการตรวจสอบ"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/intro_step.underscore
@@ -6526,61 +6597,69 @@ msgid ""
 "You need a computer that has a webcam. When you receive a browser prompt, "
 "make sure that you allow access to the camera."
 msgstr ""
+"คุณต้องมีคอมพิวเตอร์ที่มีกล้อง เมื่อคุณได้รับการตอบสนองจากเบราว์เซอร์ "
+"โปรดตรวจสอบว่าคุณอนุญาตให้เข้าถึงกล้อง"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid "Photo Identification"
-msgstr ""
+msgstr "ภาพประจำตัว"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid ""
 "You need a driver's license, passport, or other government-issued ID that "
 "has your name and photo."
 msgstr ""
+"คุณต้องมีใบอนุญาตขับขี่ หนังสือเดินทางหรือบัตรประจำตัวที่ออกโดยภาครัฐอื่น ๆ "
+"ที่มีชื่อและรูปภาพของคุณ"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Take Your Photo"
-msgstr ""
+msgstr "ถ่ายรูปของคุณ"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid ""
 "When your face is in position, use the camera button %(icon)s below to take "
 "your photo."
 msgstr ""
+"เมื่อใบหน้าของคุณอยู่ในตำแหน่งแล้ว ใช้ปุ่มกล้อง %(icon)s "
+"ด้านล่างเพื่อถ่ายภาพของคุณ"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid "To take a successful photo, make sure that:"
-msgstr ""
+msgstr "เพื่อการถ่ายภาพที่ประสบความสำเร็จ โปรดตรวจสอบว่า:"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid "Your face is well-lit."
-msgstr ""
+msgstr "ตรวจสอบว่าใบหน้าของคุณถูกต้อง"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid "Your entire face fits inside the frame."
-msgstr ""
+msgstr "ใบหน้าของคุณพอดีกับในกรอบรูป"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid "The photo of your face matches the photo on your ID."
-msgstr ""
+msgstr "ภาพใบหน้าของคุณตรงกับในบัตรประชาชน"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid ""
 "To use the current photo, select the camera button %(icon)s. To take another"
 " photo, select the retake button %(icon)s."
 msgstr ""
+"เพื่อใช้ภาพปัจจุบัน เลือกปุ่มกล้อง %(icon)s  "
+"หากใช้ภาพอื่นให้เลือกปุ่มถ่ายใหม่ %(icon)s."
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "คำถามที่พบบ่อย"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Why does %(platformName)s need my photo?"
-msgstr ""
+msgstr "ทำไม%(platformName)sต้องการรูปของฉัน?"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
@@ -6590,12 +6669,14 @@ msgid ""
 "a government-issued photo ID. Our authorization service confirms your "
 "identity by comparing the photo you take with the photo on your ID."
 msgstr ""
+"ในส่วนของกระบวนการการยืนยัน คุณถ่ายรูปจากใบหน้าและรูปประจำตัวที่รัฐออกให้ "
+"การให้บริการของเราต้องยืนยันอัตลักษณ์ของคุณโดยการเปรียบเทียบรูปที่ถ่ายกับรูปบัตรประชาชน"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "What does %(platformName)s do with this photo?"
-msgstr ""
+msgstr "แล้ว%(platformName)s จะทำอะไรกับรูปนี้?"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
@@ -6606,85 +6687,94 @@ msgid ""
 "are not saved or visible anywhere on %(platformName)s after the verification"
 " process is complete."
 msgstr ""
+"เราใช้ระบบรักษาความปลอดภัยขั้นสูงสุดที่หาได้เพื่อรักษารูปของคุณที่ส่งมายืนยันกับทางเรา"
+" "
+"รูปของคุณและข้อมูลจะไม่ถูกบันทึกหรือเห็นได้จากที่อื่นบน%(platformName)sหลังจากกระบวนการยืนยันตัวตนเสร็จสิ้น"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Next: %(nextStepTitle)s"
-msgstr ""
+msgstr "ต่อไป: %(nextStepTitle)s"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid "Take a Photo of Your ID"
-msgstr ""
+msgstr "ถ่ายรูปบัตรประชาชนของคุณ"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid ""
 "Use your webcam to take a photo of your ID. We will match this photo with "
 "the photo of your face and the name on your account."
 msgstr ""
+"ใช้เว็บแคมของคุณเพื่อถ่ายรูปบัตรประชาชนของคุณ "
+"เราจะทำกับจับคู่รูปนี้กับรูปใบหน้าของคุณและชื่อของคุณในบัญชี"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid ""
 "You need an ID with your name and photo. A driver's license, passport, or "
 "other government-issued IDs are all acceptable."
 msgstr ""
+"คุณต้องมีบัตรประจำตัวพร้อมชื่อและรูปถ่าย ใบอนุญาตขับขี่ "
+"หนังสือเดินทางหรือเอกสารที่ออกโดยภาครัฐอื่น ๆ ล้วนยอมรับได้"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Tips on taking a successful photo"
-msgstr ""
+msgstr "เคล็ดลับในการถ่ายภาพ"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid "Ensure that you can see your photo and read your name"
-msgstr ""
+msgstr "ตรวจสอบให้แน่ใจว่าคุณสามารถเห็นภาพของคุณและอ่านชื่อของคุณ "
 
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid "Make sure your ID is well-lit"
-msgstr ""
+msgstr "แน่ใจว่าIDของคุณถูกต้อง"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid "Once in position, use the camera button %(icon)s to capture your ID"
-msgstr ""
+msgstr "อยู่ในตำแหน่งสักครู่ กดปุ่มกล้อง%(icon)s เพื่อจับภาพประจำตัวของคุณ"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Use the retake photo button if you are not pleased with your photo"
-msgstr ""
+msgstr "กดปุ่มถ่ายรูปอีกครั้งถ้าคุณไม่พอใจกับรูปของคุณ"
 
 #: lms/templates/verify_student/image_input.underscore
 msgid "Preview of uploaded image"
-msgstr ""
+msgstr "ดูตัวอย่างของภาพที่อัปโหลด"
 
 #: lms/templates/verify_student/image_input.underscore
 msgid "Upload an image or capture one with your web or phone camera."
-msgstr ""
+msgstr "อัพโหลดภาพจากเว็บหรือกล้องมือถือของคุณ"
 
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid ""
 "Use your webcam to take a photo of your face. We will match this photo with "
 "the photo on your ID."
 msgstr ""
+"ใช้กล้องเว็บแคมของคุณเพื่อถ่ายภาพใบหน้า "
+"เราจะทำการจับคู่รูปนี้กับรูปในบัตรประชาชนของคุณ"
 
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Make sure your face is well-lit"
-msgstr ""
+msgstr "แน่ใจว่ารูปของคุณถูกต้อง"
 
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Be sure your entire face is inside the frame"
-msgstr ""
+msgstr "ให้แน่ใจว่าหน้าของคุณยังอยู่ในกรอบรูป"
 
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Once in position, use the camera button %(icon)s to capture your photo"
-msgstr ""
+msgstr "อยู่ในตำแหน่งสักครู่ กดปุ่มกล้อง%(icon)s เพื่อจับภาพของคุณ"
 
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Can we match the photo you took with the one on your ID?"
-msgstr ""
+msgstr "เราสามารถจับคู่ภาพที่คุณลงไว้กับอีกภาพบนบัตรประชาชนได้ไหม ?"
 
 #: lms/templates/verify_student/intro_step.underscore
 msgid "Thanks for returning to verify your ID in: %(courseName)s"
-msgstr ""
+msgstr "ขอบคุณสำหรับการกลับไปตรวจสอบIDของคุณ: %(courseName)s"
 
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
@@ -6693,12 +6783,15 @@ msgid ""
 "your inbox for an activation email. After you complete activation you can "
 "return and refresh this page."
 msgstr ""
+"คุณต้องเปิดการใช้งานบัญชีก่อนที่คุณจะสามารถลงทะเบียนหลักสูตรได้ "
+"ตรวจสอบอีเมล์การใช้งานในกล่องจดหมาย "
+"หลังจากยืนยันการใช้งานเสร็จแล้วคุณสามารถกลับไปและรีเฟชรหน้านี้ได้"
 
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Activate Your Account"
-msgstr ""
+msgstr "เปิดใช้งานบัญชีของคุณ"
 
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
@@ -6715,6 +6808,8 @@ msgid ""
 "A driver's license, passport, or other government-issued ID with your name "
 "and photo"
 msgstr ""
+"คุณต้องมีใบอนุญาตขับขี่ หนังสือเดินทางหรือเอกสารที่ออกโดยภาครัฐอื่นๆ "
+"ที่มีชื่อและรูปภาพของคุณ"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "You are enrolling in: %(courseName)s"
@@ -6722,12 +6817,12 @@ msgstr "คุณกำลังลงทะเบียนใน: %(courseName)
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "You are upgrading your enrollment for: %(courseName)s"
-msgstr ""
+msgstr "คุณอัพเกรดการลงทะเบียนของคุณ: %(courseName)s"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid ""
 "You can now enter your payment information and complete your enrollment."
-msgstr ""
+msgstr "ขณะนี้คุณสามารถใส่ข้อมูลการชำระเงินและเสร็จสิ้นการลงทะเบียน"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid ""
@@ -6735,27 +6830,32 @@ msgid ""
 "you will need to have these by %(date)s to qualify to earn a Verified "
 "Certificate."
 msgstr ""
+"คุณสามารถชำระเงินได้เลยถึงแม้คุณไม่ได้มีรายการต่อไปนี้ "
+"แต่คุณจะต้องมีเหล่านี้โดย%(date)s ต้องยืนยันการรับรอง"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid ""
 "You can pay now even if you don't have the following items available, but "
 "you will need to have these to qualify to earn a Verified Certificate."
 msgstr ""
+"คุณสามารถชำระเงินได้เลยถึงแม้คุณไม่ได้มีรายการต่อไปนี้ "
+"แต่คุณจะต้องมีเหล่านี้ต้องยืนยันการรับรอง"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "Government-Issued Photo ID"
-msgstr ""
+msgstr "รูปประจำตัวที่ออกให้โดยหน่วยงานของรัฐ"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid ""
 "ID-Verification is not required for this Professional Education course."
-msgstr ""
+msgstr "การตรวจสอบตัวตนไม่จำเป็นสำหรับหลักสูตรการศึกษามืออาชีพ"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid ""
 "All professional education courses are fee-based, and require payment to "
 "complete the enrollment process."
 msgstr ""
+"ทุกหลักสูตรการศึกษามืออาชีพที่มีค่าที่ใช้และต้องชำระเงินเพื่อให้เสร็จสิ้นกระบวนการลงทะเบียน"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "You have already verified your ID!"
@@ -6763,19 +6863,19 @@ msgstr "คุณได้ทำการตรวจสอบ Id ของค�
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "Your verification status is good until %(verificationGoodUntil)s."
-msgstr ""
+msgstr "สถานะการยืนยันของคุณดีจนกระทั่ง %(verificationGoodUntil)s."
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "price"
-msgstr ""
+msgstr "ราคา"
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Thank you! We have received your payment for %(courseName)s."
-msgstr ""
+msgstr "ขอบคุณ เราได้รับการชำระเงินจาก %(courseName)s แล้ว"
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Next Step: Confirm your identity"
-msgstr ""
+msgstr "ขั้นต่อไป: ยืนยันอัตลักษณ์ของคุณ"
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Check your email"
@@ -6786,16 +6886,20 @@ msgid ""
 "You need to activate your account before you can enroll in courses. Check "
 "your inbox for an activation email."
 msgstr ""
+"คุณต้องเปิดการใช้งานบัญชีก่อนถึงจะสามารถลงทะเบียนหลักสูตรได้ "
+"ตรวจสอบอีเมล์การใช้งานในกล่องจดหมาย"
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid ""
 "A driver's license, passport, or government-issued ID with your name and "
 "photo."
 msgstr ""
+"ใบอนุญาตขับขี่ หนังสือเดินทางหรือเอกสารที่ออกโดยภาครัฐอื่นๆ "
+"ที่มีชื่อและรูปภาพของคุณ"
 
 #: lms/templates/verify_student/reverify_success_step.underscore
 msgid "Identity Verification In Progress"
-msgstr ""
+msgstr "การตรวจสอบบุคคลกำลังดำเนินการ"
 
 #: lms/templates/verify_student/reverify_success_step.underscore
 msgid ""
@@ -6804,48 +6908,51 @@ msgid ""
 "(usually within 1-2 days). In the meantime, you can still access all "
 "available course content."
 msgstr ""
+"เราได้รับข้อมูลของคุณและกำลังตรวจสอบตัวตนของคุณ "
+"คุณจะเห็นข้อความบนแดชบอร์ดของคุณเมื่อกระบวนการตรวจสอบเสร็จสมบูรณ์ (ปกติภายใน"
+" 1-2 วัน) ในขณะเดียวกันคุณยังสามารถเข้าถึงเนื้อหาหลักสูตรที่มีอยู่ทั้งหมด"
 
 #: lms/templates/verify_student/reverify_success_step.underscore
 msgid "Return to Your Dashboard"
-msgstr ""
+msgstr "กลับสู่แดชบอร์ดของคุณ"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Review Your Photos"
-msgstr ""
+msgstr "ตรวจสอบรูปของคุณ"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid ""
 "Make sure we can verify your identity with the photos and information you "
 "have provided."
-msgstr ""
+msgstr "ตรวจสอบให้แน่ใจว่าเราสามารถยืนยันอัตลักษณ์กับรูปและข้อมูลที่คุณให้มา"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Photo of %(fullName)s"
-msgstr ""
+msgstr "รูปของ%(fullName)s"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Photo of %(fullName)s's ID"
-msgstr ""
+msgstr "รูปของID%(fullName)s"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Photo requirements:"
-msgstr ""
+msgstr "ข้อกำหนดของรูป:"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Does the photo of you show your whole face?"
-msgstr ""
+msgstr "รูปของคุณแสดงหน้าเต็มหรือไม่?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Does the photo of you match your ID photo?"
-msgstr ""
+msgstr "รูปของคุณเหมือนกับรูปประจำตัวประชาชนของคุณหรือไม่?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Is your name on your ID readable?"
-msgstr ""
+msgstr "ชื่อในบัตรประชาชนของคุณอ่านได้หรือไม่?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Does the name on your ID match your account name: %(fullName)s?"
-msgstr ""
+msgstr "ชื่อจริงในบัญชี%(fullName)sตรงกับชื่อบัตรประชาชนของคุณ?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Edit Your Name"
@@ -6854,19 +6961,19 @@ msgstr "เปลี่ยนชื่อของคุณ"
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid ""
 "Make sure that the full name on your account matches the name on your ID."
-msgstr ""
+msgstr "ตรวจสอบให้แน่ใจว่าชื่อจริงในบัญชีตรงกับชื่อบัตรประชาชนของคุณ"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Photos don't meet the requirements?"
-msgstr ""
+msgstr "ภาพถ่ายไม่ตรงกับข้อกำหนด?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Retake Your Photos"
-msgstr ""
+msgstr "ลงรูปของคุณใหม่อีกครั้ง"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Before proceeding, please confirm that your details match"
-msgstr ""
+msgstr "การเริ่มกระบวนการ กรุณายืนยันข้อมูลของคุณสอดคล้องกัน"
 
 #: lms/templates/verify_student/webcam_photo.underscore
 msgid ""
@@ -6898,12 +7005,12 @@ msgstr "สถานะ"
 
 #: cms/templates/js/add-xblock-component-button.underscore
 msgid "Add Component:"
-msgstr ""
+msgstr "เพิ่มส่วนประกอบ:"
 
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
 msgid "%(type)s Component Template Menu"
-msgstr ""
+msgstr "เมนูเทมเพลตส่วนประกอบ %(type)s"
 
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Common Problem Types"
@@ -6915,7 +7022,7 @@ msgstr "การเพิ่มส่วนประกอบใหม่"
 
 #: cms/templates/js/advanced_entry.underscore
 msgid "Deprecated"
-msgstr ""
+msgstr "ละทิ้ง"
 
 #: cms/templates/js/asset-library.underscore
 msgid "List of uploaded files and assets in this course"
@@ -6931,11 +7038,11 @@ msgstr "URL"
 
 #: cms/templates/js/asset-library.underscore
 msgid "You haven't added any assets to this course yet."
-msgstr ""
+msgstr "คุณยังไม่ได้เพิ่มข้อมูลใดๆ ในหลักสูตรนี้เลย"
 
 #: cms/templates/js/asset-library.underscore
 msgid "Upload your first asset"
-msgstr ""
+msgstr "อัพโหลดทรัพย์สินแรก"
 
 #: cms/templates/js/asset-upload-modal.underscore
 msgid "close"
@@ -6959,11 +7066,11 @@ msgstr "เว็บ:"
 
 #: cms/templates/js/asset.underscore
 msgid "Delete this asset"
-msgstr ""
+msgstr "ลบรายการนี้"
 
 #: cms/templates/js/asset.underscore
 msgid "Lock this asset"
-msgstr ""
+msgstr "ล็อคคุณสมบัตินี้"
 
 #: cms/templates/js/asset.underscore
 msgid "Lock/unlock file"
@@ -6973,91 +7080,101 @@ msgstr "ล็อก/ปลดล็อกไฟล์นี้"
 #: cms/templates/js/content-group-details.underscore
 #: cms/templates/js/group-configuration-details.underscore
 msgid "ID"
-msgstr ""
+msgstr "รหัส"
 
 #: cms/templates/js/certificate-details.underscore
 msgid "Certificate Details"
-msgstr ""
+msgstr "รายละเอียดประกาศนียบัตร"
 
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
 msgid "Course Title"
-msgstr ""
+msgstr "หัวข้อหลักสูตร"
 
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
 msgid "Course Title Override"
-msgstr ""
+msgstr "แทนที่หัวข้อหลักสูตร"
+
+#: cms/templates/js/certificate-details.underscore
+msgid "Course Number"
+msgstr "หมายเลขหลักสูตร"
+
+#: cms/templates/js/certificate-details.underscore
+msgid "Course Number Override"
+msgstr "แทนที่หมายเลขหลักสูตร"
 
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Signatories"
-msgstr ""
+msgstr "ลายมือชื่อประกาศนียบัตร"
 
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/content-group-editor.underscore
 #: cms/templates/js/edit-textbook.underscore
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "error.message"
-msgstr ""
+msgstr "ข้อความข้อผิดพลาด"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Information"
-msgstr ""
+msgstr "ข้อมูลประกาศนียบัตร"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Name"
-msgstr ""
+msgstr "ชื่อประกาศนียบัตร"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Name of the certificate"
-msgstr ""
+msgstr "ชื่อของประกาศนียบัตร"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Description of the certificate"
-msgstr ""
+msgstr "คำอธิบายของประกาศนียบัตร"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Course title"
-msgstr ""
+msgstr "หัวข้อหลักสูตร"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid ""
 "Specify an alternative to the official course title to display on "
 "certificates. Leave blank to use the official course title."
 msgstr ""
+"ระบุทางเลือกที่ชื่อหลักสูตรอย่างเป็นทางการที่จะแสดงในใบรับรอง "
+"เว้นว่างไว้เพื่อใช้ชื่อหลักสูตรอย่างเป็นทางการ"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Add Additional Signatory"
-msgstr ""
+msgstr "เพิ่มช่องลงนาม"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "(Up to 4 signatories are allowed for a certificate)"
-msgstr ""
+msgstr "(การลงนามได้รับอนุญาตสำหรับประกาศนียบัตรถึง 4 ชื่อ)"
 
 #: cms/templates/js/certificate-web-preview.underscore
 msgid "Choose mode"
-msgstr ""
+msgstr "เลือกโหมด"
 
 #: cms/templates/js/certificate-web-preview.underscore
 msgid "Preview Certificate"
-msgstr ""
+msgstr "แสดงประกาศนียบัตร"
 
 #: cms/templates/js/certificate-web-preview.underscore
 msgid "Activate"
-msgstr ""
+msgstr "เปิดใช้งาน"
 
 #: cms/templates/js/certificate-web-preview.underscore
 msgid "Deactivate"
-msgstr ""
+msgstr "ยกเลิกการใช้งาน"
 
 #: cms/templates/js/checklist.underscore
 msgid "{number}{pct_sign} of checklists completed"
-msgstr ""
+msgstr "{number}{pct_sign} ของรายการตรวจสอบเสร็จสมบูรณ์"
 
 #: cms/templates/js/checklist.underscore
 msgid "%"
-msgstr ""
+msgstr "เปอร์เซนต์"
 
 #: cms/templates/js/checklist.underscore
 msgid "Tasks Completed:"
@@ -7068,19 +7185,21 @@ msgid ""
 "Caution: The last published version of this unit is live. By publishing "
 "changes you will change the student experience."
 msgstr ""
+"คำเตือน: การเผยแพร่เวอร์ชั่นล่าสุดของหน่วยนี้ยังคงอยู่ "
+"โดยเปลี่ยนการเผยแพร่คุณจะเปลี่ยนประสบการณ์ของผู้เรียน"
 
 #: cms/templates/js/content-group-details.underscore
 #: cms/templates/js/content-group-editor.underscore
 msgid "Cannot delete when in use by a unit"
-msgstr ""
+msgstr "ไม่สามารถลบเมื่ออยู่ในการใช้งานโดยหน่วย"
 
 #: cms/templates/js/content-group-details.underscore
 msgid "This content group is used in:"
-msgstr ""
+msgstr "กลุ่มเนื้อหานี้ถูกใช้งานใน:"
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "Content Group Name"
-msgstr ""
+msgstr "ชื่อกลุ่มเนื้อหา"
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "Content Group ID"
@@ -7092,28 +7211,28 @@ msgstr "นี้คือชื่อของกลุ่ม"
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "This content group is used in one or more units."
-msgstr ""
+msgstr "กลุ่มเนื้อหานี้อยู่ในระหว่างใช้งานโดยหนึ่งหน่วยหรือมากกว่า"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Contains staff only content"
-msgstr ""
+msgstr "เนื้อหาที่เก็บฉพาะเจ้าหน้าที่เท่านั้น"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished changes to live content"
-msgstr ""
+msgstr "การเปลี่ยนแปลงที่ไม่เผยแพร่ต่อเนื้อหาสด"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished units will not be released"
-msgstr ""
+msgstr "หน่วยที่ไม่เผยแพร่จะไม่ถูกปล่อย"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished changes to content that will release in the future"
-msgstr ""
+msgstr "การเปลี่ยนแปลงที่ไม่เผยแพร่ต่อเนื้อหาจะปล่อยในอนาคต"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
 msgid "Collapse/Expand this %(xblock_type)s"
-msgstr ""
+msgstr "ย่อ/ขยาย %(xblock_type)s นี้"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Display Name"
@@ -7121,7 +7240,7 @@ msgstr "ชื่อที่แสดง"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Configure"
-msgstr ""
+msgstr "กำหนดค่า"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Drag to reorder"
@@ -7129,13 +7248,13 @@ msgstr "ลากเพื่อจัดลำดับใหม่"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Release Status:"
-msgstr ""
+msgstr "สถานะการปล่อย:"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
 #: cms/templates/js/xblock-outline.underscore
 msgid "Released:"
-msgstr ""
+msgstr "ปล่อย:"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -7145,11 +7264,11 @@ msgstr "ตารางเวลา:"
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
 msgid "Unscheduled"
-msgstr ""
+msgstr "ไม่อยู่ในตารางเวลา"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Graded as:"
-msgstr ""
+msgstr "เกรด:"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Due:"
@@ -7157,25 +7276,25 @@ msgstr "วันครบกำหนด :"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Proctored Exam"
-msgstr ""
+msgstr "การสอบที่ถูกควบคุม"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Timed and Proctored Exam"
-msgstr ""
+msgstr "การสอบที่ถูกจับเวลาและควบคุม"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
 msgid "You haven't added any content to this course yet."
-msgstr ""
+msgstr "คุณยังไม่ได้เพิ่มเนื้อหาใดๆลงไปในหลักสูตร"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
 msgid "Click to add a new %(xblock_type)s"
-msgstr ""
+msgstr "คลิกเพื่อเพิ่ม %(xblock_type)s ใหม่"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "Assignment Type Name"
-msgstr ""
+msgstr "ชื่อชนิดงานที่มอบหมาย"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "e.g. Homework, Midterm Exams"
@@ -7183,19 +7302,19 @@ msgstr "เช่น การบ้าน, สอบกลางภาค"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "Abbreviation"
-msgstr ""
+msgstr "ตัวย่อ"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "e.g. HW, Midterm"
-msgstr ""
+msgstr "เช่น HW, Midterm"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "Weight of Total Grade"
-msgstr ""
+msgstr "น้ำหนักรวมของเกรดทั้งหมด"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "as a percent, e.g. 40"
-msgstr ""
+msgstr "เป็นร้อยละ เช่น 40"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "Total Number"
@@ -7203,15 +7322,15 @@ msgstr "จำนวนทั้งหมด"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "total exercises assigned"
-msgstr ""
+msgstr "จำนวนแบบฝึกหัดที่สั่ง"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "Number of Droppable"
-msgstr ""
+msgstr "จำนวนที่ละได้"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "total exercises that won't be graded"
-msgstr ""
+msgstr "จำนวนแบบฝึกหัดที่จะไม่ออกคะแนน"
 
 #: cms/templates/js/course_info_handouts.underscore
 msgid "Course Handouts"
@@ -7219,25 +7338,25 @@ msgstr "เอกสารหลักสูตร"
 
 #: cms/templates/js/course_info_handouts.underscore
 msgid "You have no handouts defined"
-msgstr ""
+msgstr "คุณยังไม่มีกำหนดเอกสารประกอบ"
 
 #: cms/templates/js/course_info_handouts.underscore
 msgid ""
 "There is invalid code in your content. Please check to make sure it is valid"
 " HTML."
-msgstr ""
+msgstr "มีโค้ดที่ไม่สมบูรณ์ในเนื้อหาของคุณ กรุณาตรวจสอบความถูกต้องของ HTML"
 
 #: cms/templates/js/course_info_update.underscore
 msgid "Send push notification to mobile apps"
-msgstr ""
+msgstr "ส่งการแจ้งเตือนแบบpushในแอปพลิเคชั่นมือถือ"
 
 #: cms/templates/js/course_info_update.underscore
 msgid "Send notification to mobile apps"
-msgstr ""
+msgstr "ส่งการแจ้งเตือนในแอพพลิเคชั่นมือถือ"
 
 #: cms/templates/js/course_info_update.underscore
 msgid "Post"
-msgstr ""
+msgstr "โพสต์"
 
 #: cms/templates/js/due-date-editor.underscore
 msgid "Due Date:"
@@ -7249,7 +7368,7 @@ msgstr "กำหนดเวลาส่ง:"
 
 #: cms/templates/js/due-date-editor.underscore
 msgid "Clear Grading Due Date"
-msgstr ""
+msgstr "ล้างกำหนดวันออกคะแนน"
 
 #: cms/templates/js/edit-chapter.underscore
 msgid "Chapter Name"
@@ -7261,23 +7380,23 @@ msgstr "บทที่ %s"
 
 #: cms/templates/js/edit-chapter.underscore
 msgid "provide the title/name of the chapter that will be used in navigating"
-msgstr ""
+msgstr "ให้ชื่อ / ชื่อของบทที่จะใช้ในการนำทาง"
 
 #: cms/templates/js/edit-chapter.underscore
 msgid "Chapter Asset"
-msgstr ""
+msgstr "ทรัพท์สินบทเรียน"
 
 #: cms/templates/js/edit-chapter.underscore
 msgid "path/to/introductionToCookieBaking-CH%d.pdf"
-msgstr ""
+msgstr "เส้นทาง/ไปยัง/การอบคุกกี้เบื้องต้น-CH%d.pdf"
 
 #: cms/templates/js/edit-chapter.underscore
 msgid "upload a PDF file or provide the path to a Studio asset file"
-msgstr ""
+msgstr "อัพโหลดไฟล์ PDF หรือให้วิธีส่งไฟล์สตูดิโอ"
 
 #: cms/templates/js/edit-chapter.underscore
 msgid "Upload PDF"
-msgstr ""
+msgstr "อัพโหลด PDF"
 
 #: cms/templates/js/edit-chapter.underscore
 msgid "delete chapter"
@@ -7285,21 +7404,21 @@ msgstr "ลบบท"
 
 #: cms/templates/js/edit-textbook.underscore
 msgid "Textbook information"
-msgstr ""
+msgstr "ข้อมูลหนังสือเรียน"
 
 #: cms/templates/js/edit-textbook.underscore
 msgid "Textbook Name"
-msgstr ""
+msgstr "ชื่อหนังสือเรียน"
 
 #: cms/templates/js/edit-textbook.underscore
 msgid "Introduction to Cookie Baking"
-msgstr ""
+msgstr "การอบคุกกี้เบื้องต้น"
 
 #: cms/templates/js/edit-textbook.underscore
 msgid ""
 "provide the title/name of the text book as you would like your students to "
 "see it"
-msgstr ""
+msgstr "ระบุชื่อหนังสือที่คุณต้องการให้นักเรียนมองเห็น"
 
 #: cms/templates/js/edit-textbook.underscore
 msgid "Chapter information"
@@ -7320,39 +7439,39 @@ msgstr "คะแนน:"
 #: cms/templates/js/group-configuration-details.underscore
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Cannot delete when in use by an experiment"
-msgstr ""
+msgstr "ไม่สามารถลบเมื่ออยู่ในขณะใช้งานโดยการทดลอง"
 
 #: cms/templates/js/group-configuration-details.underscore
 msgid "This Group Configuration is used in:"
-msgstr ""
+msgstr "การกำหนดค่ากลุ่มนี้ถูกใช้ใน:"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Group Configuration information"
-msgstr ""
+msgstr "ข้อมูลการกำหนดค่ากลุ่ม"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Group Configuration Name"
-msgstr ""
+msgstr "ชื่อการกำหนดค่ากลุ่ม"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Group Configuration ID"
-msgstr ""
+msgstr "รหัสกำหนดค่ากลุ่ม"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "This is the Name of the Group Configuration"
-msgstr ""
+msgstr "นี้คือชื่อของการกำหนดค่ากลุ่ม"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Name or short description of the configuration"
-msgstr ""
+msgstr "ชื่อหรือการอธิบายอย่างย่อของการกำหนดค่ากลุ่ม"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "This is the Description of the Group Configuration"
-msgstr ""
+msgstr "นี้คือการอธิบายของการกำหนดค่ากลุ่ม"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Optional long description"
-msgstr ""
+msgstr "คำอธิบายอย่างละเอียดที่เป็นตัวเลือก"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Group information"
@@ -7367,6 +7486,8 @@ msgid ""
 "Name of the groups that students will be assigned to, for example, Control, "
 "Video, Problems. You must have two or more groups."
 msgstr ""
+"ชื่อของกลุ่มที่ผู้เรียนจะถูกกำหนดให้ ตัวอย่างเช่น ควบคุม วิดีโอ ปัญหา "
+"คุณต้องมีอย่างน้อยสองกลุ่มหรือมากกว่านั้น"
 
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Add another group"
@@ -7377,6 +7498,8 @@ msgid ""
 "This configuration is currently used in content experiments. If you make "
 "changes to the groups, you may need to edit those experiments."
 msgstr ""
+"การสร้างนี้ถูกใช้ในเนื้อหาการทดลอง ถ้าคุณจะเปลี่ยนแปลงกลุ่ม "
+"คุณต้องไปแก้ไขการทดลองเหล่านั้น"
 
 #: cms/templates/js/group-edit.underscore
 msgid "delete group"
@@ -7384,45 +7507,46 @@ msgstr "ลบกลุ่ม"
 
 #: cms/templates/js/license-selector.underscore
 msgid "License Type"
-msgstr ""
+msgstr "ประเภทใบอนุญาต"
 
 #: cms/templates/js/license-selector.underscore
 msgid "Learn more about {license_name}"
-msgstr ""
+msgstr "เรียนรู้เพิ่มเติมเกี่ยวกับ {license_name}"
 
 #: cms/templates/js/license-selector.underscore
 msgid "Options for {license_name}"
-msgstr ""
+msgstr "ตัวเลือกสำหรับ {license_name}"
 
 #: cms/templates/js/license-selector.underscore
 msgid "The following options are available for the {license_name} license."
-msgstr ""
+msgstr "ตัวเลือกต่อไปนี้พร้อมใช้งานสำหรับใบอนุญาต {license_name}"
 
 #: cms/templates/js/license-selector.underscore
 msgid "License Display"
-msgstr ""
+msgstr "แสดงใบอนุญาต"
 
 #: cms/templates/js/license-selector.underscore
 msgid ""
 "The following message will be displayed at the bottom of the courseware "
 "pages within your course:"
 msgstr ""
+"ข้อความต่อไปนี้จะปรากฏขึ้นที่ด้านล่างของหน้าบทเรียนภายในหลักสูตรของคุณ:"
 
 #: cms/templates/js/license-selector.underscore
 msgid "Creative Commons licensed content, with terms as follow:"
-msgstr ""
+msgstr "ใบอนุญาตการสร้างสรรค์ร่วมกันได้รับเนื้อหาที่มีเงื่อนไขดังต่อไปนี้:"
 
 #: cms/templates/js/license-selector.underscore
 msgid "Some Rights Reserved"
-msgstr ""
+msgstr "สงวนลิขสิทธิ์บางส่วน"
 
 #: cms/templates/js/list.underscore
-msgid "Add your first %(item_type)s"
-msgstr ""
+msgid "%(new_item_message)s"
+msgstr "%(new_item_message)s"
 
 #: cms/templates/js/list.underscore
 msgid "New %(item_type)s"
-msgstr ""
+msgstr "%(item_type)s ใหม่"
 
 #: cms/templates/js/metadata-dict-entry.underscore
 #: cms/templates/js/metadata-list-entry.underscore
@@ -7438,7 +7562,7 @@ msgstr "เพิ่ม"
 #: cms/templates/js/metadata-string-entry.underscore
 #: cms/templates/js/video/metadata-translations-entry.underscore
 msgid "Clear Value"
-msgstr ""
+msgstr "ล้างค่า"
 
 #: cms/templates/js/metadata-file-uploader-item.underscore
 #: cms/templates/js/video/metadata-translations-item.underscore
@@ -7447,11 +7571,11 @@ msgstr "ดาวน์โหลด"
 
 #: cms/templates/js/no-textbooks.underscore
 msgid "You haven't added any textbooks to this course yet."
-msgstr ""
+msgstr "คุณยังไม่ได้เพิ่มหนังสือเรียนใดๆลงไปในหลักสูตรนี้เลย"
 
 #: cms/templates/js/no-textbooks.underscore
 msgid "Add your first textbook"
-msgstr ""
+msgstr "เพิ่มหนังสือเรียนเล่มแรก"
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Previous Uploads"
@@ -7459,7 +7583,7 @@ msgstr "อัพโหลดก่อนหน้านี้"
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Download available encodings (.csv)"
-msgstr ""
+msgstr "ดาวน์โหลดการเข้ารหัสที่มีอยู่ (.csv)"
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Duration"
@@ -7476,7 +7600,7 @@ msgstr "ไม่เผยแพร่"
 #: cms/templates/js/publish-history.underscore
 #: cms/templates/js/publish-xblock.underscore
 msgid "Last published %(last_published_date)s by %(publish_username)s"
-msgstr ""
+msgstr "เผยแพร่ครั้งล่าสูด %(last_published_date)s โดย %(publish_username)s"
 
 #: cms/templates/js/publish-history.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -7491,55 +7615,55 @@ msgstr "การเผยแพร่ก่อนหน้านี้"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Draft (Never published)"
-msgstr ""
+msgstr "ร่าง (ไม่เผยแพร่)"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Visible to Staff Only"
-msgstr ""
+msgstr "เจ้าหน้าเท่านั้นที่มองเห็น"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Published and Live"
-msgstr ""
+msgstr "เผยแพร่และสด"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Published (not yet released)"
-msgstr ""
+msgstr "เผยแพร่ (แต่ยังไม่ปล่อย)"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Draft (Unpublished changes)"
-msgstr ""
+msgstr "ร่าง (ไม่เผยแพร่การเปลี่ยนแปลง)"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Release:"
-msgstr ""
+msgstr "ปล่อย:"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Publishing Status"
-msgstr ""
+msgstr "สถานะการเผยแพร่"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Draft saved on %(last_saved_date)s by %(edit_username)s"
-msgstr ""
+msgstr "บันทึกร่างเมื่อ %(last_saved_date)s  โดย %(edit_username)s"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "with %(release_date_from)s"
-msgstr ""
+msgstr "ด้วย %(release_date_from)s"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Is Visible To:"
-msgstr ""
+msgstr "สามารถเห็น:"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Will Be Visible To:"
-msgstr ""
+msgstr "จะสามารถถูกเห็นโดย:"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Staff Only"
-msgstr ""
+msgstr "เจ้าหน้าที่เท่านั้น"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "with %(section_or_subsection)s"
-msgstr ""
+msgstr "ด้วย %(section_or_subsection)s"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Staff and Students"
@@ -7547,7 +7671,7 @@ msgstr "เจ้าหน้าที่และผู้เรียน"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Some content in this unit is visible only to particular content groups"
-msgstr ""
+msgstr "เนื้อหาบางส่วนในหน่วยนี้จะปรากฏเพียงแค่เฉพาะกลุ่มเนื้อหา"
 
 #: cms/templates/js/publish-xblock.underscore
 #: cms/templates/js/staff-lock-editor.underscore
@@ -7556,7 +7680,7 @@ msgstr "ซ่อนจากผู้เรียน"
 
 #: cms/templates/js/release-date-editor.underscore
 msgid "Release Date and Time"
-msgstr ""
+msgstr "วันเวลาที่ปล่อยออก"
 
 #: cms/templates/js/release-date-editor.underscore
 msgid "Release Date:"
@@ -7568,62 +7692,60 @@ msgstr "ปล่อยออกเมื่อเวลา:"
 
 #: cms/templates/js/release-date-editor.underscore
 msgid "Clear Release Date/Time"
-msgstr ""
+msgstr "ล้างวันเวลาที่ปล่อย"
 
 #: cms/templates/js/show-textbook.underscore
 msgid "View Live"
-msgstr ""
+msgstr "ดูสด"
 
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/signatory-editor.underscore
 msgid "Organization"
-msgstr ""
+msgstr "องค์กร:"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Certificate Signatory Configuration"
-msgstr ""
+msgstr "การกำหนดลายมือชื่อประกาศนียบัตร"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Name of the signatory"
-msgstr ""
+msgstr "ชื่อของผู้ลงนาม"
 
 #: cms/templates/js/signatory-editor.underscore
-msgid ""
-"The name of this signatory as it should appear on certificates. Maximum 40 "
-"characters."
-msgstr ""
+msgid "The name of this signatory as it should appear on certificates."
+msgstr "ชื่อของผู้ลงนามควรจะปรากฏบนประกาศนียบัตร"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Title of the signatory"
-msgstr ""
+msgstr "หัวข้อผู้ลงนาม"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid ""
-"The title of this signatory as it should appear on certificates.  Maximum of"
-" 106 characters."
-msgstr ""
+"Titles more than 100 characters may prevent students from printing their "
+"certificate on a single page."
+msgstr "หัวข้อที่มีเกิน 100 ตัวอักษร อาจไม่สามารถทำการพิมพ์ในหน้าเดียวได้"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Organization of the signatory"
-msgstr ""
+msgstr "องค์กรของผู้ลงนาม"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid ""
 "The organization that this signatory belongs to, as it should appear on "
 "certificates."
-msgstr ""
+msgstr "องค์กรที่ลงนามครั้งนี้ควรจะปรากฏบนประกาศนียบัตร"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Signature Image"
-msgstr ""
+msgstr "ภาพลายเซ็น"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Path to Signature Image"
-msgstr ""
+msgstr "เส้นทางไปยังภาพลายเซ็น"
 
 #: cms/templates/js/signatory-editor.underscore
-msgid "Image must be 450px X 150px transparent PNG"
-msgstr ""
+msgid "Image must be in PNG format"
+msgstr "ภาพจะต้องอยู่ในรูปแบบ PNG"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid "Student Visibility"
@@ -7634,6 +7756,8 @@ msgid ""
 "If the unit was previously published and released to students, any changes "
 "you made to the unit when it was hidden will now be visible to students."
 msgstr ""
+"หากหน่วยได้ถูกเผยแพร่และปล่อยแก่ผู้เรียนก่อนหน้านี้ "
+"การปลี่ยนแปลงใดๆที่คุณทำกับหน่วยที่ซ่อนไว้ผู้เรียนจะสามารถเห็นได้"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid ""
@@ -7641,18 +7765,22 @@ msgid ""
 "to see its content after the release date has passed and you have published "
 "the unit."
 msgstr ""
+"ถ้าคุณได้บล็อก%(xblockType)sการเห็ฯจากผู้เรียน "
+"ผู้เรียนจะสามารถเห็นเนื้อหาได้หลังจากวันที่ปล่อยได้ผ่านไปแล้วและคุณได้เผยแพร่หน่วย"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid ""
 "Any subsections or units that are explicitly hidden from students will "
 "remain hidden after you clear this option for the section."
 msgstr ""
+"เซคชั่นย่อยใดก็ตามที่ซ่อนอย่างชัดเจนจากผู้เรียนจะยังคงซ่อนจากผู้เรียนต่อไปหลังจากคุณล้างตัวเลือกจากเซคชั่นนี้"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid ""
 "Any units that are explicitly hidden from students will remain hidden after "
 "you clear this option for the subsection."
 msgstr ""
+"หน่วยใดก็ตามที่ซ่อนอย่างชัดเจนจากผู้เรียนจะยังคงซ่อนจากผู้เรียนต่อไปหลังจากคุณล้างตัวเลือกจากเซคชั่นย่อยนี้"
 
 #: cms/templates/js/team-member.underscore
 msgid "Current Role:"
@@ -7660,7 +7788,7 @@ msgstr "สถานะปัจจุบัน:"
 
 #: cms/templates/js/team-member.underscore
 msgid "You!"
-msgstr ""
+msgstr "คุณนั้นแหละ!"
 
 #: cms/templates/js/team-member.underscore
 msgid "send an email message to {email}"
@@ -7668,15 +7796,15 @@ msgstr "ส่งข้อความไปยังอีเมล์ {email}"
 
 #: cms/templates/js/team-member.underscore
 msgid "Promote another member to Admin to remove your admin rights"
-msgstr ""
+msgstr "ส่งเสริมสมาชิกคนอื่นเป็นผู้ดูแลระบบเพื่อลบสิทธิ์การดูแลของคุณ"
 
 #: cms/templates/js/team-member.underscore
 msgid "Add {role} Access"
-msgstr ""
+msgstr "เพิ่มการเข้าถึง {role}"
 
 #: cms/templates/js/team-member.underscore
 msgid "Remove {role} Access"
-msgstr ""
+msgstr "เอาการเข้าถึง {role} ออก"
 
 #: cms/templates/js/team-member.underscore
 msgid "Delete the user, {username}"
@@ -7684,15 +7812,15 @@ msgstr "ลบผู้ใช้ {username}"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "Timed Exam"
-msgstr ""
+msgstr "ตั้งเวลาสอบ"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "This exam is timed"
-msgstr ""
+msgstr "การสอบถูกจับเวลา"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "Time Allotted (HH:MM):"
-msgstr ""
+msgstr "เวลาที่กำหนด (HH:MM):"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid ""
@@ -7700,10 +7828,12 @@ msgid ""
 "certain cases, students can be granted allowances that give them extra time "
 "to complete the exam."
 msgstr ""
+"นักเรียนเห็นคำเตือนเมื่อเหลือเวลา 20% และ 5% "
+"ในบางกรณีนักเรียนจะได้รับเวลาพิเศษเพื่อเสร็จสิ้นการสอบ"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "This exam is for practice only"
-msgstr ""
+msgstr "ข้อสอบนี้สำหรับฝึกฝนเท่านั้น"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid ""
@@ -7711,10 +7841,12 @@ msgid ""
 "example problems. Make sure this practice exam is set up as an ungraded "
 "exam."
 msgstr ""
+"ผู้เรียนจะได้พบกับกระบวนการการติดตั้งซอฟท์แวร์ควบคุมและทดลองตัวอย่าง "
+"ตรวจสอบให้แน่ใจว่าการสอบปฏิบัตินี้จะถูกตั้งค่าเป็นการสอบที่ไม่มีการให้คะแนน"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "This exam is proctored"
-msgstr ""
+msgstr "การสอบนี้ถูกควบคุม"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid ""
@@ -7722,6 +7854,9 @@ msgid ""
 " only students who choose the proctored option are eligible for credit. "
 "Proctored exams must also be timed exams."
 msgstr ""
+"นักเรียนสามารถเลือกที่จะใช้การสอบนี้ที่มีหรือไม่มีการควบคุมออนไลน์ "
+"แต่นักเรียนเท่านั้นที่จะเลือกตัวเลือกการควบคุมที่มีสิทธิ์ได้รับหน่วยกิต "
+"การสอบแบบควบคุมจะต้องถูกจับเวลาสอบ"
 
 #: cms/templates/js/upload-dialog.underscore
 msgid "File upload succeeded"
@@ -7732,18 +7867,19 @@ msgid ""
 "Please check the following validation feedbacks and reflect them in your "
 "course settings:"
 msgstr ""
+"กรุณาตรวจสอบการตอบรับการตรวจสอบต่อไปนี้และสะท้อนให้เห็นในการตั้งค่าหลักสูตรของคุณ:"
 
 #: cms/templates/js/verification-access-editor.underscore
 msgid "Verification Checkpoint"
-msgstr ""
+msgstr "จุดตรวจสอบ"
 
 #: cms/templates/js/verification-access-editor.underscore
 msgid "Must complete verification checkpoint"
-msgstr ""
+msgstr "ต้องผ่านจุดตรวจสอบ"
 
 #: cms/templates/js/verification-access-editor.underscore
 msgid "Verification checkpoint to be completed"
-msgstr ""
+msgstr "จุดตรวจสอบต้องเสร็จสมบูรณ์"
 
 #: cms/templates/js/verification-access-editor.underscore
 msgid ""
@@ -7751,6 +7887,8 @@ msgid ""
 "the content in this unit. Learners who do not require verification see this "
 "content by default."
 msgstr ""
+"นักเรียนที่ต้องยืนยันความถูกต้องจะต้องผ่านจุดตรวจที่ตั้งไว้เพื่อให้เห็นเนื้อหาภายในได้\n"
+"นักเรียนที่ไม่ต้องยืนยันความถูกต้องจะสามารถเห็นเนื้อหาได้ทันที"
 
 #: cms/templates/js/xblock-string-field-editor.underscore
 msgid "Edit the name"
@@ -7758,15 +7896,15 @@ msgstr "แก้ไขชื่อ"
 
 #: cms/templates/js/xblock-string-field-editor.underscore
 msgid "Edit %(display_name)s (required)"
-msgstr ""
+msgstr "แก้ไข %(display_name)s (จำเป็น)"
 
 #: cms/templates/js/xblock-string-field-editor.underscore
 msgid "formLabel"
-msgstr ""
+msgstr "ป้ายรูปแบบ"
 
 #: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
 msgid "Add URLs for additional versions"
-msgstr ""
+msgstr "เพิ่ม URL สำหรับเวอร์ชั่นเพิ่มเติม"
 
 #: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
 msgid ""
@@ -7775,6 +7913,10 @@ msgid ""
 "another version. These URLs cannot be YouTube URLs. The first listed video "
 "that's compatible with the student's computer will play."
 msgstr ""
+"ตรวจสอบว่านักเรียนทุกคนสามารถเข้าถึงวิดีโอ เราขอแนะนำให้วิดีโอมีทั้งแบบ .mp4"
+" และ .webm คลิกด้านล่างเพื่อเพิ่มURLสำหรับรุ่นอื่น "
+"URLเหล่านี้ไม่สามารถเป็นURL ของ YouTube "
+"วิดีโอที่ถูกระบุไว้ครั้งแรกที่เข้ากันได้กับเครื่องคอมพิวเตอร์ของนักเรียนจะเล่น"
 
 #: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
 msgid "Default Timed Transcript"
