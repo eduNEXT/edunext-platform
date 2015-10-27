@@ -4,6 +4,7 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# Anders Haugaard Iversen <anha@seges.dk>, 2015
 # #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 # edX translation file.
 # Copyright (C) 2015 EdX
@@ -16,6 +17,9 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# Anders Haugaard Iversen <anha@seges.dk>, 2015
+# Jens Peter Hansen <kontakt@jenspeterhansen.dk>, 2015
+# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015
 # #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
 # edX translation file
 # Copyright (C) 2015 edX
@@ -256,7 +260,6 @@ msgid "Verified"
 msgstr ""
 
 #: common/djangoapps/course_modes/models.py
-#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "ID Verified Ribbon/Badge"
 msgstr ""
 
@@ -473,9 +476,8 @@ msgid "Female"
 msgstr ""
 
 #. Translators: 'Other' refers to the student's gender
-#. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py
-msgid "Other"
+msgid "Other/Prefer Not to Say"
 msgstr ""
 
 #: common/djangoapps/student/models.py
@@ -506,11 +508,14 @@ msgstr ""
 msgid "Elementary/primary school"
 msgstr ""
 
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'None' refers to the student's level of education
 #: common/djangoapps/student/models.py
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
-msgid "None"
+msgid "No Formal Education"
+msgstr ""
+
+#. Translators: 'Other' refers to the student's level of education
+#: common/djangoapps/student/models.py
+msgid "Other Education"
 msgstr ""
 
 #: common/djangoapps/student/models.py
@@ -2827,6 +2832,10 @@ msgstr ""
 #: lms/templates/footer.html lms/templates/static_templates/about.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "About"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+msgid "None"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -9731,7 +9740,7 @@ msgstr ""
 
 #: lms/templates/login-sidebar.html
 msgid "Not Enrolled?"
-msgstr "Ikke tilmeldt?"
+msgstr ""
 
 #: lms/templates/login-sidebar.html
 msgid "Sign up for {platform_name} today!"
@@ -12169,23 +12178,20 @@ msgid ""
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Challenge Yourself!"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Take this course as an ID-verified student."
+msgid ""
+"Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
+"this course."
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
-"You can still sign up for an ID verified {cert_name_long} for this course. "
-"If you plan to complete the whole course, it is a great way to recognize "
-"your achievement. {link_start}Learn more about the verified "
+"It's official. It's easily shareable. It's a proven motivator to complete "
+"the course. <br>{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Upgrade to Verified Track"
+msgid "Upgrade to Verified"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -15600,7 +15606,7 @@ msgstr ""
 
 #: themes/red-theme/lms/templates/header.html
 msgid "Register Now"
-msgstr "Registrer nu"
+msgstr ""
 
 #: cms/templates/404.html
 msgid "The page that you were looking for was not found."
