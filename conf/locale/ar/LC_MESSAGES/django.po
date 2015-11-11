@@ -10435,8 +10435,20 @@ msgid "Dashboard"
 msgstr "لوحة المعلومات"
 
 #: lms/templates/dashboard.html
+msgid "Current Courses"
+msgstr "مساقاتي"
+
+#: lms/templates/dashboard.html
 msgid "My Courses"
 msgstr "مساقاتي"
+
+#: lms/templates/dashboard.html
+msgid "Want to change your account settings?"
+msgstr "تريد تغيير إعدادات حسابك؟"
+
+#: lms/templates/dashboard.html
+msgid "Click the arrow next to your username above."
+msgstr "انقر فوق السهم الموجود بجانب اسم المستخدم أعلاه."
 
 #: lms/templates/dashboard.html
 msgid "Looks like you haven't enrolled in any courses yet."
