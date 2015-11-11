@@ -5,29 +5,20 @@
 # Translators:
 # Abdallah Nassif <abdoosh00@gmail.com>, 2013
 # abdallah.nassif <abdallah_n@hotmail.com>, 2013
-# Abdallah Nassif <abdoosh00@gmail.com>, 2013-2015
-# abdallah.nassif <abdallah_n@hotmail.com>, 2013
-# Ahmad AbdArrahman <mygooglizer@gmail.com>, 2013-2014
+# Abdallah Nassif <abdoosh00@gmail.com>, 2014
 # Ahmed Jazzar <ajazzar@qrf.org>, 2015
-# Ahmed Jazzar <ajazzar@qrf.org>, 2015
-# ayshibly <ayshibly@gmail.com>, 2014
-# baraahadri <baraahadri@gmail.com>, 2014
-# Belal A. Nwiran <bnwiran@gmail.com>, 2015
+# A <smart.9922@hotmail.com>, 2014
 # طاهر <charaf.le.prince@gmail.com>, 2014
-# Hani <hani0a@hotmail.com>, 2014
+# Safaa_fadl <fadlaoui_safaa@yahoo.fr>, 2014
 # Hassan05 <hassan.upb@gmail.com>, 2014
 # Jad Freij <jkfreij@gmail.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015
-# Mahmoud Elkhateeb <eng.elkhteeb@gmail.com>, 2013
 # Mahmoud Elkhateeb <eng.elkhteeb@gmail.com>, 2013
 # may <may@qordoba.com>, 2014
-# mustafasadiq <mustafasadiq0@gmail.com>, 2014
 # Nabeel El-Dughailib <nabeel@qordoba.com>, 2014-2015
-# Najwan Al Rousan <najwanrousan@gmail.com>, 2013-2014
 # Najwan Al Rousan <najwanrousan@gmail.com>, 2013
-# omarithawi <oithawi@qrf.org>, 2014-2015
-# Osama M. Mneina <o.mneina@gmail.com>, 2014
+# omarithawi <oithawi@qrf.org>, 2015
 # Sarina Canelake <sarina@edx.org>, 2014
+# soliman osman <solimanosman@windowslive.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
@@ -17428,7 +17419,7 @@ msgstr "هذه الوحدة غير مفعَّلة."
 
 #: cms/templates/certificates.html
 msgid "Working with Certificates"
-msgstr ""
+msgstr "العمل مع شهادات "
 
 #: cms/templates/certificates.html
 msgid ""
@@ -17443,6 +17434,8 @@ msgid ""
 "For verified certificates, specify between one and four signatories and "
 "upload the associated images."
 msgstr ""
+"للحصول على شهادات التحقق منها، وتحديد بين واحد وأربعة الموقعة وتحميل الصور "
+"المرتبطة بها. "
 
 #: cms/templates/certificates.html
 msgid ""
@@ -17458,6 +17451,8 @@ msgid ""
 "To view a sample certificate, choose a course mode and select {em_start}"
 "Preview Certificate{em_end}."
 msgstr ""
+"لعرض شهادة العينة، واختيار النمط الدراسي وحدد {em_start} شهادة معاينة "
+"{em_end} "
 
 #: cms/templates/certificates.html
 msgid "Issuing Certificates to Learners"
@@ -17469,6 +17464,9 @@ msgid ""
 "selects {em_start}Activate{em_end}. Course team members without the Admin "
 "role cannot edit or delete an activated certificate."
 msgstr ""
+"لبدء إصدار الشهادات، وبالطبع أعضاء الفريق مع يختار دور المشرف {em_start} "
+"تنشيط {em_end}. أعضاء الفريق بالطبع دون دور المشرف لا يمكن تحرير أو حذف "
+"شهادة تفعيلها.  "
 
 #: cms/templates/certificates.html
 msgid ""
@@ -17476,6 +17474,8 @@ msgid ""
 "learners who have already earned certificates will no longer be able to "
 "access them."
 msgstr ""
+"{em_start} لا {em_end} حذف الشهادات بعد دورة قد بدأ؛ والمتعلمين الذين لديهم "
+"شهادات حصل بالفعل لم يعد قادرا على الوصول إليها.  "
 
 #: cms/templates/certificates.html
 msgid "Learn more about certificates"
@@ -17572,7 +17572,7 @@ msgstr "فتح محتويات المساق في نظام إدارة التعلّ
 
 #: cms/templates/container.html
 msgid "View Live Version"
-msgstr "مشاهدة النسخة الحالية"
+msgstr "شاهد النسخة الحالية"
 
 #: cms/templates/container.html
 msgid "Preview the courseware in the LMS"
@@ -17907,7 +17907,7 @@ msgstr "انقر لفتح محتويات المساق في نظام إدارة �
 #: cms/templates/course_outline.html cms/templates/edit-tabs.html
 #: cms/templates/index.html
 msgid "View Live"
-msgstr "المشاهدة عبر بثّ مباشر"
+msgstr "شاهد النسخة الحالية"
 
 #: cms/templates/course_outline.html
 msgid "Edit Start Date"
@@ -20358,11 +20358,11 @@ msgstr ""
 
 #: cms/templates/visibility_editor.html
 msgid "Verification Checkpoint"
-msgstr ""
+msgstr "التحقق نقطة تدقيق "
 
 #: cms/templates/visibility_editor.html
 msgid "Verification checkpoint to complete"
-msgstr ""
+msgstr "نقطة تحقيق للتحقق لإكمال "
 
 #: cms/templates/visibility_editor.html
 msgid ""
@@ -20370,6 +20370,8 @@ msgid ""
 "the content in this component. Learners who do not require verification see "
 "this content by default."
 msgstr ""
+"يجب أن المتعلمين الذين يحتاجون إلى التحقق اجتياز حاجز اختيارها لرؤية المحتوى "
+"في هذا العنصر. المتعلمين الذين لا تتطلب التحقق رؤية هذا المحتوى بشكل افتراضي."
 
 #: cms/templates/emails/activation_email.txt
 msgid ""
