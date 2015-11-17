@@ -7108,7 +7108,7 @@ msgstr ""
 "người học để gửi yêu cầu tín chỉ."
 
 msgid "<img src='%s' alt='%s'></image>"
-msgstr "<img src='%s' alt='%s'</image>"
+msgstr "<img src='%s' alt='%s'></image>"
 
 msgid ""
 "<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "

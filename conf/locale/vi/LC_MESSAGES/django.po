@@ -4032,8 +4032,8 @@ msgid ""
 "Can't receive transcripts from Youtube for {youtube_id}. Status code: "
 "{status_code}."
 msgstr ""
-"Không thể nhận bảng điểm từ Youtube cho {youtube_id}. Mã trạng thái: {} "
-"status_code."
+"Không thể nhận bảng điểm từ Youtube cho {youtube_id}. Mã trạng thái: "
+"{status_code}."
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid "We support only SubRip (*.srt) transcripts format."
@@ -4045,7 +4045,7 @@ msgid ""
 "is {error_message}"
 msgstr ""
 "Một cái gì đó sai trái với bảng điểm SubRip tập tin trong quá trình phân "
-"tích cú pháp. Tin bên trong là {} ERROR_MESSAGE"
+"tích cú pháp. Tin bên trong là {error_message}"
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid "Something wrong with SubRip transcripts file during parsing."
@@ -4056,7 +4056,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid "{exception_message}: Can't find uploaded transcripts: {user_filename}"
 msgstr ""
-"{} exception_message: Không thể tìm thấy bảng điểm tải lên: {} user_filename"
+"{exception_message}: Không thể tìm thấy bảng điểm tải lên: {user_filename}"
 
 #: common/lib/xmodule/xmodule/video_module/video_handlers.py
 msgid "Invalid encoding type, transcripts should be UTF-8 encoded."
@@ -4822,19 +4822,19 @@ msgstr "Người sử dụng không được tìm thấy"
 
 #: lms/djangoapps/dashboard/support.py
 msgid "Course {course_id} not past the refund window."
-msgstr "Tất nhiên {} course_id không qua cửa sổ hoàn."
+msgstr "Tất nhiên {course_id} không qua cửa sổ hoàn."
 
 #: lms/djangoapps/dashboard/support.py
 msgid "No order found for {user} in course {course_id}"
-msgstr "Không có thứ tự tìm thấy cho {user} trong khóa học {} course_id"
+msgstr "Không có thứ tự tìm thấy cho {user} trong khóa học {course_id}"
 
 #: lms/djangoapps/dashboard/support.py
 msgid "Unenrolled {user} from {course_id}"
-msgstr "Huỷ đăng ký sử dụng {} từ {course_id}"
+msgstr "Huỷ đăng ký sử dụng {user} từ {course_id}"
 
 #: lms/djangoapps/dashboard/support.py
 msgid "Refunded {cost} for order id {order_id}"
-msgstr "Hoàn trả chi phí {} cho lệnh id {order_id}"
+msgstr "Hoàn trả chi phí {cost} cho lệnh id {order_id}"
 
 #. Translators: This message means that the user could not be authenticated
 #. (that is, we could
@@ -4988,7 +4988,7 @@ msgid ""
 "Unable to clone or pull repository. Please check your url. Output was: {0!r}"
 msgstr ""
 "Không thể sao chép hoặc kéo kho. Vui lòng kiểm tra địa chỉ của bạn. Output: "
-"{! 0 r}"
+"{0!r}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed to clone repository to {directory_name}"
@@ -4996,11 +4996,11 @@ msgstr "Không để nhân bản kho lưu trữ để {directory_name}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Successfully switched to branch: {branch_name}"
-msgstr "Chuyển thành công đến các chi nhánh: {} branch_name"
+msgstr "Chuyển thành công đến các chi nhánh: {branch_name}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Loaded course {course_name}<br/>Errors:"
-msgstr "Tất nhiên nạp {} <br/> course_name lỗi:"
+msgstr "Tất nhiên nạp {course_name} <br/> lỗi:"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Course Name"
@@ -5149,7 +5149,7 @@ msgid ""
 "Data in row #{row_num} must have exactly four columns: email, username, full "
 "name, and country"
 msgstr ""
-"Dữ liệu trong dòng # {} row_num phải có chính xác bốn cột: email, tên người "
+"Dữ liệu trong dòng # {row_num} phải có chính xác bốn cột: email, tên người "
 "dùng, tên đầy đủ, và quốc gia"
 
 #: lms/djangoapps/instructor/views/api.py
@@ -5354,7 +5354,7 @@ msgstr "coupon id là None"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon with the coupon id ({coupon_id}) DoesNotExist"
-msgstr "phiếu giảm giá với các coupon id ({} coupon_id) DoesNotExist"
+msgstr "phiếu giảm giá với các coupon id ({coupon_id}) DoesNotExist"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon with the coupon id ({coupon_id}) is already inactive"
@@ -5362,7 +5362,7 @@ msgstr "phiếu giảm giá với các coupon id ({coupon_id}) là đã không h
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon with the coupon id ({coupon_id}) updated successfully"
-msgstr "phiếu giảm giá với các coupon id ({} coupon_id) cập nhật thành công"
+msgstr "phiếu giảm giá với các coupon id ({coupon_id}) cập nhật thành công"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid ""
@@ -5399,16 +5399,15 @@ msgstr "coupon id không tìm thấy"
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon with the coupon id ({coupon_id}) updated Successfully"
 msgstr ""
-"phiếu giảm giá với các coupon id ({} coupon_id) được cập nhật thành công"
+"phiếu giảm giá với các coupon id ({coupon_id}) được cập nhật thành công"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid ""
 "To gain insights into student enrollment and participation {link_start}visit "
 "{analytics_dashboard_name}, our new course analytics product{link_end}."
 msgstr ""
-"Để hiểu rõ hơn về tuyển sinh và tham gia {} LINK_START lần {} "
-"analytics_dashboard_name, sản phẩm phân tích khóa học mới của chúng tôi {} "
-"LINK_END."
+"Để hiểu rõ hơn về tuyển sinh và tham gia {link_start} lần {analytics_dashboard_name} "
+", sản phẩm phân tích khóa học mới của chúng tôi {link_end}."
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "E-Commerce"
@@ -5425,7 +5424,7 @@ msgstr "Xin vui lòng nhập các giá trị số cho giá nhiên"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "CourseMode with the mode slug({mode_slug}) DoesNotExist"
-msgstr "CourseMode với chế độ sên ({} mode_slug) DoesNotExist"
+msgstr "CourseMode với chế độ sên ({mode_slug}) DoesNotExist"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "CourseMode price updated successfully"
@@ -5433,7 +5432,7 @@ msgstr "Giá CourseMode cập nhật thành công"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Enrollment data is now available in {dashboard_link}."
-msgstr "Dữ liệu tuyển sinh bây giờ đã có trong {} dashboard_link."
+msgstr "Dữ liệu tuyển sinh bây giờ đã có trong {dashboard_link}."
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Membership"
@@ -5477,12 +5476,12 @@ msgstr "0 gửi"
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "{num_emails} sent"
 msgid_plural "{num_emails} sent"
-msgstr[0] "{} num_emails gửi"
+msgstr[0] "{num_emails} gửi"
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "{num_emails} failed"
 msgid_plural "{num_emails} failed"
-msgstr[0] "{} num_emails thất bại"
+msgstr[0] "{num_emails} thất bại"
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "Incomplete"
@@ -5495,11 +5494,11 @@ msgstr "Thống kê tổng quan về khóa học"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "List of students enrolled in {course_key}"
-msgstr "Danh sách học sinh ghi danh trong {} course_key"
+msgstr "Danh sách học sinh ghi danh trong {course_key}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Raw Grades of students enrolled in {course_key}"
-msgstr "Lớp liệu học sinh ghi danh trong {} course_key"
+msgstr "Lớp liệu học sinh ghi danh trong {course_key}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Assignment Name"
@@ -5602,20 +5601,16 @@ msgid ""
 "Failed to find any background tasks for course \"{course}\", module "
 "\"{problem}\" and student \"{student}\"."
 msgstr ""
-"Không thể tìm thấy bất kỳ nhiệm vụ nền tảng cho khóa học \"{nhiên} \", "
-"module \"{} vấn đề \" và sinh viên \"{sinh viên} \"."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Failed to find any background tasks for course \"{course}\" and module "
 "\"{problem}\"."
 msgstr ""
-"Không thể tìm thấy bất kỳ nhiệm vụ nền tảng cho khóa học \"{nhiên} \" và "
-"module \"{} vấn đề \"."
 
 #: lms/djangoapps/instructor/views/tools.py
 msgid "Could not find student matching identifier: {student_identifier}"
-msgstr "Không tìm thấy định danh hợp học sinh: {} student_identifier"
+msgstr "Không tìm thấy định danh hợp học sinh: {student_identifier}"
 
 #: lms/djangoapps/instructor/views/tools.py
 msgid "Unable to parse date: "
@@ -5765,13 +5760,13 @@ msgid ""
 "'{student}'"
 msgstr ""
 "Không tìm thấy trình kỳ thi tuyển sinh để được {action} cho học sinh sinh "
-"viên {} '"
+"viên {student} '"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Entrance exam successfully {action} for student '{student}'"
-msgstr "Lối vào kỳ thi thành công {action} cho học sinh sinh viên {} '"
+msgstr "Lối vào kỳ thi thành công {action} cho học sinh sinh viên {student}'"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #: lms/djangoapps/instructor_task/views.py
@@ -5807,7 +5802,7 @@ msgstr "Không thể tìm thấy người nhận nào là {action}"
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Message failed to be {action} for any of {attempted} recipients "
-msgstr "Tin nhắn không được {action} cho bất kỳ {} cố gắng nhận "
+msgstr "Tin nhắn không được {action} cho bất kỳ {attempted} cố gắng nhận "
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
@@ -5819,7 +5814,7 @@ msgstr "Đã {action} thành công tin nhắn cho {attempted} người nhận"
 #. {succeeded} and {attempted} are counts.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Message {action} for {succeeded} of {attempted} recipients"
-msgstr "Tin nhắn {action} cho {} thành công của {} cố gắng nhận"
+msgstr "Tin nhắn {action} cho {succeeded} thành công của {attempted} cố gắng nhận"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {succeeded} and {attempted} are counts.
@@ -6046,7 +6041,7 @@ msgid ""
 "Confirmation and Registration Codes for the following courses: "
 "{course_name_list}"
 msgstr ""
-"Xác nhận và đăng ký mã số cho các khóa học sau đây: {} course_name_list"
+"Xác nhận và đăng ký mã số cho các khóa học sau đây: {course_name_list}"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Trying to add a different currency into the cart"
@@ -6186,7 +6181,7 @@ msgstr "Thứ tự"
 
 #: lms/djangoapps/shoppingcart/pdf.py
 msgid "{id_label} # {item_id}"
-msgstr "{id_label} # {} item_id"
+msgstr "{id_label} # {item_id}"
 
 #: lms/djangoapps/shoppingcart/pdf.py
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
@@ -6807,7 +6802,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
 msgid "The payment processor did not return a required parameter: {parameter}"
-msgstr "Các bộ xử lý thanh toán không trả về một tham số yêu cầu: {tham số}"
+msgstr "Các bộ xử lý thanh toán không trả về một tham số yêu cầu: {parameter}"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
 msgid ""
@@ -6815,7 +6810,7 @@ msgid ""
 "{parameter}."
 msgstr ""
 "Các bộ xử lý thanh toán trả lại một giá trị xấu, đánh máy {value} cho tham "
-"số {tham số}."
+"số {parameter}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
 msgid ""
@@ -6823,9 +6818,6 @@ msgid ""
 "{charged_amount_currency} is different than the total cost of the order "
 "{total_cost} {total_cost_currency}."
 msgstr ""
-"Số tiền chi trả của bộ vi xử lý {charged_amount} {} charged_amount_currency "
-"là khác nhau hơn so với tổng chi phí của lệnh {} {total_cost "
-"total_cost_currency}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
 msgid ""
@@ -21059,13 +21051,6 @@ msgid ""
 "ad9d-0178ab8c77be\", \"transcripts\": {\"en\": \"/static/DemoX-D01_1.srt\", "
 "\"uk\": \"/static/DemoX-D01_1_uk.srt\"}}"
 msgstr ""
-"Xác định một video, 5-10 giây trong chiều dài, để chơi video trước khi khóa "
-"học. Nhập ID video từ các trang video ơn và một hoặc file bảng điểm hơn "
-"trong các định dạng sau: {\"VIDEO_ID \": \"ID \", \"bảng điểm \": {\"ngôn "
-"ngữ \": \"/ tĩnh /filename.srt \"}}. Ví dụ, một mục nhập cho một video với "
-"hai bảng điểm trông như thế này: {\"VIDEO_ID \": \"77cef264-d6f5-4cf2-"
-"ad9d-0178ab8c77be \", \"bảng điểm \": {\"en \": \"/static/DemoX-D01_1.srt "
-"\", \"uk \": \"/ static / DemoX-D01_1_uk.srt \"}}"
 
 msgid "Video Available on Web Only"
 msgstr "Video có sẵn trên Web Chỉ"
@@ -21521,11 +21506,11 @@ msgid "No end date set"
 msgstr "Không có thiết lập ngày kết thúc"
 
 msgid "For analytics about your course, go to {analytics_dashboard_name}."
-msgstr "Đối với phân tích về khóa học, bạn vào {} analytics_dashboard_name."
+msgstr "Đối với phân tích về khóa học, bạn vào {analytics_dashboard_name}."
 
 msgid ""
 "The enrollment code ({code}) was not found for the {course_name} course."
-msgstr "Mã tuyển sinh ({code}) không được tìm thấy cho {} course_name nhiên."
+msgstr "Mã tuyển sinh ({code}) không được tìm thấy cho {course_name} nhiên."
 
 msgid "This enrollment code has been canceled. It can no longer be used."
 msgstr "Mã tuyển sinh này đã bị hủy. Nó có thể không còn được sử dụng."
@@ -21929,7 +21914,7 @@ msgid "Follow {platform_name} on Google+"
 msgstr "Theo dõi {platform_name} trên Google+"
 
 msgid "Subscribe to the {platform_name} subreddit"
-msgstr "Theo dõi các {} subreddit platform_name"
+msgstr "Theo dõi các {platform_name} subreddit"
 
 msgid "VK"
 msgstr "VK"
@@ -22460,7 +22445,7 @@ msgstr ""
 "người học để gửi yêu cầu tín chỉ."
 
 msgid "<img src='%s' alt='%s'></image>"
-msgstr "<img src='%s' alt='%s'</image>"
+msgstr "<img src='%s' alt='%s'></image>"
 
 msgid ""
 "<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
