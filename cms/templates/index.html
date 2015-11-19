@@ -336,7 +336,7 @@
           </div>
         </div>
 
-        %if course_creator_status == "granted" or org_course_creator_status=='granted':
+        %if course_creator_status == "granted" or org_course_creator_status == "granted":
         <div class="notice-item has-actions">
           <div class="msg">
             <h3 class="title">${_('Create Your First Course')}</h3>
@@ -357,7 +357,7 @@
       % endif
 
 
-      %if course_creator_status == "unrequested":
+      %if course_creator_status == "unrequested" and (course_creator_status != "granted" and org_course_creator_status != "granted"):
       <div class="wrapper wrapper-creationrights">
         <h3 class="title">
           <a href="#instruction-creationrights" class="ui-toggle-control show-creationrights"><span class="label">${_('Becoming a Course Creator in {studio_name}').format(studio_name=settings.STUDIO_SHORT_NAME)}</span> <i class="icon fa fa-times-circle"></i></a>
