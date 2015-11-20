@@ -119,3 +119,8 @@ SECRET_KEY = '85920908f28904ed733fe576320db18cabd7b6cd'
 
 ########################## Certificates Web/HTML View #######################
 FEATURES['CERTIFICATES_HTML_VIEW'] = True
+
+########################## Microsites #######################
+MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
+FEATURES['USE_MICROSITES'] = True
+MICROSITE_BACKEND = 'microsite_configuration.backends.database.DatabaseMicrositeBackend'
