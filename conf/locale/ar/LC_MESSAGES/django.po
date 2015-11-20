@@ -11016,7 +11016,7 @@ msgstr "كيفية العمل"
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/red-theme/lms/templates/header.html
 msgid "Find Courses"
-msgstr "إيجاد المساقات"
+msgstr "مساقاتنا"
 
 #: lms/templates/navigation-edx.html
 msgid "Schools & Partners"
@@ -11252,7 +11252,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Register for {platform_name}"
-msgstr "التسجيل في {platform_name} "
+msgstr "التسجيل في {platform_name}"
 
 #: lms/templates/register.html
 msgid "Create My {platform_name} Account"
@@ -12020,6 +12020,10 @@ msgstr ""
 msgid "Enroll"
 msgstr "تسجيل"
 
+#: lms/templates/courseware/course_about.html
+msgid "Register for {course_name}"
+msgstr "التسجيل في {course_name} "
+
 #: lms/templates/ccx/enrollment.html
 msgid "Student List Management"
 msgstr "إدارة قوائم الطلاب"
@@ -12444,7 +12448,11 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html
 msgid "You are enrolled in this course"
-msgstr ""
+msgstr "كنت مسجل لهذه الدورة"
+
+#: lms/templates/courseware/course_about.html
+msgid "You are registered for this course"
+msgstr "كنت مسجل لهذه الدورة"
 
 #: lms/templates/courseware/course_about.html
 msgid "View Courseware"
