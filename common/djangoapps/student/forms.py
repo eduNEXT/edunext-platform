@@ -22,6 +22,7 @@ from util.password_policy_validators import (
     validate_password_complexity,
     validate_password_dictionary,
 )
+from student.edraak_validation import validate_username
 
 
 class PasswordResetFormNoActive(PasswordResetForm):
@@ -107,15 +108,16 @@ class AccountCreationForm(forms.Form):
     validation, not rendering.
     """
     # TODO: Resolve repetition
-    username = forms.SlugField(
+    username = forms.CharField(
         min_length=2,
         max_length=30,
         error_messages={
             "required": _USERNAME_TOO_SHORT_MSG,
-            "invalid": _("Username should only consist of A-Z and 0-9, with no spaces."),
             "min_length": _USERNAME_TOO_SHORT_MSG,
+            "invalid": "Enter a valid 'username' consisting of letters, numbers, underscores or hyphens(No Spaces).",
             "max_length": _("Username cannot be more than %(limit_value)s characters long"),
-        }
+        },
+        validators=[validate_username],  # Allow Unicode usernames
     )
     email = forms.EmailField(
         max_length=75,  # Limit per RFCs is 254, but User's email field in django 1.4 only takes 75
