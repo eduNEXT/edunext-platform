@@ -107,7 +107,7 @@ class AccountCreationForm(forms.Form):
     validation, not rendering.
     """
     # TODO: Resolve repetition
-    username = forms.SlugField(
+    username = forms.CharField(
         min_length=2,
         max_length=30,
         error_messages={
