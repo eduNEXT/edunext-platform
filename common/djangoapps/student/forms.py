@@ -114,7 +114,7 @@ class AccountCreationForm(forms.Form):
         error_messages={
             "required": _USERNAME_TOO_SHORT_MSG,
             "min_length": _USERNAME_TOO_SHORT_MSG,
-            "invalid": "Enter a valid 'username' consisting of letters, numbers, underscores or hyphens(No Spaces).",
+            "invalid": _("Usernames must contain only letters, numbers, underscores (_), and hyphens (-)."),
             "max_length": _("Username cannot be more than %(limit_value)s characters long"),
         },
         validators=[validate_username],  # Allow Unicode usernames
