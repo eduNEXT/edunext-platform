@@ -8,6 +8,7 @@ import edxmako
 import json
 
 from django.conf import settings
+from django.http import HttpResponseNotFound
 from microsite_configuration.backends.filebased import SettingsFileMicrositeBackend
 from microsite_configuration.models import Microsite
 
@@ -53,7 +54,11 @@ class DatabaseMicrositeBackend(SettingsFileMicrositeBackend):
             self._set_microsite_config_from_obj(subdomain, domain, values)
             return
         except Microsite.DoesNotExist:
-            return
+            if settings.FEATURES['USE_MICROSITE_AVAILABLE_SCREEN']:
+                context = {
+                    'domain': domain,
+                }
+                return HttpResponseNotFound(edxmako.shortcuts.render_to_string('microsites/not_found.html', context))
 
     def get_template_path(self, relative_path, **kwargs):
         """
