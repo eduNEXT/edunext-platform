@@ -56,6 +56,7 @@ class DatabaseMicrositeBackend(SettingsFileMicrositeBackend):
         except Microsite.DoesNotExist:
             if settings.FEATURES['USE_MICROSITE_AVAILABLE_SCREEN']:
                 context = {
+                    'domain': domain,
                 }
                 return HttpResponseNotFound(edxmako.shortcuts.render_to_string('microsites/not_found.html', context))
 
