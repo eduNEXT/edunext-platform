@@ -68,3 +68,5 @@ def enable_theme():
     settings.STATICFILES_DIRS.append(
         (u'themes/{}'.format(settings.THEME_NAME), theme_root / 'static')
     )
+
+    settings.LOCALE_PATHS = (theme_root / 'conf/locale',) + settings.LOCALE_PATHS
