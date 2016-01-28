@@ -202,6 +202,9 @@ FEATURES['STORE_BILLING_INFO'] = True
 FEATURES['ENABLE_PAID_COURSE_REGISTRATION'] = True
 FEATURES['ENABLE_COSMETIC_DISPLAY_PRICE'] = True
 
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'microsite_configuration.backends.database.DatabaseMicrositeBackend'
+
 ########################## Third Party Auth #######################
 
 if FEATURES.get('ENABLE_THIRD_PARTY_AUTH') and 'third_party_auth.dummy.DummyBackend' not in AUTHENTICATION_BACKENDS:
