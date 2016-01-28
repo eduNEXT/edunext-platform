@@ -851,7 +851,7 @@ MEDIA_URL = '/media/'
 
 # Locale/Internationalization
 TIME_ZONE = 'America/New_York'  # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-LANGUAGE_CODE = 'en'  # http://www.i18nguy.com/unicode/language-identifiers.html
+LANGUAGE_CODE = 'es-419'  # http://www.i18nguy.com/unicode/language-identifiers.html
 # these languages display right to left
 LANGUAGES_BIDI = ("he", "ar", "fa", "ur", "fa-ir", "rtl")
 
@@ -1124,8 +1124,13 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
 
     'splash.middleware.SplashMiddleware',
-
-
+    
+    # Make One language the default one
+    'edraak_i18n.middleware.ForceLangMiddleware',
+    'edraak_i18n.middleware.SessionBasedLocaleMiddleware',
+    
+    # Allows us to dark-launch particular languages
+    'dark_lang.middleware.DarkLangMiddleware',
     'geoinfo.middleware.CountryMiddleware',
     'embargo.middleware.EmbargoMiddleware',
 
@@ -1941,6 +1946,9 @@ INSTALLED_APPS = (
     'openedx.core.djangoapps.self_paced',
 
     'sorl.thumbnail',
+
+    # eduNEXT modules
+    'edraak_i18n'
 )
 
 # Migrations which are not in the standard module "migrations"
