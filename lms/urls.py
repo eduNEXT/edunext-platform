@@ -222,6 +222,12 @@ for key, value in settings.MKTG_URL_LINK_MAP.items():
                         'static_template_view.views.render',
                         {'template': template}, name=value),)
 
+# View for mktg site
+urlpatterns += (url(
+    r'^mktg/dashboard$',
+    'courseware.views.mktg_dashboard',
+    name="mktg_dashboard"
+),)
 
 # Multicourse wiki (Note: wiki urls must be above the courseware ones because of
 # the custom tab catch-all)
