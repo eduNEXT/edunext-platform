@@ -5,7 +5,7 @@ import traceback
 from base64 import b64decode
 
 from django.conf import settings
-from django.http import validate_host
+from django.http.request import validate_host
 from django.contrib.auth.models import User
 
 from rest_framework import authentication
