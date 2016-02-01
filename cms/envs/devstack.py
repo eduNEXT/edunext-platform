@@ -49,6 +49,7 @@ STATICFILES_FINDERS = [
 
 # Make it easier to test advanced components in local dev
 FEATURES['ALLOW_ALL_ADVANCED_COMPONENTS'] = True
+FEATURES['ENABLE_CREATOR_GROUP'] = True
 
 ################################# CELERY ######################################
 
