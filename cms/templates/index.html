@@ -1,4 +1,6 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from opaque_keys.edx.keys import CourseKey %>
+<%! from student.roles import CourseRerunCreatorRole, OrgRerunCreatorRole %>
 
 <%inherit file="base.html" />
 
@@ -315,7 +317,10 @@
             </a>
 
             <ul  class="item-actions course-actions">
-              % if allow_course_reruns and rerun_creator_status and course_creator_status=='granted':
+              <%
+              show_link = (rerun_creator_status and course_creator_status=='granted') or CourseRerunCreatorRole( CourseKey.from_string(course_info['course_key']) ).has_user(request.user) or OrgRerunCreatorRole( course_info['org'] ).has_user(request.user)
+              %>
+              % if allow_course_reruns and show_link:
               <li class="action action-rerun">
                 <a href="${course_info['rerun_link']}" class="button rerun-button">${_("Re-run Course")}</a>
               </li>
