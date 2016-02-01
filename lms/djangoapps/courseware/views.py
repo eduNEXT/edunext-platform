@@ -890,6 +890,19 @@ def course_about(request, course_id):
             'pre_requisite_courses': pre_requisite_courses
         })
 
+@ensure_csrf_cookie
+@cache_if_anonymous
+def mktg_dashboard(request):
+    """
+    This is the button that checks if we should redirect to dashboard or login
+    """
+    to_dashboard = False
+    if settings.COURSEWARE_ENABLED and request.user.is_authenticated():
+        to_dashboard = True
+
+    return render_to_response(
+        'courseware/mktg_dashboard.html', {'link_to_dashboard': to_dashboard}
+    )
 
 @transaction.non_atomic_requests
 @login_required
