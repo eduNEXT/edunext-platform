@@ -196,6 +196,16 @@ VERIFY_STUDENT["SOFTWARE_SECURE"] = {
     "API_SECRET_KEY": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
 }
 
+########################## Microsites #######################
+
+MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
+FEATURES['USE_MICROSITES'] = True
+MICROSITE_API_ALLOWED_REMOTES = [
+    '*',
+]
+MICROSITE_API_SIGNING_KEY = open('/var/tmp/keys/microsite_api_rsa.pub', "r").read()
+MICROSITE_API_MANAGER = 'staff'
+
 # Skip enrollment start date filtering
 SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = True
 
