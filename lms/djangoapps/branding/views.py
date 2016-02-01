@@ -33,9 +33,12 @@ def get_course_enrollments(user):
     """
     enrollments = CourseEnrollment.enrollments_for_user(user)
     microsite_org = microsite.get_value('course_org_filter')
+    if microsite_org and isinstance(microsite_org, basestring):
+        microsite_org = set([microsite_org])
+
     if microsite_org:
         site_enrollments = [
-            enrollment for enrollment in enrollments if enrollment.course_id.org == microsite_org
+            enrollment for enrollment in enrollments if enrollment.course_id.org in microsite_org
         ]
     else:
         site_enrollments = [
@@ -45,7 +48,7 @@ def get_course_enrollments(user):
 
 
 @ensure_csrf_cookie
-@cache_if_anonymous()
+# @cache_if_anonymous()
 def index(request):
     '''
     Redirects to main page -- info page if user authenticated, or marketing if not
@@ -92,7 +95,7 @@ def index(request):
 
 
 @ensure_csrf_cookie
-@cache_if_anonymous()
+# @cache_if_anonymous()
 def courses(request):
     """
     Render the "find courses" page. If the marketing site is enabled, redirect

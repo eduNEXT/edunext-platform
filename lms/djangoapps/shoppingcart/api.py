@@ -17,6 +17,9 @@ def order_history(user, **kwargs):
     course_org_filter = kwargs['course_org_filter'] if 'course_org_filter' in kwargs else None
     org_filter_out_set = kwargs['org_filter_out_set'] if 'org_filter_out_set' in kwargs else []
 
+    if course_org_filter and isinstance(course_org_filter, basestring):
+        course_org_filter = set([course_org_filter])
+
     order_history_list = []
     purchased_order_items = OrderItem.objects.filter(user=user, status='purchased').select_subclasses().order_by('-fulfilled_time')
     for order_item in purchased_order_items:
@@ -27,7 +30,7 @@ def order_history(user, **kwargs):
             # not attributed (by ORG) to any Microsite.
             order_item_course_id = getattr(order_item, 'course_id', None)
             if order_item_course_id:
-                if (course_org_filter and course_org_filter == order_item_course_id.org) or \
+                if (course_org_filter and order_item_course_id.org in course_org_filter) or \
                         (course_org_filter is None and order_item_course_id.org not in org_filter_out_set):
                     order_history_list.append({
                         'order_id': order_item.order.id,
