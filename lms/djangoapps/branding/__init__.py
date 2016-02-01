@@ -27,7 +27,7 @@ def get_visible_courses():
         courses = []
         for org in filtered_by_org:
             _partial = CourseOverview.get_all_courses(org=org)
-            courses = courses + _partial
+            courses = courses + list(_partial)
     else:
         courses = CourseOverview.get_all_courses(org=filtered_by_org)
 
