@@ -1,4 +1,4 @@
-"""
+﻿"""
 Student Views
 """
 import datetime
@@ -20,7 +20,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import password_reset_confirm
 from django.contrib import messages
 from django.core.context_processors import csrf
-from django.core import mail
+import mail
 from django.core.urlresolvers import reverse, NoReverseMatch
 from django.core.validators import validate_email, ValidationError
 from django.db import IntegrityError, transaction
@@ -1702,7 +1702,9 @@ def create_account_with_params(request, params):
         # Email subject *must not* contain newlines
         subject = ''.join(subject.splitlines())
         message = render_to_string('emails/activation_email.txt', context)
-
+        message_html = None
+        if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+            message_html = render_to_string('emails/html/activation_email.html', context)
         from_address = microsite.get_value(
             'email_from_address',
             settings.DEFAULT_FROM_EMAIL
@@ -1714,7 +1716,7 @@ def create_account_with_params(request, params):
                            '-' * 80 + '\n\n' + message)
                 mail.send_mail(subject, message, from_address, [dest_addr], fail_silently=False)
             else:
-                user.email_user(subject, message, from_address)
+                mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
         except Exception:  # pylint: disable=broad-except
             log.error(u'Unable to send activation email to user from "%s"', from_address, exc_info=True)
     else:
@@ -2129,11 +2131,18 @@ def reactivation_email_for_user(user):
     subject = render_to_string('emails/activation_email_subject.txt', context)
     subject = ''.join(subject.splitlines())
     message = render_to_string('emails/activation_email.txt', context)
+    message_html = None
+    if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+        message_html = render_to_string('emails/html/activation_email.html', context)
 
+    from_address = microsite.get_value(
+        'email_from_address',
+        settings.DEFAULT_FROM_EMAIL
+    )
     try:
-        user.email_user(subject, message, settings.DEFAULT_FROM_EMAIL)
+        mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
     except Exception:  # pylint: disable=broad-except
-        log.error(u'Unable to send reactivation email from "%s"', settings.DEFAULT_FROM_EMAIL, exc_info=True)
+        log.error(u'Unable to send reactivation email from "%s"', from_address, exc_info=True)
         return JsonResponse({
             "success": False,
             "error": _('Unable to send reactivation email')
@@ -2190,13 +2199,16 @@ def do_email_change_request(user, new_email, activation_key=None):
     subject = ''.join(subject.splitlines())
 
     message = render_to_string('emails/email_change.txt', context)
+    message_html = None
+    if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+        message_html = render_to_string('emails/html/email_change.html', context)
 
     from_address = microsite.get_value(
         'email_from_address',
         settings.DEFAULT_FROM_EMAIL
     )
     try:
-        mail.send_mail(subject, message, from_address, [pec.new_email])
+        mail.send_mail(subject, message, from_address, [pec.new_email], html_message=message_html)
     except Exception:  # pylint: disable=broad-except
         log.error(u'Unable to send email activation link to user from "%s"', from_address, exc_info=True)
         raise ValueError(_('Unable to send email activation link. Please try again later.'))
@@ -2245,6 +2257,13 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
         message = render_to_string('emails/confirm_email_change.txt', address_context)
         u_prof = UserProfile.objects.get(user=user)
         meta = u_prof.get_meta()
+        message_html = None
+        if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
+            message_html = render_to_string('emails/html/confirm_email_change.html', address_context)
+        from_address = microsite.get_value(
+            'email_from_address',
+            settings.DEFAULT_FROM_EMAIL
+        )
         if 'old_emails' not in meta:
             meta['old_emails'] = []
         meta['old_emails'].append([user.email, datetime.datetime.now(UTC).isoformat()])
@@ -2252,7 +2271,7 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
         u_prof.save()
         # Send it to the old email...
         try:
-            user.email_user(subject, message, settings.DEFAULT_FROM_EMAIL)
+            mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
         except Exception:    # pylint: disable=broad-except
             log.warning('Unable to send confirmation email to old address', exc_info=True)
             response = render_to_response("email_change_failed.html", {'email': user.email})
@@ -2264,7 +2283,7 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
         pec.delete()
         # And send it to the new email...
         try:
-            user.email_user(subject, message, settings.DEFAULT_FROM_EMAIL)
+            mail.send_mail(subject, message, from_address, [user.email], html_message=message_html)
         except Exception:  # pylint: disable=broad-except
             log.warning('Unable to send confirmation email to new address', exc_info=True)
             response = render_to_response("email_change_failed.html", {'email': pec.new_email})
