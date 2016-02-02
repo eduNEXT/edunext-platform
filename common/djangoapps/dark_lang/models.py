@@ -4,6 +4,7 @@ Models for the dark-launching languages
 from django.db import models
 
 from config_models.models import ConfigurationModel
+from microsite_configuration import microsite
 
 
 class DarkLangConfig(ConfigurationModel):
@@ -22,10 +23,12 @@ class DarkLangConfig(ConfigurationModel):
 
         Example: ['it', 'de-at', 'es', 'pt-br']
         """
-        if not self.released_languages.strip():
+        released_languages = microsite.get_value('released_languages', self.released_languages)
+
+        if not released_languages.strip():  # pylint: disable=no-member
             return []
 
-        languages = [lang.lower().strip() for lang in self.released_languages.split(',')]
+        languages = [lang.lower().strip() for lang in released_languages.split(',')]  # pylint: disable=no-member
         # Put in alphabetical order
         languages.sort()
         return languages

@@ -1124,13 +1124,11 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
 
     'splash.middleware.SplashMiddleware',
-    
+
     # Make One language the default one
-    'edraak_i18n.middleware.ForceLangMiddleware',
+    # 'edraak_i18n.middleware.ForceLangMiddleware', # should no longer be used because we want languages to be different per microsite and use browser settings
     'edraak_i18n.middleware.SessionBasedLocaleMiddleware',
-    
-    # Allows us to dark-launch particular languages
-    'dark_lang.middleware.DarkLangMiddleware',
+
     'geoinfo.middleware.CountryMiddleware',
     'embargo.middleware.EmbargoMiddleware',
 
