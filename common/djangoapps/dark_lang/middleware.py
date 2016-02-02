@@ -19,8 +19,10 @@ from openedx.core.djangoapps.user_api.preferences.api import (
 )
 from lang_pref import LANGUAGE_KEY
 
+# TODO django_locale.trans_real is no longer present, so check possible issues
 from django.utils.translation.trans_real import parse_accept_lang_header
 from django.utils.translation import LANGUAGE_SESSION_KEY
+from microsite_configuration import microsite
 
 
 def dark_parse_accept_lang_header(accept):
@@ -73,7 +75,7 @@ class DarkLangMiddleware(object):
         Current list of released languages
         """
         language_options = DarkLangConfig.current().released_languages_list
-        if settings.LANGUAGE_CODE not in language_options:
+        if not language_options:
             language_options.append(settings.LANGUAGE_CODE)
         return language_options
 
@@ -81,7 +83,7 @@ class DarkLangMiddleware(object):
         """
         Prevent user from requesting un-released languages except by using the preview-lang query string.
         """
-        if not DarkLangConfig.current().enabled:
+        if not DarkLangConfig.current().enabled and not microsite.get_value('released_languages'):
             return
 
         self._clean_accept_headers(request)
