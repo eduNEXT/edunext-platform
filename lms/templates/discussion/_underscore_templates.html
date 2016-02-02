@@ -1,8 +1,11 @@
 <%namespace name='static' file='../static_content.html'/>
-<%! import json %>
+<%!
+import json
+from microsite_configuration import microsite
+%>
 
 <script type="text/javascript">
-window.PLATFORM_NAME = ${json.dumps(settings.PLATFORM_NAME)};
+window.PLATFORM_NAME = ${json.dumps(microsite.get_value('platform_name', settings.PLATFORM_NAME))};
 window.ENABLE_DISCUSSION_HOME_PANEL = ${json.dumps(settings.FEATURES.get('ENABLE_DISCUSSION_HOME_PANEL', False))};
 </script>
 

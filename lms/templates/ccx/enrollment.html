@@ -1,4 +1,5 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from microsite_configuration import microsite %>
 
 <div class="batch-enrollment" style="float:left;width:50%">
   <form method="POST" action="ccx_invite">
@@ -18,8 +19,8 @@
     <div class="hint auto-enroll-hint">
       <span class="hint-caret"></span>
       <p class="text-helper" id="auto-enroll-helper">
-	${_("If this option is <em>checked</em>, users who have not yet registered for {platform_name} will be automatically enrolled.").format(platform_name=settings.PLATFORM_NAME)}
-	${_("If this option is left <em>unchecked</em>, users who have not yet registered for {platform_name} will not be enrolled, but will be allowed to enroll once they make an account.").format(platform_name=settings.PLATFORM_NAME)}
+	${_("If this option is <em>checked</em>, users who have not yet registered for {platform_name} will be automatically enrolled.").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
+	${_("If this option is left <em>unchecked</em>, users who have not yet registered for {platform_name} will not be enrolled, but will be allowed to enroll once they make an account.").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME))}
 	<br /><br />
 	${_("Checking this box has no effect if 'Unenroll' is selected.")}
       </p>

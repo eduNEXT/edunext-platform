@@ -102,7 +102,7 @@ def login_and_registration_form(request, initial_mode="login"):
             'initial_mode': initial_mode,
             'third_party_auth': _third_party_auth_context(request, redirect_to),
             'third_party_auth_hint': third_party_auth_hint or '',
-            'platform_name': settings.PLATFORM_NAME,
+            'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
 
             # Include form descriptions retrieved from the user API.
             # We could have the JS client make these requests directly,
@@ -388,7 +388,7 @@ def account_settings_context(request):
                 'options': settings.ALL_LANGUAGES,
             }
         },
-        'platform_name': settings.PLATFORM_NAME,
+        'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
         'user_accounts_api_url': reverse("accounts_api", kwargs={'username': user.username}),
         'user_preferences_api_url': reverse('preferences_api', kwargs={'username': user.username}),
         'disable_courseware_js': True,

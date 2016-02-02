@@ -43,7 +43,7 @@ from lms.djangoapps.verify_student.ssencrypt import (
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError
 from xmodule_django.models import CourseKeyField
-
+from microsite_configuration import microsite
 
 log = logging.getLogger(__name__)
 
@@ -319,7 +319,9 @@ class PhotoVerification(StatusModel):
             if attempt.created_at < cls._earliest_allowed_date():
                 return (
                     'expired',
-                    _("Your {platform_name} verification has expired.").format(platform_name=settings.PLATFORM_NAME)
+                    _("Your {platform_name} verification has expired.").format(
+                        platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME)
+                    )
                 )
 
             # If someone is denied their original verification attempt, they can try to reverify.

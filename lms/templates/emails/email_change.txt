@@ -1,4 +1,5 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from openedx.conf import settings %>
 <%namespace file="../main.html" import="stanford_theme_enabled" />
 ${_("We received a request to change the e-mail associated with your "
     "{platform_name} account from {old_email} to {new_email}. "

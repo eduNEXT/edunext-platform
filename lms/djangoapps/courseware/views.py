@@ -1305,7 +1305,7 @@ def generate_user_cert(request, course_id):
         log.info(u"Anon user trying to generate certificate for %s", course_id)
         return HttpResponseBadRequest(
             _('You must be signed in to {platform_name} to create a certificate.').format(
-                platform_name=settings.PLATFORM_NAME
+                platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME)
             )
         )
 
