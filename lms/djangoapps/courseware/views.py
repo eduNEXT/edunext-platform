@@ -891,7 +891,7 @@ def course_about(request, course_id):
         })
 
 @ensure_csrf_cookie
-@cache_if_anonymous
+@cache_if_anonymous('org')
 def mktg_dashboard(request):
     """
     This is the button that checks if we should redirect to dashboard or login
