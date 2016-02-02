@@ -719,6 +719,11 @@ EDXNOTES_INTERNAL_API = ENV_TOKENS.get('EDXNOTES_INTERNAL_API', EDXNOTES_INTERNA
 
 CREDIT_PROVIDER_SECRET_KEYS = AUTH_TOKENS.get("CREDIT_PROVIDER_SECRET_KEYS", {})
 
+################################ Settings for Microsites ################################
+
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = ENV_TOKENS.get('MICROSITE_BACKEND', MICROSITE_BACKEND)
+
 ##################### LTI Provider #####################
 if FEATURES.get('ENABLE_LTI_PROVIDER'):
     INSTALLED_APPS += ('lti_provider',)
