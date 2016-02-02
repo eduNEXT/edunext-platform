@@ -51,6 +51,7 @@ from instructor_task.subtasks import (
 )
 from util.query import use_read_replica_if_available
 from util.date_utils import get_default_time_display
+from microsite_configuration import microsite
 
 log = logging.getLogger('edx.celery.task')
 
@@ -162,7 +163,7 @@ def _get_course_email_context(course):
         'course_end_date': course_end_date,
         'account_settings_url': 'https://{}{}'.format(settings.SITE_NAME, reverse('account_settings')),
         'email_settings_url': 'https://{}{}'.format(settings.SITE_NAME, reverse('dashboard')),
-        'platform_name': settings.PLATFORM_NAME,
+        'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
     }
     return email_context
 

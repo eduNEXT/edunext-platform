@@ -9,6 +9,7 @@ from django.core.urlresolvers import reverse
 from markupsafe import escape
 from course_modes.models import CourseMode
 from course_modes.helpers import enrollment_mode_display
+from microsite_configuration import microsite
 from student.helpers import (
   VERIFY_STATUS_NEED_TO_VERIFY,
   VERIFY_STATUS_SUBMITTED,
@@ -159,7 +160,7 @@ from student.helpers import (
                     </a>
                 % endif
                 % if share_url and share_settings.get('DASHBOARD_TWITTER', False):
-                  <% share_text_default = _("I'm learning on {platform_name}:").format(platform_name=settings.PLATFORM_NAME) %>
+                  <% share_text_default = _("I'm learning on {platform_name}:").format(platform_name=microsite.get_value('platform_name', settings.PLATFORM_NAME)) %>
                   <% share_text = urllib.quote_plus(share_settings.get('DASHBOARD_TWITTER_TEXT', share_text_default)) %>
                   <% twitter_url = 'https://twitter.com/intent/tweet?text=' + share_text + '%20' + share_url %>
                     <a

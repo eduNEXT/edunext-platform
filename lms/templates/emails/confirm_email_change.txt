@@ -1,5 +1,6 @@
 <%! from django.core.urlresolvers import reverse %>
 <%! from django.utils.translation import ugettext as _ %>
+<%! from openedx.conf import settings %>
 <%namespace file="../main.html" import="stanford_theme_enabled" />
 ## Again, ugly hack that needs to be changed
 ## TODO: this probably needs better formatting to look nice in an

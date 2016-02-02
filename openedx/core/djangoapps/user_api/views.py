@@ -1,7 +1,7 @@
 """HTTP end-points for the User API. """
 import copy
 from opaque_keys import InvalidKeyError
-from django.conf import settings
+from openedx.conf import settings
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.core.urlresolvers import reverse
