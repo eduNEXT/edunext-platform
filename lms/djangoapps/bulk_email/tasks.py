@@ -29,7 +29,7 @@ from celery import task, current_task  # pylint: disable=no-name-in-module
 from celery.states import SUCCESS, FAILURE, RETRY  # pylint: disable=no-name-in-module, import-error
 from celery.exceptions import RetryTaskError  # pylint: disable=no-name-in-module, import-error
 
-from django.conf import settings
+from openedx.conf import settings
 from django.contrib.auth.models import User
 from django.core.mail import EmailMultiAlternatives, get_connection
 from django.core.urlresolvers import reverse
@@ -151,18 +151,20 @@ def _get_course_email_context(course):
     course_id = course.id.to_deprecated_string()
     course_title = course.display_name
     course_end_date = get_default_time_display(course.end)
-    course_url = 'https://{}{}'.format(
+    scheme = u"https" if settings.HTTPS == "on" else u"http"
+    course_url = '{}://{}{}'.format(
+        scheme,
         settings.SITE_NAME,
         reverse('course_root', kwargs={'course_id': course_id})
     )
-    image_url = u'https://{}{}'.format(settings.SITE_NAME, course_image_url(course))
+    image_url = u'{}://{}{}'.format(scheme, settings.SITE_NAME, course_image_url(course))
     email_context = {
         'course_title': course_title,
         'course_url': course_url,
         'course_image_url': image_url,
         'course_end_date': course_end_date,
-        'account_settings_url': 'https://{}{}'.format(settings.SITE_NAME, reverse('account_settings')),
-        'email_settings_url': 'https://{}{}'.format(settings.SITE_NAME, reverse('dashboard')),
+        'account_settings_url': '{}://{}{}'.format(scheme, settings.SITE_NAME, reverse('account_settings')),
+        'email_settings_url': '{}://{}{}'.format(scheme, settings.SITE_NAME, reverse('dashboard')),
         'platform_name': microsite.get_value('platform_name', settings.PLATFORM_NAME),
     }
     return email_context
