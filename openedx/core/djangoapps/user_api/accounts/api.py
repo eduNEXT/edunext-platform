@@ -16,6 +16,7 @@ from student import views as student_views
 from util.model_utils import emit_setting_changed_event
 
 from openedx.core.lib.api.view_utils import add_serializer_errors
+from microsite_configuration import microsite
 
 from ..errors import (
     AccountUpdateError, AccountValidationError, AccountUsernameInvalid, AccountPasswordInvalid,
@@ -395,7 +396,7 @@ def request_password_change(email, orig_host, is_secure):
         # Generate a single-use link for performing a password reset
         # and email it to the user.
         form.save(
-            from_email=settings.DEFAULT_FROM_EMAIL,
+            from_email=microsite.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL),
             domain_override=orig_host,
             use_https=is_secure
         )
