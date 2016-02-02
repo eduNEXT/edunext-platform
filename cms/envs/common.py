@@ -928,6 +928,9 @@ OPTIONAL_APPS = (
 
     # Organizations App (http://github.com/edx/edx-organizations)
     'organizations',
+
+    #edunext xblocks
+    'sodexo_game',
 )
 
 
@@ -1036,6 +1039,9 @@ ADVANCED_COMPONENT_TYPES = [
 
     # Peer instruction tool
     'ubcpi',
+
+    #edunext xblocks
+    'sodexo_game',
 ]
 
 # Adding components in this list will disable the creation of new problem for
