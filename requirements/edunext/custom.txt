@@ -1,0 +1,19 @@
+# xBlocks installed for some of our customers
+
+
+# Oppia XBlock
+-e git+https://github.com/oppia/xblock.git@9f6b95b7eb7dbabb96b77198a3202604f96adf65#egg=oppia-xblock
+
+# Microsoft's Office Mix XBlock:
+-e git+https://github.com/OfficeDev/xblock-officemix.git@3f876b5f0267b017812620239533a29c7d562d24#egg=officemix
+
+-e git+https://github.com/edx-solutions/xblock-drag-and-drop-v2.git@d6b36969a5494ccc5af634caa98373acd090cf79#egg=xblock-drag-and-drop-v2
+
+
+# private video XBlocks
+-e git://github.com/open-craft/xblock-mentoring.git@1a6e2092a361f0befff18d07607517d437046e3b#egg=xblock-mentoring  # requirement of xblock-ooyala
+-e git+https://github.com/edx-solutions/xblock-ooyala.git@42a65052beaa9e99ce9cf13001ad23905c1551cf#egg=xblock-ooyala
+-e git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
+
+# flow control
+-e git+https://github.com/eduNEXT/flow-control-xblock.git@64d157a50823718c816175ea2ec3a876fa821911#egg=flow-control-xblock

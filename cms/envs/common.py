@@ -1030,6 +1030,15 @@ OPTIONAL_APPS = (
 
     # Organizations App (http://github.com/edx/edx-organizations)
     'organizations',
+
+    # Solution's drag and drop
+    'drag-and-drop-v2',
+
+    # edunext xblocks
+    'sodexo_game',
+    'ooyala-player',
+    'brightcove-video',
+    'flow-control',
 )
 
 
