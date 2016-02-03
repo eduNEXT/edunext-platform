@@ -22,6 +22,9 @@ from student.models import CourseEnrollment
 from student import auth
 
 
+# eduNEXT 19.11.2015
+from microsite_configuration import microsite
+
 log = logging.getLogger(__name__)
 
 
@@ -90,10 +93,15 @@ def get_lms_link_for_item(location, preview=False):
     if settings.LMS_BASE is None:
         return None
 
+    # eduNEXT 19.11.2015 Disable preview for now (not microsite aware), it will redirect to a normal course.
+    preview = False
     if preview:
         lms_base = settings.FEATURES.get('PREVIEW_LMS_BASE')
     else:
         lms_base = settings.LMS_BASE
+
+    # eduNEXT 19.11.2015 make the link microsite aware, based on the org of the course
+    lms_base = microsite.get_value_for_org(location.org, 'SITE_NAME', lms_base)
 
     return u"//{lms_base}/courses/{course_key}/jump_to/{location}".format(
         lms_base=lms_base,
