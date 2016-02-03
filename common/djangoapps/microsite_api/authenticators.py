@@ -1,6 +1,7 @@
 import json
 import time
 import traceback
+import logging
 
 from base64 import b64decode
 
@@ -11,6 +12,8 @@ from django.contrib.auth.models import User
 from rest_framework import authentication
 from rest_framework import exceptions
 from rest_framework.authentication import get_authorization_header
+
+log = logging.getLogger(__name__)
 
 
 def decode_token(data):
@@ -106,4 +109,5 @@ class MicrositeManagerAuthentication(authentication.BaseAuthentication):
         """
         # TODO: must check how easy would be to spoof this
         if not validate_host(request.META.get('REMOTE_ADDR'), settings.MICROSITE_API_ALLOWED_REMOTES):
+            log.warning(u"API caller's host not allowed {}".format(request.META.get('REMOTE_ADDR')))
             raise exceptions.AuthenticationFailed('Host not allowed')
