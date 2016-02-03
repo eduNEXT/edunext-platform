@@ -438,8 +438,12 @@ def render_message_to_string(subject_template, message_template, param_dict, lan
     Returns two strings that correspond to the rendered, translated email
     subject and message.
     """
-    with override_language(language):
+    # edunext | laq, added so that if language is None, the current language(that comes from the email sender) wont be overriden
+    if language is None:
         return get_subject_and_message(subject_template, message_template, param_dict)
+    else:
+        with override_language(language):
+            return get_subject_and_message(subject_template, message_template, param_dict)
 
 
 def get_subject_and_message(subject_template, message_template, param_dict):
