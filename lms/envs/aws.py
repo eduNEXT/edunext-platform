@@ -723,6 +723,7 @@ CREDIT_PROVIDER_SECRET_KEYS = AUTH_TOKENS.get("CREDIT_PROVIDER_SECRET_KEYS", {})
 
 ### Select an implementation for the microsite backend
 MICROSITE_BACKEND = ENV_TOKENS.get('MICROSITE_BACKEND', MICROSITE_BACKEND)
+MICROSITE_SECRETS = AUTH_TOKENS.get('MICROSITE_SECRETS', {})
 
 ##################### LTI Provider #####################
 if FEATURES.get('ENABLE_LTI_PROVIDER'):
