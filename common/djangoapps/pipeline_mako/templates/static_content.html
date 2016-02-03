@@ -9,6 +9,8 @@ from microsite_configuration import microsite
 
 <%def name='url(file, raw=False)'><%
 try:
+    if file.startswith("http"):
+        return file
     url = staticfiles_storage.url(file)
 except:
     url = file

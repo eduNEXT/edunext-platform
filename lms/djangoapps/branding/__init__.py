@@ -75,6 +75,8 @@ def get_logo_url():
     # let's use that
     image_url = microsite.get_value('logo_image_url')
     if image_url:
+        if image_url.startswith("http"):
+            return image_url
         return '{static_url}{image_url}'.format(
             static_url=settings.STATIC_URL,
             image_url=image_url
