@@ -6,8 +6,10 @@ import os.path
 import threading
 import edxmako
 import json
+import re
 
 from django.conf import settings
+from django.http import HttpResponseNotFound
 from microsite_configuration.backends.filebased import SettingsFileMicrositeBackend
 from microsite_configuration.models import Microsite
 
@@ -47,13 +49,18 @@ class DatabaseMicrositeBackend(SettingsFileMicrositeBackend):
 
         # if no match on subdomain then see if there is a 'default' microsite
         # defined in the db. If so, then use it
-        try:
-            microsite = Microsite.objects.get(key='default')
-            values = json.loads(microsite.values)
-            self._set_microsite_config_from_obj(subdomain, domain, values)
-            return
-        except Microsite.DoesNotExist:
-            return
+        if not settings.FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] or bool(re.search("^(?:[0-9]{1,3}\.){3}[0-9]{1,3}(:[0-9]{2,5})?$", domain)):
+            try:
+                microsite = Microsite.objects.get(key='default')
+                values = json.loads(microsite.values)
+                self._set_microsite_config_from_obj(subdomain, domain, values)
+                return
+            except Microsite.DoesNotExist:
+                return
+        else:
+            return HttpResponseNotFound(edxmako.shortcuts.render_to_string('microsites/not_found.html', {
+                'domain': domain,
+            }))
 
     def get_template_path(self, relative_path, **kwargs):
         """
