@@ -137,6 +137,8 @@ def get_lms_link_for_about_page(course_key):
 
     elif settings.LMS_BASE is not None:
         about_base = settings.LMS_BASE
+        # eduNEXT 23.12.2015 make the link microsite aware, based on the org of the course
+        about_base = microsite.get_value_for_org(course_key.org, 'SITE_NAME', about_base)
     else:
         return None
 
