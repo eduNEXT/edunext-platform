@@ -172,6 +172,7 @@ class SettingsFileMicrositeBackend(BaseMicrositeBackend):
             edxmako.paths.add_lookup('main', microsites_root)
 
             settings.STATICFILES_DIRS.insert(0, microsites_root)
+            settings.LOCALE_PATHS = (microsites_root / 'conf/locale',) + settings.LOCALE_PATHS
 
     def get_value_for_org(self, org, val_name, default):
         """

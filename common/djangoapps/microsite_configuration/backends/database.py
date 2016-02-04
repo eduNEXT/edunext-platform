@@ -106,6 +106,7 @@ class DatabaseMicrositeBackend(SettingsFileMicrositeBackend):
             settings.DEFAULT_TEMPLATE_ENGINE['DIRS'].append(microsites_root)
             edxmako.paths.add_lookup('main', microsites_root)
             settings.STATICFILES_DIRS.insert(0, microsites_root)
+            settings.LOCALE_PATHS = (microsites_root / 'conf/locale',) + settings.LOCALE_PATHS
 
             log.info('Loading microsite path at %s', microsites_root)
         else:
