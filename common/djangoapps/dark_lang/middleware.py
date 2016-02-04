@@ -10,7 +10,7 @@ in the user's session.
 This middleware must be placed before the LocaleMiddleware, but after
 the SessionMiddleware.
 """
-from django.conf import settings
+from openedx.conf import settings
 
 from dark_lang import DARK_LANGUAGE_KEY
 from dark_lang.models import DarkLangConfig
@@ -121,7 +121,8 @@ class DarkLangMiddleware(object):
             fuzzy_code = self._fuzzy_match(lang.lower())
             if fuzzy_code:
                 new_accept.append(self._format_accept_value(fuzzy_code, priority))
-
+        if not new_accept:
+            new_accept.append(settings.LANGUAGE_CODE)
         new_accept = ", ".join(new_accept)
 
         request.META['HTTP_ACCEPT_LANGUAGE'] = new_accept

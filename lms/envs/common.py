@@ -1128,7 +1128,6 @@ MIDDLEWARE_CLASSES = (
 
     # Make One language the default one
     # 'edraak_i18n.middleware.ForceLangMiddleware', # should no longer be used because we want languages to be different per microsite and use browser settings
-    'edraak_i18n.middleware.SessionBasedLocaleMiddleware',
 
     'geoinfo.middleware.CountryMiddleware',
     'embargo.middleware.EmbargoMiddleware',
@@ -1140,6 +1139,7 @@ MIDDLEWARE_CLASSES = (
     # Must be after LangPrefMiddleware, so ?preview-lang query params can override
     # user's language preference. ?clear-lang resets to user's language preference.
     'dark_lang.middleware.DarkLangMiddleware',
+    'edraak_i18n.middleware.SessionBasedLocaleMiddleware',
 
     # Detects user-requested locale from 'accept-language' header in http request.
     # Must be after DarkLangMiddleware.
