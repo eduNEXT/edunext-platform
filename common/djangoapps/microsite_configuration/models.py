@@ -9,7 +9,10 @@ that would have been used in the settings.
 import json
 
 from django.db import models
+from django.db.models.base import ObjectDoesNotExist
 from django.core.exceptions import ValidationError
+
+from simple_history.models import HistoricalRecords
 
 
 def validate_json(values):
@@ -39,3 +42,76 @@ class Microsite(models.Model):
 
     def __unicode__(self):
         return self.key
+
+
+class MicrositeOrganizationMapping(models.Model):
+    """
+    Mapping of Organization to which Microsite it belongs
+    """
+
+    organization = models.CharField(max_length=63, db_index=True, unique=True)
+    microsite = models.ForeignKey(Microsite, db_index=True)
+
+    # for archiving
+    history = HistoricalRecords()
+
+    def __unicode__(self):
+        """String conversion"""
+        return u'{microsite_key}: {organization}'.format(
+            microsite_key=self.microsite.key,
+            organization=self.organization
+        )
+
+    @classmethod
+    def get_organizations_for_microsite_by_pk(cls, microsite_pk):
+        """
+        Returns a list of organizations associated with the microsite key, returned as a set
+        """
+        return cls.objects.filter(microsite_id=microsite_pk).values_list('organization', flat=True)
+
+    @classmethod
+    def get_microsite_for_organization(cls, org):
+        """
+        Returns the microsite object for a given organization based on the table mapping, None if
+        no mapping exists
+        """
+
+        try:
+            item = cls.objects.select_related('microsite').get(organization=org)
+            return item.microsite
+        except ObjectDoesNotExist:
+            return None
+
+
+class MicrositeTemplate(models.Model):
+    """
+    A HTML template that a microsite can use
+    """
+
+    microsite = models.ForeignKey(Microsite, db_index=True)
+    template_uri = models.CharField(max_length=255, db_index=True)
+    template = models.TextField()
+
+    # for archiving
+    history = HistoricalRecords()
+
+    def __unicode__(self):
+        """String conversion"""
+        return u'{microsite_key}: {template_uri}'.format(
+            microsite_key=self.microsite.key,
+            template_uri=self.template_uri
+        )
+
+    class Meta(object):
+        """ Meta class for this Django model """
+        unique_together = (('microsite', 'template_uri'),)
+
+    @classmethod
+    def get_template_for_microsite(cls, domain, template_uri):
+        """
+        Returns the template object for the microsite, None if not found
+        """
+        try:
+            return cls.objects.get(microsite__site__domain=domain, template_uri=template_uri)
+        except ObjectDoesNotExist:
+            return None

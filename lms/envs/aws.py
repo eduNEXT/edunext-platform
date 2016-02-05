@@ -719,11 +719,21 @@ EDXNOTES_INTERNAL_API = ENV_TOKENS.get('EDXNOTES_INTERNAL_API', EDXNOTES_INTERNA
 
 CREDIT_PROVIDER_SECRET_KEYS = AUTH_TOKENS.get("CREDIT_PROVIDER_SECRET_KEYS", {})
 
-################################ Settings for Microsites ################################
+################# MICROSITE ####################
 
 ### Select an implementation for the microsite backend
-MICROSITE_BACKEND = ENV_TOKENS.get('MICROSITE_BACKEND', MICROSITE_BACKEND)
 MICROSITE_SECRETS = AUTH_TOKENS.get('MICROSITE_SECRETS', {})
+MICROSITE_CONFIGURATION = ENV_TOKENS.get('MICROSITE_CONFIGURATION', {})
+MICROSITE_ROOT_DIR = path(ENV_TOKENS.get('MICROSITE_ROOT_DIR', ''))
+
+# this setting specify which backend to be used when pulling microsite specific configuration
+MICROSITE_BACKEND = ENV_TOKENS.get("MICROSITE_BACKEND", MICROSITE_BACKEND)
+# this setting specify which backend to be used when loading microsite specific templates
+MICROSITE_TEMPLATE_BACKEND = ENV_TOKENS.get("MICROSITE_TEMPLATE_BACKEND", MICROSITE_TEMPLATE_BACKEND)
+# TTL for microsite database template cache
+MICROSITE_DATABASE_TEMPLATE_CACHE_TTL = ENV_TOKENS.get(
+    "MICROSITE_DATABASE_TEMPLATE_CACHE_TTL", MICROSITE_DATABASE_TEMPLATE_CACHE_TTL
+)
 
 ##################### LTI Provider #####################
 if FEATURES.get('ENABLE_LTI_PROVIDER'):
