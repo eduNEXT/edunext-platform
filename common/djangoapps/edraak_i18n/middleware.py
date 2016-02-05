@@ -1,6 +1,7 @@
 from django.utils.cache import patch_vary_headers
 from django.utils import translation
 from django.conf import settings
+from microsite_aware_functions.user_preference import ma_lang_user_preference
 
 
 class ForceLangMiddleware(object):
@@ -39,6 +40,7 @@ class SessionBasedLocaleMiddleware(object):
             request.session['language_flag'] = True
         else:
             language = translation.get_language_from_request(request)
+            language = ma_lang_user_preference(language)
 
         for lang in settings.LANGUAGES:
             if lang[0] == language:

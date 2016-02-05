@@ -17,6 +17,7 @@ from dark_lang.models import DarkLangConfig
 from openedx.core.djangoapps.user_api.preferences.api import (
     delete_user_preference, get_user_preference, set_user_preference
 )
+from microsite_aware_functions.user_preference import ma_lang_user_preference
 from lang_pref import LANGUAGE_KEY
 
 # TODO django_locale.trans_real is no longer present, so check possible issues
@@ -87,6 +88,7 @@ class DarkLangMiddleware(object):
             return
 
         self._clean_accept_headers(request)
+        self._clean_sessions(request)
         self._activate_preview_language(request)
 
     def _fuzzy_match(self, lang_code):
@@ -106,6 +108,10 @@ class DarkLangMiddleware(object):
         Formats lang and priority into a valid accept header fragment.
         """
         return "{};q={}".format(lang, priority)
+
+    def _clean_sessions(self, request):
+        if LANGUAGE_SESSION_KEY in request.session:
+            request.session[LANGUAGE_SESSION_KEY] = ma_lang_user_preference(request.session[LANGUAGE_SESSION_KEY])
 
     def _clean_accept_headers(self, request):
         """
@@ -144,6 +150,7 @@ class DarkLangMiddleware(object):
                 delete_user_preference(request.user, DARK_LANGUAGE_KEY)
                 # Get & set user's preferred language
                 user_pref = get_user_preference(request.user, LANGUAGE_KEY)
+                user_pref = ma_lang_user_preference(user_pref)
                 if user_pref:
                     request.session[LANGUAGE_SESSION_KEY] = user_pref
             return
@@ -154,6 +161,7 @@ class DarkLangMiddleware(object):
         if not preview_lang and auth_user:
             # Get the request user's dark lang preference
             preview_lang = get_user_preference(request.user, DARK_LANGUAGE_KEY)
+            preview_lang = ma_lang_user_preference(preview_lang)
 
         # User doesn't have a dark lang preference, so just return
         if not preview_lang:

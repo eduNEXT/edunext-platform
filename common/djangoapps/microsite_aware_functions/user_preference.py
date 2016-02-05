@@ -3,6 +3,7 @@ Microsite aware user preferences
 """
 
 from lang_pref.api import released_languages
+from openedx.conf import settings
 
 
 def ma_lang_user_preference(user_pref):
@@ -13,6 +14,6 @@ def ma_lang_user_preference(user_pref):
     released_languages_list = released_languages()
     released_languages_code_list = {langObj.code for langObj in released_languages_list}
 
-    if user_pref not in released_languages_code_list:
-        user_pref = None
+    if user_pref and user_pref not in released_languages_code_list:
+        user_pref = settings.LANGUAGE_CODE
     return user_pref
