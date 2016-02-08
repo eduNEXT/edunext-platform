@@ -5,21 +5,15 @@ The object is stored as a json representation of the python dict
 that would have been used in the settings.
 
 """
-
+import collections
 import json
 
 from django.db import models
 from django.db.models.base import ObjectDoesNotExist
 from django.core.exceptions import ValidationError
 
+from jsonfield.fields import JSONField
 from simple_history.models import HistoricalRecords
-
-
-def validate_json(values):
-    try:
-        json.loads(values)
-    except ValueError:
-        raise ValidationError("The values field must be a valid json.")
 
 
 class Microsite(models.Model):
@@ -38,10 +32,36 @@ class Microsite(models.Model):
     """
     key = models.CharField(max_length=63, db_index=True)
     subdomain = models.CharField(max_length=127, db_index=True)
-    values = models.TextField(null=False, blank=True, validators=[validate_json])
+    values = JSONField(null=False, blank=True, load_kwargs={'object_pairs_hook': collections.OrderedDict})
 
     def __unicode__(self):
         return self.key
+
+    def get_organizations(self):
+        """
+        Helper method to return a list of organizations associated with our particular Microsite
+        """
+        # has to return the same type as:
+        # MicrositeOrganizationMapping.get_organizations_for_microsite_by_pk(self.id)
+        org_filter = self.values.get('course_org_filter')
+
+        if isinstance(org_filter, basestring):
+            org_filter = [org_filter]
+
+        return org_filter
+
+    @classmethod
+    def get_microsite_for_domain(cls, domain):
+        """
+        Returns the microsite associated with this domain. Note that we always convert to lowercase, or
+        None if no match
+        """
+
+        # remove any port number from the hostname
+        domain = domain.split(':')[0]
+        microsites = cls.objects.filter(subdomain=domain)
+
+        return microsites[0] if microsites else None
 
 
 class MicrositeOrganizationMapping(models.Model):
@@ -112,6 +132,6 @@ class MicrositeTemplate(models.Model):
         Returns the template object for the microsite, None if not found
         """
         try:
-            return cls.objects.get(microsite__site__domain=domain, template_uri=template_uri)
+            return cls.objects.get(microsite__subdomain=domain, template_uri=template_uri)
         except ObjectDoesNotExist:
             return None
