@@ -33,10 +33,12 @@ class SessionBasedLocaleMiddleware(object):
                 request.session['language_flag'] = False
             else:
                 language = request.GET['lang']
+            language = ma_lang_user_preference(language)
             request.session['language'] = language
         elif 'django_language' in request.session and 'language' in request.POST:
             language = request.POST['language']
-            request.session['language_reference'] = request.POST['language']
+            language = ma_lang_user_preference(language)
+            request.session['language_reference'] = language
             request.session['language_flag'] = True
         else:
             language = translation.get_language_from_request(request)
