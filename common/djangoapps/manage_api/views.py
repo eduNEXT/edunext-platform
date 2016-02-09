@@ -6,7 +6,7 @@ from rest_framework.renderers import JSONRenderer
 from itertools import chain
 
 import logging
-import mail
+from django.core import mail
 
 from openedx.core.djangoapps.user_api.accounts.api import check_account_exists
 from student.views import _do_create_account

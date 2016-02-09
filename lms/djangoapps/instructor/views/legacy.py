@@ -25,7 +25,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.cache import cache_control
 from django.core.urlresolvers import reverse
-from mail import send_mail
+from django.core.mail import send_mail
 from django.utils import timezone
 
 import xmodule.graders as xmgraders
