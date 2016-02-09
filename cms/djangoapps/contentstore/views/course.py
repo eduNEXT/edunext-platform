@@ -693,7 +693,7 @@ def _create_or_rerun_course(request):
         org = request.json.get('org')
         rerun_permission = OrgRerunCreatorRole(org).has_user(request.user) or OrgCourseCreatorRole(org).has_user(request.user)
 
-        if not auth.has_access(request.user, CourseCreatorRole()) and not rerun_permission:
+        if not auth.user_has_role(request.user, CourseCreatorRole()) and not rerun_permission:
             raise PermissionDenied()
 
         course = request.json.get('number', request.json.get('course'))
