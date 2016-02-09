@@ -63,7 +63,7 @@ class PasswordResetFormNoActive(PasswordResetForm):
         Generates a one-use only link for resetting password and sends to the
         user.
         """
-        from mail import send_mail
+        from django.core.mail import send_mail
         for user in self.users_cache:
             if not domain_override:
                 site_name = domain = microsite.get_value(
