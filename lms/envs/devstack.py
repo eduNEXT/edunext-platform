@@ -208,18 +208,19 @@ MICROSITE_API_ALLOWED_REMOTES = [
 MICROSITE_API_SIGNING_KEY = open('/var/tmp/keys/microsite_api_rsa.pub', "r").read()
 MICROSITE_API_MANAGER = 'staff'
 
+
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'microsite_configuration.backends.database.EdunextCompatibleDatabaseMicrositeBackend'
+MICROSITE_TEMPLATE_BACKEND = 'microsite_configuration.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'
+
 # Skip enrollment start date filtering
 SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = True
-
 
 ########################## Shopping cart ##########################
 FEATURES['ENABLE_SHOPPING_CART'] = True
 FEATURES['STORE_BILLING_INFO'] = True
 FEATURES['ENABLE_PAID_COURSE_REGISTRATION'] = True
 FEATURES['ENABLE_COSMETIC_DISPLAY_PRICE'] = True
-
-### Select an implementation for the microsite backend
-MICROSITE_BACKEND = 'microsite_configuration.backends.database.DatabaseMicrositeBackend'
 
 ########################## Third Party Auth #######################
 
