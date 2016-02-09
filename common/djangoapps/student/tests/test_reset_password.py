@@ -1,4 +1,4 @@
-﻿"""
+"""
 Test the various password reset flows
 """
 import json
