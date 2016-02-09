@@ -26,6 +26,9 @@ from django.utils.translation import LANGUAGE_SESSION_KEY
 from microsite_configuration import microsite
 
 
+preview_lang_cookie = 'preview-lang'
+
+
 def dark_parse_accept_lang_header(accept):
     '''
     The use of 'zh-cn' for 'Simplified Chinese' and 'zh-tw' for 'Traditional Chinese'
@@ -86,7 +89,6 @@ class DarkLangMiddleware(object):
         """
         if not DarkLangConfig.current().enabled and not microsite.get_value('released_languages'):
             return
-
         self._clean_accept_headers(request)
         self._clean_sessions(request)
         self._activate_preview_language(request)
@@ -110,7 +112,7 @@ class DarkLangMiddleware(object):
         return "{};q={}".format(lang, priority)
 
     def _clean_sessions(self, request):
-        if LANGUAGE_SESSION_KEY in request.session:
+        if LANGUAGE_SESSION_KEY in request.session and not request.COOKIES.get(preview_lang_cookie):
             request.session[LANGUAGE_SESSION_KEY] = ma_lang_user_preference(request.session[LANGUAGE_SESSION_KEY])
 
     def _clean_accept_headers(self, request):
@@ -144,12 +146,15 @@ class DarkLangMiddleware(object):
             # delete the session language key (if one is set)
             if LANGUAGE_SESSION_KEY in request.session:
                 del request.session[LANGUAGE_SESSION_KEY]
+            if preview_lang_cookie in request.session:
+                del request.session[preview_lang_cookie]
 
             if auth_user:
                 # Reset user's dark lang preference to null
                 delete_user_preference(request.user, DARK_LANGUAGE_KEY)
                 # Get & set user's preferred language
                 user_pref = get_user_preference(request.user, LANGUAGE_KEY)
+                # Clean user pref to microsite aware
                 user_pref = ma_lang_user_preference(user_pref)
                 if user_pref:
                     request.session[LANGUAGE_SESSION_KEY] = user_pref
@@ -161,7 +166,8 @@ class DarkLangMiddleware(object):
         if not preview_lang and auth_user:
             # Get the request user's dark lang preference
             preview_lang = get_user_preference(request.user, DARK_LANGUAGE_KEY)
-            preview_lang = ma_lang_user_preference(preview_lang)
+            if not request.COOKIES.get(preview_lang_cookie):
+                preview_lang = ma_lang_user_preference(preview_lang)
 
         # User doesn't have a dark lang preference, so just return
         if not preview_lang:
@@ -169,8 +175,19 @@ class DarkLangMiddleware(object):
 
         # Set the session key to the requested preview lang
         request.session[LANGUAGE_SESSION_KEY] = preview_lang
+        request.session[preview_lang_cookie] = 'true'
 
         # Make sure that we set the requested preview lang as the dark lang preference for the
         # user, so that the lang_pref middleware doesn't clobber away the dark lang preview.
         if auth_user:
             set_user_preference(request.user, DARK_LANGUAGE_KEY, preview_lang)
+
+    def process_response(self, request, response):
+        '''
+            Add or remove the preview_lang cookie to be syncronized with the session preview_lang
+        '''
+        if request.session.get(preview_lang_cookie, False):
+            response.set_cookie(preview_lang_cookie, 'true')
+        else:
+            response.set_cookie(preview_lang_cookie, 'false')
+        return response
