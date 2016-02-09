@@ -4,7 +4,7 @@ from dark_lang import DARK_LANGUAGE_KEY
 from django.utils.translation.trans_real import LANGUAGE_SESSION_KEY
 from openedx.core.djangoapps.user_api.preferences.api import set_user_preference
 from django import http
-from microsite_aware_functions.user_preference import ma_lang_user_preference
+from microsite_aware_functions.language import ma_language
 from django.core.exceptions import PermissionDenied
 
 
@@ -12,7 +12,7 @@ from django.core.exceptions import PermissionDenied
 def set_language(request):
     auth_user = request.user.is_authenticated()
     lang_code = request.POST.get('language', None)
-    if lang_code != ma_lang_user_preference(lang_code):
+    if lang_code != ma_language(lang_code):
         # Trying to change to a non released language, ignore request.
         raise PermissionDenied
     request.session[LANGUAGE_SESSION_KEY] = lang_code
