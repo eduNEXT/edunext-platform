@@ -186,6 +186,9 @@ class DarkLangMiddleware(object):
         '''
             Add or remove the preview_lang cookie to be syncronized with the session preview_lang
         '''
+        if not hasattr(request, 'session'):
+            return response
+
         if request.session.get(preview_lang_cookie, False):
             response.set_cookie(preview_lang_cookie, 'true')
         else:
