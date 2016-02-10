@@ -36,6 +36,9 @@ def run():
     # before the django.setup().
     microsite.enable_microsites_pre_startup(log)
 
+    if settings.FEATURES.get('USE_CUSTOM_THEME', False):
+        enable_theme_pre_startup()
+
     django.setup()
 
     autostartup()
@@ -87,6 +90,22 @@ def add_mimetypes():
     mimetypes.add_type('application/font-woff', '.woff')
 
 
+def enable_theme_pre_startup():
+    # Workaround for setting THEME_NAME to an empty
+    # string which is the default due to this ansible
+    # bug: https://github.com/ansible/ansible/issues/4812
+    if getattr(settings, "THEME_NAME", "") == "":
+        settings.THEME_NAME = None
+        return
+
+    # Calculate the location of the theme's files
+    theme_root = settings.ENV_ROOT / "themes" / settings.THEME_NAME
+
+    # Include theme locale path for django translations lookup
+    settings.DEFAULT_TEMPLATE_ENGINE['DIRS'].insert(0, theme_root / 'templates')
+    settings.LOCALE_PATHS = (theme_root / 'conf/locale',) + settings.LOCALE_PATHS
+
+
 def enable_stanford_theme():
     """
     Enable the settings for a custom theme, whose files should be stored
@@ -108,7 +127,6 @@ def enable_stanford_theme():
     theme_root = settings.ENV_ROOT / "themes" / settings.THEME_NAME
 
     # Include the theme's templates in the template search paths
-    settings.DEFAULT_TEMPLATE_ENGINE['DIRS'].insert(0, theme_root / 'templates')
     edxmako.paths.add_lookup('main', theme_root / 'templates', prepend=True)
 
     # Namespace the theme's static files to 'themes/<theme_name>' to
@@ -116,9 +134,6 @@ def enable_stanford_theme():
     settings.STATICFILES_DIRS.append(
         (u'themes/{}'.format(settings.THEME_NAME), theme_root / 'static')
     )
-
-    # Include theme locale path for django translations lookup
-    settings.LOCALE_PATHS = (theme_root / 'conf/locale',) + settings.LOCALE_PATHS
 
 
 def enable_microsites():
