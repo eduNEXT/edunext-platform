@@ -6,11 +6,9 @@ that would have been used in the settings.
 
 """
 import collections
-import json
 
 from django.db import models
 from django.db.models.base import ObjectDoesNotExist
-from django.core.exceptions import ValidationError
 
 from jsonfield.fields import JSONField
 from simple_history.models import HistoricalRecords
