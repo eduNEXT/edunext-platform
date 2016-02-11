@@ -233,7 +233,7 @@ class OAuth2ProviderConfig(ProviderConfig):
             if name is "KEY":
                 return current.get('KEY')
             if name is "SECRET":
-                site_key = microsite.get_value('microsite_name')
+                site_key = microsite.get_value('microsite_config_key')
                 secrets = settings.MICROSITE_SECRETS.get(site_key, {}).get('SOCIAL_AUTH_OAUTH_SECRETS', {})
                 return current.get('SECRET', secrets.get(self.backend_name))
 
