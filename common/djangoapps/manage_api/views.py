@@ -57,7 +57,7 @@ class UserManagement(APIView):
         }
 
         # Go ahead and create the new user
-        with transaction.commit_on_success():
+        with transaction.atomic():
             form = AccountCreationForm(
                 data=data,
                 tos_required=False,
@@ -79,7 +79,10 @@ class UserManagement(APIView):
                 message = render_to_string('emails/activation_email.txt', context)
                 message_html = None
                 if (settings.FEATURES.get('ENABLE_MULTIPART_EMAIL')):
-                    message_html = render_to_string('emails/html/activation_email.html', context)
+                    try:
+                        message_html = render_to_string('emails/html/activation_email.html', context)
+                    except Exception:
+                        message_html = None
                 from_address = microsite.get_value(
                     'email_from_address',
                     settings.DEFAULT_FROM_EMAIL
