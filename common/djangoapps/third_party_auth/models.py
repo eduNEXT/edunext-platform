@@ -6,7 +6,7 @@ Models used to implement SAML SSO support in third_party_auth
 from __future__ import absolute_import
 
 from config_models.models import ConfigurationModel, cache
-from django.conf import settings
+from openedx.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
