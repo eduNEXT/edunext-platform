@@ -13,7 +13,7 @@ locales:
     # - ca@valencia  # Catalan (Valencia)
     # - cs  # Czech
     # - cy  # Welsh
-    # - da  # Danish
+    - da  # Danish
     # - de_DE  # German (Germany)
     # - el  # Greek
     # - en_GB  # English (United Kingdom)
