@@ -10,7 +10,7 @@ import urlparse
 import uuid
 import HTMLParser
 
-from django.conf import settings
+from openedx.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.staticfiles import finders
 from django.core.cache import cache
