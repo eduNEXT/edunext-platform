@@ -134,9 +134,6 @@ def get_template_path(relative_path, **kwargs):
     """
     Returns a path (string) to a template
     """
-    if not is_request_in_microsite():
-        return relative_path
-
     return TEMPLATES_BACKEND.get_template_path(relative_path, **kwargs)
 
 
