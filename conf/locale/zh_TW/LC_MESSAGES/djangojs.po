@@ -2981,7 +2981,7 @@ msgid ""
 "Error starting a task to rescore problem '<%= problem_id %>' for student "
 "'<%= student_id %>'. Make sure that the the problem and student identifiers "
 "are complete and correct."
-msgstr "發生錯誤。請確認問題和學生 ID 的拼寫是否正確。"
+msgstr "發生錯誤。請確認問題和學生 ID <%= problem_id %>。"
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3062,7 +3062,7 @@ msgid ""
 "Error starting a task to reset attempts for all students on problem '<%= "
 "problem_id %>'. Make sure that the problem identifier is complete and "
 "correct."
-msgstr "發生錯誤。請確認問題 ID 是否正確。"
+msgstr "發生錯誤。請確認問題 ID <%= problem_id %>。"
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Rescore problem '<%= problem_id %>' for all students?"
@@ -3079,7 +3079,7 @@ msgstr "開始rescore學生問題任務問題  '<%= problem_id %>' 。點擊“�
 msgid ""
 "Error starting a task to rescore problem '<%= problem_id %>'. Make sure that"
 " the problem identifier is complete and correct."
-msgstr "發生錯誤。請確認問題 ID 是否正確。"
+msgstr "發生錯誤。請確認問題 ID <%= problem_id %>。"
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Error listing task history for this student and problem."
@@ -4836,7 +4836,7 @@ msgstr "釋出日期："
 
 #: cms/static/js/views/overview.js
 msgid "{month}/{day}/{year} at {hour}:{minute} UTC"
-msgstr "世界標準時間 {月}/{日}/{年} 的 {時}:{分}"
+msgstr "世界標準時間 {month}/{day}/{year} 的 {hour}:{minute}"
 
 #: cms/static/js/views/overview.js
 msgid "Edit section release date"

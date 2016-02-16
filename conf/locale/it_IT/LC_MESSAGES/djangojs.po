@@ -2352,7 +2352,7 @@ msgstr[1] "Seleziona il box per rimuover %(totalFlags)s flags."
 #: common/static/js/vendor/ova/flagging-annotator.js
 msgid "Check the box to remove %(count)s flag."
 msgid_plural "Check the box to remove %(count)s flags."
-msgstr[0] "Seleziona il box per rimuover %(counts)s flag."
+msgstr[0] "Seleziona il box per rimuover %(count)s flag."
 msgstr[1] "Seleziona il box per rimuovere %(count)s flag."
 
 #: common/static/js/vendor/ova/flagging-annotator.js
@@ -2373,8 +2373,8 @@ msgstr "Segnala annotazione come innappropriata o offensiva."
 #: common/static/js/vendor/ova/flagging-annotator.js
 msgid "This annotation has %(count)s flag."
 msgid_plural "This annotation has %(count)s flags."
-msgstr[0] "Questa annotazione presenta %(counts)s flag."
-msgstr[1] "Questa annotazione presenta %(counts)s flag."
+msgstr[0] "Questa annotazione presenta %(count)s flag."
+msgstr[1] "Questa annotazione presenta %(count)s flag."
 
 #: lms/djangoapps/support/static/support/js/views/certificates.js
 msgid "An unexpected error occurred.  Please try again."
@@ -3183,7 +3183,7 @@ msgid ""
 "correct."
 msgstr ""
 "Errore nell'avvio dell'attività di ricalcolo del punteggio della prova di "
-"ammissione per lo studente 'student_id {}'. Assicurarsi che l'esame di "
+"ammissione per lo studente {student_id}. Assicurarsi che l'esame di "
 "ammissione comprenda degli esercizi e che l'identificativo dello studente "
 "sia corretto."
 
@@ -4158,7 +4158,7 @@ msgstr "Immagine del profilo"
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
 msgid "Profile image for {username}"
-msgstr "Immagine di profilo di {nome utente}"
+msgstr "Immagine di profilo di {username}"
 
 #: lms/static/js/verify_student/views/image_input_view.js
 msgid "Image Upload Error"
@@ -5279,8 +5279,8 @@ msgid ""
 "Showing %(current_item_range)s out of %(total_items_count)s, sorted by "
 "%(sort_name)s descending"
 msgstr ""
-"Elenco %(current_item_range) su %(total_items_count), ordinati per "
-"%(sort_name) decrescente"
+"Elenco %(current_item_range)s su %(total_items_count)s, ordinati per "
+"%(sort_name)s decrescente"
 
 #. Translators: turns into "25 total" to be used in other sentences, e.g.
 #. "Showing 0-9 out of 25 total".

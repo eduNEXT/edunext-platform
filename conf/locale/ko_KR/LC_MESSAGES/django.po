@@ -2144,10 +2144,6 @@ msgid ""
 "must be unique. In \"id\" values, the only special characters that are "
 "supported are underscore, hyphen, and period."
 msgstr ""
-"게시판의 범주는 다음의 형식으로 지정합니다. \"CategoryName\": { \"id\": \"i4x-InstitutionName-"
-"CourseNumber-course-CourseRun\"} 예를 들어 하나의 토론 범주는 \"Lydian Mode\": { \"id\" "
-": \"i4x-UniversityX-MUS101-course-2015_T1\"}입니다. 각 범주의 \"id\"값은 고유해야 합니다. "
-"특수문자는 밑줄 및 하이픈, 마침표 만 \"id\" 값으로 사용할 수 있습니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Discussion Sorting Alphabetical"

@@ -6433,7 +6433,7 @@ msgid ""
 " charged. Please try a different form of payment. Contact us with payment-"
 "related questions at {email}."
 msgstr ""
-"申し訳ありません。決済システムが支払いを受け付けられませんでした。応答：{decision_text}、理由：{decision_text}。課金は実施されていません。別の支払方法をお試しください。支払いに関する質問は{email}へお願いします。"
+"申し訳ありません。決済システムが支払いを受け付けられませんでした。応答：{decision_text}、理由：{reason_text}。課金は実施されていません。別の支払方法をお試しください。支払いに関する質問は{email}へお願いします。"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -7213,7 +7213,7 @@ msgstr "コード'{code}'の値引きはありません。"
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "This enrollment code ({enrollment_code}) is no longer valid."
-msgstr "この受講登録コード ({code}) は既に有効ではありません。"
+msgstr "この受講登録コード ({enrollment_code}) は既に有効ではありません。"
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "This enrollment code ({enrollment_code}) is not valid."
@@ -8664,7 +8664,7 @@ msgid ""
 "{faq_url}"
 msgstr ""
 "ファイル{filename}は最大サイズ{size_mb}MBを超えています。 "
-"この説明に従ってファイルを別の場所にアップロードしたうえでリンクしてください。 {maxFileSizeRedirectUrl}"
+"この説明に従ってファイルを別の場所にアップロードしたうえでリンクしてください。 {faq_url}"
 
 #: cms/djangoapps/contentstore/views/assets.py
 msgid "Upload completed"
@@ -8680,7 +8680,7 @@ msgstr "修了証辞書 {0} のキーバリュー '{1}' がありません"
 
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "PermissionDenied: Failed in authenticating {user}"
-msgstr "承認が拒否されました。{username} の認証に失敗しました"
+msgstr "承認が拒否されました。{user} の認証に失敗しました"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
@@ -9757,7 +9757,7 @@ msgstr "メールアドレスもしくはパスワードが間違っています
 
 #: lms/templates/login.html
 msgid "An error occurred when signing you in to {platform_name}."
-msgstr " {platformName}  へのサインイン処理中にエラーが起きました。"
+msgstr " {platform_name}  へのサインイン処理中にエラーが起きました。"
 
 #: lms/templates/login.html
 msgid ""

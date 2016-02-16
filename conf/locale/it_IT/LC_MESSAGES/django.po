@@ -446,11 +446,11 @@ msgstr "il paese a cui questa norma si applica"
 
 #: common/djangoapps/embargo/models.py
 msgid "Whitelist {country} for {course}"
-msgstr "lista bianca {paese} per {corso}"
+msgstr "lista bianca {country} per {course}"
 
 #: common/djangoapps/embargo/models.py
 msgid "Blacklist {country} for {course}"
-msgstr "Lista di proscrizione {paese} per{corso}"
+msgstr "Lista di proscrizione {country} per{course}"
 
 #: common/djangoapps/external_auth/views.py
 msgid ""

@@ -4165,13 +4165,14 @@ msgid ""
 "This is a valid {platform_name} certificate for {user_name}, who "
 "participated in {partner_short_name} {course_number}"
 msgstr ""
-"此為有效的 {platform_name} 證書給{user_name},並參與了{partner_name} {course_number}"
+"此為有效的 {platform_name} 證書給{user_name},並參與了{partner_short_name} "
+"{course_number}"
 
 #. Translators:  This text is bound to the HTML 'title' element of the page
 #. and appears in the browser title bar
 #: lms/djangoapps/certificates/views/webview.py
 msgid "{partner_short_name} {course_number} Certificate | {platform_name}"
-msgstr " {partner_name} {course_number} 證書 | {platform_name}"
+msgstr " {partner_short_name} {course_number} 證書 | {platform_name}"
 
 #. Translators:  This text fragment appears after the student's name
 #. (displayed in a large font) on the certificate
@@ -4393,7 +4394,7 @@ msgstr "問題"
 
 #: lms/djangoapps/commerce/api/v1/serializers.py
 msgid "{course_id} is not a valid course key."
-msgstr "{course_key} 不是有效的課程密鑰。"
+msgstr "{course_id} 不是有效的課程密鑰。"
 
 #: lms/djangoapps/commerce/api/v1/serializers.py
 msgid "Course {course_id} does not exist."
@@ -10804,7 +10805,7 @@ msgid ""
 " for {platform_name} will not be enrolled, but will be allowed to enroll "
 "once they make an account."
 msgstr ""
-"如果 <em> 沒有勾選 </em >該選項，未在{platform_name}平台註冊用戶不能選課。當然，一旦用戶註冊後，他/她隨時可以選課。"
+"如果 <em> 沒有勾選 </em>該選項，未在{platform_name}平台註冊用戶不能選課。當然，一旦用戶註冊後，他/她隨時可以選課。"
 
 #: lms/templates/ccx/enrollment.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -12751,7 +12752,7 @@ msgstr "如果您欲參與課程，請用此網址{course_url}並登入。"
 #: lms/templates/emails/html/enroll_email_allowedmessage.html
 msgid ""
 "To access the course visit {course_about_url} and register for the course."
-msgstr "如果您欲參與課程，請用此網址{course_url}到課程網頁註冊。"
+msgstr "如果您欲參與課程，請用此網址{course_about_url}到課程網頁註冊。"
 
 #: lms/templates/emails/enroll_email_allowedmessage.txt
 #: lms/templates/emails/html/enroll_email_allowedmessage.html
@@ -16279,8 +16280,8 @@ msgid ""
 "the {link_start}Advanced Settings page{link_end}, locate the \"Advanced "
 "Module List\" setting, and then delete the following modules from the list."
 msgstr ""
-"為了避免發生錯誤，{PLATFORM_NAME}強烈建議您從進階設置中刪除不支持的功能。為此在進階設定頁面 {link_start} 進階設定頁面 "
-"{link_start}，在“進階模塊列表”中，從列表中刪除以下模塊。"
+"為了避免發生錯誤，{platform_name}強烈建議您從進階設置中刪除不支持的功能。為此在進階設定頁面 {link_start} 進階設定頁面 "
+"{link_end}，在“進階模塊列表”中，從列表中刪除以下模塊。"
 
 #: cms/templates/course_outline.html
 msgid "Unsupported Advance Modules"

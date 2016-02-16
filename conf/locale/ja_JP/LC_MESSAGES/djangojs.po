@@ -2025,11 +2025,11 @@ msgstr "このフィールドには空白や特殊文字を使用しないで下
 
 #: common/static/common/js/components/views/paging_header.js
 msgid "Showing %(first_index)s out of %(num_items)s total"
-msgstr "全部で %(num_Items)s 個のうち %(first_Index)s 番目を表示中。"
+msgstr "全部で %(num_items)s 個のうち %(first_index)s 番目を表示中。"
 
 #: common/static/common/js/components/views/paging_header.js
 msgid "Showing %(first_index)s-%(last_index)s out of %(num_items)s total"
-msgstr "全部で %(num_items)s 個のうち %(first_Index)s-%(last_Index)s を表示中。"
+msgstr "全部で %(num_items)s 個のうち %(first_index)s-%(last_index)s を表示中。"
 
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "The email address you've provided isn't formatted correctly."
@@ -2421,7 +2421,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/instructor_tools.js
 msgid "Team \"%(team)s\" successfully deleted."
-msgstr "チーム名 \"%(teams)s\" は正常に削除されました。"
+msgstr "チーム名 \"%(team)s\" は正常に削除されました。"
 
 #: lms/djangoapps/teams/static/teams/js/views/my_teams.js
 msgid "You are not currently a member of any team."
@@ -3903,7 +3903,7 @@ msgid ""
 "You must be over 13 to share a full profile. If you are over 13, make sure "
 "that you have specified a birth year on the {account_settings_page_link}"
 msgstr ""
-"全プロファイルの公開には、13 歳以上である必要があります。もし 13 歳以上であるなら、{account_setting_page_link} "
+"全プロファイルの公開には、13 歳以上である必要があります。もし 13 歳以上であるなら、{account_settings_page_link} "
 "にてあなたの生年が正しく設定されているかを確認してください。"
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
@@ -4445,7 +4445,7 @@ msgstr "キーには英数字，_ または - のみ利用できます"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "Please enter an integer between %(min)s and %(max)s."
-msgstr "%(min)s から %(max)x の間の整数を入力してください。"
+msgstr "%(min)s から %(max)s の間の整数を入力してください。"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "There's already another assignment type with this name."
@@ -4788,11 +4788,11 @@ msgstr "{email}を“{container}”のアクセスを制限してもよろしい
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "%(display_name)s Settings"
-msgstr "%(component_type)s設定"
+msgstr "%(display_name)s設定"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Change the settings for %(display_name)s"
-msgstr "%(component_type)sの設定を変える"
+msgstr "%(display_name)sの設定を変える"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Publish %(display_name)s"
@@ -5891,7 +5891,6 @@ msgid ""
 "from your dashboard. You will receive periodic reminders from "
 "%(platformName)s to verify your identity."
 msgstr ""
-"今、本人認証を行わない場合でもマイページで講座を見ることはできます。%定期的に%(platformName)sから本人認証を行うように通知があります。"
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore

@@ -773,15 +773,15 @@ msgstr "其他教育程度"
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Honor Code Certificate for {course_name}"
-msgstr "{平台名称}荣誉代码证书{课程名称}"
+msgstr "{platform_name}荣誉代码证书{course_name}"
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Verified Certificate for {course_name}"
-msgstr "{平台名称}经认证的证书{课程名称}"
+msgstr "{platform_name}经认证的证书{course_name}"
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Professional Certificate for {course_name}"
-msgstr "{平台名称}专业证书{课程名称}"
+msgstr "{platform_name}专业证书{course_name}"
 
 #: common/djangoapps/student/models.py
 msgid ""
@@ -798,7 +798,7 @@ msgstr "领英伙伴的短标识符被用在跟踪代码中。 (比如: 'edx') �
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Certificate for {course_name}"
-msgstr "{平台名称} 证书 {课程名称}"
+msgstr "{platform_name} 证书 {course_name}"
 
 #: common/djangoapps/student/models.py
 msgid "The ISO 639-1 language code for this language."
@@ -2301,10 +2301,6 @@ msgid ""
 "must be unique. In \"id\" values, the only special characters that are "
 "supported are underscore, hyphen, and period."
 msgstr ""
-"论坛的分类格式如下：\\\"分类名称\\\": {\\\"id\\\": \\\"i4x-InstitutionName-CourseNumber-"
-"course-CourseRun\\\"}。例如，一个论坛的分类也许是 \\\"分类名称\\\": {\\\"id\\\": \\\"i4x-"
-"UniversityX-MUS101-course-2015_T1\\\"}。\\\"id\\\" 对每个分类必须是唯一的。\\\"id\\\" "
-"只允许包含下划线、连接符和短横线的特殊符号。"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Discussion Sorting Alphabetical"
@@ -4961,7 +4957,7 @@ msgstr "无法找到用户名为 {username} 的用户 - {error}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Deleted user {username}"
-msgstr "删除用户{用户名}"
+msgstr "删除用户{username}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Statistic"
@@ -11170,7 +11166,7 @@ msgstr "检查已取消"
 msgid ""
 "Your transaction has been cancelled. If you feel an error has occurred, "
 "contact {email}."
-msgstr "你的交易已被取消。如果你觉得发生了错误，请联系 {电子邮件} 。"
+msgstr "你的交易已被取消。如果你觉得发生了错误，请联系 {email} 。"
 
 #: lms/templates/commerce/checkout_error.html
 msgid "Checkout Error"
@@ -11242,7 +11238,7 @@ msgstr "选课已关闭"
 
 #: lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
-msgstr "添加{course_name}到购物<span>({价格} USD)</span>"
+msgstr "添加{course_name}到购物<span>({price} USD)</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
@@ -12490,7 +12486,7 @@ msgstr "突出重要信息审查以后的课,或在未来的课程。"
 msgid ""
 "Get started by making a note in something you just read, like "
 "{section_link}."
-msgstr "开始,在你刚读的东西,如{ section_link }。"
+msgstr "开始,在你刚读的东西,如{section_link}。"
 
 #: lms/templates/edxnotes/toggle_notes.html
 msgid "Hide notes"
@@ -12529,7 +12525,7 @@ msgstr "建议您修改密码"
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "Sincerely yours,The {course_name} Team"
-msgstr "你的真挚的,{ course_name }团队"
+msgstr "你的真挚的,{course_name}团队"
 
 #: lms/templates/emails/activation_email.txt
 msgid "Thank you for signing up for {platform_name}."
@@ -12922,7 +12918,7 @@ msgstr "您的订单编号为：{order_number}"
 
 #: lms/templates/emails/photo_submission_confirmation.txt
 msgid "Hi {full_name},"
-msgstr "你好{全名}，"
+msgstr "你好{full_name}，"
 
 #: lms/templates/emails/photo_submission_confirmation.txt
 msgid "Thanks for submitting your photos!"
@@ -12941,13 +12937,13 @@ msgstr "{platform_name}团队"
 
 #: lms/templates/emails/registration_codes_sale_email.txt
 msgid "Thank you for purchasing enrollments in {course_name}."
-msgstr "感谢您购买入学率在{ course_name }。"
+msgstr "感谢您购买入学率在{course_name}。"
 
 #: lms/templates/emails/registration_codes_sale_email.txt
 msgid ""
 "An invoice for {currency_symbol}{total_price} is attached. Payment is due "
 "upon receipt. You can find information about payment methods on the invoice."
-msgstr "发票为{ currency_symbol } { total_price }附呈。将在收到付款。你可以找到关于发票上付款方式信息。"
+msgstr "发票为{currency_symbol} {total_price}附呈。将在收到付款。你可以找到关于发票上付款方式信息。"
 
 #: lms/templates/emails/registration_codes_sale_email.txt
 msgid ""
@@ -12979,7 +12975,7 @@ msgstr "亲爱的 [[Name]]:"
 msgid ""
 "We have provided a course enrollment code for you in {course_name}. To "
 "enroll in the course, click the following link:"
-msgstr "我们为你提供了一个课程招生代码在{ course_name }。参加本课程,请点击以下链接:"
+msgstr "我们为你提供了一个课程招生代码在{course_name}。参加本课程,请点击以下链接:"
 
 #: lms/templates/emails/registration_codes_sale_email.txt
 msgid "HTML link from the attached CSV file"
@@ -13058,7 +13054,8 @@ msgid ""
 "will be canceled and learners will not be able to access course materials. "
 "All purchases are final. For more information, see the {site_name} "
 "cancellation policy."
-msgstr "如果我们没有收到付款,学习者使用这些代码将被取消入学和学习者将无法访问课程材料。所有采购都是决赛。有关更多信息,请参见{:域名}取消政策。"
+msgstr ""
+"如果我们没有收到付款,学习者使用这些代码将被取消入学和学习者将无法访问课程材料。所有采购都是决赛。有关更多信息,请参见{site_name}取消政策。"
 
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
 msgid "For payment questions, contact {contact_email}"
@@ -13105,7 +13102,7 @@ msgstr "你已经被移出了课程  {course_name} 的 Beta 测试"
 msgid ""
 "We have successfully verified your identity for the {assessment} assessment "
 "in the {course_name} course."
-msgstr "我们已经成功地验证你的身份在{ course_name } } {评估评估课程。"
+msgstr "我们已经成功地验证你的身份在{course_name} {assessment}"
 
 #: lms/templates/emails/reverification_processed.txt
 msgid ""
@@ -13113,7 +13110,7 @@ msgid ""
 "{course_name} course. You have used {used_attempts} out of "
 "{allowed_attempts} attempts to verify your identity."
 msgstr ""
-"我们无法验证您的身份为{评估} {course_name}课程评估。你使用了{used_attempts} "
+"我们无法验证您的身份为{assessment} {course_name}课程评估。你使用了{used_attempts} "
 "{allowed_attempts}试图验证你的身份。"
 
 #: lms/templates/emails/reverification_processed.txt
@@ -13132,7 +13129,7 @@ msgid ""
 "{allowed_attempts} attempts to verify your identity, and verification is no "
 "longer possible."
 msgstr ""
-"我们无法验证您的身份为{评估} {course_name}课程评估。你使用了{used_attempts} "
+"我们无法验证您的身份为{assessment} {course_name}课程评估。你使用了{used_attempts} "
 "{allowed_attempts}试图验证你的身份,和验证不再是可能的。"
 
 #: lms/templates/emails/reverification_processed.txt
@@ -13414,7 +13411,7 @@ msgstr "状态："
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generating example {name} certificate"
-msgstr "生成示例 {名字} 证书"
+msgstr "生成示例 {name} 证书"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Error generating example {name} certificate: {error}"

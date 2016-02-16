@@ -455,12 +455,12 @@ msgstr ""
 #: common/djangoapps/student/forms.py
 #, python-format
 msgid "Username cannot be more than %(limit_value)s characters long"
-msgstr "Brugernavn må ikke være mere end %(limit_value) karakterer"
+msgstr "Brugernavn må ikke være mere end %(limit_value)s karakterer"
 
 #: common/djangoapps/student/forms.py
 #, python-format
 msgid "Email cannot be more than %(limit_value)s characters long"
-msgstr "E-mail-adresse må ikke være mere end  %(limit_value) karakterer"
+msgstr "E-mail-adresse må ikke være mere end  %(limit_value)s karakterer"
 
 #: common/djangoapps/student/forms.py
 msgid "You must accept the terms of service."
@@ -516,7 +516,7 @@ msgid ""
 "please contact us at {support_email}"
 msgstr ""
 "Din konto er blevet de-aktiveret. Hvis du mener, at dette er gjort ved en "
-"fejl, bedes du kontakte os på {SUPPORT_EMAIL}."
+"fejl, bedes du kontakte os på {support_email}."
 
 #: common/djangoapps/student/middleware.py
 msgid "Disabled Account"
@@ -668,7 +668,7 @@ msgid ""
 "You've successfully logged into your {provider_name} account, but this "
 "account isn't linked with an {platform_name} account yet."
 msgstr ""
-"Du har logget ind på din {PROVIDER_NAME} konto, men denne konto er ikke "
+"Du har logget ind på din {provider_name} konto, men denne konto er ikke "
 "knyttet til en {platform_name} konto endnu."
 
 #: common/djangoapps/student/views.py
@@ -679,7 +679,7 @@ msgid ""
 msgstr ""
 "Brug dit {platform_name} brugernavn og adgangskode for at logge ind "
 "{platform_name} nedenfor, og link derefter din {platform_name} konto med "
-"{PROVIDER_NAME} fra hovedmenuen."
+"{provider_name} fra hovedmenuen."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -1231,7 +1231,7 @@ msgstr[1] "Filen skal slutte med en af følgende: '{file_types}'."
 
 #: common/djangoapps/util/file.py
 msgid "Maximum upload file size is {file_size} bytes."
-msgstr "Maksimal filstørrelse til upload er {FILE_SIZE} bytes."
+msgstr "Maksimal filstørrelse til upload er {file_size} bytes."
 
 #: common/djangoapps/util/milestones_helpers.py
 msgid "Course {course_id} requires {prerequisite_course_id}"
@@ -1342,7 +1342,7 @@ msgstr ""
 #. Translators: 'ChoiceGroup' is an input type and should not be translated.
 #: common/lib/capa/capa/inputtypes.py
 msgid "ChoiceGroup: unexpected tag {tag_name}"
-msgstr "ChoiceGroup: uventet tag {TAG_NAME}"
+msgstr "ChoiceGroup: uventet tag {tag_name}"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Answer received."
@@ -1397,7 +1397,7 @@ msgstr "Ingen formel angivet."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Couldn't parse formula: {error_msg}"
-msgstr "Kunne ikke analysere formel: {ERROR_MSG}"
+msgstr "Kunne ikke analysere formel: {error_msg}"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Error while rendering preview"
@@ -1582,7 +1582,7 @@ msgstr "Symbolsk Math Input"
 #. translated.
 #: common/lib/capa/capa/responsetypes.py
 msgid "An error occurred with SymbolicResponse. The error was: {error_msg}"
-msgstr "Der opstod en fejl med SymbolicResponse. Fejlen var: {ERROR_MSG} "
+msgstr "Der opstod en fejl med SymbolicResponse. Fejlen var: {error_msg} "
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Code Input"
@@ -1601,7 +1601,7 @@ msgid ""
 "Unable to deliver your submission to grader (Reason: {error_msg}). Please "
 "try again later."
 msgstr ""
-"Kan ikke levere din indsendelse til karaktergiver (Årsag: {ERROR_MSG}). Prøv"
+"Kan ikke levere din indsendelse til karaktergiver (Årsag: {error_msg}). Prøv"
 " igen senere."
 
 #. Translators: 'grader' refers to the edX automatic code grader.
@@ -1645,7 +1645,7 @@ msgstr "Circuit Schematic Builder"
 #. translated.
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error in evaluating SchematicResponse. The error was: {error_msg}"
-msgstr "Fejl i vurderingen SchematicResponse. Fejlen var: {ERROR_MSG}"
+msgstr "Fejl i vurderingen SchematicResponse. Fejlen var: {error_msg}"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Image Mapped Input"
@@ -1965,7 +1965,7 @@ msgstr "Opgaven skal nulstilles, før den kan kontrolleres igen."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "You must wait at least {wait} seconds between submissions."
-msgstr "Du skal vente mindst {vente} sekunder mellem hver indsendelse."
+msgstr "Du skal vente mindst {wait} sekunder mellem hver indsendelse."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -2215,12 +2215,6 @@ msgid ""
 "must be unique. In \"id\" values, the only special characters that are "
 "supported are underscore, hyphen, and period."
 msgstr ""
-"Indtast diskussionskategorierne i følgende format: \"CategoryName\": "
-"{\"id\": \"i4x-InstitutionName-CourseNumber-kursus-CourseRun\"}. For "
-"eksempel kan en diskussionskategori være \"Lydian Mode\": {\"id\": \"i4x-"
-"UniversityX-MUS101-kursus-2015_T1\"}. \"ID\" værdi for hver kategori skal "
-"være unik. I \"ID\" værdier er de eneste specialtegn, der understøttes, "
-"understregning, bindestreg og punktum."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Discussion Sorting Alphabetical"
@@ -2440,9 +2434,9 @@ msgid ""
 "\"%m-%d-%Y\" for MM-DD-YYYY, \"%d-%m-%Y\" for DD-MM-YYYY, \"%Y-%m-%d\" for "
 "YYYY-MM-DD, or \"%Y-%d-%m\" for YYYY-DD-MM."
 msgstr ""
-"Indtast formatet for forfaldsdatoer. Standarden er Man DD, ÅÅÅÅ. Enter \"% "
-"m-% d-% Y\" for MM-DD-ÅÅÅÅ, \"% d-% m-% Y\" for DD-MM-ÅÅÅÅ, \"% Y-% m-% d\" "
-"for ÅÅÅÅ-MM DD, eller \"% Y-% d-% m\" for ÅÅÅÅ-DD-MM."
+"Indtast formatet for forfaldsdatoer. Standarden er Man DD, ÅÅÅÅ. Enter "
+"\"%m-%d-%Y\" for MM-DD-ÅÅÅÅ, \"%d-%m-%Y\" for DD-MM-ÅÅÅÅ, \"%Y-%m-%d\" for "
+"ÅÅÅÅ-MM DD, eller \"%Y-%d-%m\" for ÅÅÅÅ-DD-MM."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "External Login Domain"
@@ -3119,8 +3113,8 @@ msgstr[1] ""
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "but there is only {actual} matching problem."
 msgid_plural "but there are only {actual} matching problems."
-msgstr[0] "men der er kun {faktiske} matchende opgaver."
-msgstr[1] "men der er kun {faktiske} matchende opgaver."
+msgstr[0] "men der er kun {actual} matchende opgaver."
+msgstr[1] "men der er kun {actual} matchende opgaver."
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Edit the library configuration."
@@ -3795,7 +3789,7 @@ msgid ""
 "Something wrong with SubRip transcripts file during parsing. Inner message "
 "is {error_message}"
 msgstr ""
-"Der er noget galt med SubRip udskriftsfil. Fejlmeddelelse:  {ERROR_MESSAGE}"
+"Der er noget galt med SubRip udskriftsfil. Fejlmeddelelse:  {error_message}"
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid "Something wrong with SubRip transcripts file during parsing."
@@ -4272,8 +4266,8 @@ msgid ""
 "Completed the course \"{course_name}\" ({course_mode}, {start_date} - "
 "{end_date})"
 msgstr ""
-"Gennemført kurset \"{course_name}\" ({course_mode}, {START_DATE} - "
-"{END_DATE})"
+"Gennemført kurset \"{course_name}\" ({course_mode}, {start_date} - "
+"{end_date})"
 
 #: lms/djangoapps/certificates/badge_handler.py
 msgid "Completed the course \"{course_name}\" ({course_mode})"
@@ -4442,7 +4436,7 @@ msgstr ""
 #. Translators:  The format of the date includes the full name of the month
 #: lms/djangoapps/certificates/views/webview.py
 msgid "{month} {day}, {year}"
-msgstr "{måned} {dag}, {år}"
+msgstr "{month} {day}, {year}"
 
 #. Translators:  This text represents the verification of the certificate
 #: lms/djangoapps/certificates/views/webview.py
@@ -4450,7 +4444,7 @@ msgid ""
 "This is a valid {platform_name} certificate for {user_name}, who "
 "participated in {partner_short_name} {course_number}"
 msgstr ""
-"Dette er et gyldigt {platform_name} diplom for {brugernavn}, som deltog i "
+"Dette er et gyldigt {platform_name} diplom for {user_name}, som deltog i "
 "{partner_short_name} {course_number}"
 
 #. Translators:  This text is bound to the HTML 'title' element of the page
@@ -4612,7 +4606,7 @@ msgstr ""
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "More Information About {user_name}'s Certificate:"
-msgstr "Flere oplysninger om {USER_NAME}s diplom:"
+msgstr "Flere oplysninger om {user_name}s diplom:"
 
 #. Translators: This line is displayed to a user who has completed a course
 #. and achieved a certification
@@ -4756,7 +4750,7 @@ msgstr "Wiki"
 #. alone.
 #: lms/djangoapps/course_wiki/views.py
 msgid "This is the wiki for **{organization}**'s _{course_name}_."
-msgstr "Dette er wiki'en til ** {organisation} ** 's _ {course_name} _."
+msgstr "Dette er wiki'en til ** {organization} ** 's _ {course_name} _."
 
 #: lms/djangoapps/course_wiki/views.py
 msgid "Course page automatically created."
@@ -4873,7 +4867,7 @@ msgid ""
 "There is no user with the username or email address {user_name} enrolled in "
 "this course."
 msgstr ""
-"Der er ingen bruger med det brugernavn eller den email-adresse {USER_NAME} "
+"Der er ingen bruger med det brugernavn eller den email-adresse {user_name} "
 "tilmeldt dette kursus."
 
 #: lms/djangoapps/courseware/masquerade.py
@@ -4937,7 +4931,7 @@ msgstr "Ugyldig placering"
 
 #: lms/djangoapps/courseware/views.py
 msgid "User {username} has never accessed problem {location}"
-msgstr "Bruger {username} har aldrig søgt adgang til opgaven {placering}"
+msgstr "Bruger {username} har aldrig søgt adgang til opgaven {location}"
 
 #: lms/djangoapps/courseware/views.py
 msgid "You must be signed in to {platform_name} to create a certificate."
@@ -5080,7 +5074,7 @@ msgstr ""
 #. their password was wrong)
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed in authenticating {username}, error {error}\n"
-msgstr "Autentificering mislykkedes {username}, fejl {fejl}\n"
+msgstr "Autentificering mislykkedes {username}, fejl {error}\n"
 
 #. Translators: This message means that the user could not be authenticated
 #. (that is, we could
@@ -5114,11 +5108,11 @@ msgstr "Angiv fulde navn"
 #. Translators: Domain is an email domain, such as "@gmail.com"
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Email address must end in {domain}"
-msgstr "E-mail-adresse skal slutte med {domæne}"
+msgstr "E-mail-adresse skal slutte med {domain}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed - email {email_addr} already exists as {external_id}"
-msgstr "Mislykkedes - e-mail {EMAIL_ADDR} findes allerede som {external_id}"
+msgstr "Mislykkedes - e-mail {email_addr} findes allerede som {external_id}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Password must be supplied if not using certificates"
@@ -5130,7 +5124,7 @@ msgstr "e-mail-adresse kræves (ikke brugernavn)"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Oops, failed to create user {user}, {error}"
-msgstr "Ups, det lykkedes ikke at oprette bruger {bruger}, {fejl}"
+msgstr "Ups, det lykkedes ikke at oprette bruger {user}, {error}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "User {user} created successfully!"
@@ -5138,11 +5132,11 @@ msgstr "Bruger {user} oprettet!"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Cannot find user with email address {email_addr}"
-msgstr "Kan ikke finde bruger med e-mailadresse {EMAIL_ADDR}"
+msgstr "Kan ikke finde bruger med e-mailadresse {email_addr}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Cannot find user with username {username} - {error}"
-msgstr "Kan ikke finde bruger med brugernavn {username} - {fejl}"
+msgstr "Kan ikke finde bruger med brugernavn {username} - {error}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Deleted user {username}"
@@ -5224,7 +5218,7 @@ msgstr "Kurset {0} findes allerede i databiblioteket! (genindlæser alligevel)"
 msgid ""
 "Unable to clone or pull repository. Please check your url. Output was: {0!r}"
 msgstr ""
-"Kunne ikke kopiere eller trække arkiv. Kontroller url'en. Output var: {!0r}"
+"Kunne ikke kopiere eller trække arkiv. Kontroller url'en. Output var: {0!r}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed to clone repository to {directory_name}"
@@ -5801,14 +5795,13 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py
 #, python-format
 msgid "This student (%s) will skip the entrance exam."
-msgstr "Denne kursist (% s) vil springe adgangseksamen over."
+msgstr "Denne kursist (%s) vil springe adgangseksamen over."
 
 #: lms/djangoapps/instructor/views/api.py
 #, python-format
 msgid "This student (%s) is already allowed to skip the entrance exam."
 msgstr ""
-"Denne kursist (% s) har allerede fået lov til at springe over "
-"adgangseksamen."
+"Denne kursist (%s) har allerede fået lov til at springe over adgangseksamen."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -5847,7 +5840,7 @@ msgid ""
 "Certificate exception (user={user}) does not exist in certificate white "
 "list. Please refresh the page and try again."
 msgstr ""
-"Diplom undtagelse (user = {bruger}) eksisterer ikke i listen over godkendte "
+"Diplom undtagelse (user = {user}) eksisterer ikke i listen over godkendte "
 "brugere. Opdater venligst siden og prøv igen."
 
 #: lms/djangoapps/instructor/views/api.py
@@ -5870,12 +5863,12 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "{user} does not exist in the LMS. Please check your spelling and retry."
-msgstr "{bruger} findes ikke i LMS. Tjek stavning og prøv igen."
+msgstr "{user} findes ikke i LMS. Tjek stavning og prøv igen."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "{user} is not enrolled in this course. Please check your spelling and retry."
-msgstr "{bruger} er ikke tilmeldt dette kursus. Tjek stavning og prøv igen."
+msgstr "{user} er ikke tilmeldt dette kursus. Tjek stavning og prøv igen."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Invalid Json data, Please refresh the page and then try again."
@@ -5891,11 +5884,11 @@ msgstr "Generering startet for kursister på positivlisten."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "user \"{user}\" in row# {row}"
-msgstr "bruger \"{bruger}\" i række # {række}"
+msgstr "bruger \"{user}\" i række # {row}"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "user \"{username}\" in row# {row}"
-msgstr "bruger \"{username}\" i række # {række}"
+msgstr "bruger \"{username}\" i række # {row}"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon id is None"
@@ -5918,7 +5911,7 @@ msgid ""
 "The code ({code}) that you have tried to define is already in use as a "
 "registration code"
 msgstr ""
-"Koden ({kode}), som du har forsøgt at definere, er allerede i brug som en "
+"Koden ({code}), som du har forsøgt at definere, er allerede i brug som en "
 "registreringskode"
 
 #: lms/djangoapps/instructor/views/coupons.py
@@ -5935,11 +5928,11 @@ msgstr "Indtast datoen i dette format, måned/dag/år"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon with the coupon code ({code}) added successfully"
-msgstr "kupon med kuponkoden ({kode}) tilføjet med succes"
+msgstr "kupon med kuponkoden ({code}) tilføjet med succes"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon with the coupon code ({code}) already exists for this course"
-msgstr "kupon med kuponkoden ({kode}) findes allerede for dette kursus"
+msgstr "kupon med kuponkoden ({code}) findes allerede for dette kursus"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon id not found"
@@ -5958,8 +5951,8 @@ msgid ""
 "To gain insights into student enrollment and participation {link_start}visit"
 " {analytics_dashboard_name}, our new course analytics product{link_end}."
 msgstr ""
-"For at få indsigt i kursistens tilmelding og deltagelse {LINK_START} gå til "
-"{analytics_dashboard_name}, vores nye kursus analytiseprodukt {LINK_END}."
+"For at få indsigt i kursistens tilmelding og deltagelse {link_start} gå til "
+"{analytics_dashboard_name}, vores nye kursus analytiseprodukt {link_end}."
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "E-Commerce"
@@ -6166,7 +6159,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/registration_codes.py
 msgid ""
 "The enrollment code ({code}) was not found for the {course_name} course."
-msgstr "Tilmeldingskoden ({kode}) blev ikke fundet til {course_name} kurset."
+msgstr "Tilmeldingskoden ({code}) blev ikke fundet til {course_name} kurset."
 
 #: lms/djangoapps/instructor/views/registration_codes.py
 msgid "This enrollment code has been canceled. It can no longer be used."
@@ -6411,7 +6404,7 @@ msgstr ""
 #. {attempted} and {succeeded} are counts.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Progress: {action} {succeeded} of {attempted} so far"
-msgstr "Forløb: {action} {lykkedes} af {forsøgt} hidtil"
+msgstr "Forløb: {action} {succeeded} af {attempted} hidtil"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
@@ -6649,7 +6642,7 @@ msgstr "Tilmelding til kursus: {course_name}"
 msgid ""
 "Please visit your {link_start}dashboard{link_end} to see your new course."
 msgstr ""
-"Gå til dit {LINK_START} betjeningspanel {LINK_END} for at se dit nye kursus."
+"Gå til dit {link_start} betjeningspanel {link_end} for at se dit nye kursus."
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Enrollment codes for Course: {course_name}"
@@ -6657,7 +6650,7 @@ msgstr "Tilmeldingskoder for Kursus: {course_name}"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Mode {mode} does not exist for {course_id}"
-msgstr "Funktion {funktion} findes ikke for {course_id}"
+msgstr "Funktion {mode} findes ikke for {course_id}"
 
 #. Translators: In this particular case, mode_name refers to a
 #. particular mode (i.e. Honor Code Certificate, Verified Certificate, etc)
@@ -6680,7 +6673,7 @@ msgid ""
 "process ({verification_url})."
 msgstr ""
 "Hvis du ikke har bekræftet din identitet endnu, skal du starte "
-"verifikationsprocessen ({VERIFICATION_URL})."
+"verifikationsprocessen ({verification_url})."
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid ""
@@ -6714,7 +6707,7 @@ msgstr "Kunne ikke finde et kursus med ID '{course_id}'"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Donation for {course}"
-msgstr "Donation til {kursus}"
+msgstr "Donation til {course}"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Donation for {platform_name}"
@@ -6722,7 +6715,7 @@ msgstr "Donation til {platform_name}"
 
 #: lms/djangoapps/shoppingcart/pdf.py
 msgid "Page {page_number} of {page_count}"
-msgstr "Side {PAGE_NUMBER} af {page_count}"
+msgstr "Side {page_number} af {page_count}"
 
 #: lms/djangoapps/shoppingcart/pdf.py lms/templates/shoppingcart/receipt.html
 msgid "Invoice"
@@ -6840,7 +6833,7 @@ msgstr ""
 "Beklager! Vores betalingsprocessor sendte en betalingsbekræftelse  tilbage "
 "til os, som havde inkonsistente data. Vi undskylder, at vi ikke kan "
 "kontrollere, om beløbet gik igennem og træffe yderligere foranstaltninger på"
-" din ordre. Den specifikke fejlmeddelelse er: {ERROR_MESSAGE}. Beløbet kan "
+" din ordre. Den specifikke fejlmeddelelse er: {error_message}. Beløbet kan "
 "muligvis være trukket på dit kreditkort. Kontakt os med betalingsspecifikke "
 "spørgsmål på {email}."
 
@@ -6852,7 +6845,7 @@ msgid ""
 "questions at {email}."
 msgstr ""
 "Beklager! På grund af en fejl er dit køb blev debiteret for et andet beløb "
-"end den samlede ordre! Den specifikke fejlmeddelelse er: {ERROR_MESSAGE}. "
+"end den samlede ordre! Den specifikke fejlmeddelelse er: {error_message}. "
 "Beløbet er sandsynligvis blevet trukket på dit kreditkort. Kontakt os med "
 "betalingsspecifikke spørgsmål på {email}."
 
@@ -6868,7 +6861,7 @@ msgstr ""
 "Beklager! Vores betalingsprocessor har sendt en beskadiget besked om dit "
 "beløb tilbage til os, så vi ikke er i stand til at bedømme, om at "
 "meddelelsen rent faktisk kom fra betalingsprocessoren. Den specifikke "
-"fejlmeddelelse er: {ERROR_MESSAGE}. Vi undskylder, at vi ikke kan "
+"fejlmeddelelse er: {error_message}. Vi undskylder, at vi ikke kan "
 "kontrollere, om beløbet gik igennem og træffe yderligere foranstaltninger "
 "mht. din ordre. Beløbet kan muligvis være blevet opkrævet på dit kreditkort."
 " Kontakt os med betalingsspecifikke spørgsmål på {email}."
@@ -7152,7 +7145,7 @@ msgid ""
 msgstr ""
 "Det beløb, der opkræves af processoren {charged_amount} "
 "{charged_amount_currency} er forskelligt fra de samlede udgifter af ordren "
-"{Total_Cost} {total_cost_currency}."
+"{total_cost} {total_cost_currency}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
 msgid ""
@@ -7162,7 +7155,7 @@ msgid ""
 "related questions at {email}."
 msgstr ""
 "Beklager! Vores betalingsprocessor accepterede ikke din betaling. "
-"Beslutningen var {beslutning}, og årsagen var {årsag}. Du blev ikke trukket "
+"Beslutningen var {decision}, og årsagen var {reason}. Du blev ikke trukket "
 "for betaling. Prøv en anden form for betaling. Kontakt os med "
 "betalingsrelaterede spørgsmål på {email}."
 
@@ -7756,7 +7749,7 @@ msgstr "Fejl ved tilslutning til elasticsearch"
 #. list by lower case name.
 #: lms/djangoapps/teams/views.py
 msgid "The ordering {ordering} is not supported"
-msgstr "Bestillingen {bestilling} understøttes ikke"
+msgstr "Bestillingen {ordering} understøttes ikke"
 
 #: lms/djangoapps/teams/views.py
 msgid "The supplied course_id {course_id} is not valid."
@@ -8021,7 +8014,7 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"Din adgangskode er blevet indstillet. Du kan gå videre og %(link_start)slog in%(LINK_END)s nu."
+"Din adgangskode er blevet indstillet. Du kan gå videre og %(link_start)slog in%(link_end)s nu."
 
 #: lms/templates/registration/password_reset_confirm.html
 #, python-format
@@ -8031,7 +8024,7 @@ msgid ""
 "  "
 msgstr ""
 "\n"
-"Nulstil din %(platform_name) adgangskode"
+"Nulstil din %(platform_name)s adgangskode"
 
 #: lms/templates/registration/password_reset_confirm.html
 #, python-format
@@ -8041,7 +8034,7 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"Nulstil adgangskoden til dine %(platform_name)e"
+"Nulstil adgangskoden til dine %(platform_name)s"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Password Reset Form"
@@ -8083,7 +8076,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Nogen er blevet gjort opmærksom på dette problem. Prøv venligst igen om lidt. Kontakt %(start_link)os på%(end_link) om eventuelle problemer."
+"Nogen er blevet gjort opmærksom på dette problem. Prøv venligst igen om lidt. Kontakt %(start_link)s på %(end_link)s om eventuelle problemer."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -8101,7 +8094,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"Nødvendige felter er fremhævet med %(bold_start)fed tekst og en asterisk (*)%(bold_end)."
+"Nødvendige felter er fremhævet med %(bold_start)s fed tekst og en asterisk (*)%(bold_end)s."
 
 #: lms/templates/registration/password_reset_confirm.html
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
@@ -8138,7 +8131,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"Linket til nulstilling af adgangskode var ugyldigt, muligvis fordi linket allerede er blevet brugt. Gå tilbage til %(start_link) log-in siden %(end_link) og start nulstillingen af adgangskoden igen."
+"Linket til nulstilling af adgangskode var ugyldigt, muligvis fordi linket allerede er blevet brugt. Gå tilbage til %(start_link)s log-in siden %(end_link)s og start nulstillingen af adgangskoden igen."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Password Reset Help"
@@ -8157,7 +8150,7 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"Se sektionen med %(START_LINK) hjælp til kontaktoplysninger og svar på ofte stillede spørgsmål %(end_link)"
+"Se sektionen med %(start_link)shjælp til kontaktoplysninger og svar på ofte stillede spørgsmål %(end_link)s"
 
 #: lms/templates/registration/password_reset_email.html
 #, python-format
@@ -8166,7 +8159,7 @@ msgid ""
 " user account at %(site_name)s."
 msgstr ""
 "Du modtager denne e-mail, fordi du har anmodet om en nulstilling af "
-"adgangskoden til din brugerkonto på %(SITE_NAME)."
+"adgangskoden til din brugerkonto på %(site_name)s."
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Please go to the following page and choose a new password:"
@@ -8187,7 +8180,7 @@ msgstr "Tak, fordi du benytter dette site!"
 #: lms/templates/registration/password_reset_email.html
 #, python-format
 msgid "The %(platform_name)s Team"
-msgstr "%(platform_name) Teamet"
+msgstr "%(platform_name)s Teamet"
 
 #: lms/templates/support/refund.html
 msgid "About to refund this order:"
@@ -8468,7 +8461,7 @@ msgstr "[Artikel Name] (wiki: ArtikelNavn)"
 #: lms/templates/wiki/includes/cheatsheet.html
 #, python-format
 msgid "%(platform_name)s Additions:"
-msgstr "%(platform_name)e Tilføjelser:"
+msgstr "%(platform_name)s Tilføjelser:"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Math Expression"
@@ -8485,7 +8478,7 @@ msgstr "Wikipedia"
 #: lms/templates/wiki/includes/cheatsheet.html
 #, python-format
 msgid "%(platform_name)s Wiki"
-msgstr "%(platform_name) Wiki"
+msgstr "%(platform_name)s Wiki"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Huge Header"
@@ -8884,8 +8877,8 @@ msgid ""
 "It looks like {username} belongs to an existing account. Try again with a "
 "different username."
 msgstr ""
-"Det ser ud til, at {email_address} tilhører en eksisterende brugerkonto. "
-"Prøv igen med et andet brugernavn."
+"Det ser ud til, at {username} tilhører en eksisterende brugerkonto. Prøv "
+"igen med et andet brugernavn."
 
 #. Translators: This example name is used as a placeholder in
 #. a field on the registration form meant to hold the user's name.
@@ -10676,7 +10669,7 @@ msgid ""
 "{dashboard_link_start}return to your dashboard{link_end}."
 msgstr ""
 "Du har genaktiveret e-mails med forum-meddelelser fra {platform_name}. Du "
-"kan vende tilbage til {dashboard_link_start} betjeningspanelet {LINK_END}."
+"kan vende tilbage til {dashboard_link_start} betjeningspanelet {link_end}."
 
 #: lms/templates/seq_module.html
 msgid "Previous"
@@ -11018,8 +11011,8 @@ msgid ""
 msgstr ""
 "Du vil ikke længere modtage e-mails med forum-notifikationer fra "
 "{platform_name}. Du kan vende tilbage til {dashboard_link_start} "
-"betjeningspanelet {LINK_END}. Hvis du havde til hensigt at gøre dette, kan "
-"du {undo_link_start} tilmelde dig igen {LINK_END}."
+"betjeningspanelet {link_end}. Hvis du havde til hensigt at gøre dette, kan "
+"du {undo_link_start} tilmelde dig igen {link_end}."
 
 #: lms/templates/using.html
 msgid "Using the system"
@@ -11859,7 +11852,8 @@ msgid ""
 msgstr ""
 "Beklager, dette modul er midlertidigt ude af drift. Vores teknikere arbejder"
 " på at udbedre fejlen hurtigst muligt. Send venligst en e-mail til os "
-"{link_support_email} for at rapportere eventuelle problemer eller nedetid."
+"{link_to_support_email} for at rapportere eventuelle problemer eller "
+"nedetid."
 
 #: lms/templates/courseware/gradebook.html
 msgid "Gradebook"
@@ -12325,8 +12319,8 @@ msgid ""
 "receive your credit, you will also have an official academic transcript at "
 "the institution that granted the credit."
 msgstr ""
-"For at få kursuspoint, skal du blot gå til dit {LINK_START} {platform_name} "
-"betjeningspanel {LINK_END} og klikke på </b>få point <b>. Når du har "
+"For at få kursuspoint, skal du blot gå til dit {link_start} {platform_name} "
+"betjeningspanel {link_end} og klikke på </b>få point <b>. Når du har "
 "modtaget dine point, vil du også få en officiel akademisk udskrift på den "
 "institution, der har givet pointene."
 
@@ -12629,8 +12623,8 @@ msgid ""
 "{cert_name_long}{link_end}."
 msgstr ""
 "Det er officielt. Det kan nemt deles. Det er en gennemprøvet motivator for "
-"at gennemføre kurset. <br> {LINK_START} Lær mere om det verificerede "
-"{cert_name_long} {LINK_END}."
+"at gennemføre kurset. <br> {link_start} Lær mere om det verificerede "
+"{cert_name_long} {link_end}."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Upgrade to Verified"
@@ -12923,15 +12917,15 @@ msgstr "efter flest stemmer"
 #, python-format
 msgid "%s discussion started"
 msgid_plural "%s discussions started"
-msgstr[0] "% diskussioner startet"
-msgstr[1] "Pct. diskussioner startet"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lms/templates/discussion/_user_profile.html
 #, python-format
 msgid "%s comment"
 msgid_plural "%s comments"
-msgstr[0] "Pct. kommentarer"
-msgstr[1] "Pct. kommentarer"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lms/templates/discussion/index.html
 #: lms/templates/discussion/user_profile.html
@@ -14556,11 +14550,11 @@ msgstr "{code}"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "{description}"
-msgstr "{beskrivelse}"
+msgstr "{description}"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "{discount}"
-msgstr "{rabat}"
+msgstr "{discount}"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "The Invoice Number field cannot be empty."
@@ -15582,8 +15576,8 @@ msgid ""
 "Don't see your preferred language? {link_start}Volunteer to become a "
 "translator!{link_end}"
 msgstr ""
-"Kan du ikke finde dit foretrukne sprog? {LINK_START} Ansøg om at blive en "
-"oversætter! {LINK_END}"
+"Kan du ikke finde dit foretrukne sprog? {link_start} Ansøg om at blive en "
+"oversætter! {link_end}"
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "Confirm"
@@ -15811,7 +15805,7 @@ msgstr ""
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Or you can go back to the {link_start}home page{link_end}."
-msgstr "Eller du kan gå tilbage til {LINK_START} hjemmesiden {LINK_END}."
+msgstr "Eller du kan gå tilbage til {link_start} hjemmesiden {link_end}."
 
 #: lms/templates/registration/password_reset_done.html
 msgid "Password reset successful"
@@ -16126,7 +16120,7 @@ msgid ""
 "in the course, or contact your company's administrator."
 msgstr ""
 "Du har klikket på et link til en optagelseskode, der allerede er blevet "
-"brugt. Tjek dit {LINK_START} betjeningspanel {LINK_END} for at se, om du er "
+"brugt. Tjek dit {link_start} betjeningspanel {link_end} for at se, om du er "
 "tilmeldt kurset, eller kontakt din virksomheds administrator."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
@@ -16144,8 +16138,8 @@ msgid ""
 "You're already enrolled for this course. Visit your "
 "{link_start}dashboard{link_end} to see the course."
 msgstr ""
-"Du er allerede tilmeldt dette kursus. Gå til dit {LINK_START} "
-"betjeningspanel {LINK_END} for at se kurset."
+"Du er allerede tilmeldt dette kursus. Gå til dit {link_start} "
+"betjeningspanel {link_end} for at se kurset."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "The course you are enrolling for is full."
@@ -16593,7 +16587,7 @@ msgid ""
 "trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
 "EDX, Open EDX, og EDX og Open EDX logoer er registrerede varemærker eller "
-"varemærker tilhørende {LINK_START} EDX Inc. {LINK_END}"
+"varemærker tilhørende {link_start} EDX Inc. {link_end}"
 
 #: themes/red-theme/lms/templates/footer.html
 msgid ""

@@ -6795,7 +6795,7 @@ msgid "Load next %(num_items)s result"
 msgid_plural "Load next %(num_items)s results"
 msgstr[0] "Загрузить следующие %(num_items)s результат"
 msgstr[1] "Загрузить следующие %(num_items)s результаты"
-msgstr[2] ""
+msgstr[2] "Загрузить следующие %(num_items)s результаты"
 msgstr[3] "Загрузить следующие %(num_items)s результаты"
 
 #: lms/templates/search/course_search_results.underscore
