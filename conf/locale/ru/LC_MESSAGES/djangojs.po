@@ -1,11 +1,12 @@
 # #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2015 EdX
+# Copyright (C) 2016 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
 # dfxedx <ah532@ya.ru>, 2014
 # Alena Koneva <alenakoneva@ya.ru>, 2014
+# Alexandr Kosharny <acosarnii@gmail.com>, 2016
 # AndyZ <Andrey.Zakhvatov@gmail.com>, 2014
 # AndyZ <Andrey.Zakhvatov@gmail.com>, 2014
 # Андрей Сандлер <inactive+asandler@transifex.com>, 2013
@@ -18,18 +19,19 @@
 # Евгений Козлов <eudjin@gmail.com>, 2014
 # Evgeniya <eugenia000@gmail.com>, 2013
 # Katerina <rosemaily@gmail.com>, 2014
-# Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015
+# Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015-2016
 # Maksimenkova Olga <omaksimenkova@hse.ru>, 2014-2015
 # Pavel Yushchenko <pavelyushchenko@gmail.com>, 2013
 # mcha121 <mcha-12-1@bk.ru>, 2014
 # Michael Orlov <mike.orlv@gmail.com>, 2015
-# Michael Savin <m.savin.ru@gmail.com>, 2015
+# Michael Savin <m.savin.ru@gmail.com>, 2015-2016
 # Ничик Дмитрий Валерьевич <dmi.nichik@gmail.com>, 2013
 # Nikolay K Medvedev <elsin16@gmail.com>, 2014
 # Olga <olg.makarova@gmail.com>, 2014
 # Pavel Yushchenko <pavelyushchenko@gmail.com>, 2013
 # Peter Markushin, 2015
 # Katerina <rosemaily@gmail.com>, 2014
+# Sergey <sergey.sapogin@gmail.com>, 2015
 # Danil Moskovoy <tenrius@gmail.com>, 2013
 # W01fdalE <vershinin.a@donnu.edu.ua>, 2014
 # Viktoria Surovtseva <viktoria@cde.ifmo.ru>, 2013
@@ -41,24 +43,26 @@
 # Pavel Zamyshliaev, 2014
 # Андрей Сандлер <inactive+asandler@transifex.com>, 2013
 # Ничик Дмитрий Валерьевич <dmi.nichik@gmail.com>, 2013
+# Яна Ловягина <yana.lovyagina@raccoongang.com>, 2016
 # #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2015 EdX
+# Copyright (C) 2016 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
 # Alexander Dyumin <a.dyumin@gmail.com>, 2015
+# Alexandr Kosharny <acosarnii@gmail.com>, 2016
 # AndyZ <Andrey.Zakhvatov@gmail.com>, 2014
 # Андрей Сандлер <inactive+asandler@transifex.com>, 2013
 # Dmitriy <polevaiabrest@gmail.com>, 2014
 # Dmitry Oshkalo <dmitry.oshkalo@gmail.com>, 2015
 # Evgeniya <eugenia000@gmail.com>, 2013
 # Elena Freundorfer <e_freundorfer@gmx.de>, 2014
-# Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015
+# Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015-2016
 # Maksimenkova Olga <omaksimenkova@hse.ru>, 2014
 # Pavel Yushchenko <pavelyushchenko@gmail.com>, 2013
 # mcha121 <mcha-12-1@bk.ru>, 2014
-# Michael Savin <m.savin.ru@gmail.com>, 2015
+# Michael Savin <m.savin.ru@gmail.com>, 2015-2016
 # Ничик Дмитрий Валерьевич <dmi.nichik@gmail.com>, 2013
 # Peter Markushin, 2014
 # Danil Moskovoy <tenrius@gmail.com>, 2013
@@ -67,45 +71,52 @@
 # Yana Malinovskaya <y.malinovskaya@itransition.com>, 2014
 # #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2015 edX
+# Copyright (C) 2016 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# Alexandr Kosharny <acosarnii@gmail.com>, 2016
+# Andrey Bochkarev <abocha@ya.ru>, 2015
 # Dmitriy <polevaiabrest@gmail.com>, 2014
 # Dmitry Oshkalo <dmitry.oshkalo@gmail.com>, 2015
-# Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015
+# Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015-2016
 # Maksimenkova Olga <omaksimenkova@hse.ru>, 2014
-# Michael Savin <m.savin.ru@gmail.com>, 2015
+# Michael Savin <m.savin.ru@gmail.com>, 2015-2016
 # Nikolay K Medvedev <elsin16@gmail.com>, 2015
+# Sergey <sergey.sapogin@gmail.com>, 2015
 # webslavic <webslavic@yahoo.com>, 2014
 # Weyedide <weyedide@gmail.com>, 2014-2015
 # Yana Malinovskaya <y.malinovskaya@itransition.com>, 2014
 # YummyTranslations EDX <yummytranslations.edx@gmail.com>, 2015
+# Яна Ловягина <yana.lovyagina@raccoongang.com>, 2016
 # #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2015 edX
+# Copyright (C) 2016 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# Alexandr Kosharny <acosarnii@gmail.com>, 2016
 # ovoschee <all.spam.there@gmail.com>, 2014
 # Dmitry Oshkalo <dmitry.oshkalo@gmail.com>, 2015
+# Eric Fischer <efischer@edx.org>, 2016
 # Iaroslav <danwill@ukr.net>, 2015
-# Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015
+# Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015-2016
 # Maksimenkova Olga <omaksimenkova@hse.ru>, 2014
 # mcha121 <mcha-12-1@bk.ru>, 2014
-# Michael Savin <m.savin.ru@gmail.com>, 2015
+# Michael Savin <m.savin.ru@gmail.com>, 2015-2016
 # Natalia Vavilina <nfgenius@gmail.com>, 2015
 # webslavic <webslavic@yahoo.com>, 2014
 # Weyedide <weyedide@gmail.com>, 2014-2015
 # Yana Malinovskaya <y.malinovskaya@itransition.com>, 2014
 # Yermek Alimzhanov <aermek81@gmail.com>, 2015
+# Яна Ловягина <yana.lovyagina@raccoongang.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-12-03 21:15+0000\n"
-"PO-Revision-Date: 2015-12-09 23:06+0000\n"
-"Last-Translator: Michael Savin <m.savin.ru@gmail.com>\n"
+"POT-Creation-Date: 2016-02-15 23:27+0000\n"
+"PO-Revision-Date: 2016-02-15 18:25+0000\n"
+"Last-Translator: Liubov Fomicheva <liubov.nelapa@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/open-edx/edx-platform/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -350,100 +361,6 @@ msgstr "Ответ скрыт"
 msgid "Status: unsubmitted"
 msgstr "Статус: не загружено"
 
-#. Translators: A "rating" is a score a student gives to indicate how well
-#. they feel they were graded on this problem
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid "You need to pick a rating before you can submit."
-msgstr "Вам нужно указать рейтинг прежде чем вы сможете продолжить"
-
-#. Translators: this message appears when transitioning between openended
-#. grading
-#. types (i.e. self assesment to peer assessment). Sometimes, if a student
-#. did not perform well at one step, they cannot move on to the next one.
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid "Your score did not meet the criteria to move to the next step."
-msgstr "Ваша оценка не удовлетворяет критериям перехода к следующему шагу"
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-#: common/static/common/templates/discussion/thread-response.underscore
-#: common/static/common/templates/discussion/thread.underscore
-#: lms/templates/verify_student/incourse_reverify.underscore
-msgid "Submit"
-msgstr "Отправить на рассмотрение"
-
-#. Translators: one clicks this button after one has finished filling out the
-#. grading
-#. form for an openended assessment
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid "Submit assessment"
-msgstr "Отправить оценку"
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid ""
-"Your response has been submitted. Please check back later for your grade."
-msgstr ""
-"Ваш ответ принят.  Пожалуйста, вернитесь на эту страницу позже, чтобы узнать"
-" свою оценку."
-
-#. Translators: this button is clicked to submit a student's rating of
-#. an evaluator's assessment
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid "Submit post-assessment"
-msgstr "Отправить ответы на тест"
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid "Answer saved, but not yet submitted."
-msgstr "Ответ сохранен, но ещё не сдан на проверку."
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid ""
-"Please confirm that you wish to submit your work. You will not be able to "
-"make any changes after submitting."
-msgstr ""
-"Пожалуйста, подтвердите, что вы хотите отправить вашу работу. После отправки"
-" вы не сможете внести никаких исправлений."
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid ""
-"You are trying to upload a file that is too large for our system.  Please "
-"choose a file under 2MB or paste a link to it into the answer box."
-msgstr ""
-"Вы пытаетесь загрузить слишком большой файл. Пожалуйста, выберите файл "
-"размером менее 2МБ или укажите ссылку на него в поле для ответа."
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid ""
-"Are you sure you want to remove your previous response to this question?"
-msgstr "Вы действительно хотите удалить ваш предыдущий ответ на этот вопрос?"
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid "Moved to next step."
-msgstr "Выполнен переход к следующему шагу."
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid ""
-"File uploads are required for this question, but are not supported in your "
-"browser. Try the newest version of Google Chrome. Alternatively, if you have"
-" uploaded the image to another website, you can paste a link to it into the "
-"answer box."
-msgstr ""
-"Загрузка файлов необходима для этого вопроса, но не поддерживается вашим "
-"браузером. Попробуйте последнюю версию Google Chrome. В качестве "
-"альтернативы вы можете загрузить изображения на сторонний вебсайт и вставить"
-" ссылку в поле для ответа."
-
-#. Translators: "Show Question" is some text that, when clicked, shows a
-#. question's
-#. content that had been hidden
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid "Show Question"
-msgstr "Показать Вопрос"
-
-#: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
-msgid "Hide Question"
-msgstr "Скрыть вопрос"
-
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
@@ -484,7 +401,7 @@ msgstr "Добавить в словарь"
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Advanced"
-msgstr "самый современный"
+msgstr "Дополнительные типы заданий"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1743,7 +1660,7 @@ msgid ""
 "\n"
 "Proceed to the Advanced Editor and convert this problem to XML?"
 msgstr ""
-"Если вы воспользуетесь расширенным редактором, задание будет преобразовано в формат XML, и Вы не сможете вернуться к простому редактору.\n"
+"Если вы воспользуетесь расширенным редактором, задание будет преобразовано в формат XML, и вы не сможете вернуться к простому редактору.\n"
 "\n"
 "Перейти к расширенному редактору и преобразовать задание в формат XML?"
 
@@ -1841,7 +1758,7 @@ msgstr "В этом браузере недоступно воспроизвед
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
 msgid "Try using a different browser, such as Google Chrome."
-msgstr "Попробуйте воспользоваться другим браузером; например, Google Chrome."
+msgstr "Попробуйте воспользоваться другим браузером, например, Google Chrome."
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
 msgid "High Definition"
@@ -1945,7 +1862,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid "Caption will be displayed when "
-msgstr "Субтитры будут отображаться, когда"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid "Turn on transcripts"
@@ -2586,8 +2503,8 @@ msgid ""
 "A short description of the team to help other learners understand the goals "
 "or direction of the team (maximum 300 characters)."
 msgstr ""
-"Краткое описание команды, которое поможет другим учащимся понять её цели или"
-" направление деятельности (максимум 300 символов)."
+"Краткое описание команды, которое поможет сокурсникам понять её цели или "
+"направление деятельности (максимум 300 символов)."
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: lms/static/js/student_account/views/account_settings_factory.js
@@ -2695,7 +2612,7 @@ msgstr "Команда \"%(team)s\" успешно удалена."
 
 #: lms/djangoapps/teams/static/teams/js/views/my_teams.js
 msgid "You are not currently a member of any team."
-msgstr "В настоящий момент Вы не входите в состав ни одной команды."
+msgstr "В настоящий момент вы не входите в состав ни одной команды."
 
 #. Translators: "and others" refers to fact that additional members of a team
 #. exist that are not displayed.
@@ -2727,8 +2644,8 @@ msgid ""
 "If you leave, you can no longer post in this team's discussions. Your place "
 "will be available to another learner."
 msgstr ""
-"Покинув команду, Вы больше не сможете участвовать в обсуждениях команды.  "
-"Ваше место сможет занять другой обучающийся."
+"Покинув команду, вы больше не сможете участвовать в её обсуждениях.  Ваше "
+"место сможет занять другой слушатель."
 
 #: lms/djangoapps/teams/static/teams/js/views/team_profile.js
 #: lms/static/js/verify_student/views/reverify_view.js
@@ -2769,9 +2686,8 @@ msgid ""
 "See all teams in your course, organized by topic. Join a team to collaborate"
 " with other learners who are interested in the same topic as you are."
 msgstr ""
-"Показать список всех команд на Вашем курсе, упорядоченный по темам.  "
-"Присоединитесь к команде для совместной работы с другими учащимися, которые "
-"интересуются той же темой, что и Вы."
+"Показать список всех команд, упорядоченный по темам.  Присоединитесь к "
+"команде для совместной работы с единомышленниками."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "My Team"
@@ -2789,7 +2705,7 @@ msgstr "Просматривать список %(sr_start)s команд %(sr_e
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Your request could not be completed. Reload the page and try again."
 msgstr ""
-"Не удалось выполнить Ваш запрос.  Перезагрузите страницу и попробуйте ещё "
+"Не удалось выполнить ваш запрос.  Перезагрузите страницу и попробуйте ещё "
 "раз."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
@@ -2798,7 +2714,7 @@ msgid ""
 " and try again. If the issue persists, click the Help tab to report the "
 "problem."
 msgstr ""
-"Не удалось выполнить Ваш запрос в связи с проблемой на сервере.  "
+"Не удалось выполнить ваш запрос в связи с проблемой на сервере.  "
 "Перезагрузите страницу и попробуйте ещё раз.  Если сбой повторится, щёлкните"
 " по вкладке Помощь и сообщите об этом."
 
@@ -2820,7 +2736,7 @@ msgid ""
 "would like to learn with friends you know."
 msgstr ""
 "Создайте новую команду, если не можете найти уже существующую команду, чтобы"
-" присоединиться, или если Вы хотите учиться вместе со своими друзьями."
+" присоединиться, или если вы хотите учиться вместе со своими друзьями."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 #: lms/djangoapps/teams/static/teams/templates/team-profile-header-actions.underscore
@@ -2899,7 +2815,7 @@ msgid ""
 "topic{span_end}."
 msgstr ""
 "{browse_span_start}Просмотр команд по другим темам{span_end} или "
-"{search_span_start} поиск{span_end} по этой теме. Если Вы все еще не можете "
+"{search_span_start} поиск{span_end} по этой теме. Если вы всё ещё не можете "
 "найти команду, чтобы присоединиться, {create_span_start}создайте новую "
 "команду по этой теме{span_end}."
 
@@ -2940,7 +2856,7 @@ msgstr ""
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error generating student profile information. Please try again."
-msgstr "Ошибка при создании личных данных студента. Попробуйте еще раз."
+msgstr "Ошибка при создании профиля слушателя. Попробуйте еще раз."
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 #: lms/templates/search/search_loading.underscore
@@ -2950,12 +2866,12 @@ msgstr "Загрузка"
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error getting student list."
-msgstr "Ошибка получения списка обучающихся."
+msgstr "Ошибка получения списка слушателей."
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error generating list of students who may enroll. Please try again."
 msgstr ""
-"Ошибка при создании списка студентов, которые могут зарегистрироваться на "
+"Ошибка при создании списка слушателей, которые могут зарегистрироваться на "
 "курс.  Пожалуйста, попробуйте ещё раз."
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
@@ -2975,6 +2891,7 @@ msgstr ""
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/static/js/student_profile/views/learner_profile_factory.js
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
 msgid "Username"
 msgstr "Имя пользователя"
 
@@ -3016,7 +2933,7 @@ msgstr ""
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 msgid "Error: You cannot remove yourself from the Instructor group!"
-msgstr "Ошибка: Вы не можете удалить себя из группы Преподавателей!"
+msgstr "Ошибка: вы не можете удалить себя из группы преподавателей!"
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 msgid "Errors"
@@ -3206,7 +3123,7 @@ msgid ""
 "is enrolled in this course as student, staff, or instructor). Is this OK?"
 msgstr ""
 "Вы отправляете сообщение с заголовком '<%= subject %>' ВСЕМ (всем, "
-"зарегистрированным на этом курсе в качестве студента, сотрудника или "
+"зарегистрированным на этом курсе в качестве слушателя, сотрудника или "
 "преподавателя). Продолжить?"
 
 #: lms/static/coffee/src/instructor_dashboard/send_email.js
@@ -3238,15 +3155,15 @@ msgstr "Ошибка получения электронной почтой ис
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Please enter a student email address or username."
-msgstr "Пожалуйста, введите электронный адрес или имя пользователя студента."
+msgstr "Пожалуйста, введите электронный адрес или имя пользователя."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
 "Error getting student progress url for '<%= student_id %>'. Make sure that "
 "the student identifier is spelled correctly."
 msgstr ""
-"Ошибка получения ссылки url на страницу достижений студента '<%= student_id "
-"%>'. Проверьте правильность написания идентификатора обучающегося."
+"Ошибка получения ссылки на страницу результатов '<%= student_id %>'. "
+"Проверьте правильность идентификатора пользователя."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Please enter a problem location."
@@ -3258,7 +3175,7 @@ msgid ""
 "'<%= student_id %>'."
 msgstr ""
 "Успешно сброшено количество попыток выполнения задания '<%= problem_id %>' "
-"для студента '<%= student_id %>'."
+"для '<%= student_id %>'."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3267,15 +3184,14 @@ msgid ""
 " complete and correct."
 msgstr ""
 "Ошибка при сбросе количества попыток выполнения задания '<%= problem_id %>' "
-"для студента '<%= student_id %>'. Убедитесь, что идентификаторы задания и "
-"студента введены правильно и полностью."
+"для '<%= student_id %>'. Убедитесь, что идентификаторы задания и "
+"пользователя введены правильно и полностью."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
 "Delete student '<%= student_id %>'s state on problem '<%= problem_id %>'?"
 msgstr ""
-"Удалить статус работы учащегося '<%= student_id %>' над заданием '<%= "
-"problem_id %>'?"
+"Удалить статус работы '<%= student_id %>' над заданием '<%= problem_id %>'?"
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3283,8 +3199,8 @@ msgid ""
 " %>'. Make sure that the problem and student identifiers are complete and "
 "correct."
 msgstr ""
-"Ошибка при удалении состояния задания '<%= problem_id %>' для студента '<%= "
-"student_id %>'. Убедитесь, что идентификаторы задания и студента введены "
+"Ошибка при удалении состояния задания '<%= problem_id %>' для '<%= "
+"student_id %>'. Убедитесь, что идентификаторы задания и слушателя введены "
 "правильно и полностью."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
@@ -3297,9 +3213,9 @@ msgid ""
 "'<%= student_id %>'. Click the 'Show Background Task History for Student' "
 "button to see the status of the task."
 msgstr ""
-"Запущена задача повторной оценки для задания '<%= problem_id %>' и учащегося"
-" '<%= student_id %>'. Чтобы просмотреть состояние задачи, щёлкните на кнопке"
-" 'Показать историю фоновых задач для учащегося'."
+"Запущена задача повторной оценки для задания '<%= problem_id %>' для '<%= "
+"student_id %>'. Чтобы просмотреть состояние задачи, щёлкните на кнопке "
+"'Показать историю фоновых задач'."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3307,9 +3223,9 @@ msgid ""
 "'<%= student_id %>'. Make sure that the the problem and student identifiers "
 "are complete and correct."
 msgstr ""
-"Ошибка создания задачи по корректировке оценки студента '<%= student_id %>' "
-"за задание '<%= problem_id %>'.  Убедитесь, что идентификаторы студента и "
-"задания введены правильно и полностью."
+"Ошибка создания задачи по корректировке оценки слушателя '<%= student_id %>'"
+" за задание '<%= problem_id %>'.  Убедитесь, что идентификаторы пользователя"
+" и задания введены правильно и полностью."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3318,14 +3234,14 @@ msgid ""
 "complete and correct."
 msgstr ""
 "Ошибка получения истории задач, связанных с заданием '<%= problem_id %>' для"
-" студента '<%= student_id %>'.  Убедитесь, что идентификаторы задания и "
-"студента введены правильно и полностью."
+" '<%= student_id %>'.  Убедитесь, что идентификаторы задания и пользователя "
+"введены правильно и полностью."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Entrance exam attempts is being reset for student '{student_id}'."
 msgstr ""
 "Производится сброс счётчика попыток выполнения вступительного испытания для "
-"студента '{student_id}'."
+"слушателя '{student_id}'."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3333,7 +3249,7 @@ msgid ""
 " student identifier is correct."
 msgstr ""
 "Ошибка сброса счётчика попыток выполнения вступительного испытания для "
-"студента '{student_id}'.  Проверьте правильность идентификатора студента."
+"'{student_id}'.  Проверьте правильность идентификатора пользователя."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3341,9 +3257,8 @@ msgid ""
 "'Show Background Task History for Student' button to see the status of the "
 "task."
 msgstr ""
-"Запущена перепроверка вступительного испытания для студента '{student_id}'. "
-"Нажмите кнопку «Показать историю фоновых задач студента», чтобы увидеть "
-"статус задачи."
+"Запущена перепроверка вступительного испытания для '{student_id}'. Нажмите "
+"кнопку «Показать историю фоновых задач», чтобы увидеть статус задачи."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3351,21 +3266,21 @@ msgid ""
 "Make sure that entrance exam has problems in it and student identifier is "
 "correct."
 msgstr ""
-"Ошибка запуска задачи по пересчету вступительного испытания для студента "
+"Ошибка запуска задачи по перепроверке вступительного испытания для "
 "\"{student_id}\". Убедитесь, что вступительное испытание содержит задания и "
-"идентификатор студента верен."
+"идентификатор пользователя верен."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Enter a student's username or email address."
-msgstr "Введите имя пользователя или электронный адрес студента"
+msgstr "Введите имя пользователя или его электронный адрес."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
 "Do you want to allow this student ('{student_id}') to skip the entrance "
 "exam?"
 msgstr ""
-"Вы хотите позволить этому студенту ('{student_id}') пропустить вступительное"
-" испытание?"
+"Вы хотите позволить слушателю ('{student_id}') пропустить вступительное "
+"испытание?"
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3373,34 +3288,33 @@ msgid ""
 " correct and try again."
 msgstr ""
 "Возникла ошибка.  Проверьте правильность имени пользователя или электронного"
-" адреса студента и попробуйте ещё раз."
+" адреса и попробуйте ещё раз."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Entrance exam state is being deleted for student '{student_id}'."
-msgstr ""
-"Удаляется статус вступительного испытания для студента '{student_id}'."
+msgstr "Удаляется статус вступительного испытания для '{student_id}'."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
 "Error deleting entrance exam state for student '{student_id}'. Make sure "
 "student identifier is correct."
 msgstr ""
-"Ошибка удаления статуса вступительного испытания для студента "
-"'{student_id}'. Проверьте правильность написания идентификатора студента."
+"Ошибка удаления статуса вступительного испытания для '{student_id}'. "
+"Проверьте правильность написания идентификатора пользователя."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
 "Error getting entrance exam task history for student '{student_id}'. Make "
 "sure student identifier is correct."
 msgstr ""
-"Ошибка получения истории задач вступительного испытания для студента "
-"\"{student_id}\". Убедитесь, что идентификатор студента верен."
+"Ошибка получения истории задач вступительного испытания для "
+"\"{student_id}\". Убедитесь, что идентификатор пользователя верен."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Reset attempts for all students on problem '<%= problem_id %>'?"
 msgstr ""
 "Сбросить количество попыток выполнения задания '<%= problem_id %>' для всех "
-"студентов?"
+"слушателей?"
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3410,7 +3324,7 @@ msgid ""
 msgstr ""
 "Задача по сбросу количества попыток выполнения задания '<%= problem_id %>' "
 "запущена успешно. Чтобы просмотреть статус выполнения задания, нажмите "
-"'Показать историю фоновых задач для задания'."
+"«Показать историю фоновых задач для задания»."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3419,12 +3333,12 @@ msgid ""
 "correct."
 msgstr ""
 "Ошибка создания задачи по сбросу количества попыток выполнения задания '<%= "
-"problem_id %>' для всех студентов.  Убедитесь, что идентификатор задания "
+"problem_id %>' для всех слушателей.  Убедитесь, что идентификатор задания "
 "введён правильно и полностью."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Rescore problem '<%= problem_id %>' for all students?"
-msgstr "Повторно оценить задание '<%= problem_id %>' для всех студентов?"
+msgstr "Повторно оценить задание '<%= problem_id %>' для всех слушателей?"
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3433,8 +3347,8 @@ msgid ""
 " the status of the task."
 msgstr ""
 "Успешно запущена задача переоценки задания '<%= problem_id %>' для всех "
-"студентов. Hажмите 'Показать историю фоновых задач для учащегося' чтобы "
-"увидеть статус задачи."
+"слушателей. Нажмите 'Показать историю фоновых задач' чтобы увидеть статус "
+"задачи."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3446,7 +3360,7 @@ msgstr ""
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Error listing task history for this student and problem."
-msgstr "Ошибка вывода истории задач для данного студента и задания."
+msgstr "Ошибка вывода истории задач для данного слушателя и задания."
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
@@ -3564,71 +3478,7 @@ msgid ""
 "sensitive nature of student information."
 msgstr ""
 "Ссылки создаются по требованию и исчезают в течении 5 минут в связи с "
-"деликатностью предоставленной студентами информации."
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Grades saved.  Fetching the next submission to grade."
-msgstr "Оценки сохранены.  Загружается следующий ответ на оценку."
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Problem Name"
-msgstr "Название задания"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Graded"
-msgstr "Оценено"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Available to Grade"
-msgstr "Доступно для Выставления Оценок"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Required"
-msgstr "Требуется"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Progress"
-msgstr "Прогресс"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Back to problem list"
-msgstr "Вернуться к списку заданий"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Try loading again"
-msgstr "Повторная загрузка"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "<%= num %> available "
-msgstr "<%= num %> доступно"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "<%= num %> graded "
-msgstr "<%= num %> оценено"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "<%= num %> more needed to start ML"
-msgstr "ещё <%= num %> для запуска ОМ"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "Re-check for submissions"
-msgstr "Перепроверьте заявки"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "System got into invalid state: <%= state %>"
-msgstr "Неисправность в системе: <%= state %>"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "System got into invalid state for submission: "
-msgstr "Система находится в недействующем состоянии из за заявки:"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "(Hide)"
-msgstr "(Скрыть)"
-
-#: lms/static/coffee/src/staff_grading/staff_grading.js
-msgid "(Show)"
-msgstr "(Показать)"
+"деликатностью предоставленной слушателями информации."
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Insert Hyperlink"
@@ -3637,11 +3487,11 @@ msgstr "Вставить ссылку"
 #. Translators: Please keep the quotation marks (") around this text
 #: lms/static/js/Markdown.Editor.js lms/static/js/Markdown.Editor.js.c
 msgid "\"optional title\""
-msgstr "\"необязательный заголовок\""
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Insert Image (upload file or type url)"
-msgstr "Вставить изображения (загрузить или указать URL)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Markdown Editing Help"
@@ -3709,7 +3559,7 @@ msgstr "текст курсивом"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "enter image description here"
-msgstr "введите описание изображения"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "enter link description here"
@@ -3773,48 +3623,48 @@ msgid "Student username/email field is required and can not be empty. "
 msgstr "Имя пользователя/адрес электронной почты не могут быть пустыми."
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid "Errors!"
-msgstr "Ошибки!"
+msgid "Uploaded file issues. Click on \"+\" to view."
+msgstr "Задания с загруженными файлами. Нажмите \"+\" для просмотра."
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learners are successfully added to exception list"
-msgstr "учащиеся успешно добавлены в список исключений"
+msgstr "слушатели успешно добавлены в список исключений"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learner is successfully added to the exception list"
-msgstr "учащийся успешно добавлен в список исключений"
+msgstr "слушатель успешно добавлен в список исключений"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " records are not in correct format"
-msgstr "формат записей не поддерживается"
+msgid " records are not in correct format and not added to"
+msgstr "эти записи неправильного формата и не будут добавлены в"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " record is not in correct format"
-msgstr "формат записи не поддерживается"
+msgid " record is not in correct format and not added to the exception"
+msgstr "это запись неправильного формата и она не добавлена в исключение"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners do not exist in LMS"
-msgstr "учащиеся не найдены"
+msgid " learners do not exist in LMS and not added to the"
+msgstr "Учетные записи слушателей отсутствуют в LMS"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner does not exist in LMS"
-msgstr "учащийся не найден"
+msgid " learner does not exist in LMS and not added to the exception list"
+msgstr "слушателя не существует в LMS и он не добавлен в список исключений"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners are already white listed"
-msgstr "учащиеся уже в белом листе"
+msgid " learners are already white listed and not added to"
+msgstr "слушатели уже одобрены и не добавлены в"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner is already white listed"
-msgstr "учащийся уже в белом листе"
+msgid " learner is already white listed and not added to the exception "
+msgstr "слушатель уже одобрен и не добавлен в исключение"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners are not enrolled in course"
-msgstr "учащиеся не зачислены на курс"
+msgid " learners are not enrolled in course and not added to"
+msgstr "слушатели не записаны на курс и не добавлены в"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner is not enrolled in course"
-msgstr "учащийся не зачислен на курс"
+msgid " learner is not enrolled in course and not added to the exception"
+msgstr "слушатель не записан на курс и не добавлен в исключение"
 
 #: lms/static/js/course_survey.js
 msgid "There has been an error processing your survey."
@@ -3850,7 +3700,7 @@ msgstr[3] "Просмотр %s курсов"
 #: lms/static/js/discovery/views/search_form.js
 #, c-format
 msgid "We couldn't find any results for \"%s\"."
-msgstr "Не удалось найти результатов для \"%s\"."
+msgstr "Нет результатов для \"%s\"."
 
 #: lms/static/js/discovery/views/search_form.js
 #: lms/templates/search/search_error.underscore
@@ -3872,19 +3722,19 @@ msgstr ""
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 msgid "Hide notes"
-msgstr "Скрыть записи"
+msgstr "Скрыть заметки"
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 msgid "Notes visible"
-msgstr "Записи видимы"
+msgstr "Заметки видимы"
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 msgid "Show notes"
-msgstr "Показать записи"
+msgstr "Показать заметки"
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 msgid "Notes hidden"
-msgstr "Записи скрыты"
+msgstr "Заметки скрыты"
 
 #: lms/static/js/edxnotes/views/search_box.js
 msgid ""
@@ -3918,6 +3768,16 @@ msgstr ""
 msgid "[no tags]"
 msgstr "[нет тегов]"
 
+#: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
+msgid "Choose one"
+msgstr "Выберите один"
+
+#: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
+#: lms/static/js/student_account/views/LoginView.js
+msgid "An error has occurred. Check your Internet connection and try again."
+msgstr ""
+"Произошла ошибка. Проверьте ваше интернет соединение и попробуйте ещё раз."
+
 #: lms/static/js/groups/views/cohort_discussions.js
 #: lms/static/js/groups/views/cohort_discussions_course_wide.js
 #: lms/static/js/groups/views/cohort_discussions_inline.js
@@ -3937,7 +3797,7 @@ msgstr "Сохранённая группа"
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Error adding students."
-msgstr "Ошибка при добавлении студента."
+msgstr "Ошибка при добавлении обучающегося."
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Enter a username or email."
@@ -3946,26 +3806,26 @@ msgstr "Введите имя пользователя или электронн
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numUsersAdded} student has been added to this cohort"
 msgid_plural "{numUsersAdded} students have been added to this cohort"
-msgstr[0] "{numUsersAdded} студент добавлен в группу"
-msgstr[1] "{numUsersAdded} студента добавлены в группу"
-msgstr[2] "{numUsersAdded} студентов добавлены в группу"
-msgstr[3] "{numUsersAdded} студенты добавлены в группу"
+msgstr[0] "{numUsersAdded} обучающийся добавлен в группу"
+msgstr[1] "{numUsersAdded} обучающихся добавлены в группу"
+msgstr[2] "{numUsersAdded} обучающихся добавлено в группу"
+msgstr[3] "{numUsersAdded} обучающихся добавлено в группу"
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numMoved} student was removed from {oldCohort}"
 msgid_plural "{numMoved} students were removed from {oldCohort}"
-msgstr[0] "{numMoved} студент был исключен из группы {oldCohort}"
-msgstr[1] "{numMoved} студента были исключены из группы {oldCohort}"
-msgstr[2] "{numMoved} студентов были исключены из группы {oldCohort}"
-msgstr[3] "{numMoved} студента были исключены из группы {oldCohort}"
+msgstr[0] "{numMoved} обучающийся был исключен из группы {oldCohort}"
+msgstr[1] "{numMoved} обучающихся были исключены из группы {oldCohort}"
+msgstr[2] "{numMoved} обучающихся были исключены из группы {oldCohort}"
+msgstr[3] "{numMoved} обучающихся были исключены из группы {oldCohort}"
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numPresent} student was already in the cohort"
 msgid_plural "{numPresent} students were already in the cohort"
-msgstr[0] "{numPresent} студент уже в группе"
-msgstr[1] "{numPresent} студента уже в группе"
-msgstr[2] "{numPresent} студентов уже в группе"
-msgstr[3] "{numPresent} студентов уже в группе"
+msgstr[0] "{numPresent} обучающийся уже в группе"
+msgstr[1] "{numPresent} обучающихся уже в группе"
+msgstr[2] "{numPresent} обучающихся уже в группе"
+msgstr[3] "{numPresent} обучающихся уже в группе"
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Unknown user: {user}"
@@ -3974,10 +3834,10 @@ msgstr "Неизвестный пользователь: {user}"
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "There was an error when trying to add students:"
 msgid_plural "There were {numErrors} errors when trying to add students:"
-msgstr[0] "Произошла ошибка при попытке добавить студента:"
-msgstr[1] "Произошли {numErrors} ошибки при попытке добавить студентов:"
-msgstr[2] "Произошло {numErrors} ошибок при попытке добавить студентов:"
-msgstr[3] "Произошло {numErrors} ошибок при попытке добавить студентов:"
+msgstr[0] "Произошла ошибка при попытке добавить обучающегося:"
+msgstr[1] "Произошли {numErrors} ошибки при попытке добавить обучающихся:"
+msgstr[2] "Произошло {numErrors} ошибок при попытке добавить обучающихся:"
+msgstr[3] "Произошло {numErrors} ошибок при попытке добавить обучающихся:"
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "View all errors"
@@ -4017,12 +3877,12 @@ msgid ""
 "The {cohortGroupName} cohort has been created. You can manually add students"
 " to this cohort below."
 msgstr ""
-"Группа {cohortGroupName} создана. Ниже вы можете вручную добавить студентов "
-"в эту группу."
+"Группа {cohortGroupName} создана. Ниже вы можете вручную добавить "
+"обучающихся в эту группу."
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Assign students to cohorts by uploading a CSV file."
-msgstr "Распределить студентов по группам, загрузив файл CSV."
+msgstr "Распределить обучающихся по группам, загрузив файл CSV."
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Choose a .csv file"
@@ -4034,7 +3894,7 @@ msgstr "Только правильно отформатированные фа�
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Upload File and Assign Students"
-msgstr "Загрузить файл и распределить студентов"
+msgstr "Загрузить файл и распределить обучающихся"
 
 #: lms/static/js/groups/views/cohorts.js
 msgid ""
@@ -4051,15 +3911,15 @@ msgstr "Группы отключены"
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Allow students to generate certificates for this course?"
-msgstr "Разрешить студентам создавать сертификаты для этого курса?"
+msgstr "Разрешить обучающимся создавать сертификаты этого курса?"
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Prevent students from generating certificates in this course?"
-msgstr "Запретить студентам создавать сертификаты для этого курса?"
+msgstr "Запретить обучающимся создавать сертификаты этого курса?"
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Start generating certificates for all students in this course?"
-msgstr "Начать создание сертификатов для всех студентов курса?"
+msgstr "Начать создание сертификатов для всех слушателей курса?"
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Error while generating certificates. Please try again."
@@ -4067,7 +3927,7 @@ msgstr "Ошибка при создании сертификатов.  Пожа
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Start regenerating certificates for students in this course?"
-msgstr "Начать повторное создание сертификатов для студентов курса?"
+msgstr "Начать повторное создание сертификатов для слушателей курса?"
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Error while regenerating certificates. Please try again."
@@ -4121,11 +3981,11 @@ msgstr "Не удалось сбросить попытки."
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Successfully deleted student state for user {user}"
-msgstr "Состояние студента для пользователя {user} успешно удалено"
+msgstr "Статус слушателя курса для {user} успешно удалён"
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Failed to delete student state."
-msgstr "Не удалось удалить состояние студента"
+msgstr "Не удалось удалить статус слушателя курса"
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Successfully rescored problem for user {user}"
@@ -4180,11 +4040,6 @@ msgid "Loading your courses"
 msgstr "Идёт загрузка Ваших курсов"
 
 #: lms/static/js/student_account/views/LoginView.js
-msgid "An error has occurred. Check your Internet connection and try again."
-msgstr ""
-"Произошла ошибка. Проверьте ваше интернет соединение и попробуйте ещё раз."
-
-#: lms/static/js/student_account/views/LoginView.js
 msgid ""
 "An error has occurred. Try refreshing the page, or check your Internet "
 "connection."
@@ -4212,8 +4067,6 @@ msgid ""
 "The name that appears on your certificates. Other learners never see your "
 "full name."
 msgstr ""
-"Имя, используемое для оформления сертификатов. Остальные слушатели не смогут"
-" увидеть Ваше полное имя."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address"
@@ -4304,7 +4157,7 @@ msgstr ""
 msgid ""
 "You must sign out and sign back in before your language changes take effect."
 msgstr ""
-"Чтобы изменение языка вступило в силу, Вам необходимо выйти и снова войти в "
+"Чтобы изменение языка вступило в силу, вам необходимо выйти и снова войти в "
 "систему."
 
 #: lms/static/js/student_account/views/account_settings_fields.js
@@ -4384,17 +4237,17 @@ msgid ""
 "You must be over 13 to share a full profile. If you are over 13, make sure "
 "that you have specified a birth year on the {account_settings_page_link}"
 msgstr ""
-"Для публикации полного профиля Вам должно быть больше 13 лет. Если Вы старше"
+"Для публикации полного профиля Вам должно быть больше 13 лет. Если вы старше"
 " 13 лет, удостоверьтесь, что Вы заполнили год рождения на "
 "{account_settings_page_link}"
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
 msgid "Profile Image"
-msgstr "Изображение профиля"
+msgstr "Фотография"
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
 msgid "Profile image for {username}"
-msgstr "Изображение профиля пользователя {username}"
+msgstr "Фото {username}"
 
 #: lms/static/js/verify_student/views/image_input_view.js
 msgid "Image Upload Error"
@@ -4418,7 +4271,7 @@ msgstr "Не удалось отправить фотографии"
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Professional Education Verified Certificate"
-msgstr "Подтверждённый сертификат о профессиональном образовании"
+msgstr "Подтверждённый сертификат о повышении квалификации"
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Professional Education"
@@ -4603,18 +4456,18 @@ msgstr "Не удалось получить данные.  Пожалуйста
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "%(num_students)s student opened Subsection"
 msgid_plural "%(num_students)s students opened Subsection"
-msgstr[0] "%(num_students)s студент открывал подраздел"
-msgstr[1] "%(num_students)s студента открывали подраздел"
-msgstr[2] "%(num_students)s студентов открывали подраздел"
-msgstr[3] "%(num_students)s студентов открывали подраздел"
+msgstr[0] "%(num_students)s обучающийся открывал подраздел"
+msgstr[1] "%(num_students)s обучающихся открывали подраздел"
+msgstr[2] "%(num_students)s обучающихся открывали подраздел"
+msgstr[3] "%(num_students)s обучающихся открывали подраздел"
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "%(num_students)s student"
 msgid_plural "%(num_students)s students"
-msgstr[0] "%(num_students)s студент"
-msgstr[1] "%(num_students)s студента"
-msgstr[2] "%(num_students)s студентов"
-msgstr[3] "%(num_students)s студентов"
+msgstr[0] "%(num_students)s обучающийся"
+msgstr[1] "%(num_students)s обучающихся"
+msgstr[2] "%(num_students)s обучающихся"
+msgstr[3] "%(num_students)s обучающихся"
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "%(num_questions)s question"
@@ -4626,7 +4479,7 @@ msgstr[3] "%(num_questions)s вопросов"
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "Number of Students"
-msgstr "Количество Студентов"
+msgstr "Количество слушателей"
 
 #: cms/static/coffee/src/main.js
 msgid ""
@@ -4634,7 +4487,7 @@ msgid ""
 "connection. Try refreshing the page or making sure you are online."
 msgstr ""
 "Такое может случаться из-за проблем с нашим сервером или вашим подключением "
-"к Сети. Попробуйте обновить страницу или проверьте подключение."
+"к сети. Попробуйте обновить страницу или проверьте подключение."
 
 #: cms/static/coffee/src/main.js
 msgid "Studio's having trouble saving your work"
@@ -4663,7 +4516,7 @@ msgstr "Удаление"
 msgid "OpenAssessment Save Error"
 msgstr "Ошибка сохранения OpenAssessment"
 
-#: cms/static/js/base.js cms/templates/js/checklist.underscore
+#: cms/static/js/base.js
 msgid "This link will open in a new browser window/tab"
 msgstr "Эта ссылка откроется в новом окне или вкладке браузера"
 
@@ -4692,7 +4545,7 @@ msgid ""
 "This certificate has already been activated and is live. Are you sure you "
 "want to continue editing?"
 msgstr ""
-"Этот сертификат уже активен и доступен студенту.  Вы уверены, что хотите "
+"Этот сертификат уже активен и доступен слушателю.  Вы уверены, что хотите "
 "продолжать редактирование?"
 
 #: cms/static/js/certificates/views/certificate_details.js
@@ -5023,6 +4876,10 @@ msgstr "или"
 msgid "This component has validation issues."
 msgstr "Компонент имеет подтвержденный результат"
 
+#: cms/static/js/views/active_video_upload_list.js
+msgid "Your video uploads are not complete."
+msgstr "Загрузка видео не завершена."
+
 #: cms/static/js/views/asset.js
 msgid "Delete File Confirmation"
 msgstr "Подтверждение удаления файла"
@@ -5062,8 +4919,8 @@ msgid ""
 "Please follow the instructions here to upload a file elsewhere and link to "
 "it: {maxFileSizeRedirectUrl}"
 msgstr ""
-"Пожалуйста, следуйте инструкциям здесь, чтобы загрузить файл в другом месте "
-"и ссылку на него: {maxFileSizeRedirectUrl}"
+"Пожалуйста, следуйте инструкциям, чтобы загрузить файл в другом месте и "
+"ссылку на него: {maxFileSizeRedirectUrl}"
 
 #: cms/static/js/views/assets.js
 msgid "Your file could not be uploaded"
@@ -5073,7 +4930,6 @@ msgstr "Ваш файл не может быть загружен"
 msgid "Max file size exceeded"
 msgstr "Превышен максимальный размер файла"
 
-#: cms/static/js/views/assets.js
 #: cms/templates/js/asset-upload-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Choose File"
@@ -5195,7 +5051,7 @@ msgstr "Вы ещё не создали ни одной конфигурации
 
 #: cms/static/js/views/import.js
 msgid "Your import is in progress; navigating away will abort it."
-msgstr "Ваш импорт в процессе, покинув страницу, Вы его отмените."
+msgstr "Ваш импорт в процессе, покинув страницу, вы его отмените."
 
 #: cms/static/js/views/import.js
 msgid "Error importing course"
@@ -5295,7 +5151,7 @@ msgstr "Удаление %(item_display_name)s невозможно будет �
 
 #: cms/static/js/views/manage_users_and_roles.js
 msgid "There was an error changing the user's role"
-msgstr "Была ошибка в изменении пользовательского значения"
+msgstr "При изменении роли пользователя произошла ошибка"
 
 #: cms/static/js/views/manage_users_and_roles.js
 msgid "Error adding user"
@@ -5388,11 +5244,11 @@ msgstr "Изменить вручную"
 
 #: cms/static/js/views/overview.js
 msgid "Collapse All Sections"
-msgstr "Свернуть все разделы"
+msgstr "Свернуть разделы"
 
 #: cms/static/js/views/overview.js
 msgid "Expand All Sections"
-msgstr "Развернуть все разделы"
+msgstr "Развернуть разделы"
 
 #: cms/static/js/views/overview.js
 msgid "Release date:"
@@ -5447,19 +5303,19 @@ msgstr "Отмена изменений"
 
 #: cms/static/js/views/pages/container_subviews.js
 msgid "Hiding from Students"
-msgstr "Отменяется видимость для студентов"
+msgstr "Скрыто от слушателей"
 
 #: cms/static/js/views/pages/container_subviews.js
 msgid "Explicitly Hiding from Students"
-msgstr "Явно скрыть от студентов"
+msgstr "Явно скрыть от слушателей"
 
 #: cms/static/js/views/pages/container_subviews.js
 msgid "Inheriting Student Visibility"
-msgstr "Наследование видимости для студентов"
+msgstr "Наследование видимости"
 
 #: cms/static/js/views/pages/container_subviews.js
 msgid "Make Visible to Students"
-msgstr "Сделать видимым для студентов"
+msgstr "Сделать видимым для слушателей"
 
 #: cms/static/js/views/pages/container_subviews.js
 msgid ""
@@ -5467,13 +5323,13 @@ msgid ""
 "you made to the unit when it was hidden will now be visible to students. Do "
 "you want to proceed?"
 msgstr ""
-"Если данный блок ранее был опубликован и выпущен для студентов, изменения, "
-"которые вы внесли в содержимое блока, пока он был скрыт, теперь станут "
-"видимыми для студентов.  Продолжить?"
+"Если данный блок ранее был опубликован, изменения, которые вы внесли в "
+"содержимое блока, пока он был скрыт, теперь станут видимыми для слушателей."
+"  Продолжить?"
 
 #: cms/static/js/views/pages/container_subviews.js
 msgid "Making Visible to Students"
-msgstr "Устанавливается видимость для студентов"
+msgstr "Видимо для слушателей"
 
 #: cms/static/js/views/pages/course_outline.js
 msgid "Course Index"
@@ -5553,7 +5409,7 @@ msgid ""
 "Your changes will not take effect until you save your progress. Take care "
 "with key and value formatting, as validation is not implemented."
 msgstr ""
-"Ваши изменения не вступят в силу, пока Вы не сохраните их. Будьте осторожны "
+"Ваши изменения не вступят в силу, пока вы не сохраните их. Будьте осторожны "
 "с редактированием ключей и значений, так как проверка не реализована."
 
 #: cms/static/js/views/settings/advanced.js
@@ -5634,7 +5490,7 @@ msgstr ""
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "component"
-msgstr "компонент"
+msgstr ""
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Delete this %(xblock_type)s?"
@@ -5666,7 +5522,7 @@ msgstr "Вы сделали некоторые изменения"
 
 #: cms/static/js/views/validation.js
 msgid "Your changes will not take effect until you save your progress."
-msgstr "Ваши изменения не вступят в силу, пока Вы не сохраните их."
+msgstr "Ваши изменения не вступят в силу, пока вы не сохраните их."
 
 #: cms/static/js/views/validation.js
 msgid "You've made some changes, but there are some errors"
@@ -5760,6 +5616,12 @@ msgstr "Предупреждение"
 msgid "Actions"
 msgstr "Действия"
 
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/publish-xblock.underscore
+#: lms/templates/ccx/schedule.underscore
+msgid "Unscheduled"
+msgstr "Дата выпуска не задана"
+
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/pagination.underscore
@@ -5790,7 +5652,7 @@ msgstr "Номер страницы"
 
 #: common/static/common/templates/components/paging-footer.underscore
 msgid "Enter the page number you'd like to quickly navigate to."
-msgstr "Введите номер страницы, к которой Вы хотите перейти."
+msgstr "Введите номер страницы, к которой вы хотите перейти."
 
 #: common/static/common/templates/components/paging-header.underscore
 msgid "Sorted by"
@@ -5815,15 +5677,15 @@ msgstr "Находите обсуждения"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Focus in on specific topics"
-msgstr "Выбирайте конкретные темы"
+msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Search for specific posts"
-msgstr "Поиск по сообщениям"
+msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Sort by date, vote, or comments"
-msgstr "Сортируйте по дате, количеству голосов или комментариев"
+msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Engage with posts"
@@ -5831,15 +5693,15 @@ msgstr "Оценивайте сообщения"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Upvote posts and good responses"
-msgstr "Голосуйте за сообщения и за хорошие ответы"
+msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Report Forum Misuse"
-msgstr "Сообщайте о некорректном поведении"
+msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Follow posts for updates"
-msgstr "Отслеживайте обновления в сообщениях"
+msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Receive updates"
@@ -5855,7 +5717,7 @@ msgid ""
 "new, unread activity from posts you are following."
 msgstr ""
 "Поставьте галочку, чтобы ежедневно получать обзор новых непрочитанных "
-"комментариев и ответов на сообщения, которые Вы отслеживаете."
+"комментариев и ответов на сообщения, которые вы отслеживаете."
 
 #: common/static/common/templates/discussion/forum-action-answer.underscore
 msgid "Mark as Answer"
@@ -5923,8 +5785,8 @@ msgid ""
 "students or specify a single cohort."
 msgstr ""
 "Администраторы обсуждения, модераторы и ассистенты преподавателя могут "
-"настраивать видимость своих сообщений для всех студентов или для одной "
-"группы."
+"настраивать видимость своих сообщений для всех слушателей или для "
+"определённой группы."
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "Title:"
@@ -6027,7 +5889,7 @@ msgstr "   От: Администрация"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 msgid "By: Community TA"
-msgstr "От: Технический ассистент сообщества"
+msgstr "От: Староста сообщества"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 #: common/static/common/templates/discussion/thread-response-show.underscore
@@ -6092,6 +5954,12 @@ msgstr "fmts"
 #: common/static/common/templates/discussion/thread-response.underscore
 msgid "Add a comment"
 msgstr "Добавить комментарий"
+
+#: common/static/common/templates/discussion/thread-response.underscore
+#: common/static/common/templates/discussion/thread.underscore
+#: lms/templates/verify_student/incourse_reverify.underscore
+msgid "Submit"
+msgstr "Отправить"
 
 #: common/static/common/templates/discussion/thread-show.underscore
 #, python-format
@@ -6158,7 +6026,7 @@ msgstr "Тема:"
 
 #: common/static/common/templates/discussion/topic.underscore
 msgid "Discussion topics; current selection is: "
-msgstr "Темы обсуждения; текущий выбор:"
+msgstr ""
 
 #: common/static/common/templates/discussion/topic.underscore
 msgid "Filter topics"
@@ -6201,7 +6069,7 @@ msgstr "Последнее обновление"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Download the user's certificate"
-msgstr "Скачать сертификат пользователя"
+msgstr "Скачать сертификат"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Not available"
@@ -6241,7 +6109,7 @@ msgid ""
 "characteristics for your team. Choose carefully, because fewer people might "
 "be interested in joining your team if it seems too restrictive."
 msgstr ""
-"Помогите другим учащимся решить, присоединяться ли к вашей команде, указав "
+"Помогите сокурсникам решить, присоединяться ли к вашей команде, указав "
 "некоторые её особенности.  Выбирайте тщательно, ведь чем больше будет "
 "ограничений, тем меньше людей захочет присоединиться к вашей команде."
 
@@ -6320,7 +6188,7 @@ msgstr "Пожертвовать"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Expand All"
-msgstr "Развернуть все"
+msgstr "Развернуть всё"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Collapse All"
@@ -6343,24 +6211,39 @@ msgid "remove all"
 msgstr "удалить всё"
 
 #: lms/templates/ccx/schedule.underscore
-msgid "toggle chapter"
-msgstr "Развернуть/скрыть раздел"
+msgid "gettext("
+msgstr "gettext("
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Section"
 msgstr "Раздел"
 
 #: lms/templates/ccx/schedule.underscore
+msgid "N/A"
+msgstr "Нет"
+
+#: lms/templates/ccx/schedule.underscore
+#, python-format
+msgid "Remove chapter %(chapterDisplayName)s"
+msgstr "Удалить раздел %(chapterDisplayName)s"
+
+#: lms/templates/ccx/schedule.underscore
 msgid "remove"
 msgstr "удалить"
 
 #: lms/templates/ccx/schedule.underscore
-msgid "toggle subsection"
-msgstr "Развернуть/скрыть подраздел"
-
-#: lms/templates/ccx/schedule.underscore
 msgid "Subsection"
 msgstr "Подраздел"
+
+#: lms/templates/ccx/schedule.underscore
+#, python-format
+msgid "Remove subsection %(subsectionDisplayName)s"
+msgstr "Удалить подраздел %(subsectionDisplayName)s"
+
+#: lms/templates/ccx/schedule.underscore
+#, python-format
+msgid "Remove unit %(unitName)s"
+msgstr "Удалить блок %(unitName)s"
 
 #: lms/templates/commerce/provider.underscore
 #, python-format
@@ -6375,8 +6258,8 @@ msgid ""
 "To finalize course credit, %(display_name)s requires %(platform_name)s "
 "learners to submit a credit request."
 msgstr ""
-"Чтобы получить учётные единицы, %(display_name)s от %(platform_name)s "
-"учащийся должен подать запрос."
+"Чтобы получить зачётные единицы, %(display_name)s от %(platform_name)s "
+"слушатель должен подать запрос."
 
 #: lms/templates/commerce/provider.underscore
 #, python-format
@@ -6426,6 +6309,7 @@ msgid "Amount"
 msgstr "Сумма"
 
 #: lms/templates/commerce/receipt.underscore
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Total"
 msgstr "Итого"
@@ -6451,6 +6335,7 @@ msgid "No receipt available"
 msgstr "Нет квитанции об оплате"
 
 #: lms/templates/commerce/receipt.underscore
+#: lms/templates/financial-assistance/financial_assessment_submitted.underscore
 msgid "Go to Dashboard"
 msgstr "Перейти к панели управления"
 
@@ -6462,7 +6347,7 @@ msgid ""
 "from your dashboard. You will receive periodic reminders from "
 "%(platformName)s to verify your identity."
 msgstr ""
-"Если Вы не подтвердите свои данные, Вы всё равно сможете просмотреть курс "
+"Если вы не подтвердите свои данные, вы всё равно сможете просмотреть курс "
 "через панель управления. Вы периодически будете получать напоминания о "
 "подтверждении сведений от %(platformName)s."
 
@@ -6537,26 +6422,80 @@ msgstr "Нажмите, чтобы редактировать"
 msgid "title"
 msgstr "заголовок"
 
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: lms/templates/financial-assistance/financial_assessment_submitted.underscore
+msgid "Financial Assistance Application"
+msgstr "Заявление на финансовую помощь"
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Unable to submit application"
+msgstr "Отправка не удалась"
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid "About You"
+msgstr "О вас"
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid ""
+"The following information is already a part of your {platform} profile. "
+"We\\'ve included it here for your application."
+msgstr ""
+"Следующая информация уже является частью вашего профиля на {platform}."
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Email address"
+msgstr "Адрес электронной почты"
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Legal name"
+msgstr "Имя"
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Country of residence"
+msgstr "Гражданство"
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Back to {platform} FAQs"
+msgstr "Назад к {platform} FAQ"
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Submit Application"
+msgstr "Подать заявку"
+
+#: lms/templates/financial-assistance/financial_assessment_submitted.underscore
+msgid ""
+"Thank you for submitting your financial assistance application for "
+"{course_name}! You can expect a response in 2-4 business days."
+msgstr ""
+"Благодарим вас за подачу заявления на грант по программе {course_name}! Вы "
+"получите ответ через 2-4 рабочих дня."
+
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Bulk Exceptions"
 msgstr "Массовые исключения"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid ""
-"You can upload a CSV file of usernames or email addresses to be added to the"
-" certificate exceptions white list."
+"Upload a comma separated values (.csv) file that contains the usernames or "
+"email addresses of learners who have been given exceptions. Include the "
+"username or email address in the first comma separated field. You can "
+"include an optional note describing the reason for the exception in the "
+"second comma separated field."
 msgstr ""
-"Вы можете загрузить CSV-файл с именами пользователей или адресами "
-"электронной почты для добавления учащихся в список исключений. Этим "
-"пользователям будут выданы сертификаты."
+"Загрузите файл исключений формата .csv (текст, разделённый запятыми) который"
+" содержит имена пользователей или адреса их электронной почты. Включите имя "
+"пользователя или адрес электронной почты в первое поле. Вы можете добавить "
+"необязательное пояснение с описанием причины для исключения во второе поле "
+"после запятой."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Browse"
 msgstr "Открыть в браузере"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
-msgid "Upload CSV"
-msgstr "Загрузить файл в формате CSV"
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid "Add to Exception List"
+msgstr "Добавить в список исключений"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Individual Exceptions"
@@ -6564,11 +6503,15 @@ msgstr "Индивидуальные исключения"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid ""
-"You can add a username or email address to be added to the certificate "
-"exceptions white list."
+"Enter the username or email address of each learner that you want to add as "
+"an exception."
 msgstr ""
-"Вы можете добавить имя пользователя или его электронную почту в список  "
-"исключений. Этим пользователям будут выданы сертификаты."
+"Введите имя пользователя или адрес электронной почты, для которого вы хотите"
+" создать исключение."
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate Exception Certificates"
+msgstr "Создать сертификаты для исключительных случаев"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Generate a Certificate for all "
@@ -6587,20 +6530,16 @@ msgid "Generate a Certificate for all users on the Exception list"
 msgstr "Создать сертификаты для всех пользователей в списке исключений"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate Exception Certificates"
-msgstr "Создать сертификаты для исключительных случаев"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "User ID"
-msgstr "Идентификатор пользователя"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "User Email"
 msgstr "Адрес электронной почты пользователя"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Date Exception Granted"
-msgstr "Дата добавления исключения"
+msgid "Exception Granted"
+msgstr "Исключения созданы"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Certificate Generated"
+msgstr "Cоздано сертификатов"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Notes"
@@ -6661,26 +6600,26 @@ msgstr "распределено по группам"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Manage Students"
-msgstr "Управление студентами"
+msgstr "Управление слушателями"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add students to this cohort"
-msgstr "Добавить студентов в группу"
+msgstr "Добавить слушателей в группу"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
 "Note: Students can be in only one cohort. Adding students to this group "
 "overrides any previous group assignment."
 msgstr ""
-"Примечание. Студент может состоять только в одной группе. Если вы добавите "
-"его в эту группу, он будет исключен из любой другой."
+"Примечание. Слушатель может состоять только в одной группе. Если вы добавите"
+" его в эту группу, он будет исключен из любой другой."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
 "Enter email addresses and/or usernames, separated by new lines or commas, "
 "for the students you want to add. *"
 msgstr ""
-"Введите адреса электронной почты и/или имена студентов по одному в строку "
+"Введите адреса электронной почты и/или имена слушателей по одному в строку "
 "или разделяя их запятыми.*"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
@@ -6691,7 +6630,7 @@ msgstr "(поле, обязательное для заполнения)"
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "e.g. johndoe@example.com, JaneDoe, joeydoe@example.com"
 msgstr ""
-"например mariaivanova@example.com, MariaIvanova, mashaivanova@example.com"
+"например mariaivanova@example.ru, MariaIvanova, mashaivanova@example.ru"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
@@ -6703,7 +6642,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add Students"
-msgstr "Добавить студентов"
+msgstr "Добавить слушателей"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Add a New Cohort"
@@ -6734,7 +6673,7 @@ msgid ""
 "There must be one cohort to which students can automatically be assigned."
 msgstr ""
 "Необходимо создать хотя бы одну группу, в которую будут автоматически "
-"добавляться студенты."
+"добавляться слушатели."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Associated Content Group"
@@ -6786,18 +6725,16 @@ msgstr "Создать группу по изучаемым материалам
 #, python-format
 msgid "(contains %(student_count)s student)"
 msgid_plural "(contains %(student_count)s students)"
-msgstr[0] "(%(student_count)s студент)"
-msgstr[1] "(%(student_count)s студента)"
-msgstr[2] "(%(student_count)s студентов)"
-msgstr[3] "(%(student_count)s студентов)"
+msgstr[0] "(%(student_count)s слушатель)"
+msgstr[1] "(%(student_count)s слушателя)"
+msgstr[2] "(%(student_count)s слушателей)"
+msgstr[3] "(%(student_count)s слушателей)"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid ""
 "Students are added to this cohort only when you provide their email "
 "addresses or usernames on this page."
 msgstr ""
-"Студенты будут добавлены в группу, когда вы введете их адреса электронной "
-"почты или имена пользователей на этой странице."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "What does this mean?"
@@ -6805,7 +6742,7 @@ msgstr "Что это значит?"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "Students are added to this cohort automatically."
-msgstr "Студенты добавляются в эту группу автоматически."
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
 msgid "Select a cohort"
@@ -6830,7 +6767,7 @@ msgstr "Посмотреть группу"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Assign students to cohorts by uploading a CSV file"
-msgstr "Распределить студентов по группам, загрузив файл CSV"
+msgstr "Распределить слушателей по группам, загрузив файл CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 #, python-format
@@ -6839,9 +6776,9 @@ msgid ""
 "file, download course profile information or cohort results on "
 "%(link_start)s the Data Download page. %(link_end)s"
 msgstr ""
-"Чтобы просмотреть распределение студентов по группам или проверить результат"
-" загрузки файла CSV, скачайте список личных данных студентов или оценочный "
-"лист на %(link_start)sстранице загрузки данных%(link_end)s."
+"Чтобы просмотреть распределение по группам или проверить результат загрузки "
+"файла CSV, скачайте список личных данных слушателей или оценочный лист на "
+"%(link_start)sстранице загрузки данных%(link_end)s."
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Used"
@@ -6927,7 +6864,7 @@ msgstr "Как ещё можно войти в систему или зарег�
 
 #: lms/templates/student_account/institution_login.underscore
 msgid "Sign in with Institution/Campus Credentials"
-msgstr "Войти, используя логин и пароль студента или преподавателя"
+msgstr "Войти, используя логин и пароль обучающегося или преподавателя"
 
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
@@ -6941,7 +6878,7 @@ msgstr "Вернуться на страницу входа в систему"
 #: lms/templates/student_account/institution_register.underscore
 msgid "Register with Institution/Campus Credentials"
 msgstr ""
-"Зарегистрироваться, используя логин и пароль студента или преподавателя"
+"Зарегистрироваться, используя логин и пароль слушателя или преподавателя"
 
 #: lms/templates/student_account/institution_register.underscore
 msgid "Register through edX"
@@ -7005,7 +6942,7 @@ msgstr "Войти через %(providerName)s"
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
 msgid "Use my institution/campus credentials"
-msgstr "Использовать логин и пароль студента или преподавателя"
+msgstr "Использовать мой логин и пароль"
 
 #: lms/templates/student_account/login.underscore
 #, python-format
@@ -7148,6 +7085,7 @@ msgstr "Что нужно для подтверждения личности"
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Webcam"
 msgstr "Веб-камера"
@@ -7158,7 +7096,7 @@ msgid ""
 "make sure that you allow access to the camera."
 msgstr ""
 "Вам требуется компьютер с веб-камерой. Когда браузер предложит сделать фото,"
-" убедитесь, что Вы разрешили ему доступ к камере."
+" убедитесь, что вы разрешили ему доступ к камере."
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid "Photo Identification"
@@ -7297,7 +7235,7 @@ msgstr "Советы: как сделать удачный снимок"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid "Ensure that you can see your photo and read your name"
-msgstr "Убедитесь в том, что Вы можете видеть Ваше фото и прочесть Ваше имя"
+msgstr "Убедитесь в том, что вы можете видеть ваше фото и прочесть ваше имя"
 
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid "Make sure your ID is well-lit"
@@ -7313,7 +7251,7 @@ msgstr ""
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Use the retake photo button if you are not pleased with your photo"
-msgstr "Используйте кнопку \"Повторный снимок\", если Вы недовольны фотографией"
+msgstr "Используйте кнопку \"Повторный снимок\", если вы недовольны фотографией"
 
 #: lms/templates/verify_student/image_input.underscore
 msgid "Preview of uploaded image"
@@ -7356,7 +7294,7 @@ msgstr ""
 #, python-format
 msgid "Thanks for returning to verify your ID in: %(courseName)s"
 msgstr ""
-"Благодарим за то, что Вы вернулись и подтвердили свои данные на курсе: "
+"Благодарим за то, что вы вернулись и подтвердили свои данные на курсе: "
 "%(courseName)s"
 
 #: lms/templates/verify_student/intro_step.underscore
@@ -7382,6 +7320,7 @@ msgid "Check Your Email"
 msgstr "Проверьте свою электронную почту"
 
 #: lms/templates/verify_student/intro_step.underscore
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Photo ID"
 msgstr "Удостоверение личности с фотографией"
@@ -7407,7 +7346,7 @@ msgstr "Вы меняете форму записи на курс: %(courseName)
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid ""
 "You can now enter your payment information and complete your enrollment."
-msgstr "Теперь Вы можете ввести информацию о платеже и завершить регистрацию."
+msgstr "Теперь вы можете ввести информацию о платеже и завершить регистрацию."
 
 #: lms/templates/verify_student/make_payment_step.underscore
 #, python-format
@@ -7459,6 +7398,74 @@ msgstr "Ваш подтверждённый статус действует до
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "price"
 msgstr "цена"
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Account Not Activated"
+msgstr "Учётная запись не активирована"
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#, python-format
+msgid "You are enrolling in %(courseName)s"
+msgstr "Вы зачислены на курс %(courseName)s"
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#, python-format
+msgid "Upgrade to a Verified Certificate for %(courseName)s"
+msgstr "Повысьте до подтверждённого сертификата %(courseName)s"
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"Before you upgrade to a certificate track, you must activate your account."
+msgstr ""
+"До того как вы обновите сертификат, вы должны активировать вашу учётную "
+"запись."
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Check your email for an activation message."
+msgstr "Пожалуйста, проверьте почту - вам отправлена ссылка активации."
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#, python-format
+msgid "Professional Certificate for %(courseName)s"
+msgstr "Сертификат повышения квалификации %(courseName)s"
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#, python-format
+msgid "Verified Certificate for %(courseName)s"
+msgstr "Подтверждённый сертификат %(courseName)s"
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#, python-format
+msgid ""
+"To receive a certificate, you must also verify your identity before "
+"%(date)s."
+msgstr ""
+"Чтобы получить сертификат, вы должны подтвердить свою личность в срок до "
+"%(date)s."
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "To receive a certificate, you must also verify your identity."
+msgstr "Для получения сертификата необходимо подтвердить свою личность."
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"To verify your identity, you need a webcam and a government-issued photo ID."
+msgstr ""
+"Для подтверждения, вам понадобится веб-камера и удостоверение личности с "
+"фотографией: паспорт или иной документ."
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"Your ID must be a government-issued photo ID that clearly shows your face."
+msgstr "Вы должны предъявить паспорт."
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"You will use your webcam to take a picture of your face and of your "
+"government-issued photo ID."
+msgstr ""
+"Используя веб-камеру сделайте снимок вашего лица и развернутого "
+"удостоверения личности: паспорта или иного документа с фотографией."
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 #, python-format
@@ -7585,7 +7592,7 @@ msgid ""
 "Don't see your picture? Make sure to allow your browser to use your camera "
 "when it asks for permission."
 msgstr ""
-"Не видите Ваше изображение? Убедитесь, что Вы разрешили браузеру "
+"Не видите ваше изображение? Убедитесь, что Вы разрешили браузеру "
 "использовать Вашу камеру, когда он запрашивает это."
 
 #: lms/templates/verify_student/webcam_photo.underscore
@@ -7689,6 +7696,7 @@ msgid "ID"
 msgstr "Идентификатор"
 
 #: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Details"
 msgstr "Реквизиты сертификата"
 
@@ -7775,26 +7783,13 @@ msgstr "Активировать"
 msgid "Deactivate"
 msgstr "Деактивировать"
 
-#: cms/templates/js/checklist.underscore
-msgid "{number}{pct_sign} of checklists completed"
-msgstr "{number}{pct_sign} опросников завершено"
-
-#: cms/templates/js/checklist.underscore
-msgid "%"
-msgstr "%"
-
-#: cms/templates/js/checklist.underscore
-msgid "Tasks Completed:"
-msgstr "Завершено заданий:"
-
 #: cms/templates/js/container-message.underscore
 msgid ""
 "Caution: The last published version of this unit is live. By publishing "
 "changes you will change the student experience."
 msgstr ""
 "Предупреждение: Последняя опубликованная версия данного блока доступна "
-"пользователям.  Публикация изменений повлияет на видимые для студентов "
-"материалы."
+"пользователям.  Публикация изменений повлияет на видимые материалы."
 
 #: cms/templates/js/content-group-details.underscore
 #: cms/templates/js/content-group-editor.underscore
@@ -7829,8 +7824,7 @@ msgstr "Содержимое доступно только сотрудника�
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished changes to live content"
-msgstr ""
-"В материалы, доступные пользователям, внесены неопубликованные изменения"
+msgstr "В материалы, доступные слушателям, внесены неопубликованные изменения"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished units will not be released"
@@ -7847,11 +7841,11 @@ msgstr "Не оценивается"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Practice proctored Exam"
-msgstr "Пробный очный экзамен"
+msgstr "Пробное наблюдаемое испытание"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Proctored Exam"
-msgstr "Очный экзамен"
+msgstr "Наблюдаемое испытание"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Timed Exam"
@@ -7861,7 +7855,7 @@ msgstr "Экзамен с ограничением по времени"
 #: cms/templates/js/xblock-outline.underscore
 #, python-format
 msgid "Collapse/Expand this %(xblock_type)s"
-msgstr "Свернуть/Развернуть это %(xblock_type)s"
+msgstr "Свернуть / развернуть %(xblock_type)s"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Display Name"
@@ -7889,11 +7883,6 @@ msgstr "Выпущено:"
 #: cms/templates/js/publish-xblock.underscore
 msgid "Scheduled:"
 msgstr "Планируется выпустить:"
-
-#: cms/templates/js/course-outline.underscore
-#: cms/templates/js/publish-xblock.underscore
-msgid "Unscheduled"
-msgstr "Дата выпуска не задана"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Graded as:"
@@ -8043,7 +8032,7 @@ msgstr "Вводная по созданию Cookie"
 msgid ""
 "provide the title/name of the text book as you would like your students to "
 "see it"
-msgstr "укажите название учебника в форме, в которой его увидят студенты"
+msgstr "укажите название учебника в форме, в которой его увидят слушатели"
 
 #: cms/templates/js/edit-textbook.underscore
 msgid "Chapter information"
@@ -8111,7 +8100,7 @@ msgid ""
 "Name of the groups that students will be assigned to, for example, Control, "
 "Video, Problems. You must have two or more groups."
 msgstr ""
-"Имена групп, назначаемых студентам, например Контроль, Видео, Проблемы. "
+"Имена групп, назначаемых слушателям, например Контроль, Видео, Проблемы. "
 "Необходимо назначить не менее двух групп."
 
 #: cms/templates/js/group-configuration-editor.underscore
@@ -8123,7 +8112,7 @@ msgid ""
 "This configuration is currently used in content experiments. If you make "
 "changes to the groups, you may need to edit those experiments."
 msgstr ""
-"Эта конфигурация уже использована.Если Вы измените группы, Вам может "
+"Эта конфигурация уже использована.Если вы измените группы, вам может "
 "понадобиться редактировать эксперименты"
 
 #: cms/templates/js/group-edit.underscore
@@ -8253,7 +8242,7 @@ msgstr "Доступно только для сотрудников"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Published and Live"
-msgstr "Опубликовано и доступно пользователям"
+msgstr "Опубликовано и доступно слушателям"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Published (not yet released)"
@@ -8300,7 +8289,7 @@ msgstr "с %(section_or_subsection)s"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Staff and Students"
-msgstr "Сотрудникам и студентам"
+msgstr "Сотрудникам и слушателям"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Some content in this unit is visible only to particular content groups"
@@ -8311,7 +8300,7 @@ msgstr ""
 #: cms/templates/js/publish-xblock.underscore
 #: cms/templates/js/staff-lock-editor.underscore
 msgid "Hide from students"
-msgstr "Скрыть от студентов"
+msgstr "Скрыть от слушателей"
 
 #: cms/templates/js/release-date-editor.underscore
 msgid "Release Date and Time"
@@ -8331,7 +8320,7 @@ msgstr "Очистить дату/время выпуска"
 
 #: cms/templates/js/show-textbook.underscore
 msgid "View Live"
-msgstr "Просмотр текущей версии"
+msgstr "Просмотр курса"
 
 #: cms/templates/js/signatory-details.underscore
 msgid "Organization"
@@ -8398,15 +8387,15 @@ msgstr "Изображение должно иметь формат PNG"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid "Student Visibility"
-msgstr "Видимость для студентов"
+msgstr "Видимость для слушателей"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid ""
 "If the unit was previously published and released to students, any changes "
 "you made to the unit when it was hidden will now be visible to students."
 msgstr ""
-"Если блок был ранее опубликован и доступен студентам, любые изменения, "
-"которые вы сделали, когда блок был закрыт, теперь станут видны студентам."
+"Если блок был ранее опубликован, любые изменения, которые вы сделали, когда "
+"блок был закрыт, теперь станут видны слушателям курса."
 
 #: cms/templates/js/staff-lock-editor.underscore
 #, python-format
@@ -8415,24 +8404,24 @@ msgid ""
 "to see its content after the release date has passed and you have published "
 "the unit."
 msgstr ""
-"Если вы сделаете %(xblockType)s видимым для студентов, им будет доступно его"
-" содержимое после даты запуска курса."
+"Если вы сделаете %(xblockType)s видимым для слушателей, им будет доступно "
+"его содержимое после даты запуска курса."
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid ""
 "Any subsections or units that are explicitly hidden from students will "
 "remain hidden after you clear this option for the section."
 msgstr ""
-"Некоторые подразделы и темы, скрытые от студентов, будут скрыты после "
-"использования этой опции для этой секции."
+"Любые подразделы или блоки, которые явно скрыты от слушателей, останутся "
+"скрытыми после того, как вы отключите эту опцию в разделе."
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid ""
 "Any units that are explicitly hidden from students will remain hidden after "
 "you clear this option for the subsection."
 msgstr ""
-"Некоторые темы, скрытые от студентов, будут скрыты после использования этой "
-"опции для этой секции."
+"Любые блоки, которые явно скрыты от слушателей, останутся скрытыми после "
+"того, как вы отключите эту опцию в подразделе."
 
 #: cms/templates/js/team-member.underscore
 msgid "Current Role:"
@@ -8462,11 +8451,11 @@ msgstr "Закрыть доступ в роли {role}"
 
 #: cms/templates/js/team-member.underscore
 msgid "Delete the user, {username}"
-msgstr "Удалить пользователя, {username}"
+msgstr "Удалить пользователя {username}"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "Additional Options:"
-msgstr "Дополнительные опции:"
+msgstr ""
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "Timed"
@@ -8478,27 +8467,20 @@ msgid ""
 "subsection. Learners must submit answers before the time expires. You can "
 "allow additional time on per learner basis through the Instructor Dashboard."
 msgstr ""
-"Когда экзамен ограничен по времени, слушатели должны отправить ответы на "
-"задания в подразделе до истечения определённого времени. Добавить "
-"дополнительное время в индивидуальном порядке можно в Панели преподавателя."
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "Proctored"
-msgstr "Очный"
+msgstr "Наблюдаемое"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid ""
 "Proctored exams are timed, and software records video of each learner taking"
 " the exam. These videos are then reviewed by a third party."
 msgstr ""
-"Очные экзамены ограничены по времени, кроме того, с помощью "
-"специализированного программного обеспечения производится запись прохождения"
-" экзамена каждым слушателем. Затем видеозаписи просматриваются в стороннем "
-"сервисе."
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "Practice Proctored"
-msgstr "Пробный очный"
+msgstr "Пробное наблюдаемое"
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid ""
@@ -8506,9 +8488,6 @@ msgid ""
 "and processes. Results of the practice exam do not count towards the "
 "learner's grade."
 msgstr ""
-"Назначьте пробный очный экзамен для того, чтобы слушатели испытали "
-"инструменты и процесс прохождения очного экзамена. Результаты пробного "
-"экзамена не учитываются в итоговой оценке слушателей."
 
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "Time Allotted (HH:MM):"
@@ -8521,9 +8500,6 @@ msgid ""
 "grant learners extra time to complete the exam through the Instructor "
 "Dashboard."
 msgstr ""
-"Слушателям показываются предупреждения, когда до конца экзамена осталось 20%"
-" и 5% отведённого времени. Добавить слушателям дополнительное время для "
-"завершения экзамена можно в Панели преподавателя."
 
 #: cms/templates/js/upload-dialog.underscore
 msgid "File upload succeeded"
@@ -8585,7 +8561,7 @@ msgstr ""
 "Чтобы быть уверенным в том, что все смогут просмотреть видео, мы рекомендуем"
 " загрузить файл в форматах .mp4 и .webm. Кликните ниже, чтобы добавить "
 "ссылку на файл в другом формате. Ссылки на YouTube добавлять нельзя. На "
-"компьютере студента будет запущено первое доступное для воспроизведения "
+"компьютере слушателя будет запущено первое доступное для воспроизведения "
 "видео из созданного списка."
 
 #: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
@@ -8607,7 +8583,7 @@ msgstr ""
 
 #: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
 msgid "Which timed transcript would you like to use?"
-msgstr "Какие синхронизированные по времени субтитры Вы хотите использовать?"
+msgstr "Какие синхронизированные по времени субтитры вы хотите использовать?"
 
 #: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
 #: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
@@ -8735,4 +8711,4 @@ msgstr ""
 
 #: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
 msgid "Use Current Transcript"
-msgstr "Использовать текущие субтитры."
+msgstr "Использовать субтитры"
