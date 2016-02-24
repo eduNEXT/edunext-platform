@@ -446,7 +446,7 @@ class SAMLConfiguration(ConfigurationModel):
         other_config = json.loads(self.other_config_str)
         if name in ("TECHNICAL_CONTACT", "SUPPORT_CONTACT"):
             contact = {
-                "givenName": "{} Support".format(settings.PLATFORM_NAME),
+                "givenName": "{} Support".format(microsite.get_value('ALTERNATE_PLATFORM_NAME', settings.PLATFORM_NAME)),  # eduNEXT. utf-8 chars are not supported
                 "emailAddress": settings.TECH_SUPPORT_EMAIL
             }
             contact.update(other_config.get(name, {}))
