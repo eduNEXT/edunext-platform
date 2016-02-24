@@ -1,6 +1,7 @@
 """
 Third-party auth provider configuration API.
 """
+from microsite_configuration import microsite
 from .models import (
     OAuth2ProviderConfig, SAMLConfiguration, SAMLProviderConfig, LTIProviderConfig,
     _PSA_OAUTH2_BACKENDS, _PSA_SAML_BACKENDS, _LTI_BACKENDS,
@@ -16,19 +17,22 @@ class Registry(object):
     @classmethod
     def _enabled_providers(cls):
         """ Helper method to iterate over all providers """
+        enabled_providers = microsite.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', set([]))  # eduNEXT. Each microsite may define its own list of enabled providers
+
         for backend_name in _PSA_OAUTH2_BACKENDS:
             provider = OAuth2ProviderConfig.current(backend_name)
-            if provider.enabled:
+            if provider.enabled and provider.name in enabled_providers:
                 yield provider
         if SAMLConfiguration.is_enabled():
             idp_slugs = SAMLProviderConfig.key_values('idp_slug', flat=True)
             for idp_slug in idp_slugs:
                 provider = SAMLProviderConfig.current(idp_slug)
-                if provider.enabled and provider.backend_name in _PSA_SAML_BACKENDS:
+                if provider.enabled and provider.backend_name in _PSA_SAML_BACKENDS \
+                   and provider.name in enabled_providers:
                     yield provider
         for consumer_key in LTIProviderConfig.key_values('lti_consumer_key', flat=True):
             provider = LTIProviderConfig.current(consumer_key)
-            if provider.enabled and provider.backend_name in _LTI_BACKENDS:
+            if provider.enabled and provider.backend_name in _LTI_BACKENDS and provider.name in enabled_providers:
                 yield provider
 
     @classmethod
