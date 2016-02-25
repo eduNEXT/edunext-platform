@@ -1,15 +1,11 @@
 """
 Microsite backend that reads the configuration from the database
 """
-import re
-import edxmako
-
 from mako.template import Template
 from util.cache import cache
 
 from django.conf import settings
 from django.dispatch import receiver
-from django.http import HttpResponseNotFound
 from django.db.models.signals import post_save
 
 from util.memcache import fasthash
@@ -239,17 +235,12 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
 
         # if no match on subdomain then see if there is a 'default' microsite
         # defined in the db. If so, then use it
-        if not settings.FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] or bool(re.search("^(?:[0-9]{1,3}\.){3}[0-9]{1,3}(:[0-9]{2,5})?$", domain)):
-            try:
-                microsite = Microsite.objects.get(key='default')
-                self._set_microsite_config_from_obj(subdomain, domain, microsite)
-                return
-            except Microsite.DoesNotExist:
-                return
-        else:
-            return HttpResponseNotFound(edxmako.shortcuts.render_to_string('microsites/not_found.html', {
-                'domain': domain,
-            }))
+        try:
+            microsite = Microsite.objects.get(key='default')
+            self._set_microsite_config_from_obj(subdomain, domain, microsite)
+            return
+        except Microsite.DoesNotExist:
+            return
 
     def get_value_for_org(self, org, val_name, default):
         """

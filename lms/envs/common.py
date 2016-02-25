@@ -1094,6 +1094,7 @@ MIDDLEWARE_CLASSES = (
     'mobile_api.middleware.AppVersionUpgrade',
     'header_control.middleware.HeaderControlMiddleware',
     'microsite_configuration.middleware.MicrositeMiddleware',
+    'edunext.middleware.MicrositeMiddleware',
     'django_comment_client.middleware.AjaxExceptionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sites.middleware.CurrentSiteMiddleware',
@@ -2068,6 +2069,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
 
     # eduNEXT modules
+    'edunext',
     'edraak_i18n',
     'openedx_email_extensions',
 
