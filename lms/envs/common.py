@@ -1099,6 +1099,7 @@ simplefilter('ignore')
 
 MIDDLEWARE_CLASSES = (
     'request_cache.middleware.RequestCache',
+    'edunext.middleware.RedirectMiddleware',
     'microsite_configuration.middleware.MicrositeMiddleware',
     'django_comment_client.middleware.AjaxExceptionMiddleware',
     'django.middleware.common.CommonMiddleware',
