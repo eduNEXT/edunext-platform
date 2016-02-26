@@ -288,7 +288,7 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
             if org_filter and type(org_filter) is list:
                 for org in org_filter:
                     org_filter_set.add(org)
-            else:
+            elif org_filter:
                 org_filter_set.add(org_filter)
 
         return org_filter_set
