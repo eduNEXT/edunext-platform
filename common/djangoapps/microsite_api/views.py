@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from rest_framework.views import APIView
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
@@ -43,7 +43,7 @@ class MicrositeDetail(APIView):
         try:
             return Microsite.objects.get(key=key)
         except Microsite.DoesNotExist:
-            return HttpResponse(status=404)
+            raise Http404
 
     def get(self, request, key, format=None):
         microsite = self.get_microsite(key)
