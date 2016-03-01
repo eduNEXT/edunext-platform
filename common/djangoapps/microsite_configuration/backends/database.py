@@ -264,10 +264,11 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
         for microsite in candidates:
             current = microsite.values
             org_filter = current.get('course_org_filter')
-            if isinstance(org_filter, basestring):
-                org_filter = set([org_filter])
-            if org in org_filter:
-                return current.get(val_name, default)
+            if org_filter:
+                if isinstance(org_filter, basestring):
+                    org_filter = set([org_filter])
+                if org in org_filter:
+                    return current.get(val_name, default)
 
         return default
 
