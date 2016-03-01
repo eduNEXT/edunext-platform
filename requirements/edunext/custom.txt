@@ -1,3 +1,10 @@
+# xBlocks installed for some of our customers
 
-#xBlocks
-#sga was here but is now upstream, I leave this file so new custom xblocks could go here
+
+# Oppia XBlock
+-e git+https://github.com/oppia/xblock.git@9f6b95b7eb7dbabb96b77198a3202604f96adf65#egg=oppia-xblock
+
+# Microsoft's Office Mix XBlock:
+-e git+https://github.com/OfficeDev/xblock-officemix.git@3f876b5f0267b017812620239533a29c7d562d24#egg=officemix
+
+-e git+https://github.com/edx-solutions/xblock-drag-and-drop-v2.git@7b054467159fd2cbe2e0adccf9a0665d36a2a197#egg=xblock-drag-and-drop-v2
