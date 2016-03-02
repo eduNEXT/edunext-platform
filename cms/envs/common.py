@@ -1040,7 +1040,10 @@ ADVANCED_COMPONENT_TYPES = [
     # Peer instruction tool
     'ubcpi',
 
-    #edunext xblocks
+    # Solution's drag and drop
+    'drag-and-drop-v2',
+
+    # edunext xblocks
     'sodexo_game',
 ]
 
