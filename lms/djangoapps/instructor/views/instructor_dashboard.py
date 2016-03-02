@@ -18,7 +18,7 @@ from edxmako.shortcuts import render_to_response
 from django.core.urlresolvers import reverse
 from django.utils.html import escape
 from django.http import Http404, HttpResponseServerError
-from django.conf import settings
+from openedx.conf import settings
 from util.json_request import JsonResponse
 from mock import patch
 
