@@ -1,23 +1,26 @@
-"""Models for the util app. """
-import cStringIO
-import gzip
-import logging
+"""Models for the use of edunext only"""
 
 from django.db import models
-from django.utils.text import compress_string
-
-from config_models.models import ConfigurationModel
-
-logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
 
-class RateLimitConfiguration(ConfigurationModel):
+class Redirection(models.Model):
+    """This object stores the redirects for a domain
+    """
 
-    domain = models.CharField(
-        max_length=255,
-        default='default',
-        help_text=ugettext_lazy(u"")
+    HTTP = 'http'
+    HTTPS = 'https'
+
+    SCHEME = (
+        (HTTP, 'http'),
+        (HTTPS, 'https'),
     )
 
+    STATUS = (
+        (301, 'Temporary'),
+        (302, 'Permanent'),
+    )
 
-
+    domain = models.CharField(max_length=253, db_index=True, help_text='use only the domain name, e.g. cursos.edunext.co')
+    target = models.CharField(max_length=253)
+    scheme = models.CharField(max_length=5, choices=SCHEME, default=HTTP)
+    status = models.IntegerField(choices=STATUS, default=301)
