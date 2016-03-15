@@ -30,7 +30,9 @@ class MicrositeMiddleware(object):
 
         domain = request.META.get('HTTP_HOST', None)
 
-        return microsite.set_by_domain(domain)
+        microsite.set_by_domain(domain)
+
+        return None
 
     def process_response(self, request, response):
         """

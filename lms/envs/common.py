@@ -1100,6 +1100,8 @@ simplefilter('ignore')
 MIDDLEWARE_CLASSES = (
     'request_cache.middleware.RequestCache',
     'microsite_configuration.middleware.MicrositeMiddleware',
+    'microsite_configuration.middleware.MicrositeCrossBrandingFilterMiddleware',
+    'edunext.middleware.MicrositeMiddleware',
     'django_comment_client.middleware.AjaxExceptionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -1951,7 +1953,8 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
 
     # eduNEXT modules
-    'edraak_i18n'
+    'edunext',
+    'edraak_i18n',
 )
 
 # Migrations which are not in the standard module "migrations"

@@ -99,7 +99,7 @@ def set_by_domain(domain):
     For a given request domain, find a match in our microsite configuration
     and make it available to the complete django request process
     """
-    return BACKEND.set_config_by_domain(domain)
+    BACKEND.set_config_by_domain(domain)
 
 
 def enable_microsites_pre_startup(log):
