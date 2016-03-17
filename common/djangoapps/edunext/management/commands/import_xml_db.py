@@ -22,6 +22,9 @@ class Command(BaseCommand):
         parser.add_argument('xmldumpfile', type=str, help='The xml dump of the database that will be imported')
         parser.add_argument('--users', type=str, nargs='+', required=False, help='List of users (ids) to import')
         parser.add_argument('--microsite', type=str, required=False, help='Microsite host to add to user')
+        parser.add_argument('--dry-run', action='store_true', required=False, help='Run without saving')
+        parser.add_argument('--keep-user-flags', type=bool, default=False, required=False, help='Keeps special user flags (superuser and staff). Default:False')
+        parser.add_argument('--skip-inactive', type=bool, default=False, required=False, help='Skips inactive users. Default:False')
 
     def handle(self, *args, **options):
         """Entry point for the command.
@@ -31,8 +34,11 @@ class Command(BaseCommand):
         """
 
         # Get the parameters
+        print options
         filename = options['xmldumpfile']
         microsite = options['microsite']
+        dry_run = options['dry_run']
+        keep_special_flags = options['keep_user_flags']
 
         user_statements = options.get('users', [])
         user_ids = []
@@ -55,7 +61,7 @@ class Command(BaseCommand):
         if not filename.endswith(".xml"):
             raise CommandError("File {} is not an xml (*.xml)".format(filename))
 
-        importer = DatabaseXmlDumpImporter(filename)
+        importer = DatabaseXmlDumpImporter(filename, dry_run)
 
         users_imported = importer.import_users(user_ids, microsite)
         logger.debug("Users Imported:\n" + pf(users_imported, indent=4))

@@ -19,14 +19,16 @@ class DatabaseXmlDumpImporter:
     """
     xmlDumpParser = None
     imported_users = []
+    dry_run = False
 
-    def __init__(self, filename):
+    def __init__(self, filename, dry_run=False):
         """Initialize importer with the filename.
         Args:
             filename (str): File name with location to import. e.g. '/var/tmp/database.xml'
         """
         logger.debug("Procesing: {}".format(filename))
         self.xmlDumpParser = XmlDumpParser(filename)
+        self.dry_run = dry_run
 
     def import_users(self, user_ids=[], microsite_hostname=None):
         """
@@ -48,6 +50,10 @@ class DatabaseXmlDumpImporter:
             exit()
             # raise Exception("Can't create the users given, check warning messages.")
         # Create users
+        if self.dry_run:
+            logger.debug("Dry run. Would import following users:")
+            logger.debug(userCreators)
+            return []
         for userCreator in userCreators:
             (user, profile) = userCreator.create_user()
             new_user_dic = {'old_user_id': userCreator.get_old_user_id(),

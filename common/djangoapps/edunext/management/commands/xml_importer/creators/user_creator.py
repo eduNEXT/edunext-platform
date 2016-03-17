@@ -73,3 +73,5 @@ class UserCreator:
     def get_old_profile_id(self):
         return self.old_profile_id
 
+    def __repr__(self):
+        return str(self.user_data)
