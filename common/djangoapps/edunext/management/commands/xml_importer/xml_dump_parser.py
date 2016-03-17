@@ -38,10 +38,11 @@ class XmlDumpParser(object):
                 table_list_dic.append(row_dic)
         return table_list_dic
 
-    def process_join(self, table_joiner):
+    def process_join(self, table_joiner, left_join=False):
         """Search through the xml and join the tables specified by table_joiner. Return list of dicts.
         Args:
-            table_joiner (TableJoiner):
+            table_joiner (TableJoiner)
+            left_join (bool, optional): If true do a left_join so primary rows would be kept even if there are no foreign rows joinable
         Raises:
             Exception: If the primary key is found more than once in the foreign table.
         Returns:
@@ -64,6 +65,9 @@ class XmlDumpParser(object):
                 joined_dic.update(salted_f_dict)
             else:
                 logger.warn("{} had no row in the foreign table".format(pf(p_row, indent=4)))
+                if not left_join:
+                    logger.info("Ignored.")
+                    continue
             joined_list.append(joined_dic)
         logger.info('{} {} rows found in the database.'.format(len(joined_list), table_joiner.primary_table_name))
         return joined_list
