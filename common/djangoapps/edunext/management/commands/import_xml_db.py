@@ -24,7 +24,7 @@ class Command(BaseCommand):
         parser.add_argument('--microsite', type=str, required=False, help='Microsite host to add to user')
         parser.add_argument('--dry-run', action='store_true', required=False, help='Run without saving')
         parser.add_argument('--keep-user-flags', type=bool, default=False, required=False, help='Keeps special user flags (superuser and staff). Default:False')
-        parser.add_argument('--skip-inactive', type=bool, default=False, required=False, help='Skips inactive users. Default:False')
+        parser.add_argument('--skip-inactive', type=bool, default=True, required=False, help='Skips inactive users. Default:True')
 
     def handle(self, *args, **options):
         """Entry point for the command.
