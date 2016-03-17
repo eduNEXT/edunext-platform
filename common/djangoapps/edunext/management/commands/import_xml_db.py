@@ -39,6 +39,7 @@ class Command(BaseCommand):
         microsite = options['microsite']
         dry_run = options['dry_run']
         keep_special_flags = options['keep_user_flags']
+        skip_inactive = options['skip_inactive']
 
         user_statements = options.get('users', [])
         user_ids = []
@@ -63,7 +64,7 @@ class Command(BaseCommand):
 
         importer = DatabaseXmlDumpImporter(filename, dry_run)
 
-        users_imported = importer.import_users(user_ids, microsite)
+        users_imported = importer.import_users(user_ids, keep_special_flags, skip_inactive, microsite)
         logger.debug("Users Imported:\n" + pf(users_imported, indent=4))
         self.save_dic_list(self.USERS_JSON, users_imported)
 

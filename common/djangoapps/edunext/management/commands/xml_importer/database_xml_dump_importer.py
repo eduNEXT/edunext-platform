@@ -30,7 +30,7 @@ class DatabaseXmlDumpImporter:
         self.xmlDumpParser = XmlDumpParser(filename)
         self.dry_run = dry_run
 
-    def import_users(self, user_ids=[], microsite_hostname=None):
+    def import_users(self, user_ids=[], keep_special_flags=False, skip_inactive=False, microsite_hostname=None):
         """
         Import the users, creating them and activating them. Return list of users created.
         """
@@ -41,21 +41,27 @@ class DatabaseXmlDumpImporter:
 
         userCreators = []
         has_conflicts = False
-        # Test creation
+
+        # Test user creation and create list of user_creators
         for user_dic in users:
             userCreator = UserCreator(user_dic, microsite_hostname)
             has_conflicts = not userCreator.check_user_creation() or has_conflicts
+            is_active = bool(int(user_dic['auth_user-is_active']))
+            if skip_inactive and not is_active:
+                logger.info("Skiped inactive user: {}".format(userCreator))
+                continue
             userCreators.append(userCreator)
         if has_conflicts:
             exit()
             # raise Exception("Can't create the users given, check warning messages.")
+
         # Create users
         if self.dry_run:
             logger.debug("Dry run. Would import following users:")
             logger.debug(userCreators)
             return []
         for userCreator in userCreators:
-            (user, profile) = userCreator.create_user()
+            (user, profile) = userCreator.create_user(keep_special_flags)
             new_user_dic = {'old_user_id': userCreator.get_old_user_id(),
                             'new_user_id': user.id,
                             'old_profile_id': userCreator.get_old_profile_id(),

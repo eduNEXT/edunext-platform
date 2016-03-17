@@ -37,21 +37,27 @@ class UserCreator:
 
         self.password = user_dict['auth_user-password']
         self.meta = user_dict['auth_userprofile-meta']
+        self.is_superuser = bool(int(user_dict['auth_user-is_superuser']))
+        self.is_staff = bool(int(user_dict['auth_user-is_staff']))
+
         self.old_id = int(user_dict['auth_user-id'])
         self.old_profile_id = int(user_dict['auth_userprofile-id'])
         self.site = site
 
-    def create_user(self):
+    def create_user(self, keep_special_flags=False):
         """Create the user with apropiate values.
         Returns:
             tuple: user and profile objects.
         """
         (user, profile) = edxapp_interface.create_complete_account(self.user_data, self.profile_data, self.site)
         user.password = self.password
+        if keep_special_flags:
+            user.is_staff = self.is_staff
+            user.is_superuser = self.is_superuser
         user.save()
+
         profile.meta = self.meta
         profile.save()
-        # TODO set from what microsite this user is
         return (user, profile)
 
     def check_user_creation(self):
