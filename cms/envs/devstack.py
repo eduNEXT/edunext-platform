@@ -138,3 +138,6 @@ FEATURES['USE_MICROSITES'] = True
 ### Select an implementation for the microsite backend
 MICROSITE_BACKEND = 'microsite_configuration.backends.database.EdunextCompatibleDatabaseMicrositeBackend'
 MICROSITE_TEMPLATE_BACKEND = 'microsite_configuration.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'
+
+
+FEATURES['ENABLE_SPECIAL_EXAMS'] = True
