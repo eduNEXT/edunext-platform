@@ -1,5 +1,4 @@
-# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-# edX translation file.
+# edunext helper translation file.
 # Copyright (C) 2016 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
@@ -47,15 +46,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2016-02-15 23:30+0000\n"
-"PO-Revision-Date: 2015-12-22 10:10+0000\n"
-"Last-Translator: inger sølle <inger@soellingvraa.dk>\n"
-"Language-Team: Danish (http://www.transifex.com/open-edx/edx-platform/language/da/)\n"
+"POT-Creation-Date: 2016-03-30 21:02+0000\n"
+"PO-Revision-Date: 2016-03-30 15:48+0000\n"
+"Last-Translator: Felipe Montoya <felipe.montoya@edunext.co>\n"
+"Language-Team: eduNEXT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
-"Language: da\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
@@ -744,11 +742,11 @@ msgstr "Bruger med brugernavnet {} eksisterer ikke"
 
 #: common/djangoapps/student/views.py
 msgid "Successfully disabled {}'s account"
-msgstr "Deaktivering af  {}s konto lykkedes"
+msgstr "Deaktivering af  {}'s konto lykkedes"
 
 #: common/djangoapps/student/views.py
 msgid "Successfully reenabled {}'s account"
-msgstr "Genaktivering af  {}s konto lykkedes"
+msgstr "Genaktivering af  {}'s konto lykkedes"
 
 #: common/djangoapps/student/views.py
 msgid "Unexpected account status"
@@ -893,7 +891,7 @@ msgstr "LANG_TID_FORMAT"
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "SHORT_DATE_FORMAT"
-msgstr "KORT_DATO_FORMAT"
+msgstr "SHORT_DATE_FORMAT"
 
 #. Translators: the translation for "TIME_FORMAT" must be a format
 #. string for formatting times.  For example, the American English
@@ -1582,7 +1580,7 @@ msgstr "Symbolsk Math Input"
 #. translated.
 #: common/lib/capa/capa/responsetypes.py
 msgid "An error occurred with SymbolicResponse. The error was: {error_msg}"
-msgstr "Der opstod en fejl med SymbolicResponse. Fejlen var: {error_msg} "
+msgstr "Der opstod en fejl med SymbolicResponse. Fejlen var: {error_msg}"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Code Input"
@@ -2215,6 +2213,12 @@ msgid ""
 "must be unique. In \"id\" values, the only special characters that are "
 "supported are underscore, hyphen, and period."
 msgstr ""
+"Indtast diskussionskategorierne i følgende format: \"CategoryName\": "
+"{\"id\": \"i4x-InstitutionName-CourseNumber-course-CourseRun\"}. For "
+"eksempel kan en diskussionskategori være \"Lydian Mode\": {\"id\": \"i4x-"
+"UniversityX-MUS101-course-2015_T1\"}. \"ID\" værdi for hver kategori skal "
+"være unik. I \"id\" værdier er de eneste specialtegn, der understøttes, "
+"understregning, bindestreg og punktum."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Discussion Sorting Alphabetical"
@@ -2434,9 +2438,9 @@ msgid ""
 "\"%m-%d-%Y\" for MM-DD-YYYY, \"%d-%m-%Y\" for DD-MM-YYYY, \"%Y-%m-%d\" for "
 "YYYY-MM-DD, or \"%Y-%d-%m\" for YYYY-DD-MM."
 msgstr ""
-"Indtast formatet for forfaldsdatoer. Standarden er Man DD, ÅÅÅÅ. Enter "
-"\"%m-%d-%Y\" for MM-DD-ÅÅÅÅ, \"%d-%m-%Y\" for DD-MM-ÅÅÅÅ, \"%Y-%m-%d\" for "
-"ÅÅÅÅ-MM DD, eller \"%Y-%d-%m\" for ÅÅÅÅ-DD-MM."
+"Indtast formatet for forfaldsdatoer. Standarden er Mon DD, YYYY. Enter "
+"\"%m-%d-%Y\" for MM-DD-YYYY, \"%d-%m-%Y\" for DD-MM-YYYY, \"%Y-%m-%d\" for "
+"YYYY-MM DD, eller \"%Y-%d-%m\" for YYYY-DD-MM."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "External Login Domain"
@@ -4606,7 +4610,7 @@ msgstr ""
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "More Information About {user_name}'s Certificate:"
-msgstr "Flere oplysninger om {user_name}s diplom:"
+msgstr "Flere oplysninger om {user_name}'s diplom:"
 
 #. Translators: This line is displayed to a user who has completed a course
 #. and achieved a certification
@@ -4867,7 +4871,7 @@ msgid ""
 "There is no user with the username or email address {user_name} enrolled in "
 "this course."
 msgstr ""
-"Der er ingen bruger med det brugernavn eller den email-adresse {user_name} "
+"Der er ingen bruger med det brugernavn eller den email-adresse {user_name}  "
 "tilmeldt dette kursus."
 
 #: lms/djangoapps/courseware/masquerade.py
@@ -4880,7 +4884,7 @@ msgstr ""
 
 #: lms/templates/courseware/courseware-error.html
 msgid "Courseware"
-msgstr "Kursusudbud"
+msgstr "Kursusmateriale"
 
 #: lms/djangoapps/courseware/tabs.py
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
@@ -5214,6 +5218,7 @@ msgstr "Kurset {0} findes allerede i databiblioteket! (genindlæser alligevel)"
 #. the source git repository. Clone occurs if this is brand
 #. new, and pull is when it is being updated from the
 #. source.
+# -#-#-# dogwood-post
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid ""
 "Unable to clone or pull repository. Please check your url. Output was: {0!r}"
@@ -5832,15 +5837,14 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Student (username/email={user}) already in certificate exception list."
-msgstr ""
-"Kursist (brugernavn / email = {user}) er allerede på undtagelseslisten."
+msgstr "Kursist (username/email={user}) er allerede på undtagelseslisten."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "Certificate exception (user={user}) does not exist in certificate white "
 "list. Please refresh the page and try again."
 msgstr ""
-"Diplom undtagelse (user = {user}) eksisterer ikke i listen over godkendte "
+"Diplom undtagelse (user={user}) eksisterer ikke i listen over godkendte "
 "brugere. Opdater venligst siden og prøv igen."
 
 #: lms/djangoapps/instructor/views/api.py
@@ -5884,11 +5888,11 @@ msgstr "Generering startet for kursister på positivlisten."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "user \"{user}\" in row# {row}"
-msgstr "bruger \"{user}\" i række # {row}"
+msgstr "bruger \"{user}\" i række#  {row}"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "user \"{username}\" in row# {row}"
-msgstr "bruger \"{username}\" i række # {row}"
+msgstr "bruger \"{username}\" i række# {row}"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon id is None"
@@ -6648,6 +6652,7 @@ msgstr ""
 msgid "Enrollment codes for Course: {course_name}"
 msgstr "Tilmeldingskoder for Kursus: {course_name}"
 
+# -#-#-# release-09-03-2016
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Mode {mode} does not exist for {course_id}"
 msgstr "Funktion {mode} findes ikke for {course_id}"
@@ -8014,7 +8019,7 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"Din adgangskode er blevet indstillet. Du kan gå videre og %(link_start)slog in%(link_end)s nu."
+"Din adgangskode er blevet indstillet. Du kan gå videre og %(link_start)s log in %(link_end)s nu."
 
 #: lms/templates/registration/password_reset_confirm.html
 #, python-format
@@ -8076,7 +8081,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Nogen er blevet gjort opmærksom på dette problem. Prøv venligst igen om lidt. Kontakt %(start_link)s på %(end_link)s om eventuelle problemer."
+"Nogen er blevet gjort opmærksom på dette problem. Prøv venligst igen om lidt. Kontakt %(start_link)s os på%(end_link)s om eventuelle problemer."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -8150,7 +8155,7 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"Se sektionen med %(start_link)shjælp til kontaktoplysninger og svar på ofte stillede spørgsmål %(end_link)s"
+"Se sektionen med %(start_link)s hjælp til kontaktoplysninger og svar på ofte stillede spørgsmål %(end_link)s"
 
 #: lms/templates/registration/password_reset_email.html
 #, python-format
@@ -10229,7 +10234,7 @@ msgstr "Ekstern ressource"
 #. "total_points" is the maximum number of points achievable.
 #: lms/templates/lti.html
 msgid "{points} / {total_points} points"
-msgstr "{points} / {total_points} point"
+msgstr "{points} / {total_points} points"
 
 #. Translators: "total_points" is the maximum number of points achievable on
 #. this LTI unit
@@ -11812,7 +11817,7 @@ msgstr "Indskrænk Din Søgning"
 #: lms/templates/courseware/courseware-chromeless.html
 #: lms/templates/courseware/courseware.html
 msgid "{course_number} Courseware"
-msgstr "{course_number} Kursusudbud"
+msgstr "{course_number} Kursus"
 
 #: lms/templates/courseware/courseware-chromeless.html
 #: lms/templates/courseware/courseware.html
@@ -12217,7 +12222,7 @@ msgstr "{student_name}, du er berettiget til rabat på dette kursus"
 
 #: lms/templates/courseware/progress.html
 msgid "{a_start}Go to your dashboard{a_end} to purchase course credit."
-msgstr "{a_start}Gå til dit betjeningspanel {a_end} for at få kursusrabat."
+msgstr "{a_start}Gå til dit dashboard {a_end} for at få kursusrabat."
 
 #: lms/templates/courseware/progress.html
 msgid "{student_name}, you have not yet met the requirements for credit."
@@ -12917,15 +12922,15 @@ msgstr "efter flest stemmer"
 #, python-format
 msgid "%s discussion started"
 msgid_plural "%s discussions started"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s diskussioner startet"
+msgstr[1] "%s diskussioner startet"
 
 #: lms/templates/discussion/_user_profile.html
 #, python-format
 msgid "%s comment"
 msgid_plural "%s comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s kommentarer"
+msgstr[1] "%s kommentarer"
 
 #: lms/templates/discussion/index.html
 #: lms/templates/discussion/user_profile.html
@@ -13046,7 +13051,7 @@ msgstr "Det anbefales, at du ændrer din adgangskode."
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "Sincerely yours,The {course_name} Team"
-msgstr "Venlig hilsen, {course_name}-Teamet"
+msgstr "Venlig hilsen, {course_name} -Teamet"
 
 #: lms/templates/emails/activation_email.txt
 msgid "Thank you for signing up for {platform_name}."
@@ -13912,7 +13917,7 @@ msgid ""
 "{platform_name} is a nonprofit bringing high-quality education to everyone, "
 "everywhere. Your help allows us to continuously improve the learning "
 "experience for millions and make a better future one learner at a time."
-msgstr "{platform_name} "
+msgstr ""
 
 #: lms/templates/enrollment/course_enrollment_message.html
 msgid "Donation Actions"
@@ -16341,7 +16346,7 @@ msgstr ""
 
 #: lms/templates/static_templates/server-error.html
 msgid "There has been a 500 error on the {platform_name} servers"
-msgstr "Der har været omkring 500 fejl på {platform_name} serverne"
+msgstr "Der har været en fejl 500 på {platform_name} serverne"
 
 #: lms/templates/static_templates/server-error.html
 msgid ""
@@ -16565,7 +16570,7 @@ msgstr "Tilbage til dit skrivebord"
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "{span_start}(active){span_end}"
-msgstr "{span_start}(aktiv){span_end}"
+msgstr "{span_start}(active){span_end}"
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Changes"
@@ -16573,7 +16578,7 @@ msgstr "Ændringer"
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "{span_start}active{span_end}"
-msgstr "{span_start}aktiv{span_end}"
+msgstr "{span_start}active{span_end}"
 
 #: lms/templates/wiki/includes/breadcrumbs.html
 msgid "Add article"
@@ -16770,7 +16775,7 @@ msgstr ""
 
 #: cms/templates/asset_index.html
 msgid "Choose File"
-msgstr ""
+msgstr "Vælg fil"
 
 #: cms/templates/asset_index.html
 msgid "Your file has been deleted."
@@ -16888,7 +16893,7 @@ msgstr ""
 
 #: cms/templates/container.html
 msgid "Open the courseware in the LMS"
-msgstr ""
+msgstr "Åben kursusmaterialet i LMS"
 
 #: cms/templates/container.html
 msgid "View Live Version"
@@ -16896,7 +16901,7 @@ msgstr ""
 
 #: cms/templates/container.html
 msgid "Preview the courseware in the LMS"
-msgstr ""
+msgstr "Preview kursusmaterialet i LMS"
 
 #: cms/templates/container.html
 msgid "Adding components"
@@ -19518,7 +19523,7 @@ msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Explanation"
-msgstr ""
+msgstr "Forklaring"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Advanced Editor"
@@ -19929,7 +19934,7 @@ msgstr "slug"
 
 #: wiki/models/urlpath.py
 msgid "(root)"
-msgstr "(rod)"
+msgstr "(root)"
 
 #: wiki/models/urlpath.py
 msgid "URL path"
