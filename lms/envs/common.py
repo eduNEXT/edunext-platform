@@ -2884,6 +2884,13 @@ MICROSITE_DATABASE_TEMPLATE_CACHE_TTL = 5 * 60
 
 ################################ Settings for rss_proxy ################################
 
+######################### DATA API CONFIG ###########################
+
+DATA_API_DEF_PAGE_SIZE = 1000
+DATA_API_MAX_PAGE_SIZE = 30000
+
+####################### END DATA API CONFIG #########################
+
 RSS_PROXY_CACHE_TIMEOUT = 3600  # The length of time we cache RSS retrieved from remote URLs in seconds
 
 #### PROCTORING CONFIGURATION DEFAULTS
