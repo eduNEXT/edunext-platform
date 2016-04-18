@@ -1100,7 +1100,6 @@ simplefilter('ignore')
 MIDDLEWARE_CLASSES = (
     'request_cache.middleware.RequestCache',
     'microsite_configuration.middleware.MicrositeMiddleware',
-    'microsite_configuration.middleware.MicrositeCrossBrandingFilterMiddleware',
     'edunext.middleware.MicrositeMiddleware',
     'django_comment_client.middleware.AjaxExceptionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -1156,6 +1155,8 @@ MIDDLEWARE_CLASSES = (
     'ratelimitbackend.middleware.RateLimitMiddleware',
     # needs to run after locale middleware (or anything that modifies the request context)
     'edxmako.middleware.MakoMiddleware',
+    # Needs to run after mako, in case a 404 is thrown
+    'microsite_configuration.middleware.MicrositeCrossBrandingFilterMiddleware',
 
     # for expiring inactive sessions
     'session_inactivity_timeout.middleware.SessionInactivityTimeout',
