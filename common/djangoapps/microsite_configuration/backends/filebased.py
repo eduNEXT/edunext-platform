@@ -57,7 +57,7 @@ class EdunextCompatibleFilebasedMicrositeTemplateBackend(FilebasedMicrositeTempl
                 template_dir,
                 'templates',
                 relative_path
-                )
+            )
 
             if os.path.isfile(search_path):
                 path = '{0}/templates/{1}'.format(
