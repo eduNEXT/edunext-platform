@@ -89,3 +89,11 @@ def microsite_template_path(template_name):
     Django template filter to apply template overriding to microsites
     """
     return microsite.get_template_path(template_name)
+
+
+@register.filter
+def microsite_get_value(value, default=None):
+    """
+    Django template filter that wrapps the microsite.get_value function
+    """
+    return microsite.get_value(value, default)
