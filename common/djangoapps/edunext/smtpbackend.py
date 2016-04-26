@@ -17,6 +17,6 @@ class MicrositeAwareEmailBackend (EmailBackend):
                  ssl_keyfile=None, ssl_certfile=None,
                  **kwargs):
 
-        super(MicrositeEmailBackend, self).__init__()
+        super(MicrositeAwareEmailBackend, self).__init__()
         self.username = settings.EMAIL_HOST_USER
         self.password = settings.EMAIL_HOST_PASSWORD
