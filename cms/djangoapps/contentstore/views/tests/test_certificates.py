@@ -758,7 +758,7 @@ class CertificatesDetailHandlerTestCase(EventTestMixin, CourseTestCase, Certific
         test_url = reverse_course_url('certificates.certificate_activation_handler', self.course.id)
         self._add_course_certificates(count=1, signatory_count=2)
         user = UserFactory()
-        for role in [CourseInstructorRole, CourseStaffRole]:
+        for role in [CourseStaffRole]:
             role(self.course.id).add_users(user)
         self.client.login(username=user.username, password='test')
         response = self.client.post(
