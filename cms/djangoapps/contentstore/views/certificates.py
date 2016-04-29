@@ -35,7 +35,7 @@ from edxmako.shortcuts import render_to_response
 from opaque_keys.edx.keys import CourseKey, AssetKey
 from eventtracking import tracker
 from student.auth import has_studio_write_access
-from student.roles import GlobalStaff
+from student.roles import GlobalStaff, CourseInstructorRole
 from util.db import generate_int_id, MYSQL_MAX_INT
 from util.json_request import JsonResponse
 from xmodule.modulestore import EdxJSONEncoder
@@ -297,10 +297,11 @@ def certificate_activation_handler(request, course_key_string):
     POST
         json: is_active. update the activation state of certificate
     """
-    # Only global staff (PMs) are able to activate/deactivate certificate configuration
-    if not GlobalStaff().has_user(request.user):
-        raise PermissionDenied()
     course_key = CourseKey.from_string(course_key_string)
+
+    if not CourseInstructorRole(course_key).has_user(request.user):
+        raise PermissionDenied()
+
     store = modulestore()
     try:
         course = _get_course_and_check_access(course_key, request.user)
@@ -386,6 +387,7 @@ def certificates_list_handler(request, course_key_string):
                 'certificate_web_view_url': certificate_web_view_url,
                 'is_active': is_active,
                 'is_global_staff': GlobalStaff().has_user(request.user),
+                'is_course_instructor': CourseInstructorRole(course.id).has_user(request.user),
                 'certificate_activation_handler_url': activation_handler_url
             })
         elif "application/json" in request.META.get('HTTP_ACCEPT'):
