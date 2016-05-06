@@ -247,3 +247,10 @@ if os.path.isfile(join(dirname(abspath(__file__)), 'private.py')):
 MODULESTORE = convert_module_store_setting_if_needed(MODULESTORE)
 
 SECRET_KEY = '85920908f28904ed733fe576320db18cabd7b6cd'
+
+######################### DATA API CONFIG ###########################
+
+DATA_API_DEF_PAGE_SIZE = 1000
+DATA_API_MAX_PAGE_SIZE = 30000
+
+####################### END DATA API CONFIG #########################
