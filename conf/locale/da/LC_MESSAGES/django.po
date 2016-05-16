@@ -1,47 +1,5 @@
 # edunext helper translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Anders Haugaard Iversen <anha@seges.dk>, 2015
-# Birgitte Ploeger <bipl@seges.dk>, 2015-2016
-# inger sølle <inger@soellingvraa.dk>, 2015
-# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Anders Haugaard Iversen <anha@seges.dk>, 2015
-# Birgitte Ploeger <bipl@seges.dk>, 2015
-# Henrik J. Mondrup <hmondrup@gmail.com>, 2015
-# Jens Peter Hansen <kontakt@jenspeterhansen.dk>, 2015
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015
-# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2013 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# inger sølle <inger@soellingvraa.dk>, 2015
+# Copyright (C) 2016 eduNEXT
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"

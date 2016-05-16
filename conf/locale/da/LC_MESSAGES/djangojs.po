@@ -1,28 +1,5 @@
 # edunext helper translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Anders Haugaard Iversen <anha@seges.dk>, 2016
-# inger sølle <inger@soellingvraa.dk>, 2015
-# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
+# Copyright (C) 2016 eduNEXT
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
@@ -236,8 +213,8 @@ msgstr[1] "(%(earned)s/%(possible)s points)"
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "(%(num_points)s point possible)"
 msgid_plural "(%(num_points)s points possible)"
-msgstr[0] "(&(num_point)s mulige point)"
-msgstr[1] ""
+msgstr[0] "(&(num_points)s mulige point)"
+msgstr[1] "(&(num_points)s mulige point)"
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "The grading process is still running. Refresh the page to see updates."
