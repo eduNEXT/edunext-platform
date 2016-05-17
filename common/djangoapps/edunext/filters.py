@@ -60,7 +60,7 @@ class CourseEnrollmentFilter(BaseDataApiFilter):
 
     course_id = django_filters.MethodFilter()
     created = django_filters.DateTimeFromToRangeFilter()
-    is_active_enrollment = django_filters.BooleanFilter(name="is_active")
+    is_active = django_filters.BooleanFilter()
     mode = django_filters.CharFilter(lookup_type='iexact')
     site = django_filters.CharFilter(name="user__usersignupsource__site", lookup_type='iexact')
 
@@ -94,7 +94,7 @@ class CourseEnrollmentFilter(BaseDataApiFilter):
                  'id',
                  'course_id',
                  'created',
-                 'is_active_enrollment',
+                 'is_active',
                  'mode',
                  'site',
         ]
