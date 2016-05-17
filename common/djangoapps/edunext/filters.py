@@ -51,7 +51,7 @@ class UserFilter(BaseDataApiFilter):
                  'mailing_address',
                  'city',
                  'country',
-                 'site'
+                 'site',
                 ]
         order_by = True
 
@@ -62,6 +62,7 @@ class CourseEnrollmentFilter(BaseDataApiFilter):
     created = django_filters.DateTimeFromToRangeFilter()
     is_active = django_filters.BooleanFilter()
     mode = django_filters.CharFilter(lookup_type='iexact')
+    site = django_filters.CharFilter(name="user__usersignupsource__site", lookup_type='iexact')
 
     def filter_course_id(self, queryset, value):
         """
@@ -94,6 +95,7 @@ class CourseEnrollmentFilter(BaseDataApiFilter):
                  'course_id',
                  'created',
                  'is_active',
-                 'mode'
+                 'mode',
+                 'site',
         ]
         order_by = True
