@@ -213,8 +213,8 @@ msgstr[1] "(%(earned)s/%(possible)s points)"
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "(%(num_points)s point possible)"
 msgid_plural "(%(num_points)s points possible)"
-msgstr[0] "(&(num_points)s mulige point)"
-msgstr[1] "(&(num_points)s mulige point)"
+msgstr[0] "(%(num_points)s mulige point)"
+msgstr[1] "(%(num_points)s mulige point)"
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "The grading process is still running. Refresh the page to see updates."

@@ -1,197 +1,17 @@
-# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# arrow1234 <aleoncavallo@gmail.com>, 2014
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Cristian Salamea <ovnicraft@gmail.com>, 2014-2015
-# David Salazar <imdjsg@gmail.com>, 2014
-# dzepeda <davitzepeda@hotmail.com>, 2014
-# diegobe <diegobe@iadb.org>, 2014
-# David Salazar <imdjsg@gmail.com>, 2014
-# Elias Estay <eestay@u.uchile.cl>, 2015
-# Felix Antonio Valdez Noverola <felix@itesm.mx>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# jorgebarrero <jorgebarrero@gmail.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2016
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# karlman72 <karlman72@gmail.com>, 2014
-# Laura Silva <lingison@edx.org>, 2015-2016
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Matías Olivera <MatiasOlivera@outlook.com>, 2015
-# MarnyLopez, 2014
-# Natalia, 2013
-# Natalia, 2013-2014
-# Ned Batchelder <ned@edx.org>, 2016
-# Nuri Plans Toral <nplans@gmail.com>, 2015
-# Patricia Colmenares <patrusca38@hotmail.com>, 2015
-# rcelaya <rcelaya@ula.ve>, 2014
-# Sarina Canelake <sarina@edx.org>, 2014-2015
-# Sergio A. Salazar <sergiosalazar@live.ru>, 2015
-# sebasco <sjduranh@gmail.com>, 2014
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
-# xocoyotzin, 2014
-# Valeria Freire <valtodopds@hotmail.com>, 2014-2015
-# wjmendez <walterj.mendez@gmail.com>, 2014
-# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Addi Hazel Mendoza Sánchez <addictivoh@gmail.com>, 2015
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Cristian Guerra <cristian.guerra.maya@gmail.com>, 2016
-# Cristian Salamea <ovnicraft@gmail.com>, 2014-2015
-# Escored <escored@gmail.com>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014-2015
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# karlman72 <karlman72@gmail.com>, 2014
-# karlman72 <karlman72@gmail.com>, 2014
-# Laura Silva <lingison@edx.org>, 2016
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# MarnyLopez, 2014
-# Matías Olivera <MatiasOlivera@outlook.com>, 2015
-# MarnyLopez, 2014
-# Natalia, 2013-2014
-# Natalia, 2013
-# Natalia, 2014
-# Valeria Freire <valtodopds@hotmail.com>, 2014
-# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Addi Hazel Mendoza Sánchez <addictivoh@gmail.com>, 2014
-# andreslucena <inactive+andreslucena@transifex.com>, 2013
-# andreslucena <inactive+andreslucena@transifex.com>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Benjy Malca Bautista <bnmalcabis@gmail.com>, 2015
-# Cristian Salamea <ovnicraft@gmail.com>, 2013-2015
-# morsoinferno <cristobal.acosta@usach.cl>, 2014-2015
-# David Salazar <imdjsg@gmail.com>, 2014
-# dzepeda <davitzepeda@hotmail.com>, 2014
-# David Salazar <imdjsg@gmail.com>, 2014
-# Elias Estay <eestay@u.uchile.cl>, 2015
-# Fabio Avellaneda <fabio_avellaneda@javeriana.edu.co>, 2015
-# Felix Antonio Valdez Noverola <felix@itesm.mx>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2013
-# Fernando Abramowitz <ferabra@gmail.com>, 2013
-# Herty Nava <translation@bolmedia.ca>, 2013
-# Irvin Cabrera <pirpinachisloco@hotmail.com>, 2014
-# Ismael Saavedra <isma.18.94@gmail.com>, 2014
-# jimenaianina <jime.ianina@gmail.com>, 2014
-# Jonathan Amaya <jonathan.amaya88@yahoo.com>, 2014
-# jorgebarrero <jorgebarrero@gmail.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2016
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# Juan Fernando Villa <elite.linux@gmail.com>, 2015
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# Lalo Cabrera <laloogcabrera@yahoo.com.mx>, 2014
-# Laura Silva <lingison@edx.org>, 2016
-# camilomaiden <inactive+camilomaiden@transifex.com>, 2014
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013-2014
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Marco Morales, 2014
-# emgl <marsh_melow@hotmail.es>, 2014
-# Matías Olivera <MatiasOlivera@outlook.com>, 2015
-# MarnyLopez, 2014
-# Natalia, 2013
-# Natalia, 2013-2014
-# Ned Batchelder <ned@edx.org>, 2016
-# Nestor Alejandro Mendoza Espinoza <name1984@gmail.com>, 2015
-# Cristian Salamea <ovnicraft@gmail.com>, 2013
-# paul ochoa <palichis@solid-ec.org>, 2015
-# Etna Pretelín Ricárdez, 2014
-# Rubén Torres <r.torres@usal.es>, 2015
-# Santiago Salkin <salkin.santiago@gmail.com>, 2014
-# Sarina Canelake <sarina@edx.org>, 2014-2015
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
-# Valeria Freire <valtodopds@hotmail.com>, 2014-2015
-# Yleana Munoz <yleana.munoz@gmail.com>, 2015
-# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Addi Hazel Mendoza Sánchez <addictivoh@gmail.com>, 2015
-# andreslucena <inactive+andreslucena@transifex.com>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Aylén <aylen_00@hotmail.com>, 2014
-# Cristian Salamea <ovnicraft@gmail.com>, 2014
-# morsoinferno <cristobal.acosta@usach.cl>, 2014
-# diegobe <diegobe@iadb.org>, 2014
-# David Salazar <imdjsg@gmail.com>, 2014
-# Felix Antonio Valdez Noverola <felix@itesm.mx>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2013
-# Giancarlo  De  Agostini <giancarlo.deagostini@iaen.edu.ec>, 2015
-# Herty Nava <translation@bolmedia.ca>, 2013
-# Ismael Saavedra <isma.18.94@gmail.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2016
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# karlman72 <karlman72@gmail.com>, 2014
-# Laura Silva <lingison@edx.org>, 2015-2016
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Matías Olivera <MatiasOlivera@outlook.com>, 2015
-# Natalia, 2013
-# Nuri Plans Toral <nplans@gmail.com>, 2015
-# Cristian Salamea <ovnicraft@gmail.com>, 2013
-# Patricia Colmenares <patrusca38@hotmail.com>, 2015
-# paul ochoa <palichis@solid-ec.org>, 2015
-# Sarina Canelake <sarina@edx.org>, 2014
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
-# Valeria Freire <valtodopds@hotmail.com>, 2015
-# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2013 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Cristian Salamea <ovnicraft@gmail.com>, 2015
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# Laura Silva <lingison@edx.org>, 2016
+# edunext helper translation file.
+# Copyright (C) 2016 eduNEXT
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2016-02-15 23:30+0000\n"
-"PO-Revision-Date: 2016-01-19 20:04+0000\n"
-"Last-Translator: Laura Silva <lingison@edx.org>\n"
-"Language-Team: Spanish (Latin America) (http://www.transifex.com/open-edx/edx-platform/language/es_419/)\n"
+"POT-Creation-Date: 2016-03-30 21:02+0000\n"
+"PO-Revision-Date: 2016-03-30 15:48+0000\n"
+"Last-Translator: Felipe Montoya <felipe.montoya@edunext.co>\n"
+"Language-Team: eduNEXT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
-"Language: es_419\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
@@ -1482,23 +1302,23 @@ msgstr "procesando"
 #. question
 #: common/lib/capa/capa/inputtypes.py
 msgid "This is correct."
-msgstr ""
+msgstr "Esto es correcto."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "This is incorrect."
-msgstr ""
+msgstr "Esto es incorrecto."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "This is partially correct."
-msgstr ""
+msgstr "Esto es parcialmente correcto."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "This is unanswered."
-msgstr ""
+msgstr "Esto no ha sido respondido."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "This is being processed."
-msgstr ""
+msgstr "Esto está siendo procesado."
 
 #. Translators: 'ChoiceGroup' is an input type and should not be translated.
 #: common/lib/capa/capa/inputtypes.py
@@ -1622,7 +1442,7 @@ msgstr "Opción múltiple"
 #. Translators: 'unmask_name' is a method name and should not be translated.
 #: common/lib/capa/capa/responsetypes.py
 msgid "unmask_name called on response that is not masked"
-msgstr ""
+msgstr "unmask_name llamado en petición que no está enmascarada"
 
 #. Translators: 'shuffle' and 'answer-pool' are attribute names and should not
 #. be translated.
@@ -2614,7 +2434,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Info Sidebar Name"
-msgstr ""
+msgstr "Nombre de la barra lateral del curso"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2622,6 +2442,8 @@ msgid ""
 "on the Course Info page. Your course handouts appear in the right panel of "
 "the page."
 msgstr ""
+"Ingrese el nombre que desea mostrar a los estudiantes en la barra lateral "
+"derecha de la página de información del curso. "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2722,6 +2544,9 @@ msgid ""
 "marks, enter the short name of the course to use on the certificate that "
 "students receive when they complete the course."
 msgstr ""
+"Use esta configuración solo cuando esté generando certificados en PDF. Entre"
+" comillas, ingrese el código corto del curso para utilizar en el certificado"
+" que recibirán los estudiantes al completar el curso."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Name (Short)"
@@ -2733,6 +2558,9 @@ msgid ""
 "marks, enter the long name of the course to use on the certificate that "
 "students receive when they complete the course."
 msgstr ""
+"Use esta configuración solo cuando esté generando certificados en PDF. Entre"
+" comillas, ingrese el código largo del curso para utilizar en el certificado"
+" que recibirán los estudiantes al completar el curso."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Name (Long)"
@@ -2998,6 +2826,9 @@ msgid ""
 "Enter configuration for the teams feature. Expects two entries: "
 "max_team_size and topics, where topics is a list of topics."
 msgstr ""
+"Ingresar la configuración para la característica de equipos. Esperar dos "
+"entradas posibles: tamaño máximo del equipo y temas, donde temas es una "
+"lista de temas. "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enable Proctored Exams"
@@ -3779,6 +3610,13 @@ msgid ""
 "-ad9d-0178ab8c77be\", \"transcripts\": {\"en\": \"/static/DemoX-D01_1.srt\","
 " \"uk\": \"/static/DemoX-D01_1_uk.srt\"}}"
 msgstr ""
+"Proporcione un video de 5-10 segundos de duración, para que sea colocado "
+"antes de los videos de los cursos. Ingrese el ID del video y uno o más "
+"archivos de transcripción en el siguiente formato: {\"video_id\": \"ID\", "
+"\"transcripts\": {\"language\": \"/static/filename.srt\"}}. Por ejemplo, una"
+" entrada para un video con dos transcripciones, sería: {\"video_id\": "
+"\"77cef264-d6f5-4cf2-ad9d-0178ab8c77be\", \"transcripts\": {\"en\": "
+"\"/static/DemoX-D01_1.srt\", \"uk\": \"/static/DemoX-D01_1_uk.srt\"}}"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Show Reset Button for Problems"
@@ -4689,6 +4527,10 @@ msgid ""
 "agreed to abide by {platform_name}'s honor code and completed all of the "
 "required tasks for this course under its guidelines."
 msgstr ""
+"Un certificado tipo {cert_type} significa que un usuario de {platform_name} "
+"ha aceptado regirse por el Código de Honor de {platform_name} y ha "
+"completado todas las actividades requeridas por el curso bajo estos "
+"lineamientos."
 
 #. Translators:  This text describes the 'ID Verified' course certificate
 #. type, which is a higher level of
@@ -4701,6 +4543,11 @@ msgid ""
 "required tasks for this course under its guidelines, as well as having their"
 " photo ID checked to verify their identity."
 msgstr ""
+"Un certificado tipo {cert_type} significa que un usuario de {platform_name} "
+"ha aceptado regirse por el Código de Honor de {platform_name} y ha "
+"completado todas las actividades requeridas por el curso bajo estos "
+"lineamientos, al igual que ha verificado su identidad con un documento de "
+"identificación con foto."
 
 #. Translators:  This text describes the 'XSeries' course certificate type.
 #. An XSeries is a collection of
@@ -4711,6 +4558,9 @@ msgid ""
 "An {cert_type} Certificate demonstrates a high level of achievement in a "
 "program of study, and includes verification of the student's identity."
 msgstr ""
+"Un certificado tipo {cert_type} demuestra un alto nivel de logro en un "
+"programa de estudio, e incluye la verificación de identidad a través de un "
+"documento de identificación con foto."
 
 #. Translators:  The format of the date includes the full name of the month
 #: lms/djangoapps/certificates/views/webview.py
@@ -4742,6 +4592,8 @@ msgid ""
 "successfully completed, received a passing grade, and was awarded a "
 "{platform_name} {certificate_type} Certificate of Completion in "
 msgstr ""
+"completó exitosamente, obteniendo calificación abrobatoria y el certificado "
+"de terminación tipo {certificate_type} otorgado en {platform_name} para "
 
 #. Translators: This text describes the purpose (and therefore, value) of a
 #. course certificate
@@ -4755,6 +4607,12 @@ msgid ""
 "require completing additional steps, such as <a href='{verified_cert_url}'> "
 "verifying your identity</a>."
 msgstr ""
+"{platform_name} reconoce los logros a través de certificados, que son "
+"entregados por las diferentes actividades que los estudiantes de "
+"{platform_name} completa en el marco del <a href='{tos_url}'>Código de Honor"
+" de {platform_name}</a>. Algunos certificados requieren completar pasos "
+"adicionales, como la <a href='{verified_cert_url}'> verificación de "
+"identidad</a>."
 
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
@@ -4836,6 +4694,10 @@ msgid ""
 "and many others.  {platform_name} is a non-profit online initiative created "
 "by founding partners Harvard and MIT."
 msgstr ""
+"{platform_name}  ofrece clases interactivas en línea y MOOCs de las mejores "
+"universidades del mundo, incluyendo como MIT, Harvard, Berkeley, Universidad"
+" de Texas y muchas otras. {platform_name} es una iniciativa en línea sin "
+"fines de lucro creada por los socios fundadores Harvard y MIT."
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "About {platform_name}"
@@ -4869,12 +4731,14 @@ msgid ""
 "a course of study offered by {partner_short_name}, an online learning "
 "initiative of {partner_long_name} through {platform_name}."
 msgstr ""
+"curso ofrecido por {partner_short_name}, una iniciativa de aprendizaje en "
+"línea de {partner_long_name} a través de {platform_name}."
 
 #. Translators:  This text represents the description of course
 #: lms/djangoapps/certificates/views/webview.py
 msgid ""
 "a course of study offered by {partner_short_name}, through {platform_name}."
-msgstr ""
+msgstr "curso ofrecido por {partner_short_name}, a través de {platform_name}."
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "I completed the {course_title} course on {platform_name}."
@@ -4884,6 +4748,7 @@ msgstr "Completé el {course_title} en {platform_name}"
 msgid ""
 "I completed a course on {platform_name}. Take a look at my certificate."
 msgstr ""
+"Completé un curso abierto en {platform_name}. Mira mi Constancia de Honor."
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "More Information About {user_name}'s Certificate:"
@@ -4893,7 +4758,7 @@ msgstr "Más información acerca del cerfificado de {user_name}:"
 #. and achieved a certification
 #: lms/djangoapps/certificates/views/webview.py
 msgid "{fullname}, you've earned a certificate!"
-msgstr ""
+msgstr "{fullname}, usted ha ganado un certificado!"
 
 #. Translators: This line congratulates the user and instructs them to share
 #. their accomplishment on social networks
@@ -4903,6 +4768,9 @@ msgid ""
 "accomplished. Show it off to family, friends, and colleagues in your social "
 "and professional networks."
 msgstr ""
+"Felicidades! Esta página resume los detalles de los logros que ha alcanzado."
+" Puede compartirlo con familia, amigos, colegas en sus redes sociales y "
+"profesionales."
 
 #. Translators: This line leads the reader to understand more about the
 #. certificate that a student has been awarded
@@ -5159,6 +5027,7 @@ msgstr ""
 "Este tipo de componente no se puede mostrar en la vista del curso como un "
 "estudiante específico."
 
+#: lms/djangoapps/courseware/tabs.py
 #: lms/templates/courseware/courseware-error.html
 msgid "Courseware"
 msgstr "Contenidos"
@@ -6350,6 +6219,7 @@ msgid "Analytics"
 msgstr "Analíticas"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
+#: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Metrics"
 msgstr "Métricas"
 
@@ -6381,63 +6251,68 @@ msgstr "Incompleto"
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Course Statistics At A Glance"
-msgstr ""
+msgstr "Resumen de estadísticas del curso"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "List of students enrolled in {course_key}"
-msgstr ""
+msgstr "Lista de estudiantes inscritos en {course_key}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Raw Grades of students enrolled in {course_key}"
-msgstr ""
+msgstr "Calificaciones de estudiantes inscritos en {course_key}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Assignment Name"
-msgstr ""
+msgstr "Nombre de la tarea"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Please enter an assignment name"
-msgstr ""
+msgstr "Por favor ingrese un nombre de tarea"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Invalid assignment name '{name}'"
-msgstr ""
+msgstr "Nombre de tarea inválido: '{name}'"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "External email"
-msgstr ""
+msgstr "email externo"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Grades for assignment \"{name}\""
-msgstr ""
+msgstr "Calificaciones para la tarea \"{name}\""
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Grades from {course_id}"
-msgstr ""
+msgstr "Calificaciones de {course_id}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "No remote gradebook defined in course metadata"
 msgstr ""
+"No se definió un libro de calificaciones remoto en los metadatos del curso"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "No remote gradebook url defined in settings.FEATURES"
 msgstr ""
+"No se definió una url para el libro de calificaciones en la Configuración."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "No gradebook name defined in course remote_gradebook metadata"
 msgstr ""
+"No se definió un nombre de libro de calificaciones en los metadatos del "
+"libro remoto para el curso."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to communicate with gradebook server at {url}"
 msgstr ""
+"Falló al comunicarse con el servidor del libro de calificaciones en {url}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Error: {err}"
-msgstr ""
+msgstr "Error: {err}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Remote gradebook response for {action}"
-msgstr ""
+msgstr "Respuesta del libro de calificaciones remoto para {action}"
 
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's full name.
@@ -6448,11 +6323,11 @@ msgstr "Nombre completo"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "{title} in course {course_key}"
-msgstr ""
+msgstr "{title} en el curso {course_key}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/tools.py
@@ -6465,27 +6340,31 @@ msgstr "Nombre Completo"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "edX email"
-msgstr ""
+msgstr "email de edX"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Enrollment of students"
-msgstr ""
+msgstr "Inscripción de estudiantes"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Un-enrollment of students"
-msgstr ""
+msgstr "Des inscripción de estudiantes"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Failed to find any background tasks for course \"{course}\", module "
 "\"{problem}\" and student \"{student}\"."
 msgstr ""
+"No se han encontrado tareas para el curso \"{course}\", módulo \"{problem}\""
+" y estudiante \"{student}\"."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Failed to find any background tasks for course \"{course}\" and module "
 "\"{problem}\"."
 msgstr ""
+"No se han encontrado tareas para el curso \"{course}\" y el módulo "
+"\"{problem}\"."
 
 #: lms/djangoapps/instructor/views/registration_codes.py
 msgid ""
@@ -6868,7 +6747,7 @@ msgstr ""
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid "Courseware Chrome"
-msgstr ""
+msgstr "Chrome para el curso"
 
 #. Translators: DO NOT translate the words in quotes here, they are
 #. specific words for the acceptable values.
@@ -6895,6 +6774,8 @@ msgid ""
 "Enter the tab that is selected in the XBlock. If not set, the Courseware tab"
 " is selected."
 msgstr ""
+"Ingrese la pestaña que estará seleccionada en el XBlock. Si no se configura,"
+" se seleccionará la pestaña de contenidos del curso."
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid "LaTeX Source File Name"
@@ -8425,14 +8306,14 @@ msgstr "Youtube"
 msgid "Subscribe to the {platform_name} YouTube channel"
 msgstr "Suscríbase al canal YouTube de {platform_name}."
 
-#: cms/templates/course-create-rerun.html cms/templates/index.html
-#: cms/templates/settings.html
+#: lms/envs/devstack.py cms/templates/course-create-rerun.html
+#: cms/templates/index.html cms/templates/settings.html
 msgid "Organization"
 msgstr "Organización"
 
 #: lms/envs/devstack.py
 msgid "Course Type"
-msgstr ""
+msgstr "Tipo de curso"
 
 #: lms/templates/main_django.html cms/templates/base.html
 #: lms/templates/main.html
@@ -8484,12 +8365,12 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                Lo sentimos, pero esta versión de su navegador no está soportada. Intente nuevamente con un navegador diferente o en una versión mas actualizada del navegador.\n"
+"                Lo sentimos, pero esta versión de su navegador no está soportada. Intente nuevamente con un navegador distinto o una versión actualizada del mismo navegador.\n"
 "            "
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "The following errors occurred while processing your registration: "
-msgstr "Ocurrió el siguiente error al procesar su registro:"
+msgstr "Ocurrieron los siguientes errores al procesar su registro:"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "You must complete all fields."
@@ -8505,7 +8386,7 @@ msgid ""
 "reset"
 msgstr ""
 "Lo sentimos, nuestros sistemas parecen estar teniendo problemas para "
-"procesar su reseteo de contraseña"
+"procesar su restablecimiento de contraseña"
 
 #: lms/templates/registration/password_reset_confirm.html
 #, python-format
@@ -8515,7 +8396,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                Alguien ya ha sido alertado de esta situación. Por favor reintente en algunos minutos. Por favor %(start_link)scontáctenos%(end_link)s para transmitirnos cualquier inquietud.\n"
+"                Alguien ya ha sido avisado respecto a esta situación. Por favor intente nuevamente en unos minutos. Por favor %(start_link)scontáctenos%(end_link)s para transmitirnos cualquier inquietud.\n"
 "            "
 
 #: lms/templates/registration/password_reset_confirm.html
@@ -8571,12 +8452,12 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"            El vínculo de restablecimiento de contraseña es inválido, posiblemente este vínculo ya fue utilizado. Por favor regrese a la página de %(start_link)sinicio de sesión%(end_link)s y comience de nuevo el proceso de restablecer contraseña.\n"
+"            El vínculo de restablecimiento de contraseña es inválido, posiblemente porque este vínculo ya fue utilizado. Por favor vuelva a la página de %(start_link)sinicio de sesión%(end_link)s y comience de nuevo el proceso de restablecer contraseña.\n"
 "        "
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Password Reset Help"
-msgstr "Ayuda de Restablecimiento de Contraseña"
+msgstr "Ayuda con Restablecimiento de Contraseña"
 
 #: lms/templates/registration/password_reset_confirm.html
 #: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
@@ -8591,7 +8472,7 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"              Visite nuestra %(start_link)ssección de ayuda para ver la información de contacto y las respuestas a las preguntas mas comunes%(end_link)s\n"
+"              Visite nuestro %(start_link)sCentro de Ayuda para ver la información de contacto y las respuestas a las preguntas más frecuentes%(end_link)s\n"
 "          "
 
 #: lms/templates/registration/password_reset_email.html
@@ -8609,6 +8490,7 @@ msgstr ""
 "Por favor visite la siguiente página y seleccione una nueva contraseña:"
 
 #: lms/templates/registration/password_reset_email.html
+#: lms/templates/registration/password_reset_email_html.html
 msgid ""
 "If you didn't request this change, you can disregard this email - we have "
 "not yet reset your password."
@@ -11671,7 +11553,7 @@ msgstr "Descargar la transcripción"
 
 #: lms/templates/video.html
 msgid "Download Handout"
-msgstr "Descargar folleto."
+msgstr "Descargar documento"
 
 #: lms/templates/word_cloud.html
 msgid "Your words:"
@@ -12267,7 +12149,7 @@ msgstr "Usted está inscrito en este curso"
 
 #: lms/templates/courseware/course_about.html
 msgid "View Courseware"
-msgstr ""
+msgstr "Ver contenido del curso"
 
 #: lms/templates/courseware/course_about.html
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
@@ -12291,7 +12173,7 @@ msgstr "Añadir {course_name} al carrito <span>({price} USD)</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
-msgstr "Inscrito en {course_name}"
+msgstr "Inscribirse en {course_name}"
 
 #: lms/templates/courseware/course_about.html
 msgid "View About Page in studio"
@@ -12519,7 +12401,7 @@ msgstr "Novedades y noticias del curso"
 
 #: lms/templates/courseware/info.html
 msgid "Handout Navigation"
-msgstr "Navegación de apuntes"
+msgstr "Navegación de documentos"
 
 #: lms/templates/courseware/info.html
 msgid "Important Course Dates"
@@ -12527,11 +12409,11 @@ msgstr "Fechas importantes del curso"
 
 #: lms/templates/courseware/info.html
 msgid "Course Handouts"
-msgstr "Apuntes del curso"
+msgstr "Documentos del curso"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Legacy Instructor Dashboard"
-msgstr ""
+msgstr "Panel de instrucción Antiguo"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
@@ -12540,23 +12422,27 @@ msgstr "Ver el curso en Studio"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Back To Instructor Dashboard"
-msgstr ""
+msgstr "Volver al panel de instructor"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "You are using the legacy instructor dashboard, which we will retire in the "
 "near future."
 msgstr ""
+"Está usando el panel de instructor antiguo, el cual será retirado en un "
+"futuro cercano."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Return to the Instructor Dashboard"
-msgstr ""
+msgstr "Volver al panel de instructor"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "If the Instructor Dashboard is missing functionality, please contact your PM"
 " to let us know."
 msgstr ""
+"Si al panel de instructor le falta alguna funcionalidad, por favor contacte "
+"su Gestor de producto para notificarnos."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -12565,19 +12451,19 @@ msgstr "Administrador"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Forum Admin"
-msgstr ""
+msgstr "Administración del Foro"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "DataDump"
-msgstr ""
+msgstr "Volcado de Datos"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Manage Groups"
-msgstr ""
+msgstr "Administrar Grupos"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Grade Downloads"
-msgstr ""
+msgstr "Descarga de calificaciones"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
@@ -12585,12 +12471,18 @@ msgid ""
 "have disabled those features for courses with more than {max_enrollment} "
 "students."
 msgstr ""
+"Nota: Algunos de estos botones pueden generar que se superen los tiempos de "
+"espera en los cursos más grandes. Hemos deshabilitado estas funciones para "
+"cursos con más de {max_enrollment} estudiantes inscritos."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "To download student grades and view the grading configuration for your "
 "course, visit the Data Download section of the Instructor Dashboard."
 msgstr ""
+"Para descargar las calificaciones y ver la configuración de las "
+"calificaciones para el curso, visite la sección descarga de datos del Panel "
+"de Control del instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
@@ -12598,24 +12490,29 @@ msgid ""
 "enrolled students), visit the Student Admin section of the Instructor "
 "Dashboard."
 msgstr ""
+"Para ver el Libro de Calificaciones (solo disponible para cursos con un "
+"número bajo de estudiantes inscritos), visita la sección de Administración "
+"de estudiantes del Panel de control del Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Export grades to remote gradebook"
-msgstr ""
+msgstr "Exportar calificaciones a un libro de calificaciones remoto"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "The assignments defined for this course should match the ones stored in the "
 "gradebook, for this to work properly!"
 msgstr ""
+"¡Las tareas definidas para este curso deben corresponder con las almacenadas"
+" en el libro de calificaciones para que esto funcione correctamente!"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Gradebook name:"
-msgstr ""
+msgstr "Nombre del libro de calificaciones:"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Assignment name:"
-msgstr ""
+msgstr "Nombre de la tarea:"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
@@ -12627,26 +12524,32 @@ msgid ""
 "To perform these actions, visit the Student Admin section of the Instructor "
 "Dashboard."
 msgstr ""
+"Para realizar estas acciones, visite la sección de Administración de "
+"Estudiantes en el Panel de Control del Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Student-specific grade inspection and adjustment"
-msgstr ""
+msgstr "Inspección y ajuste de calificaciones específicas para el estudiante"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "To add or remove course staff or instructors, visit the Membership section "
 "of the Instructor Dashboard."
 msgstr ""
+"Para añadir o remover el staff o instrucctor del curso, visite la sección de"
+" Membership del Panel de Control del Instructor"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "To manage forum roles, visit the Membership section of the Instructor "
 "Dashboard."
 msgstr ""
+"Para administrar funciones del foro, visite la sección Composición del Panel"
+" de Control Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Enrollment Data"
-msgstr ""
+msgstr "Datos de inscripciones"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
@@ -12654,6 +12557,9 @@ msgid ""
 "enrolled in this course, visit the Data Download section of the Instructor "
 "Dashboard."
 msgstr ""
+"Para descargar un archivo CSV con la información de perfiles de estudiantes "
+"inscritos, visite la sección descarga de datos del Panel de Control del "
+"instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
@@ -12661,92 +12567,108 @@ msgid ""
 "yet signed up for it, visit the Data Download section of the Instructor "
 "Dashboard."
 msgstr ""
+"Para descargar una lista de los estudiantes que pueden inscribirse al curso,"
+" pero aún no se han registrado, visite la sección de descarga de datos del "
+"Panel de Control del  Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Pull enrollment from remote gradebook"
-msgstr ""
+msgstr "Importe inscripciones del libro de calificaciones remoto"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Section:"
-msgstr ""
+msgstr "Sección:"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "To download a CSV listing student responses to a given problem, visit the "
 "Data Download section of the Instructor Dashboard."
 msgstr ""
+"Para descargar un archivo CSV con la lista de respuestas de los estudiantes "
+"a un problema dado, visite la sección de descarga de datos del Panel de "
+"Control del Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "To download student profile data and anonymized IDs, visit the Data Download"
 " section of the Instructor Dashboard."
 msgstr ""
+"Para descargar los datos del perfil de los estudiantes y  los "
+"identificadores anónimos, visite la sección de descarga de datos del Panel "
+"de Control del  Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "To manage beta tester roles and cohorts, visit the Membership section of the"
 " Instructor Dashboard."
 msgstr ""
+"Para manejar los roles beta tester y cohorts, vistar la secciones membresías"
+" del tablero del instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "To manage beta tester roles, visit the Membership section of the Instructor "
 "Dashboard."
 msgstr ""
+"Para administrar beta tester roles, visita la sección de Membresía en el "
+"Panel del Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "To send email, visit the Email section of the Instructor Dashboard."
 msgstr ""
+"Para enviar un email, visita la sección Email en el Panel del Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Pending Instructor Tasks"
-msgstr ""
+msgstr "Tareas de instructor pendientes"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task Type"
-msgstr ""
+msgstr "Tipo de Tarea"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task inputs"
-msgstr ""
+msgstr "Valores de entrada para la tarea"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task Id"
-msgstr ""
+msgstr "Id de la tarea"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Requester"
-msgstr ""
+msgstr "Solicitante"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Submitted"
-msgstr ""
+msgstr "Enviado"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task State"
-msgstr ""
+msgstr "Estado de la tarea"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Duration (sec)"
-msgstr ""
+msgstr "Duración (segundos)"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task Progress"
-msgstr ""
+msgstr "Progreso de la Tarea"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "unknown"
-msgstr ""
+msgstr "desconocido"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
 "View course statistics in the Admin section of this legacy instructor "
 "dashboard."
 msgstr ""
+"Ver las estadísticas del curso en la sección Admin de este legado del panel "
+"de control del Instructor."
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Course errors"
-msgstr ""
+msgstr "Errores del curso"
 
 #: lms/templates/courseware/news.html
 msgid "News - MITx 6.002x"
@@ -13491,7 +13413,7 @@ msgstr "Ocultar"
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Discussion topics; current selection is: "
-msgstr ""
+msgstr "Temas de discusión; la selección actual es: "
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Search all posts"
@@ -13710,22 +13632,28 @@ msgid ""
 "After you activate your account, you can sign up for and take any of the "
 "hundreds of courses {platform_name} offers."
 msgstr ""
+"Después de activar su cuenta, podrá inicia sesión y tomar cualquiera de los "
+"cursos ofrecidos por {platform_name}:"
 
 #: lms/templates/emails/activation_email.txt
 msgid ""
 "If you need help, please use our web form at {contact_us_url} or email "
 "{info_email_address}."
 msgstr ""
+"Si necesita ayuda, favor use nuestro formulario web {contact_us_url} o email"
+" {info_email_address}."
 
 #: lms/templates/emails/activation_email.txt
 msgid "We hope you enjoy learning with {platform_name}!"
-msgstr ""
+msgstr "Esperamos disfrutes aprender con {platform_name}!"
 
 #: lms/templates/emails/activation_email.txt
 msgid ""
 "This email was automatically sent by {site_name} because someone attempted "
 "to create an {platform_name} account using this email address."
 msgstr ""
+"Este email fue enviado automaticamente por {site_name} debido a que alguien "
+"intento crear una cuenta en {platform_name} usando esta direccion de email."
 
 #: lms/templates/emails/activation_email.txt
 #: lms/templates/emails/email_change.txt
@@ -13734,6 +13662,10 @@ msgid ""
 " any more email from us. Please do not reply to this e-mail; if you require "
 "assistance, check the about section of the {platform_name} Courses web site."
 msgstr ""
+"Si usted no solicitó este cambio, no necesita hacer nada; no recibirá ningún"
+" correo adicional por parte de nosotros.  Por favor no responda a este "
+"correo; si requiere mayor asistencia, visite la sección de Ayuda en la "
+"página web de {platform_name}."
 
 #: lms/templates/emails/activation_email.txt
 msgid ""
@@ -13988,6 +13920,9 @@ msgid ""
 "{platform_name} from {old_email} to {new_email}. If you did not make this "
 "request, please contact us at"
 msgstr ""
+"Este correo es para confirmar que usted ha cambiado la dirección de correo "
+"asociada con {platform_name} de {old_email} a {new_email}. Si usted no "
+"realizó esta solicitud, por favor contáctenos a "
 
 #: lms/templates/emails/confirm_email_change.txt
 #: lms/templates/emails/html/confirm_email_change.html
@@ -14307,6 +14242,9 @@ msgid ""
 "name from {old_name} to {new_name}. If you need further assistance, please "
 "e-mail the tech support at {email}"
 msgstr ""
+"Lo sentimos. El personal del curso no aprobó su solicitud para cambio de "
+"nombre de {old_name} a {new_name}. Si necesita mayor asistencia, por favor "
+"envíe un correo electrónico al equipo de soporte técnico al correo {email}"
 
 #: lms/templates/emails/reject_name_change.txt
 msgid ""
@@ -15684,7 +15622,7 @@ msgstr "Panel de control del instructor"
 
 #: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
 msgid "Revert to Legacy Dashboard"
-msgstr ""
+msgstr "Volver al panel de instructor antiguo"
 
 #: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html
 msgid "Enrollment Code Status"
@@ -17486,7 +17424,7 @@ msgid ""
 "the URL you went to was correct, as e-mail programs will sometimes split it "
 "into two lines."
 msgstr ""
-"Lo sentimos. Algo salió mal con su activación. Asegúrese de que la URL que "
+"Lo sentimos. Algo salió mal con su activación. Asegúrese de que el URL que "
 "visitó fuera la correcta, ya que algunos programas de correo electrónico "
 "pueden modificarla, dividiéndola en dos líneas."
 
@@ -17585,8 +17523,8 @@ msgid ""
 "To copy a URL, double click the value in the URL column, then copy the "
 "selected text."
 msgstr ""
-"Para copiar una dirección URL, realice un doble clic en la columna de la "
-"URL, luego copie el texto seleccionado."
+"Para copiar un URL, realice un doble clic en la columna del URL, luego copie"
+" el texto seleccionado."
 
 #: cms/templates/asset_index.html
 msgid "Learn more about managing files"
@@ -17755,6 +17693,8 @@ msgid ""
 "Select a component type under {em_start}Add New Component{em_end}. Then "
 "select a template."
 msgstr ""
+"Seleccione un tipo de componente en {em_start}Añadir nuevo "
+"componente{em_end}. Luego seleccione una plantilla."
 
 #: cms/templates/container.html
 msgid ""
@@ -17772,6 +17712,8 @@ msgstr "Editando componentes"
 msgid ""
 "Click the {em_start}Edit{em_end} icon in a component to edit its content."
 msgstr ""
+"Da clic el icono {em_start}Editar{em_end} en un componente para editar su "
+"contenido."
 
 #: cms/templates/container.html
 msgid "Reorganizing components"
@@ -17816,7 +17758,7 @@ msgid ""
 "You enter the ID in the URL field."
 msgstr ""
 "Utilice este ID cuando cree vínculos a esta unidad desde otra parte del "
-"curso. Ingrese el ID en el campo de la URL."
+"curso. Ingrese el ID en el campo del URL."
 
 #: cms/templates/container.html
 msgid "Location in Course Outline"
@@ -18185,8 +18127,8 @@ msgid ""
 "course."
 msgstr ""
 "Nota: Las páginas estarán disponibles públicamente. Si los usuarios conocen "
-"la dirección url de la página, podrán visitarla, incluso si no están "
-"registrados o no han iniciado sesión en el curso."
+"el URL de la página, podrán visitarla, incluso si no están registrados o no "
+"han iniciado sesión en el curso."
 
 #: cms/templates/edit-tabs.html
 msgid "Show this page"
@@ -18561,8 +18503,8 @@ msgstr "Exportar Curso a Git:"
 msgid ""
 "giturl must be defined in your course settings before you can export to git."
 msgstr ""
-"la url git debe estar definida en la configuración del curso  para que pueda"
-" exportar el curso a git."
+"giturl debe estar definida en la configuración del curso para que pueda "
+"exportar el curso a git."
 
 #: cms/templates/export_git.html
 msgid "Export Failed"
@@ -18578,7 +18520,7 @@ msgstr "Su curso:"
 
 #: cms/templates/export_git.html
 msgid "Course git url:"
-msgstr "Url Git del curso:"
+msgstr "Url git del curso:"
 
 #: cms/templates/group_configurations.html
 #: cms/templates/visibility_editor.html
@@ -20197,7 +20139,7 @@ msgstr ""
 #. for a course image
 #: cms/templates/settings.html
 msgid "Your course image URL"
-msgstr "Imagen de su curso URL"
+msgstr "Imagen del URL de su curso"
 
 #: cms/templates/settings.html
 msgid ""
@@ -20878,7 +20820,7 @@ msgstr "Lanzar el compilador de código Latex"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Heading 1"
-msgstr ""
+msgstr "Encabezado 1"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Explanation"
@@ -20898,33 +20840,35 @@ msgstr "Etiqueta"
 
 #: cms/templates/widgets/sock.html
 msgid "Looking for help with {studio_name}?"
-msgstr ""
+msgstr "¿Buscando ayuda con {studio_name}?"
 
 #: cms/templates/widgets/sock.html
 msgid "Hide {studio_name} Help"
-msgstr ""
+msgstr "Ocultar la ayuda de {studio_name}"
 
 #: cms/templates/widgets/sock.html
 msgid "{studio_name} Documentation"
-msgstr ""
+msgstr "Documentación de {studio_name} "
 
 #: cms/templates/widgets/sock.html
 msgid "Access documentation on http://docs.edx.org"
-msgstr ""
+msgstr "Acceda a la documentación en http://docs.edx.org"
 
 #: cms/templates/widgets/sock.html
 msgid "edX Documentation"
-msgstr ""
+msgstr "Documentación de edX"
 
 #: cms/templates/widgets/sock.html
 msgid ""
 "Access Course Staff Support on the Partner Portal to submit or review "
 "support tickets"
 msgstr ""
+"Acceda al soporte para personal del curso en el portal de aliado de edX para"
+" enviar o revisar sus tiquetes de soporte."
 
 #: cms/templates/widgets/sock.html
 msgid "edX Partner Portal"
-msgstr ""
+msgstr "Portal de aliados de edX"
 
 #: cms/templates/widgets/sock.html
 msgid "Access the Open edX Portal"
@@ -20936,27 +20880,27 @@ msgstr "Portal de Open edX"
 
 #: cms/templates/widgets/sock.html
 msgid "Enroll in edX101: Overview of Creating an edX Course"
-msgstr ""
+msgstr "Inscribirse en edX101: Introducción a la creación de cursos en edX"
 
 #: cms/templates/widgets/sock.html
 msgid "Enroll in edX101"
-msgstr ""
+msgstr "Inscríbase a edX101"
 
 #: cms/templates/widgets/sock.html
 msgid "Enroll in StudioX: Creating a Course with edX Studio"
-msgstr ""
+msgstr "Inscribase en StudioX: Creación de cursos con edX Studio"
 
 #: cms/templates/widgets/sock.html
 msgid "Enroll in StudioX"
-msgstr ""
+msgstr "Inscríbase en StudioX"
 
 #: cms/templates/widgets/sock.html
 msgid "Send an email to {email}"
-msgstr ""
+msgstr "Enviar un correo electrónico a {email}"
 
 #: cms/templates/widgets/sock.html
 msgid "Contact Us"
-msgstr ""
+msgstr "Contáctenos"
 
 #: cms/templates/widgets/tabs-aggregator.html
 msgid "name"
