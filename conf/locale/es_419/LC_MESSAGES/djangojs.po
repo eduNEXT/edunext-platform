@@ -1,119 +1,17 @@
-# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Addi Hazel Mendoza Sánchez <addictivoh@gmail.com>, 2015
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Cristian Salamea <ovnicraft@gmail.com>, 2013-2015
-# morsoinferno <cristobal.acosta@usach.cl>, 2014-2015
-# David Salazar <imdjsg@gmail.com>, 2014
-# David Salazar <imdjsg@gmail.com>, 2014
-# Elias Estay <eestay@u.uchile.cl>, 2015
-# Felipe Schmidt M <fschmidt@cercano.cl>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# Gerardo Laster, 2014
-# Gerardo Laster, 2014
-# Javier Galnares Arias <javigalnares@yahoo.es>, 2015
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2016
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# karlman72 <karlman72@gmail.com>, 2014
-# Lalo Cabrera <laloogcabrera@yahoo.com.mx>, 2014
-# Laura Silva <lingison@edx.org>, 2015-2016
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Mecabotware <mecabotware.ideas@gmail.com>, 2015
-# Natalia, 2013
-# Natalia, 2013-2014
-# Nuri Plans Toral <nplans@gmail.com>, 2015
-# Cristian Salamea <ovnicraft@gmail.com>, 2013
-# paul ochoa <palichis@solid-ec.org>, 2015
-# Sarina Canelake <sarina@edx.org>, 2015
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
-# Valeria Freire <valtodopds@hotmail.com>, 2014-2015
-# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Cristian Guerra <cristian.guerra.maya@gmail.com>, 2016
-# Cristian Salamea <ovnicraft@gmail.com>, 2014-2015
-# David Salazar <imdjsg@gmail.com>, 2014
-# Felipe Schmidt M <fschmidt@cercano.cl>, 2015
-# Felix Antonio Valdez Noverola <felix@itesm.mx>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# Jonathan Amaya <jonathan.amaya88@yahoo.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2016
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# Juan Fernando Villa <elite.linux@gmail.com>, 2015
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# Laura Silva <lingison@edx.org>, 2015-2016
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Natalia, 2013
-# Natalia, 2014
-# Cristian Salamea <ovnicraft@gmail.com>, 2013
-# paul ochoa <palichis@solid-ec.org>, 2015
-# Pedro Guimarães Martins <pedrogmartins7@gmail.com>, 2014
-# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Claudio Anibal Barahona Flores <claudio.barahona@unah.edu.hn>, 2015
-# Cristian Salamea <ovnicraft@gmail.com>, 2014-2015
-# Giancarlo  De  Agostini <giancarlo.deagostini@iaen.edu.ec>, 2015
-# Jonathan Amaya <jonathan.amaya88@yahoo.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2016
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# Juan Fernando Villa <elite.linux@gmail.com>, 2015
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# Laura Silva <lingison@edx.org>, 2016
-# Mecabotware <mecabotware.ideas@gmail.com>, 2015
-# Nuri Plans Toral <nplans@gmail.com>, 2014
-# Patricia Colmenares <patrusca38@hotmail.com>, 2015
-# paul ochoa <palichis@solid-ec.org>, 2015
-# Thomas Alberto Castro Acosta <snaketh@gmail.com>, 2014
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
-# Valeria Freire <valtodopds@hotmail.com>, 2014-2015
-# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Morphyne <cirrosis60@gmail.com>, 2014
-# Cristian Guerra <cristian.guerra.maya@gmail.com>, 2016
-# Cristian Salamea <ovnicraft@gmail.com>, 2014-2015
-# Javier Galnares Arias <javigalnares@yahoo.es>, 2015
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2016
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# karlman72 <karlman72@gmail.com>, 2014
-# Laura Silva <lingison@edx.org>, 2016
-# Leandro Bohnhoff <leandro.bohnhoff@gmail.com>, 2015
-# Patricia Colmenares <patrusca38@hotmail.com>, 2015
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
+# edunext helper translation file.
+# Copyright (C) 2016 eduNEXT
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2016-02-15 23:27+0000\n"
-"PO-Revision-Date: 2016-02-11 19:09+0000\n"
-"Last-Translator: Laura Silva <lingison@edx.org>\n"
-"Language-Team: Spanish (Latin America) (http://www.transifex.com/open-edx/edx-platform/language/es_419/)\n"
+"POT-Creation-Date: 2016-03-30 20:59+0000\n"
+"PO-Revision-Date: 2016-03-30 15:48+0000\n"
+"Last-Translator: Felipe Montoya <felipe.montoya@edunext.co>\n"
+"Language-Team: eduNEXT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
-"Language: es_419\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: cms/static/coffee/src/views/tabs.js
@@ -1839,7 +1737,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid "Caption will be displayed when "
-msgstr ""
+msgstr "El texto se mostrará cuando"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid "Turn on transcripts"
@@ -3444,11 +3342,11 @@ msgstr "Insertar hipervínculo"
 #. Translators: Please keep the quotation marks (") around this text
 #: lms/static/js/Markdown.Editor.js lms/static/js/Markdown.Editor.js.c
 msgid "\"optional title\""
-msgstr ""
+msgstr "\"título opcional\""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Insert Image (upload file or type url)"
-msgstr ""
+msgstr "Insertar imagen (subir archivo o escribir url)"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Markdown Editing Help"
@@ -3516,7 +3414,7 @@ msgstr "texto enfatizado"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "enter image description here"
-msgstr ""
+msgstr "ingrese la descripción de la imagen aquí"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "enter link description here"
@@ -4024,6 +3922,8 @@ msgid ""
 "The name that appears on your certificates. Other learners never see your "
 "full name."
 msgstr ""
+"El nombre que aparecerá en sus certificados. Otros usuarios nunca verán su "
+"nombre completo."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address"
@@ -4883,6 +4783,7 @@ msgstr "Su archivo no pudo ser cargado"
 msgid "Max file size exceeded"
 msgstr "Tamaño maximo del archivo excedido"
 
+#: cms/static/js/views/assets.js
 #: cms/templates/js/asset-upload-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Choose File"
@@ -5442,7 +5343,7 @@ msgstr ""
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "component"
-msgstr ""
+msgstr "componente"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Delete this %(xblock_type)s?"
@@ -5630,15 +5531,15 @@ msgstr "Encontrar discusiones"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Focus in on specific topics"
-msgstr ""
+msgstr "Enfocarse en temas específicos"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Search for specific posts"
-msgstr ""
+msgstr "Buscar publicaciones específicas"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Sort by date, vote, or comments"
-msgstr ""
+msgstr "Ordenar por fecha, votos o comentarios"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Engage with posts"
@@ -5646,15 +5547,15 @@ msgstr "Trabajar con las publicaciones"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Upvote posts and good responses"
-msgstr ""
+msgstr "Votar por las buenas publicaciones, comentarios y respuestas"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Report Forum Misuse"
-msgstr ""
+msgstr "Reportar un mal uso del foro"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Follow posts for updates"
-msgstr ""
+msgstr "Seguir actualizaciones de una publicación"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Receive updates"
@@ -6686,6 +6587,8 @@ msgid ""
 "Students are added to this cohort only when you provide their email "
 "addresses or usernames on this page."
 msgstr ""
+"Los estudiantes son agregados a esta categoria o cohorte solamente si se "
+"provee la dirección de correos o el nombre de usuario en esta página."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "What does this mean?"
@@ -6694,6 +6597,7 @@ msgstr "¿Qué significa esto?"
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "Students are added to this cohort automatically."
 msgstr ""
+"Los estudiantes son agregados automáticamente a esta categoria o cohorte."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
 msgid "Select a cohort"
