@@ -1,14 +1,23 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from rest_framework import viewsets, mixins, filters
+import random
+from datetime import datetime
+
+from rest_framework import viewsets, mixins, filters, status
+from rest_framework.response import Response
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 
 from student.models import CourseEnrollment
 from microsite_api.authenticators import MicrositeManagerAuthentication
 
 from filters import UserFilter, CourseEnrollmentFilter
-from serializers import UserSerializer, CourseEnrollmentSerializer
+from serializers import (
+    UserSerializer,
+    CourseEnrollmentSerializer,
+)
 from paginators import DataApiResultsSetPagination
+from tasks import EnrollmentsGrades
 
 
 class DataApiViewSet(mixins.ListModelMixin,
@@ -57,10 +66,46 @@ class UsersViewSet(DataApiViewSet):
     ]
 
 
-class CourseEnrrollmentsviewsets(DataApiViewSet):
+class CourseEnrollmentViewset(DataApiViewSet):
     """
     A viewset for viewing Course Enrollments.
     """
     serializer_class = CourseEnrollmentSerializer
     queryset = CourseEnrollment.objects.all()
     filter_class = CourseEnrollmentFilter
+
+
+class CourseEnrollmentWithGradesViewset(DataApiViewSet):
+    """
+    A viewset for viewing Course Enrollments with grades data.
+    This view will create a celery task to fetch grades data for
+    enrollments in the background, and will return the id of the
+    celery task
+    """
+    serializer_class = CourseEnrollmentSerializer
+    queryset = CourseEnrollment.objects.all()
+    filter_class = CourseEnrollmentFilter
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+
+        now_date = datetime.now()
+        string_now_date = now_date.strftime("%Y-%m-%d-%H-%M-%S")
+        randnum = random.randint(100, 999)
+        task_id = "data_api-" + string_now_date + "-" + str(randnum)
+
+        named_args = {
+            "data": serializer.data,
+        }
+        task_instance = EnrollmentsGrades()
+        res = task_instance.apply_async(kwargs=named_args, task_id=task_id)
+
+        url_task_status = request.build_absolute_uri(
+            reverse("celery-data-api-tasks", kwargs={"task_id": task_id})
+        )
+        data_response = {
+            "task_id": res.id,
+            "task_url": url_task_status,
+        }
+        return Response(data_response, status=status.HTTP_202_ACCEPTED)

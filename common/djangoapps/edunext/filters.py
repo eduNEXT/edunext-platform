@@ -37,22 +37,22 @@ class UserFilter(BaseDataApiFilter):
     class Meta:
         model = User
         fields = [
-                 'id',
-                 'username',
-                 'first_name',
-                 'last_name',
-                 'email',
-                 'is_active',
-                 'date_joined',
-                 'name',
-                 'language',
-                 'year_of_birth',
-                 'gender',
-                 'mailing_address',
-                 'city',
-                 'country',
-                 'site',
-                ]
+            'id',
+            'username',
+            'first_name',
+            'last_name',
+            'email',
+            'is_active',
+            'date_joined',
+            'name',
+            'language',
+            'year_of_birth',
+            'gender',
+            'mailing_address',
+            'city',
+            'country',
+            'site',
+        ]
         order_by = True
 
 
@@ -91,11 +91,11 @@ class CourseEnrollmentFilter(BaseDataApiFilter):
     class Meta:
         model = CourseEnrollment
         fields = [
-                 'id',
-                 'course_id',
-                 'created',
-                 'is_active',
-                 'mode',
-                 'site',
+            'id',
+            'course_id',
+            'created',
+            'is_active',
+            'mode',
+            'site',
         ]
         order_by = True

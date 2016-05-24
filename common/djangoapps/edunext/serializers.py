@@ -5,7 +5,10 @@ from __future__ import unicode_literals
 import json
 import logging
 
+from django.test.client import RequestFactory
 from rest_framework import serializers
+
+from courseware import grades, courses
 from fields import CustomRelatedField
 
 log = logging.getLogger(__name__)
@@ -90,8 +93,34 @@ class CourseEnrollmentSerializer(serializers.Serializer):
     """
     Serializer for the Course enrollment model
     """
+    id = serializers.IntegerField(read_only=True)
     user_id = serializers.IntegerField(read_only=True)
     course_id = serializers.CharField(max_length=255, read_only=True)
     created = serializers.DateTimeField(read_only=True)
     is_active = serializers.BooleanField(read_only=True)
     mode = serializers.CharField(max_length=100, read_only=True)
+
+
+class CourseEnrollmentWithGradesSerializer(CourseEnrollmentSerializer):
+    """
+    Serializer for the course enrollment model, extracting grades
+    """
+    grades = serializers.SerializerMethodField()
+
+    def get_grades(self, obj):
+        course = courses.get_course_by_id(obj.course_id)
+        user = obj.user
+        request = self._get_mock_request(user)
+        request.session = {}
+        gradeset = grades.grade(user, request, course, False)
+        return gradeset
+
+    def _get_mock_request(self, student):
+        """
+        Make a fake request because grading code expects to be able to look at
+        the request. We have to attach the correct user to the request before
+        grading that student.
+        """
+        request = RequestFactory().get('/')
+        request.user = student
+        return request
