@@ -16523,7 +16523,7 @@ msgstr "También puede volver a la {link_start}página de inicio{link_end}."
 
 #: lms/templates/registration/password_reset_done.html
 msgid "Password reset successful"
-msgstr "La contraseña fue restablecida exitosamente"
+msgstr "Restablecimiento de contraseña"
 
 #: lms/templates/registration/password_reset_done.html
 msgid ""
@@ -16536,20 +16536,22 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_email_html.html
 msgid "Request to change password"
-msgstr ""
+msgstr "Solicitud de cambio de contraseña"
 
 #: lms/templates/registration/password_reset_email_html.html
 msgid "Password reset"
-msgstr ""
+msgstr "Cambio de contraseña"
 
 #: lms/templates/registration/password_reset_email_html.html
 msgid ""
 "You are receiving this email because you requested a password change in "
 msgstr ""
+"Usted esta recibiendo este correo, porque usted solicitó un cambio de "
+"contraseña en "
 
 #: lms/templates/registration/password_reset_email_html.html
 msgid "Change my password"
-msgstr ""
+msgstr "Cambiar mi contraseña"
 
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/receipt.html
