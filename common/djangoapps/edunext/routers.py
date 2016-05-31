@@ -3,10 +3,13 @@
 from rest_framework import routers
 from viewsets import (
     UsersViewSet,
-    CourseEnrrollmentsviewsets,
+    CourseEnrollmentViewset,
+    CourseEnrollmentWithGradesViewset,
 )
 
 
 router = routers.DefaultRouter()
 router.register(r'users', UsersViewSet)
-router.register(r'course-enrollments', CourseEnrrollmentsviewsets)
+router.register(r'course-enrollments', CourseEnrollmentViewset)
+# Async operations
+router.register(r'async/course-enrollments-grades', CourseEnrollmentWithGradesViewset)
