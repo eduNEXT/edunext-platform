@@ -8,3 +8,8 @@
 -e git+https://github.com/OfficeDev/xblock-officemix.git@3f876b5f0267b017812620239533a29c7d562d24#egg=officemix
 
 -e git+https://github.com/edx-solutions/xblock-drag-and-drop-v2.git@7b054467159fd2cbe2e0adccf9a0665d36a2a197#egg=xblock-drag-and-drop-v2
+
+
+# private video XBlocks
+-e git+https://github.com/edx-solutions/xblock-ooyala.git@42a65052beaa9e99ce9cf13001ad23905c1551cf#egg=xblock-ooyala
+-e git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
