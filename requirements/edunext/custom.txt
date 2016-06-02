@@ -11,5 +11,6 @@
 
 
 # private video XBlocks
+-e git://github.com/open-craft/xblock-mentoring.git@1a6e2092a361f0befff18d07607517d437046e3b#egg=xblock-mentoring  # requirement of xblock-ooyala
 -e git+https://github.com/edx-solutions/xblock-ooyala.git@42a65052beaa9e99ce9cf13001ad23905c1551cf#egg=xblock-ooyala
 -e git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
