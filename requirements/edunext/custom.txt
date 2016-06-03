@@ -13,3 +13,6 @@
 # private video XBlocks
 -e git+https://github.com/edx-solutions/xblock-ooyala.git@42a65052beaa9e99ce9cf13001ad23905c1551cf#egg=xblock-ooyala
 -e git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
+
+# flow control
+-e git+https://github.com/eduNEXT/flow-control-xblock.git@ced2b22e14eb261df150f4100b0f5474e0cd4d1e#egg=flow-control-xblock
