@@ -23,14 +23,15 @@ class CeleryTasksStatus(APIView):
             raise NotFound()
 
         task_res = AsyncResult(task_id)
-        # Provisional way to check if a task exists in celery or not
-        # TODO: look for a better way to do this
-        if task_res.state == "PENDING":
-            raise NotFound("The task_id does not exist")
+        # Now the existence of the task by id is not validated
+
+        result = None
+        if task_res.ready():
+            result = task_res.result
 
         response = {
             "state": task_res.state,
-            "result": task_res.result,
+            "result": result,
         }
 
         return Response(response)
