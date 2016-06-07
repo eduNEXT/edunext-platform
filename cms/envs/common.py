@@ -1047,6 +1047,7 @@ ADVANCED_COMPONENT_TYPES = [
     'sodexo_game',
     'ooyala-player',
     'brightcove-video',
+    'flow-control',
 ]
 
 # Adding components in this list will disable the creation of new problem for
