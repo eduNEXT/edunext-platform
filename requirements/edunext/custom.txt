@@ -16,4 +16,4 @@
 -e git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
 
 # flow control
--e git+https://github.com/eduNEXT/flow-control-xblock.git@f372101476d9fdccde61b5023bb679da72ee2657#egg=flow-control-xblock
+-e git+https://github.com/eduNEXT/flow-control-xblock.git@64d157a50823718c816175ea2ec3a876fa821911#egg=flow-control-xblock
