@@ -7,6 +7,7 @@ from rest_framework import viewsets, mixins, filters, status
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from django.conf import settings
 
 from student.models import CourseEnrollment
 from microsite_api.authenticators import MicrositeManagerAuthentication
@@ -99,7 +100,11 @@ class CourseEnrollmentWithGradesViewset(DataApiViewSet):
             "data": serializer.data,
         }
         task_instance = EnrollmentsGrades()
-        res = task_instance.apply_async(kwargs=named_args, task_id=task_id)
+        res = task_instance.apply_async(
+            kwargs=named_args,
+            task_id=task_id,
+            routing_key=settings.GRADES_DOWNLOAD_ROUTING_KEY
+        )
 
         url_task_status = request.build_absolute_uri(
             reverse("celery-data-api-tasks", kwargs={"task_id": task_id})
