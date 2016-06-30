@@ -6,13 +6,12 @@ A microsite enables the following features:
 2) Present a landing page with a listing of courses that are specific to the 'brand'
 3) Ability to swap out some branding elements in the website
 """
-import re
-
 from django.conf import settings
 from django.http import Http404
 
 from opaque_keys.edx.keys import CourseKey
 from microsite_configuration import microsite
+from certificates.models import GeneratedCertificate
 
 
 class MicrositeMiddleware(object):
@@ -96,31 +95,58 @@ class MicrositeCrossBrandingFilterMiddleware():
     """
     def process_request(self, request):
         """
-        Raise an 404 exception if the course being rendered belongs to an ORG in a
+        Raise an 404 exception if the page being rendered belongs to an ORG in a
         microsite, but it is not the current microsite
         """
         path = request.path_info
-        p = re.compile('/courses/{}/'.format(settings.COURSE_ID_PATTERN))
-        m = p.match(path)
+
+        for key, regex in settings.MICROSITE_CBFR.iteritems():
+            match = regex.match(path)
+            if match:
+                filter_method = getattr(self, "clean_{}".format(key))
+                return filter_method(match, request)
 
         # If there is no match, then we are not in a ORG-restricted area
-        if m is None:
-            return None
+        return None
 
-        course_id = m.group('course_id')
-        course_key = CourseKey.from_string(course_id)
-
-        # If the course org is the same as the current microsite
+    def match_org_or_404(self, org):
+        """
+        Checks the current microsite for the org and compares it to the input
+        if the org is not included in the site, raises 404
+        """
         org_filter = microsite.get_value('course_org_filter', set([]))
         if isinstance(org_filter, basestring):
             org_filter = set([org_filter])
-        if course_key.org in org_filter:
+        if org in org_filter:
             return None
 
         # If the course does not belong to an ORG defined in a microsite
         all_orgs = microsite.get_all_orgs()
-        if course_key.org not in all_orgs:
+        if org not in all_orgs:
             return None
 
         # We could log some of the output here for forensic analysis
         raise Http404
+
+    def clean_courses(self, match, request):
+        """
+        Raise an 404 exception the course matched does not belong to the current org
+        """
+        course_id = match.group('course_id')
+        course_key = CourseKey.from_string(course_id)
+        return self.match_org_or_404(course_key.org)
+
+    def clean_certs(self, match, request):
+        """
+        Raise an 404 exception the cert matched does not belong to the current org
+        """
+        uuid = match.group('certificate_uuid')
+
+        try:
+            certificate = GeneratedCertificate.objects.get(
+                verify_uuid=uuid,
+            )
+
+            return self.match_org_or_404(certificate.course_id.org)
+        except GeneratedCertificate.DoesNotExist:
+            return None

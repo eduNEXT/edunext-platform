@@ -32,6 +32,7 @@ Longer TODO:
 import sys
 import os
 import imp
+import re
 
 from path import Path as path
 from warnings import simplefilter
@@ -2526,6 +2527,11 @@ MICROSITE_BACKEND = 'microsite_configuration.backends.filebased.FilebasedMicrosi
 MICROSITE_TEMPLATE_BACKEND = 'microsite_configuration.backends.filebased.FilebasedMicrositeTemplateBackend'
 # TTL for microsite database template cache
 MICROSITE_DATABASE_TEMPLATE_CACHE_TTL = 5 * 60
+
+MICROSITE_CBFR = {
+    'courses': re.compile('/courses/{}/'.format(COURSE_ID_PATTERN)),
+    'certs': re.compile('/certificates/(?P<certificate_uuid>[0-9a-f]{32})'),
+}
 
 
 # Use None for the default search engine
