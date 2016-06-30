@@ -29,7 +29,7 @@ course_mode_class = course_mode if course_mode else ''
 
                         <span class="accomplishment-course hd-1 emphasized">
                             <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>
-                            <span class="accomplishment-course-number">${course_number}</span>:
+                            <span class="accomplishment-course-number">${course_number}</span>${course_number_separator if course_number_separator else ':'}
                             <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
                         </span>
                     </p>
@@ -93,16 +93,16 @@ course_mode_class = course_mode if course_mode else ''
                     <dt class="label sr-only">Awarded to:</dt>
                     <dd class="value copy copy-meta">
                         <span class="recipient-img">
-                            <img class="src" src="/static/certificates/images/demo-user-profile.png" alt="">
+                            <img class="src" src="${recipient_img_override if recipient_img_override else '/static/certificates/images/demo-user-profile.png'}" alt="">
                         </span>
                         <div class="recipient-details">
                             <h3 class="recipient-name">${accomplishment_copy_name | h}</h3>
-                            <p class="recipient-username">${accomplishment_copy_username} @ ${platform_name}</p>
+                            <p class="recipient-username">${accomplishment_copy_username} ${accomplishment_copy_separator if accomplishment_copy_separator else '@'} ${platform_name}</p>
                         </div>
                     </dd>
                 </dl>
                 <dl class="metadata accomplishment-id">
-                    <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
+                    <dt class="label copy copy-meta">${certificate_id_number_title}${certificate_id_number_separator if certificate_id_number_separator else ':'}</dt>
                     <dd class="value copy copy-base">${certificate_id_number}</dd>
                 </dl>
                 <dl class="metadata accomplishment-date">
