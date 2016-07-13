@@ -5,7 +5,7 @@ from django.views.generic import View
 from django.http import HttpResponse
 
 from openedx.core.lib.js_utils import escape_json_dumps
-from util.organizations_helpers import get_organizations
+# from util.organizations_helpers import get_organizations
 
 
 class OrganizationListView(View):
@@ -18,6 +18,8 @@ class OrganizationListView(View):
     @method_decorator(login_required)
     def get(self, request, *args, **kwargs):
         """Returns organization list as json."""
-        organizations = get_organizations()
-        org_names_list = [(org["short_name"]) for org in organizations]
+        # organizations = get_organizations()
+        # org_names_list = [(org["short_name"]) for org in organizations]
+        # EDUNEXT: Organizations list must not be visible for users, reason why an empty array is returned
+        org_names_list = []
         return HttpResponse(escape_json_dumps(org_names_list), content_type='application/json; charset=utf-8')
