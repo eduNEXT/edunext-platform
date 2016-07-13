@@ -3,6 +3,7 @@
 from django.db import transaction
 from rest_framework.views import APIView
 from rest_framework.renderers import JSONRenderer
+from rest_framework.exceptions import ParseError
 from itertools import chain
 
 import logging
@@ -18,9 +19,14 @@ from django.utils.translation import override as override_language
 
 from microsite_api.authenticators import MicrositeManagerAuthentication
 from util.json_request import JsonResponse
+from util.organizations_helpers import (
+    get_organizations,
+    add_organization,
+)
 from openedx.conf import settings
 from microsite_configuration import microsite
 from microsite_configuration.models import Microsite
+from manage_api.utils import add_organization_from_short_name
 
 log = logging.getLogger("edx.student")
 
@@ -151,3 +157,39 @@ class SubdomainManagement(APIView):
         objects = Microsite.objects.filter(subdomain__startswith=subdomain).values_list('subdomain')
 
         return JsonResponse({'subdomains': list(chain.from_iterable(objects))}, status=200)
+
+
+class OrganizationView(APIView):
+
+    authentication_classes = (MicrositeManagerAuthentication,)
+    renderer_classes = [JSONRenderer]
+
+    def get(self, request, **kwargs):
+
+        organizations = get_organizations()
+        org_names_list = [(org["short_name"]) for org in organizations]
+        return JsonResponse(org_names_list, status=200)
+
+    def post(self, request, **kwargs):
+
+        if request.GET.get('from-short-name') == 'true':
+            return self.create_from_short_name(request, **kwargs)
+
+        try:
+            new_org = add_organization(request.POST)
+        except Exception as e:
+            log.error(u'Unable to create org. Reason: "%s"', e.message, exc_info=True)
+            raise ParseError(detail="Unable to create new organization record")
+
+        return JsonResponse({"short_name": new_org["short_name"]}, status=201)
+
+    def create_from_short_name(self, request, **kwargs):
+
+        org_short_name = request.POST.get("short_name", None)
+        if not org_short_name:
+            # HTTP 400 response
+            raise ParseError(detail="Organization short name field is required")
+
+        new_org = add_organization_from_short_name(org_short_name)
+
+        return JsonResponse({"short_name": new_org["short_name"]}, status=201)

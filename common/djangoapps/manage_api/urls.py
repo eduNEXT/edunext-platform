@@ -7,6 +7,7 @@ from manage_api.views import (
     UserManagement,
     OrgManagement,
     SubdomainManagement,
+    OrganizationView,
 )
 
 
@@ -26,5 +27,10 @@ urlpatterns = patterns(
         r'^v1/subdomains/$',
         SubdomainManagement.as_view(),
         name="manage_subs_api"
+    ),
+    url(
+        r'^v1/edx-organizations/$',
+        OrganizationView.as_view(),
+        name="edx_orgs_api"
     ),
 )
