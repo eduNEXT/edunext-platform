@@ -458,6 +458,17 @@ def _update_organization_context(context, course):
     context['organization_logo'] = organization_logo
 
 
+def _update_minimal_context(context):
+    """
+    This is an eduNEXT function to make the regular certificate work out of the box
+    """
+    context['company_privacy_url'] = ''
+    context['logo_src'] = ''
+    context['company_tos_url'] = ''
+    context['company_about_url'] = ''
+    context['logo_url'] = ''
+
+
 def render_cert_by_uuid(request, certificate_uuid):
     """
     This public view generates an HTML representation of the specified certificate
@@ -486,6 +497,9 @@ def render_html_view(request, user_id, course_id):
     configuration = CertificateHtmlViewConfiguration.get_config()
     # Create the initial view context, bootstrapping with Django settings and passed-in values
     context = {}
+
+    _update_minimal_context(context)  # load the bare minimum
+
     _update_context_with_basic_info(context, course_id, platform_name, configuration)
     invalid_template_path = 'certificates/invalid.html'
 
