@@ -158,8 +158,10 @@ def get_lms_link_for_certificate_web_view(user_id, course_key, mode):
     if settings.LMS_BASE is None:
         return None
 
+    lms_base = microsite.get_value_for_org(course_key.org, 'SITE_NAME', settings.LMS_BASE)
+
     return u"//{certificate_web_base}/certificates/user/{user_id}/course/{course_id}?preview={mode}".format(
-        certificate_web_base=settings.LMS_BASE,
+        certificate_web_base=lms_base,
         user_id=user_id,
         course_id=unicode(course_key),
         mode=mode
