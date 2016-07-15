@@ -358,7 +358,7 @@ def certificates_list_handler(request, course_key_string):
             course_modes = [
                 mode.slug for mode in CourseMode.modes_for_course(
                     course_id=course.id, include_expired=True
-                ) if mode.slug != 'audit'
+                )  # eduNEXT removed the forced exclusion on the 'audit' mode
             ]
             if len(course_modes) > 0:
                 certificate_web_view_url = get_lms_link_for_certificate_web_view(
