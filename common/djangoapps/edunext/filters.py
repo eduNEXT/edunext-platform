@@ -18,7 +18,7 @@ class UserFilter(BaseDataApiFilter):
     username = django_filters.CharFilter(lookup_type='icontains')
     first_name = django_filters.CharFilter(lookup_type='icontains')
     last_name = django_filters.CharFilter(lookup_type='icontains')
-    email = django_filters.CharFilter(lookup_type='iexact')
+    email = django_filters.CharFilter(lookup_type='icontains')
     is_active = django_filters.BooleanFilter()
     date_joined = django_filters.DateTimeFromToRangeFilter()
 
@@ -29,7 +29,7 @@ class UserFilter(BaseDataApiFilter):
     gender = django_filters.CharFilter(name="profile__gender", lookup_type="iexact")
     mailing_address = django_filters.CharFilter(name="profile__mailing_address", lookup_type="iexact")
     city = django_filters.CharFilter(name="profile__city", lookup_type="icontains")
-    country = django_filters.CharFilter(name="profile__country", lookup_type="iexact")
+    country = django_filters.CharFilter(name="profile__country", lookup_type="icontains")
 
     # Filtering by user signup source fields
     site = django_filters.CharFilter(name="usersignupsource__site", lookup_type='iexact')
@@ -61,7 +61,7 @@ class CourseEnrollmentFilter(BaseDataApiFilter):
     course_id = django_filters.MethodFilter()
     created = django_filters.DateTimeFromToRangeFilter()
     is_active = django_filters.BooleanFilter()
-    mode = django_filters.CharFilter(lookup_type='iexact')
+    mode = django_filters.CharFilter(lookup_type='icontains')
     site = django_filters.CharFilter(name="user__usersignupsource__site", lookup_type='iexact')
 
     def filter_course_id(self, queryset, value):
