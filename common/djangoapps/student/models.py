@@ -770,7 +770,10 @@ class LoginFailures(models.Model):
         """
         record, _ = LoginFailures.objects.get_or_create(user=user)
         record.failure_count = record.failure_count + 1
-        max_failures_allowed = settings.MAX_FAILED_LOGIN_ATTEMPTS_ALLOWED
+        microsite_max_failed_login_attempts_allowed = microsite.get_value(
+            "MAX_FAILED_LOGIN_ATTEMPTS_ALLOWED", None)
+        max_failures_allowed = (microsite_max_failed_login_attempts_allowed or
+                                settings.MAX_FAILED_LOGIN_ATTEMPTS_ALLOWED)
 
         # did we go over the limit in attempts
         if record.failure_count >= max_failures_allowed:
