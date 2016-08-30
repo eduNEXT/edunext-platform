@@ -10,12 +10,17 @@ from django.core.urlresolvers import reverse
 from django.conf import settings
 
 from student.models import CourseEnrollment
+from certificates.models import GeneratedCertificate
 from microsite_api.authenticators import MicrositeManagerAuthentication
 
-from filters import UserFilter, CourseEnrollmentFilter
+from filters import (
+    UserFilter,
+    CourseEnrollmentFilter,
+    GeneratedCerticatesFilter)
 from serializers import (
     UserSerializer,
     CourseEnrollmentSerializer,
+    CertificateSerializer
 )
 from paginators import DataApiResultsSetPagination
 from tasks import EnrollmentsGrades
@@ -114,3 +119,19 @@ class CourseEnrollmentWithGradesViewset(DataApiViewSet):
             "task_url": url_task_status,
         }
         return Response(data_response, status=status.HTTP_202_ACCEPTED)
+
+
+class CertificateViewSet(DataApiViewSet):
+    """
+    A viewset for viewing certificates in the platform.
+    """
+    serializer_class = CertificateSerializer
+    queryset = GeneratedCertificate.objects.all()
+    filter_class = GeneratedCerticatesFilter
+    prefetch_fields = [
+        {
+            "name": "user",
+            "type": "select"
+        }
+
+    ]

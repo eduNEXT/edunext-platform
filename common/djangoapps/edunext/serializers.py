@@ -124,3 +124,25 @@ class CourseEnrollmentWithGradesSerializer(CourseEnrollmentSerializer):
         request = RequestFactory().get('/')
         request.user = student
         return request
+
+class CertificateSerializer(serializers.Serializer):
+    """
+    Serializer for Generated Certificates
+    """
+    # ####################################
+    # From certificates.models.GeneratedCertificate
+    # ####################################
+
+    username = serializers.CharField(max_length=150,source='user.username', read_only=True)
+    name = serializers.CharField(max_length=255, source='user.profile.name' ,read_only=True)
+    course_id = serializers.CharField(max_length=255, read_only=True)
+    grade = serializers.FloatField(read_only=True)
+    status = serializers.CharField(max_length=100, read_only=True)
+    email = serializers.CharField(max_length=200, source='user.email' ,read_only=True)
+    download_url = serializers.CharField(max_length=128, read_only=True)
+    verify_uuid = serializers.CharField(max_length=32, read_only=True)
+    name_printed_on_certificate = serializers.CharField(max_length=255, source='name', read_only=True)
+    mode = serializers.CharField(max_length=32, read_only=True)
+    created_date = serializers.DateTimeField(read_only=True)
+    modified_date = serializers.DateTimeField(read_only=True)
+    key = serializers.CharField(max_length=32, read_only=True)
