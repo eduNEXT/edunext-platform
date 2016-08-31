@@ -11,16 +11,19 @@ from django.conf import settings
 
 from student.models import CourseEnrollment
 from certificates.models import GeneratedCertificate
+from edx_proctoring.models import ProctoredExamStudentAttempt
 from microsite_api.authenticators import MicrositeManagerAuthentication
 
 from filters import (
     UserFilter,
     CourseEnrollmentFilter,
-    GeneratedCerticatesFilter)
+    GeneratedCerticatesFilter,
+    ProctoredExamStudentAttemptFilter)
 from serializers import (
     UserSerializer,
     CourseEnrollmentSerializer,
-    CertificateSerializer
+    CertificateSerializer,
+    ProctoredExamStudentAttemptSerializer
 )
 from paginators import DataApiResultsSetPagination
 from tasks import EnrollmentsGrades
@@ -123,7 +126,7 @@ class CourseEnrollmentWithGradesViewset(DataApiViewSet):
 
 class CertificateViewSet(DataApiViewSet):
     """
-    A viewset for viewing certificates in the platform.
+    A viewset for viewing certificates generated for users.
     """
     serializer_class = CertificateSerializer
     queryset = GeneratedCertificate.objects.all()
@@ -131,6 +134,26 @@ class CertificateViewSet(DataApiViewSet):
     prefetch_fields = [
         {
             "name": "user",
+            "type": "select"
+        }
+
+    ]
+
+class ProctoredExamStudentViewSet(DataApiViewSet):
+    """
+    A viewset for viewing proctored exams attempts made by students.
+    """
+
+    serializer_class = ProctoredExamStudentAttemptSerializer
+    queryset = ProctoredExamStudentAttempt.objects.all()
+    filter_class = ProctoredExamStudentAttemptFilter
+    prefetch_fields = [
+        {
+            "name": "user",
+            "type": "select"
+        },
+        {
+            "name": "proctored_exam",
             "type": "select"
         }
 

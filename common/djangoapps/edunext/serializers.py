@@ -6,6 +6,7 @@ import json
 import logging
 
 from django.test.client import RequestFactory
+from django.utils.duration import duration_string
 from rest_framework import serializers
 
 from courseware import grades, courses
@@ -146,3 +147,36 @@ class CertificateSerializer(serializers.Serializer):
     created_date = serializers.DateTimeField(read_only=True)
     modified_date = serializers.DateTimeField(read_only=True)
     key = serializers.CharField(max_length=32, read_only=True)
+
+class ProctoredExamStudentAttemptSerializer(serializers.Serializer):
+    """
+    Serializer for proctored exams attempts made by students
+    """
+    # ####################################
+    # From edx_proctoring.models.ProctoredExamStudentAttempt
+    # ####################################
+
+    username = serializers.CharField(max_length=150,source='user.username', read_only=True)
+    name = serializers.CharField(max_length=255, source='user.profile.name' ,read_only=True)
+    email = serializers.CharField(max_length=200, source='user.email' ,read_only=True)
+    status = serializers.CharField(max_length=64, read_only=True)
+    started_at = serializers.DateTimeField(read_only=True)
+    completed_at = serializers.DateTimeField(read_only=True)
+    exam_name = serializers.CharField(
+        source='proctored_exam.exam_name',
+        read_only=True)
+    course_id = serializers.CharField(
+        max_length=255,
+        source='proctored_exam.course_id',
+        read_only=True)
+
+    time_taken = serializers.SerializerMethodField()
+    def get_time_taken(self, obj):
+
+        try:
+            time_diff = obj.completed_at - obj.started_at
+            result = duration_string(time_diff)
+        except TypeError:
+            result = None
+
+        return result

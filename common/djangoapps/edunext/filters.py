@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 
 from student.models import CourseEnrollment
 from certificates.models import GeneratedCertificate
+from edx_proctoring.models import ProctoredExamStudentAttempt
 from opaque_keys.edx.keys import CourseKey
 
 
@@ -174,5 +175,26 @@ class GeneratedCerticatesFilter(BaseDataApiFilter):
             'status',
             'site',
             'created_date'
+        ]
+        order_by = True
+
+class ProctoredExamStudentAttemptFilter(BaseDataApiFilter):
+
+    site = django_filters.CharFilter(name="user__usersignupsource__site",
+                                     lookup_type='iexact')
+    course_id = django_filters.CharFilter(name="proctored_exam__course_id",
+                                     lookup_type='iexact')
+    exam_name = django_filters.CharFilter(name="proctored_exam__exam_name",
+                                     lookup_type='iexact')
+
+
+    class Meta:
+        model = ProctoredExamStudentAttempt
+        fields = [
+            'id',
+            'site',
+            'course_id',
+            'exam_name'
+
         ]
         order_by = True
