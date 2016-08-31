@@ -24,7 +24,6 @@ import uuid
 import analytics
 from config_models.models import ConfigurationModel
 from django.utils.translation import ugettext_lazy as _
-from django.conf import settings
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
@@ -51,6 +50,7 @@ from enrollment.api import _default_course_mode
 import lms.lib.comment_client as cc
 from openedx.core.djangoapps.commerce.utils import ecommerce_api_client, ECOMMERCE_DATE_FORMAT
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
+from openedx.conf import settings
 from util.model_utils import emit_field_changed_events, get_changed_fields_dict
 from util.query import use_read_replica_if_available
 from util.milestones_helpers import is_entrance_exams_enabled
