@@ -77,7 +77,42 @@ class MicrositeTemplateAdmin(admin.ModelAdmin):
     class Meta(object):  # pylint: disable=missing-docstring
         model = MicrositeTemplate
 
-admin.site.register(Microsite, MicrositeAdmin)
 admin.site.register(MicrositeHistory, MicrositeHistoryAdmin)
 admin.site.register(MicrositeOrganizationMapping, MicrositeOrganizationMappingAdmin)
 admin.site.register(MicrositeTemplate, MicrositeTemplateAdmin)
+
+
+class EdunextMicrositeAdmin(admin.ModelAdmin):
+    list_display = [
+        'key',
+        'subdomain',
+        'sitename',
+        'template_dir',
+        'course_org_filter',
+    ]
+    readonly_fields = (
+        'sitename',
+        'template_dir',
+        'course_org_filter',
+    )
+    search_fields = ('key', 'subdomain', 'values', )
+
+    def sitename(self, microsite):
+        try:
+            return microsite.values.get('SITE_NAME', "NOT CONFIGURED")
+        except Exception, e:
+            return e.msg
+
+    def template_dir(self, microsite):
+        try:
+            return microsite.values.get('template_dir', "NOT CONFIGURED")
+        except Exception, e:
+            return e.msg
+
+    def course_org_filter(self, microsite):
+        try:
+            return microsite.values.get('course_org_filter', "NOT CONFIGURED")
+        except Exception, e:
+            return e.msg
+
+admin.site.register(Microsite, EdunextMicrositeAdmin)

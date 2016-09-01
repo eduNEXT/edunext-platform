@@ -16,6 +16,7 @@ from monkey_patch import (
     third_party_auth,
     django_db_models_options
 )
+from microsite_configuration import microsite
 
 import xmodule.x_module
 import lms_xblock.runtime

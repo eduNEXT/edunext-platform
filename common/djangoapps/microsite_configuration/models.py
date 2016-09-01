@@ -6,12 +6,14 @@ that would have been used in the settings.
 
 """
 import collections
+import json
 
 from django.db import models
 from django.dispatch import receiver
 from django.db.models.signals import pre_save, pre_delete
 from django.db.models.base import ObjectDoesNotExist
 from django.contrib.sites.models import Site
+from django.core.exceptions import ValidationError
 
 from jsonfield.fields import JSONField
 from model_utils.models import TimeStampedModel
@@ -27,12 +29,13 @@ class Microsite(models.Model):
     Notes:
         - The key field was required for the dict definition at the settings, and it
         is used in some of the microsite_configuration methods.
-        - The site field is django site.
+        - The subdomain is outside of the json so that it is posible to use a db query
+        to improve performance.
         - The values field must be validated on save to prevent the platform from crashing
         badly in the case the string is not able to be loaded as json.
     """
-    site = models.OneToOneField(Site, related_name='microsite')
-    key = models.CharField(max_length=63, db_index=True, unique=True)
+    key = models.CharField(max_length=63, db_index=True)
+    subdomain = models.CharField(max_length=127, db_index=True)
     values = JSONField(null=False, blank=True, load_kwargs={'object_pairs_hook': collections.OrderedDict})
 
     def __unicode__(self):
@@ -42,7 +45,14 @@ class Microsite(models.Model):
         """
         Helper method to return a list of organizations associated with our particular Microsite
         """
-        return MicrositeOrganizationMapping.get_organizations_for_microsite_by_pk(self.id)  # pylint: disable=no-member
+        # has to return the same type as:
+        # MicrositeOrganizationMapping.get_organizations_for_microsite_by_pk(self.id)
+        org_filter = self.values.get('course_org_filter')
+
+        if isinstance(org_filter, basestring):
+            org_filter = [org_filter]
+
+        return org_filter
 
     @classmethod
     def get_microsite_for_domain(cls, domain):
@@ -53,7 +63,7 @@ class Microsite(models.Model):
 
         # remove any port number from the hostname
         domain = domain.split(':')[0]
-        microsites = cls.objects.filter(site__domain__iexact=domain)
+        microsites = cls.objects.filter(subdomain=domain)
 
         return microsites[0] if microsites else None
 
@@ -73,39 +83,6 @@ class MicrositeHistory(TimeStampedModel):
     class Meta(object):
         """ Meta class for this Django model """
         verbose_name_plural = "Microsite histories"
-
-
-def _make_archive_copy(instance):
-    """
-    Helper method to make a copy of a Microsite into the history table
-    """
-    archive_object = MicrositeHistory(
-        key=instance.key,
-        site=instance.site,
-        values=instance.values,
-    )
-    archive_object.save()
-
-
-@receiver(pre_delete, sender=Microsite)
-def on_microsite_deleted(sender, instance, **kwargs):  # pylint: disable=unused-argument
-    """
-    Archive the exam attempt when the item is about to be deleted
-    Make a clone and populate in the History table
-    """
-    _make_archive_copy(instance)
-
-
-@receiver(pre_save, sender=Microsite)
-def on_microsite_updated(sender, instance, **kwargs):  # pylint: disable=unused-argument
-    """
-    Archive the microsite on an update operation
-    """
-
-    if instance.id:
-        # on an update case, get the original and archive it
-        original = Microsite.objects.get(id=instance.id)
-        _make_archive_copy(original)
 
 
 class MicrositeOrganizationMapping(models.Model):
@@ -176,6 +153,6 @@ class MicrositeTemplate(models.Model):
         Returns the template object for the microsite, None if not found
         """
         try:
-            return cls.objects.get(microsite__site__domain=domain, template_uri=template_uri)
+            return cls.objects.get(microsite__subdomain=domain, template_uri=template_uri)
         except ObjectDoesNotExist:
             return None

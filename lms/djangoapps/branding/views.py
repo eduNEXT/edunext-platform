@@ -32,9 +32,13 @@ def get_course_enrollments(user):
     """
     enrollments = CourseEnrollment.enrollments_for_user(user)
     course_org = configuration_helpers.get_value('course_org_filter')
+
+    if course_org and isinstance(course_org, basestring):
+        course_org = set([course_org])
+
     if course_org:
         site_enrollments = [
-            enrollment for enrollment in enrollments if enrollment.course_id.org == course_org
+            enrollment for enrollment in enrollments if enrollment.course_id.org in course_org
         ]
     else:
         site_enrollments = [
@@ -44,7 +48,7 @@ def get_course_enrollments(user):
 
 
 @ensure_csrf_cookie
-@cache_if_anonymous()
+# @cache_if_anonymous()
 def index(request):
     '''
     Redirects to main page -- info page if user authenticated, or marketing if not
@@ -91,7 +95,7 @@ def index(request):
 
 
 @ensure_csrf_cookie
-@cache_if_anonymous()
+# @cache_if_anonymous()
 def courses(request):
     """
     Render the "find courses" page. If the marketing site is enabled, redirect

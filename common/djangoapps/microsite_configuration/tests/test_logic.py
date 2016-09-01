@@ -35,12 +35,13 @@ class TestMicrosites(DatabaseMicrositeTestCase):
             value = get_value_for_org("BogusX", "university", "default_value")
             self.assertEquals(value, "default_value")
 
-    @ddt.data(*MICROSITE_BACKENDS)
-    def test_get_value_for_org(self, site_backend):
-        """
-        Make sure get_value_for_org return value of org if it present.
-        """
-        with patch('microsite_configuration.microsite.BACKEND',
-                   get_backend(site_backend, BaseMicrositeBackend)):
-            value = get_value_for_org("TestSiteX", "university", "default_value")
-            self.assertEquals(value, "test_site")
+    # Removing this since we have and use no microsite mappings
+    # @ddt.data(*MICROSITE_BACKENDS)
+    # def test_get_value_for_org(self, site_backend):
+    #     """
+    #     Make sure get_value_for_org return value of org if it present.
+    #     """
+    #     with patch('microsite_configuration.microsite.BACKEND',
+    #                get_backend(site_backend, BaseMicrositeBackend)):
+    #         value = get_value_for_org("TestSiteX", "university", "default_value")
+    #         self.assertEquals(value, "test_microsite")
