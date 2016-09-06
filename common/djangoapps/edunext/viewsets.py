@@ -10,12 +10,21 @@ from django.core.urlresolvers import reverse
 from django.conf import settings
 
 from student.models import CourseEnrollment
+from certificates.models import GeneratedCertificate
+from edx_proctoring.models import ProctoredExamStudentAttempt
 from microsite_api.authenticators import MicrositeManagerAuthentication
 
-from filters import UserFilter, CourseEnrollmentFilter
+from filters import (
+    UserFilter,
+    CourseEnrollmentFilter,
+    GeneratedCerticatesFilter,
+    ProctoredExamStudentAttemptFilter,
+)
 from serializers import (
     UserSerializer,
     CourseEnrollmentSerializer,
+    CertificateSerializer,
+    ProctoredExamStudentAttemptSerializer,
 )
 from paginators import DataApiResultsSetPagination
 from tasks import EnrollmentsGrades
@@ -114,3 +123,40 @@ class CourseEnrollmentWithGradesViewset(DataApiViewSet):
             "task_url": url_task_status,
         }
         return Response(data_response, status=status.HTTP_202_ACCEPTED)
+
+
+class CertificateViewSet(DataApiViewSet):
+    """
+    A viewset for viewing certificates generated for users.
+    """
+    serializer_class = CertificateSerializer
+    queryset = GeneratedCertificate.objects.all()
+    filter_class = GeneratedCerticatesFilter
+    prefetch_fields = [
+        {
+            "name": "user",
+            "type": "select"
+        }
+
+    ]
+
+
+class ProctoredExamStudentViewSet(DataApiViewSet):
+    """
+    A viewset for viewing proctored exams attempts made by students.
+    """
+
+    serializer_class = ProctoredExamStudentAttemptSerializer
+    queryset = ProctoredExamStudentAttempt.objects.all()
+    filter_class = ProctoredExamStudentAttemptFilter
+    prefetch_fields = [
+        {
+            "name": "user",
+            "type": "select"
+        },
+        {
+            "name": "proctored_exam",
+            "type": "select"
+        }
+
+    ]
