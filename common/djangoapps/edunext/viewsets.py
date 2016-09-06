@@ -18,12 +18,13 @@ from filters import (
     UserFilter,
     CourseEnrollmentFilter,
     GeneratedCerticatesFilter,
-    ProctoredExamStudentAttemptFilter)
+    ProctoredExamStudentAttemptFilter,
+)
 from serializers import (
     UserSerializer,
     CourseEnrollmentSerializer,
     CertificateSerializer,
-    ProctoredExamStudentAttemptSerializer
+    ProctoredExamStudentAttemptSerializer,
 )
 from paginators import DataApiResultsSetPagination
 from tasks import EnrollmentsGrades
@@ -138,6 +139,7 @@ class CertificateViewSet(DataApiViewSet):
         }
 
     ]
+
 
 class ProctoredExamStudentViewSet(DataApiViewSet):
     """
