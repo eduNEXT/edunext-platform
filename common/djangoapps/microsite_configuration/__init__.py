@@ -7,6 +7,9 @@ from django.conf import settings
 with:
 
 from microsite_configuration import settings
+or
+from openedx.conf import settings
+
 """
 from django.conf import settings as base_settings
 
@@ -27,5 +30,6 @@ class MicrositeAwareSettings(object):
             return microsite.get_value(name, getattr(base_settings, name))
         except KeyError:
             return getattr(base_settings, name)
+
 
 settings = MicrositeAwareSettings()  # pylint: disable=invalid-name

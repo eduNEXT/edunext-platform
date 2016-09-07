@@ -49,35 +49,35 @@ class DatabaseMicrositeBackendTests(DatabaseMicrositeTestCase):
         """
         Tests microsite.get_value works as expected.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         self.assertEqual(microsite.get_value('email_from_address'), self.microsite.values['email_from_address'])
 
     def test_is_request_in_microsite(self):
         """
         Tests microsite.is_request_in_microsite works as expected.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         self.assertTrue(microsite.is_request_in_microsite())
 
     def test_get_dict(self):
         """
         Tests microsite.get_dict works as expected.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         self.assertEqual(microsite.get_dict('nested_dict'), self.microsite.values['nested_dict'])
 
     def test_has_override_value(self):
         """
         Tests microsite.has_override_value works as expected.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         self.assertTrue(microsite.has_override_value('platform_name'))
 
     def test_get_value_for_org(self):
         """
         Tests microsite.get_value_for_org works as expected.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         self.assertEqual(
             microsite.get_value_for_org(self.microsite.get_organizations()[0], 'platform_name'),
             self.microsite.values['platform_name']
@@ -87,7 +87,7 @@ class DatabaseMicrositeBackendTests(DatabaseMicrositeTestCase):
         """
         Tests microsite.get_all_orgs works as expected.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         self.assertEqual(
             microsite.get_all_orgs(),
             set(self.microsite.get_organizations())
@@ -97,7 +97,7 @@ class DatabaseMicrositeBackendTests(DatabaseMicrositeTestCase):
         """
         Tests microsite.clear works as expected.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         self.assertEqual(
             microsite.get_value('platform_name'),
             self.microsite.values['platform_name']
@@ -139,12 +139,13 @@ class DatabaseMicrositeBackendTests(DatabaseMicrositeTestCase):
         with patch.dict('django.conf.settings.FEATURES', {'USE_MICROSITES': True}):
             microsite.enable_microsites(log)
             self.assertIn(settings.MICROSITE_ROOT_DIR, settings.STATICFILES_DIRS)
+            add_lookup.assert_called_once_with('main', settings.MICROSITE_ROOT_DIR)
 
     def test_get_all_configs(self):
         """
         Tests microsite.get_all_config works as expected.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         configs = microsite.get_all_config()
         self.assertEqual(len(configs.keys()), 1)
         self.assertEqual(configs[self.microsite.key], self.microsite.values)
@@ -164,14 +165,16 @@ class DatabaseMicrositeBackendTests(DatabaseMicrositeTestCase):
         microsite.set_by_domain('unknown')
         self.assertIsNone(microsite.get_value('platform_name'))
 
+        # Not available in edunext at the moment
         # if microsite site has no organization it should raise exception
-        new_microsite = MicrositeFactory.create(key="test_microsite2")
-        new_microsite.site = SiteFactory.create(domain='test.microsite2.com')
+        # new_microsite = MicrositeFactory.create(key="test_microsite2")
+        # new_microsite.subdomain = 'test.microsite2.com'
+        #
         # This would update microsite so we test MicrositeHistory has old microsite
-        new_microsite.save()
-        self.assertEqual(MicrositeHistory.objects.all().count(), 2)
-        with self.assertRaises(Exception):
-            microsite.set_by_domain('test.microsite2.com')
+        # new_microsite.save()
+        # self.assertEqual(MicrositeHistory.objects.all().count(), 2)
+        # with self.assertRaises(Exception):
+        #     microsite.set_by_domain('test.microsite2.com')
 
     def test_has_configuration_set(self):
         """
@@ -181,7 +184,6 @@ class DatabaseMicrositeBackendTests(DatabaseMicrositeTestCase):
 
         Microsite.objects.all().delete()
         self.assertFalse(microsite.BACKEND.has_configuration_set())
-
 
 @patch(
     'microsite_configuration.microsite.TEMPLATES_BACKEND',
@@ -216,7 +218,7 @@ class DatabaseMicrositeTemplateBackendTests(DatabaseMicrositeTestCase):
         Test microsite.get_template return None if there is not template in DB.
         """
         MicrositeTemplate.objects.all().delete()
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         template = microsite.get_template('about.html')
         self.assertIsNone(template)
 
@@ -224,6 +226,6 @@ class DatabaseMicrositeTemplateBackendTests(DatabaseMicrositeTestCase):
         """
         Test microsite.get_template return appropriate template.
         """
-        microsite.set_by_domain(self.microsite.site.domain)
+        microsite.set_by_domain(self.microsite.subdomain)
         template = microsite.get_template('about.html')
         self.assertIn('About this microsite', template.render())

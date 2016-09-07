@@ -99,7 +99,7 @@ def set_by_domain(domain):
     For a given request domain, find a match in our microsite configuration
     and make it available to the complete django request process
     """
-    BACKEND.set_config_by_domain(domain)
+    return BACKEND.set_config_by_domain(domain)
 
 
 def enable_microsites_pre_startup(log):
@@ -134,9 +134,6 @@ def get_template_path(relative_path, **kwargs):
     """
     Returns a path (string) to a template
     """
-    if not is_request_in_microsite():
-        return relative_path
-
     return TEMPLATES_BACKEND.get_template_path(relative_path, **kwargs)
 
 
@@ -144,7 +141,7 @@ def get_backend(name, expected_base_class, **kwds):
     """
     Load a microsites backend and return an instance of it.
     If backend is None (default) settings.MICROSITE_BACKEND is used.
-    Any additional args(kwds) will be used in the constructor of the backend.
+    Any aditional args(kwds) will be used in the constructor of the backend.
     """
     if not name:
         return None

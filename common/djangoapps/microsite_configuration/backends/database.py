@@ -1,11 +1,15 @@
 """
 Microsite backend that reads the configuration from the database
 """
+import re
+import edxmako
+
 from mako.template import Template
 from util.cache import cache
 
 from django.conf import settings
 from django.dispatch import receiver
+from django.http import HttpResponseNotFound
 from django.db.models.signals import post_save
 
 from util.memcache import fasthash
@@ -78,7 +82,7 @@ class DatabaseMicrositeBackend(BaseMicrositeBackend):
         if microsite:
             # if we have a match, then set up the microsite thread local
             # data
-            self._set_microsite_config_from_obj(microsite.site.domain, domain, microsite)
+            self._set_microsite_config_from_obj(microsite.subdomain, domain, microsite)
 
     def get_all_config(self):
         """
@@ -207,5 +211,95 @@ class DatabaseMicrositeTemplateBackend(BaseMicrositeTemplateBackend):
         """
         Clear the cached template when the model is saved
         """
-        cache_key = "template_cache." + fasthash(instance.microsite.site.domain + '.' + instance.template_uri)
+        cache_key = "template_cache." + fasthash(instance.microsite.subdomain + '.' + instance.template_uri)
         cache.delete(cache_key)  # pylint: disable=maybe-no-member
+
+
+class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
+    """
+    Microsite backend that reads the microsites definitions from the database
+    using the custom models from edunext
+    """
+
+    def set_config_by_domain(self, domain):
+        """
+        For a given request domain, find a match in our microsite configuration
+        and then assign it to the thread local in order to make it available
+        to the complete Django request processing
+        """
+        if not self.has_configuration_set() or not domain:
+            return
+
+        candidates = Microsite.objects.all()
+        for microsite in candidates:
+            subdomain = microsite.subdomain
+            if subdomain and domain.startswith(subdomain):
+                self._set_microsite_config_from_obj(subdomain, domain, microsite)
+                return
+
+        # if no match on subdomain then see if there is a 'default' microsite
+        # defined in the db. If so, then use it
+        if not settings.FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] or bool(re.search("^(?:[0-9]{1,3}\.){3}[0-9]{1,3}(:[0-9]{2,5})?$", domain)):
+            try:
+                microsite = Microsite.objects.get(key='default')
+                self._set_microsite_config_from_obj(subdomain, domain, microsite)
+                return
+            except Microsite.DoesNotExist:
+                return
+        else:
+            return HttpResponseNotFound(edxmako.shortcuts.render_to_string('microsites/not_found.html', {
+                'domain': domain,
+            }))
+
+    def get_value_for_org(self, org, val_name, default):
+        """
+        Returns a configuration value for a microsite which has an org_filter that matches
+        what is passed in
+        """
+        if not self.has_configuration_set():
+            return default
+
+        # Filter at the db
+        candidates = Microsite.objects.all()
+        for microsite in candidates:
+            current = microsite.values
+            org_filter = current.get('course_org_filter')
+            if org_filter:
+                if isinstance(org_filter, basestring):
+                    org_filter = set([org_filter])
+                if org in org_filter:
+                    return current.get(val_name, default)
+
+        return default
+
+    def get_all_orgs(self):
+        """
+        This returns a set of orgs that are considered within all microsites.
+        This can be used, for example, to do filtering
+        """
+        org_filter_set = set()
+        if not self.has_configuration_set():
+            return org_filter_set
+
+        # Get the orgs in the db
+        candidates = Microsite.objects.all()
+        for microsite in candidates:
+            current = microsite.values
+            org_filter = current.get('course_org_filter')
+            if org_filter and type(org_filter) is list:
+                for org in org_filter:
+                    org_filter_set.add(org)
+            elif org_filter:
+                org_filter_set.add(org_filter)
+
+        return org_filter_set
+
+    def _set_microsite_config_from_obj(self, subdomain, domain, microsite_object):
+        """
+        Helper internal method to actually find the microsite configuration
+        """
+        config = microsite_object.values
+        config['subdomain'] = strip_port_from_host(subdomain)
+        config['site_domain'] = strip_port_from_host(domain)
+        config['microsite_config_key'] = microsite_object.key
+        self.current_request_configuration.data = config

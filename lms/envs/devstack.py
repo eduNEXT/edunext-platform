@@ -197,9 +197,18 @@ VERIFY_STUDENT["SOFTWARE_SECURE"] = {
     "API_SECRET_KEY": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
 }
 
+########################## Microsites #######################
+
+MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
+FEATURES['USE_MICROSITES'] = True
+
+
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'microsite_configuration.backends.database.EdunextCompatibleDatabaseMicrositeBackend'
+MICROSITE_TEMPLATE_BACKEND = 'microsite_configuration.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'
+
 # Skip enrollment start date filtering
 SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = True
-
 
 ########################## Shopping cart ##########################
 FEATURES['ENABLE_SHOPPING_CART'] = True
