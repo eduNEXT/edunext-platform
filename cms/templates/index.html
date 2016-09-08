@@ -3,6 +3,11 @@
 from django.utils.translation import ugettext as _
 
 from openedx.core.djangolib.markup import HTML, Text
+
+from opaque_keys.edx.keys import CourseKey
+
+from student.roles import CourseRerunCreatorRole, OrgRerunCreatorRole, OrgCourseCreatorRole, UserBasedRole
+
 %>
 
 <%inherit file="base.html" />
@@ -10,6 +15,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <%def name="online_help_token()"><% return "home" %></%def>
 <%block name="title">${_("{studio_name} Home").format(studio_name=settings.STUDIO_SHORT_NAME)}</%block>
 <%block name="bodyclass">is-signedin index view-dashboard</%block>
+
 
 <%block name="requirejs">
   require(["js/factories/index"], function (IndexFactory) {
@@ -22,12 +28,25 @@ from openedx.core.djangolib.markup import HTML, Text
   <header class="mast has-actions">
     <h1 class="page-header">${_("{studio_name} Home").format(studio_name=settings.STUDIO_SHORT_NAME)}</h1>
 
+    <%
+      org_course_creator_status = 'notgranted'
+      org_course_creator_allowed_org = []
+
+      all_roles = UserBasedRole(request.user, 'org_course_creator_group').courses_with_role()
+      if all_roles:
+          org_course_creator_status = 'granted'
+          org_course_creator_allowed_org = [x.org for x in all_roles]
+      else:
+          org_course_creator_status = 'notgranted'
+          org_course_creator_allowed_org = []
+    %>
+
     % if user.is_active:
     <nav class="nav-actions" aria-label="${_('Page Actions')}">
       <h3 class="sr">${_("Page Actions")}</h3>
       <ul>
         <li class="nav-item">
-          % if course_creator_status=='granted':
+          % if course_creator_status=='granted' or org_course_creator_status=='granted':
           <a href="#" class="button new-button new-course-button"><span class="icon fa fa-plus icon-inline" aria-hidden="true"></span>
               ${_("New Course")}</a>
           % elif course_creator_status=='disallowed_for_this_site' and settings.FEATURES.get('STUDIO_REQUEST_EMAIL',''):
@@ -55,7 +74,7 @@ from openedx.core.djangolib.markup import HTML, Text
   <section class="content">
     <article class="content-primary" role="main">
 
-      % if course_creator_status=='granted':
+      % if course_creator_status=='granted' or org_course_creator_status=='granted':
       <div class="wrapper-create-element wrapper-create-course">
         <form class="form-create create-course course-info" id="create-course-form" name="create-course-form">
           <div class="wrap-error">
@@ -83,12 +102,20 @@ from openedx.core.djangolib.markup import HTML, Text
                   <label for="new-course-org">${_("Organization")}</label>
                   ## Translators: This is an example for the name of the organization sponsoring a course, seen when filling out the form to create a new course. The organization name cannot contain spaces.
                   ## Translators: "e.g. UniversityX or OrganizationX" is a placeholder displayed when user put no data into this field.
-                  <input class="new-course-org" id="new-course-org" type="text" name="new-course-org" required placeholder="${_('e.g. UniversityX or OrganizationX')}" aria-describedby="tip-new-course-org tip-error-new-course-org" />
+                  % if org_course_creator_allowed_org:
+                  <select class="new-course-org" id="new-course-org" name="new-course-org" required aria-describedby="tip-new-course-org tip-error-new-course-org">
+                    %for org in org_course_creator_allowed_org:
+                    <option value="${ org }">${ org }</option>
+                    %endfor
+                  </select>
+                  % else:
+                  <input class="new-course-org" id="new-course-org" type="text" name="new-course-org" required placeholder="${_('e.g. UniversityX or OrganizationX')}" aria-describedby="tip-new-course-org tip-error-new-course-org"/>
                   <span class="tip" id="tip-new-course-org">${Text(_("The name of the organization sponsoring the course. {strong_start}Note: The organization name is part of the course URL.{strong_end} This cannot be changed, but you can set a different display name in Advanced Settings later.")).format(
                       strong_start=HTML('<strong>'),
                       strong_end=HTML('</strong>'),
                   )}</span>
                   <span class="tip tip-error is-hiding" id="tip-error-new-course-org"></span>
+                  % endif
                 </li>
 
                 <li class="field text required" id="field-course-number">
@@ -190,7 +217,7 @@ from openedx.core.djangolib.markup import HTML, Text
       % endif
 
       <!-- STATE: processing courses -->
-      %if allow_course_reruns and rerun_creator_status and len(in_process_course_actions) > 0:
+      % if allow_course_reruns and rerun_creator_status and len(in_process_course_actions) > 0:
       <div class="courses courses-processing">
           <h3 class="title">${_("Courses Being Processed")}</h3>
 
@@ -293,7 +320,7 @@ from openedx.core.djangolib.markup import HTML, Text
             %endfor
           </ul>
       </div>
-      %endif
+      % endif
 
       % if libraries_enabled or is_programs_enabled:
       <ul id="course-index-tabs">
@@ -309,7 +336,7 @@ from openedx.core.djangolib.markup import HTML, Text
       </ul>
       % endif
 
-      %if len(courses) > 0:
+      % if len(courses) > 0:
       <div class="courses courses-tab active">
         <ul class="list-courses">
           %for course_info in sorted(courses, key=lambda s: s['display_name'].lower() if s['display_name'] is not None else ''):
@@ -332,7 +359,10 @@ from openedx.core.djangolib.markup import HTML, Text
             </a>
 
             <ul  class="item-actions course-actions">
-              % if allow_course_reruns and rerun_creator_status and course_creator_status=='granted':
+              <%
+              show_link = (rerun_creator_status and course_creator_status=='granted') or CourseRerunCreatorRole( CourseKey.from_string(course_info['course_key']) ).has_user(request.user) or OrgRerunCreatorRole( course_info['org'] ).has_user(request.user)
+              %>
+              % if allow_course_reruns and show_link:
               <li class="action action-rerun">
                 <a href="${course_info['rerun_link']}" class="button rerun-button">${_("Re-run Course")}</a>
               </li>
@@ -346,7 +376,7 @@ from openedx.core.djangolib.markup import HTML, Text
         </ul>
       </div>
 
-      %else:
+      % else:
       <div class="notice notice-incontext notice-instruction notice-instruction-nocourses list-notices courses-tab active">
         <div class="notice-item">
           <div class="msg">
@@ -357,7 +387,7 @@ from openedx.core.djangolib.markup import HTML, Text
           </div>
         </div>
 
-        %if course_creator_status == "granted":
+        %if course_creator_status == "granted" or org_course_creator_status=='granted':
         <div class="notice-item has-actions">
           <div class="msg">
             <h3 class="title">${_('Create Your First Course')}</h3>
@@ -378,7 +408,7 @@ from openedx.core.djangolib.markup import HTML, Text
       % endif
 
 
-      %if course_creator_status == "unrequested":
+      %if course_creator_status == "unrequested" and (course_creator_status != "granted" and org_course_creator_status != "granted"):
       <div class="wrapper wrapper-creationrights">
         <h3 class="title">
           <a href="#instruction-creationrights" class="ui-toggle-control show-creationrights"><span class="label">${_('Becoming a Course Creator in {studio_name}').format(studio_name=settings.STUDIO_SHORT_NAME)}</span> <span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
@@ -635,6 +665,6 @@ from openedx.core.djangolib.markup import HTML, Text
     </aside>
   </section>
 
-  %endif
+  % endif
 </div>
 </%block>
