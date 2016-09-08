@@ -19,7 +19,7 @@ from django.template import Context
 
 from edxmako import lookup_template
 from edxmako.request_context import get_template_request_context
-from django.conf import settings
+from openedx.conf import settings
 from django.core.urlresolvers import reverse
 from openedx.core.djangoapps.theming.helpers import get_template_path, is_request_in_themed_site
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
