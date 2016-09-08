@@ -89,8 +89,9 @@ class DarkLangMiddlewareTests(TestCase):
         self.assertAcceptEquals('*', self.process_request(accept='*'))
 
     def test_malformed_accept(self):
-        self.assertAcceptEquals('', self.process_request(accept='xxxxxxxxxxxx'))
-        self.assertAcceptEquals('', self.process_request(accept='en;q=1.0, es-419:q-0.8'))
+        #  eduNEXT: if there is no accept, our function will return the system default which is 'en' for tests
+        self.assertAcceptEquals('en', self.process_request(accept='xxxxxxxxxxxx'))
+        self.assertAcceptEquals('en', self.process_request(accept='en;q=1.0, es-419:q-0.8'))
 
     def test_released_accept(self):
         self.assertAcceptEquals(
@@ -106,7 +107,8 @@ class DarkLangMiddlewareTests(TestCase):
 
     def test_accept_with_syslang(self):
         self.assertAcceptEquals(
-            'en;q=1.0, rel;q=0.8',
+            # 'en;q=1.0, rel;q=0.8', #  eduNEXT: English would be removed by ednx/LC
+            'rel;q=0.8',
             self.process_request(accept='en;q=1.0, rel;q=0.8, unrel;q=0.5')
         )
 

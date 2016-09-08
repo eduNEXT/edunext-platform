@@ -37,7 +37,9 @@ class TestUserPreferenceMiddleware(TestCase):
         # language set in the user preferences and not the session
         set_user_preference(self.user, LANGUAGE_KEY, 'eo')
         self.middleware.process_request(self.request)
-        self.assertEquals(self.request.session[LANGUAGE_SESSION_KEY], 'eo')
+        # self.assertEquals(self.request.session[LANGUAGE_SESSION_KEY], 'en')  # eduNEXT: our version (ednx/LC) would return remove this since it is not in the site configurations
+        self.assertNotIn(LANGUAGE_SESSION_KEY, self.request.session)
+
 
     @mock.patch('lang_pref.middleware.released_languages', mock.Mock(
         return_value=[('en', 'english'), ('eo', 'esperanto')]
@@ -53,7 +55,7 @@ class TestUserPreferenceMiddleware(TestCase):
         set_user_preference(self.user, LANGUAGE_KEY, 'eo')
         self.middleware.process_request(self.request)
 
-        self.assertEquals(self.request.session[LANGUAGE_SESSION_KEY], 'eo')
+        self.assertEquals(self.request.session[LANGUAGE_SESSION_KEY], 'en')  # eduNEXT: our version (ednx/LC) would return en since eo is not in the site configurations
 
     @mock.patch('lang_pref.middleware.released_languages',
                 mock.Mock(return_value=[('eo', 'dummy Esperanto'), ('ar', 'arabic')]))
@@ -84,4 +86,4 @@ class TestUserPreferenceMiddleware(TestCase):
         """
         set_user_preference(self.user, LANGUAGE_KEY, 'eo')
         self.middleware.process_request(self.request)
-        self.assertEqual(get_user_preference(self.request.user, LANGUAGE_KEY), None)
+        self.assertEqual(get_user_preference(self.request.user, LANGUAGE_KEY), 'eo')  # eduNEXT: our version (ednx/LC) does not support this

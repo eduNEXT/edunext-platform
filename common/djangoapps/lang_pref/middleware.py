@@ -8,6 +8,8 @@ from django.utils.translation import LANGUAGE_SESSION_KEY
 from django.utils.translation.trans_real import parse_accept_lang_header
 from lang_pref.api import released_languages
 
+from microsite_aware_functions.language import ma_language
+
 
 class LanguagePreferenceMiddleware(object):
     """
@@ -28,6 +30,8 @@ class LanguagePreferenceMiddleware(object):
         if request.user.is_authenticated():
             # Get the user's language preference
             user_pref = get_user_preference(request.user, LANGUAGE_KEY)
+            user_pref = ma_language(user_pref)
+
             # Set it to the LANGUAGE_SESSION_KEY (Django-specific session setting governing language pref)
             if user_pref:
                 if user_pref in system_released_languages:

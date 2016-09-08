@@ -60,6 +60,7 @@ class I18nTestCase(BaseI18nTestCase):
         self.assertEqual(response['Content-Language'], 'en')
         self.assert_tag_has_attr(response.content, "body", "class", "lang_en")
 
+	# TODO: fmo | (from v5) decide how can we test the new behavior using the public edraak lang force
     def test_esperanto(self):
         self.release_languages('fr, eo')
         response = self.client.get('/', HTTP_ACCEPT_LANGUAGE='eo')

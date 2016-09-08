@@ -70,6 +70,8 @@ urlpatterns = (
 
     url(r'^notifier_api/', include('notifier_api.urls')),
 
+    url(r'^', include('edraak_i18n.urls')),
+
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
     # Feedback Form endpoint

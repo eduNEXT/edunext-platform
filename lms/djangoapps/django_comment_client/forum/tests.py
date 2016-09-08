@@ -1244,6 +1244,7 @@ class CommentsServiceRequestHeadersTestCase(UrlResetMixin, ModuleStoreTestCase):
         for actual in mock_request.call_args_list:
             self.assertEqual(expected, actual)
 
+    # TODO: fmo | (from v5) decide how can we test the new behavior using the public edraak lang force
     def test_accept_language(self, mock_request):
         lang = "eo"
         text = "dummy content"
