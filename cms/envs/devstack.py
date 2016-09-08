@@ -55,6 +55,10 @@ DJFS = {
     'url_root': '/static/djpyfs',
 }
 
+############################# ADVANCED COMPONENTS #############################
+FEATURES['ENABLE_CREATOR_GROUP'] = True
+
+
 ################################# CELERY ######################################
 
 # By default don't use a worker, execute tasks as if they were local functions
