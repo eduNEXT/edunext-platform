@@ -65,7 +65,16 @@ from openedx.core.lib.course_tabs import CourseTabPluginManager
 from openedx.core.lib.courses import course_image_url
 from student import auth
 from student.auth import has_course_author_access, has_studio_read_access, has_studio_write_access
-from student.roles import CourseCreatorRole, CourseInstructorRole, CourseStaffRole, GlobalStaff, UserBasedRole
+from student.roles import (
+    CourseInstructorRole,
+    CourseStaffRole,
+    CourseCreatorRole,
+    GlobalStaff,
+    UserBasedRole,
+    CourseRerunCreatorRole,
+    OrgRerunCreatorRole,
+    OrgCourseCreatorRole
+)
 from util.course import get_link_for_about_page
 from util.date_utils import get_default_time_display
 from util.json_request import JsonResponse, JsonResponseBadRequest, expect_json
@@ -279,10 +288,12 @@ def course_rerun_handler(request, course_key_string):
     GET
         html: return html page with form to rerun a course for the given course id
     """
-    # Only global staff (PMs) are able to rerun courses during the soft launch
-    if not GlobalStaff().has_user(request.user):
-        raise PermissionDenied()
     course_key = CourseKey.from_string(course_key_string)
+    rerun_permission = CourseRerunCreatorRole(
+        course_key).has_user(request.user) or OrgRerunCreatorRole(course_key.org).has_user(request.user)
+
+    if not GlobalStaff().has_user(request.user) and not rerun_permission:
+        raise PermissionDenied()
     with modulestore().bulk_operations(course_key):
         course_module = get_course_and_check_access(course_key, request.user, depth=3)
         if request.method == 'GET':
@@ -731,11 +742,14 @@ def _create_or_rerun_course(request):
     Returns the destination course_key and overriding fields for the new course.
     Raises DuplicateCourseError and InvalidKeyError
     """
-    if not auth.user_has_role(request.user, CourseCreatorRole()):
-        raise PermissionDenied()
-
     try:
         org = request.json.get('org')
+        rerun_permission = OrgRerunCreatorRole(org).has_user(
+            request.user) or OrgCourseCreatorRole(org).has_user(request.user)
+
+        if not auth.user_has_role(request.user, CourseCreatorRole()) and not rerun_permission:
+            raise PermissionDenied()
+
         course = request.json.get('number', request.json.get('course'))
         display_name = request.json.get('display_name')
         # force the start date for reruns and allow us to override start via the client
