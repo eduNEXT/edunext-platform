@@ -2,7 +2,7 @@
 import logging
 import urllib
 
-from django.conf import settings
+from openedx.conf import settings
 from django.core.urlresolvers import reverse
 from django.core.cache import cache
 from django.views.decorators.cache import cache_control
