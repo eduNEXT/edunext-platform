@@ -27,7 +27,7 @@ class MicrositeAdminTests(DatabaseMicrositeTestCase):
         microsite_form = self.microsite_admin.get_form(self.request, self.microsite)
         self.assertEqual(
             list(microsite_form.base_fields),
-            ["site", "key", "values"]
+            ["key", "subdomain", "values"]
         )
 
     def test_save_action_admin_form(self):
@@ -40,7 +40,7 @@ class MicrositeAdminTests(DatabaseMicrositeTestCase):
         }
         microsite_form = self.microsite_admin.get_form(self.request)(instance=self.microsite, data={
             "key": self.microsite.key,
-            "site": self.microsite.site.id,
+            "subdomain": self.microsite.subdomain,
             "values": new_values,
         })
         self.assertTrue(microsite_form.is_valid())

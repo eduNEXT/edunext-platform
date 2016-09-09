@@ -216,7 +216,7 @@ def _record_feedback_in_zendesk(
     # via tagging
     white_label_org = configuration_helpers.get_value('course_org_filter')
     if white_label_org:
-        zendesk_tags = zendesk_tags + ["whitelabel_{domain}".format(domain=site_domain)]
+        zendesk_tags = zendesk_tags + ["whitelabel_{org}".format(org=white_label_org)]
 
     new_ticket = {
         "ticket": {
