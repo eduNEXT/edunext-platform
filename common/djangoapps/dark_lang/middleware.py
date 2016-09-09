@@ -10,17 +10,23 @@ in the user's session.
 This middleware must be placed before the LocaleMiddleware, but after
 the SessionMiddleware.
 """
-from django.conf import settings
+from openedx.conf import settings
 
 from dark_lang import DARK_LANGUAGE_KEY
 from dark_lang.models import DarkLangConfig
 from openedx.core.djangoapps.user_api.preferences.api import (
     delete_user_preference, get_user_preference, set_user_preference
 )
+from microsite_aware_functions.language import ma_language
 from lang_pref import LANGUAGE_KEY
 
+# TODO django_locale.trans_real is no longer present, so check possible issues
 from django.utils.translation.trans_real import parse_accept_lang_header
 from django.utils.translation import LANGUAGE_SESSION_KEY
+from microsite_configuration import microsite
+
+
+preview_lang_cookie = 'preview-lang'
 
 
 def dark_parse_accept_lang_header(accept):
@@ -73,7 +79,7 @@ class DarkLangMiddleware(object):
         Current list of released languages
         """
         language_options = DarkLangConfig.current().released_languages_list
-        if settings.LANGUAGE_CODE not in language_options:
+        if not language_options:
             language_options.append(settings.LANGUAGE_CODE)
         return language_options
 
@@ -81,10 +87,10 @@ class DarkLangMiddleware(object):
         """
         Prevent user from requesting un-released languages except by using the preview-lang query string.
         """
-        if not DarkLangConfig.current().enabled:
+        if not DarkLangConfig.current().enabled and not microsite.get_value('released_languages'):
             return
-
         self._clean_accept_headers(request)
+        self._clean_sessions(request)
         self._activate_preview_language(request)
 
     def _fuzzy_match(self, lang_code):
@@ -105,6 +111,11 @@ class DarkLangMiddleware(object):
         """
         return "{};q={}".format(lang, priority)
 
+    def _clean_sessions(self, request):
+        cookies = getattr(request, 'COOKIES', {})
+        if LANGUAGE_SESSION_KEY in request.session and not cookies.get(preview_lang_cookie):
+            request.session[LANGUAGE_SESSION_KEY] = ma_language(request.session[LANGUAGE_SESSION_KEY])
+
     def _clean_accept_headers(self, request):
         """
         Remove any language that is not either in ``self.released_langs`` or
@@ -119,7 +130,8 @@ class DarkLangMiddleware(object):
             fuzzy_code = self._fuzzy_match(lang.lower())
             if fuzzy_code:
                 new_accept.append(self._format_accept_value(fuzzy_code, priority))
-
+        if not new_accept:
+            new_accept.append(settings.LANGUAGE_CODE)
         new_accept = ", ".join(new_accept)
 
         request.META['HTTP_ACCEPT_LANGUAGE'] = new_accept
@@ -135,12 +147,16 @@ class DarkLangMiddleware(object):
             # delete the session language key (if one is set)
             if LANGUAGE_SESSION_KEY in request.session:
                 del request.session[LANGUAGE_SESSION_KEY]
+            if preview_lang_cookie in request.session:
+                del request.session[preview_lang_cookie]
 
             if auth_user:
                 # Reset user's dark lang preference to null
                 delete_user_preference(request.user, DARK_LANGUAGE_KEY)
                 # Get & set user's preferred language
                 user_pref = get_user_preference(request.user, LANGUAGE_KEY)
+                # Clean user pref to microsite aware
+                user_pref = ma_language(user_pref)
                 if user_pref:
                     request.session[LANGUAGE_SESSION_KEY] = user_pref
             return
@@ -151,6 +167,9 @@ class DarkLangMiddleware(object):
         if not preview_lang and auth_user:
             # Get the request user's dark lang preference
             preview_lang = get_user_preference(request.user, DARK_LANGUAGE_KEY)
+            cookies = getattr(request, 'COOKIES', {})
+            if not cookies.get(preview_lang_cookie):
+                preview_lang = ma_language(preview_lang)
 
         # User doesn't have a dark lang preference, so just return
         if not preview_lang:
@@ -158,8 +177,22 @@ class DarkLangMiddleware(object):
 
         # Set the session key to the requested preview lang
         request.session[LANGUAGE_SESSION_KEY] = preview_lang
+        request.session[preview_lang_cookie] = 'true'
 
         # Make sure that we set the requested preview lang as the dark lang preference for the
         # user, so that the lang_pref middleware doesn't clobber away the dark lang preview.
         if auth_user:
             set_user_preference(request.user, DARK_LANGUAGE_KEY, preview_lang)
+
+    def process_response(self, request, response):
+        '''
+            Add or remove the preview_lang cookie to be syncronized with the session preview_lang
+        '''
+        if not hasattr(request, 'session'):
+            return response
+
+        if request.session.get(preview_lang_cookie, False):
+            response.set_cookie(preview_lang_cookie, 'true')
+        else:
+            response.set_cookie(preview_lang_cookie, 'false')
+        return response

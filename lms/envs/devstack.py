@@ -19,6 +19,11 @@ PLATFORM_NAME = ENV_TOKENS.get('PLATFORM_NAME', 'Devstack')
 CELERY_ALWAYS_EAGER = True
 HTTPS = 'off'
 
+############################### LANG ########################
+
+LANGUAGE_CODE = 'en'
+TIME_ZONE = 'America/Bogota'
+
 ################################ LOGGERS ######################################
 
 # Silence noisy logs

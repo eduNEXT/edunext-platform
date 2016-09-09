@@ -65,6 +65,7 @@ class TestCreateAccount(TestCase):
             user = User.objects.get(username=self.username)
             self.assertEqual(get_user_preference(user, LANGUAGE_KEY), lang)
 
+    # TODO: fmo | decide how can we test the new behavior using the public edraak lang force
     @ddt.data("en", "eo")
     def test_header_lang_pref_saved(self, lang):
         response = self.client.post(self.url, self.params, HTTP_ACCEPT_LANGUAGE=lang)

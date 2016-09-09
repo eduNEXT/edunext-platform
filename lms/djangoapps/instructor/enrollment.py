@@ -7,7 +7,7 @@ Does not include any access control, be sure to check access before calling.
 import json
 import logging
 from django.contrib.auth.models import User
-from django.conf import settings
+from openedx.conf import settings
 from django.core.urlresolvers import reverse
 from django.core.mail import send_mail
 from django.utils.translation import override as override_language

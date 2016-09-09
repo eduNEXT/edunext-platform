@@ -30,9 +30,9 @@ class TestLangPrefView(TestCase):
         response = self.client.patch(reverse("session_language"), json.dumps({'pref-lang': 'eo'}))
         self.assertEqual(response.status_code, 200)
         self.client.get('/')
-        self.assertEquals(get_language(), 'eo')
+        self.assertEquals(get_language(), 'en')  # eduNEXT: our version (ednx/LC) does not support this
 
         response = self.client.patch(reverse("session_language"), json.dumps({'pref-lang': 'en'}))
         self.assertEqual(response.status_code, 200)
         self.client.get('/')
-        self.assertEquals(get_language(), 'en')
+        self.assertEquals(get_language(), 'en')  # eduNEXT: our version (ednx/LC) does not support this, but it was 'en' all the time
