@@ -243,12 +243,10 @@ class TestSites(SharedModuleStoreTestCase, LoginEnrollmentTestCase):
         course_mode.save()
 
         # first try on the non site, which
-        # should pick up the global configuration (where ENABLE_PAID_COURSE_REGISTRATIONS = False)
+        # should pick up the global configuration where the course is not present because of eduNEXT's filter
         url = reverse('about_course', args=[self.course_with_visibility.id.to_deprecated_string()])
         resp = self.client.get(url)
-        self.assertEqual(resp.status_code, 200)
-        self.assertIn("Enroll in {}".format(self.course_with_visibility.id.course), resp.content)
-        self.assertNotIn("Add {} to Cart ($10)".format(self.course_with_visibility.id.course), resp.content)
+        self.assertEqual(resp.status_code, 404)
 
         # now try on the site
         url = reverse('about_course', args=[self.course_with_visibility.id.to_deprecated_string()])
