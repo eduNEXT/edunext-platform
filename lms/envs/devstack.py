@@ -1,6 +1,7 @@
 """
 Specific overrides to the base prod settings to make development easier.
 """
+import warnings
 from os.path import abspath, dirname, join
 
 from .aws import *  # pylint: disable=wildcard-import, unused-wildcard-import
@@ -206,11 +207,23 @@ VERIFY_STUDENT["SOFTWARE_SECURE"] = {
 
 MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
 FEATURES['USE_MICROSITES'] = True
-
+MICROSITE_API_ALLOWED_REMOTES = [
+    '*',
+]
+try:
+    MICROSITE_API_SIGNING_KEY = open('/var/tmp/keys/microsite_api_rsa.pub', "r").read()
+except Exception, e:
+    warnings.warn(
+        "Missing file '/var/tmp/keys/microsite_api_rsa.pub'. To use the MICROSITE_API you must configure the signing key",
+        RuntimeWarning,
+    )
+    MICROSITE_API_SIGNING_KEY = "not-configured"
+MICROSITE_API_MANAGER = 'staff'
 
 ### Select an implementation for the microsite backend
 MICROSITE_BACKEND = 'microsite_configuration.backends.database.EdunextCompatibleDatabaseMicrositeBackend'
 MICROSITE_TEMPLATE_BACKEND = 'microsite_configuration.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'
+
 
 # Skip enrollment start date filtering
 SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = True
