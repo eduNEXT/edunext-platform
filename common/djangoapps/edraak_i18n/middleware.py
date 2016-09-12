@@ -29,10 +29,7 @@ class SessionBasedLocaleMiddleware(object):
     """
     def process_request(self, request):
 
-        if microsite.get_value('FORCE_LANG'):
-            language = microsite.get_value('FORCE_LANG')
-            request.session['django_language'] = microsite.get_value('FORCE_LANG')
-        elif request.method == 'GET' and 'lang' in request.GET:
+        if request.method == 'GET' and 'lang' in request.GET:
             if 'language_flag' in request.session and request.session['language_flag']:
                 language = request.session['language_reference']
                 request.session['language_flag'] = False
