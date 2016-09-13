@@ -32,7 +32,7 @@ class MicrositeFactory(DjangoModelFactory):
         model = Microsite
 
     key = "test_site"
-    subdomain = "local.testdomain.org"
+    subdomain = "test-site.testserver"
     values = {
         "domain_prefix": "test-site",
         "university": "test_site",

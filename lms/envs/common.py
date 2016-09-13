@@ -1169,6 +1169,8 @@ MIDDLEWARE_CLASSES = (
 
     'openedx.core.djangoapps.theming.middleware.CurrentSiteThemeMiddleware',
 
+    # Needs to run after mako, in case a 404 is thrown
+    'microsite_configuration.middleware.MicrositeCrossBrandingFilterMiddleware',
     # This must be last
     'microsite_configuration.middleware.MicrositeSessionCookieDomainMiddleware',
 )
