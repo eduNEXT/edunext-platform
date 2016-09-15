@@ -22,6 +22,8 @@ from lang_pref.api import released_languages
 
 <%def name='url(file, raw=False)'><%
 try:
+    if file.startswith("http"):
+        return file
     url = staticfiles_storage.url(file)
 except:
     url = file

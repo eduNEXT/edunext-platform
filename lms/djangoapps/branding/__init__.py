@@ -73,9 +73,10 @@ def get_visible_courses(org=None, filter_=None):
     if filtered_visible_ids:
         return [course for course in courses if course.id in filtered_visible_ids]
     else:
-        # Filter out any courses based on current org, to avoid leaking these.
-        orgs = configuration_helpers.get_all_orgs()
-        return [course for course in courses if course.location.org not in orgs]
+        # Let's filter out any courses in an "org" that has been declared to be
+        # in a Microsite
+        org_filter_out_set = microsite.get_all_orgs()
+        return [course for course in courses if course.location.org not in org_filter_out_set]
 
 
 def get_university_for_request():
