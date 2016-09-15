@@ -14,7 +14,7 @@ from django.contrib.auth.models import User
 from django.db import transaction
 from django.test import TestCase, TransactionTestCase
 from django.test.client import RequestFactory
-from mock import Mock, patch
+from mock import Mock, patch, ANY
 from django.http import HttpResponse
 from django.conf import settings
 from edxmako.shortcuts import render_to_string
@@ -54,11 +54,19 @@ class EmailTestMixin(object):
         `body_template`: The template to have been used for the body
         `body_context`: The context to have been used for the body
         """
-        email_user.assert_called_with(
-            mock_render_to_string(subject_template, subject_context),
-            mock_render_to_string(body_template, body_context),
-            configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
-        )
+        try:
+            email_user.assert_called_with(
+                mock_render_to_string(subject_template, subject_context),
+                mock_render_to_string(body_template, body_context),
+                configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL),
+            )
+        except AssertionError:
+            email_user.assert_called_with(
+                mock_render_to_string(subject_template, subject_context),
+                mock_render_to_string(body_template, body_context),
+                configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL),
+                html_message=ANY
+            )
 
     def append_allowed_hosts(self, hostname):
         """ Append hostname to settings.ALLOWED_HOSTS """
@@ -299,7 +307,8 @@ class EmailChangeRequestTests(EventTestMixin, TestCase):
             mock_render_to_string('emails/email_change_subject.txt', context),
             mock_render_to_string('emails/email_change.txt', context),
             configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL),
-            [new_email]
+            [new_email],
+            html_message=ANY
         )
         self.assert_event_emitted(
             SETTING_CHANGE_INITIATED, user_id=self.user.id, setting=u'email', old=old_email, new=new_email
