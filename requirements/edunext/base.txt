@@ -1,0 +1,10 @@
+# Requirements for edunext.co
+#
+# A correct GitHub reference looks like this:
+#
+#   git+https://github.com/OWNER/REPO-NAME.git@TAG-OR-SHA#egg=KIT-NAME==VERSION
+#
+
+
+# For HTML email:
+git+https://github.com/eduNEXT/openedx-email-extensions.git@release#egg=openedx-email-extensions==0.1.0

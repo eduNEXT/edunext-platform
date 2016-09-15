@@ -748,7 +748,7 @@ class TestRenderMessageToString(SharedModuleStoreTestCase):
         )
 
     def test_subject_and_message_translation(self):
-        subject, message = self.get_subject_and_message('fr')
+        subject, message, html = self.get_subject_and_message('fr')
         language_after_rendering = get_language()
 
         you_have_been_invited_in_french = u"Vous avez été invité"
@@ -758,7 +758,7 @@ class TestRenderMessageToString(SharedModuleStoreTestCase):
 
     def test_platform_language_is_used_for_logged_in_user(self):
         with override_language('zh_CN'):    # simulate a user login
-            subject, message = self.get_subject_and_message(None)
+            subject, message, html = self.get_subject_and_message(None)
             self.assertIn("You have been", subject)
             self.assertIn("You have been", message)
 
@@ -771,7 +771,7 @@ class TestRenderMessageToString(SharedModuleStoreTestCase):
         subject_template = 'emails/enroll_email_enrolledsubject.txt'
         message_template = 'emails/enroll_email_enrolledmessage.txt'
 
-        subject, message = self.get_subject_and_message_ccx(subject_template, message_template)
+        subject, message, html = self.get_subject_and_message_ccx(subject_template, message_template)
         self.assertIn(self.ccx.display_name, subject)
         self.assertIn(self.ccx.display_name, message)
         site = settings.SITE_NAME
@@ -790,7 +790,7 @@ class TestRenderMessageToString(SharedModuleStoreTestCase):
         subject_template = 'emails/unenroll_email_subject.txt'
         message_template = 'emails/unenroll_email_enrolledmessage.txt'
 
-        subject, message = self.get_subject_and_message_ccx(subject_template, message_template)
+        subject, message, html = self.get_subject_and_message_ccx(subject_template, message_template)
         self.assertIn(self.ccx.display_name, subject)
         self.assertIn(self.ccx.display_name, message)
 
@@ -803,7 +803,7 @@ class TestRenderMessageToString(SharedModuleStoreTestCase):
         subject_template = 'emails/enroll_email_allowedsubject.txt'
         message_template = 'emails/enroll_email_allowedmessage.txt'
 
-        subject, message = self.get_subject_and_message_ccx(subject_template, message_template)
+        subject, message, html = self.get_subject_and_message_ccx(subject_template, message_template)
         self.assertIn(self.ccx.display_name, subject)
         self.assertIn(self.ccx.display_name, message)
         site = settings.SITE_NAME
@@ -819,6 +819,6 @@ class TestRenderMessageToString(SharedModuleStoreTestCase):
         subject_template = 'emails/unenroll_email_subject.txt'
         message_template = 'emails/unenroll_email_allowedmessage.txt'
 
-        subject, message = self.get_subject_and_message_ccx(subject_template, message_template)
+        subject, message, html = self.get_subject_and_message_ccx(subject_template, message_template)
         self.assertIn(self.ccx.display_name, subject)
         self.assertIn(self.ccx.display_name, message)
