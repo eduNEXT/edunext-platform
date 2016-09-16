@@ -1,5 +1,8 @@
 <%namespace name='static' file='../static_content.html'/>
-<%! import json %>
+<%!
+import json
+from openedx.conf import settings
+%>
 
 <script type="text/javascript">
 window.PLATFORM_NAME = ${json.dumps(settings.PLATFORM_NAME)};

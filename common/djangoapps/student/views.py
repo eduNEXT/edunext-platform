@@ -438,7 +438,7 @@ def signin_user(request):
         'pipeline_running': 'true' if pipeline.running(request) else 'false',
         'pipeline_url': auth_pipeline_urls(pipeline.AUTH_ENTRY_LOGIN, redirect_url=redirect_to),
         'platform_name': configuration_helpers.get_value(
-            'platform_name',
+            'PLATFORM_NAME',
             settings.PLATFORM_NAME
         ),
         'third_party_auth_error': third_party_auth_error
@@ -466,7 +466,7 @@ def register_user(request, extra_context=None):
         'running_pipeline': None,
         'pipeline_urls': auth_pipeline_urls(pipeline.AUTH_ENTRY_REGISTER, redirect_url=redirect_to),
         'platform_name': configuration_helpers.get_value(
-            'platform_name',
+            'PLATFORM_NAME',
             settings.PLATFORM_NAME
         ),
         'selected_provider': '',
@@ -554,7 +554,7 @@ def is_course_blocked(request, redeemed_registration_codes, course_key):
 def dashboard(request):
     user = request.user
 
-    platform_name = configuration_helpers.get_value("platform_name", settings.PLATFORM_NAME)
+    platform_name = configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME)
 
     # we want to filter and only show enrollments for courses within
     # the 'ORG' defined in configuration.
@@ -787,7 +787,7 @@ def _create_recent_enrollment_message(course_enrollments, course_modes):  # pyli
             for enrollment in recently_enrolled_courses
         ]
 
-        platform_name = configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME)
+        platform_name = configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
 
         return render_to_string(
             'enrollment/course_enrollment_message.html',
@@ -1114,7 +1114,7 @@ def login_user(request, error=""):  # pylint: disable=too-many-statements,unused
     third_party_auth_successful = False
     trumped_by_first_party_auth = bool(request.POST.get('email')) or bool(request.POST.get('password'))
     user = None
-    platform_name = configuration_helpers.get_value("platform_name", settings.PLATFORM_NAME)
+    platform_name = configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME)
 
     if third_party_auth_requested and not trumped_by_first_party_auth:
         # The user has already authenticated via third-party auth and has not
@@ -2192,7 +2192,7 @@ def password_reset_confirm_wrapper(request, uidb36=None, token=None):
     # convert old-style base36-encoded user id to base64
     uidb64 = uidb36_to_uidb64(uidb36)
     platform_name = {
-        "platform_name": configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME)
+        "platform_name": configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
     }
     try:
         uid_int = base36_to_int(uidb36)

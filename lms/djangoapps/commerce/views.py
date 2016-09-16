@@ -85,7 +85,7 @@ def checkout_receipt(request):
     context = {
         'page_title': page_title,
         'is_payment_complete': is_payment_complete,
-        'platform_name': configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME),
+        'platform_name': configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
         'verified': SoftwareSecurePhotoVerification.verification_valid_or_pending(request.user).exists(),
         'error_summary': error_summary,
         'error_text': error_text,
