@@ -124,6 +124,9 @@ SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 ########################## Certificates Web/HTML View #######################
 FEATURES['CERTIFICATES_HTML_VIEW'] = True
 
+########################## ORGANIZATIONS APP ################################
+FEATURES['ORGANIZATIONS_APP'] = True
+
 ################################# DJANGO-REQUIRE ###############################
 
 # Whether to run django-require in debug mode.
