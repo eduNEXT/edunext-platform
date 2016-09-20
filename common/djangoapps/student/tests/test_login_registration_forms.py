@@ -173,7 +173,7 @@ class RegisterFormTest(ThirdPartyAuthTestMixin, UrlResetMixin, SharedModuleStore
         self.configure_google_provider(enabled=True)
         self.configure_facebook_provider(enabled=True)
 
-    @patch.dict(settings.FEATURES, {"ENABLE_THIRD_PARTY_AUTH": False})
+    @patch.dict(settings.FEATURES, {"ENABLE_THIRD_PARTY_AUTH_FOR_TEST": False})
     @ddt.data(*THIRD_PARTY_AUTH_PROVIDERS)
     def test_third_party_auth_disabled(self, provider_name):
         response = self.client.get(self.url)

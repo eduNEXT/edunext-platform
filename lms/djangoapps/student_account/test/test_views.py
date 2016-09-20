@@ -298,7 +298,7 @@ class StudentAccountLoginAndRegistrationTest(ThirdPartyAuthTestMixin, UrlResetMi
         expected_url = '/login?{}'.format(self._finish_auth_url_param(params))
         self.assertContains(response, expected_url)
 
-    @mock.patch.dict(settings.FEATURES, {"ENABLE_THIRD_PARTY_AUTH": False})
+    @mock.patch.dict(settings.FEATURES, {"ENABLE_THIRD_PARTY_AUTH_FOR_TEST": False})
     @ddt.data("signin_user", "register_user")
     def test_third_party_auth_disabled(self, url_name):
         response = self.client.get(reverse(url_name))

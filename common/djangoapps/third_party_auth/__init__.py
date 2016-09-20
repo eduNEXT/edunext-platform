@@ -11,5 +11,6 @@ def is_enabled():
 
     return configuration_helpers.get_value(
         "ENABLE_THIRD_PARTY_AUTH",
-        settings.FEATURES.get("ENABLE_THIRD_PARTY_AUTH")
+        # This forces the module to be enabled on a per microsite basis
+        False or settings.FEATURES.get("ENABLE_THIRD_PARTY_AUTH_FOR_TEST", False)
     )
