@@ -394,7 +394,7 @@ class Order(models.Model):
                             username=self.user.username, email=self.user.email
                         ),
                         'has_billing_info': settings.FEATURES['STORE_BILLING_INFO'],
-                        'platform_name': configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME),
+                        'platform_name': configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
                         'payment_support_email': configuration_helpers.get_value(
                             'payment_support_email', settings.PAYMENT_SUPPORT_EMAIL,
                         ),

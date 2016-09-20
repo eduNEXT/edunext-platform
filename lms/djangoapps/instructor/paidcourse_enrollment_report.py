@@ -29,7 +29,7 @@ class PaidCourseEnrollmentReportProvider(BaseAbstractEnrollmentReportProvider):
 
         # check the user enrollment role
         if user.is_staff:
-            platform_name = configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME)
+            platform_name = configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
             enrollment_role = _('{platform_name} Staff').format(platform_name=platform_name)
         elif is_course_staff:
             enrollment_role = _('Course Staff')

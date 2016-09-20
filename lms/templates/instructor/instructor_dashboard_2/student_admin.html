@@ -1,5 +1,8 @@
 <%page args="section_data" expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
+<%!
+from django.utils.translation import ugettext as _
+from openedx.conf import settings
+%>
 <div>
   %if section_data['is_small_course']:
   ## Show the gradebook for small courses

@@ -7,7 +7,7 @@ from uuid import uuid4
 import logging
 import urllib
 
-from django.conf import settings
+from openedx.conf import settings
 from django.contrib.auth.models import User
 from django.http import HttpResponse, Http404
 from django.template import RequestContext
@@ -511,7 +511,7 @@ def render_html_view(request, user_id, course_id):
         raise Http404
 
     preview_mode = request.GET.get('preview', None)
-    platform_name = configuration_helpers.get_value("platform_name", settings.PLATFORM_NAME)
+    platform_name = configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME)
     configuration = CertificateHtmlViewConfiguration.get_config()
     # Create the initial view context, bootstrapping with Django settings and passed-in values
     context = {}

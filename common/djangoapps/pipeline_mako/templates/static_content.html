@@ -75,7 +75,7 @@ except:
 %></%def>
 
 <%def name="include(path)"><%
-from django.conf import settings
+from openedx.conf import settings
 from django.template.engine import Engine
 from django.template.loaders.filesystem import Loader
 engine = Engine(dirs=settings.DEFAULT_TEMPLATE_ENGINE['DIRS'])

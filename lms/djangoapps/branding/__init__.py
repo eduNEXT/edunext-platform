@@ -14,6 +14,7 @@ from django.conf import settings
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from microsite_configuration import microsite
 
 
 def get_visible_courses(org=None, filter_=None):
