@@ -812,11 +812,13 @@ class CertificatesViewsTests(CommonCertificatesTestCase):
             course_id=unicode(self.course.id)
         )
         response = self.client.get(test_url + "?preview=honor")
-        self.assertIn("Invalid Certificate Configuration", response.content)
+        self.assertIn("Cannot Find Certificate", response.content)
 
-        # Verify that Exception is raised when certificate is not in the preview mode
-        with self.assertRaises(Exception):
-            self.client.get(test_url)
+        # eduNEXT: Verify that Exception is NOT raised when certificate is not in the preview mode. We dont like exceptions on certificates
+        try:
+            self.client.get(test_url) 
+        except Exception:
+            self.fail("No exception should be raised when rendering an invalid certificate without preview")
 
     @override_settings(FEATURES=FEATURES_WITH_CERTS_DISABLED)
     def test_request_certificate_without_passing(self):
