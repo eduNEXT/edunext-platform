@@ -22,6 +22,7 @@ from .lti import LTIAuthBackend, LTI_PARAMS_KEY
 from social.exceptions import SocialAuthBaseException
 from social.utils import module_member
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from microsite_configuration import microsite
 
 log = logging.getLogger(__name__)
 
@@ -245,6 +246,17 @@ class OAuth2ProviderConfig(ProviderConfig):
 
     def get_setting(self, name):
         """ Get the value of a setting, or raise KeyError """
+        microsite_oauth = microsite.get_value('SOCIAL_AUTH_OAUTH_SECRETS', False)
+        if microsite_oauth:
+            current = microsite_oauth.get(self.backend_name, {})
+
+            if name is "KEY":
+                return current.get('KEY')
+            if name is "SECRET":
+                site_key = microsite.get_value('microsite_config_key')
+                secrets = settings.MICROSITE_SECRETS.get(site_key, {}).get('SOCIAL_AUTH_OAUTH_SECRETS', {})
+                return current.get('SECRET', secrets.get(self.backend_name))
+
         if name == "KEY":
             return self.key
         if name == "SECRET":
