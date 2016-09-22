@@ -2614,6 +2614,9 @@ OPTIONAL_APPS = (
 
     # Organizations App (http://github.com/edx/edx-organizations)
     'organizations',
+
+    # edunext xblocks
+    # 'sodexo_game',
 )
 
 for app_name in OPTIONAL_APPS:
