@@ -101,6 +101,7 @@ urlpatterns = (
     #  Microsite & user management API
     url(r'^api/microsite/', include('microsite_api.urls')),
     url(r'^api/manage/', include('manage_api.urls')),
+    url(r'^api/ednx/', include('edunext.urls')),
 
     # Video Abstraction Layer used to allow video teams to manage video assets
     # independently of courseware. https://github.com/edx/edx-val
