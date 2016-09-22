@@ -23,6 +23,8 @@ class TestOrganizationListing(TestCase):
                 'short_name': short_name,
                 'description': 'Testing Organization %s Description' % index,
             })
+        # EDUNEXT: Organizations list must not be visible for users, reason why an empty array is set
+        self.org_short_names = []
 
     def test_organization_list(self):
         """Verify that the organization names list api returns list of organization short names."""
