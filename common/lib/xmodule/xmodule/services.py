@@ -1,7 +1,7 @@
 """
 Module contains various XModule/XBlock services
 """
-from openedx.conf import settings
+from django.conf import settings
 
 
 class SettingsService(object):
