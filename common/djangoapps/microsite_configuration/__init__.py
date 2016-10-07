@@ -26,7 +26,7 @@ class MicrositeAwareSettings(object):
     def __getattr__(self, name):
         try:
             if isinstance(microsite.get_value(name), dict):
-                return microsite.get_dict(name, getattr(base_settings, name))
+                return microsite.get_dict(name, getattr(base_settings, name, None))
             return microsite.get_value(name, getattr(base_settings, name))
         except KeyError:
             return getattr(base_settings, name)
