@@ -22,11 +22,14 @@ def microsite_orgs_to_org_records(apps, schema_editor):
 
     # Creating new organization records
     for s_org in org_filter_set:
-        Organization.objects.get_or_create(
-            name=s_org,
-            short_name=s_org,
-            description="Organization {}".format(s_org)
+        org_obj, is_new = Organization.objects.get_or_create(
+            short_name=s_org
         )
+        # This is done to avoid org duplication with the same short name
+        if is_new:
+            org_obj.name = s_org
+            org_obj.description = "Organization {}".format(s_org)
+            org_obj.save()
 
 
 def backwards(apps, schema_editor):
@@ -38,7 +41,7 @@ def backwards(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('microsite_configuration', '0003_turn_eucalyptus_microsite_to_edunext'),
+        ('microsite_configuration', '0002_auto_20160202_0228'),
         ('organizations', '0001_initial'),
     ]
 

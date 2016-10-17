@@ -27,7 +27,7 @@ def backwards(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('microsite_configuration', '0004_microsites_orgs_migration'),
+        ('microsite_configuration', '0003_microsites_orgs_migration'),
         ('course_overviews', '0005_delete_courseoverviewgeneratedhistory'),
         ('organizations', '0001_initial'),
     ]
