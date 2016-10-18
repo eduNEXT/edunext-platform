@@ -232,6 +232,7 @@ msgid "Name"
 msgstr "الاسم"
 
 #: cms/static/js/views/assets.js lms/static/js/Markdown.Editor.js
+#: cms/templates/js/asset-upload-modal.underscore
 msgid "Choose File"
 msgstr "اختر الملف"
 
@@ -1586,9 +1587,12 @@ msgstr ""
 "يبدو أن الرابط الذي أدخلته عبارة عن رابط خارجي، هل تريد إضافة البادئة "
 "http:// اللازمة؟"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: cms/templates/js/course-instructor-details.underscore
+#: cms/templates/js/signatory-details.underscore
 msgid "Title"
 msgstr "العنوان"
 
@@ -2015,19 +2019,19 @@ msgstr "إخفاء النص"
 
 #: common/lib/xmodule/xmodule/js/src/word_cloud/word_cloud_main.js
 msgid "{start_strong}{total}{end_strong} words submitted in total."
-msgstr ""
+msgstr "تم إرسال إجمالي عدد كلمات {start_strong}{total}{end_strong}."
 
 #: common/lib/xmodule/xmodule/js/src/word_cloud/word_cloud_main.js
 msgid "text_word_{uniqueId} title_word_{uniqueId}"
-msgstr ""
+msgstr "text_word_{uniqueId} title_word_{uniqueId}"
 
 #: common/lib/xmodule/xmodule/js/src/word_cloud/word_cloud_main.js
 msgid "title_word_{uniqueId}"
-msgstr ""
+msgstr "title_word_{uniqueId}"
 
 #: common/lib/xmodule/xmodule/js/src/word_cloud/word_cloud_main.js
 msgid "text_word_{uniqueId}"
-msgstr ""
+msgstr "text_word_{uniqueId}"
 
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Required field."
@@ -2943,6 +2947,8 @@ msgid "Search teams"
 msgstr "بحث في الفرق"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
+#: lms/djangoapps/discussion/static/discussion/templates/fake-breadcrumbs.underscore
+#: test_root/staticfiles/discussion/templates/fake-breadcrumbs.underscore
 msgid "All Topics"
 msgstr "كافّة المواضيع"
 
@@ -3010,7 +3016,7 @@ msgstr "إغلاق الآلة الحاسبة "
 
 #: lms/static/coffee/src/customwmd.js
 msgid "HTML preview of post"
-msgstr ""
+msgstr "استعراض HTML للمنشور"
 
 #: lms/static/coffee/src/customwmd.js
 msgid "Post body"
@@ -3084,6 +3090,7 @@ msgid "Username"
 msgstr "اسم المستخدم"
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
@@ -3846,7 +3853,7 @@ msgstr "اضغط للإضافة"
 
 #: lms/static/js/bookmarks/views/bookmark_button.js
 msgid "Bookmark this page"
-msgstr ""
+msgstr "ضع هذه الصفحة في المفضلة "
 
 #: lms/static/js/bookmarks/views/bookmark_button.js
 msgid "Click to remove"
@@ -5406,6 +5413,7 @@ msgstr "هناك إشكالات في المصادقة على هذا المكوّ
 msgid "Course Code"
 msgstr "رمز الدورة التدريبية"
 
+#: cms/static/js/programs/models/course_model.js
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/programs/course_details.underscore
@@ -5482,7 +5490,7 @@ msgstr "{0} غير صالح"
 
 #: cms/static/js/programs/views/program_details_view.js
 msgid "confirm"
-msgstr ""
+msgstr "تأكيد"
 
 #: cms/static/js/programs/views/program_details_view.js
 msgid "Publish this program?"
@@ -6240,7 +6248,7 @@ msgstr "الإجراءات"
 #: cms/templates/js/course-outline.underscore
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Timed Exam"
-msgstr ""
+msgstr "امتحان موقوت"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -6296,7 +6304,7 @@ msgstr "الحالة"
 #: test_root/staticfiles/common/templates/discussion/new-post-alert.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post-alert.underscore
 msgid "message"
-msgstr ""
+msgstr "رسالة"
 
 #: common/static/common/templates/image-modal.underscore
 #: test_root/staticfiles/common/templates/image-modal.underscore
@@ -6514,7 +6522,7 @@ msgstr "تحميل المزيد"
 #: test_root/staticfiles/common/templates/discussion/new-post-alert.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post-alert.underscore
 msgid "Error posting your message."
-msgstr ""
+msgstr "حدث خطأ في نشر رسالتك."
 
 #: common/static/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
@@ -6560,7 +6568,7 @@ msgstr "أضِف عنوانًا واضحًا ومعبّرًا لتشجيع ال�
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Enter your question or comment."
-msgstr ""
+msgstr "أَدخِل سؤالك أو تعليقك."
 
 #: common/static/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
@@ -6651,7 +6659,7 @@ msgstr "تعديل المنشور "
 #: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
 msgid "Edit your post below."
-msgstr ""
+msgstr "تعديل المنشور أدناه."
 
 #: common/static/common/templates/discussion/thread-edit.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
@@ -7999,6 +8007,9 @@ msgid ""
 "file, download course profile information or cohort results on the "
 "{link_start}Data Download{link_end} page."
 msgstr ""
+"لمراجعة الواجبات المسندة إلى الطلّاب في كل مجموعة أو رؤية نتائج تحميل ملف "
+"CSV، قم بتنزيل معلومات ملف الدورة أو نتائج المجموعات عن طريق صفحة "
+"{link_start} تنزيل البيانات{link_end}."
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
@@ -8033,7 +8044,7 @@ msgstr "تهانينا، لقد حصلت على شهادة إتمام هذه ا�
 #: lms/templates/learner_dashboard/certificate_status.underscore
 #: test_root/staticfiles/templates/learner_dashboard/certificate_status.underscore
 msgid "View Certificate"
-msgstr ""
+msgstr "معاينة الشهادة"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 #: test_root/staticfiles/templates/learner_dashboard/course_enroll.underscore
@@ -9216,65 +9227,65 @@ msgstr "التقاط صورة "
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Add a New Allowance"
-msgstr ""
+msgstr "أضف علاوة جديدة"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Special Exam"
-msgstr ""
+msgstr "امتحان مخصّص"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Exam Type"
-msgstr ""
+msgstr "نوع الاختبار"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Allowance Type"
-msgstr ""
+msgstr "نوع العلاوة"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Additional Time (minutes)"
-msgstr ""
+msgstr " (دقائق) الوقت الإضافي"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Value"
-msgstr ""
+msgstr "قيمة"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "minutes"
-msgstr ""
+msgstr "دقائقس"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Username or Email"
-msgstr ""
+msgstr "اسم المستخدم أو البريد الإلكتروني"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Allowances"
-msgstr ""
+msgstr "العلاوات"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Add Allowance"
-msgstr ""
+msgstr "أضف علاوة"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Exam Name"
-msgstr ""
+msgstr "اسم الامتحان"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Allowance Value"
-msgstr ""
+msgstr "قيمة العلاوة"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Time Limit"
-msgstr ""
+msgstr "القيود الزمنيّة"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Started At"
-msgstr ""
+msgstr "بدأ في"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Completed At"
-msgstr ""
+msgstr "استُكمل في"
 
 #: test_root/staticfiles/templates/courseware/proctored-exam-status.underscore
 msgid ""
@@ -10488,6 +10499,8 @@ msgid ""
 "The published branch version, {published}, was reset to the draft branch "
 "version, {draft}."
 msgstr ""
+"لقد تمت إعادة تعيين إصدار للفرع المنشور {المنشور} على إصدار فرع المسودة   "
+"{المسودة}. "
 
 #: cms/templates/js/programs/course_details.underscore
 msgid "Delete course"

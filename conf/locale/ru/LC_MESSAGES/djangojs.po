@@ -1600,9 +1600,12 @@ msgstr ""
 "Адрес URL, введённый вами, похож на внешнюю ссылку.  Добавить обязательный "
 "префикс «http://»?"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: cms/templates/js/course-instructor-details.underscore
+#: cms/templates/js/signatory-details.underscore
 msgid "Title"
 msgstr "Заголовок"
 
@@ -2020,7 +2023,7 @@ msgstr "Отключить транскрипты"
 
 #: common/lib/xmodule/xmodule/js/src/word_cloud/word_cloud_main.js
 msgid "{start_strong}{total}{end_strong} words submitted in total."
-msgstr ""
+msgstr "Всего отправлено {start_strong}{total}{end_strong} словосочетаний."
 
 #: common/lib/xmodule/xmodule/js/src/word_cloud/word_cloud_main.js
 msgid "text_word_{uniqueId} title_word_{uniqueId}"
@@ -3016,7 +3019,7 @@ msgstr "Закрыть калькулятор"
 
 #: lms/static/coffee/src/customwmd.js
 msgid "HTML preview of post"
-msgstr ""
+msgstr "Предпросмотр сообщения в HTML"
 
 #: lms/static/coffee/src/customwmd.js
 msgid "Post body"
@@ -3093,6 +3096,7 @@ msgid "Username"
 msgstr "Имя пользователя"
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Email"
 msgstr "Электронная почта"
 
@@ -4537,7 +4541,7 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "All Time Zones"
-msgstr ""
+msgstr "Все часовые пояса"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Additional Information"
@@ -6257,7 +6261,7 @@ msgstr "Действия"
 #: cms/templates/js/course-outline.underscore
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Timed Exam"
-msgstr ""
+msgstr "Экзамен с ограничением по времени"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -6313,7 +6317,7 @@ msgstr "Состояние"
 #: test_root/staticfiles/common/templates/discussion/new-post-alert.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post-alert.underscore
 msgid "message"
-msgstr ""
+msgstr "сообщение"
 
 #: common/static/common/templates/image-modal.underscore
 #: test_root/staticfiles/common/templates/image-modal.underscore
@@ -8020,6 +8024,9 @@ msgid ""
 "file, download course profile information or cohort results on the "
 "{link_start}Data Download{link_end} page."
 msgstr ""
+"Чтобы просмотреть задания, данные группе, или результаты загрузки файла в "
+"формате CSV, скачайте информацию о курсе или результаты группы со страницы "
+"{link_start}Загрузка данных{link_end}."
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
@@ -9268,11 +9275,11 @@ msgstr "Сделать фото"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Add a New Allowance"
-msgstr ""
+msgstr "Добавить новое послабление"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Special Exam"
-msgstr ""
+msgstr "Особый экзамен"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Exam Type"
@@ -9281,7 +9288,7 @@ msgstr ""
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Allowance Type"
-msgstr ""
+msgstr "Тип послабления"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Additional Time (minutes)"
@@ -9289,7 +9296,7 @@ msgstr ""
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Value"
-msgstr ""
+msgstr "Значение"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "minutes"
@@ -9297,36 +9304,36 @@ msgstr ""
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Username or Email"
-msgstr ""
+msgstr "Имя пользователя или e-mail"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Allowances"
-msgstr ""
+msgstr "Послабления"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Add Allowance"
-msgstr ""
+msgstr "Добавить послабление"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Exam Name"
-msgstr ""
+msgstr "Название испытания"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Allowance Value"
-msgstr ""
+msgstr "Значение послабления"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Time Limit"
-msgstr ""
+msgstr "Ограничение по времени"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Started At"
-msgstr ""
+msgstr "Начато"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Completed At"
-msgstr ""
+msgstr "Завершено"
 
 #: test_root/staticfiles/templates/courseware/proctored-exam-status.underscore
 msgid ""
@@ -10550,6 +10557,8 @@ msgid ""
 "You have done a dry run of force publishing the course. Nothing has changed."
 " Had you run it, the following course versions would have been change."
 msgstr ""
+"Вы запустили имитацию принудительной публикации, поэтому в курсе ничего не "
+"изменилось. При принудительной публикации будут внесены следующие изменения."
 
 #: cms/templates/js/maintenance/force-published-course-response.underscore
 msgid ""

@@ -1751,7 +1751,7 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "{programming_language} editor"
-msgstr ""
+msgstr "editor de {programming_language}"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Press ESC then TAB or click outside of the code editor to exit"
@@ -1820,7 +1820,7 @@ msgstr ""
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Answer"
-msgstr ""
+msgstr "Respuesta:"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error {err} in evaluating hint function {hintfn}."
@@ -2319,6 +2319,7 @@ msgstr ""
 "para su curso, o reportar algún problema, contacte a "
 "moocsupport@mathworks.com."
 
+#: common/lib/xmodule/xmodule/capa_base.py
 #: common/templates/darklang/preview_lang_include.html
 #: lms/templates/help_modal.html lms/templates/manage_user_standing.html
 #: lms/templates/register-shib.html
@@ -2389,7 +2390,7 @@ msgstr[1] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Partially Correct"
-msgstr ""
+msgstr "Parcialmente correcto"
 
 #. Translators: 'closed' means the problem's due date has passed. You may no
 #. longer attempt to solve the problem.
@@ -11292,7 +11293,7 @@ msgstr "Añadido a marcadores"
 
 #: lms/templates/bookmark_button.html
 msgid "Bookmark this page"
-msgstr ""
+msgstr "Marcar esta página"
 
 #: lms/templates/course.html themes/example/lms/templates/course.html
 msgid "LEARN MORE"
@@ -11566,6 +11567,9 @@ msgid ""
 "details that will help us to troubleshoot, including error messages that you"
 " saw."
 msgstr ""
+"Describe lo que estabas haciendo cuando surgió el problema. Incluya todos "
+"los detalles que nos ayudarán a solucionar problemas, incluidos los mensajes"
+" de error que usted vio."
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
@@ -11598,7 +11602,7 @@ msgstr "Breve descripción del problema"
 
 #: lms/templates/help_modal.html
 msgid "Details of the problem you are encountering{asterisk}"
-msgstr ""
+msgstr "Detalles del problema que está encontrando{asterisk}"
 
 #: lms/templates/help_modal.html
 msgid "suggestion"
@@ -12761,6 +12765,11 @@ msgid ""
 "when processing is complete. You can also return to this page to see the "
 "status of your API access request."
 msgstr ""
+"Su solicitud para acceder a la API de catálogo de cursos de {platform_name} "
+"se está procesando. Usted recibirá un mensaje en la dirección de correo "
+"electrónico de su perfil cuando se complete el proceso. También puede "
+"regresar a esta página para ver el estado de su solicitud de acceso a la "
+"API."
 
 #. Translators: "platform_name" is the name of this Open edX installation.
 #. "api_support_email_link" is HTML for a link to email the API support staff.
@@ -12770,6 +12779,9 @@ msgid ""
 "denied. If you think this is an error, or for other questions about using "
 "this API, contact {api_support_email_link}."
 msgstr ""
+"Su solicitud para acceder a la API de catálogo de cursos de {platform_name} "
+"ha sido denegado. Si usted piensa que esto es un error, o para otras "
+"preguntas sobre el uso de esta API, contacte a {api_support_email_link}."
 
 #: lms/templates/api_admin/status.html
 msgid ""
@@ -12817,6 +12829,10 @@ msgid ""
 "{link_start}our API documentation page{link_end}. For questions about using "
 "this API, contact {api_support_email_link}."
 msgstr ""
+"Para aprender más sobre la API de catálogo de cursos de {platform_name} "
+"visite {link_start}Nuestra página de documentación de la API{link_end}. Si "
+"tiene preguntas sobre el uso de esta API, contacte a "
+"{api_support_email_link}."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "API Terms of Service"
@@ -12844,6 +12860,18 @@ msgid ""
 " do not understand or do not wish to be bound by the Terms, you should not "
 "use the APIs."
 msgstr ""
+"Bienvenido a {platform_name}. Gracias por usar la API de Descubrimiento de "
+"cursos de {platform_name} y cualquier API adicional que podemos ofrecer de "
+"vez en cuando (colectivamente, la \"API\"). Por favor, lea estas Condiciones"
+" de servicio antes de acceder o utilizar las API. Estas Condiciones del "
+"servicio, cualquiera de los términos adicionales dentro de la documentación "
+"de la API, y las directivas e instrucciones aplicables que {platform_name} "
+"pone a disposición y / o actualizaciones de vez en cuando son acuerdos "
+"(colectivamente, las \"Condiciones\") entre usted y {platform_name}. Al "
+"acceder o utilizar las API, usted acepta y acuerda estar legalmente sometido"
+" a los Términos, independientemente de si usted es un usuario registrado. Si"
+" no entiende o no desea estar obligado por los términos, no debe utilizar "
+"las API."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "API Access"
@@ -12918,6 +12946,11 @@ msgid ""
 "time, in its sole discretion, does not benefit or serve the best interests "
 "of {platform_name}, its users and its partners."
 msgstr ""
+"{platform_name} tendrá el derecho exclusivo de determinar si un uso "
+"específico de las API es o no es aceptable, y {platform_name} se reserva el "
+"derecho de revocar acceso a la API para cualquier uso que {platform_name} "
+"determine en cualquier momento, a su sola discreción, si no beneficia o "
+"atiende los mejores intereses de {platform_name}, sus usuarios y sus socios."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -13023,6 +13056,15 @@ msgid ""
 "or mask either your identity or yourApplication's identity when using the "
 "APIs."
 msgstr ""
+"Usted se compromete a cumplir con todas las leyes aplicables, regulaciones, "
+"y los derechos de terceros (incluyendo, sin limitación las leyes relativas a"
+" la importación o exportación de datos o software, privacidad, derechos de "
+"autor y las leyes locales). Usted no va a utilizar las API para fomentar o "
+"promover la actividad ilegal o violación de derechos de terceros. No violará"
+" cualquier otro término de servicio con {platform_name}. Sólo accederá (o "
+"intentará acceder) a una API por los medios descritos en la documentación de"
+" esa API. Usted no va a falsear o enmascarar su identidad o la identidad de "
+"su Aplicación al utilizar las API."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Ownership"
@@ -13122,6 +13164,13 @@ msgid ""
 " collect and how you may use and share such information (including for "
 "advertising) with {platform_name} and other third parties."
 msgstr ""
+"Usted acepta cumplir con todas las leyes y regulaciones de privacidad "
+"aplicables y ser transparente con respecto a cualquier colección y uso de "
+"los datos del usuario final. Usted proporcionará y adherirse a una política "
+"de privacidad para su aplicación que describe con claridad y precisión a los"
+" usuarios finales información de usuario que usted recoge y cómo se puede "
+"usar y compartir la información (incluida la publicidad) con {platform_name}"
+" y otros terceros."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Right to Charge"
@@ -13137,6 +13186,14 @@ msgid ""
 "return to this page periodically to ensure familiarity with the most current"
 " version of the Terms."
 msgstr ""
+"{platform_name} se reserva el derecho a modificar los términos en cualquier "
+"momento sin previo aviso. Cualquier cambio en las condiciones entrarán en "
+"vigor inmediatamente después de su publicación en esta página, con fecha "
+"efectiva actualizada. Al acceder o utilizar se han hecho las API después de "
+"cualquier cambio, usted acepta de forma prospectiva a las condiciones "
+"modificadas y todos los cambios. Asegúrese de volver a esta página "
+"periódicamente para asegurarse de estar familiarizado con la versión más "
+"actualizada de los Términos."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -13146,6 +13203,11 @@ msgid ""
 "unacceptable to you, you should stop using the APIs. Continued use of the "
 "APIs means you accept the change."
 msgstr ""
+"{platform_name} también puede actualizar o modificar las API de vez en "
+"cuando sin previo aviso. Estos cambios pueden afectar el uso de las API o la"
+" forma en que su integración interactúa con la API. Si hacemos un cambio que"
+" es inaceptable para usted, usted debe dejar de usar la API. El uso "
+"continuado de las API implica la aceptación de los cambios."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Confidentiality"
@@ -13158,6 +13220,10 @@ msgid ""
 "others from using your credentials. Your credentials may not be embedded in "
 "open source projects."
 msgstr ""
+"Sus credenciales (tales como el secreto de cliente y el ID) están destinados"
+" a ser utilizados únicamente por usted. Va a mantener sus credenciales "
+"confidenciales y desalentar a otros del uso de sus credenciales. Sus "
+"credenciales no podrán formar parte de proyectos de código abierto."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -13177,6 +13243,22 @@ msgid ""
 "so by law if you provide {platform_name} with reasonable prior notice, "
 "unless a court orders that {platform_name} not receive notice."
 msgstr ""
+"En el caso de que {platform_name} le proporcione acceso a la información "
+"específica a {platform_name} y / o las API que se hayan marcado como "
+"\"confidencial\", o que una persona razonable asumiría que es confidencial o"
+" propietaria dados los términos de su divulgación ( \"información "
+"confidencial\"), usted se compromete a utilizar esta información sólo para "
+"utilizar y construir con la API. No puede revelar la información "
+"confidencial a cualquier persona sin previo consentimiento por escrito de "
+"{platform_name}, y se compromete a proteger la información confidencial de "
+"un uso no autorizado y la divulgación de la misma manera que lo haría "
+"proteger su propia información confidencial. La información confidencial no "
+"incluye información que ha desarrollado de forma independiente, que se le "
+"dio razón a usted por un tercero sin obligación de confidencialidad, o que "
+"se hace público por causas ajenas a su cuenta. Usted puede revelar "
+"información confidencial cuando sea obligado a hacerlo por ley si "
+"proporciona a {platform_name} la notificación con una antelación razonable, "
+"a menos que un tribunal ordene que {platform_name} no reciba aviso."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Disclaimer of Warranty / Limitation of Liabilities"
@@ -13272,6 +13354,14 @@ msgid ""
 "DEFAMATION, ERRORS, LOSS OF PROFITS, LOSS OF DATA OR INTERRUPTION IN "
 "AVAILABILITY OF DATA)."
 msgstr ""
+"EN PARTICULAR, EN LA MEDIDA MÁXIMA PERMITIDA POR LA LEY, NI {platform_name} "
+"NI NINGUNO DE LOS PARTICIPANTES DE {platform_name} TENDRÁN CUALQUIER "
+"RESPONSABILIDAD POR DAÑOS DERIVADOS, PUNITIVOS, INDIRECTOS, ESPECIALES, "
+"EJEMPLARES O INDIRECTOS, PREVISIBLES O IMPREVISIBLES Y YA SEA O NO QUE "
+"{platform_name} O CUALQUIERA DE LOS PARTICIPANTES DE {platform_name} HAYA "
+"SIDO NEGLIGENTE O DE ALGUNA FORMA HAYA COMETIDO UNA FALTA (INCLUYENDO, PERO "
+"NO LIMITADO A, LAS RECLAMACIONES POR DIFAMACIÓN, ERRORES, PÉRDIDA DE "
+"BENEFICIOS, PÉRDIDA DE DATOS O INTERRUPCIÓN DE DISPONIBILIDAD DE DATOS)."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -13280,6 +13370,10 @@ msgid ""
 " OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS, OR LIMITATIONS MAY NOT APPLY "
 "TO YOU, AND YOU MIGHT HAVE ADDITIONAL RIGHTS."
 msgstr ""
+"CIERTAS LEYES ESTATALES NO PERMITEN LIMITACIONES SOBRE GARANTÍAS IMPLÍCITAS "
+"O LA EXCLUSIÓN O LIMITACIÓN DE CIERTOS DAÑOS. SI ESTAS LEYES SE APLICAN A "
+"USTED, ALGUNAS O TODAS LAS RENUNCIAS, EXCLUSIONES O LIMITACIONES PUEDEN NO "
+"APLICARSE A USTED, Y USTED PODRÍA TENER DERECHOS ADICIONALES."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -13375,6 +13469,20 @@ msgid ""
 "still be allowed to apply to injunctive remedies (or an equivalent type of "
 "urgent legal relief) in any jursdiction."
 msgstr ""
+"El usuario acepta que los términos, las API, y cualquier reclamo o disputa "
+"que surja de o esté relacionada con las condiciones o las API se rige por "
+"las leyes del Estado de Massachusetts, con exclusión de sus conflictos de "
+"disposiciones legales. El usuario acepta que todas las reclamaciones y "
+"disputas serán escuchadas y resueltas exclusivamente en los tribunales "
+"estatales o federales ubicados en y sirviendo de Cambridge, Massachusetts, "
+"EE.UU. Usted da su consentimiento a la jurisdicción personal de dichos "
+"tribunales más que para este propósito, y el usuario renuncia y está de "
+"acuerdo hacer valer ninguna objeción a dichos procedimientos en los "
+"tribunales (incluyendo cualquier defensa o excepción de falta de "
+"jurisdicción apropiada o el lugar o la inconveniencia del foro). No obstante"
+" lo anterior, el usuario acepta que {platform_name} aún podrá aplicar a "
+"medidas cautelares (o un tipo equivalente de medida legal urgente) en "
+"cualquier jurisdicción."
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Termination"

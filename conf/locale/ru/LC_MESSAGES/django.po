@@ -460,7 +460,7 @@ msgstr "Цена не выбрана или является слишком ни
 
 #: common/djangoapps/dark_lang/views.py
 msgid "Preview Language is currently disabled"
-msgstr ""
+msgstr "Предварительный просмотр языка отключен"
 
 #: common/djangoapps/dark_lang/views.py
 msgid "Language code not provided"
@@ -469,6 +469,7 @@ msgstr "Код языка не указан"
 #: common/djangoapps/dark_lang/views.py
 msgid "Language set to language code: {preview_language_code}"
 msgstr ""
+"Язык ассоциирован со следующим языковым кодом: {preview_language_code}"
 
 #: common/djangoapps/dark_lang/views.py
 msgid "Language reset to the default language code"
@@ -998,6 +999,8 @@ msgid ""
 "Before you sign in, you need to activate your account. We have sent you an "
 "email message with instructions for activating your account."
 msgstr ""
+"Перед входом необходимо активировать вашу учетную запись. Вам было "
+"отправлено электронное сообщение с указаниями по активации учетной записи."
 
 #: common/djangoapps/student/views.py
 msgid "Please enter a username"
@@ -1165,6 +1168,9 @@ msgid ""
 "provider as an option to authenticate with on the login screen, but manual "
 "authentication using the correct link is still possible."
 msgstr ""
+"Если эта опция не включена, на странице входа пользователям не будет "
+"предложено войти с помощью данного провайдера. Тем не менее, вход с помощью "
+"соответствующей ссылки будет возможен."
 
 #: common/djangoapps/third_party_auth/models.py
 msgid "The Site that this SAML configuration belongs to."
@@ -1558,7 +1564,7 @@ msgstr "должен состоять из {0} или более знаков"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must be {0} characters or fewer"
-msgstr ""
+msgstr "должно составлять {0} или менее символов"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Must be more complex ({0})"
@@ -1598,6 +1604,9 @@ msgid ""
 "deselected; for clarity, update XBlockStudioConfiguration support state "
 "accordingly."
 msgstr ""
+"Чтобы отключить XBlock и не допустить его использование в LMS, снимите "
+"флажок «Включено». Также рекомендуем соответствующим образом обновить "
+"состояние XBlockStudioConfiguration."
 
 #: common/djangoapps/xblock_django/admin.py
 msgid ""
@@ -1606,6 +1615,10 @@ msgid ""
 "accordingly, as deprecated does not impact whether or not new XBlock "
 "instances can be created in Studio."
 msgstr ""
+"Устаревшим может быть объявлен только XBlock, присутствующий в списке "
+"дополнительных модулей курса. Не забудьте  соответствующим образом обновить "
+"состояние XBlockStudioConfiguration, поскольку метка «устаревший» не влияет "
+"на возможность создания модулей в Studio."
 
 #: common/djangoapps/xblock_django/admin.py
 msgid ""
@@ -1613,6 +1626,9 @@ msgid ""
 "regardless of support level. Remember to also check if all instances of the "
 "XBlock are disabled in XBlockConfiguration."
 msgstr ""
+"Сочетания отключённых XBlock/шаблонов не могут быть отредактированы в Studio"
+" вне зависимости от уровня поддержки. Не забудьте также убедиться, что все "
+"экземпляры XBlock-а отключены в XBlockConfiguration."
 
 #: common/djangoapps/xblock_django/admin.py
 msgid ""
@@ -1620,6 +1636,9 @@ msgid ""
 "always be created in Studio. Unsupported XBlock/template combinations "
 "require course author opt-in."
 msgstr ""
+"Разрешённые сочетания XBlock/шаблонов c полной или условной поддержкой "
+"всегда могут быть созданы в Studio. Для включения неподдерживаемых "
+"XBlock/шаблонов требуется явное указание автора курса."
 
 #: common/djangoapps/xblock_django/models.py
 msgid "show deprecation messaging in Studio"
@@ -1695,9 +1714,9 @@ msgstr "Этот ответ в процессе оценки."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Not yet answered."
-msgstr ""
+msgstr "Ответ пока не дан."
 
-#: wiki/forms.py
+#: common/lib/capa/capa/inputtypes.py wiki/forms.py
 msgid "Select an option"
 msgstr "Выберите опцию"
 
@@ -1733,7 +1752,7 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "{programming_language} editor"
-msgstr ""
+msgstr "Редактор {programming_language}"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Press ESC then TAB or click outside of the code editor to exit"
@@ -1789,7 +1808,7 @@ msgstr "Требуется тег {expected_tag}. Вместо него введ
 #. Translators: index here could be 1,2,3 and so on
 #: common/lib/capa/capa/responsetypes.py
 msgid "Question {index}"
-msgstr ""
+msgstr "Вопрос {index}"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Correct:"
@@ -1801,7 +1820,7 @@ msgstr ""
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Answer"
-msgstr ""
+msgstr "Ответ"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error {err} in evaluating hint function {hintfn}."
@@ -2300,6 +2319,7 @@ msgstr ""
 "известен посторонним. Для получения ключа для вашего курса или отправки "
 "сообщения о проблеме, пожалуйста, свяжитесь с moocsupport@mathworks.com"
 
+#: common/lib/xmodule/xmodule/capa_base.py
 #: common/templates/darklang/preview_lang_include.html
 #: lms/templates/help_modal.html lms/templates/manage_user_standing.html
 #: lms/templates/register-shib.html
@@ -2307,7 +2327,7 @@ msgstr ""
 #: lms/templates/survey/survey.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Submit"
-msgstr "Отправить"
+msgstr "Отправить на рассмотрение"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Submitting"
@@ -2375,7 +2395,7 @@ msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Partially Correct"
-msgstr ""
+msgstr "Частично верно"
 
 #. Translators: 'closed' means the problem's due date has passed. You may no
 #. longer attempt to solve the problem.
@@ -2920,6 +2940,8 @@ msgstr "Список дополнительных модулей"
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enter the names of the advanced modules to use in your course."
 msgstr ""
+"Введите названия дополнительных модулей, которые будут использованы в вашем "
+"Курсе."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Home Sidebar Name"
@@ -3376,12 +3398,16 @@ msgstr ""
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Create Zendesk Tickets For Suspicious Proctored Exam Attempts"
 msgstr ""
+"Создавать Zendesk-запросы в техподдержку для подозрительных попыток сдачи "
+"наблюдаемых заданий."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
 "Enter true or false. If this value is true, a Zendesk ticket will be created"
 " for suspicious attempts."
 msgstr ""
+"Введите \"true\" или \"false\". Если введено значение \"true\", будет создан"
+" билет Zendesk для подозрительных попыток."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enable Timed Exams"
@@ -3463,11 +3489,11 @@ msgstr "Инструктор курса"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enter the details for Course Instructor"
-msgstr ""
+msgstr "Введите информацию о преподавателе курса"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Add Unsupported Problems and Tools"
-msgstr ""
+msgstr "Добавить неподдерживаемые проблемы и инструменты"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -4830,13 +4856,14 @@ msgstr "URL автора"
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "The label for this word cloud on the course page."
-msgstr ""
+msgstr "Подпись к этому облаку слов на странице курса."
 
+#: common/lib/xmodule/xmodule/word_cloud_module.py
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Instructions"
-msgstr "Инструкции"
+msgstr "Указания"
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid ""
@@ -4844,6 +4871,9 @@ msgid ""
 "Clear instructions are important, especially for learners who have "
 "accessibility requirements."
 msgstr ""
+"Добавьте инструкции для того, чтобы помочь слушателям в использовании облака"
+" слов. Понятные инструкции очень важны, особенно для слушателей с "
+"ограниченными возможностями."
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Inputs"
@@ -4853,6 +4883,7 @@ msgstr "Добавленные"
 msgid ""
 "The number of text boxes available for learners to add words and sentences."
 msgstr ""
+"Количество полей ввода, куда слушатели смогут ввести слова или предложения."
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Maximum Words"
@@ -4860,7 +4891,7 @@ msgstr "Максимальное количество слов"
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "The maximum number of words displayed in the generated word cloud."
-msgstr ""
+msgstr "Максимальное количество слов, отображаемое в итоговом облаке слов."
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Show Percents"
@@ -4873,7 +4904,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Whether this learner has posted words to the cloud."
-msgstr ""
+msgstr "Добавил ли пользователь слова в облако."
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Student answer."
@@ -4881,7 +4912,7 @@ msgstr "Ответ слушателя."
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "All possible words from all learners."
-msgstr ""
+msgstr "Все возможные слова от всех слушателей."
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Top num_top_words words for word cloud."
@@ -5846,26 +5877,30 @@ msgstr ""
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your certificate is available"
-msgstr ""
+msgstr "Ваш сертификат доступен"
 
 #: lms/djangoapps/courseware/views/views.py
 msgid ""
 "You can keep working for a higher grade, or request your certificate now."
 msgstr ""
+"Вы можете продолжать заниматься для лучшей оценки или запросить свой "
+"сертификат сразу."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "We're working on it..."
-msgstr ""
+msgstr "Мы работаем над этим..."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid ""
 "We're creating your certificate. You can keep working in your courses and a "
 "link to it will appear here and on your Dashboard when it is ready."
 msgstr ""
+"Мы создали ваш сертификат. Продолжайте обучение, и ссылка на сертификат "
+"появится на панели управления, когда он будет готов."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Certificate unavailable"
-msgstr ""
+msgstr "Сертификат недоступен"
 
 #: lms/djangoapps/courseware/views/views.py
 msgid ""
@@ -5875,7 +5910,7 @@ msgstr ""
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Congratulations, you qualified for a certificate!"
-msgstr ""
+msgstr "Поздравляем, вы аттестованы для получения сертификата!"
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Invalid location."
@@ -6269,7 +6304,7 @@ msgstr "Ключ ИПП для доступа к Sailthru."
 
 #: lms/djangoapps/email_marketing/models.py
 msgid "API secret for accessing Sailthru. "
-msgstr ""
+msgstr "Секрет ИПП для доступа к Sailthru."
 
 #: lms/djangoapps/email_marketing/models.py
 msgid "Sailthru list name to add new users to. "
@@ -6287,7 +6322,7 @@ msgstr "Sailthru: максимальное количество повторны
 
 #: lms/djangoapps/email_marketing/models.py
 msgid "Sailthru template to use on activation send. "
-msgstr ""
+msgstr "Шаблон Salithru для использования при отправлении активации."
 
 #: lms/djangoapps/email_marketing/models.py
 msgid "Sailthru template to use on abandoned cart reminder. Deprecated."
@@ -6327,6 +6362,8 @@ msgid ""
 "Optional lms url scheme + host used to construct urls for content library, "
 "e.g. https://courses.edx.org."
 msgstr ""
+"Нестандартные схема + хост LMS, используемые для составления адреса "
+"библиотеки компонентов, например, https://courses.edx.org."
 
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
 msgid "{platform_name} Staff"
@@ -6364,7 +6401,7 @@ msgstr "Ошибка целостности данных"
 
 #: lms/djangoapps/instructor/services.py
 msgid "Proctored Exam Review: {review_status}"
-msgstr ""
+msgstr "Результат очного экзамена: {review_status}"
 
 #: lms/djangoapps/instructor/services.py
 msgid ""
@@ -6372,6 +6409,9 @@ msgid ""
 "{student_username} was reviewed as {review_status} by the proctored exam "
 "review provider."
 msgstr ""
+"Попытка сдачи наблюдаемого задания {exam_name} в курсе {course_name} "
+"слушателем {student_username} была отмечена как {review_status} сервисом "
+"отсмотра наблюдаемых экзаменов."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "User does not exist."
@@ -9582,6 +9622,8 @@ msgid ""
 "Once you have approved this request, go to {catalog_admin_url} to set up a "
 "catalog for this user."
 msgstr ""
+"Одобрив запрос, перейдите к {catalog_admin_url}, чтобы создать каталог для "
+"этого пользователя."
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid "Company Address"
@@ -9589,7 +9631,7 @@ msgstr "Адрес организации"
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid "Describe what your application does."
-msgstr ""
+msgstr "Опишите, как работает Ваше приложение."
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid "The URL of your company's website."
@@ -9605,12 +9647,14 @@ msgstr "Адрес для связи с Вашей организацией."
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid "The following users do not exist: {usernames}."
-msgstr ""
+msgstr "Следующих пользователей не существует: {usernames}."
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid ""
 "Comma-separated list of usernames which will be able to view this catalog."
 msgstr ""
+"Список имен пользователей, которые смогут сможет просматривать данный "
+"каталог, с разделителями-запятыми."
 
 #: openedx/core/djangoapps/api_admin/models.py cms/templates/index.html
 msgid "Denied"
@@ -9896,6 +9940,9 @@ msgid ""
 "        Please try logging in again.  (You may need to restart your browser.)\n"
 "        "
 msgstr ""
+"\n"
+"Идентификационный сервер вашего учебного заведения не предоставил нам информации о вашей учётной записи.\n"
+"Пожалуйста, попробуйте войти ещё раз (вам может понадобиться перезапустить браузер)."
 
 #: openedx/core/djangoapps/profile_images/images.py
 msgid "The file must be smaller than {image_max_size} in size."
@@ -10033,6 +10080,8 @@ msgid ""
 "Value '{preference_value}' not valid for preference '{preference_key}': Not "
 "in timezone set."
 msgstr ""
+"Значение '{preference_value}' не действительно для настройки "
+"'{preference_key}': не входит в список часовых поясов."
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
 msgid "Value '{preference_value}' is not a valid time zone selection."
@@ -10225,7 +10274,7 @@ msgstr "Вы должны принять {terms_of_service} {platform_name}"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Review the Terms of Service"
-msgstr ""
+msgstr "Просмотр условий предоставления услуг"
 
 #: openedx/core/lib/api/view_utils.py
 msgid "This value is invalid."
@@ -10420,7 +10469,7 @@ msgstr "Уровни поддержки {platform_name}:"
 msgid "HTML"
 msgstr "HTML"
 
-#: cms/djangoapps/contentstore/views/component.py
+#: cms/djangoapps/contentstore/views/component.py lms/templates/video.html
 msgid "Video"
 msgstr "Видео"
 
@@ -10748,6 +10797,10 @@ msgid ""
 "point to the draft branch, effectively force publishing the course. This "
 "view dry runs the force publish command"
 msgstr ""
+"Иногда черновой вариант и опубликованный курс рассинхронизируются. Команда "
+"принудительной публикации позволяет привести опубликованную версию курса к "
+"черновой, полностью публикуя изменения. Данное представление позволяет "
+"сымитировать запуск принудительной публикации."
 
 #: cms/djangoapps/maintenance/views.py
 msgid "Please provide course id."
@@ -11116,7 +11169,7 @@ msgstr "Обсуждение - {course_number}"
 
 #: lms/djangoapps/discussion/templates/discussion/discussion_board.html
 msgid "Discussions"
-msgstr ""
+msgstr "Обсуждения"
 
 #: lms/djangoapps/discussion/templates/discussion/discussion_board.html
 #: lms/templates/discussion/_discussion_inline.html
@@ -11446,6 +11499,9 @@ msgid ""
 "details that will help us to troubleshoot, including error messages that you"
 " saw."
 msgstr ""
+"Опишите, что вы делали, когда столкнулись с проблемой. Укажите всё, что "
+"может помочь нам разрешить проблему, включая текст увиденных вами сообщений "
+"об ошибке."
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
@@ -11477,7 +11533,7 @@ msgstr "Краткое описание проблемы"
 
 #: lms/templates/help_modal.html
 msgid "Details of the problem you are encountering{asterisk}"
-msgstr ""
+msgstr "Подробности обнаруженной проблемы{asterisk}"
 
 #: lms/templates/help_modal.html
 msgid "suggestion"
@@ -13055,7 +13111,7 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Right to Charge"
-msgstr ""
+msgstr "Право взимать"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -14741,7 +14797,7 @@ msgstr "Настройки e-mail"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Related Programs"
-msgstr ""
+msgstr "Связанные программы"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Verification not yet complete."
@@ -18923,7 +18979,7 @@ msgstr "Lorem ipsum dolor sit amet"
 
 #: themes/example/lms/templates/static_templates/faq.html
 msgid "Academic Planning"
-msgstr ""
+msgstr "Академическое планирование"
 
 #: themes/example/lms/templates/static_templates/faq.html
 #: themes/example/lms/templates/static_templates/honor.html
@@ -18938,7 +18994,7 @@ msgstr "Регистрация"
 
 #: themes/example/lms/templates/static_templates/faq.html
 msgid "Finances"
-msgstr ""
+msgstr "Финансы"
 
 #: themes/example/lms/templates/student_account/login_and_register.html
 msgid "Sign in or Create Account"

@@ -1581,7 +1581,7 @@ msgstr "תשובתך התקבלה. מיד לאחר קבלת ציון, תוחלף
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "{programming_language} editor"
-msgstr ""
+msgstr "עורך {programming_language}"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Press ESC then TAB or click outside of the code editor to exit"
@@ -1645,7 +1645,7 @@ msgstr ""
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Answer"
-msgstr ""
+msgstr "תשובה"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error {err} in evaluating hint function {hintfn}."
@@ -2117,6 +2117,7 @@ msgstr ""
 " בו שימוש לרעה. כדי להשיג מפתח עבור הקורס שלך או כדי לדווח על בעיה, צור קשר "
 "עם moocsupport@mathworks.com"
 
+#: common/lib/xmodule/xmodule/capa_base.py
 #: common/templates/darklang/preview_lang_include.html
 #: lms/templates/help_modal.html lms/templates/manage_user_standing.html
 #: lms/templates/register-shib.html
@@ -2124,7 +2125,7 @@ msgstr ""
 #: lms/templates/survey/survey.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Submit"
-msgstr "הגש"
+msgstr "שלח"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Submitting"
@@ -2183,7 +2184,7 @@ msgstr[1] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Partially Correct"
-msgstr ""
+msgstr "נכון חלקית"
 
 #. Translators: 'closed' means the problem's due date has passed. You may no
 #. longer attempt to solve the problem.
@@ -10884,6 +10885,8 @@ msgid ""
 "details that will help us to troubleshoot, including error messages that you"
 " saw."
 msgstr ""
+"תאר מה היה מצבך כשאיתרת את הבעיה. כלול כל פרט שיעזור לנו לפתור את הבעיה, "
+"כולל הודעות שגיאה שראית."
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
@@ -10913,7 +10916,7 @@ msgstr "תיאור קצר של הבעיה"
 
 #: lms/templates/help_modal.html
 msgid "Details of the problem you are encountering{asterisk}"
-msgstr ""
+msgstr "פרטים על הבעיה בה נתקלת{asterisk}"
 
 #: lms/templates/help_modal.html
 msgid "suggestion"
