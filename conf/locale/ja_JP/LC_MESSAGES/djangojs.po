@@ -8481,8 +8481,7 @@ msgid ""
 "If you don't verify your identity now, you can still explore your course "
 "from your dashboard. You will receive periodic reminders from "
 "%(platformName)s to verify your identity."
-msgstr ""
-"今、本人認証を行わない場合でもマイページで講座を見ることはできます。%定期的に%(platformName)sから本人認証を行うように通知があります。"
+msgstr "今、本人認証を行わない場合でもマイページで講座を見ることはできます。定期的に %(platformName)s から本人認証を行うように通知があります。"
 
 #: lms/templates/verify_student/reverify_success_step.underscore
 #: test_root/staticfiles/templates/verify_student/reverify_success_step.underscore

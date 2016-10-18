@@ -14133,15 +14133,15 @@ msgstr "efter flest stemmer"
 #, python-format
 msgid "%s discussion started"
 msgid_plural "%s discussions started"
-msgstr[0] "% diskussioner startet"
-msgstr[1] "Pct. diskussioner startet"
+msgstr[0] "%s diskussioner startet"
+msgstr[1] "%s diskussioner startet"
 
 #: lms/templates/discussion/_user_profile.html
 #, python-format
 msgid "%s comment"
 msgid_plural "%s comments"
-msgstr[0] "Pct. kommentarer"
-msgstr[1] "Pct. kommentarer"
+msgstr[0] "%s kommentarer"
+msgstr[1] "%s kommentarer"
 
 #: lms/templates/edxnotes/edxnotes.html
 msgid "Student Notes"
