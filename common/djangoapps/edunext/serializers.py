@@ -111,20 +111,9 @@ class CourseEnrollmentWithGradesSerializer(CourseEnrollmentSerializer):
     def get_grades(self, obj):
         course = courses.get_course_by_id(obj.course_id)
         user = obj.user
-        request = self._get_mock_request(user)
-        request.session = {}
-        gradeset = grades.grade(user, request, course, False)
+        gradeset = grades.grade(user, course, False)
         return gradeset
 
-    def _get_mock_request(self, student):
-        """
-        Make a fake request because grading code expects to be able to look at
-        the request. We have to attach the correct user to the request before
-        grading that student.
-        """
-        request = RequestFactory().get('/')
-        request.user = student
-        return request
 
 class CertificateSerializer(serializers.Serializer):
     """
