@@ -18,6 +18,7 @@ from courseware.module_render import get_module_for_descriptor
 from courseware.views.index import save_positions_recursively_up
 from courseware.views.views import get_current_child
 from student.models import CourseEnrollment, User
+from microsite_aware_functions.enrollments import filter_enrollments
 
 from xblock.fields import Scope
 from xblock.runtime import KeyValueStore
@@ -276,7 +277,7 @@ class UserCourseEnrollmentsList(generics.ListAPIView):
             is_active=True
         ).order_by('created').reverse()
         return [
-            enrollment for enrollment in enrollments
+            enrollment for enrollment in filter_enrollments(enrollments)
             if enrollment.course_overview and
             is_mobile_available_for_user(self.request.user, enrollment.course_overview)
         ]
