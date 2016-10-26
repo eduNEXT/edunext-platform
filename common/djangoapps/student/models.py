@@ -45,6 +45,7 @@ from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from simple_history.models import HistoricalRecords
 from track import contexts
 from xmodule_django.models import CourseKeyField, NoneToEmptyManager
+from microsite_aware_functions.enrollments import filter_enrollments
 
 from lms.djangoapps.badges.utils import badges_enabled
 from certificates.models import GeneratedCertificate
@@ -1391,6 +1392,10 @@ class CourseEnrollment(models.Model):
 
         try:
             record = cls.objects.get(user=user, course_id=course_key)
+            # Filter per org
+            filtered = [x for x in filter_enrollments([record])]
+            if not filtered:
+                return False
             return record.is_active
         except cls.DoesNotExist:
             return False
