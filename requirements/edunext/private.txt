@@ -1,4 +1,4 @@
 # edunext xblocks
 
--e git+ssh://git@bitbucket.org/edunext/sodexo_xblock.git@eed633cb0f9f895407ad0ab6012c0d84b5c49006#egg=sodexo-game-xblock
+-e git+ssh://git@bitbucket.org/edunext/sodexo_xblock.git@8c82daf5386c45e5c899244f199f9404ebb236a0#egg=sodexo-game-xblock
 -e git+ssh://git@bitbucket.org/edunext/grade-podium-xblock.git@0c45ef34b13257bbc310bd3891a8b0c0f46c5c65#egg=grade-podium-xblock
