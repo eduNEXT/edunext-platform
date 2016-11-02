@@ -1039,6 +1039,7 @@ OPTIONAL_APPS = (
     'ooyala-player',
     'brightcove-video',
     'flow-control',
+    'grade-podium',
 )
 
 
