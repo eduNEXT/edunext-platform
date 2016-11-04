@@ -920,6 +920,9 @@ INSTALLED_APPS = (
     # Tagging
     'cms.lib.xblock.tagging',
 
+    # eduNEXT special modules
+    'edunext',
+
     # Enables default site and redirects
     'django_sites_extensions',
 )
