@@ -8,7 +8,7 @@ import json
 from django.dispatch import Signal
 
 from django.utils.http import cookie_date
-from django.conf import settings
+from openedx.conf import settings
 from django.core.urlresolvers import reverse, NoReverseMatch
 
 CREATE_LOGON_COOKIE = Signal(providing_args=["user", "response"])
