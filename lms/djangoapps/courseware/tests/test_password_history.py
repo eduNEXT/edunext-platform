@@ -2,6 +2,7 @@
 This file will test through the LMS some of the PasswordHistory features
 """
 import json
+import ddt
 from mock import patch
 from uuid import uuid4
 from nose.plugins.attrib import attr
@@ -23,6 +24,7 @@ from courseware.tests.helpers import LoginEnrollmentTestCase
 
 @attr('shard_1')
 @patch.dict("django.conf.settings.FEATURES", {'ADVANCED_SECURITY': True})
+@ddt.ddt
 class TestPasswordHistory(LoginEnrollmentTestCase):
     """
     Go through some of the PasswordHistory use cases
@@ -71,16 +73,18 @@ class TestPasswordHistory(LoginEnrollmentTestCase):
         history = PasswordHistory()
         history.create(user)
 
-    def assertPasswordResetError(self, response, error_message):
+    def assertPasswordResetError(self, response, error_message, valid_link=False):
         """
         This method is a custom assertion that verifies that a password reset
         view returns an error response as expected.
         Args:
             response: response from calling a password reset endpoint
             error_message: message we expect to see in the response
+            valid_link: if the current password reset link is still valid
 
         """
-        self.assertFalse(response.context_data['validlink'])
+        self.assertEqual(response.status_code, 200)
+        self.assertFalse(response.context_data['validlink'], valid_link)
         self.assertIn(error_message, response.content)
 
     @patch.dict("django.conf.settings.ADVANCED_SECURITY_CONFIG", {'MIN_DAYS_FOR_STAFF_ACCOUNTS_PASSWORD_RESETS': None})
