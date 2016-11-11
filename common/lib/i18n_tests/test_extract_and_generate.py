@@ -41,7 +41,7 @@ class TestGenerate(TestCase):
             "this may take a few minutes\n"
         )
         sys.stderr.flush()
-        extract.main(verbosity=0)
+        extract.main(verbosity=3) ## fmo circle test. making more verbose to debug
         dummy.main(verbosity=0)
 
     @classmethod
