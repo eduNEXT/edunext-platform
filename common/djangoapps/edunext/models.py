@@ -1,4 +1,6 @@
-"""Models for the use of edunext only"""
+"""
+Models for the use of edunext only
+"""
 
 from django.db import models
 
@@ -20,7 +22,16 @@ class Redirection(models.Model):
         (302, 'Permanent'),
     )
 
-    domain = models.CharField(max_length=253, db_index=True, help_text='use only the domain name, e.g. cursos.edunext.co')
+    domain = models.CharField(max_length=253, db_index=True,
+                              help_text='use only the domain name, e.g. cursos.edunext.co')
     target = models.CharField(max_length=253)
     scheme = models.CharField(max_length=5, choices=SCHEME, default=HTTP)
     status = models.IntegerField(choices=STATUS, default=301)
+
+    def __unicode__(self):
+        return u"Redirection from {} to {}. Protocol {}. Status {}".format(
+            self.domain,
+            self.target,
+            self.scheme,
+            self.status,
+        )

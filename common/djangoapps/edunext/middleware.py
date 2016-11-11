@@ -12,9 +12,9 @@ import edxmako
 from util.cache import cache
 from util.memcache import fasthash
 from microsite_configuration import microsite
-from models import Redirection
+from edunext.models import Redirection
 
-host_validation_re = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}(:[0-9]{2,5})?$")
+HOST_VALIDATION_RE = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}(:[0-9]{2,5})?$")
 
 
 class MicrositeMiddleware(object):
@@ -48,26 +48,24 @@ class MicrositeMiddleware(object):
 
         if target != '##none':
             # If we are already at the target, just return
-            if domain == target.target and request.scheme == target.scheme:
+            if domain == target.target and request.scheme == target.scheme:  # pylint: disable=no-member
                 return
 
             to_url = '{scheme}://{host}{path}'.format(
-                scheme=target.scheme,
-                host=target.target,
-                path=request.path,
+                scheme=target.scheme,  # pylint: disable=no-member
+                host=target.target,  # pylint: disable=no-member
+                path=request.path,  # pylint: disable=no-member
             )
 
             return HttpResponseRedirect(
                 to_url,
-                status=target.status,
+                status=target.status,  # pylint: disable=no-member
             )
 
         # By this time, if there is no redirect, and no microsite, the domain is available
-        if (
-           not microsite.is_request_in_microsite() and
-           settings.FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] and
-           not bool(host_validation_re.search(domain))
-           ):
+        if (not microsite.is_request_in_microsite() and
+                settings.FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] and
+                not bool(HOST_VALIDATION_RE.search(domain))):
             return HttpResponseNotFound(edxmako.shortcuts.render_to_string('microsites/not_found.html', {
                 'domain': domain,
             }))

@@ -1,21 +1,23 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+TODO: add me
+"""
 from __future__ import unicode_literals
 
 import json
 import logging
 
-from django.test.client import RequestFactory
 from django.utils.duration import duration_string
 from rest_framework import serializers
 
 from courseware import grades, courses
-from fields import CustomRelatedField
+from edunext.fields import CustomRelatedField
 
 log = logging.getLogger(__name__)
 
 
-class MetaSerializer(serializers.Serializer):
+class MetaSerializer(serializers.Serializer):  # pylint: disable=abstract-method
     """Serializer for the blob information in the meta attibute, will return a
     a default dict with empty values if the user does not have the information available
 
@@ -39,7 +41,7 @@ class MetaSerializer(serializers.Serializer):
             return _fields
 
 
-class UserSerializer(serializers.Serializer):
+class UserSerializer(serializers.Serializer):  # pylint: disable=abstract-method
     """
     Serializer for the nested set of variables a user may include
     """
@@ -47,7 +49,7 @@ class UserSerializer(serializers.Serializer):
     # From django.contrib.auth.models.User
     # ####################################
 
-    id = serializers.IntegerField(read_only=True)
+    id = serializers.IntegerField(read_only=True)  # pylint: disable=invalid-name
     username = serializers.CharField(max_length=200, read_only=True)
     first_name = serializers.CharField(max_length=200, read_only=True)
     last_name = serializers.CharField(max_length=200, read_only=True)
@@ -90,11 +92,11 @@ class UserSerializer(serializers.Serializer):
     site = CustomRelatedField(source='usersignupsource_set', field='site', many=True)
 
 
-class CourseEnrollmentSerializer(serializers.Serializer):
+class CourseEnrollmentSerializer(serializers.Serializer):  # pylint: disable=abstract-method
     """
     Serializer for the Course enrollment model
     """
-    id = serializers.IntegerField(read_only=True)
+    id = serializers.IntegerField(read_only=True)  # pylint: disable=invalid-name
     user_id = serializers.IntegerField(read_only=True)
     course_id = serializers.CharField(max_length=255, read_only=True)
     created = serializers.DateTimeField(read_only=True)
@@ -102,20 +104,23 @@ class CourseEnrollmentSerializer(serializers.Serializer):
     mode = serializers.CharField(max_length=100, read_only=True)
 
 
-class CourseEnrollmentWithGradesSerializer(CourseEnrollmentSerializer):
+class CourseEnrollmentWithGradesSerializer(CourseEnrollmentSerializer):  # pylint: disable=abstract-method
     """
     Serializer for the course enrollment model, extracting grades
     """
     grades = serializers.SerializerMethodField()
 
     def get_grades(self, obj):
+        """
+        TODO: add me
+        """
         course = courses.get_course_by_id(obj.course_id)
         user = obj.user
         gradeset = grades.grade(user, course, False)
         return gradeset
 
 
-class CertificateSerializer(serializers.Serializer):
+class CertificateSerializer(serializers.Serializer):  # pylint: disable=abstract-method
     """
     Serializer for Generated Certificates
     """
@@ -138,7 +143,7 @@ class CertificateSerializer(serializers.Serializer):
     key = serializers.CharField(max_length=32, read_only=True)
 
 
-class ProctoredExamStudentAttemptSerializer(serializers.Serializer):
+class ProctoredExamStudentAttemptSerializer(serializers.Serializer):  # pylint: disable=abstract-method
     """
     Serializer for proctored exams attempts made by students
     """
@@ -163,7 +168,9 @@ class ProctoredExamStudentAttemptSerializer(serializers.Serializer):
     time_taken = serializers.SerializerMethodField()
 
     def get_time_taken(self, obj):
-
+        """
+        TODO: add me
+        """
         try:
             time_diff = obj.completed_at - obj.started_at
             result = duration_string(time_diff)

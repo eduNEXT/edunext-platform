@@ -11,8 +11,10 @@ from openedx.conf import settings
 from microsite_configuration import microsite
 
 
-class MicrositeAwareEmailBackend (EmailBackend):
-
+class MicrositeAwareEmailBackend(EmailBackend):
+    """
+    TODO: add me
+    """
     def __init__(self, host=None, port=None, username=None, password=None,
                  use_tls=None, fail_silently=False, use_ssl=None, timeout=None,
                  ssl_keyfile=None, ssl_certfile=None,

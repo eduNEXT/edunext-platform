@@ -4,7 +4,7 @@ Template tags for handling i18n trans function on xblocks
 from django import template
 from django.templatetags.i18n import do_translate
 
-register = template.Library()
+REGISTER = template.Library()
 
 
 class ProxyTransNode(template.Node):
@@ -13,8 +13,8 @@ class ProxyTransNode(template.Node):
     In case the context has a i18n_service object, it passes the result throgh it
     """
 
-    def __init__(self, do_translate):
-        self.do_translate = do_translate
+    def __init__(self, do_translate_func):
+        self.do_translate = do_translate_func
 
     def render(self, context):
         django_translated = self.do_translate.render(context)
@@ -23,9 +23,9 @@ class ProxyTransNode(template.Node):
             i18n_service = context.get('i18n_service', None)
             if i18n_service:
                 return i18n_service.gettext(django_translated)
-        except Exception:
+        except Exception:  # pylint: disable=broad-except
             # TODO: We could decide to log this, but for now, we will silently continue
-            return django_translate
+            return django_translated
         return django_translated
 
 
@@ -38,4 +38,4 @@ def xblock_translate(parser, token):
     return ProxyTransNode(do_translate(parser, token))
 
 
-register.tag('trans', xblock_translate)
+REGISTER.tag('trans', xblock_translate)
