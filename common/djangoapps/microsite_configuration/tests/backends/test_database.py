@@ -185,6 +185,7 @@ class DatabaseMicrositeBackendTests(DatabaseMicrositeTestCase):
         Microsite.objects.all().delete()
         self.assertFalse(microsite.BACKEND.has_configuration_set())
 
+
 @patch(
     'microsite_configuration.microsite.TEMPLATES_BACKEND',
     microsite.get_backend(

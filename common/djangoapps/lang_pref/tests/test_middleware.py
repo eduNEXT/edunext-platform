@@ -40,7 +40,6 @@ class TestUserPreferenceMiddleware(TestCase):
         # self.assertEquals(self.request.session[LANGUAGE_SESSION_KEY], 'en')  # eduNEXT: our version (ednx/LC) would return remove this since it is not in the site configurations
         self.assertNotIn(LANGUAGE_SESSION_KEY, self.request.session)
 
-
     @mock.patch('lang_pref.middleware.released_languages', mock.Mock(
         return_value=[('en', 'english'), ('eo', 'esperanto')]
     ))

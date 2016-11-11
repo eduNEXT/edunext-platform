@@ -108,8 +108,8 @@ class GeneratedCerticatesFilter(BaseDataApiFilter):
     DOWNLOADABLE = 'downloadable'
     ALL = 'all'
 
-    site = django_filters.CharFilter(name="user__usersignupsource__site",lookup_type='iexact')
-    username = django_filters.CharFilter(name="user__username",lookup_type='icontains')
+    site = django_filters.CharFilter(name="user__usersignupsource__site", lookup_type='iexact')
+    username = django_filters.CharFilter(name="user__username", lookup_type='icontains')
     created_date = django_filters.DateTimeFromToRangeFilter()
     course_id = django_filters.MethodFilter()
     status = django_filters.MethodFilter()
@@ -169,9 +169,9 @@ class GeneratedCerticatesFilter(BaseDataApiFilter):
 
 class ProctoredExamStudentAttemptFilter(BaseDataApiFilter):
 
-    site = django_filters.CharFilter(name="user__usersignupsource__site",lookup_type='iexact')
-    course_id = django_filters.CharFilter(name="proctored_exam__course_id",lookup_type='iexact')
-    exam_name = django_filters.CharFilter(name="proctored_exam__exam_name",lookup_type='iexact')
+    site = django_filters.CharFilter(name="user__usersignupsource__site", lookup_type='iexact')
+    course_id = django_filters.CharFilter(name="proctored_exam__course_id", lookup_type='iexact')
+    exam_name = django_filters.CharFilter(name="proctored_exam__exam_name", lookup_type='iexact')
 
     class Meta:
         model = ProctoredExamStudentAttempt

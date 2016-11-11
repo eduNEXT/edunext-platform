@@ -3208,6 +3208,7 @@ def certificate_invalidation_view(request, course_id):
 
         return JsonResponse({}, status=204)
 
+
 def invalidate_certificate(request, generated_certificate, certificate_invalidation_data):
     """
     Invalidate given GeneratedCertificate and add CertificateInvalidation record for future reference or re-validation.
