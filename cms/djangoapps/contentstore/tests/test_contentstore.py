@@ -1249,8 +1249,7 @@ class ContentStoreTest(ContentStoreTestCase, XssTestMixin):
 
         delete_course_and_groups(course_id, self.user.id)
         # check that user's enrollment for this course is not deleted
-        # # fmo circle test. removing next line since it fails
-        # self.assertTrue(CourseEnrollment.is_enrolled(self.user, course_id))
+        self.assertTrue(CourseEnrollment.is_enrolled(self.user, course_id))
         # check that user has form role "Student" for this course even after deleting it
         self.assertTrue(self.user.roles.filter(name="Student", course_id=course_id))
 

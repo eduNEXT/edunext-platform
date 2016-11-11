@@ -650,7 +650,7 @@ class EnrollInCourseTest(EnrollmentEventTestMixin, TestCase):
         # Implicit save() happens on new User object when enrolling, so this
         # should still work
         CourseEnrollment.enroll(user, course_id)
-        # self.assertTrue(CourseEnrollment.is_enrolled(user, course_id))  ## fmo circle test. removing since it fails
+        self.assertTrue(CourseEnrollment.is_enrolled(user, course_id))
         self.assert_enrollment_event_was_emitted(user, course_id)
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')

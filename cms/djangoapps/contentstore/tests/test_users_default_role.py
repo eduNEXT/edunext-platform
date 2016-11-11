@@ -64,8 +64,7 @@ class TestUsersDefaultRole(ModuleStoreTestCase):
         delete_course_and_groups(self.course_key, self.user.id)
 
         # check that user's enrollment for this course is not deleted
-        # # fmo circle test. removing since it fails
-        # self.assertTrue(CourseEnrollment.is_enrolled(self.user, self.course_key))
+        self.assertTrue(CourseEnrollment.is_enrolled(self.user, self.course_key))
 
         # check that user has forum role for this course even after deleting it
         self.assertTrue(self.user.roles.filter(name="Student", course_id=self.course_key))
