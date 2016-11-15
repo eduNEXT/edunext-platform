@@ -2693,9 +2693,6 @@ PDF_RECEIPT_COBRAND_LOGO_PATH = PROJECT_ROOT + '/static/images/logo.png'
 PDF_RECEIPT_COBRAND_LOGO_HEIGHT_MM = 12
 
 
-
-
-
 # Use None for the default search engine
 SEARCH_ENGINE = None
 # Use LMS specific search initializer

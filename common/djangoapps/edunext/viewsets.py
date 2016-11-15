@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+Controllers for the data-api. Used in the report generation process
+"""
 import random
 from datetime import datetime
 
@@ -14,20 +17,20 @@ from certificates.models import GeneratedCertificate
 from edx_proctoring.models import ProctoredExamStudentAttempt
 from microsite_api.authenticators import MicrositeManagerAuthentication
 
-from filters import (
+from edunext.filters import (
     UserFilter,
     CourseEnrollmentFilter,
     GeneratedCerticatesFilter,
     ProctoredExamStudentAttemptFilter,
 )
-from serializers import (
+from edunext.serializers import (
     UserSerializer,
     CourseEnrollmentSerializer,
     CertificateSerializer,
     ProctoredExamStudentAttemptSerializer,
 )
-from paginators import DataApiResultsSetPagination
-from tasks import EnrollmentsGrades
+from edunext.paginators import DataApiResultsSetPagination
+from edunext.tasks import EnrollmentsGrades
 
 
 class DataApiViewSet(mixins.ListModelMixin,
@@ -46,7 +49,12 @@ class DataApiViewSet(mixins.ListModelMixin,
             return self.queryset
         return self.add_prefetch_fields_to_queryset(self.queryset, self.prefetch_fields)
 
-    def add_prefetch_fields_to_queryset(self, queryset, fields=[]):
+    def add_prefetch_fields_to_queryset(self, queryset, fields=None):
+        """
+        TODO: add me
+        """
+        if not fields:
+            fields = []
 
         for val in fields:
             if val.get("type", "") == "prefetch":

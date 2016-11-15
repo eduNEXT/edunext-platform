@@ -1,12 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+TODO: add me
+"""
 from __future__ import unicode_literals
 
 from django.utils import six
 from rest_framework import relations
 
 
-class CustomRelatedField(relations.RelatedField):
+class CustomRelatedField(relations.RelatedField):  # pylint: disable=abstract-method
     """
     A read only field that represents its targets using the site field
     """

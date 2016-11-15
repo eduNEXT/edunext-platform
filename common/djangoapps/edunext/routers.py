@@ -1,7 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+TODO: add me
+"""
 from rest_framework import routers
-from viewsets import (
+from edunext.viewsets import (
     UsersViewSet,
     CourseEnrollmentViewset,
     CourseEnrollmentWithGradesViewset,
@@ -10,10 +13,10 @@ from viewsets import (
 )
 
 
-router = routers.DefaultRouter()
-router.register(r'users', UsersViewSet)
-router.register(r'course-enrollments', CourseEnrollmentViewset)
-router.register(r'certificates', CertificateViewSet)
-router.register(r'proctored-exams-attempts', ProctoredExamStudentViewSet)
+ROUTER = routers.DefaultRouter()
+ROUTER.register(r'users', UsersViewSet)
+ROUTER.register(r'course-enrollments', CourseEnrollmentViewset)
+ROUTER.register(r'certificates', CertificateViewSet)
+ROUTER.register(r'proctored-exams-attempts', ProctoredExamStudentViewSet)
 # Async operations
-router.register(r'async/course-enrollments-grades', CourseEnrollmentWithGradesViewset)
+ROUTER.register(r'async/course-enrollments-grades', CourseEnrollmentWithGradesViewset)

@@ -258,6 +258,22 @@ PASSWORD_COMPLEXITY = {}
 FEATURES['ENABLE_THIRD_PARTY_AUTH'] = True
 FEATURES['ENABLE_THIRD_PARTY_AUTH_FOR_TEST'] = True
 
+# This is required for tests at edunext
+THIRD_PARTY_AUTH_ENABLED_PROVIDERS = [
+    'GitHub',
+    'Google',
+    'LinkedIn',
+    'Stack Overflow',
+    'Facebook',
+    'Azure AD',
+    'Twitter',
+    'TestShib',
+    'Dummy',
+    'LTI Test Tool Consumer',
+    'Other Tool Consumer 1',
+    'Tool Consumer with Secret in Settings',
+]
+
 AUTHENTICATION_BACKENDS = (
     'social.backends.google.GoogleOAuth2',
     'social.backends.linkedin.LinkedinOAuth2',

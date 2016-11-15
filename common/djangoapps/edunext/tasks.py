@@ -1,15 +1,21 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+TODO: add me
+"""
 from celery import Task
 
 from student.models import CourseEnrollment
 
-from serializers import CourseEnrollmentWithGradesSerializer
+from edunext.serializers import CourseEnrollmentWithGradesSerializer
 
 
 class EnrollmentsGrades(Task):
+    """
+    TODO: add me
+    """
 
-    def run(self, data):
+    def run(self, data, *args, **kwargs):
         """
         This task receives a list with enrollments, and returns the same
         enrollments with grades data

@@ -1,6 +1,7 @@
 """
 Third-party auth provider configuration API.
 """
+from django.conf import settings
 from microsite_configuration import microsite
 from .models import (
     OAuth2ProviderConfig, SAMLConfiguration, SAMLProviderConfig, LTIProviderConfig,
@@ -17,7 +18,10 @@ class Registry(object):
     @classmethod
     def _enabled_providers(cls):
         """ Helper method to iterate over all providers """
-        enabled_providers = microsite.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', set([]))  # eduNEXT. Each microsite may define its own list of enabled providers
+        enabled_providers = microsite.get_value(  # eduNEXT. Each microsite may define its own list of enabled providers
+            'THIRD_PARTY_AUTH_ENABLED_PROVIDERS',
+            settings.THIRD_PARTY_AUTH_ENABLED_PROVIDERS
+        )
 
         for backend_name in _PSA_OAUTH2_BACKENDS:
             provider = OAuth2ProviderConfig.current(backend_name)

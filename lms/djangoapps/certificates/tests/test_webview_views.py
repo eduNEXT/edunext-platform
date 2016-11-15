@@ -816,7 +816,7 @@ class CertificatesViewsTests(CommonCertificatesTestCase):
 
         # eduNEXT: Verify that Exception is NOT raised when certificate is not in the preview mode. We dont like exceptions on certificates
         try:
-            self.client.get(test_url) 
+            self.client.get(test_url)
         except Exception:
             self.fail("No exception should be raised when rendering an invalid certificate without preview")
 

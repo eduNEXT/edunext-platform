@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+TODO: add me
+"""
 import django_filters
 
 from rest_framework import filters
@@ -12,10 +15,16 @@ from opaque_keys.edx.keys import CourseKey
 
 
 class BaseDataApiFilter(filters.FilterSet):
+    """
+    TODO: add me
+    """
     order_by_field = "ordering"
 
 
 class UserFilter(BaseDataApiFilter):
+    """
+    TODO: add me
+    """
     # Filtering by main model fields
     username = django_filters.CharFilter(lookup_type='icontains')
     first_name = django_filters.CharFilter(lookup_type='icontains')
@@ -36,7 +45,7 @@ class UserFilter(BaseDataApiFilter):
     # Filtering by user signup source fields
     site = django_filters.CharFilter(name="usersignupsource__site", lookup_type='iexact')
 
-    class Meta:
+    class Meta(object):
         model = User
         fields = [
             'id',
@@ -59,7 +68,9 @@ class UserFilter(BaseDataApiFilter):
 
 
 class CourseEnrollmentFilter(BaseDataApiFilter):
-
+    """
+    TODO: add me
+    """
     course_id = django_filters.MethodFilter()
     created = django_filters.DateTimeFromToRangeFilter()
     is_active = django_filters.BooleanFilter()
@@ -84,13 +95,13 @@ class CourseEnrollmentFilter(BaseDataApiFilter):
                 instance = CourseKey.from_string(str(value))
                 # Passing instance to queryset filter
                 return queryset.filter(course_id=instance)
-            except:
+            except Exception:  # pylint: disable=broad-except
                 # If CourseKey instantiation fails, return an empty queryset
                 return queryset.none()
 
         return queryset
 
-    class Meta:
+    class Meta(object):
         model = CourseEnrollment
         fields = [
             'id',
@@ -104,12 +115,14 @@ class CourseEnrollmentFilter(BaseDataApiFilter):
 
 
 class GeneratedCerticatesFilter(BaseDataApiFilter):
-
+    """
+    TODO: add me
+    """
     DOWNLOADABLE = 'downloadable'
     ALL = 'all'
 
-    site = django_filters.CharFilter(name="user__usersignupsource__site",lookup_type='iexact')
-    username = django_filters.CharFilter(name="user__username",lookup_type='icontains')
+    site = django_filters.CharFilter(name="user__usersignupsource__site", lookup_type='iexact')
+    username = django_filters.CharFilter(name="user__username", lookup_type='icontains')
     created_date = django_filters.DateTimeFromToRangeFilter()
     course_id = django_filters.MethodFilter()
     status = django_filters.MethodFilter()
@@ -132,7 +145,7 @@ class GeneratedCerticatesFilter(BaseDataApiFilter):
                 instance = CourseKey.from_string(str(value))
                 # Passing instance to queryset filter
                 return queryset.filter(course_id=instance)
-            except:
+            except Exception:  # pylint: disable=broad-except
                 # If CourseKey instantiation fails, return an empty queryset
                 return queryset.none()
 
@@ -152,7 +165,7 @@ class GeneratedCerticatesFilter(BaseDataApiFilter):
 
         return queryset
 
-    class Meta:
+    class Meta(object):
         model = GeneratedCertificate
         fields = [
             'id',
@@ -168,12 +181,14 @@ class GeneratedCerticatesFilter(BaseDataApiFilter):
 
 
 class ProctoredExamStudentAttemptFilter(BaseDataApiFilter):
+    """
+    TODO: add me
+    """
+    site = django_filters.CharFilter(name="user__usersignupsource__site", lookup_type='iexact')
+    course_id = django_filters.CharFilter(name="proctored_exam__course_id", lookup_type='iexact')
+    exam_name = django_filters.CharFilter(name="proctored_exam__exam_name", lookup_type='iexact')
 
-    site = django_filters.CharFilter(name="user__usersignupsource__site",lookup_type='iexact')
-    course_id = django_filters.CharFilter(name="proctored_exam__course_id",lookup_type='iexact')
-    exam_name = django_filters.CharFilter(name="proctored_exam__exam_name",lookup_type='iexact')
-
-    class Meta:
+    class Meta(object):
         model = ProctoredExamStudentAttempt
         fields = [
             'id',

@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+TODO: add me
+"""
 from celery.result import AsyncResult
 
 from rest_framework.views import APIView
@@ -15,7 +18,7 @@ class CeleryTasksStatus(APIView):
     """
     authentication_classes = (MicrositeManagerAuthentication,)
 
-    def get(self, request, task_id=None, *args, **kwargs):
+    def get(self, request, task_id=None, *args, **kwargs):  # pylint: disable=unused-argument
         """
         Return the task status and its result, if already calculated.
         """
