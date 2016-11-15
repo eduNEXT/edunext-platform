@@ -445,6 +445,7 @@ class TestEmailSendFromDashboardMockedHtmlToText(EmailSendFromDashboardTestCase)
 
 @attr('shard_1')
 @skipIf(os.environ.get("TRAVIS") == 'true', "Skip this test in Travis CI.")
+@skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
 class TestEmailSendFromDashboard(EmailSendFromDashboardTestCase):
     """
     Tests email sending without mocked html_to_text.
@@ -457,23 +458,21 @@ class TestEmailSendFromDashboard(EmailSendFromDashboardTestCase):
         """
         Make sure email (with Unicode characters) send to all goes there.
         """
-        pass
-        # fmo. circle test. This test passes locally but fails in circle
-        # uni_message = u'ẗëṡẗ ṁëṡṡäġë ḟöṛ äḷḷ ｲ乇丂ｲ ﾶ乇丂丂ﾑg乇 ｷo尺 ﾑﾚﾚ тэѕт мэѕѕаБэ fоѓ аll'
-        # test_email = {
-        #     'action': 'Send email',
-        #     'send_to': '["myself", "staff", "learners"]',
-        #     'subject': 'test subject for all',
-        #     'message': uni_message
-        # }
-        # response = self.client.post(self.send_mail_url, test_email)
-        # self.assertEquals(json.loads(response.content), self.success_content)
+        uni_message = u'ẗëṡẗ ṁëṡṡäġë ḟöṛ äḷḷ ｲ乇丂ｲ ﾶ乇丂丂ﾑg乇 ｷo尺 ﾑﾚﾚ тэѕт мэѕѕаБэ fоѓ аll'
+        test_email = {
+            'action': 'Send email',
+            'send_to': '["myself", "staff", "learners"]',
+            'subject': 'test subject for all',
+            'message': uni_message
+        }
+        response = self.client.post(self.send_mail_url, test_email)
+        self.assertEquals(json.loads(response.content), self.success_content)
 
-        # self.assertEquals(len(mail.outbox), 1 + len(self.staff) + len(self.students))
-        # self.assertItemsEqual(
-        #     [e.to[0] for e in mail.outbox],
-        #     [self.instructor.email] + [s.email for s in self.staff] + [s.email for s in self.students]
-        # )
+        self.assertEquals(len(mail.outbox), 1 + len(self.staff) + len(self.students))
+        self.assertItemsEqual(
+            [e.to[0] for e in mail.outbox],
+            [self.instructor.email] + [s.email for s in self.staff] + [s.email for s in self.students]
+        )
 
-        # message_body = mail.outbox[0].body
-        # self.assertIn(uni_message, message_body)
+        message_body = mail.outbox[0].body
+        self.assertIn(uni_message, message_body)
