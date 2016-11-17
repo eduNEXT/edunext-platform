@@ -4,7 +4,7 @@ Template tags for handling i18n trans function on xblocks
 from django import template
 from django.templatetags.i18n import do_translate
 
-REGISTER = template.Library()
+register = template.Library()  # pylint: disable=invalid-name
 
 
 class ProxyTransNode(template.Node):
@@ -38,4 +38,4 @@ def xblock_translate(parser, token):
     return ProxyTransNode(do_translate(parser, token))
 
 
-REGISTER.tag('trans', xblock_translate)
+register.tag('trans', xblock_translate)
