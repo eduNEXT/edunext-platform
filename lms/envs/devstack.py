@@ -212,14 +212,7 @@ FEATURES['USE_MICROSITES'] = True
 MICROSITE_API_ALLOWED_REMOTES = [
     '*',
 ]
-try:
-    MICROSITE_API_SIGNING_KEY = open('/var/tmp/keys/microsite_api_rsa.pub', "r").read()
-except Exception, e:
-    warnings.warn(
-        "Missing file '/var/tmp/keys/microsite_api_rsa.pub'. To use the MICROSITE_API you must configure the signing key",
-        RuntimeWarning,
-    )
-    MICROSITE_API_SIGNING_KEY = "not-configured"
+
 MICROSITE_API_MANAGER = 'staff'
 
 ### Select an implementation for the microsite backend
