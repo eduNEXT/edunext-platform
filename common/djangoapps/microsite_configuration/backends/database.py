@@ -217,6 +217,12 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
     using the custom models from edunext
     """
 
+    def has_configuration_set(self):
+        """
+        We always require a configuration to function, so we can skip the query
+        """
+        return True
+
     def set_config_by_domain(self, domain):
         """
         For a given request domain, find a match in our microsite configuration
@@ -226,18 +232,16 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
         if not self.has_configuration_set() or not domain:
             return
 
-        candidates = Microsite.objects.all()
-        for microsite in candidates:
-            subdomain = microsite.subdomain
-            if subdomain and domain.startswith(subdomain):
-                self._set_microsite_config_from_obj(subdomain, domain, microsite)
-                return
+        microsite = Microsite.get_microsite_for_domain(domain)
+        if microsite:
+            self._set_microsite_config_from_obj(microsite.subdomain, domain, microsite)
+            return
 
         # if no match on subdomain then see if there is a 'default' microsite
         # defined in the db. If so, then use it
         try:
             microsite = Microsite.objects.get(key='default')
-            self._set_microsite_config_from_obj(subdomain, domain, microsite)
+            self._set_microsite_config_from_obj(microsite.subdomain, domain, microsite)
             return
         except Microsite.DoesNotExist:
             return
