@@ -223,6 +223,23 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
         """
         return True
 
+    def iterate_sites(self):
+        """
+        Return all the microsites from the database storing the results in the current request to avoid
+        quering the DB multiple times in the same request
+        """
+        cache_key = "all-microsites-iterator"
+        cached_list = self.get_key_from_cache(cache_key)
+
+        if cached_list:
+            candidates = cached_list
+        else:
+            candidates = Microsite.objects.all()
+            self.set_key_to_cache(cache_key, candidates)
+
+        for microsite in candidates:
+            yield microsite
+
     def set_config_by_domain(self, domain):
         """
         For a given request domain, find a match in our microsite configuration
@@ -260,8 +277,7 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
             return cached_value
 
         # Filter at the db
-        candidates = Microsite.objects.all()
-        for microsite in candidates:
+        for microsite in self.iterate_sites():
             current = microsite.values
             org_filter = current.get('course_org_filter')
             if org_filter:
@@ -285,8 +301,7 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
             return org_filter_set
 
         # Get the orgs in the db
-        candidates = Microsite.objects.all()
-        for microsite in candidates:
+        for microsite in self.iterate_sites:
             current = microsite.values
             org_filter = current.get('course_org_filter')
             if org_filter and type(org_filter) is list:
