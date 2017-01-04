@@ -254,6 +254,11 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
         if not self.has_configuration_set():
             return default
 
+        cache_key = "org-value-{}-{}".format(org, val_name)
+        cached_value = self.get_key_from_cache(cache_key)
+        if cached_value:
+            return cached_value
+
         # Filter at the db
         candidates = Microsite.objects.all()
         for microsite in candidates:
@@ -263,8 +268,11 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
                 if isinstance(org_filter, basestring):
                     org_filter = set([org_filter])
                 if org in org_filter:
-                    return current.get(val_name, default)
+                    result = current.get(val_name, default)
+                    self.set_key_to_cache(cache_key, result)
+                    return result
 
+        self.set_key_to_cache(cache_key, default)
         return default
 
     def get_all_orgs(self):

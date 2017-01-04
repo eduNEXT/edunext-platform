@@ -15,7 +15,20 @@ from opaque_keys.edx.keys import CourseKey
 from microsite_configuration import microsite
 
 
-class MicrositeMiddleware(object):
+class SimpleMicrositeMiddleware(object):
+    """
+    Middleware class which will clear any data from the microsite module on exit
+    """
+
+    def process_response(self, request, response):
+        """
+        Middleware exit point to delete cache data.
+        """
+        microsite.clear()
+        return response
+
+
+class MicrositeMiddleware(SimpleMicrositeMiddleware):
     """
     Middleware class which will bind configuration information regarding 'microsites' on a per request basis.
     The actual configuration information is taken from Django settings information
@@ -33,13 +46,6 @@ class MicrositeMiddleware(object):
         microsite.set_by_domain(domain)
 
         return None
-
-    def process_response(self, request, response):
-        """
-        Middleware entry point for request completion.
-        """
-        microsite.clear()
-        return response
 
 
 class MicrositeSessionCookieDomainMiddleware(object):
