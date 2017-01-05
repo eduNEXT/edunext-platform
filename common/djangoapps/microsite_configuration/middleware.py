@@ -20,6 +20,7 @@ class SimpleMicrositeMiddleware(object):
     Middleware class which will clear any data from the microsite module on exit
     """
 
+    # pylint: disable=unused-argument
     def process_response(self, request, response):
         """
         Middleware exit point to delete cache data.
