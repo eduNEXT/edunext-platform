@@ -140,8 +140,10 @@ class BaseMicrositeBackend(AbstractBaseMicrositeBackend):
         """
         Stores a key value pair in a cache scoped to the thread
         """
-        if hasattr(self.current_request_configuration, 'cache'):
-            self.current_request_configuration.cache[key] = value
+        if not hasattr(self.current_request_configuration, 'cache'):
+            self.current_request_configuration.cache = {}
+
+        self.current_request_configuration.cache[key] = value
 
     def set_config_by_domain(self, domain):
         """

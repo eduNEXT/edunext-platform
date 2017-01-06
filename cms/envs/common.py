@@ -331,6 +331,7 @@ MIDDLEWARE_CLASSES = (
     'crum.CurrentRequestUserMiddleware',
     'request_cache.middleware.RequestCache',
     'header_control.middleware.HeaderControlMiddleware',
+    'microsite_configuration.middleware.SimpleMicrositeMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
