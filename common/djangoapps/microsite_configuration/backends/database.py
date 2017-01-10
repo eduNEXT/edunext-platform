@@ -301,7 +301,7 @@ class EdunextCompatibleDatabaseMicrositeBackend(DatabaseMicrositeBackend):
             return org_filter_set
 
         # Get the orgs in the db
-        for microsite in self.iterate_sites:
+        for microsite in self.iterate_sites():
             current = microsite.values
             org_filter = current.get('course_org_filter')
             if org_filter and type(org_filter) is list:
