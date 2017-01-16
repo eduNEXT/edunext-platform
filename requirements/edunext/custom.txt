@@ -9,6 +9,8 @@
 
 -e git+https://github.com/edx-solutions/xblock-drag-and-drop-v2.git@d6b36969a5494ccc5af634caa98373acd090cf79#egg=xblock-drag-and-drop-v2
 
+# UBC Peer Instruction Tool for edX
+-e git+https://github.com/ubc/ubcpi.git@279c2267be397b1d49e657d8e6869b8da83457c1#egg=xblock-ubcpi
 
 # private video XBlocks
 -e git://github.com/open-craft/xblock-mentoring.git@1a6e2092a361f0befff18d07607517d437046e3b#egg=xblock-mentoring  # requirement of xblock-ooyala
