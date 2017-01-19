@@ -331,7 +331,7 @@ MIDDLEWARE_CLASSES = (
     'crum.CurrentRequestUserMiddleware',
     'request_cache.middleware.RequestCache',
     'header_control.middleware.HeaderControlMiddleware',
-    'microsite_configuration.middleware.SimpleMicrositeMiddleware',
+    'edunext_openedx_extensions.ednx_microsites.middleware.SimpleMicrositeMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -923,6 +923,7 @@ INSTALLED_APPS = (
 
     # eduNEXT special modules
     'edunext',
+    'edunext_openedx_extensions.ednx_microsites',
 
     # Enables default site and redirects
     'django_sites_extensions',

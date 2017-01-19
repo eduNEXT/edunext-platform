@@ -216,8 +216,8 @@ MICROSITE_API_ALLOWED_REMOTES = [
 MICROSITE_API_MANAGER = 'staff'
 
 ### Select an implementation for the microsite backend
-MICROSITE_BACKEND = 'microsite_configuration.backends.database.EdunextCompatibleDatabaseMicrositeBackend'
-MICROSITE_TEMPLATE_BACKEND = 'microsite_configuration.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'
+MICROSITE_BACKEND = 'edunext_openedx_extensions.ednx_microsites.backends.database.EdunextCompatibleDatabaseMicrositeBackend'
+MICROSITE_TEMPLATE_BACKEND = 'edunext_openedx_extensions.ednx_microsites.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'
 
 
 # Skip enrollment start date filtering
