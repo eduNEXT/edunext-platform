@@ -30,7 +30,7 @@ class MicrositeMiddleware(object):
 
         return None
 
-    def process_response(self, request, response):
+    def process_response(self, request, response):  # pylint: disable=unused-argument
         """
         Middleware entry point for request completion.
         """
