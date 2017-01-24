@@ -151,5 +151,5 @@ SECRET_KEY = '85920908f28904ed733fe576320db18cabd7b6cd'
 MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
 FEATURES['USE_MICROSITES'] = True
 ### Select an implementation for the microsite backend
-MICROSITE_BACKEND = 'microsite_configuration.backends.database.EdunextCompatibleDatabaseMicrositeBackend'
-MICROSITE_TEMPLATE_BACKEND = 'microsite_configuration.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'
+MICROSITE_BACKEND = 'edunext_openedx_extensions.ednx_microsites.backends.database.EdunextCompatibleDatabaseMicrositeBackend'  # pylint: disable=line-too-long
+MICROSITE_TEMPLATE_BACKEND = 'edunext_openedx_extensions.ednx_microsites.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'  # pylint: disable=line-too-long

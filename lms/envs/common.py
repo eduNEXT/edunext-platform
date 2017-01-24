@@ -1093,7 +1093,7 @@ MIDDLEWARE_CLASSES = (
 
     'mobile_api.middleware.AppVersionUpgrade',
     'header_control.middleware.HeaderControlMiddleware',
-    'microsite_configuration.middleware.MicrositeMiddleware',
+    'edunext_openedx_extensions.ednx_microsites.middleware.MicrositeMiddleware',
     'edunext.middleware.MicrositeMiddleware',
     'django_comment_client.middleware.AjaxExceptionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -1172,7 +1172,7 @@ MIDDLEWARE_CLASSES = (
     'openedx.core.djangoapps.theming.middleware.CurrentSiteThemeMiddleware',
 
     # Needs to run after mako, in case a 404 is thrown
-    'microsite_configuration.middleware.MicrositeCrossBrandingFilterMiddleware',
+    'edunext_openedx_extensions.ednx_microsites.middleware.MicrositeCrossBrandingFilterMiddleware',
     # This must be last
     'microsite_configuration.middleware.MicrositeSessionCookieDomainMiddleware',
 )
@@ -2072,6 +2072,7 @@ INSTALLED_APPS = (
     'edunext',
     'edraak_i18n',
     'openedx_email_extensions',
+    'edunext_openedx_extensions.ednx_microsites',
 
     # Credentials support
     'openedx.core.djangoapps.credentials',
