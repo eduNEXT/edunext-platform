@@ -922,7 +922,7 @@ INSTALLED_APPS = (
     'cms.lib.xblock.tagging',
 
     # eduNEXT special modules
-    'edunext',
+    'edunext_openedx_extensions.edunext',
     'edunext_openedx_extensions.ednx_microsites',
 
     # Enables default site and redirects
