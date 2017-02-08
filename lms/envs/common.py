@@ -1094,7 +1094,7 @@ MIDDLEWARE_CLASSES = (
     'mobile_api.middleware.AppVersionUpgrade',
     'header_control.middleware.HeaderControlMiddleware',
     'edunext_openedx_extensions.ednx_microsites.middleware.MicrositeMiddleware',
-    'edunext.middleware.MicrositeMiddleware',
+    'edunext_openedx_extensions.edunext.middleware.MicrositeMiddleware',
     'django_comment_client.middleware.AjaxExceptionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sites.middleware.CurrentSiteMiddleware',
@@ -1996,11 +1996,7 @@ INSTALLED_APPS = (
     # Dark-launching languages
     'dark_lang',
 
-    # External manager application
-    'manage_api',
-
     # Microsite configuration
-    'microsite_api',
     'microsite_configuration',
 
     # RSS Proxy
@@ -2069,10 +2065,13 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
 
     # eduNEXT modules
-    'edunext',
+    'edunext_openedx_extensions.edunext',
     'edraak_i18n',
     'openedx_email_extensions',
+    # External openedx extensions
     'edunext_openedx_extensions.ednx_microsites',
+    'edunext_openedx_extensions.manage_api',
+    'edunext_openedx_extensions.microsite_api',
 
     # Credentials support
     'openedx.core.djangoapps.credentials',
