@@ -2,6 +2,7 @@
 Test grading events across apps.
 """
 # pylint: disable=protected-access
+import os
 
 from capa.tests.response_xml_factory import MultipleChoiceResponseXMLFactory
 from lms.djangoapps.instructor.enrollment import reset_student_attempts
@@ -16,6 +17,7 @@ from courseware.tests.test_submitting_problems import ProblemSubmissionTestMixin
 from student.models import CourseEnrollment
 from student.tests.factories import UserFactory
 from xmodule.modulestore import ModuleStoreEnum
+from unittest import skipIf
 
 STATE_DELETED_TYPE = 'edx.grades.problem.state_deleted'
 RESCORE_TYPE = 'edx.grades.problem.rescored'
@@ -75,6 +77,7 @@ class GradesEventIntegrationTest(ProblemSubmissionTestMixin, SharedModuleStoreTe
     @patch('lms.djangoapps.instructor.enrollment.tracker')
     @patch('lms.djangoapps.grades.signals.handlers.tracker')
     @patch('lms.djangoapps.grades.models.tracker')
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
     def test_delete_student_state_events(self, models_tracker, handlers_tracker, enrollment_tracker):
         # submit answer
         self.submit_question_answer('p1', {'2_1': 'choice_choice_2'})
