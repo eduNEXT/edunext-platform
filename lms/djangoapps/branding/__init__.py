@@ -14,7 +14,7 @@ from django.conf import settings
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
-
+from microsite_configuration import microsite
 
 def get_visible_courses(org=None, filter_=None):
     """
@@ -29,7 +29,13 @@ def get_visible_courses(org=None, filter_=None):
     """
     current_site_org = configuration_helpers.get_value('course_org_filter')
 
-    if org and current_site_org:
+    if isinstance(current_site_org, list):
+        courses = []
+        for org in current_site_org:
+            _partial = CourseOverview.get_all_courses(org=org, filter_=filter_)
+            courses = courses + list(_partial)
+
+    elif org and current_site_org:
         # Return an empty result if the org passed by the caller does not match the designated site org.
         courses = CourseOverview.get_all_courses(
             org=org,
@@ -58,12 +64,19 @@ def get_visible_courses(org=None, filter_=None):
             [SlashSeparatedCourseKey.from_deprecated_string(c) for c in settings.COURSE_LISTINGS[subdomain]]
         )
 
+    filtered_by_org = configuration_helpers.get_value('course_org_filter')
+
+    if filtered_by_org and isinstance(filtered_by_org, basestring):
+        return [course for course in courses if course.location.org == filtered_by_org]
+    if filtered_by_org and isinstance(filtered_by_org, list):
+        return [course for course in courses if course.location.org in filtered_by_org]
     if filtered_visible_ids:
         return [course for course in courses if course.id in filtered_visible_ids]
     else:
-        # Filter out any courses based on current org, to avoid leaking these.
-        orgs = configuration_helpers.get_all_orgs()
-        return [course for course in courses if course.location.org not in orgs]
+        # Let's filter out any courses in an "org" that has been declared to be
+        # in a Microsite
+        org_filter_out_set = microsite.get_all_orgs()
+        return [course for course in courses if course.location.org not in org_filter_out_set]
 
 
 def get_university_for_request():

@@ -297,6 +297,10 @@ def get_course_enrollments(user, org_to_include, orgs_to_exclude):
         generator[CourseEnrollment]: a sequence of enrollments to be displayed
         on the user's dashboard.
     """
+    # Make any call to this function compatible
+    if org_to_include and isinstance(org_to_include, basestring):
+        org_to_include = set([org_to_include])
+
     for enrollment in CourseEnrollment.enrollments_for_user(user):
 
         # If the course is missing or broken, log an error and skip it.
@@ -310,7 +314,7 @@ def get_course_enrollments(user, org_to_include, orgs_to_exclude):
             continue
 
         # Filter out anything that is not attributed to the current ORG.
-        if org_to_include and course_overview.location.org != org_to_include:
+        if org_to_include and course_overview.location.org not in org_to_include:
             continue
 
         # Conversely, filter out any enrollments with courses attributed to current ORG.
@@ -607,7 +611,8 @@ def dashboard(request):
 
     # remove our current org from the "filter out" list, if applicable
     if course_org_filter:
-        org_filter_out_set.remove(course_org_filter)
+        # edunext added support for list of orgs during BC-21
+        org_filter_out_set = [x for x in org_filter_out_set if x not in course_org_filter]
 
     # Build our (course, enrollment) list for the user, but ignore any courses that no
     # longer exist (because the course IDs have changed). Still, we don't delete those

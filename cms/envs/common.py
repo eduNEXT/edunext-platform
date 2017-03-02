@@ -959,6 +959,10 @@ INSTALLED_APPS = (
 
     # Unusual migrations
     'database_fixups',
+
+    # eduNEXT special modules
+    'edunext_openedx_extensions.edunext',
+    'edunext_openedx_extensions.ednx_microsites',
 )
 
 
