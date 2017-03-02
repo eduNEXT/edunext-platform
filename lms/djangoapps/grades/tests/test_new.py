@@ -3,6 +3,7 @@ Test saved subsection grade functionality.
 """
 # pylint: disable=protected-access
 
+import os
 import datetime
 
 import ddt
@@ -29,6 +30,7 @@ from ..models import PersistentSubsectionGrade
 from ..new.course_grade import CourseGradeFactory
 from ..new.subsection_grade import SubsectionGrade, SubsectionGradeFactory
 from .utils import mock_get_score, mock_get_submissions_score
+from unittest import skipIf
 
 
 class GradeTestBase(SharedModuleStoreTestCase):
@@ -368,6 +370,7 @@ class TestMultipleProblemTypesSubsectionScores(SharedModuleStoreTestCase):
 
         cls.course = course_items[0]
 
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
     def test_score_submission_for_all_problems(self):
         subsection_factory = SubsectionGradeFactory(
             self.student,

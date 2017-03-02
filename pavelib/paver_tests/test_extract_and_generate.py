@@ -8,7 +8,7 @@ import re
 import sys
 import string
 import subprocess
-from unittest import TestCase
+from unittest import TestCase, skipIf
 
 from mock import patch
 from polib import pofile
@@ -61,6 +61,7 @@ class TestGenerate(TestCase):
         # since os.path.getmtime() is not millisecond-accurate
         self.start_time = datetime.now(UTC) - timedelta(seconds=1)
 
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
     def test_merge(self):
         """
         Tests merge script on English source files.
@@ -71,6 +72,7 @@ class TestGenerate(TestCase):
         os.remove(filename)
 
     # Patch dummy_locales to not have esperanto present
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
     @patch.object(CONFIGURATION, 'dummy_locales', ['fake2'])
     def test_main(self):
         """
