@@ -8,7 +8,6 @@ from datetime import datetime
 import pytz
 from uuid import uuid4
 
-from django.conf import settings
 from django.contrib.auth.models import User
 from django.http import Http404, HttpResponse
 from django.template import RequestContext
@@ -38,6 +37,7 @@ from courseware.access import has_access
 from edxmako.shortcuts import render_to_response
 from edxmako.template import Template
 from eventtracking import tracker
+from openedx.conf import settings
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.lib.courses import course_image_url
 from student.models import LinkedInAddToProfileConfiguration
@@ -501,7 +501,7 @@ def render_html_view(request, user_id, course_id):
         raise Http404
 
     preview_mode = request.GET.get('preview', None)
-    platform_name = configuration_helpers.get_value("platform_name", settings.PLATFORM_NAME)
+    platform_name = configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME)
     configuration = CertificateHtmlViewConfiguration.get_config()
     # Create the initial view context, bootstrapping with Django settings and passed-in values
     context = {}
