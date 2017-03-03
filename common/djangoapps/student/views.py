@@ -15,7 +15,7 @@ from requests import HTTPError
 from ipware.ip import get_ip
 
 import edx_oauth2_provider
-from django.conf import settings
+from openedx.conf import settings
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.models import User, AnonymousUser
 from django.contrib.auth.decorators import login_required
@@ -43,6 +43,8 @@ from ratelimitbackend.exceptions import RateLimitException
 from social.apps.django_app import utils as social_utils
 from social.backends import oauth as social_oauth
 from social.exceptions import AuthException, AuthAlreadyAssociated
+
+from openedx_email_extensions.utils import get_html_message
 
 from edxmako.shortcuts import render_to_response, render_to_string
 
@@ -1848,6 +1850,7 @@ def create_account_with_params(request, params):
         # Email subject *must not* contain newlines
         subject = ''.join(subject.splitlines())
         message = render_to_string('emails/activation_email.txt', context)
+        html_message = get_html_message(context, base='emails/activation_email.txt')
 
         from_address = configuration_helpers.get_value(
             'email_from_address',
@@ -1857,7 +1860,7 @@ def create_account_with_params(request, params):
             dest_addr = settings.FEATURES['REROUTE_ACTIVATION_EMAIL']
             message = ("Activation for %s (%s): %s\n" % (user, user.email, profile.name) +
                        '-' * 80 + '\n\n' + message)
-        send_activation_email.delay(subject, message, from_address, dest_addr)
+        send_activation_email.delay(subject, message, from_address, dest_addr, html_message)
     else:
         registration.activate()
         _enroll_user_in_pending_courses(user)  # Enroll student in any pending courses
@@ -2388,9 +2391,10 @@ def reactivation_email_for_user(user):
     subject = ''.join(subject.splitlines())
     message = render_to_string('emails/activation_email.txt', context)
     from_address = configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
+    html_message = get_html_message(context, base='emails/activation_email.txt')
 
     try:
-        user.email_user(subject, message, from_address)
+        user.email_user(subject, message, from_address, html_message=html_message)
     except Exception:  # pylint: disable=broad-except
         log.error(
             u'Unable to send reactivation email from "%s" to "%s"',
@@ -2454,13 +2458,14 @@ def do_email_change_request(user, new_email, activation_key=None):
     subject = ''.join(subject.splitlines())
 
     message = render_to_string('emails/email_change.txt', context)
+    html_message = get_html_message(context, base='emails/email_change.txt')
 
     from_address = configuration_helpers.get_value(
         'email_from_address',
         settings.DEFAULT_FROM_EMAIL
     )
     try:
-        mail.send_mail(subject, message, from_address, [pec.new_email])
+        mail.send_mail(subject, message, from_address, [pec.new_email], html_message=html_message)
     except Exception:  # pylint: disable=broad-except
         log.error(u'Unable to send email activation link to user from "%s"', from_address, exc_info=True)
         raise ValueError(_('Unable to send email activation link. Please try again later.'))
@@ -2507,6 +2512,8 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
         subject = render_to_string('emails/email_change_subject.txt', address_context)
         subject = ''.join(subject.splitlines())
         message = render_to_string('emails/confirm_email_change.txt', address_context)
+        html_message = get_html_message(address_context, base='emails/confirm_email_change.txt')
+
         u_prof = UserProfile.objects.get(user=user)
         meta = u_prof.get_meta()
         if 'old_emails' not in meta:
@@ -2519,7 +2526,8 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
             user.email_user(
                 subject,
                 message,
-                configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
+                configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL),
+                html_message=html_message,
             )
         except Exception:    # pylint: disable=broad-except
             log.warning('Unable to send confirmation email to old address', exc_info=True)
