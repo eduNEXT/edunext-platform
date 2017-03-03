@@ -4,7 +4,7 @@
 <%def name="online_help_token()"><% return "courseware" %></%def>
 <%!
 from django.utils.translation import ugettext as _
-from django.conf import settings
+from openedx.conf import settings
 
 from edxnotes.helpers import is_feature_enabled as is_edxnotes_enabled
 from openedx.core.djangolib.markup import HTML

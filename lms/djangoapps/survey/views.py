@@ -51,7 +51,7 @@ def view_student_survey(user, survey_name, course=None, redirect_url=None, is_re
     # just remove that outer key to make the JSON payload simplier
     existing_answers = survey.get_answers(user=user).get(user.id, {})
 
-    platform_name = configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME)
+    platform_name = configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
 
     context = {
         'existing_data_json': json.dumps(existing_answers),

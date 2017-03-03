@@ -7,6 +7,7 @@ from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
 from django.core.urlresolvers import reverse
 from course_modes.models import CourseMode
+from openedx.conf import settings
 from course_modes.helpers import enrollment_mode_display
 from openedx.core.djangolib.js_utils import dump_js_escaped_json
 from openedx.core.djangolib.markup import HTML, Text
