@@ -260,6 +260,7 @@ class DarkLangMiddlewareTests(TestCase):
         session[LANGUAGE_SESSION_KEY] = session_language
         session.save()
 
+    @unittest.skip("Not running for eduNEXT")
     def test_preview_lang_with_released_language(self):
         # Preview lang should always override selection
         self._post_set_preview_lang('rel')
@@ -279,6 +280,7 @@ class DarkLangMiddlewareTests(TestCase):
             self.client.session
         )
 
+    @unittest.skip("Not running for eduNEXT")
     def test_preview_lang_with_dark_language(self):
         self._post_set_preview_lang('unrel')
         self.client.get('/home')

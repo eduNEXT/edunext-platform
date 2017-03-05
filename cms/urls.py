@@ -57,12 +57,12 @@ urlpatterns = patterns(
     # Update session view
     url(
         r'^lang_pref/session_language',
-        'openedx.core.djangoapps.lang_pref.views.update_session_language',
+        'edunext_openedx_extensions.ednx_lang_pref.views.update_session_language',
         name='session_language'
     ),
 
     # Darklang View to change the preview language (or dark language)
-    url(r'^update_lang/', include('openedx.core.djangoapps.dark_lang.urls', namespace='dark_lang')),
+    url(r'^update_lang/', include('edunext_openedx_extensions.ednx_dark_lang.urls', namespace='dark_lang')),
 )
 
 # restful api

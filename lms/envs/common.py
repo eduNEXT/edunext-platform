@@ -1157,12 +1157,13 @@ MIDDLEWARE_CLASSES = (
     'openedx.core.djangoapps.embargo.middleware.EmbargoMiddleware',
 
     # Allows us to set user preferences
-    'openedx.core.djangoapps.lang_pref.middleware.LanguagePreferenceMiddleware',
+    'edunext_openedx_extensions.ednx_lang_pref.middleware.LanguagePreferenceMiddleware',
 
     # Allows us to dark-launch particular languages.
     # Must be after LangPrefMiddleware, so ?preview-lang query params can override
     # user's language preference. ?clear-lang resets to user's language preference.
-    'openedx.core.djangoapps.dark_lang.middleware.DarkLangMiddleware',
+    'edunext_openedx_extensions.ednx_dark_lang.middleware.DarkLangMiddleware',
+    'edunext_openedx_extensions.edraak_i18n.middleware.SessionBasedLocaleMiddleware',
 
     # Detects user-requested locale from 'accept-language' header in http request.
     # Must be after DarkLangMiddleware.
@@ -2132,7 +2133,10 @@ INSTALLED_APPS = (
     'edunext_openedx_extensions.ednx_microsites',
     'edunext_openedx_extensions.manage_api',
     'edunext_openedx_extensions.microsite_api',
-
+    'edunext_openedx_extensions.edraak_i18n',
+    'edunext_openedx_extensions.microsite_aware_functions',
+    'edunext_openedx_extensions.ednx_lang_pref',
+    'edunext_openedx_extensions.ednx_dark_lang',
 
     # Credentials support
     'openedx.core.djangoapps.credentials',

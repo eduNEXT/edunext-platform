@@ -18,6 +18,7 @@ from courseware.module_render import get_module_for_descriptor
 from courseware.views.index import save_positions_recursively_up
 from courseware.views.views import get_current_child
 from student.models import CourseEnrollment, User
+from edunext_openedx_extensions.microsite_aware_functions.enrollments import filter_enrollments
 
 from xblock.fields import Scope
 from xblock.runtime import KeyValueStore
@@ -283,7 +284,7 @@ class UserCourseEnrollmentsList(generics.ListAPIView):
         ).order_by('created').reverse()
         org = self.request.query_params.get('org', None)
         return [
-            enrollment for enrollment in enrollments
+            enrollment for enrollment in filter_enrollments(enrollments)
             if enrollment.course_overview and self.is_org(org, enrollment.course_overview.org) and
             is_mobile_available_for_user(self.request.user, enrollment.course_overview)
         ]
