@@ -32,7 +32,7 @@ class SendActivationEmailTestCase(TestCase):
         email_max_attempts = settings.RETRY_ACTIVATION_EMAIL_MAX_ATTEMPTS
 
         # pylint: disable=no-member
-        send_activation_email.delay('Task_test', 'Task_test_message', from_address, self.student.email)
+        send_activation_email.delay('Task_test', 'Task_test_message', from_address, self.student.email, 'Task_test_html_message')
 
         # Asserts sending email retry logging.
         for attempt in range(email_max_attempts):

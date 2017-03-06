@@ -879,7 +879,7 @@ class TestRenderMessageToString(SharedModuleStoreTestCase):
         subject_template = 'emails/enroll_email_allowedsubject.txt'
         message_template = 'emails/enroll_email_allowedmessage.txt'
 
-        subject, message = self.get_subject_and_message_ccx(subject_template, message_template)
+        subject, message, html = self.get_subject_and_message_ccx(subject_template, message_template)
         self.assertIn(self.ccx.display_name, subject)
         self.assertIn(self.ccx.display_name, message)
         site = settings.SITE_NAME
