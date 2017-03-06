@@ -350,6 +350,7 @@ MIDDLEWARE_CLASSES = (
     'crum.CurrentRequestUserMiddleware',
     'request_cache.middleware.RequestCache',
     'openedx.core.djangoapps.header_control.middleware.HeaderControlMiddleware',
+    'edunext_openedx_extensions.ednx_microsites.middleware.SimpleMicrositeMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
