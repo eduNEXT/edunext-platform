@@ -18,7 +18,7 @@ from edxmako.shortcuts import render_to_response
 from django.core.urlresolvers import reverse
 from django.utils.html import escape
 from django.http import Http404, HttpResponseServerError
-from django.conf import settings
+from openedx.conf import settings
 from util.json_request import JsonResponse
 from mock import patch
 
@@ -187,7 +187,8 @@ def instructor_dashboard_2(request, course_id):
     # and enable self-generated certificates for a course.
     # Note: This is hidden for all CCXs
     certs_enabled = CertificateGenerationConfiguration.current().enabled and not hasattr(course_key, 'ccx')
-    if certs_enabled and access['admin']:
+    # eduNEXT changed on 14.07.2016 to allow access to the course-administrators (as per studio)
+    if certs_enabled and access['instructor']:
         sections.append(_section_certificates(course))
 
     disable_buttons = not _is_small_course(course_key)
