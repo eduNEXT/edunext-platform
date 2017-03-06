@@ -16,6 +16,7 @@ from openedx.core.djangoapps.content.course_overviews.models import CourseOvervi
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from microsite_configuration import microsite
 
+
 def get_visible_courses(org=None, filter_=None):
     """
     Return the set of CourseOverviews that should be visible in this branded

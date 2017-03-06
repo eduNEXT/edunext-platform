@@ -588,3 +588,7 @@ COMPREHENSIVE_THEME_DIRS = [REPO_ROOT / "themes", REPO_ROOT / "common/test"]
 COMPREHENSIVE_THEME_LOCALE_PATHS = [REPO_ROOT / "themes/conf/locale", ]
 
 LMS_ROOT_URL = "http://localhost:8000"
+
+########################### eduNEXT Tests ###################################
+
+FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] = False
