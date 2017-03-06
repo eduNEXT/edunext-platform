@@ -23,7 +23,6 @@ from urllib import urlencode
 import analytics
 import dogstats_wrapper as dog_stats_api
 from config_models.models import ConfigurationModel
-from django.conf import settings
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.contrib.auth.signals import user_logged_in, user_logged_out
@@ -53,6 +52,7 @@ from openedx.core.djangoapps.commerce.utils import ecommerce_api_client, ECOMMER
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.xmodule_django.models import CourseKeyField, NoneToEmptyManager
+from openedx.conf import settings
 from track import contexts
 from util.milestones_helpers import is_entrance_exams_enabled
 from util.model_utils import emit_field_changed_events, get_changed_fields_dict
