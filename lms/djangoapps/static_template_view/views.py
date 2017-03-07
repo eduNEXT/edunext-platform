@@ -13,6 +13,7 @@ from mako.exceptions import TopLevelLookupException
 
 from edxmako.shortcuts import render_to_response, render_to_string
 from util.cache import cache_if_anonymous
+from microsite_configuration import microsite
 
 valid_templates = []
 
@@ -41,6 +42,9 @@ def render(request, template):
 
     url(r'^jobs$', 'static_template_view.views.render', {'template': 'jobs.html'}, name="jobs")
     """
+    mktg_redirects = microsite.get_value('MKTG_REDIRECTS', {})
+    if template in mktg_redirects and mktg_redirects.get(template):
+        return redirect(mktg_redirects.get(template, '/'))
 
     # Guess content type from file extension
     content_type, __ = mimetypes.guess_type(template)
