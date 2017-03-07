@@ -6,7 +6,7 @@ import logging
 from datetime import datetime
 from pytz import UTC
 
-from django.conf import settings
+from openedx.conf import settings
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django_comment_common.models import assign_default_role
@@ -23,6 +23,9 @@ from student.roles import CourseInstructorRole, CourseStaffRole
 from student.models import CourseEnrollment
 from student import auth
 
+
+# eduNEXT 19.11.2015
+from microsite_configuration import microsite
 
 log = logging.getLogger(__name__)
 
@@ -91,15 +94,18 @@ def get_lms_link_for_item(location, preview=False):
 
     # checks LMS_BASE value in site configuration for the given course_org_filter(org)
     # if not found returns settings.LMS_BASE
+    # eduNEXT 19.11.2015 make the link microsite aware, based on the org of the course
     lms_base = SiteConfiguration.get_value_for_org(
         location.org,
         "LMS_BASE",
-        settings.LMS_BASE
+        microsite.get_value_for_org(location.org, 'SITE_NAME', settings.LMS_BASE)
     )
 
     if lms_base is None:
         return None
 
+    # eduNEXT 19.11.2015 Disable preview for now (not microsite aware), it will redirect to a normal course.
+    preview = False
     if preview:
         # checks PREVIEW_LMS_BASE value in site configuration for the given course_org_filter(org)
         # if not found returns settings.FEATURES.get('PREVIEW_LMS_BASE')
@@ -124,7 +130,11 @@ def get_lms_link_for_certificate_web_view(user_id, course_key, mode):
     assert isinstance(course_key, CourseKey)
 
     # checks LMS_BASE value in SiteConfiguration against course_org_filter if not found returns settings.LMS_BASE
-    lms_base = SiteConfiguration.get_value_for_org(course_key.org, "LMS_BASE", settings.LMS_BASE)
+    lms_base = SiteConfiguration.get_value_for_org(
+        course_key.org,
+        "LMS_BASE",
+        microsite.get_value_for_org(course_key.org, 'SITE_NAME', settings.LMS_BASE)
+    )
 
     if lms_base is None:
         return None
