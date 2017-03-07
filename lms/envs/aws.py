@@ -661,6 +661,9 @@ if FEATURES.get('ENABLE_THIRD_PARTY_AUTH'):
         ]) + list(AUTHENTICATION_BACKENDS)
     )
 
+    # This is required for microsite awareness at edunext. Default is an empty array
+    THIRD_PARTY_AUTH_ENABLED_PROVIDERS = []
+
     # The reduced session expiry time during the third party login pipeline. (Value in seconds)
     SOCIAL_AUTH_PIPELINE_TIMEOUT = ENV_TOKENS.get('SOCIAL_AUTH_PIPELINE_TIMEOUT', 600)
 
