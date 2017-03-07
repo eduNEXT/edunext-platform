@@ -13,6 +13,7 @@ from django.http import HttpResponseNotFound, HttpResponseServerError, Http404
 from django.views.decorators.csrf import ensure_csrf_cookie
 
 from util.cache import cache_if_anonymous
+from microsite_configuration import microsite
 
 valid_templates = []
 
@@ -41,6 +42,9 @@ def render(request, template):
 
     url(r'^jobs$', 'static_template_view.views.render', {'template': 'jobs.html'}, name="jobs")
     """
+    mktg_redirects = microsite.get_value('MKTG_REDIRECTS', {})
+    if template in mktg_redirects:
+        return redirect(mktg_redirects.get(template, '/'))
 
     # Guess content type from file extension
     content_type, __ = mimetypes.guess_type(template)
