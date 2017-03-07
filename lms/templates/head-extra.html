@@ -16,6 +16,8 @@ from microsite_configuration import microsite
         microsite.get_value('css_overrides_file')
       )
       style_overrides_file = microsite.get_value('css_overrides_file')
+    else:
+      style_overrides_file = microsite.get_value('css_overrides_file')
   except Exception:
     style_overrides_file = ''
 %>
