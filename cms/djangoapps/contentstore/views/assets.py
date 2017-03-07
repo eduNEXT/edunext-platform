@@ -26,6 +26,9 @@ from xmodule.exceptions import NotFoundError
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError
 
+# eduNEXT 14.07.2016
+from microsite_configuration import microsite
+
 __all__ = ['assets_handler']
 
 # pylint: disable=unused-argument
@@ -367,7 +370,9 @@ def _get_asset_json(display_name, content_type, date, location, thumbnail_locati
     Helper method for formatting the asset information to send to client.
     """
     asset_url = StaticContent.serialize_asset_key_with_slash(location)
-    external_url = settings.LMS_BASE + asset_url
+    # eduNEXT 14.07.2016
+    lms_base = microsite.get_value_for_org(location.org, 'SITE_NAME', settings.LMS_BASE)
+    external_url = lms_base + asset_url
     return {
         'display_name': display_name,
         'content_type': content_type,
