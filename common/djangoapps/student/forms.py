@@ -22,6 +22,7 @@ from openedx.conf import settings
 from student.models import CourseEnrollmentAllowed
 from util.password_policy_validators import validate_password_strength
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from student.edraak_validation import VALIDATE_USERNAME
 
 
 class PasswordResetFormNoActive(PasswordResetForm):
@@ -118,16 +119,16 @@ class AccountCreationForm(forms.Form):
     validation, not rendering.
     """
     # TODO: Resolve repetition
-    username = forms.SlugField(
+    username = forms.CharField(
         min_length=2,
         max_length=30,
         error_messages={
             "required": _USERNAME_TOO_SHORT_MSG,
-            "invalid": _("Usernames can only contain Roman letters, western numerals (0-9), underscores (_), and "
-                         "hyphens (-)."),
             "min_length": _USERNAME_TOO_SHORT_MSG,
+            "invalid": _("Usernames must contain only letters, numbers, underscores (_), and hyphens (-)."),
             "max_length": _("Username cannot be more than %(limit_value)s characters long"),
-        }
+        },
+        validators=[VALIDATE_USERNAME],  # Allow Unicode usernames
     )
     email = forms.EmailField(
         max_length=254,  # Limit per RFCs is 254
