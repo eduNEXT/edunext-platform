@@ -9,16 +9,13 @@ import logging
 
 from datetime import datetime
 from django.contrib.auth.models import User
-from django.conf import settings
+from openedx.conf import settings
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.utils.translation import override as override_language
 from eventtracking import tracker
 import pytz
 
-from course_modes.models import CourseMode
-from courseware.models import StudentModule
-from edxmako.shortcuts import render_to_string
 from lms.djangoapps.grades.signals.signals import PROBLEM_RAW_SCORE_CHANGED
 from openedx.core.djangoapps.lang_pref import LANGUAGE_KEY
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers

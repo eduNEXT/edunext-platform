@@ -10,4 +10,4 @@
 # For HTML email:
 git+https://github.com/eduNEXT/openedx-email-extensions.git@ab614e69ae9d7d48d2e2c1e7dfd1bb53d0c3bb7b#egg=openedx-email-extensions==0.1.1
 # For general Edunext extensions
-git+https://github.com/eduNEXT/edunext-openedx-extensions@b723b11fba3350f2daa57b12efb032f6900c5932#egg=edunext-openedx-extensions==0.2.0
+git+https://github.com/eduNEXT/edunext-openedx-extensions@4a7bda2853bf2a84a7fbc0c6a83fbe8970cf4733#egg=edunext-openedx-extensions==0.2.0

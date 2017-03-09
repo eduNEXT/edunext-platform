@@ -28,7 +28,7 @@ from openedx.core.djangoapps.external_auth.login_and_register import (
     register as external_auth_register
 )
 from openedx.core.djangoapps.commerce.utils import ecommerce_api_client
-from openedx.core.djangoapps.lang_pref.api import released_languages, all_languages
+from edunext_openedx_extensions.ednx_lang_pref.api import released_languages, all_languages
 from openedx.core.djangoapps.programs.models import ProgramsApiConfig
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.theming.helpers import is_request_in_themed_site

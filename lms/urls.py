@@ -51,6 +51,8 @@ urlpatterns = (
 
     url(r'^notifier_api/', include('notifier_api.urls')),
 
+    url(r'^', include('edunext_openedx_extensions.edraak_i18n.urls')),
+
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
     # Feedback Form endpoint
@@ -94,7 +96,7 @@ urlpatterns = (
     # Update session view
     url(
         r'^lang_pref/session_language',
-        'openedx.core.djangoapps.lang_pref.views.update_session_language',
+        'edunext_openedx_extensions.ednx_lang_pref.views.update_session_language',
         name='session_language'
     ),
 
@@ -104,7 +106,7 @@ urlpatterns = (
     url(r'^verify_student/', include('verify_student.urls')),
 
     # URLs for managing dark launches of languages
-    url(r'^update_lang/', include('openedx.core.djangoapps.dark_lang.urls', namespace='dark_lang')),
+    url(r'^update_lang/', include('edunext_openedx_extensions.ednx_dark_lang.urls', namespace='dark_lang')),
 
     # URLs for API access management
     url(r'^api-admin/', include('openedx.core.djangoapps.api_admin.urls', namespace='api_admin')),

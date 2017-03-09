@@ -375,10 +375,10 @@ MIDDLEWARE_CLASSES = (
     'track.middleware.TrackMiddleware',
 
     # This is used to set or update the user language preferences.
-    'openedx.core.djangoapps.lang_pref.middleware.LanguagePreferenceMiddleware',
+    'edunext_openedx_extensions.ednx_lang_pref.middleware.LanguagePreferenceMiddleware',
 
     # Allows us to dark-launch particular languages
-    'openedx.core.djangoapps.dark_lang.middleware.DarkLangMiddleware',
+    'edunext_openedx_extensions.ednx_dark_lang.middleware.DarkLangMiddleware',
 
     'openedx.core.djangoapps.embargo.middleware.EmbargoMiddleware',
 
@@ -964,6 +964,7 @@ INSTALLED_APPS = (
     # eduNEXT special modules
     'edunext_openedx_extensions.edunext',
     'edunext_openedx_extensions.ednx_microsites',
+    'edunext_openedx_extensions.ednx_dark_lang',
 )
 
 
