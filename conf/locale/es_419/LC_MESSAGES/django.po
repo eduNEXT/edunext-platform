@@ -12012,7 +12012,7 @@ msgid "Submit your answer"
 msgstr ""
 
 #: lms/templates/problem.html
-msgid "You have used {num_used} of {num_total} attempts"
+msgid "You have used {num_used} of {num_total} submissions"
 msgstr "Ud. ha realizado {num_used} de {num_total} intentos"
 
 #: lms/templates/problem_notifications.html
