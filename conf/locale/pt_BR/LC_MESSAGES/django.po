@@ -1,271 +1,26 @@
-# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Álex Filipe <alexfilipe@outlook.com>, 2014
-# Allan Melo, 2015
-# André Geraldo <andreufpel@yahoo.com.br>, 2015
-# Angela Amaro <angelasimei@gmail.com>, 2016
-# Antonio M. <toinho@gmail.com>, 2014
-# brk0_0, 2013
-# brunojm <brunojm@gmail.com>, 2014
-# Cleomir Waiczyk <w.cleomir@gmail.com>, 2015
-# Daniela Dering de Lima Silva <daniela.eng11@gmail.com>, 2016
-# Douglas Reginatto <dreginatto@yahoo.com.br>, 2016
-# Edgar Aparecido Pereira de Melo <edgarapmelo@gmail.com>, 2014
-# Edgar Aparecido Pereira de Melo <edgarapmelo@gmail.com>, 2014
-# Erik Henrique <contato@erikhenrique.com.br>, 2015
-# Filipe Oliveira <contato@fmoliveira.com.br>, 2013
-# Francisco Cantarutti <francisco.cantarutti@sisqualis.com.br>, 2014
-# G.Ribas <gabriel.ribas1@hotmail.com>, 2014
-# Guilherme Batista Ferreira <guilherme@uft.edu.br>, 2015
-# gsoster <guilhermesosters@gmail.com>, 2016
-# Guilherme Tadiello <guilhermetadiello@hotmail.com>, 2015
-# Gustavo Henrique de Almeida Gonçalves <gustavo@faprender.org>, 2015
-# Gustavo Henrique de Almeida Gonçalves <gustavo@faprender.org>, 2015
-# Heitor Althmann <heitoralthmann@gmail.com>, 2014
-# Heitor Althmann <heitoralthmann@gmail.com>, 2014
-# Hudson Martins dos Santos <p4p4l3gu4x@gmail.com>, 2015
-# javiercencig <javier@jecnet.com.br>, 2014
-# JhonatannSilva <jhonatannpereiradasilva@hotmail.com>, 2014
-# Joao Marcello Macedo Leme <joaoleme925@hotmail.com>, 2015
-# José Rodrigues <jrsf19@gmail.com>, 2016
-# katia04 <katia.csmiao@gmail.com>, 2014
-# Kayo Leone Dias Perim <kayo_2008_@hotmail.com>, 2014
-# Kayo Leone Dias Perim <kayo_2008_@hotmail.com>, 2014
-# Kevin Grist <kgrist@localconcept.com>, 2014
-# Larissa Queiroz Pontes <lariqbiotec@gmail.com>, 2015
-# Leonardo Flores Zambaldi <fzleonardo@gmail.com>, 2014
-# Leonardo Lehnemann <lehneman@gmail.com>, 2014-2016
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# lukassem <lucas_sem@hotmail.com>, 2014
-# Lulatini <inactive+Lulatini@transifex.com>, 2014
-# Marcelo Soares Souza <marcelo@libertais.org>, 2014
-# Marco Túlio Pires <mtrpires@outlook.com>, 2014
-# Mariana Baroni <maribaroni@gmail.com>, 2014
-# Mariana Moretti <mamoretti@gmail.com>, 2015
-# Matheus Andrade <matheusflkandrade@hotmail.com>, 2014
-# Monica Farias <monifar.tp@gmail.com>, 2015-2016
-# snipernael <nael_garanhao@hotmail.com>, 2015
-# Ned Batchelder <ned@edx.org>, 2016
-# niels006 <niels006@gmail.com>, 2014
-# niels006 <niels006@gmail.com>, 2014
-# Paulo Castro, 2013
-# Pedro Guimarães Martins <pedrogmartins7@gmail.com>, 2015
-# RenataBarboza, 2013
-# Renata Barboza-Murray, 2013-2016
-# Rene Souza Vianello Argento <rene.argento@gmail.com>, 2015
-# Ricardo Pietrobon <pietr007@gmail.com>, 2013-2014
-# Sarina Canelake <sarina@edx.org>, 2014
-# Thiago Ponte <thiagoponte@gmail.com>, 2014
-# Thiago Perrotta <inactive+thiagowfx@transifex.com>, 2015
-# Thiago Vieira <thipvieira@gmail.com>, 2014
-# Thiago Bittencourt <thimabi13@gmail.com>, 2014
-# Tulio Simoes Martins Padilha <tuliouel@gmail.com>, 2014
-# Victor Hochgreb <victorfeec@gmail.com>, 2015
-# Victor Hochgreb de Freitas <victorhochgreb@gmail.com>, 2015
-# Vitor Silva Martins Costa <costa.vsm@gmail.com>, 2014
-# William Bellinazo Roca <williambr_1331@hotmail.com>, 2016
-# William Bellinazo Roca <williambr_1331@hotmail.com>, 2016
-# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Álex Filipe <alexfilipe@outlook.com>, 2014
-# Angela Amaro <angelasimei@gmail.com>, 2016
-# Antonio Henrique Dianin <antoniohdianin@hotmail.com>, 2015
-# brk0_0, 2013
-# Cleomir Waiczyk <w.cleomir@gmail.com>, 2015
-# Daniela Dering de Lima Silva <daniela.eng11@gmail.com>, 2016
-# Edgar Aparecido Pereira de Melo <edgarapmelo@gmail.com>, 2014
-# Edgar Aparecido Pereira de Melo <edgarapmelo@gmail.com>, 2014
-# aivuk <e@vaz.io>, 2014
-# Felipe Nogueira de Souza <felipensouza@live.com>, 2015
-# Filipe Oliveira <contato@fmoliveira.com.br>, 2013
-# Athanazio <ivan.athanazio@gmail.com>, 2016
-# Kayo Leone Dias Perim <kayo_2008_@hotmail.com>, 2014
-# Leonardo Lehnemann <lehneman@gmail.com>, 2014
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# Marcelo Soares Souza <marcelo@libertais.org>, 2014
-# Marco Túlio Pires <mtrpires@outlook.com>, 2014
-# Monica Farias <monifar.tp@gmail.com>, 2016
-# niels006 <niels006@gmail.com>, 2014
-# niels006 <niels006@gmail.com>, 2014
-# Pedro Guimarães Martins <pedrogmartins7@gmail.com>, 2015
-# RenataBarboza, 2013
-# Renata Barboza-Murray, 2014
-# Siderlan Santos <siderlan.santos@gmail.com>, 2015
-# Victor Hochgreb <victorfeec@gmail.com>, 2015
-# Victor Hochgreb de Freitas <victorhochgreb@gmail.com>, 2015
-# Victor Oliveira <victor@codebit.com.br>, 2016
-# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Alexander Rodrigo Ferreira <dr.alexander.ferreira@hotmail.com>, 2015
-# Álex Filipe <alexfilipe@outlook.com>, 2014
-# Alex M. Becker <becker.alex@alunos.unipampa.edu.br>, 2013
-# Alex M. Becker <becker.alex@alunos.unipampa.edu.br>, 2013
-# Anderson Franca <anderson.frca@gmail.com>, 2016
-# André Geraldo <andreufpel@yahoo.com.br>, 2015
-# Andrei Bosco Bezerra Torres <andreibosco@gmail.com>, 2014
-# Angela Amaro <angelasimei@gmail.com>, 2016
-# anunciato <anunciato@gmail.com>, 2014
-# brk0_0, 2013
-# brunojm <brunojm@gmail.com>, 2013
-# brunojm <brunojm@gmail.com>, 2013-2014
-# Cleomir Waiczyk <w.cleomir@gmail.com>, 2015
-# Edgar Aparecido Pereira de Melo <edgarapmelo@gmail.com>, 2014
-# Edgar Aparecido Pereira de Melo <edgarapmelo@gmail.com>, 2014
-# Everton Zanella Alvarenga <everton.alvarenga@okfn.org>, 2014
-# Filipe Oliveira <contato@fmoliveira.com.br>, 2013
-# Francisco Cantarutti <francisco.cantarutti@sisqualis.com.br>, 2014
-# G.Ribas <gabriel.ribas1@hotmail.com>, 2014
-# Gilson Leite Siqueira Junior <shaveslavers@gmail.com>, 2014
-# Gislene Kucker Arantes <gislene.trad@gmail.com>, 2014
-# Guilherme Tadiello <guilhermetadiello@hotmail.com>, 2015
-# Gustavo Henrique de Almeida Gonçalves <gustavo@faprender.org>, 2015
-# Gustavo Henrique de Almeida Gonçalves <gustavo@faprender.org>, 2015
-# Hudson Martins dos Santos <p4p4l3gu4x@gmail.com>, 2015
-# javiercencig <javier@jecnet.com.br>, 2014
-# Joao Marcello Macedo Leme <joaoleme925@hotmail.com>, 2015
-# Kayo Leone Dias Perim <kayo_2008_@hotmail.com>, 2014
-# Kayo Leone Dias Perim <kayo_2008_@hotmail.com>, 2014
-# Kelly Parada <kellcparada@gmail.com>, 2016
-# Kevin Grist <kgrist@localconcept.com>, 2014
-# Leonardo Flores Zambaldi <fzleonardo@gmail.com>, 2014
-# Leonardo Lehnemann <lehneman@gmail.com>, 2014
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# lukassem <lucas_sem@hotmail.com>, 2014
-# Luiz Mituiti <luizmituiti@gmail.com>, 2014
-# Marcelo Soares Souza <marcelo@libertais.org>, 2014
-# Marcos João Alves <noidmvp@gmail.com>, 2014
-# Marco Túlio Pires <mtrpires@outlook.com>, 2014
-# marianemurakami <mhmurakami@gmail.com>, 2014
-# Mike Job <mikejobrn@gmail.com>, 2015
-# Monica Farias <monifar.tp@gmail.com>, 2015-2016
-# Nayse Hillesheim <nayse.hillesheim@gmail.com>, 2015
-# Ned Batchelder <ned@edx.org>, 2016
-# niels006 <niels006@gmail.com>, 2014
-# niels006 <niels006@gmail.com>, 2014
-# nivarura <nivarura@gmail.com>, 2015
-# Paulo Castro, 2013
-# Pedro Guimarães Martins <pedrogmartins7@gmail.com>, 2014-2015
-# Raphael Mendonça, 2014
-# Raysa Valentim dos Santos <raysavalentims@gmail.com>, 2015
-# Renata Barboza-Murray, 2013-2016
-# Rene Souza Vianello Argento <rene.argento@gmail.com>, 2015
-# Ricardo Pietrobon <pietr007@gmail.com>, 2013-2014
-# RODRIGOR77 <rodrigo_magalhaes_rodrigues_alve@yahoo.com.br>, 2014
-# danielnora <sandaephon@gmail.com>, 2014
-# Sarina Canelake <sarina@edx.org>, 2014
-# Thais de Assis Angeloni <thais.angeloni@gmail.com>, 2015
-# Thiago Perrotta <inactive+thiagowfx@transifex.com>, 2014
-# Thiago Vieira <thipvieira@gmail.com>, 2014
-# Tulio Simoes Martins Padilha <tuliouel@gmail.com>, 2014
-# Victor Hochgreb <victorfeec@gmail.com>, 2015
-# Victor Hochgreb de Freitas <victorhochgreb@gmail.com>, 2015
-# Vitor Silva Martins Costa <costa.vsm@gmail.com>, 2014
-# wesleyide <wesley36@gmail.com>, 2014
-# William Bellinazo Roca <williambr_1331@hotmail.com>, 2016
-# William Bellinazo Roca <williambr_1331@hotmail.com>, 2016
-# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Alan Ribeiro Mól <alan3df@gmail.com>, 2015
-# Alexander Rodrigo Ferreira <dr.alexander.ferreira@hotmail.com>, 2015
-# Álex Filipe <alexfilipe@outlook.com>, 2014
-# Alextds <alex.tds@gmail.com>, 2014
-# Alex M. Becker <becker.alex@alunos.unipampa.edu.br>, 2013
-# Andre Eduardo <andre_meneses2001@hotmail.com>, 2015
-# André Geraldo <andreufpel@yahoo.com.br>, 2015
-# Angela Amaro <angelasimei@gmail.com>, 2016
-# brk0_0, 2013
-# brunojm <brunojm@gmail.com>, 2013
-# Cleomir Waiczyk <w.cleomir@gmail.com>, 2015
-# Daniel Barossi Garcia <danidoo@gmail.com>, 2015
-# Daniele Maila Cebin <danielecebin@hotmail.com>, 2015
-# Daniel Linhares <danielinhares@gmail.com>, 2014
-# MatosD <deusilenematosdm@hotmail.com>, 2015
-# Douglas Reginatto <dreginatto@yahoo.com.br>, 2016
-# Emili Costa <m.lee.costa@gmail.com>, 2015
-# Fernando Ursine Braga Silva <fernando_ursine@yahoo.com>, 2014
-# Filipe Oliveira <contato@fmoliveira.com.br>, 2013
-# Francisco Cantarutti <francisco.cantarutti@sisqualis.com.br>, 2014
-# Gustavo Henrique de Almeida Gonçalves <gustavo@faprender.org>, 2015
-# Hannah Ximenes <hannahmoreira@yahoo.com.br>, 2014
-# Hudson Martins dos Santos <p4p4l3gu4x@gmail.com>, 2015
-# Kayo Leone Dias Perim <kayo_2008_@hotmail.com>, 2014
-# Leonardo Flores Zambaldi <fzleonardo@gmail.com>, 2014
-# Leonardo Lehnemann <lehneman@gmail.com>, 2014
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# Luiz Mituiti <luizmituiti@gmail.com>, 2014
-# Mariana Moretti <mamoretti@gmail.com>, 2014
-# Marcelo Soares Souza <marcelo@libertais.org>, 2014
-# Marcos João Alves <noidmvp@gmail.com>, 2014
-# Marco Túlio Pires <mtrpires@outlook.com>, 2014
-# Mariana Baroni <maribaroni@gmail.com>, 2014
-# Mariana Moretti <mamoretti@gmail.com>, 2014
-# marianemurakami <mhmurakami@gmail.com>, 2014
-# Monica Farias <monifar.tp@gmail.com>, 2015-2016
-# Ned Batchelder <ned@edx.org>, 2016
-# niels006 <niels006@gmail.com>, 2014
-# niels006 <niels006@gmail.com>, 2014
-# Pedro Guimarães Martins <pedrogmartins7@gmail.com>, 2015
-# Renata Barboza-Murray, 2014-2015
-# Victor Hochgreb de Freitas <victorhochgreb@gmail.com>, 2015
-# Vitor Silva Martins Costa <costa.vsm@gmail.com>, 2014
-# wesleyide <wesley36@gmail.com>, 2014
-# William Bellinazo Roca <williambr_1331@hotmail.com>, 2016
-# William Bellinazo Roca <williambr_1331@hotmail.com>, 2016
-# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Álex Filipe <alexfilipe@outlook.com>, 2014
-# Angela Amaro <angelasimei@gmail.com>, 2016
-# anunciato <anunciato@gmail.com>, 2014
-# javiercencig <javier@jecnet.com.br>, 2014
-# JhonatannSilva <jhonatannpereiradasilva@hotmail.com>, 2014
-# LucasPPires <lucaspylespires@hotmail.com>, 2014
-# Marcelo Soares Souza <marcelo@libertais.org>, 2014
-# marianemurakami <mhmurakami@gmail.com>, 2014
-# Renata Barboza-Murray, 2014
+# edunext helper translation file.
+# Copyright (C) 2016 eduNEXT
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2016-12-08 18:46+0000\n"
-"PO-Revision-Date: 2016-10-24 19:45+0000\n"
-"Last-Translator: Monica Farias <monifar.tp@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/open-edx/edx-platform/language/pt_BR/)\n"
+"POT-Creation-Date: 2017-03-15 14:30+0000\n"
+"PO-Revision-Date: 2016-03-30 15:48+0000\n"
+"Last-Translator: Felipe Montoya <felipe.montoya@edunext.co>\n"
+"Language-Team: eduNEXT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
 #: cms/djangoapps/contentstore/views/component.py
 #: lms/djangoapps/courseware/tabs.py lms/djangoapps/discussion/plugins.py
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion.py
+#: lms/djangoapps/discussion/templates/discussion/discussion_profile_page.html
 msgid "Discussion"
 msgstr "Discussão"
 
@@ -332,7 +87,7 @@ msgstr "Status"
 #: cms/djangoapps/contentstore/views/videos.py
 #: openedx/core/djangoapps/api_admin/models.py cms/templates/index.html
 msgid "Pending"
-msgstr ""
+msgstr "Pendente"
 
 #: common/djangoapps/course_modes/admin.py
 #: common/djangoapps/course_modes/models.py
@@ -477,7 +232,7 @@ msgstr "Modos de educação profissional não podem ter definição de fim_data.
 
 #: common/djangoapps/course_modes/models.py
 msgid "Verified modes cannot be free."
-msgstr ""
+msgstr "Os modos certificados não podem ser gratuitos."
 
 #: common/djangoapps/course_modes/models.py
 msgid ""
@@ -521,6 +276,12 @@ msgstr "Aluno"
 
 #: common/djangoapps/student/admin.py
 msgid "User profile"
+msgstr "Perfil do usuário"
+
+#: common/djangoapps/student/edraak_validation.py
+msgid ""
+"Enter a valid 'username' consisting of letters, numbers, underscores or "
+"hyphens."
 msgstr ""
 
 #: common/djangoapps/student/forms.py
@@ -557,9 +318,11 @@ msgstr "O seu nome legal deve conter no mínimo dois caracteres"
 
 #: common/djangoapps/student/forms.py
 msgid ""
-"Usernames can only contain Roman letters, western numerals (0-9), "
-"underscores (_), and hyphens (-)."
+"Usernames must contain only letters, numbers, underscores (_), and hyphens "
+"(-)."
 msgstr ""
+"Nomes de usuário devem conter apenas letras, números, sublinhados (_) e "
+"hífens (-)."
 
 #: common/djangoapps/student/forms.py
 #, python-format
@@ -608,6 +371,10 @@ msgid "To enroll, you must follow the honor code."
 msgstr "Para inscrever-se, é preciso seguir o código de honra."
 
 #: common/djangoapps/student/forms.py
+msgid "You must consent to data sharing to register."
+msgstr ""
+
+#: common/djangoapps/student/forms.py
 msgid "You are missing one or more required fields"
 msgstr "Você não está preenchendo um ou mais campos"
 
@@ -624,76 +391,88 @@ msgid "Unauthorized email address."
 msgstr "Endereço de e-mail não autorizado"
 
 #: common/djangoapps/student/forms.py
+#, python-brace-format
 msgid ""
 "It looks like {email} belongs to an existing account. Try again with a "
 "different email address."
 msgstr ""
+"Parece que {email} já pertence a uma conta existente. Tente novamente com um"
+" endereço de e-mail diferente."
 
 #: common/djangoapps/student/management/commands/manage_group.py
 msgid "Removed group: \"{}\""
-msgstr ""
+msgstr "Grupos removidos: \"{}\""
 
 #: common/djangoapps/student/management/commands/manage_group.py
 msgid "Did not find a group with name \"{}\" - skipping."
-msgstr ""
+msgstr "Não foi encontrado um grupo com o nome \"{}\" - ignorando"
 
 #: common/djangoapps/student/management/commands/manage_group.py
+#, python-brace-format
 msgid "Invalid group name: \"{group_name}\". {messages}"
-msgstr ""
+msgstr "Nome do grupo inválido: \"{group_name}\". {messages}"
 
 #: common/djangoapps/student/management/commands/manage_group.py
 msgid "Created new group: \"{}\""
-msgstr ""
+msgstr "Novo grupo criado: \"{}\""
 
 #: common/djangoapps/student/management/commands/manage_group.py
 msgid "Found existing group: \"{}\""
-msgstr ""
+msgstr "Grupo existente encontrado: \"{}\""
 
 #: common/djangoapps/student/management/commands/manage_group.py
+#, python-brace-format
 msgid "Adding {codenames} permissions to group \"{group}\""
-msgstr ""
+msgstr "Adicionando {codenames} permissões para o grupo \"{group}\""
 
 #: common/djangoapps/student/management/commands/manage_group.py
+#, python-brace-format
 msgid "Removing {codenames} permissions from group \"{group}\""
-msgstr ""
+msgstr "Removendo {codenames} permissões do grupo \"{group}\""
 
 #: common/djangoapps/student/management/commands/manage_group.py
 msgid ""
 "Invalid permission option: \"{}\". Please specify permissions using the "
 "format: app_label:model_name:permission_codename."
 msgstr ""
+"Opção de permissão inválida: \"{}\". Por favor, especifique as permissões "
+"usando o formato: app_label:model_name:permission_codename."
 
 #: common/djangoapps/student/management/commands/manage_group.py
+#, python-brace-format
 msgid ""
 "Invalid permission codename: \"{codename}\".  No such permission exists for "
 "the model {module}.{model_name}."
 msgstr ""
 
 #: common/djangoapps/student/management/commands/manage_user.py
+#, python-brace-format
 msgid "Setting {attribute} for user \"{username}\" to \"{new_value}\""
-msgstr ""
+msgstr "Alterando {attribute} do usuário \"{username}\" para \"{new_value}\""
 
 #: common/djangoapps/student/management/commands/manage_user.py
 msgid ""
 "Skipping user \"{}\" because the specified and existing email addresses do "
 "not match."
 msgstr ""
+"Ignorando usuário \"{}\" porque o email especificado e o existente não "
+"combinam."
 
 #: common/djangoapps/student/management/commands/manage_user.py
 msgid "Did not find a user with username \"{}\" - skipping."
-msgstr ""
+msgstr "Usuário com o nome de usuário \"{}\" não encontrado - ignorando."
 
 #: common/djangoapps/student/management/commands/manage_user.py
 msgid "Removing user: \"{}\""
-msgstr ""
+msgstr "Removendo usuário: \"{}\""
 
 #: common/djangoapps/student/management/commands/manage_user.py
 msgid "Created new user: \"{}\""
-msgstr ""
+msgstr "Novo usuário criado: \"{}\""
 
 #: common/djangoapps/student/management/commands/manage_user.py
 msgid "Found existing user: \"{}\""
-msgstr ""
+msgstr "Usuário existente encontrado: \"{}\""
 
 #: common/djangoapps/student/management/commands/manage_user.py
 msgid "Setting unusable password for user \"{}\""
@@ -701,21 +480,24 @@ msgstr ""
 
 #: common/djangoapps/student/management/commands/manage_user.py
 msgid "Created new profile for user: \"{}\""
-msgstr ""
+msgstr "Novo perfil criado para o usuário: \"{}\""
 
 #: common/djangoapps/student/management/commands/manage_user.py
 msgid "Could not find a group named \"{}\" - skipping."
-msgstr ""
+msgstr "Não foi possível encontrar um grupo chamado \"{}\" - ignorando."
 
 #: common/djangoapps/student/management/commands/manage_user.py
+#, python-brace-format
 msgid "Adding user \"{username}\" to groups {group_names}"
-msgstr ""
+msgstr "Adicionando usuário \"{username}\" aos grupos {group_names}"
 
 #: common/djangoapps/student/management/commands/manage_user.py
+#, python-brace-format
 msgid "Removing user \"{username}\" from groups {group_names}"
-msgstr ""
+msgstr "Removendo usuário \"{username}\" dos grupos {group_names}"
 
 #: common/djangoapps/student/middleware.py
+#, python-brace-format
 msgid ""
 "Your account has been disabled. If you believe this was done in error, "
 "please contact us at {support_email}"
@@ -779,14 +561,17 @@ msgid "Other education"
 msgstr ""
 
 #: common/djangoapps/student/models.py
+#, python-brace-format
 msgid "{platform_name} Honor Code Certificate for {course_name}"
 msgstr "Certificado de Código de Honra do {platform_name} para {course_name}"
 
 #: common/djangoapps/student/models.py
+#, python-brace-format
 msgid "{platform_name} Verified Certificate for {course_name}"
 msgstr "{platform_name} Certificado Verificado para {course_name}"
 
 #: common/djangoapps/student/models.py
+#, python-brace-format
 msgid "{platform_name} Professional Certificate for {course_name}"
 msgstr "{platform_name} Certificado Profissional para {course_name}"
 
@@ -809,6 +594,7 @@ msgstr ""
 "de acompanhamento não serão enviados para o LinkedIn."
 
 #: common/djangoapps/student/models.py
+#, python-brace-format
 msgid "{platform_name} Certificate for {course_name}"
 msgstr "{platform_name} Certificado para {course_name}"
 
@@ -846,19 +632,21 @@ msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Name of this user attribute."
-msgstr ""
+msgstr "Nome do atributo desse usuário."
 
 #: common/djangoapps/student/models.py
 msgid "Value of this user attribute."
-msgstr ""
+msgstr "Valor do atributo desse usuário. "
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid "The course you are looking for does not start until {date}."
 msgstr "O curso que você está procurando não começara até {date}."
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid "The course you are looking for is closed for enrollment as of {date}."
-msgstr ""
+msgstr "O curso que você está procurando está trancado desde {date}."
 
 #: common/djangoapps/student/views.py
 msgid "Course id not specified"
@@ -889,6 +677,7 @@ msgid "Enrollment action is invalid"
 msgstr "Ação de inscrição inválida"
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid ""
 "You've successfully logged into your {provider_name} account, but this "
 "account isn't linked with an {platform_name} account yet."
@@ -897,6 +686,7 @@ msgstr ""
 "está conectada com uma conta {platform_name} ainda."
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid ""
 "Use your {platform_name} username and password to log into {platform_name} "
 "below, and then link your {platform_name} account with {provider_name} from "
@@ -907,6 +697,7 @@ msgstr ""
 "partir de seu painel de controle."
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid ""
 "If you don't have an {platform_name} account yet, click "
 "<strong>Register</strong> at the top of the page."
@@ -977,10 +768,12 @@ msgid "Unexpected account status"
 msgstr "Status da conta inesperado"
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid "An account with the Public Username '{username}' already exists."
 msgstr "Já existe uma conta com o nome de usuário público '{username}'."
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid "An account with the Email '{email}' already exists."
 msgstr "Já existe uma conta com o e-mail '{email}'."
 
@@ -1003,6 +796,7 @@ msgstr ""
 "Erro desconhecido. Por favor, envie-nos um e-mail relatando o que ocorreu."
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid ""
 "You are re-using a password that you have used recently. You must have {num}"
 " distinct password before reusing a previous password."
@@ -1018,6 +812,7 @@ msgstr[1] ""
 "utilizada."
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid ""
 "You are resetting passwords too frequently. Due to security policies, {num} "
 "day must elapse between password resets."
@@ -1467,19 +1262,38 @@ msgctxt "month name"
 msgid "December"
 msgstr "Dezembro"
 
+#: common/djangoapps/util/enterprise_helpers.py
+#, python-brace-format
+msgid ""
+"I agree to allow {platform_name} to share data about my enrollment, "
+"completion and performance in all {platform_name} courses and programs where"
+" my enrollment is sponsored by {ec_name}."
+msgstr ""
+
+#: common/djangoapps/util/enterprise_helpers.py
+#, python-brace-format
+msgid ""
+"To link your account with {ec_name}, you are required to consent to data "
+"sharing."
+msgstr ""
+
 #: common/djangoapps/util/file.py
+#, python-brace-format
 msgid "The file must end with the extension '{file_types}'."
 msgid_plural ""
 "The file must end with one of the following extensions: '{file_types}'."
 msgstr[0] ""
-"O arquivo deve terminar com uma das seguintes extensões: '{'file_types'}'"
+"O arquivo deve terminar com uma das seguintes extensões: '{file_types}'"
 msgstr[1] ""
+"O arquivo deve terminar com uma das seguintes extensões: '{file_types}'"
 
 #: common/djangoapps/util/file.py
+#, python-brace-format
 msgid "Maximum upload file size is {file_size} bytes."
 msgstr "O tamanho máximo de arquivo para envio é {file_size} bytes. "
 
 #: common/djangoapps/util/milestones_helpers.py
+#, python-brace-format
 msgid "Course {course_id} requires {prerequisite_course_id}"
 msgstr "O curso {course_id} necessita {prerequisite_course_id}"
 
@@ -1488,42 +1302,52 @@ msgid "System defined milestone"
 msgstr "Marcação definida pelo sistema"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "Invalid Length ({0})"
 msgstr "Comprimento inválido ({0})"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "must be {0} characters or more"
 msgstr "precisa ter {0} caracteres ou mais"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "must be {0} characters or fewer"
-msgstr ""
+msgstr "Deve ser {0} caracteres ou menos"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "Must be more complex ({0})"
 msgstr "precisa ser mais difícil ({0})"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "must contain {0} or more uppercase characters"
 msgstr "precisa conter {0} ou mais caracteres maiúsculos"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "must contain {0} or more lowercase characters"
 msgstr "precisa conter {0} ou mais caracteres em minúscula"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "must contain {0} or more digits"
 msgstr "precisa conter {0} ou mais dígitos"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "must contain {0} or more punctuation characters"
 msgstr "precisa conter {0} ou mais caracteres de pontuação"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "must contain {0} or more non ascii characters"
 msgstr "precisa conter {0} ou mais caracteres não ascii"
 
 #: common/djangoapps/util/password_policy_validators.py
+#, python-brace-format
 msgid "must contain {0} or more unique words"
 msgstr "precisa conter {0} ou mais palavras únicas"
 
@@ -1561,6 +1385,15 @@ msgid ""
 msgstr ""
 
 #: common/djangoapps/xblock_django/models.py
+msgid "Space-separated list of XBlocks which should not render."
+msgstr "Lista separada por espaço de XBlocks, os quais não devem transmitir."
+
+#: common/djangoapps/xblock_django/models.py
+msgid ""
+"Space-separated list of XBlock types whose creation to disable in Studio."
+msgstr ""
+
+#: common/djangoapps/xblock_django/models.py
 msgid "show deprecation messaging in Studio"
 msgstr ""
 
@@ -1574,7 +1407,7 @@ msgstr ""
 
 #: common/djangoapps/xblock_django/models.py
 msgid "Unsupported"
-msgstr ""
+msgstr "Não suportado"
 
 #: common/lib/capa/capa/capa_problem.py
 msgid "Cannot rescore problems with possible file submissions"
@@ -1619,30 +1452,31 @@ msgstr "processando"
 #. question
 #: common/lib/capa/capa/inputtypes.py
 msgid "This answer is correct."
-msgstr ""
+msgstr "Esta resposta está correta."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "This answer is incorrect."
-msgstr ""
+msgstr "Esta resposta está incorreta."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "This answer is partially correct."
-msgstr ""
+msgstr "Esta resposta está parcialmente correta."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "This answer is being processed."
-msgstr ""
+msgstr "Esta resposta está sendo processada."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Not yet answered."
 msgstr ""
 
-#: wiki/forms.py
+#: common/lib/capa/capa/inputtypes.py wiki/forms.py
 msgid "Select an option"
 msgstr "Selecionar uma opção"
 
 #. Translators: 'ChoiceGroup' is an input type and should not be translated.
 #: common/lib/capa/capa/inputtypes.py
+#, python-brace-format
 msgid "ChoiceGroup: unexpected tag {tag_name}"
 msgstr "GrupoDeEscolha: marcação inesperada {tag_name}"
 
@@ -1653,6 +1487,7 @@ msgstr "Resposta recebida."
 #. Translators: '<choice>' and '<compoundhint>' are tag names and should not
 #. be translated.
 #: common/lib/capa/capa/inputtypes.py
+#, python-brace-format
 msgid "Expected a <choice> or <compoundhint> tag; got {given_tag} instead"
 msgstr ""
 "Era esperada a marcação <choice> ou <compoundhint>, mas {given_tag} foi "
@@ -1675,8 +1510,9 @@ msgstr ""
 " será substituída pelo parecer do avaliador."
 
 #: common/lib/capa/capa/inputtypes.py
+#, python-brace-format
 msgid "{programming_language} editor"
-msgstr ""
+msgstr "Editor de {programming_language}"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Press ESC then TAB or click outside of the code editor to exit"
@@ -1691,6 +1527,7 @@ msgstr ""
 "parecer correspondente."
 
 #: common/lib/capa/capa/inputtypes.py
+#, python-brace-format
 msgid "No response from Xqueue within {xqueue_timeout} seconds. Aborted."
 msgstr ""
 "Sem resposta do Xqueue por {xqueue_timeout} segundos. Processo interrompido."
@@ -1708,6 +1545,7 @@ msgid "No formula specified."
 msgstr "Sem fórmula especificada."
 
 #: common/lib/capa/capa/inputtypes.py
+#, python-brace-format
 msgid "Couldn't parse formula: {error_msg}"
 msgstr "Não foi possível analisar a fórmula: {error_msg}"
 
@@ -1720,16 +1558,19 @@ msgid "Sorry, couldn't parse formula"
 msgstr "Desculpe, não foi possível analisar a fórmula"
 
 #: common/lib/capa/capa/inputtypes.py
+#, python-brace-format
 msgid "{input_type}: unexpected tag {tag_name}"
 msgstr "{input_type}: marcação inesperada {tag_name}"
 
 #. Translators: a "tag" is an XML element, such as "<b>" in HTML
 #: common/lib/capa/capa/inputtypes.py
+#, python-brace-format
 msgid "Expected a {expected_tag} tag; got {given_tag} instead"
 msgstr "Era esperada a marcação {expected_tag}, mas {given_tag} foi obtida."
 
 #. Translators: index here could be 1,2,3 and so on
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Question {index}"
 msgstr ""
 
@@ -1743,9 +1584,10 @@ msgstr ""
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Answer"
-msgstr ""
+msgstr "Resposta"
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Error {err} in evaluating hint function {hintfn}."
 msgstr "Ocorreu um erro {err} ao avaliar a função de sugestão {hintfn}."
 
@@ -1754,6 +1596,7 @@ msgid "(Source code line unavailable)"
 msgstr "(A linha de código fonte não está disponível)"
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "See XML source line {sourcenum}."
 msgstr "Veja a linha do código fonte em XML {sourcenum}."
 
@@ -1804,20 +1647,24 @@ msgid "There was a problem with the staff answer to this problem."
 msgstr "Houve um problema com a resposta da equipe para este problema."
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Could not interpret '{student_answer}' as a number."
 msgstr "Não foi possível interpretar '{student_answer}' como um número."
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "You may not use variables ({bad_variables}) in numerical problems."
 msgstr ""
 "Não é permitido usar variáveis ​​({bad_variables}) em problemas numéricos."
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "factorial function evaluated outside its domain:'{student_answer}'"
 msgstr ""
 "a função fatorial foi avaliada fora do seu domínio: '{student_answer}'"
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Invalid math syntax: '{student_answer}'"
 msgstr "Sintaxe matemática inválida: '{student_answer}'"
 
@@ -1877,6 +1724,7 @@ msgid "Custom Evaluated Script"
 msgstr "Roteiro avaliado customizado"
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "error getting student answer from {student_answers}"
 msgstr "erro ao recuperar resposta do aluno de {student_answers}"
 
@@ -1897,6 +1745,7 @@ msgstr "Entrada de Símbolos Matemáticos"
 #. Translators: 'SymbolicResponse' is a problem type and should not be
 #. translated.
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "An error occurred with SymbolicResponse. The error was: {error_msg}"
 msgstr "Ocorreu um erro em SymbolicResponse. O erro foi: {error_msg}"
 
@@ -1913,6 +1762,7 @@ msgid "Error: No grader has been set up for this problem."
 msgstr "Erro: nenhum avaliador foi definido para este problema."
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid ""
 "Unable to deliver your submission to grader (Reason: {error_msg}). Please "
 "try again later."
@@ -1936,10 +1786,12 @@ msgid "Math Expression Input"
 msgstr "Entrada de Expressão Matemática"
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Invalid input: {bad_input} not permitted in answer."
 msgstr "Entrada inválida: {bad_input} não é permitido em uma resposta."
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid ""
 "factorial function not permitted in answer for this problem. Provided answer"
 " was: {bad_input}"
@@ -1948,11 +1800,13 @@ msgstr ""
 "resposta dada foi: {bad_input}"
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Invalid input: Could not parse '{bad_input}' as a formula."
 msgstr ""
 "Entrada inválida: não foi possível analisar '{bad_input}' como uma fórmula."
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Invalid input: Could not parse '{bad_input}' as a formula"
 msgstr ""
 "Entrada inválida: não foi possível analisar '{bad_input}' como uma fórmula"
@@ -1964,6 +1818,7 @@ msgstr "Construtor Esquemático de Circuito "
 #. Translators: 'SchematicResponse' is a problem type and should not be
 #. translated.
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Error in evaluating SchematicResponse. The error was: {error_msg}"
 msgstr ""
 "Ocorreu um erro na avaliação da SchematicResponse. O erro foi: {error_msg}"
@@ -1973,11 +1828,13 @@ msgid "Image Mapped Input"
 msgstr "Entrada de imagem mapeada"
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "error grading {image_input_id} (input={user_input})"
 msgstr "erro na avaliação de {image_input_id} (input={user_input})"
 
 #. Translators: {sr_coords} are the coordinates of a rectangle
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Error in problem specification! Cannot parse rectangle in {sr_coords}"
 msgstr ""
 "Erro na especificação do problema. Não é possível analisar retângulo em "
@@ -1992,6 +1849,7 @@ msgid "Checkboxes With Text Input"
 msgstr "Caixas de seleção com entrada de texto"
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Answer not provided for {input_type}"
 msgstr "A resposta não foi fornecida para {input_type}"
 
@@ -2000,6 +1858,7 @@ msgid "The Staff answer could not be interpreted as a number."
 msgstr "A resposta da equipe não pôde ser interpretada como um número."
 
 #: common/lib/capa/capa/responsetypes.py
+#, python-brace-format
 msgid "Could not interpret '{given_answer}' as a number."
 msgstr "Não foi possível interpretar '{given_answer}' como um número."
 
@@ -2236,13 +2095,13 @@ msgstr ""
 "ou comprometida. Para obter uma chave para o seu curso, ou para relatar um "
 "problema, por favor contate moocsupport@mathworks.com"
 
-#: lms/templates/help_modal.html lms/templates/manage_user_standing.html
-#: lms/templates/register-shib.html
+#: common/lib/xmodule/xmodule/capa_base.py lms/templates/help_modal.html
+#: lms/templates/manage_user_standing.html lms/templates/register-shib.html
 #: lms/templates/peer_grading/peer_grading_problem.html
 #: lms/templates/survey/survey.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Submit"
-msgstr "Enviar"
+msgstr "Submeta"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Submitting"
@@ -2272,6 +2131,7 @@ msgstr ""
 #. This string is being passed to translation only for possible reordering of
 #. the placeholders.
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid ""
 "{previous_hints}<li><strong>{hint_number_prefix}</strong>{hint_text}</li>"
 msgstr ""
@@ -2280,27 +2140,32 @@ msgstr ""
 #. hints.
 #. This text is shown in bold before the accompanying hint text.
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "Hint ({hint_num} of {hints_count}): "
 msgstr "Sugestão ({hint_num} de {hints_count}):"
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid ""
 "Your answers were previously saved. Click '{button_name}' to grade them."
 msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "Incorrect ({progress} point)"
 msgid_plural "Incorrect ({progress} points)"
 msgstr[0] ""
 msgstr[1] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "Correct ({progress} point)"
 msgid_plural "Correct ({progress} points)"
 msgstr[0] ""
 msgstr[1] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "Partially correct ({progress} point)"
 msgid_plural "Partially correct ({progress} points)"
 msgstr[0] ""
@@ -2308,7 +2173,7 @@ msgstr[1] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Partially Correct"
-msgstr ""
+msgstr "Parcialmente correta"
 
 #. Translators: 'closed' means the problem's due date has passed. You may no
 #. longer attempt to solve the problem.
@@ -2321,10 +2186,12 @@ msgid "Problem must be reset before it can be submitted again."
 msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "You must wait at least {wait} seconds between submissions."
 msgstr "Você deve aguardar pelo menos {wait} segundos entre os envios."
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid ""
 "You must wait at least {wait_secs} between submissions. {remaining_secs} "
 "remaining."
@@ -2334,22 +2201,26 @@ msgstr ""
 
 #. Translators: {msg} will be replaced with a problem's error message.
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "Error: {msg}"
 msgstr "Erro: {msg}"
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "{num_hour} hour"
 msgid_plural "{num_hour} hours"
 msgstr[0] "{num_hour} hora"
 msgstr[1] "{num_hour} horas"
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "{num_minute} minute"
 msgid_plural "{num_minute} minutes"
 msgstr[0] "{num_minute} minuto"
 msgstr[1] "{num_minute} minutos"
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid "{num_second} second"
 msgid_plural "{num_second} seconds"
 msgstr[0] "{num_second} segundo"
@@ -2374,6 +2245,7 @@ msgid "Your answers have been saved."
 msgstr "As suas respostas foram salvas."
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
 msgid ""
 "Your answers have been saved but not graded. Click '{button_name}' to grade "
 "them."
@@ -2452,6 +2324,7 @@ msgid "Blocked Content Message"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/conditional_module.py
+#, python-brace-format
 msgid ""
 "The message that is shown to learners when not all conditions are met to "
 "show the content of this conditional module. Include {link} in the text of "
@@ -2460,6 +2333,7 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/conditional_module.py
+#, python-brace-format
 msgid "You must complete {link} before you can access this unit."
 msgstr ""
 
@@ -2470,13 +2344,6 @@ msgstr ""
 #: common/lib/xmodule/xmodule/conditional_module.py
 msgid "Configure list of sources"
 msgstr ""
-
-#. Translators: TBD stands for 'To Be Determined' and is used when a course
-#. does not yet have an announced start date.
-#: common/lib/xmodule/xmodule/course_metadata_utils.py
-#: lms/djangoapps/instructor/paidcourse_enrollment_report.py
-msgid "TBD"
-msgstr "A ser definida"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "LTI Passports"
@@ -2530,18 +2397,15 @@ msgstr ""
 " o Custo apresentado ao público ao invés deste."
 
 #: common/lib/xmodule/xmodule/course_module.py
-msgid "Course Advertised Start Date"
-msgstr "Data Anunciada de Início do Curso"
+msgid "Course Advertised Start"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
-"Enter the date you want to advertise as the course start date, if this date "
-"is different from the set start date. To advertise the set start date, enter"
-" null."
+"Enter the text that you want to use as the advertised starting time frame "
+"for the course, such as \"Winter 2018\". If you enter null for this value, "
+"the start date that you have set for this course is used."
 msgstr ""
-"Digite a data que você deseja anunciar como a data de início do curso se "
-"esta data for diferente da data de início configurada. Para anunciar a data "
-"de início configurada digite null."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Pre-Requisite Courses"
@@ -2852,9 +2716,10 @@ msgid ""
 "the page."
 msgstr ""
 
+#: common/lib/xmodule/xmodule/course_module.py
 #: lms/templates/courseware/info.html
 msgid "Course Handouts"
-msgstr "Apostilas do curso"
+msgstr "Apostilas do Curso"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2938,13 +2803,15 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "Course Banner Image"
-msgstr ""
+msgstr "Imagem do banner do curso"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
 "Edit the name of the banner image file. You can set the banner image on the "
 "Settings & Details page."
 msgstr ""
+"Edite o nome do arquivo de imagem do banner. Você pode configurar a imagem "
+"do banner na página de configurações e detalhes."
 
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "Course Video Thumbnail Image"
@@ -3243,6 +3110,7 @@ msgid "Teams Configuration"
 msgstr "Configurações de Equipes"
 
 #: common/lib/xmodule/xmodule/course_module.py
+#, python-brace-format
 msgid ""
 "Specify the maximum team size and topics for teams inside the provided set "
 "of curly braces. Make sure that you enclose all of the sets of topic values "
@@ -3360,11 +3228,11 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Instructor"
-msgstr ""
+msgstr "Instrutor do curso"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enter the details for Course Instructor"
-msgstr ""
+msgstr "Insira os detalhes para o Instrutor do curso."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Add Unsupported Problems and Tools"
@@ -3586,6 +3454,7 @@ msgstr ""
 #. Translators: {refresh_icon} placeholder is substituted to "↻" (without
 #. double quotes)
 #: common/lib/xmodule/xmodule/library_content_module.py
+#, python-brace-format
 msgid "{refresh_icon} Update now."
 msgstr "{refresh_icon} Atualize agora. "
 
@@ -3622,6 +3491,7 @@ msgid "Select another problem type."
 msgstr "Selecione outro tipo de problema."
 
 #: common/lib/xmodule/xmodule/library_content_module.py
+#, python-brace-format
 msgid "The specified library is configured to fetch {count} problem, "
 msgid_plural "The specified library is configured to fetch {count} problems, "
 msgstr[0] ""
@@ -3630,6 +3500,7 @@ msgstr[1] ""
 "A biblioteca especificada está configurada para buscar {count} problems, "
 
 #: common/lib/xmodule/xmodule/library_content_module.py
+#, python-brace-format
 msgid "but there is only {actual} matching problem."
 msgid_plural "but there are only {actual} matching problems."
 msgstr[0] "mas apenas {actual} problema foi encontrado."
@@ -3675,6 +3546,7 @@ msgid "LTI ID"
 msgstr "ID do LTI"
 
 #: common/lib/xmodule/xmodule/lti_module.py
+#, python-brace-format
 msgid ""
 "Enter the LTI ID for the external LTI provider.  This value must be the same"
 " LTI ID that you entered in the LTI Passports setting on the Advanced "
@@ -3691,6 +3563,7 @@ msgid "LTI URL"
 msgstr "URL do LTI"
 
 #: common/lib/xmodule/xmodule/lti_module.py
+#, python-brace-format
 msgid ""
 "Enter the URL of the external tool that this component launches. This "
 "setting is only used when Hide External Tool is set to False.<br />See "
@@ -3707,6 +3580,7 @@ msgid "Custom Parameters"
 msgstr "Parâmetros de customização"
 
 #: common/lib/xmodule/xmodule/lti_module.py
+#, python-brace-format
 msgid ""
 "Add the key/value pair for any custom parameters, such as the page your "
 "e-book should open to or the background color for this component.<br />See "
@@ -3844,6 +3718,7 @@ msgstr ""
 "notas fora do prazo."
 
 #: common/lib/xmodule/xmodule/lti_module.py
+#, python-brace-format
 msgid ""
 "Could not parse custom parameter: {custom_parameter}. Should be \"x=y\" "
 "string."
@@ -3852,6 +3727,7 @@ msgstr ""
 "Deve ser uma sequência \"x=y\"."
 
 #: common/lib/xmodule/xmodule/lti_module.py
+#, python-brace-format
 msgid ""
 "Could not parse LTI passport: {lti_passport}. Should be \"id:key:secret\" "
 "string."
@@ -4055,6 +3931,7 @@ msgid "Video Pre-Roll"
 msgstr "Vídeos Pre-Execução"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
+#, python-brace-format
 msgid ""
 "Identify a video, 5-10 seconds in length, to play before course videos. "
 "Enter the video ID from the Video Uploads page and one or more transcript "
@@ -4199,9 +4076,10 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid "subsection"
-msgstr ""
+msgstr "subseção"
 
 #: common/lib/xmodule/xmodule/seq_module.py
+#, python-brace-format
 msgid ""
 "Because the due date has passed, this {subsection_format} is hidden from the"
 " learner."
@@ -4214,6 +4092,7 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/split_test_module.py
+#, python-brace-format
 msgid "Group ID {group_id}"
 msgstr "Identificação de Grupo {group_id}"
 
@@ -4262,6 +4141,7 @@ msgstr ""
 "Os estudantes de determinado group_id poderão ver quais módulos filhos"
 
 #: common/lib/xmodule/xmodule/split_test_module.py
+#, python-brace-format
 msgid "{group_name} (inactive)"
 msgstr "{group_name} (inactive)"
 
@@ -4319,7 +4199,7 @@ msgstr "Discussão Externa"
 
 #: common/lib/xmodule/xmodule/tabs.py lms/djangoapps/courseware/tabs.py
 msgid "Home"
-msgstr ""
+msgstr "Página inicial"
 
 #: common/lib/xmodule/xmodule/textannotation_module.py
 msgid "Text Annotation"
@@ -4351,6 +4231,7 @@ msgstr ""
 "markname;urltomark;baseline,markname2;urltomark2;baseline2"
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
+#, python-brace-format
 msgid ""
 "Can't receive transcripts from Youtube for {youtube_id}. Status code: "
 "{status_code}."
@@ -4363,6 +4244,7 @@ msgid "We support only SubRip (*.srt) transcripts format."
 msgstr "Somente são suportadas transcrições no formato SubRip (*.srt)."
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
+#, python-brace-format
 msgid ""
 "Something wrong with SubRip transcripts file during parsing. Inner message "
 "is {error_message}"
@@ -4376,6 +4258,7 @@ msgstr ""
 "Ocorreu um erro com o arquivo SubRip de transcrição durante a análise."
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
+#, python-brace-format
 msgid "{exception_message}: Can't find uploaded transcripts: {user_filename}"
 msgstr ""
 "{exception_message}: Não foi possível encontrar as transcrições enviadas: "
@@ -4390,6 +4273,7 @@ msgid "Basic"
 msgstr "Básico"
 
 #: common/lib/xmodule/xmodule/video_module/video_module.py
+#, python-brace-format
 msgid "There is no transcript file associated with the {lang} language."
 msgid_plural ""
 "There are no transcript files associated with the {lang} languages."
@@ -4718,6 +4602,7 @@ msgstr "URL do pôster"
 msgid "The label for this word cloud on the course page."
 msgstr ""
 
+#: common/lib/xmodule/xmodule/word_cloud_module.py
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 #: lms/templates/peer_grading/peer_grading.html
@@ -4775,6 +4660,7 @@ msgid "Top num_top_words words for word cloud."
 msgstr "O máximo de palavras num_max_palavras para uma nuvem de palavras."
 
 #: lms/djangoapps/badges/events/course_complete.py
+#, python-brace-format
 msgid ""
 "Completed the course \"{course_name}\" ({course_mode}, {start_date} - "
 "{end_date})"
@@ -4783,6 +4669,7 @@ msgstr ""
 "{end_date})"
 
 #: lms/djangoapps/badges/events/course_complete.py
+#, python-brace-format
 msgid "Completed the course \"{course_name}\" ({course_mode})"
 msgstr "Concluído o curso \"{course_name}\" ({course_mode})"
 
@@ -4796,7 +4683,7 @@ msgstr "O arquivo de imagem do crachá deve ser menor que 250KB."
 
 #: lms/djangoapps/badges/models.py
 msgid "This value must be all lowercase."
-msgstr ""
+msgstr "Esse valor deve conter apenas em letras minúsculas."
 
 #: lms/djangoapps/badges/models.py
 msgid "The course mode for this badge image. For example, \"verified\" or \"honor\"."
@@ -4848,11 +4735,12 @@ msgstr ""
 
 #: lms/djangoapps/badges/models.py
 msgid "Please check the syntax of your entry."
-msgstr ""
+msgstr "Por favor, verifique a sitaxe da sua entrada."
 
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
 #: lms/djangoapps/branding/api.py
+#, python-brace-format
 msgid ""
 "© {org_name}.  All rights reserved except where noted.  EdX, Open edX and "
 "the edX and Open EdX logos are registered trademarks or trademarks of edX "
@@ -4872,6 +4760,11 @@ msgstr ""
 #: themes/red-theme/lms/templates/footer.html
 msgid "Powered by Open edX"
 msgstr "Desenvolvido por Open edX"
+
+#: lms/djangoapps/branding/api.py
+#, python-brace-format
+msgid "{platform_name} for Business"
+msgstr ""
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
 msgid "Blog"
@@ -4893,16 +4786,14 @@ msgid "Contact"
 msgstr "Contato"
 
 #: lms/djangoapps/branding/api.py
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
 msgid "Careers"
 msgstr "Carreiras"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/donate.html
 msgid "Donate"
 msgstr "Doe"
-
-#: lms/templates/static_templates/media-kit.html
-msgid "Media Kit"
-msgstr "Kit de mídia"
 
 #: lms/djangoapps/branding/api.py
 msgid "Terms of Service & Honor Code"
@@ -4928,6 +4819,11 @@ msgstr "Política de Assessibilidade"
 msgid "Sitemap"
 msgstr "Mapa do site"
 
+#: lms/djangoapps/branding/api.py
+#: lms/templates/static_templates/media-kit.html
+msgid "Media Kit"
+msgstr "Kit de mídia"
+
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a legal document users must agree to
 #. in order to register a new account.
@@ -4940,10 +4836,12 @@ msgid "Terms of Service"
 msgstr "Termos do Serviço"
 
 #: lms/djangoapps/branding/api.py
+#, python-brace-format
 msgid "Download the {platform_name} mobile app from the Apple App Store"
 msgstr "Baixar o aplicativo móvel {platform_name} em Apple App Store"
 
 #: lms/djangoapps/branding/api.py
+#, python-brace-format
 msgid "Download the {platform_name} mobile app from Google Play"
 msgstr "Baixar o aplicativo móvel {platform_name} em Google Play"
 
@@ -4958,6 +4856,7 @@ msgid ""
 msgstr ""
 
 #: lms/djangoapps/ccx/utils.py
+#, python-brace-format
 msgid "The course is full: the limit is {max_student_enrollments_allowed}"
 msgstr "O curso está cheio: o limite é {max_student_enrollments_allowed}"
 
@@ -5098,30 +4997,37 @@ msgid "user is not given."
 msgstr "O usuário não foi fornecido"
 
 #: lms/djangoapps/certificates/views/support.py
+#, python-brace-format
 msgid "user '{user}' does not exist"
 msgstr "O usuário {user} não existe"
 
 #: lms/djangoapps/certificates/views/support.py
+#, python-brace-format
 msgid "Course id '{course_id}' is not valid"
 msgstr "ID do curso '{course_id}' não é válido"
 
 #: lms/djangoapps/certificates/views/support.py
+#, python-brace-format
 msgid "The course does not exist against the given key '{course_key}'"
 msgstr "O curso não existe contra a chave dada '{course_key}'"
 
 #: lms/djangoapps/certificates/views/support.py
+#, python-brace-format
 msgid "User {username} does not exist"
 msgstr "O usuário {username} não existe."
 
 #: lms/djangoapps/certificates/views/support.py
+#, python-brace-format
 msgid "{course_key} is not a valid course key"
 msgstr "{course_key} não é um ID de curso válido."
 
 #: lms/djangoapps/certificates/views/support.py
+#, python-brace-format
 msgid "The course {course_key} does not exist"
 msgstr "O curso {course_key} não existe"
 
 #: lms/djangoapps/certificates/views/support.py
+#, python-brace-format
 msgid "User {username} is not enrolled in the course {course_key}"
 msgstr "O usuário {username} não está matriculado no curso {course_key}"
 
@@ -5131,6 +5037,7 @@ msgstr "Ocorreu um erro inesperado durante a geração de certificados."
 
 #. Translators:  This text describes the 'Honor' course certificate type.
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "An {cert_type} certificate signifies that a learner has agreed to abide by "
 "the honor code established by {platform_name} and has completed all of the "
@@ -5145,6 +5052,7 @@ msgstr ""
 #. verification offered by edX.  This type of verification is useful for
 #. professional education/certifications
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "A {cert_type} certificate signifies that a learner has agreed to abide by "
 "the honor code established by {platform_name} and has completed all of the "
@@ -5163,6 +5071,7 @@ msgstr ""
 #. courses related to each other in a meaningful way, such as a specific topic
 #. or theme, or even an organization
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "An {cert_type} certificate demonstrates a high level of achievement in a "
 "program of study, and includes verification of the student's identity."
@@ -5172,11 +5081,13 @@ msgstr ""
 
 #. Translators:  The format of the date includes the full name of the month
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "{month} {day}, {year}"
 msgstr "{month} {day}, {year}"
 
 #. Translators:  This text represents the verification of the certificate
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "This is a valid {platform_name} certificate for {user_name}, who "
 "participated in {partner_short_name} {course_number}"
@@ -5187,6 +5098,7 @@ msgstr ""
 #. Translators:  This text is bound to the HTML 'title' element of the page
 #. and appears in the browser title bar
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "{partner_short_name} {course_number} Certificate | {platform_name}"
 msgstr "{partner_short_name} {course_number} Certificado {platform_name}"
 
@@ -5195,6 +5107,7 @@ msgstr "{partner_short_name} {course_number} Certificado {platform_name}"
 #. screen.  The text describes the accomplishment represented by the
 #. certificate information displayed to the user
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "successfully completed, received a passing grade, and was awarded this "
 "{platform_name} {certificate_type} Certificate of Completion in "
@@ -5205,6 +5118,7 @@ msgstr ""
 #. Translators: This text describes the purpose (and therefore, value) of a
 #. course certificate
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "{platform_name} acknowledges achievements through certificates, which are "
 "awarded for course activities that {platform_name} students complete."
@@ -5242,6 +5156,7 @@ msgstr "Validação de Certificado"
 #. Translators: Accomplishments describe the awards/certifications obtained by
 #. students on this platform
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "About {platform_name} Accomplishments"
 msgstr "Sobre realizações {platform_name} "
 
@@ -5258,16 +5173,19 @@ msgid "Certificate ID Number"
 msgstr "Número de ID do certifcado"
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "About {platform_name} Certificates"
 msgstr "Sobre os Certificados da {platform_name}"
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "How {platform_name} Validates Student Certificates"
 msgstr "Como {platform_name} valida o certificado dos estudantes"
 
 #. Translators:  This text describes the validation mechanism for a
 #. certificate file (known as GPG security)
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "Certificates issued by {platform_name} are signed by a gpg key so that they "
 "can be validated independently by anyone with the {platform_name} public "
@@ -5287,38 +5205,46 @@ msgstr "Valide você mesmo este certificado."
 #. Translators:  This text describes (at a high level) the mission and charter
 #. the edX platform and organization
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "{platform_name} offers interactive online classes and MOOCs."
 msgstr "{platform_name} oferece aulas online interativas e MOOCs"
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "About {platform_name}"
 msgstr "Sobre {platform_name}"
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "Learn more about {platform_name}"
 msgstr "Saber mais sobre {platform_name}"
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "Learn with {platform_name}"
 msgstr "Aprender com {platform_name}"
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "Work at {platform_name}"
 msgstr "Trabalhe na {platform_name}"
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "Contact {platform_name}"
 msgstr "Entrar em Contato com {platform_name}"
 
 #. Translators:  This text appears near the top of the certficate and
 #. describes the guarantee provided by edX
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "{platform_name} acknowledges the following student accomplishment"
 msgstr ""
 "Reconhecimento da {platform_name} para a realização dos seguintes estudantes"
 
 #. Translators:  This text represents the description of course
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "a course of study offered by {partner_short_name}, an online learning "
 "initiative of {partner_long_name}."
@@ -5328,25 +5254,30 @@ msgstr ""
 
 #. Translators:  This text represents the description of course
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "a course of study offered by {partner_short_name}."
 msgstr "um plano de estudo oferecido por {partner_short_name}"
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "I completed the {course_title} course on {platform_name}."
 msgstr "Eu concluí o curso {course_title} no {platform_name}."
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid ""
 "I completed a course at {platform_name}. Take a look at my certificate."
 msgstr "Eu concluí um curso em {platform_name}. Veja meu certificado."
 
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "More Information About {user_name}'s Certificate:"
 msgstr "Mais informações sobre o certificado de {user_name}"
 
 #. Translators: This line is displayed to a user who has completed a course
 #. and achieved a certification
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "{fullname}, you earned a certificate!"
 msgstr "{fullname}, você recebeu um certificado!"
 
@@ -5363,6 +5294,7 @@ msgstr ""
 #. Translators: This line leads the reader to understand more about the
 #. certificate that a student has been awarded
 #: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
 msgid "More about {fullname}'s accomplishment"
 msgstr "Mais sobre as realizações de {fullname} "
 
@@ -5411,10 +5343,12 @@ msgid "problems"
 msgstr "problemas"
 
 #: lms/djangoapps/commerce/api/v1/serializers.py
+#, python-brace-format
 msgid "{course_id} is not a valid course key."
 msgstr "{course_id} não é um ID de curso válido."
 
 #: lms/djangoapps/commerce/api/v1/serializers.py
+#, python-brace-format
 msgid "Course {course_id} does not exist."
 msgstr "O curso {course_id} não existe."
 
@@ -5449,6 +5383,7 @@ msgid "Path to order receipt page."
 msgstr ""
 
 #: lms/djangoapps/commerce/signals.py
+#, python-brace-format
 msgid ""
 "A refund request has been initiated for {username} ({email}). To process "
 "this request, please visit the link(s) below."
@@ -5494,6 +5429,7 @@ msgid "Please wait a few minutes and then try again."
 msgstr "Por favor, aguarde alguns minutos e tente novamente."
 
 #: lms/djangoapps/commerce/views.py
+#, python-brace-format
 msgid "For help, contact {payment_support_link}."
 msgstr "Para ajuda, entre em contato com {payment_support_link}."
 
@@ -5502,6 +5438,7 @@ msgid "An error occurred while creating your receipt."
 msgstr "Ocorreu um erro durante a criação do seu recibo."
 
 #: lms/djangoapps/commerce/views.py
+#, python-brace-format
 msgid ""
 "If your course does not appear on your dashboard, contact "
 "{payment_support_link}."
@@ -5517,6 +5454,7 @@ msgstr "Wiki"
 #. Translators: this string includes wiki markup.  Leave the ** and the _
 #. alone.
 #: lms/djangoapps/course_wiki/views.py
+#, python-brace-format
 msgid "This is the wiki for **{organization}**'s _{course_name}_."
 msgstr "Esta é a wiki para _{course_name}_ de **{organization}**."
 
@@ -5525,6 +5463,7 @@ msgid "Course page automatically created."
 msgstr "Página do curso criada automaticamente."
 
 #: lms/djangoapps/course_wiki/views.py
+#, python-brace-format
 msgid "Welcome to the {platform_name} Wiki"
 msgstr "Bem-vindo à Wiki {platform_name}"
 
@@ -5558,10 +5497,12 @@ msgstr "Você não tem acesso a este curso via dispositivos móveis"
 #. and if today were December 5th, 2020, 'relative' would be "1
 #. month".
 #: lms/djangoapps/courseware/date_summary.py
+#, python-brace-format
 msgid "{relative} ago - {absolute}"
 msgstr ""
 
 #: lms/djangoapps/courseware/date_summary.py
+#, python-brace-format
 msgid "in {relative} - {absolute}"
 msgstr ""
 
@@ -5582,7 +5523,7 @@ msgstr ""
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "After this date, course content will be archived."
-msgstr ""
+msgstr "Após essa data, o conteúdo do curso será arquivado."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid ""
@@ -5640,6 +5581,7 @@ msgstr ""
 "qualificar para obter um Certificado."
 
 #: lms/djangoapps/courseware/masquerade.py
+#, python-brace-format
 msgid ""
 "There is no user with the username or email address {user_name} enrolled in "
 "this course."
@@ -5684,6 +5626,7 @@ msgstr "Livros didáticos"
 #. "$500.00"
 #: lms/djangoapps/courseware/views/views.py
 #: lms/templates/shoppingcart/shopping_cart.html
+#, python-brace-format
 msgid "{currency_symbol}{price}"
 msgstr "{currency_symbol}{price}"
 
@@ -5713,28 +5656,34 @@ msgstr ""
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your certificate is available"
-msgstr ""
+msgstr "Seu certificado está disponível"
 
 #: lms/djangoapps/courseware/views/views.py
 msgid ""
 "You can keep working for a higher grade, or request your certificate now."
 msgstr ""
+"Você pode continuar suas atividades para obter um nota mais alta ou "
+"solicitar seu certificado agora."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "We're working on it..."
-msgstr ""
+msgstr "Estamos trabalhando nisso..."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid ""
 "We're creating your certificate. You can keep working in your courses and a "
 "link to it will appear here and on your Dashboard when it is ready."
 msgstr ""
+"Estamos criando seu certificado. Você pode manter suas atividades nos seus "
+"cursos. Quando o certificado estiver pronto, um link para ele aparecerá aqui"
+" e no seu painel de controle."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Certificate unavailable"
-msgstr ""
+msgstr "Certificado indisponível"
 
 #: lms/djangoapps/courseware/views/views.py
+#, python-brace-format
 msgid ""
 "You have not received a certificate because you do not have a current "
 "{platform_name} verified identity."
@@ -5742,17 +5691,19 @@ msgstr ""
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Congratulations, you qualified for a certificate!"
-msgstr ""
+msgstr "Parabéns! Você está qualificado para um certificado!"
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Invalid location."
 msgstr "Localização inválida."
 
 #: lms/djangoapps/courseware/views/views.py
+#, python-brace-format
 msgid "User {username} has never accessed problem {location}"
 msgstr "O usuário {username} nunca acessou o problema {location}"
 
 #: lms/djangoapps/courseware/views/views.py
+#, python-brace-format
 msgid "You must be signed in to {platform_name} to create a certificate."
 msgstr ""
 "Você deve estar atutenticado na plataforma {platform_name} para criar um "
@@ -5775,6 +5726,7 @@ msgid "Certificate is being created."
 msgstr "O certificado está sendo criado."
 
 #: lms/djangoapps/courseware/views/views.py
+#, python-brace-format
 msgid ""
 "{platform_name} now offers financial assistance for learners who want to earn Verified Certificates but who may not be able to pay the Verified Certificate fee. Eligible learners may receive up to 90{percent_sign} off the Verified Certificate fee for a course.\n"
 "To apply for financial assistance, enroll in the audit track for a course that offers Verified Certificates, and then complete this application. Note that you must complete a separate application for each course you take.\n"
@@ -5846,6 +5798,7 @@ msgstr ""
 " exceção das informações financeiras) para propósitos de marketing da edX"
 
 #: lms/djangoapps/dashboard/git_import.py
+#, python-brace-format
 msgid ""
 "Path {0} doesn't exist, please create it, or configure a different path with"
 " GIT_REPO_DIR"
@@ -5906,6 +5859,7 @@ msgstr ""
 #. not log them in for some reason - maybe they don't have permission, or
 #. their password was wrong)
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Failed in authenticating {username}, error {error}\n"
 msgstr "Houve uma falha na autenticação de {username}, erro {error}\n"
 
@@ -5914,6 +5868,7 @@ msgstr "Houve uma falha na autenticação de {username}, erro {error}\n"
 #. not log them in for some reason - maybe they don't have permission, or
 #. their password was wrong)
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Failed in authenticating {username}\n"
 msgstr "Houve uma falha na autenticação de {username}\n"
 
@@ -5940,10 +5895,12 @@ msgstr "Por favor, digite o nome completo"
 
 #. Translators: Domain is an email domain, such as "@gmail.com"
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Email address must end in {domain}"
 msgstr "O endereço de e-mail deve terminar em {domain}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Failed - email {email_addr} already exists as {external_id}"
 msgstr "O {email_addr} já existe como {external_id}"
 
@@ -5956,24 +5913,29 @@ msgid "email address required (not username)"
 msgstr "o endereço de e-mail é obrigatório (não o nome de usuário)"
 
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Oops, failed to create user {user}, {error}"
 msgstr "Oops, falha ao criar o usuário {user}, {error}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "User {user} created successfully!"
 msgstr "Usuário {user} criado com sucesso!"
 
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Cannot find user with email address {email_addr}"
 msgstr ""
 "Não foi possível encontrar o usuário com este endereço de e-mail "
 "{email_addr}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Cannot find user with username {username} - {error}"
 msgstr "Não foi possível encontrar o usuário com o nome {username} - {error}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Deleted user {username}"
 msgstr "Usuário {username} apagado"
 
@@ -6040,7 +6002,7 @@ msgstr "Diretório/ID"
 #. http://gitref.org/basic/#commit
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Git Commit"
-msgstr ""
+msgstr "Commit do git"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Last Change"
@@ -6055,6 +6017,7 @@ msgid "Information about all courses"
 msgstr "Informações sobre todos os cursos"
 
 #: lms/djangoapps/dashboard/sysadmin.py
+#, python-brace-format
 msgid "Error - cannot get course with ID {0}<br/><pre>{1}</pre>"
 msgstr ""
 "Erro - não foi possível carregar o curso com o ID {0}<br/><pre>{1}</pre>"
@@ -6130,7 +6093,7 @@ msgstr ""
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "Incorrect data received from notes api."
-msgstr ""
+msgstr "Os dados recebidos das notes api estão incorretos"
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "No endpoint was provided for EdxNotes."
@@ -6204,6 +6167,7 @@ msgid ""
 msgstr ""
 
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
+#, python-brace-format
 msgid "{platform_name} Staff"
 msgstr "{platform_name} Equipe"
 
@@ -6226,6 +6190,7 @@ msgid "Credit Card - Individual"
 msgstr "Cartão de Crédito - Individual"
 
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
+#, python-brace-format
 msgid "manually enrolled by username: {username}"
 msgstr "Inscritos manualmente pelo usuário: {username}"
 
@@ -6237,11 +6202,17 @@ msgstr "Inscrito Manualmente"
 msgid "Data Integrity Error"
 msgstr "Erro de Integridade de Dados"
 
+#: lms/djangoapps/instructor/paidcourse_enrollment_report.py
+msgid "TBD"
+msgstr "A ser definida"
+
 #: lms/djangoapps/instructor/services.py
+#, python-brace-format
 msgid "Proctored Exam Review: {review_status}"
 msgstr ""
 
 #: lms/djangoapps/instructor/services.py
+#, python-brace-format
 msgid ""
 "A proctored exam attempt for {exam_name} in {course_name} by username: "
 "{student_username} was reviewed as {review_status} by the proctored exam "
@@ -6269,6 +6240,7 @@ msgid "Could not read uploaded file."
 msgstr "O arquivo de upload não foi lido corretamente."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "Data in row #{row_num} must have exactly four columns: email, username, full"
 " name, and country"
@@ -6277,10 +6249,12 @@ msgstr ""
 " de usuário, nome completo, e país"
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "Invalid email {email_address}."
 msgstr "Email inválido {email_address}."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "An account with email {email} exists but the provided username {username} is"
 " different. Enrolling anyway with {email}."
@@ -6293,10 +6267,12 @@ msgid "File is not attached."
 msgstr "O arquivo não está anexado."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "Username {user} already exists."
 msgstr "Nome {user} já existe."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "Error '{error}' while sending email to new user (user email={email}). "
 "Without the email student would not be able to login. Please contact support"
@@ -6330,6 +6306,7 @@ msgstr ""
 "baixar, na tabela abaixo."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "Invoice number '{num}' does not exist."
 msgstr "A fatura número '{num}' não existe."
 
@@ -6338,6 +6315,7 @@ msgid "The sale associated with this invoice has already been invalidated."
 msgstr "A venda associada a esta fatura já foi invalidada."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "Invoice number {0} has been invalidated."
 msgstr "Fatura de número {0} foi invalidada."
 
@@ -6346,6 +6324,7 @@ msgid "This invoice is already active."
 msgstr "Esta fatura já está ativa."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "The registration codes for invoice {0} have been re-activated."
 msgstr "Os códigos de registro para o número da fatura {0} foram reativados."
 
@@ -6424,6 +6403,14 @@ msgstr "Endereço para correspondência"
 #: lms/djangoapps/instructor_task/tasks_helper.py
 msgid "Goals"
 msgstr "Objetivos"
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Enrollment Mode"
+msgstr "Modo de matrícula"
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Verification Status"
+msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Cohort"
@@ -6644,7 +6631,7 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "The ORA data report is being generated."
-msgstr ""
+msgstr "O relatório de dados da ORA está sendo gerado."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -6680,6 +6667,7 @@ msgid ""
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "Successfully changed due date for student {0} for {1} to {2}"
 msgstr ""
 "A alteração da data de entrega para o aluno {0} de {1} para {2} foi feita "
@@ -6693,6 +6681,7 @@ msgstr ""
 "data limite). "
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "Successfully reset due date for student {0} for {1} to {2}"
 msgstr ""
 "A redefinição da data de entrega para o aluno {0} de {1} para {2} foi "
@@ -6738,12 +6727,14 @@ msgstr ""
 "andamento na seção \"Tarefas pendentes\"."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "Student (username/email={user}) already in certificate exception list."
 msgstr ""
 "O estudante (username/email={user})  já está na lista de exceção do "
 "cerificado"
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "Certificate exception (user={user}) does not exist in certificate white "
 "list. Please refresh the page and try again."
@@ -6769,6 +6760,7 @@ msgstr ""
 "usuário e endereço de e-mail válidos."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "{user} does not exist in the LMS. Please check your spelling and retry."
 msgstr ""
@@ -6776,6 +6768,7 @@ msgstr ""
 "novamente."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "{user} is not enrolled in this course. Please check your spelling and retry."
 msgstr ""
@@ -6791,14 +6784,17 @@ msgid "Certificate generation started for white listed students."
 msgstr "Emissão de Certificado para os alunos de lista branca"
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "user \"{user}\" in row# {row}"
 msgstr "usuário \"{user}\" em linha# {row}"
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid "user \"{username}\" in row# {row}"
 msgstr "usuário \"{username}\" em linha# {row}"
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "Certificate of {user} has already been invalidated. Please check your "
 "spelling and retry."
@@ -6807,6 +6803,7 @@ msgstr ""
 "tente novamente."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "Certificate for student {user} is already invalid, kindly verify that "
 "certificate was generated for this student and then proceed."
@@ -6832,6 +6829,7 @@ msgstr ""
 " botão de \"Invalidar Certificado\""
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-brace-format
 msgid ""
 "The student {student} does not have certificate for the course {course}. "
 "Kindly verify student username/email and the selected course are correct and"
@@ -6846,18 +6844,22 @@ msgid "coupon id is None"
 msgstr "O id do cupom está vazio"
 
 #: lms/djangoapps/instructor/views/coupons.py
+#, python-brace-format
 msgid "coupon with the coupon id ({coupon_id}) DoesNotExist"
 msgstr "O cupom com o id ({coupon_id}) não existe"
 
 #: lms/djangoapps/instructor/views/coupons.py
+#, python-brace-format
 msgid "coupon with the coupon id ({coupon_id}) is already inactive"
 msgstr "O cupom com o id ({coupon_id}) já está inativo"
 
 #: lms/djangoapps/instructor/views/coupons.py
+#, python-brace-format
 msgid "coupon with the coupon id ({coupon_id}) updated successfully"
 msgstr "O cupom com o id ({coupon_id}) foi atualizado com successo"
 
 #: lms/djangoapps/instructor/views/coupons.py
+#, python-brace-format
 msgid ""
 "The code ({code}) that you have tried to define is already in use as a "
 "registration code"
@@ -6879,10 +6881,12 @@ msgid "Please enter the date in this format i-e month/day/year"
 msgstr "Por favor insira a data no formato: mês/dia/ano"
 
 #: lms/djangoapps/instructor/views/coupons.py
+#, python-brace-format
 msgid "coupon with the coupon code ({code}) added successfully"
 msgstr "O cupom com o código de cupom ({code}) foi adicionado com sucesso"
 
 #: lms/djangoapps/instructor/views/coupons.py
+#, python-brace-format
 msgid "coupon with the coupon code ({code}) already exists for this course"
 msgstr "O cupom com o código ({code}) já existe para este curso."
 
@@ -6891,6 +6895,7 @@ msgid "coupon id not found"
 msgstr "O id do cupom não foi encontrado"
 
 #: lms/djangoapps/instructor/views/coupons.py
+#, python-brace-format
 msgid "coupon with the coupon id ({coupon_id}) updated Successfully"
 msgstr "O cupom com o ID de cupom ({coupon_id}) foi atualizado com Sucesso"
 
@@ -6899,6 +6904,7 @@ msgid "Instructor"
 msgstr "Instrutor"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
+#, python-brace-format
 msgid ""
 "To gain insights into student enrollment and participation {link_start}visit"
 " {analytics_dashboard_name}, our new course analytics product{link_end}."
@@ -6926,6 +6932,7 @@ msgid "Please Enter the numeric value for the course price"
 msgstr "Digite o valor correspondente ao preço do curso"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
+#, python-brace-format
 msgid "CourseMode with the mode slug({mode_slug}) DoesNotExist"
 msgstr "Modo slug ({mode_slug}) não existe"
 
@@ -6938,6 +6945,7 @@ msgid "Course Info"
 msgstr "Informações sobre o curso"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
+#, python-brace-format
 msgid "Enrollment data is now available in {dashboard_link}."
 msgstr "Data da inscrição está disponível em {dashboard_link}."
 
@@ -6976,12 +6984,14 @@ msgid "0 sent"
 msgstr "0 enviado"
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
+#, python-brace-format
 msgid "{num_emails} sent"
 msgid_plural "{num_emails} sent"
 msgstr[0] "{num_emails} enviado"
 msgstr[1] "{num_emails} enviados"
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
+#, python-brace-format
 msgid "{num_emails} failed"
 msgid_plural "{num_emails} failed"
 msgstr[0] "{num_emails} falhou"
@@ -6996,6 +7006,7 @@ msgid "Incomplete"
 msgstr "Incompleto"
 
 #: lms/djangoapps/instructor/views/registration_codes.py
+#, python-brace-format
 msgid ""
 "The enrollment code ({code}) was not found for the {course_name} course."
 msgstr ""
@@ -7014,10 +7025,12 @@ msgid "The enrollment code has been restored."
 msgstr "O código de inscrição foi restaurado."
 
 #: lms/djangoapps/instructor/views/registration_codes.py
+#, python-brace-format
 msgid "The redemption does not exist against enrollment code ({code})."
 msgstr "Não existe recuperação para este este código de inscrição ({code})."
 
 #: lms/djangoapps/instructor/views/tools.py
+#, python-brace-format
 msgid "Could not find student matching identifier: {student_identifier}"
 msgstr ""
 "Identificador de correspondência de aluno não encontrado: "
@@ -7028,10 +7041,12 @@ msgid "Unable to parse date: "
 msgstr "Houve um problema ao analisar a data:"
 
 #: lms/djangoapps/instructor/views/tools.py
+#, python-brace-format
 msgid "Couldn't find module for url: {0}"
 msgstr "Não foi possível encontrar o módulo para o url: {0}"
 
 #: lms/djangoapps/instructor/views/tools.py
+#, python-brace-format
 msgid "Unit {0} has no due date to extend."
 msgstr "Unidade {0} não possui data limite para ser estendida."
 
@@ -7058,10 +7073,12 @@ msgid "Extended Due Date"
 msgstr "Data de entrega prorrogada"
 
 #: lms/djangoapps/instructor/views/tools.py
+#, python-brace-format
 msgid "Users with due date extensions for {0}"
 msgstr "Usuários com prorrogação de data de entrega para {0}"
 
 #: lms/djangoapps/instructor/views/tools.py
+#, python-brace-format
 msgid "Due date extensions for {0} {1} ({2})"
 msgstr "Prorrogação da data de entrega para {0} {1} ({2})"
 
@@ -7210,12 +7227,14 @@ msgid "No status information available"
 msgstr "Não há informações disponíveis sobre o status"
 
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "No task_output information found for instructor_task {0}"
 msgstr ""
 "Não foram encontradas informações do resultado da tarefa para a tarefa do "
 "instrutor {0}"
 
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "No parsable task_output information found for instructor_task {0}: {1}"
 msgstr ""
 "Não foram encontradas informações do resultado da tarefa para a tarefa do "
@@ -7230,6 +7249,7 @@ msgid "No message provided"
 msgstr "Nenhuma mensagem foi fornecida"
 
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Invalid task_output information found for instructor_task {0}: {1}"
 msgstr ""
 "As informações do resultado da tarefa são inválidas para a tarefa do "
@@ -7240,6 +7260,7 @@ msgid "No progress status information available"
 msgstr "Não há informações disponíveis sobre o status do progresso "
 
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "No parsable task_input information found for instructor_task {0}: {1}"
 msgstr ""
 "Não houve nenhuma entrada para tarefas encontradas para a tarefa do "
@@ -7248,12 +7269,14 @@ msgstr ""
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} and {succeeded} are counts.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Progress: {action} {succeeded} of {attempted} so far"
 msgstr "Progresso: {action} {succeeded} de {attempted} até o momento"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Unable to find submission to be {action} for student '{student}'"
 msgstr ""
 "Não foi possível encontrar nenhum envio a ser {action} para o estudante "
@@ -7262,18 +7285,21 @@ msgstr ""
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Problem failed to be {action} for student '{student}'"
 msgstr "Falha no problema a ser {action} para o aluno '{student}'"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Problem successfully {action} for student '{student}'"
 msgstr "O problema foi {action} com sucesso para o aluno '{student}'"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid ""
 "Unable to find entrance exam submission to be {action} for student "
 "'{student}'"
@@ -7284,46 +7310,54 @@ msgstr ""
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Entrance exam successfully {action} for student '{student}'"
 msgstr "O Exame de Admissão foi {action} com sucesso para o aluno '{student}'"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Unable to find any students with submissions to be {action}"
 msgstr "Não foi possível encontrar um aluno com envios {action}"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Problem failed to be {action} for any of {attempted} students"
 msgstr "Falha ao {action} problema para algum dos {attempted} alunos"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Problem successfully {action} for {attempted} students"
 msgstr "O problema foi {action} com sucesso para os {attempted} alunos"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {succeeded} and {attempted} are counts.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Problem {action} for {succeeded} of {attempted} students"
 msgstr "{action} problema para {succeeded} dos alunos {attempted} "
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Unable to find any recipients to be {action}"
 msgstr "Não foi possível encontrar nenhum destinatário para ser {action}"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Message failed to be {action} for any of {attempted} recipients "
 msgstr "Falha ao {action} mensagem para algum dos destinatários {attempted} "
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Message successfully {action} for {attempted} recipients"
 msgstr ""
 "A mensagem foi {action} corretamente para os destinatários {attempted} "
@@ -7331,24 +7365,28 @@ msgstr ""
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {succeeded} and {attempted} are counts.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Message {action} for {succeeded} of {attempted} recipients"
 msgstr "{action} mensagem para {succeeded} dos destinatários {attempted} "
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {succeeded} and {attempted} are counts.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid "Status: {action} {succeeded} of {attempted}"
 msgstr "Status: {action} {succeeded} de {attempted}"
 
 #. Translators: {skipped} is a count.  This message is appended to task
 #. progress status messages.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid " (skipping {skipped})"
 msgstr "(pulando {skipped})"
 
 #. Translators: {total} is a count.  This message is appended to task progress
 #. status messages.
 #: lms/djangoapps/instructor_task/views.py
+#, python-brace-format
 msgid " (out of {total})"
 msgstr "(de um total de {total})"
 
@@ -7439,6 +7477,7 @@ msgid "Order Payment Confirmation"
 msgstr "Confirmação do pagamento do pedido"
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid ""
 "Confirmation and Registration Codes for the following courses: "
 "{course_name_list}"
@@ -7496,10 +7535,12 @@ msgid "The price per item sold, including discounts."
 msgstr "O preço por item vendido, incluindo descontos."
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid "Registration for Course: {course_name}"
 msgstr "Registro para o curso: {course_name}"
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid ""
 "Please visit your {link_start}dashboard{link_end} to see your new course."
 msgstr ""
@@ -7507,10 +7548,12 @@ msgstr ""
 "seu novo curso."
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid "Enrollment codes for Course: {course_name}"
 msgstr "Códigos de inscrição para o curso : {course_name}"
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid "Mode {mode} does not exist for {course_id}"
 msgstr "O modo {mode} não existe para {course_id}"
 
@@ -7518,6 +7561,7 @@ msgstr "O modo {mode} não existe para {course_id}"
 #. particular mode (i.e. Honor Code Certificate, Verified Certificate, etc)
 #. by which a user could enroll in the given course.
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid "{mode_name} for course {course}"
 msgstr "{mode_name} para o curso {course}"
 
@@ -7530,6 +7574,7 @@ msgstr ""
 "dias após a data de início do curso."
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid ""
 "If you haven't verified your identity yet, please start the verification "
 "process ({verification_url})."
@@ -7546,6 +7591,7 @@ msgstr ""
 "dias após a data de início do curso."
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid ""
 "{refund_reminder_msg}To receive your refund, contact {billing_email}. Please"
 " include your order number in your email. Please do NOT include your credit "
@@ -7556,6 +7602,7 @@ msgstr ""
 "favor, NÃO inclua as informações do teu cartão de crédito."
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid ""
 "We greatly appreciate this generous contribution and your support of the "
 "{platform_name} mission.  This receipt was prepared to support charitable "
@@ -7568,18 +7615,22 @@ msgstr ""
 " serviços foram prestados em troca deste presente."
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid "Could not find a course with the ID '{course_id}'"
 msgstr "Não foi possível encontrar um curso com o ID '{course_id}'"
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid "Donation for {course}"
 msgstr "Doação para {course}"
 
 #: lms/djangoapps/shoppingcart/models.py
+#, python-brace-format
 msgid "Donation for {platform_name}"
 msgstr "Doação para {platform_name}"
 
 #: lms/djangoapps/shoppingcart/pdf.py
+#, python-brace-format
 msgid "Page {page_number} of {page_count}"
 msgstr "Página {page_number} de {page_count}"
 
@@ -7592,11 +7643,13 @@ msgid "Order"
 msgstr "Pedido"
 
 #: lms/djangoapps/shoppingcart/pdf.py
+#, python-brace-format
 msgid "{id_label} # {item_id}"
 msgstr "{id_label} # {item_id}"
 
 #: lms/djangoapps/shoppingcart/pdf.py
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
+#, python-brace-format
 msgid "Date: {date}"
 msgstr "Data: {date}"
 
@@ -7652,10 +7705,12 @@ msgid "TERMS AND CONDITIONS"
 msgstr "TERMOS E CONDIÇÕES"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
+#, python-brace-format
 msgid "The payment processor did not return a required parameter: {0}"
 msgstr "O processador de pagamentos não retornou o parâmetro exigido: {0}"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
+#, python-brace-format
 msgid "The payment processor returned a badly-typed value {0} for param {1}."
 msgstr ""
 "O processador de pagamento retornou um valor digitado incorretamente {0} "
@@ -7670,6 +7725,7 @@ msgstr ""
 "sistema."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
+#, python-brace-format
 msgid ""
 "The amount charged by the processor {0} {1} is different than the total cost"
 " of the order {2} {3}."
@@ -7678,6 +7734,7 @@ msgstr ""
 "pedido {2} {3}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
+#, python-brace-format
 msgid ""
 "Sorry! Our payment processor did not accept your payment. The decision they "
 "returned was {decision_text}, and the reason was {reason_text}. You were not"
@@ -7690,6 +7747,7 @@ msgstr ""
 "dúvidas sobre pagamentos, mande uma mensagem para {email}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
+#, python-brace-format
 msgid ""
 "Sorry! Our payment processor sent us back a payment confirmation that had "
 "inconsistent data!We apologize that we cannot verify whether the charge went"
@@ -7705,6 +7763,7 @@ msgstr ""
 "{email}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
+#, python-brace-format
 msgid ""
 "Sorry! Due to an error your purchase was charged for a different amount than"
 " the order total! The specific error message is: {error_message}. Your "
@@ -7717,6 +7776,7 @@ msgstr ""
 "problema! "
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
+#, python-brace-format
 msgid ""
 "Sorry! Our payment processor sent us back a corrupted message regarding your"
 " charge, so we are unable to validate that the message actually came from "
@@ -7897,6 +7957,7 @@ msgstr ""
 "forma de pagamento"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
+#, python-brace-format
 msgid ""
 "There is a problem with our CyberSource merchant configuration.  Please let "
 "us know at {0}"
@@ -8000,11 +8061,13 @@ msgid "UNKNOWN REASON"
 msgstr "CAUSA DESCONHECIDA"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid "The payment processor did not return a required parameter: {parameter}"
 msgstr ""
 "O processador de pagamentos não retornou o parâmetro necessário: {parameter}"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "The payment processor returned a badly-typed value {value} for parameter "
 "{parameter}."
@@ -8013,6 +8076,7 @@ msgstr ""
 "parâmetro {parameter}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "The amount charged by the processor {charged_amount} "
 "{charged_amount_currency} is different than the total cost of the order "
@@ -8023,6 +8087,7 @@ msgstr ""
 "{total_cost_currency}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "Sorry! Our payment processor did not accept your payment.  The decision they"
 " returned was {decision}, and the reason was {reason}.  You were not "
@@ -8035,6 +8100,7 @@ msgstr ""
 "sobre pagamentos mande uma mensagem para {email}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "Sorry! Our payment processor sent us back a payment confirmation that had "
 "inconsistent data! We apologize that we cannot verify whether the charge "
@@ -8049,6 +8115,7 @@ msgstr ""
 " dúvidas específicas sobre pagamentos para o endereço {email}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "Sorry! Due to an error your purchase was charged for a different amount than"
 " the order total! The specific error message is: {msg}. Your credit card has"
@@ -8061,6 +8128,7 @@ msgstr ""
 " endereço {email}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "Sorry! Our payment processor sent us back a corrupted message regarding your"
 " charge, so we are unable to validate that the message actually came from "
@@ -8078,6 +8146,7 @@ msgstr ""
 "pagamentos para {email}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "Sorry! Our payment processor sent us back a message saying that you have "
 "cancelled this transaction. The items in your shopping cart will exist for "
@@ -8090,6 +8159,7 @@ msgstr ""
 "perguntas a respeito do pagamento para o endereço {email}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "We're sorry, but this payment was declined. The items in your shopping cart "
 "have been saved. If you have any questions about this transaction, please "
@@ -8100,6 +8170,7 @@ msgstr ""
 "favor entre em contato conosco pelo endereço {email}."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "Sorry! Your payment could not be processed because an unexpected exception "
 "occurred. Please contact us at {email} for assistance."
@@ -8296,6 +8367,7 @@ msgstr ""
 "novamente com outra forma de pagamento."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
+#, python-brace-format
 msgid ""
 "There is a problem with the information in your CyberSource account.  Please"
 " let us know at {0}"
@@ -8526,10 +8598,12 @@ msgid "The course you requested does not exist."
 msgstr "O curso solicitado não existe."
 
 #: lms/djangoapps/shoppingcart/views.py
+#, python-brace-format
 msgid "The course {course_id} is already in your cart."
 msgstr "O curso {course_id} já está no seu carrinho."
 
 #: lms/djangoapps/shoppingcart/views.py
+#, python-brace-format
 msgid "You are already registered in course {course_id}."
 msgstr "Você já está inscrito no curso {course_id}."
 
@@ -8538,18 +8612,22 @@ msgid "Course added to cart."
 msgstr "Curso adicionado ao carrinho."
 
 #: lms/djangoapps/shoppingcart/views.py
+#, python-brace-format
 msgid "Discount does not exist against code '{code}'."
 msgstr "Não existe nenhum desconto para o código '{code}'."
 
 #: lms/djangoapps/shoppingcart/views.py
+#, python-brace-format
 msgid "This enrollment code ({enrollment_code}) is no longer valid."
 msgstr "Este código de inscrição ({enrollment_code}) não é mais válido."
 
 #: lms/djangoapps/shoppingcart/views.py
+#, python-brace-format
 msgid "This enrollment code ({enrollment_code}) is not valid."
 msgstr "Este código de inscrição ({enrollment_code}) não é válido."
 
 #: lms/djangoapps/shoppingcart/views.py
+#, python-brace-format
 msgid ""
 "Code '{registration_code}' is not valid for any course in the shopping cart."
 msgstr ""
@@ -8584,7 +8662,7 @@ msgstr "Nenhum endereço de e-mail fornecido."
 msgid "View and regenerate certificates."
 msgstr "Visualizar e recuperar certificados"
 
-#: lms/djangoapps/support/views/index.py
+#: lms/djangoapps/support/views/index.py lms/templates/support/refund.html
 msgid "Manual Refund"
 msgstr "Reembolso Manual"
 
@@ -8620,18 +8698,22 @@ msgid "User not found"
 msgstr "Usuário não encontrado"
 
 #: lms/djangoapps/support/views/refund.py
+#, python-brace-format
 msgid "Course {course_id} not past the refund window."
 msgstr "O curso {course_id} não passou pela janela de reembolso."
 
 #: lms/djangoapps/support/views/refund.py
+#, python-brace-format
 msgid "No order found for {user} in course {course_id}"
 msgstr "Nenhuma ordem foi encontrada para {user} no curso {course_id}"
 
 #: lms/djangoapps/support/views/refund.py
+#, python-brace-format
 msgid "Unenrolled {user} from {course_id}"
 msgstr "O {user} teve sua matrícula cancelada de {course_id}"
 
 #: lms/djangoapps/support/views/refund.py
+#, python-brace-format
 msgid "Refunded {cost} for order id {order_id}"
 msgstr "Reembolso de {cost} para o id da ordem {order_id}"
 
@@ -8645,6 +8727,7 @@ msgid "Teams"
 msgstr "Equipes"
 
 #: lms/djangoapps/teams/views.py
+#, python-brace-format
 msgid "The supplied course id {course_id} is not valid."
 msgstr "O ID de curso fornecido {course_id} não é válido."
 
@@ -8657,6 +8740,7 @@ msgid "text_search and order_by cannot be provided together"
 msgstr "busca_texto e pedido_de não podem ser fornecidos juntos"
 
 #: lms/djangoapps/teams/views.py
+#, python-brace-format
 msgid "The supplied topic id {topic_id} is not valid"
 msgstr "A identificação do tópico fornecido {topic_id} não é válida"
 
@@ -8669,10 +8753,12 @@ msgstr "Erro ao conectar-se a elasticsearch"
 #. 'name', indicating that the user wants to sort the
 #. list by lower case name.
 #: lms/djangoapps/teams/views.py
+#, python-brace-format
 msgid "The ordering {ordering} is not supported"
 msgstr "A ordem {ordering} não é suportada"
 
 #: lms/djangoapps/teams/views.py
+#, python-brace-format
 msgid "The supplied course_id {course_id} is not valid."
 msgstr "O ID do curso fornecido {course_id} não é válido."
 
@@ -8697,10 +8783,12 @@ msgid "This team is already full."
 msgstr "Esta equipa já está cheia."
 
 #: lms/djangoapps/teams/views.py
+#, python-brace-format
 msgid "The user {username} is already a member of a team in this course."
 msgstr "O usuário {username} já é um membro de uma equipe neste curso."
 
 #: lms/djangoapps/teams/views.py
+#, python-brace-format
 msgid ""
 "The user {username} is not enrolled in the course associated with this team."
 msgstr ""
@@ -8718,6 +8806,7 @@ msgid "The course key for the course we would like to be auto-cohorted."
 msgstr ""
 
 #: lms/djangoapps/verify_student/models.py
+#, python-brace-format
 msgid "Your {platform_name} verification has expired."
 msgstr "A sua verificação de {platform_name} expirou."
 
@@ -8830,6 +8919,7 @@ msgid "No profile found for user"
 msgstr "Nenhum perfil encontrado para o usuário"
 
 #: lms/djangoapps/verify_student/views.py
+#, python-brace-format
 msgid "Name must be at least {min_length} characters long."
 msgstr "Nome deve conter no mínimo {min_length} caracteres."
 
@@ -8849,6 +8939,7 @@ msgid "Facebook"
 msgstr "Facebook"
 
 #: lms/envs/common.py
+#, python-brace-format
 msgid "Like {platform_name} on Facebook"
 msgstr "Siga {platform_name} no Facebook"
 
@@ -8860,6 +8951,7 @@ msgid "Twitter"
 msgstr "Twitter"
 
 #: lms/envs/common.py
+#, python-brace-format
 msgid "Follow {platform_name} on Twitter"
 msgstr "Siga {platform_name} no Twitter"
 
@@ -8870,6 +8962,7 @@ msgid "LinkedIn"
 msgstr "LinkedIn"
 
 #: lms/envs/common.py
+#, python-brace-format
 msgid "Follow {platform_name} on LinkedIn"
 msgstr "Siga {platform_name} no LinkedIn"
 
@@ -8880,6 +8973,7 @@ msgid "Google+"
 msgstr "Google+"
 
 #: lms/envs/common.py
+#, python-brace-format
 msgid "Follow {platform_name} on Google+"
 msgstr "Siga {platform_name} no Google+"
 
@@ -8902,6 +8996,7 @@ msgid "Reddit"
 msgstr "Reddit"
 
 #: lms/envs/common.py
+#, python-brace-format
 msgid "Subscribe to the {platform_name} subreddit"
 msgstr "Assine {platform_name} no subreddit"
 
@@ -8924,6 +9019,7 @@ msgid "Youtube"
 msgstr "Youtube"
 
 #: lms/envs/common.py
+#, python-brace-format
 msgid "Subscribe to the {platform_name} YouTube channel"
 msgstr "Assine o canal  {platform_name} no Youtube"
 
@@ -8968,6 +9064,7 @@ msgid ""
 "'Cancel' button."
 msgstr ""
 
+#: lms/templates/oauth2_provider/authorize.html
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: lms/templates/modal/accessible_confirm.html
@@ -8976,8 +9073,9 @@ msgstr "Cancelar"
 
 #: lms/templates/oauth2_provider/authorize.html
 msgid "Allow"
-msgstr ""
+msgstr "Permitir"
 
+#: lms/templates/oauth2_provider/authorize.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/ccx/schedule.html
 msgid "Error"
@@ -9453,6 +9551,7 @@ msgid "Restoring to this revision will mark the article as deleted."
 msgstr "A restauração desta versão marcará o artigo como excluído."
 
 #: openedx/core/djangoapps/api_admin/admin.py
+#, python-brace-format
 msgid ""
 "Once you have approved this request, go to {catalog_admin_url} to set up a "
 "catalog for this user."
@@ -9460,7 +9559,7 @@ msgstr ""
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid "Company Address"
-msgstr ""
+msgstr "Endereço da Empresa"
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid "Describe what your application does."
@@ -9472,13 +9571,14 @@ msgstr ""
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid "The name of your company."
-msgstr ""
+msgstr "O nome da sua empresa."
 
 #: openedx/core/djangoapps/api_admin/forms.py
 msgid "The contact address of your company."
-msgstr ""
+msgstr "O endereço de contato da sua empresa."
 
 #: openedx/core/djangoapps/api_admin/forms.py
+#, python-brace-format
 msgid "The following users do not exist: {usernames}."
 msgstr ""
 
@@ -9487,13 +9587,13 @@ msgid ""
 "Comma-separated list of usernames which will be able to view this catalog."
 msgstr ""
 
-#: cms/templates/index.html
+#: openedx/core/djangoapps/api_admin/models.py cms/templates/index.html
 msgid "Denied"
 msgstr "Recusado"
 
 #: openedx/core/djangoapps/api_admin/models.py
 msgid "Approved"
-msgstr ""
+msgstr "Aprovada"
 
 #: openedx/core/djangoapps/api_admin/models.py
 msgid "Status of this API access request"
@@ -9508,6 +9608,7 @@ msgid "The reason this user wants to access the API."
 msgstr ""
 
 #: openedx/core/djangoapps/api_admin/models.py
+#, python-brace-format
 msgid "API access request from {company}"
 msgstr ""
 
@@ -9519,6 +9620,7 @@ msgstr ""
 #. of service.
 #. platform_name is the name of this Open edX installation.
 #: openedx/core/djangoapps/api_admin/widgets.py
+#, python-brace-format
 msgid ""
 "I, and my company, accept the {link_start}{platform_name} API Terms of "
 "Service{link_end}."
@@ -9537,14 +9639,17 @@ msgid "Parameter usage_id not provided."
 msgstr "O parâmetro usage_id não foi fornecido"
 
 #: openedx/core/djangoapps/bookmarks/views.py
+#, python-brace-format
 msgid "Invalid usage_id: {usage_id}."
 msgstr "Inválido usage_id: {usage_id}"
 
 #: openedx/core/djangoapps/bookmarks/views.py
+#, python-brace-format
 msgid "Block with usage_id: {usage_id} not found."
 msgstr "O bloqueio com usage_id: {usage_id} não foi encontrado"
 
 #: openedx/core/djangoapps/bookmarks/views.py
+#, python-brace-format
 msgid ""
 "You can create up to {max_num_bookmarks_per_course} bookmarks. You must "
 "remove some bookmarks before you can add new ones."
@@ -9553,6 +9658,7 @@ msgstr ""
 "remover alguns favoritos antes que você possa adicionar novos."
 
 #: openedx/core/djangoapps/bookmarks/views.py
+#, python-brace-format
 msgid "Bookmark with usage_id: {usage_id} does not exist."
 msgstr "O indicador com id_uso : {usage_id} não existe"
 
@@ -9570,6 +9676,12 @@ msgstr ""
 msgid ""
 "Specified in seconds. Enable caching of API responses by setting this to a "
 "value greater than 0."
+msgstr ""
+
+#: openedx/core/djangoapps/catalog/models.py
+msgid ""
+"Username created for Course Catalog Integration, e.g. "
+"lms_catalog_service_user."
 msgstr ""
 
 #: openedx/core/djangoapps/cors_csrf/models.py
@@ -9636,26 +9748,31 @@ msgid "Course Credit Eligibility"
 msgstr "Elegibilidade de crédito no curso"
 
 #: openedx/core/djangoapps/credit/email_utils.py
+#, python-brace-format
 msgid "You are eligible for credit from {providers_string}"
 msgstr ""
 
 #. Translators: The join of two university names (e.g., Harvard and MIT).
 #: openedx/core/djangoapps/credit/email_utils.py
+#, python-brace-format
 msgid "{first_provider} and {second_provider}"
-msgstr ""
+msgstr "{first_provider} e {second_provider}"
 
 #. Translators: The join of three or more university names. The first of these
 #. formatting strings
 #. represents a comma-separated list of names (e.g., MIT, Harvard, Dartmouth).
 #: openedx/core/djangoapps/credit/email_utils.py
+#, python-brace-format
 msgid "{first_providers}, and {last_provider}"
-msgstr ""
+msgstr "{first_providers}, e {last_provider}"
 
 #: openedx/core/djangoapps/credit/exceptions.py
+#, python-brace-format
 msgid "[{username}] is not eligible for credit for [{course_key}]."
 msgstr "[{username}] não é elegível para creditar no [{course_key}]."
 
 #: openedx/core/djangoapps/credit/exceptions.py
+#, python-brace-format
 msgid "[{course_key}] is not a valid course key."
 msgstr "[{course_key}] não é uma chave de curso válida."
 
@@ -9765,6 +9882,7 @@ msgid "Language code not provided"
 msgstr ""
 
 #: openedx/core/djangoapps/dark_lang/views.py
+#, python-brace-format
 msgid "Language set to language code: {preview_language_code}"
 msgstr ""
 
@@ -9773,6 +9891,7 @@ msgid "Language reset to the default language code"
 msgstr ""
 
 #: openedx/core/djangoapps/dark_lang/views.py
+#, python-brace-format
 msgid "Language reset to user's preference: {preview_language_code}"
 msgstr ""
 
@@ -9824,14 +9943,17 @@ msgid "The country to which this rule applies."
 msgstr "O país, o qual essas regras são aplicadas."
 
 #: openedx/core/djangoapps/embargo/models.py
+#, python-brace-format
 msgid "Whitelist {country} for {course}"
 msgstr "Lista branca {country} para {course}"
 
 #: openedx/core/djangoapps/embargo/models.py
+#, python-brace-format
 msgid "Blacklist {country} for {course}"
 msgstr "Lista negra {country} para {course}"
 
 #: openedx/core/djangoapps/external_auth/views.py
+#, python-brace-format
 msgid ""
 "You have already created an account using an external login like WebAuth or "
 "Shibboleth. Please contact {tech_support_email} for support."
@@ -9848,14 +9970,17 @@ msgid ""
 msgstr ""
 
 #: openedx/core/djangoapps/profile_images/images.py
+#, python-brace-format
 msgid "The file must be smaller than {image_max_size} in size."
 msgstr "O arquivo dever ter tamanho máximo de {image_max_size}."
 
 #: openedx/core/djangoapps/profile_images/images.py
+#, python-brace-format
 msgid "The file must be at least {image_min_size} in size."
 msgstr "O arquivo deve ter tamanho minimo de {image_min_size}."
 
 #: openedx/core/djangoapps/profile_images/images.py
+#, python-brace-format
 msgid "The file must be one of the following types: {valid_file_types}."
 msgstr ""
 "O arquivo deve estar em um dos seguintes formatos: {valid_file_types}."
@@ -9952,23 +10077,28 @@ msgid "Enable course home page improvements."
 msgstr "Ativar Melhorias na Home Page do curso"
 
 #: openedx/core/djangoapps/user_api/accounts/api.py
+#, python-brace-format
 msgid "The '{field_name}' field cannot be edited."
 msgstr "O campo '{field_name}' não pôde ser editado."
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
+#, python-brace-format
 msgid "Delete failed for user preference '{preference_key}'."
 msgstr "Falha ao deletar preferência do usuário '{preference_key}'."
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
+#, python-brace-format
 msgid "Preference '{preference_key}' cannot be set to an empty value."
 msgstr ""
 "A Preferência '{preference_key}' não pode ser definido com um valor vazio."
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
+#, python-brace-format
 msgid "Invalid user preference key '{preference_key}'."
 msgstr "Chave '{preference_key}' de preferência de usuário inválido."
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
+#, python-brace-format
 msgid ""
 "Value '{preference_value}' is not valid for user preference "
 "'{preference_key}'."
@@ -9977,16 +10107,19 @@ msgstr ""
 "'{preference_key}'."
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
+#, python-brace-format
 msgid ""
 "Value '{preference_value}' not valid for preference '{preference_key}': Not "
 "in timezone set."
 msgstr ""
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
+#, python-brace-format
 msgid "Value '{preference_value}' is not a valid time zone selection."
 msgstr ""
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
+#, python-brace-format
 msgid "Save failed for user preference '{key}' with value '{value}'."
 msgstr ""
 "Salvamento falhou para preferencia de usuário '{key}' com valor '{value}'."
@@ -10010,6 +10143,7 @@ msgstr "nomedousuario@dominio.com"
 #. Translators: These instructions appear on the password reset form,
 #. immediately below a field meant to hold the user's email address.
 #: openedx/core/djangoapps/user_api/views.py
+#, python-brace-format
 msgid "The email address you used to register with {platform_name}"
 msgstr "O endereço de e-mail que usou para registrar com {platform_name}"
 
@@ -10034,6 +10168,7 @@ msgstr "Lembrar-me"
 #. Translators: This message is shown to users who attempt to create a new
 #. account using an email address associated with an existing account.
 #: openedx/core/djangoapps/user_api/views.py
+#, python-brace-format
 msgid ""
 "It looks like {email_address} belongs to an existing account. Try again with"
 " a different email address."
@@ -10044,6 +10179,7 @@ msgstr ""
 #. Translators: This message is shown to users who attempt to create a new
 #. account using a username associated with an existing account.
 #: openedx/core/djangoapps/user_api/views.py
+#, python-brace-format
 msgid ""
 "It looks like {username} belongs to an existing account. Try again with a "
 "different username."
@@ -10082,6 +10218,7 @@ msgstr "Nome de Usuário Público"
 #. immediately
 #. below a field meant to hold the user's public username.
 #: openedx/core/djangoapps/user_api/views.py
+#, python-brace-format
 msgid ""
 "The name that will identify you in your courses - {bold_start}(cannot be "
 "changed later){bold_end}"
@@ -10118,6 +10255,7 @@ msgstr "Endereço para correspondência"
 #. Translators: This phrase appears above a field on the registration form
 #. meant to hold the user's reasons for registering with edX.
 #: openedx/core/djangoapps/user_api/views.py
+#, python-brace-format
 msgid "Tell us why you're interested in {platform_name}"
 msgstr "Diga-nos por que está interessado em {platform_name}"
 
@@ -10126,13 +10264,13 @@ msgstr "Diga-nos por que está interessado em {platform_name}"
 #. live.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "State/Province/Region"
-msgstr ""
+msgstr "Estado/Província/Região"
 
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the Company
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Company"
-msgstr ""
+msgstr "Empresa"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Please select your Country."
@@ -10157,6 +10295,7 @@ msgstr ""
 #. Translators: "Terms of service" is a legal document users must agree to
 #. in order to register a new account.
 #: openedx/core/djangoapps/user_api/views.py
+#, python-brace-format
 msgid "I agree to the {platform_name} {terms_of_service}"
 msgstr ""
 
@@ -10165,6 +10304,7 @@ msgstr ""
 #. Translators: "Terms of service" is a legal document users must agree to
 #. in order to register a new account.
 #: openedx/core/djangoapps/user_api/views.py
+#, python-brace-format
 msgid "You must agree to the {platform_name} {terms_of_service}"
 msgstr ""
 
@@ -10183,9 +10323,10 @@ msgstr "Este campo não é editável"
 #: openedx/core/lib/gating/api.py
 #, python-format
 msgid "%(min_score)s is not a valid grade percentage"
-msgstr ""
+msgstr "%(min_score)s não é uma percentagem válida para nota"
 
 #: openedx/core/lib/gating/api.py
+#, python-brace-format
 msgid "Gating milestone for {usage_key}"
 msgstr ""
 
@@ -10255,6 +10396,7 @@ msgid "(Unnamed)"
 msgstr "(anônimo)"
 
 #: cms/djangoapps/contentstore/git_export_utils.py
+#, python-brace-format
 msgid ""
 "GIT_REPO_EXPORT_DIR not set or path {0} doesn't exist, please create it, or "
 "configure a different path with GIT_REPO_EXPORT_DIR"
@@ -10333,6 +10475,7 @@ msgid "Deleted group"
 msgstr "Grupo excluído"
 
 #: cms/djangoapps/contentstore/views/assets.py
+#, python-brace-format
 msgid ""
 "File {filename} exceeds maximum size of {size_mb} MB. Please follow the "
 "instructions here to upload a file elsewhere and link to it instead: "
@@ -10351,22 +10494,25 @@ msgid "must have name of the certificate"
 msgstr "deve ter o nome do certificado"
 
 #: cms/djangoapps/contentstore/views/certificates.py
+#, python-brace-format
 msgid "Certificate dict {0} missing value key '{1}'"
 msgstr "Ordem do certificado {0} chave de valor ausente '{1}'"
 
 #: cms/djangoapps/contentstore/views/certificates.py
+#, python-brace-format
 msgid "PermissionDenied: Failed in authenticating {user}"
 msgstr "Permissão Negada: Falha na autenticação de {user}"
 
 #: cms/djangoapps/contentstore/views/component.py
+#, python-brace-format
 msgid "{platform_name} Support Levels:"
-msgstr ""
+msgstr "{platform_name} Níveis de suporte:"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
 msgstr "HTML"
 
-#: cms/djangoapps/contentstore/views/component.py
+#: cms/djangoapps/contentstore/views/component.py lms/templates/video.html
 msgid "Video"
 msgstr "Vídeo"
 
@@ -10406,6 +10552,7 @@ msgstr ""
 " torne único."
 
 #: cms/djangoapps/contentstore/views/course.py
+#, python-brace-format
 msgid ""
 "Unable to create course '{name}'.\n"
 "\n"
@@ -10473,6 +10620,7 @@ msgid "File upload corrupted. Please try again"
 msgstr "O arquivo carregado está corrompido. Por favor, tente novamente."
 
 #: cms/djangoapps/contentstore/views/import_export.py
+#, python-brace-format
 msgid "Could not find the {0} file in the package."
 msgstr "Não foi possível encontrar o  arquivo {0} no pacote."
 
@@ -10481,14 +10629,17 @@ msgid "Invalid data"
 msgstr "Dados inválidos"
 
 #: cms/djangoapps/contentstore/views/item.py
+#, python-brace-format
 msgid "Invalid data ({details})"
 msgstr "Dados inválidos ({details})"
 
 #: cms/djangoapps/contentstore/views/item.py
+#, python-brace-format
 msgid "Duplicate of {0}"
 msgstr "Duplicata de {0}"
 
 #: cms/djangoapps/contentstore/views/item.py
+#, python-brace-format
 msgid "Duplicate of '{0}'"
 msgstr "Duplicata de '{0}'"
 
@@ -10496,6 +10647,7 @@ msgstr "Duplicata de '{0}'"
 #. in many languages. This is used to avoid Transifex's misinterpreting of
 #. '% o'. The percent sign is also translatable as a standalone string.
 #: cms/djangoapps/contentstore/views/item.py
+#, python-brace-format
 msgid ""
 "Students must score {score}{pct_sign} or higher to access course materials."
 msgstr ""
@@ -10509,16 +10661,19 @@ msgid "%"
 msgstr "%"
 
 #: cms/djangoapps/contentstore/views/item.py
+#, python-brace-format
 msgid "{section_or_subsection} \"{display_name}\""
 msgstr "{section_or_subsection} \"{display_name}\""
 
 #: cms/djangoapps/contentstore/views/library.py
+#, python-brace-format
 msgid "Unable to create library - missing required field '{field}'"
 msgstr ""
 "Não foi possível criar biblioteca - o campo requerido '{field}' está "
 "faltando. "
 
 #: cms/djangoapps/contentstore/views/library.py
+#, python-brace-format
 msgid ""
 "Unable to create library '{name}'.\n"
 "\n"
@@ -10555,16 +10710,18 @@ msgid "Insufficient permissions"
 msgstr "Permissões insuficientes"
 
 #: cms/djangoapps/contentstore/views/user.py
+#, python-brace-format
 msgid "Could not find user by email address '{email}'."
 msgstr "Não foi possível encontrar o usuário através do e-mail '{email}'."
 
 #: cms/djangoapps/contentstore/views/user.py
-msgid "User {email} has registered but has not yet activated his/her account."
-msgstr "O usuário {email} registrou-se, mas ainda não ativou a conta."
-
-#: cms/djangoapps/contentstore/views/user.py
 msgid "No `role` specified."
 msgstr "Sem `função` especificada. "
+
+#: cms/djangoapps/contentstore/views/user.py
+#, python-brace-format
+msgid "User {email} has registered but has not yet activated his/her account."
+msgstr "O usuário {email} registrou-se, mas ainda não ativou a conta."
 
 #: cms/djangoapps/contentstore/views/user.py
 msgid "Invalid `role` specified."
@@ -10594,16 +10751,33 @@ msgstr "Em Progresso"
 msgid "Ready"
 msgstr "Pronto"
 
+#. Translators: This is the status for a video that is uploaded completely
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Uploaded"
+msgstr ""
+
 #. Translators: This is the status for a video that the servers have failed to
 #. process
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Failed"
 msgstr "Falhou"
 
+#. Translators: This is the status for a video that is cancelled during upload
+#. by user
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Cancelled"
+msgstr "Cancelado"
+
 #. Translators: This is the status for a video which has failed
 #. due to being flagged as a duplicate by an external or internal CMS
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Failed Duplicate"
+msgstr "Falha video duplicado"
+
+#. Translators: This is the status for a video which has duplicate token for
+#. youtube
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "YouTube Duplicate"
 msgstr ""
 
 #. Translators: This is the status for a video for which an invalid
@@ -10627,6 +10801,7 @@ msgstr "Desconhecido"
 #. containing URLs for video encodings for the named profile
 #. (e.g. desktop, mobile high quality, mobile low quality)
 #: cms/djangoapps/contentstore/views/videos.py
+#, python-brace-format
 msgid "{profile_name} URL"
 msgstr "URL {profile_name} "
 
@@ -10641,6 +10816,7 @@ msgstr "Data de Envio"
 #. Translators: This is the suggested filename when downloading the URL
 #. listing for videos uploaded through Studio
 #: cms/djangoapps/contentstore/views/videos.py
+#, python-brace-format
 msgid "{course}_video_urls"
 msgstr "{course}_video_url"
 
@@ -10683,7 +10859,7 @@ msgstr ""
 #: cms/djangoapps/maintenance/views.py
 #: cms/templates/maintenance/_force_publish_course.html
 msgid "Force Publish Course"
-msgstr ""
+msgstr "Forçar Publicação do Curso"
 
 #: cms/djangoapps/maintenance/views.py
 msgid ""
@@ -10695,31 +10871,34 @@ msgstr ""
 
 #: cms/djangoapps/maintenance/views.py
 msgid "Please provide course id."
-msgstr ""
+msgstr "Por favor, forneça o ID do curso."
 
 #: cms/djangoapps/maintenance/views.py
 msgid "Invalid course key."
-msgstr ""
+msgstr "Chave do curso inválida"
 
 #: cms/djangoapps/maintenance/views.py
 msgid "No matching course found."
-msgstr ""
+msgstr "Nenhum curso correspondente encontrado."
 
 #: cms/djangoapps/maintenance/views.py
 msgid "Force publishing course is not supported with old mongo courses."
 msgstr ""
+"Forçar publicação do curso não é suportado em cursos utilizando versões "
+"antigas do mongo."
 
 #: cms/djangoapps/maintenance/views.py
 msgid "Course is already in published state."
-msgstr ""
+msgstr "O Curso já está em estado de pubilicado."
 
 #: cms/djangoapps/models/settings/course_metadata.py
+#, python-brace-format
 msgid "Incorrect format for field '{name}'. {detailed_message}"
 msgstr "Formato incorreto para o campo '{name}'.{detailed_message}"
 
 #: cms/lib/xblock/tagging/tagging.py
 msgid "Dictionary with the available tags"
-msgstr ""
+msgstr "Dicionário com os rótulos disponíveis"
 
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
@@ -10736,7 +10915,7 @@ msgstr "Página não encontrada"
 #: cms/templates/widgets/header.html lms/templates/static_htmlbook.html
 #: lms/templates/static_pdfbook.html lms/templates/staticbook.html
 msgid "Content"
-msgstr ""
+msgstr "Conteúdo"
 
 #: cms/templates/asset_index.html cms/templates/certificates.html
 #: cms/templates/container.html cms/templates/course_outline.html
@@ -10795,24 +10974,24 @@ msgstr "Cursos"
 #: themes/edx.org/lms/templates/header.html
 #: themes/red-theme/lms/templates/header.html
 msgid "Programs"
-msgstr ""
+msgstr "Programas"
 
 #: cms/templates/login.html cms/templates/widgets/header.html
 #: themes/red-theme/cms/templates/login.html
 msgid "Sign In"
-msgstr ""
+msgstr "Entrar"
 
 #: cms/templates/login.html themes/red-theme/cms/templates/login.html
 msgid "Sign In to {studio_name}"
-msgstr ""
+msgstr "Entrar em {studio_name}"
 
 #: cms/templates/login.html themes/red-theme/cms/templates/login.html
 msgid "Don't have a {studio_name} Account? Sign up!"
-msgstr ""
+msgstr "Não possui uma conta no {studio_name}? Registre-se! "
 
 #: cms/templates/login.html themes/red-theme/cms/templates/login.html
 msgid "Required Information to Sign In to {studio_name}"
-msgstr ""
+msgstr "Informação necessário para entrar no {studio_name}"
 
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/help_modal.html lms/templates/login.html
@@ -10918,7 +11097,7 @@ msgstr ""
 
 #: cms/templates/widgets/header.html lms/templates/navigation.html
 msgid "Choose Language"
-msgstr ""
+msgstr "Escolher o idioma"
 
 #: cms/templates/widgets/header.html lms/templates/user_dropdown.html
 msgid "Account"
@@ -10988,7 +11167,7 @@ msgstr "Contate-nos"
 
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
 msgid "Usermenu"
-msgstr ""
+msgstr "Menu de usuário"
 
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
 msgid "Usermenu dropdown"
@@ -11053,7 +11232,7 @@ msgstr ""
 
 #: common/templates/emails/contact_us_feedback_email_body.txt
 msgid "Tags: {tags}"
-msgstr ""
+msgstr "Marcadores: {tags}"
 
 #: common/templates/emails/contact_us_feedback_email_body.txt
 msgid "Additional Info:"
@@ -11070,14 +11249,13 @@ msgstr "Discussão - {course_number}"
 
 #: lms/djangoapps/discussion/templates/discussion/discussion_board.html
 msgid "Discussions"
-msgstr ""
+msgstr "Discussões"
 
 #: lms/djangoapps/discussion/templates/discussion/discussion_board.html
 msgid "Add a Post"
-msgstr ""
+msgstr "Adicionar publicação"
 
 #: lms/djangoapps/discussion/templates/discussion/discussion_board.html
-#: lms/djangoapps/discussion/templates/discussion/discussion_profile_page.html
 msgid "Discussion thread list"
 msgstr "Discussões"
 
@@ -11086,8 +11264,20 @@ msgid "New topic form"
 msgstr "Novo formulário de tópico"
 
 #: lms/djangoapps/discussion/templates/discussion/discussion_profile_page.html
-msgid "User Profile"
-msgstr "Perfil do usuário"
+#: lms/templates/discussion/_user_profile.html
+#, python-format
+msgid "%s discussion started"
+msgid_plural "%s discussions started"
+msgstr[0] "%s"
+msgstr[1] "%s discussões iniciadas"
+
+#: lms/djangoapps/discussion/templates/discussion/discussion_profile_page.html
+#: lms/templates/discussion/_user_profile.html
+#, python-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s comentários"
+msgstr[1] "%s comentários"
 
 #: lms/djangoapps/discussion/templates/discussion/maintenance.html
 msgid "Discussion unavailable"
@@ -11126,6 +11316,13 @@ msgstr "Adicionado a favoritos"
 
 #: lms/templates/bookmark_button.html
 msgid "Bookmark this page"
+msgstr "Marcar esta página"
+
+#: lms/templates/browser-alert.html lms/templates/navigation.html
+#: themes/edx.org/lms/templates/header.html
+msgid ""
+"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
+"strongly recommend using {chrome_link} or {ff_link}."
 msgstr ""
 
 #: lms/templates/conditional_module.html
@@ -11159,12 +11356,12 @@ msgstr "Meus Cursos"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "You are not enrolled in any courses yet."
-msgstr ""
+msgstr "Você não está matriculado nesse curso ainda."
 
 #: lms/templates/dashboard.html lms/templates/navigation.html
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Explore courses"
-msgstr ""
+msgstr "Explorar cursos"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "Course-loading errors"
@@ -11240,7 +11437,7 @@ msgstr "Já existe uma conta com o seu novo e-mail."
 
 #: lms/templates/enroll_staff.html
 msgid "You should Register before trying to access the Unit"
-msgstr ""
+msgstr "Você deve se registrar antes de tentar acessar a Unidade."
 
 #: lms/templates/enroll_staff.html lms/templates/ccx/enrollment.html
 #: lms/templates/courseware/course_about.html
@@ -11250,7 +11447,7 @@ msgstr "Inscrever-se"
 
 #: lms/templates/enroll_staff.html
 msgid "Don't enroll"
-msgstr ""
+msgstr "Não matriculado"
 
 #: lms/templates/enroll_students.html
 msgid "Student Enrollment Form"
@@ -11478,7 +11675,7 @@ msgstr "Nota: somente os instrutores podem fazer anotações."
 #. untranslated. See http://open.edx.org for more information.
 #: lms/templates/index.html
 msgid "Welcome to the Open edX{registered_trademark} platform!"
-msgstr ""
+msgstr "Bem vindo à plataforma Open edX{registered_trademark}"
 
 #. Translators: 'Open edX' is a registered trademark, please keep this
 #. untranslated. See http://open.edx.org for more information.
@@ -11778,7 +11975,7 @@ msgstr "Escolas"
 
 #: lms/templates/navigation.html
 msgid "Explore Courses"
-msgstr ""
+msgstr "Explore os Cursos"
 
 #: lms/templates/navigation.html lms/templates/register-form.html
 #: themes/edx.org/lms/templates/header.html
@@ -11790,12 +11987,6 @@ msgstr "Registre-se"
 #: themes/red-theme/lms/templates/header.html
 msgid "Sign in"
 msgstr "Entrar"
-
-#: lms/templates/navigation.html themes/edx.org/lms/templates/header.html
-msgid ""
-"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
-"strongly recommend using {chrome_link} or {ff_link}."
-msgstr ""
 
 #: lms/templates/notes.html lms/templates/textannotation.html
 #: lms/templates/videoannotation.html
@@ -12449,11 +12640,7 @@ msgstr "Painel de controle para:"
 
 #: lms/templates/user_dropdown.html
 msgid "Profile"
-msgstr ""
-
-#: lms/templates/user_dropdown.html
-msgid "Profile image for {username}"
-msgstr ""
+msgstr "Perfil"
 
 #: lms/templates/user_dropdown.html themes/red-theme/lms/templates/header.html
 msgid "More options dropdown"
@@ -12543,7 +12730,7 @@ msgstr ""
 
 #: lms/templates/api_admin/api_access_request_form.html
 msgid "API Access Request"
-msgstr ""
+msgstr "API de Requisição de Acesso"
 
 #: lms/templates/api_admin/api_access_request_form.html
 #: lms/templates/api_admin/status.html
@@ -12552,7 +12739,7 @@ msgstr ""
 
 #: lms/templates/api_admin/api_access_request_form.html
 msgid "Request API Access"
-msgstr ""
+msgstr "API de Requisição de acesso"
 
 #: lms/templates/api_admin/status.html
 msgid "API Access Request Status"
@@ -12584,25 +12771,27 @@ msgstr ""
 
 #: lms/templates/api_admin/status.html
 msgid "Application Name"
-msgstr ""
+msgstr "Nome da aplicação"
 
 #: lms/templates/api_admin/status.html
 msgid "API Client ID"
-msgstr ""
+msgstr "API Client ID"
 
 #: lms/templates/api_admin/status.html
 msgid "API Client Secret"
-msgstr ""
+msgstr "API Client Secret"
 
 #: lms/templates/api_admin/status.html
 msgid "Redirect URLs"
-msgstr ""
+msgstr "URL de redirecionamento"
 
 #: lms/templates/api_admin/status.html
 msgid ""
 "If you would like to regenerate your API client information, please use the "
 "form below."
 msgstr ""
+"Se você deseja gerar sua API de informação de cliente novamente, por favor, "
+"utilize o formulário abaixo"
 
 #: lms/templates/api_admin/status.html
 msgid "Generate API client credentials"
@@ -12625,11 +12814,11 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Terms of Service for {platform_name} APIs"
-msgstr ""
+msgstr "Termos de Serviço {platform_name} para API"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Effective Date: April 12th, 2016"
-msgstr ""
+msgstr "Data Efetiva: 12 de Abril de 2016"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -12648,7 +12837,7 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "API Access"
-msgstr ""
+msgstr "API de acesso"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -12685,7 +12874,7 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Prohibited Uses and Activities"
-msgstr ""
+msgstr "Utilização e atividades proibidas"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -12751,7 +12940,7 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Usage and Quotas"
-msgstr ""
+msgstr "Uso e cotas"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -12763,7 +12952,7 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Compliance"
-msgstr ""
+msgstr "Conformidade"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -12780,7 +12969,7 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Ownership"
-msgstr ""
+msgstr "Propriedade"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -12828,7 +13017,7 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Privacy"
-msgstr ""
+msgstr "Privacidade"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -12866,7 +13055,7 @@ msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid "Confidentiality"
-msgstr ""
+msgstr "Confidencialidade"
 
 #: lms/templates/api_admin/terms_of_service.html
 msgid ""
@@ -13067,16 +13256,16 @@ msgstr ""
 
 #: lms/templates/api_admin/catalogs/edit.html
 msgid "Edit {catalog_name}"
-msgstr ""
+msgstr "Editar {catalog_name}"
 
 #: lms/templates/api_admin/catalogs/edit.html
 #: lms/templates/api_admin/catalogs/list.html
 msgid "Download CSV"
-msgstr ""
+msgstr "Baixar CSV"
 
 #: lms/templates/api_admin/catalogs/edit.html
 msgid "Delete this catalog"
-msgstr ""
+msgstr "Deletar esse catálogo"
 
 #: lms/templates/api_admin/catalogs/edit.html
 msgid "Update Catalog"
@@ -13088,23 +13277,25 @@ msgstr ""
 
 #: lms/templates/api_admin/catalogs/list.html
 msgid "Create new catalog:"
-msgstr ""
+msgstr "Criar novo catálogo:"
 
 #: lms/templates/api_admin/catalogs/list.html
 msgid "Create Catalog"
-msgstr ""
+msgstr "Criar catálogo"
 
 #: lms/templates/api_admin/catalogs/search.html
 msgid "Catalog search"
-msgstr ""
+msgstr "Catálogo de busca"
 
 #: lms/templates/api_admin/catalogs/search.html
 msgid "Catalog Search"
-msgstr ""
+msgstr "Catálogo de busca"
 
 #: lms/templates/api_admin/catalogs/search.html
 msgid "Enter a username to view catalogs belonging to that user."
 msgstr ""
+"Insira um nome de usuário para visualizar os catálogos que pertencem a esse "
+"usuário."
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Open Calculator"
@@ -13265,7 +13456,7 @@ msgstr "10^ e o expoente"
 #. http://en.wikipedia.org/wiki/Scientific_notation#E_notation
 #: lms/templates/calculator/toggle_calculator.html
 msgid "e notation"
-msgstr ""
+msgstr "Notação científica"
 
 #. Translators: 1e is a mathematical symbol. Please do not translate.
 #: lms/templates/calculator/toggle_calculator.html
@@ -13290,7 +13481,7 @@ msgstr "Nomeie seu CCX"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Create a new Custom Course for edX"
-msgstr ""
+msgstr "Criar um novo Curso customizado para o edX"
 
 #: lms/templates/ccx/coach_dashboard.html lms/templates/ccx/schedule.html
 msgid "Schedule"
@@ -13312,7 +13503,7 @@ msgstr "Notas dos alunos"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Please enter a valid CCX name."
-msgstr ""
+msgstr "Por favor, insira um nome de CCX válido."
 
 #: lms/templates/ccx/enrollment.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -13965,11 +14156,11 @@ msgstr "Ocultar"
 
 #: lms/templates/courseware/course_updates.html
 msgid "Show"
-msgstr ""
+msgstr "Exibir"
 
 #: lms/templates/courseware/course_updates.html
 msgid "Show Earlier Course Updates"
-msgstr ""
+msgstr "Mostrar atualizações recentes dos cursos"
 
 #: lms/templates/courseware/courses.html
 msgid "List of Courses"
@@ -14056,11 +14247,11 @@ msgstr ""
 
 #: lms/templates/courseware/info.html
 msgid "Welcome to {org}'s {course_name}!"
-msgstr ""
+msgstr "Bem vindo ao {org}'s {course_name}"
 
 #: lms/templates/courseware/info.html
 msgid "Resume Course"
-msgstr ""
+msgstr "Continuar Curso"
 
 #: lms/templates/courseware/info.html
 msgid "View Updates in Studio"
@@ -14068,7 +14259,7 @@ msgstr "Visualizar atualizações no Studio"
 
 #: lms/templates/courseware/info.html
 msgid "Course Updates and News"
-msgstr ""
+msgstr "Atualizações e Notícias do curso"
 
 #: lms/templates/courseware/info.html
 msgid "Handout Navigation"
@@ -14080,7 +14271,7 @@ msgstr "Datas importantes do curso"
 
 #: lms/templates/courseware/info.html
 msgid "Today is {date}"
-msgstr ""
+msgstr "Hoje é {date}"
 
 #: lms/templates/courseware/news.html
 msgid "News - MITx 6.002x"
@@ -14335,7 +14526,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Verify your identity now."
-msgstr ""
+msgstr "Verifique sua identidade agora."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your {cert_name_short} is Generating"
@@ -14442,7 +14633,7 @@ msgstr "Estou aprendendo em {platform_name}:"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course options for"
-msgstr ""
+msgstr "Opções de curso para"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Available Actions"
@@ -14827,20 +15018,6 @@ msgstr "pelo mais ativo"
 msgid "by most votes"
 msgstr "pelos mais votados"
 
-#: lms/templates/discussion/_user_profile.html
-#, python-format
-msgid "%s discussion started"
-msgid_plural "%s discussions started"
-msgstr[0] "%s"
-msgstr[1] "%s discussões iniciadas"
-
-#: lms/templates/discussion/_user_profile.html
-#, python-format
-msgid "%s comment"
-msgid_plural "%s comments"
-msgstr[0] "%s comentários"
-msgstr[1] "%s comentários"
-
 #: lms/templates/edxnotes/edxnotes.html
 msgid "Student Notes"
 msgstr "Anotações de aluno"
@@ -14902,6 +15079,12 @@ msgstr "Ocultar Anotações "
 #: lms/templates/edxnotes/toggle_notes.html
 msgid "Show notes"
 msgstr "Mostrar anotações"
+
+#: lms/templates/email_layout/footer_content.html
+msgid ""
+"If you didn't request this, you don't need to do anything. If you require "
+"assistance, please write to us at {TECH_SUPPORT_EMAIL}."
+msgstr ""
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "Welcome to {course_name}"
@@ -15918,7 +16101,7 @@ msgstr "Data de término do curso:"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "No end date set"
-msgstr ""
+msgstr "Sem data final"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course started?"
@@ -17130,7 +17313,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "All Learners"
-msgstr ""
+msgstr "Todos os estudantes"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Cohort: "
@@ -17269,7 +17452,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Example"
-msgstr ""
+msgstr "Exemplo"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Problem location"
@@ -17311,7 +17494,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Task Status"
-msgstr ""
+msgstr "Status da tarefa"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -17402,7 +17585,7 @@ msgstr ""
 
 #: lms/templates/learner_dashboard/program_details.html
 msgid "Program Details"
-msgstr ""
+msgstr "Detalhes do programa"
 
 #: lms/templates/modal/_modal-settings-language.html
 msgid "Change Preferred Language"
@@ -17636,15 +17819,15 @@ msgstr ""
 
 #: lms/templates/provider/authorize.html
 msgid "Read your user ID"
-msgstr ""
+msgstr "Ler seu ID de usuário"
 
 #: lms/templates/provider/authorize.html
 msgid "Read your user profile"
-msgstr ""
+msgstr "Ler o seu perfil de usuário"
 
 #: lms/templates/provider/authorize.html
 msgid "Read your email address"
-msgstr ""
+msgstr "Ler seu endereço de email."
 
 #: lms/templates/provider/authorize.html
 msgid "Read the list of courses in which you are a staff member."
@@ -17660,7 +17843,7 @@ msgstr ""
 
 #: lms/templates/provider/authorize.html
 msgid "Manage your data: {permission}"
-msgstr ""
+msgstr "Gerenciar seus dados: {permission}"
 
 #: lms/templates/registration/activate_account_notice.html
 msgid "You're almost there!"
@@ -17699,48 +17882,48 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_complete.html
 msgid "Your Password Reset is Complete"
-msgstr ""
+msgstr "A redefinição da sua senha foi concluída"
 
 #: lms/templates/registration/password_reset_complete.html
 msgid "Password Reset Complete"
-msgstr ""
+msgstr "Redefinição de Senha Completa"
 
 #: lms/templates/registration/password_reset_complete.html
 msgid ""
 "Your password has been reset. {start_link}Sign-in to your account.{end_link}"
-msgstr ""
+msgstr "Sua senha foi resetada. {start_link} Entre na sua conta. {end_link}"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Reset Your {platform_name} Password"
-msgstr ""
+msgstr "Redefinir sua senha de {platform_name}"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Error Resetting Password"
-msgstr ""
+msgstr "Erro ao redefinir senha"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "You must enter and confirm your new password."
-msgstr ""
+msgstr "Você deve confirmar sua nova senha."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "The text in both password fields must match."
-msgstr ""
+msgstr "O texto nos dois campos de senha devem ser iguais."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Reset Your Password"
-msgstr ""
+msgstr "Redefina sua senha"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Enter and confirm your new password."
-msgstr ""
+msgstr "Confirme sua nova senha."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "New Password"
-msgstr ""
+msgstr "Nova Senha"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Confirm Password"
-msgstr ""
+msgstr "Confirmar Senha"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Invalid Password Reset Link"
@@ -17990,10 +18173,6 @@ msgid "Registration for:"
 msgstr "Inscrição para:"
 
 #: lms/templates/shoppingcart/receipt.html
-msgid "Course Dates"
-msgstr "Datas do Curso"
-
-#: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Price per student:"
 msgstr "Preço por aluno:"
@@ -18036,10 +18215,6 @@ msgstr "Confirme sua matrícula em: {span_start}datas do curso{span_end}"
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "{course_name}"
 msgstr "{course_name}"
-
-#: lms/templates/shoppingcart/registration_code_receipt.html
-msgid "{start_date} - {end_date}"
-msgstr "{start_date} - {end_date}"
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
@@ -18113,10 +18288,6 @@ msgstr[1] ""
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Cover Image"
 msgstr "Imagem de capa"
-
-#: lms/templates/shoppingcart/shopping_cart.html
-msgid "Course Dates:"
-msgstr "Datas do curso:"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Students:"
@@ -18343,43 +18514,43 @@ msgstr "Suporte aos alunos: Matrícula"
 
 #: lms/templates/support/refund.html
 msgid "About to refund this order:"
-msgstr ""
+msgstr "Prestes a reembolsar este pedido:"
 
 #: lms/templates/support/refund.html
 msgid "Order Id:"
-msgstr ""
+msgstr "ID do pedido:"
 
 #: lms/templates/support/refund.html
 msgid "Enrollment:"
-msgstr ""
+msgstr "Matrícula:"
 
 #: lms/templates/support/refund.html
 msgid "enrolled"
-msgstr ""
+msgstr "matriculado"
 
 #: lms/templates/support/refund.html
 msgid "unenrolled"
-msgstr ""
+msgstr "não matriculado"
 
 #: lms/templates/support/refund.html
 msgid "Cost:"
-msgstr ""
+msgstr "Custo:"
 
 #: lms/templates/support/refund.html
 msgid "CertificateItem Status:"
-msgstr ""
+msgstr "Status do Certificado:"
 
 #: lms/templates/support/refund.html
 msgid "Order Status:"
-msgstr ""
+msgstr "Status do Pedido:"
 
 #: lms/templates/support/refund.html
 msgid "Fulfilled Time:"
-msgstr ""
+msgstr "Tempo Cumprido:"
 
 #: lms/templates/support/refund.html
 msgid "Refund Request Time:"
-msgstr ""
+msgstr "Tempo para Requisitar Reembolso:"
 
 #: lms/templates/survey/survey.html
 msgid "User Survey"
@@ -18560,7 +18731,7 @@ msgstr ""
 
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Explore New Courses"
-msgstr ""
+msgstr "Explorar novos cursos"
 
 #: themes/edx.org/lms/templates/footer.html
 msgid "Page Footer"
@@ -18624,11 +18795,11 @@ msgstr "Registre-se agora"
 #: themes/stanford-style/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: themes/stanford-style/lms/templates/footer.html
 msgid "Copyright {year}. All rights reserved."
-msgstr ""
+msgstr "Copyright {year}. Todos os direitos reservados."
 
 #: themes/stanford-style/lms/templates/index.html
 msgid "For anyone, anywhere, anytime"
@@ -18661,19 +18832,19 @@ msgstr ""
 
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Put your Terms of Service here!"
-msgstr ""
+msgstr "Insira seus Termos de Serviço aqui!"
 
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Put your Privacy Policy here!"
-msgstr ""
+msgstr "Insira sua Política de Privacidade aqui!"
 
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Put your Honor Code here!"
-msgstr ""
+msgstr "Insira seu Código de Honra aqui!"
 
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Put your Copyright Text here!"
-msgstr ""
+msgstr "Insira seu texto de Copyright aqui!"
 
 #: cms/templates/404.html
 msgid "The page that you were looking for was not found."
@@ -18693,7 +18864,7 @@ msgstr "{studio_name} Erro no Servidor"
 
 #: cms/templates/500.html
 msgid "The {em_start}{studio_name}{em_end} servers encountered an error"
-msgstr ""
+msgstr "Os servidores do {em_start}{studio_name}{em_end} encontraram um erro"
 
 #: cms/templates/500.html
 msgid ""
@@ -18775,7 +18946,7 @@ msgstr ""
 
 #: cms/templates/asset_index.html cms/templates/widgets/header.html
 msgid "Files & Uploads"
-msgstr ""
+msgstr "Arquivos e Envios"
 
 #: cms/templates/asset_index.html cms/templates/container.html
 #: cms/templates/course-create-rerun.html cms/templates/course_info.html
@@ -18938,11 +19109,9 @@ msgstr "Emitindo Certificados para Alunos"
 
 #: cms/templates/certificates.html
 msgid ""
-"After you have configured and previewed your certificate, ask your edX "
-"partner manager to activate your certificate. When your certificate has been"
-" activated, you can begin issuing certificates to learners. Course team "
-"members without the Admin role cannot edit or delete an activated "
-"certificate."
+"To begin issuing course certificates, a course team member with either the "
+"Staff or Admin role selects {em_start}Activate{em_end}. Only course team "
+"members with these roles can edit or delete an activated certificate."
 msgstr ""
 
 #: cms/templates/certificates.html
@@ -19149,11 +19318,6 @@ msgstr ""
 msgid "Organization"
 msgstr "Organização"
 
-#. Translators: This is an example for the name of the organization sponsoring
-#. a course, seen when filling out the form to create a new course. The
-#. organization name cannot contain spaces.
-#. Translators: "e.g. UniversityX or OrganizationX" is a placeholder displayed
-#. when user put no data into this field.
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 msgid "e.g. UniversityX or OrganizationX"
 msgstr "Ex. Universidade X ou Organização X"
@@ -20830,7 +20994,7 @@ msgstr ""
 
 #: cms/templates/index.html
 msgid "Thanks for signing up, {name}!"
-msgstr ""
+msgstr "Obrigado por registrar-se, {name}!"
 
 #: cms/templates/index.html
 msgid "We need to verify your email address"
@@ -20842,6 +21006,9 @@ msgid ""
 "email address ({email}). An activation message and next steps should be "
 "waiting for you there."
 msgstr ""
+"Quase lá! Para completar seu registro, precisamos verificar seu endereço de "
+"email ({email}). Uma mensagem de ativação e os próximos passos devem estar "
+"esperando por você lá."
 
 #: cms/templates/index.html
 msgid "Need help?"
@@ -21115,7 +21282,7 @@ msgstr "Sua localização"
 
 #: cms/templates/register.html
 msgid "Preferred Language"
-msgstr ""
+msgstr "Idioma de preferência"
 
 #: cms/templates/register.html
 msgid "I agree to the {a_start} Terms of Service {a_end}"
@@ -21368,7 +21535,7 @@ msgstr "Informações para futuros alunos "
 
 #: cms/templates/settings.html
 msgid "Course Title"
-msgstr ""
+msgstr "Título do curso"
 
 #: cms/templates/settings.html
 msgid "Displayed as title on the course details page. Limit to 50 characters."
@@ -21376,7 +21543,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Subtitle"
-msgstr ""
+msgstr "Subtítulo do Curso"
 
 #: cms/templates/settings.html
 msgid ""
@@ -21385,7 +21552,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Duration"
-msgstr ""
+msgstr "Duração do Curso"
 
 #: cms/templates/settings.html
 msgid "Displayed on the course details page. Limit to 50 characters."
@@ -21393,11 +21560,11 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Description"
-msgstr ""
+msgstr "Descrição do Curso"
 
 #: cms/templates/settings.html
 msgid "Displayed on the course details page. Limit to 1000 characters."
-msgstr ""
+msgstr "Editor de Código HTML"
 
 #: cms/templates/settings.html
 msgid "Course Short Description"
@@ -21417,7 +21584,7 @@ msgstr "Visão geral do curso"
 
 #: cms/templates/settings.html
 msgid "HTML Code Editor"
-msgstr ""
+msgstr "Editor de Código HTML"
 
 #: cms/templates/settings.html
 msgid ""
@@ -21506,10 +21673,12 @@ msgid ""
 "Please provide a valid path and name to your video thumbnail image (Note: "
 "only JPEG or PNG format supported)"
 msgstr ""
+"Por favor, forneça um caminho válido para sua miniatura de vídeo (Nota: "
+"somente suporta os formatos JPEG e PNG)"
 
 #: cms/templates/settings.html
 msgid "Upload Video Thumbnail Image"
-msgstr ""
+msgstr "Envie a miniatura do seu vídeo"
 
 #: cms/templates/settings.html
 msgid "Course Introduction Video"
@@ -21545,7 +21714,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Instructors"
-msgstr ""
+msgstr "Instrutores"
 
 #: cms/templates/settings.html
 msgid "Add details about the instructors for this course"
@@ -21553,7 +21722,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Add Instructor"
-msgstr ""
+msgstr "Adicionar instrutor"
 
 #: cms/templates/settings.html
 msgid "Expectations of the students taking this course"
@@ -21884,14 +22053,10 @@ msgstr "Por que enviar arquivos de vídeo?"
 #: cms/templates/videos_index.html
 msgid ""
 "For a video to play on different devices, it needs to be available in "
-"multiple formats. After you upload an original video file in .mp4 or .mov "
+"multiple formats. After you upload an original video file in {file_formats} "
 "format on this page, an automated process creates those additional formats "
 "and stores them for you."
 msgstr ""
-"Para um vídeo funcionar em diferentes dispositivos, é necessário ele estar "
-"disponível em múltiplos formatos. Após fazer o upload nesta página de um "
-"arquivo de vídeo original no formato .mp4 ou .mov, um processo automático "
-"cria os demais formatos adicionais e também os disponibiliza para você."
 
 #: cms/templates/videos_index.html
 msgid "Maximum Video File Size"
@@ -21899,11 +22064,9 @@ msgstr "Tamanho máximo do arquivo de video"
 
 #: cms/templates/videos_index.html
 msgid ""
-"The maximum size for each video file that you upload is 5 GB. The upload "
-"process fails for larger files."
+"The maximum size for each video file that you upload is {em_start}5 "
+"GB{em_end}. The upload process fails for larger files."
 msgstr ""
-"O tamanho máximo para cada arquivo de video que você baixar é de 5GB. Caso "
-"contrário este processo apresentará erros."
 
 #: cms/templates/videos_index.html
 msgid "Monitoring files as they upload"
@@ -21954,23 +22117,14 @@ msgstr "Como eu insiro os vídeos no meu curso?"
 
 #: cms/templates/videos_index.html
 msgid ""
-"When status for a file is {em_start}Ready{em_end}, you can add that video to"
-" a component in your course. Copy the unique video ID. In another browser "
-"window, on the Course Outline page, create or locate a video component to "
-"play this video. Edit the video component to paste the ID into the Advanced "
-"{em_start}Video ID{em_end} field. The video can play in the LMS as soon as "
-"its status is {em_start}Ready{em_end}, although processing may not be "
-"complete for all encodings and all video hosting sites."
+"When the status for a file is {em_start}Ready{em_end}, you can add that "
+"video to a component in your course. Copy the unique video ID. In another "
+"browser window, on the Course Outline page, create or locate a video "
+"component to play this video. Edit the video component to paste the ID into "
+"the Advanced {em_start}Video ID{em_end} field. The video can play in the LMS"
+" as soon as its status is {em_start}Ready{em_end}, although processing may "
+"not be complete for all encodings and all video hosting sites."
 msgstr ""
-"Quando o status para um arquivo estiver sinalizado como "
-"{em_start}Pronto{em_end}, você poderá adicionar o vídeo a um componente em "
-"seu curso. Copie o ID de vídeo exclusivo. Em outra janela de navegação, na "
-"página de Esboço do Curso, crie ou aloque um componente de vídeo para "
-"assistir o vídeo. Edite o componente do vídeo copiando o ID para dentro do "
-"Campo Avançado em {em_start}Video ID{em_end}. O vídeo poderá ser visualizado"
-" no LMS assim que o status estiver em {em_start}Pronto{em_end}, embora o "
-"processamento pode não estar finalizado para todos os formatos de vídeos q e"
-" todos os sites de hospedagem de vídeo."
 
 #: cms/templates/visibility_editor.html
 msgid "No content groups exist"
@@ -22123,11 +22277,11 @@ msgstr ""
 
 #: cms/templates/maintenance/_force_publish_course.html
 msgid "Reset values"
-msgstr ""
+msgstr "Resetar valores"
 
 #: cms/templates/maintenance/base.html cms/templates/maintenance/index.html
 msgid "Maintenance Dashboard"
-msgstr ""
+msgstr "Painel de Manutenção"
 
 #: cms/templates/registration/reg_complete.html
 msgid ""
@@ -22175,7 +22329,7 @@ msgstr "Biblioteca Atual:"
 
 #: cms/templates/widgets/header.html
 msgid "Language preference"
-msgstr ""
+msgstr "Preferências de Idioma"
 
 #: cms/templates/widgets/header.html
 msgid "Account Navigation"
@@ -22191,15 +22345,15 @@ msgstr "Iniciar compilador de fonte latex "
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Heading"
-msgstr ""
+msgstr "Cabeçalho"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Insert a heading"
-msgstr ""
+msgstr "Inserir um cabeçalho"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Add a multiple choice question"
-msgstr ""
+msgstr "Adicionar uma questão de múltipla escolha"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Add a question with checkboxes"
@@ -22207,11 +22361,11 @@ msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Insert a text response"
-msgstr ""
+msgstr "Inserir uma resposta de texto"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Insert a numerical response"
-msgstr ""
+msgstr "Inserir uma resposta numérica"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Insert a dropdown response"
@@ -22223,7 +22377,7 @@ msgstr "Explicação"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Add an explanation for this question"
-msgstr ""
+msgstr "Adicione uma explicação para esta questão"
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Advanced Editor"
@@ -22255,7 +22409,7 @@ msgstr "No momento logado como:"
 
 #: cms/templates/widgets/user_dropdown.html
 msgid "Maintenance"
-msgstr ""
+msgstr "Manutenção"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"

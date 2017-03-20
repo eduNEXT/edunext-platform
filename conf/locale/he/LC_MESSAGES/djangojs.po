@@ -1,77 +1,17 @@
-# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# dana bublil <dana.bublil@gmail.com>, 2016
-# dotanlaks <dotanlaks6@gmail.com>, 2014
-# dotanlaks <dotanlaks6@gmail.com>, 2014
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2016
-# e2f he_r1 <e2f_he_r1@outlook.com>, 2016
-# Naaman nov <naaman.nov@gmail.com>, 2015
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# Ned Batchelder <ned@edx.org>, 2016
-# qualityalltext <quality@alltext.co.il>, 2016
-# Ron Rozen <Ronrozen@gmail.com>, 2016
-# Shay Nativ <shay@yeda.org.il>, 2015
-# yaaqov, 2014
-# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2016 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2016
-# e2f he_r1 <e2f_he_r1@outlook.com>, 2016
-# Ido, 2014
-# Naaman nov <naaman.nov@gmail.com>, 2015
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# qualityalltext <quality@alltext.co.il>, 2016
-# Ron Rozen <Ronrozen@gmail.com>, 2016
-# yaaqov, 2014
-# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# dana bublil <dana.bublil@gmail.com>, 2016
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2016
-# e2f he_r1 <e2f_he_r1@outlook.com>, 2016
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# qualityalltext <quality@alltext.co.il>, 2016
-# Ron Rozen <Ronrozen@gmail.com>, 2016
-# yuval zana, 2015
-# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2016 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2016
-# e2f he_r1 <e2f_he_r1@outlook.com>, 2016
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# qualityalltext <quality@alltext.co.il>, 2016
-# Ron Rozen <Ronrozen@gmail.com>, 2016
-# yuval zana, 2015
+# edunext helper translation file.
+# Copyright (C) 2016 eduNEXT
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2016-12-08 18:45+0000\n"
-"PO-Revision-Date: 2016-12-29 23:13+0000\n"
-"Last-Translator: e2f he_r1 <e2f_he_r1@outlook.com>\n"
-"Language-Team: Hebrew (http://www.transifex.com/open-edx/edx-platform/language/he/)\n"
+"POT-Creation-Date: 2017-03-15 14:30+0000\n"
+"PO-Revision-Date: 2016-03-30 15:48+0000\n"
+"Last-Translator: Felipe Montoya <felipe.montoya@edunext.co>\n"
+"Language-Team: eduNEXT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
-"Language: he\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: cms/static/cms/js/xblock/cms.runtime.v1.js
@@ -83,8 +23,8 @@ msgstr ""
 #: cms/static/js/views/edit_textbook.js
 #: cms/static/js/views/list_item_editor.js
 #: cms/static/js/views/modals/edit_xblock.js cms/static/js/views/tabs.js
-#: cms/static/js/views/tabs.js.c cms/static/js/views/utils/xblock_utils.js
-#: lms/static/js/ccx/schedule.js lms/static/js/views/fields.js
+#: cms/static/js/views/utils/xblock_utils.js lms/static/js/ccx/schedule.js
+#: lms/static/js/views/fields.js
 msgid "Saving"
 msgstr "שומר"
 
@@ -158,6 +98,20 @@ msgstr "מעלה"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#: cms/static/js/views/active_video_upload.js
+#: cms/static/js/views/modals/edit_xblock.js
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/common/templates/image-modal.underscore
+#: common/static/common/templates/discussion/alert-popup.underscore
+#: common/static/common/templates/discussion/forum-action-close.underscore
+#: common/static/common/templates/discussion/search-alert.underscore
+#: lms/templates/student_profile/share_modal.underscore
+msgid "Close"
+msgstr "סגור"
+
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: cms/static/js/views/assets.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/asset-library.underscore
@@ -193,7 +147,6 @@ msgid "Ok"
 msgstr "בסדר"
 
 #: cms/static/js/views/manage_users_and_roles.js
-#: lms/static/coffee/src/instructor_dashboard/util.js
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Unknown"
 msgstr "לא ידוע"
@@ -239,19 +192,6 @@ msgstr "שמור"
 msgid "Advanced"
 msgstr "מתקדם"
 
-#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: this is a message from the raw HTML editor displayed in the
-#. browser when a user needs to edit HTML
-#: cms/static/js/views/modals/edit_xblock.js
-#: common/lib/xmodule/xmodule/js/src/html/edit.js
-#: common/static/common/templates/image-modal.underscore
-#: common/static/common/templates/discussion/alert-popup.underscore
-#: common/static/common/templates/discussion/forum-action-close.underscore
-#: common/static/common/templates/discussion/search-alert.underscore
-#: lms/templates/student_profile/share_modal.underscore
-msgid "Close"
-msgstr "סגור"
-
 #: cms/static/js/views/previous_video_upload.js
 #: lms/static/js/views/image_field.js
 msgid "Removing"
@@ -268,6 +208,11 @@ msgstr "השינויים נשמרו"
 #. error,
 #. e.g. "Error: required field is missing".
 #: cms/static/js/views/xblock_validation.js
+#: common/static/common/js/discussion/utils.js
+#: common/static/common/js/discussion/views/discussion_inline_view.js
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+#: common/static/common/js/discussion/views/response_comment_view.js
 #: lms/static/js/student_account/views/FinishAuthView.js
 #: lms/static/js/verify_student/views/payment_confirmation_step_view.js
 #: lms/static/js/verify_student/views/step_view.js
@@ -1543,6 +1488,8 @@ msgstr ""
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/course-instructor-details.underscore
 #: cms/templates/js/signatory-details.underscore
+#: common/static/common/templates/discussion/new-post.underscore
+#: common/static/common/templates/discussion/thread-edit.underscore
 msgid "Title"
 msgstr "כותרת"
 
@@ -1978,41 +1925,13 @@ msgstr "מציג {firstIndex} מתוך {numItems} סך הכל"
 msgid "Showing {firstIndex}-{lastIndex} out of {numItems} total"
 msgstr "מציג {firstIndex}-{lastIndex} מתוך {numItems} סך הכל"
 
-#: common/static/common/js/discussion/discussion_module_view.js
-msgid "Hide Discussion"
-msgstr "הסתר דיון"
-
-#: common/static/common/js/discussion/discussion_module_view.js
-msgid "Show Discussion"
-msgstr "הראה דיון"
-
-#: common/static/common/js/discussion/discussion_module_view.js
-#: common/static/common/js/discussion/utils.js
-#: common/static/common/js/discussion/views/discussion_thread_list_view.js
-#: common/static/common/js/discussion/views/discussion_thread_view.js
-#: common/static/common/js/discussion/views/response_comment_view.js
-#: lms/djangoapps/discussion/static/discussion/js/views/discussion_user_profile_view.js
-msgid "Sorry"
-msgstr "סליחה"
-
-#: common/static/common/js/discussion/discussion_module_view.js
-msgid "We had some trouble loading the discussion. Please try again."
-msgstr "לא הצלחנו לטעון את הדיון. אנא נסה שוב."
-
-#: common/static/common/js/discussion/discussion_module_view.js
-msgid ""
-"We had some trouble loading the threads you requested. Please try again."
-msgstr "לא הצלחנו לטעון את השרשורים שביקשת. אנא נסה שוב."
-
 #: common/static/common/js/discussion/utils.js
 msgid "Loading content"
 msgstr "טוען תוכן"
 
 #: common/static/common/js/discussion/utils.js
-msgid ""
-"We had some trouble processing your request. Please ensure you have copied "
-"any "
-msgstr "נתקלנו בבעיה בעיבוד בקשתך. אנא ודא כי העתקת"
+msgid "Your request could not be processed. Refresh the page and try again."
+msgstr ""
 
 #: common/static/common/js/discussion/utils.js
 #: common/static/common/templates/discussion/pagination.underscore
@@ -2040,101 +1959,122 @@ msgstr[0] "קול {numVotes}"
 msgstr[1] "{numVotes} קולות"
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble subscribing you to this thread. Please try again."
-msgstr "נתקלנו בבעיה בהרשמתך לשרשור זה. נא נסה שוב."
+msgid ""
+"You could not be subscribed to this post. Refresh the page and try again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid ""
-"We had some trouble unsubscribing you from this thread. Please try again."
-msgstr "נתקלנו בבעיה בביטול הרשמתך לשרשור זה. נא נסה שוב. "
+"You could not be unsubscribed from this post. Refresh the page and try "
+"again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid ""
-"We had some trouble marking this response as an answer.  Please try again."
-msgstr "נתקלנו בבעיה בסימון תגובה זו כתשובה. נא נסה שוב."
+"This response could not be marked as an answer. Refresh the page and try "
+"again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid ""
-"We had some trouble removing this response as an answer.  Please try again."
-msgstr "נתקלנו בבעיה בזמן מחיקת תגובה זו כתשובה. נא נסה שוב."
-
-#: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble marking this response endorsed.  Please try again."
-msgstr "נתקלנו בבעיה בזמן סימון תגובה זו כמאושרת. נא נסה שוב."
-
-#: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble removing this endorsement.  Please try again."
-msgstr "נתקלנו בבעיה בזמן הסרת תגובה זו כמאושרת. נא נסה שוב."
-
-#: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble saving your vote.  Please try again."
-msgstr "נתקלנו בבעיה בשמירת הצבעתך. נא נסה שוב."
-
-#: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble pinning this thread. Please try again."
-msgstr "נתקלנו בבעיה בהצמדת שרשור זה. נא נסה שוב."
-
-#: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble unpinning this thread. Please try again."
-msgstr "נתקלנו בבעיה בביטול הצמדת שרשור זה. נא נסה שוב."
+"This response could not be unmarked as an answer. Refresh the page and try "
+"again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid ""
-"We had some trouble removing your flag on this post.  Please try again."
-msgstr "נתקלנו בבעיה בהסרת הדגל מפוסט זה. נא נסה שוב."
+"This response could not be marked as endorsed. Refresh the page and try "
+"again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble reporting this post.  Please try again."
-msgstr "נתקלנו בבעיות בדיווח הפוסט הזה. נא נסה שוב."
+msgid "This response could not be unendorsed. Refresh the page and try again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble closing this thread.  Please try again."
-msgstr "נתקלנו בבעיה בסגירת השרשור הזה. נא נסה שוב."
+msgid "This vote could not be processed. Refresh the page and try again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
-msgid "We had some trouble reopening this thread.  Please try again."
-msgstr "נתקלנו בבעיה בזמן פתיחה מחדש של השרשור הזה. נא נסה שוב."
+msgid "This post could not be pinned. Refresh the page and try again."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This post could not be unpinned. Refresh the page and try again."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"This post could not be flagged for abuse. Refresh the page and try again."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"This post could not be unflagged for abuse. Refresh the page and try again."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This post could not be closed. Refresh the page and try again."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This post could not be reopened. Refresh the page and try again."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_inline_view.js
+msgid "Hide Discussion"
+msgstr "הסתר דיון"
+
+#: common/static/common/js/discussion/views/discussion_inline_view.js
+msgid "This discussion could not be loaded. Refresh the page and try again."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_inline_view.js
+msgid "Show Discussion"
+msgstr "הראה דיון"
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid "Loading more threads"
 msgstr "טוען עוד שרשורים"
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
-msgid "We had some trouble loading more threads. Please try again."
-msgstr "חלה תקלה בטעינת שרשורים נוספים. נא נסה שוב. "
+msgid "Additional posts could not be loaded. Refresh the page and try again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid "Current conversation"
 msgstr "שיחה נוכחית"
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
-msgid "Loading thread list"
-msgstr "טוען רשימת שרשורים"
+msgid "Loading posts list"
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
-msgid "No results found for {original_query}. "
-msgstr "לא נמצאו תוצאות עבור {original_query}."
+msgid ""
+"No results found for {original_query}. Showing results for "
+"{suggested_query}."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
-msgid "No threads matched your query."
-msgstr "לא נמצאו שרשורים התואמים את השאילתא המבוקשת."
+msgid "No posts matched your query."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid "Show posts by {username}."
 msgstr "הראה פוסטים של {username}."
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "The post you selected has been deleted."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "Responses could not be loaded. Refresh the page and try again."
+msgstr ""
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid ""
-"The thread you selected has been deleted. Please select another thread."
-msgstr "השרשור שבחרת נמחק. נא בחר שרשור אחר. "
-
-#: common/static/common/js/discussion/views/discussion_thread_view.js
-msgid "We had some trouble loading responses. Please reload the page."
-msgstr "אירעה תקלה בזמן טעינת התגובות. נא טען מחדש את העמוד."
-
-#: common/static/common/js/discussion/views/discussion_thread_view.js
-msgid "We had some trouble loading more responses. Please try again."
-msgstr "אירעה תקלה בזמן טעינת התגובות הנוספות. נא נסה שוב."
+"Additional responses could not be loaded. Refresh the page and try again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "{numResponses} other response"
@@ -2185,8 +2125,8 @@ msgid "Are you sure you want to delete this comment?"
 msgstr "האם אתה בטוח שאתה מעוניין למחוק תגובה זו?"
 
 #: common/static/common/js/discussion/views/response_comment_view.js
-msgid "We had some trouble deleting this comment. Please try again."
-msgstr "אירעה תקלה בזמן מחיקה של התגובה. נא נסה שוב."
+msgid "This comment could not be deleted. Refresh the page and try again."
+msgstr ""
 
 #: common/static/common/js/discussion/views/thread_response_view.js
 msgid "Are you sure you want to delete this response?"
@@ -2230,13 +2170,13 @@ msgstr "שוחרר על המטרה"
 
 #. Translators: %s will be a time quantity, such as "4 minutes" or "1 day"
 #: common/static/js/src/jquery.timeago.locale.js
-#, c-format
+#, javascript-format
 msgid "%s ago"
 msgstr "לפני %s"
 
 #. Translators: %s will be a time quantity, such as "4 minutes" or "1 day"
 #: common/static/js/src/jquery.timeago.locale.js
-#, c-format
+#, javascript-format
 msgid "%s from now"
 msgstr "%s מעכשיו"
 
@@ -2249,7 +2189,7 @@ msgid "about a minute"
 msgstr "בערך דקה"
 
 #: common/static/js/src/jquery.timeago.locale.js
-#, c-format
+#, javascript-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "דקה %d"
@@ -2260,7 +2200,7 @@ msgid "about an hour"
 msgstr "בערך שעה"
 
 #: common/static/js/src/jquery.timeago.locale.js
-#, c-format
+#, javascript-format
 msgid "about %d hour"
 msgid_plural "about %d hours"
 msgstr[0] "כשעה %d"
@@ -2271,7 +2211,7 @@ msgid "a day"
 msgstr "יום"
 
 #: common/static/js/src/jquery.timeago.locale.js
-#, c-format
+#, javascript-format
 msgid "%d day"
 msgid_plural "%d days"
 msgstr[0] "יום %d"
@@ -2282,7 +2222,7 @@ msgid "about a month"
 msgstr "בערך חודש אחד"
 
 #: common/static/js/src/jquery.timeago.locale.js
-#, c-format
+#, javascript-format
 msgid "%d month"
 msgid_plural "%d months"
 msgstr[0] "חודש %d"
@@ -2293,7 +2233,7 @@ msgid "about a year"
 msgstr "כשנה"
 
 #: common/static/js/src/jquery.timeago.locale.js
-#, c-format
+#, javascript-format
 msgid "%d year"
 msgid_plural "%d years"
 msgstr[0] "שנה %d"
@@ -2443,10 +2383,6 @@ msgid "This annotation has %(count)s flag."
 msgid_plural "This annotation has %(count)s flags."
 msgstr[0] "להערה זו יש דגל %(count)s."
 msgstr[1] "להסבר זה יש %(count)s דגלים."
-
-#: lms/djangoapps/discussion/static/discussion/js/views/discussion_user_profile_view.js
-msgid "We had some trouble loading the page you requested. Please try again."
-msgstr "נתקלנו בבעיה בטעינת העמוד המבוקש. נא נסה שוב."
 
 #: lms/djangoapps/support/static/support/js/views/certificates.js
 msgid "An unexpected error occurred.  Please try again."
@@ -2711,7 +2647,9 @@ msgstr "לא ניתן להשלים את בקשתך. טען מחדש את הדף 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
 "Your request could not be completed due to a server problem. Reload the page"
-msgstr "לא ניתן היה להשלים את בקשתך בשל בעיית שרת. טען מחדש את הדף"
+" and try again. If the issue persists, click the Help tab to report the "
+"problem."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Team Search"
@@ -2830,734 +2768,13 @@ msgstr "תצוגה מקדימה ב-HTML של הפוסט"
 msgid "Post body"
 msgstr "פרסם תוכן"
 
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Loading data..."
-msgstr "טוען נתונים..."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error getting issued certificates list."
-msgstr "אירעה שגיאה בעת קבלת רשימת התעודות שנופקו."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error generating proctored exam results. Please try again."
-msgstr "אירעה שגיאה בעת יצירת תוצאות מבחנים תחת פיקוח. נא נסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error generating survey results. Please try again."
-msgstr "אירעה שגיאה בעת יצירת תוצאות סקר. נא נסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error generating student profile information. Please try again."
-msgstr "שגיאת בזמן יצירת פרופיל סטודנט. נא נסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/bookmarks/views/bookmarks_list.js
-#: lms/static/js/instructor_dashboard/data_download.js
-#: lms/templates/search/search_loading.underscore
-msgid "Loading"
-msgstr "טוען"
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error getting student list."
-msgstr "שגיאה בקבלת רשימת הסטודנטים."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error generating list of students who may enroll. Please try again."
-msgstr "אירעה שגיאה בעת יצירת רשימת סטודנטים שעשויים להירשם. נא נסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error retrieving grading configuration."
-msgstr "שגיאה בטעינה של קונפיגורציית ציונים."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error generating grades. Please try again."
-msgstr "שגיאה בזמן יצירת ציונים. נא נסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error generating problem grade report. Please try again."
-msgstr "אירעה שגיאה בעת יצירת דוח דירוג בעיות. נא נסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-#: lms/static/js/instructor_dashboard/data_download.js
-msgid "Error generating ORA data report. Please try again."
-msgstr "אירעה שגיאה בעת דוח נתוני ORA. נא נסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-#: lms/static/js/student_account/views/account_settings_factory.js
-#: lms/static/js/student_profile/views/learner_profile_factory.js
-#: lms/templates/financial-assistance/financial_assessment_form.underscore
-msgid "Username"
-msgstr "שם משתמש"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Email"
-msgstr "דואר אלקטרוני"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Revoke access"
-msgstr "שלול גישה"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Enter username or email"
-msgstr "הכנס שם משתמש או כתובת דואר אלקטרוני"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Please enter a username or email."
-msgstr "אנא הכנס שם משתמש או כתובת דואר אלקטרוני"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Error changing user's permissions."
-msgstr "שגיאה בשינוי אישורי משתמש"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid ""
-"Could not find a user with username or email address '<%- identifier %>'."
-msgstr ""
-"לא ניתן היה לאתר משתמש באמצעות שם המשתמש או כתובת הדואר האלקטרוני '<%- "
-"identifier %>'."
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid ""
-"Error: User '<%- username %>' has not yet activated their account. Users "
-"must create and activate their accounts before they can be assigned a role."
-msgstr ""
-"שגיאה: משתמש '<%- username %>'  לא הפעיל עדיין את חשבונו. משתמשים חייבים "
-"ליצור ולהפעיל את חשבונותיהם לפני שניתן להקצות להם תפקיד."
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Error: You cannot remove yourself from the Instructor group!"
-msgstr "שגיאה: אינך יכול להסיר עצמך מקבוצת המדריכים."
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Errors"
-msgstr "שגיאות"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "The following errors were generated:"
-msgstr "השגיאות הבאות נוצרו:"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Warnings"
-msgstr "אזהרות"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "The following warnings were generated:"
-msgstr "האזהרות הבאות נוצרו:"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-#: lms/static/js/views/fields.js
-msgid "Success"
-msgstr "הצלחה"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "All accounts were created successfully."
-msgstr "כל החשבונות נוצרו בהצלחה"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Error adding/removing users as beta testers."
-msgstr "שגיאה בהוספה/הסרה של משתמשים כבודקי בטא."
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "These users were successfully added as beta testers:"
-msgstr "משתמשים אלה נוספו בהצלחה כבודקי בטא:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "These users were successfully removed as beta testers:"
-msgstr "משתמשים אלו הוסרו בהצלחה כבודקי בטא:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "These users were not added as beta testers:"
-msgstr "משתמשים אלה לא נוספו כבודקי בטא:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "These users were not removed as beta testers:"
-msgstr "משתמשים אלה לא הוסרו כבודקי בטא:"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid ""
-"Users must create and activate their account before they can be promoted to "
-"beta tester."
-msgstr ""
-"משתמשים חייבים ליצור ולהפעיל את החשבון שלהם לפני שיוכלו להתקדם לתפקיד בוחן "
-"בטא."
-
-#. Translators: A list of identifiers (which are email addresses and/or
-#. usernames) appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Could not find users associated with the following identifiers:"
-msgstr "לא הצלחתי למצוא משתמשים המשוייכים למזהים הבאים:"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Reason field should not be left blank."
-msgstr "שדה הסיבה אינו יכול להישאר ריק."
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Error enrolling/unenrolling users."
-msgstr "שגיאה בהרשמה/ביטול הרשמה של משתמשים."
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "The following email addresses and/or usernames are invalid:"
-msgstr "כתובות הדואר האלקטרוני הבאות ו/או שמות המשתמש אינן חוקיות:"
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Successfully enrolled and sent email to the following users:"
-msgstr "נרשם בהצלחה ושלח דואר אלקטרוני למשתמשים הבאים:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "Successfully enrolled the following users:"
-msgstr "המשתמשים הבאים נרשמו בהצלחה:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid ""
-"Successfully sent enrollment emails to the following users. They will be "
-"allowed to enroll once they register:"
-msgstr ""
-"הודעות הרשמה נשלחו בהצלחה למשתמשים הבאים. הם יהיו רשאים להירשם לקורס לאחר "
-"שישלימו את ההרשמה לאתר:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "These users will be allowed to enroll once they register:"
-msgstr "המשתמשים הבאים יהיו רשאים להירשם לאחר שישלימו את הרשמתם לאתר:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid ""
-"Successfully sent enrollment emails to the following users. They will be "
-"enrolled once they register:"
-msgstr ""
-"הודעות הרשמה נשלחו בהצלחה למשתמשים הבאים. הם יהיו רשאים להירשם לקורס לאחר "
-"שישלימו את ההרשמה לאתר:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "These users will be enrolled once they register:"
-msgstr "המשתמשים הבאים יירשמו לקורס ברגע שירשמו לאתר:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid ""
-"Emails successfully sent. The following users are no longer enrolled in the "
-"course:"
-msgstr ""
-"הודעות דואר אלקטרוני נשלחו בהצלחה. המשתמשים הבאים כבר אינם רשומים לקורס:"
-
-#. Translators: A list of users appears after this sentence;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid "The following users are no longer enrolled in the course:"
-msgstr "המשתמשים הבאים כבר אינם רשומים לקורס:"
-
-#. Translators: A list of users appears after this sentence. This situation
-#. arises when a staff member tries to unenroll a user who is not currently
-#. enrolled in this course.;
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-#: lms/static/js/instructor_dashboard/membership.js
-msgid ""
-"These users were not affiliated with the course so could not be unenrolled:"
-msgstr "משתמשים אלה לא היו קשורים לקורס ולכן לא ניתן לבטל הרשמתם:"
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "Your message must have a subject."
-msgstr "הודעתך חייבת להכיל נושא."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "Your message cannot be blank."
-msgstr "הודעתך אינה יכולה להיות ריקה."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "Your message must have at least one target."
-msgstr "ההודעה שלך חייבת להכיל יעד אחד לפחות."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid ""
-"There are invalid keywords in your email. Check the following keywords and "
-"try again."
-msgstr ""
-"ישנן מילות מפתח לא חוקיות בדואר אלקטרוני שלך. אנא בדוק את מילות המפתח הבאות "
-"ונסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "Yourself"
-msgstr "אתה"
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "Everyone who has staff privileges in this course"
-msgstr "כל אחד שיש לו זכויות של צוות בקורס זה"
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "All learners who are enrolled in this course"
-msgstr "כל הלומדים שרשומים לקורס זה"
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "All learners in the {cohort_name} cohort"
-msgstr "כל הלומדים בקבוצת הלימוד {cohort_name}"
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid ""
-"Your email message was successfully queued for sending. In courses with a "
-"large number of learners, email messages to learners might take up to an "
-"hour to be sent."
-msgstr ""
-"הודעת הדואר אלקטרוני נכנסה בהצלחה להמתנה למשלוח. בקורסים עם מספר גדול של "
-"לומדים, ייתכן שייקח עד שעה עד שהודעות הדואר האלקטרוני לכל הלומדים יישלחו."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid ""
-"You are sending an email message with the subject {subject} to the following"
-" recipients."
-msgstr "אתה שולח הודעת דואר אלקטרוני עם הנושא {subject} לנמענים הבאים."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "Is this OK?"
-msgstr "האם זה בסדר?"
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "Error sending email."
-msgstr "שגיאה בזמן שליחת דואר אלקטרוני."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "There is no email history for this course."
-msgstr "לא קיימת היסטוריה בדואר אלקטרוני לקורס זה."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "There was an error obtaining email task history for this course."
-msgstr "אירעה שגיאה בקבלת היסטורית משימות דואר אלקטרוני לקורס זה."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "There was an error obtaining email content history for this course."
-msgstr "אירעה שגיאה בקבלת היסטורית התוכן של דואר אלקטרוני לקורס זה."
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-#: lms/static/js/instructor_dashboard/send_email.js
-msgid "Send to:"
-msgstr "שלח אל:"
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid "Please enter a student email address or username."
-msgstr "נא הכנס את כתובת הדואר אלקטרוני או שם המשתמש של הסטודנט. "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Error getting student progress url for '<%= student_id %>'. Make sure that "
-"the student identifier is spelled correctly."
-msgstr ""
-"שגיאה בקבלת url התקדמות הסטודנט עבור '<%= student_id %>'. ודא כי מזהה "
-"הסטודנט מאוית בצורה נכונה."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid "Please enter a problem location."
-msgstr "נא להזין את מיקום בעיה."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Success! Problem attempts reset for problem '<%= problem_id %>' and student "
-"'<%= student_id %>'."
-msgstr ""
-"הצלחה! נסיניות איפוס עבור בעיה  '<%= problem_id %>' וסטודנט '<%= student_id "
-"%>'."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Error resetting problem attempts for problem '<%= problem_id %>' and student"
-" '<%= student_id %>'. Make sure that the problem and student identifiers are"
-" complete and correct."
-msgstr ""
-"שגיאת איפוס נסיונות עבור בעיה '<%= problem_id %>'  וסטודנט '<%= student_id "
-"%>'. ודא כי מזהה הבעיה והתלמיד הם מלאים ונכונים."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Delete student '<%= student_id %>'s state on problem '<%= problem_id %>'?"
-msgstr ""
-"האם למחוק את מצב הסטודנט  '<%= student_id %>' לבעיה '<%= problem_id %>'?"
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Error deleting student '<%= student_id %>'s state on problem '<%= problem_id"
-" %>'. Make sure that the problem and student identifiers are complete and "
-"correct."
-msgstr ""
-"שגיאה  במחיקת מצב הבעיה של הסטודנט '<%= student_id %>' בבעיה '<%= problem_id"
-" %>'. ודא כי מזהי הבעיה ומזהה הסטודנט שלמים ומדויקים. "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid "Module state successfully deleted."
-msgstr "מצב מודול נמחק בהצלחה"
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Started rescore problem task for problem '<%= problem_id %>' and student "
-"'<%= student_id %>'. Click the 'Show Background Task History for Student' "
-"button to see the status of the task."
-msgstr ""
-"הופעלה משימה לחישוב ציונים מחדש עבור בעיה  '<%= problem_id %>' וסטודנט  '<%="
-" student_id %>'. לחץ על כפתור \"הצג היסטורית משימות רקע עבור סטודנט\" כדי "
-"לראות את מצב המשימה."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Error starting a task to rescore problem '<%= problem_id %>' for student "
-"'<%= student_id %>'. Make sure that the the problem and student identifiers "
-"are complete and correct."
-msgstr ""
-"שגיה בזמן הפעלת לחישוב ציונים מחדש עבור בעיה  '<%= problem_id %>' של סטודנט "
-"'<%= student_id %>'. ודא שמזהה הבעיה והתלמיד הם מלאים ונכונים."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Error getting task history for problem '<%= problem_id %>' and student '<%= "
-"student_id %>'. Make sure that the problem and student identifiers are "
-"complete and correct."
-msgstr ""
-"שגיאה בזמן קבלת היסטוריית משימות עבור בעיה '<%= problem_id %>' של הסטודנט  "
-"'<%= student_id %>'. ודא שמזהה הבעיה והתלמיד הם מלאים ונכונים."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid "Entrance exam attempts is being reset for student '{student_id}'."
-msgstr "בחינת כניסה עבור סטודנט '{student_id}' בתהליך איפוס כעת."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid ""
-"Error resetting entrance exam attempts for student '{student_id}'. Make sure"
-" student identifier is correct."
-msgstr ""
-"טעות באיפוס ניסיונות לבחינת הכניסה עבור סטודנט  '{student_id}'. ודא כי מזהה "
-"הסטודנט מדויק. "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Started entrance exam rescore task for student '{student_id}'. Click the "
-"'Show Background Task History for Student' button to see the status of the "
-"task."
-msgstr ""
-"החל תהליך ציון מחדש עבור מבחן כניסה לסטודנט '{student_id}'. לחץ על כפתור "
-"'הראה היסטורית משימות רקע עבור סטודנט' כדי לראות את דוח מצב המשימות."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid ""
-"Error starting a task to rescore entrance exam for student '{student_id}'. "
-"Make sure that entrance exam has problems in it and student identifier is "
-"correct."
-msgstr ""
-"שגיאה בעת מתן ציון מחדש למבחן הכניסה לסטודנט  '{student_id}'. ודא שיש בעיות "
-"במבחן הכניסה וכי מזהה הסטודנט נכון."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid "Enter a student's username or email address."
-msgstr "הזן שם משתמש או כתובת דואר אלקטרוני של סטודנט"
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid ""
-"Do you want to allow this student ('{student_id}') to skip the entrance "
-"exam?"
-msgstr ""
-"האם אתה מעוניין לאפשר לסטודנט זה ('{student_id}')  לדלג על מבחן הכניסה? "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid ""
-"An error occurred. Make sure that the student's username or email address is"
-" correct and try again."
-msgstr ""
-"אירעה שגיאה. אנא ודא כי שם המשתמש של הסטודנט או כתובת הדואר האלקטרוני שלו "
-"נכונה ונסה שוב."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid "Entrance exam state is being deleted for student '{student_id}'."
-msgstr "מצב בחינת הכניסה נמחק עבור סטודנט '{student_id}'."
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid ""
-"Error deleting entrance exam state for student '{student_id}'. Make sure "
-"student identifier is correct."
-msgstr ""
-"טעות במחיקה של מצב מבחן הכניסה עבור סטודנט '{student_id}'. ודא שמזהה הסטודנט"
-" נכון. "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid ""
-"Error getting entrance exam task history for student '{student_id}'. Make "
-"sure student identifier is correct."
-msgstr ""
-"שגיאה בקבלת ההיסטוריה של המשימות במבחן הכניסה עבור סטודנט '{student_id}'. "
-"ודא שמזהה הסטודנט נכון.  "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid "Reset attempts for all students on problem '<%= problem_id %>'?"
-msgstr "אפס ניסיונות עבור כל הסטודנטים בבעיה  '<%= problem_id %>'? "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Successfully started task to reset attempts for problem '<%= problem_id %>'."
-" Click the 'Show Background Task History for Problem' button to see the "
-"status of the task."
-msgstr ""
-"התחיל בהצלחה את המשימה לאיפוס נסיונות עבור בעיה '<%= problem_id %>'. לחץ על "
-"לחצן 'הצג היסטורית משימות רקע עבור בעיה' לראות דוח מצב עבור בעיה.  "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Error starting a task to reset attempts for all students on problem '<%= "
-"problem_id %>'. Make sure that the problem identifier is complete and "
-"correct."
-msgstr ""
-"שגיאה בתחילת משימה לאיפוס ניסיונות לכל הסטודנטים בבעיה '<%= problem_id %>'. "
-"ודא כי מזהה הבעיה מושלם ונכון. "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid "Rescore problem '<%= problem_id %>' for all students?"
-msgstr "תן ציון מחדש עבור הבעיה '<%= problem_id %>' לכלל הסטודנטים? "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Successfully started task to rescore problem '<%= problem_id %>' for all "
-"students. Click the 'Show Background Task History for Problem' button to see"
-" the status of the task."
-msgstr ""
-"החלה בהצלחה משימת מתן ציון מחדש לבעיה '<%= problem_id %>' עבור כל הסטודנטים."
-" לחץ על כפתור 'הצג היסטורית משימות רקע עבור בעיה' כדי לראות דוח מצב עבור "
-"משימה. "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-msgid ""
-"Error starting a task to rescore problem '<%= problem_id %>'. Make sure that"
-" the problem identifier is complete and correct."
-msgstr ""
-"שגיאה בתחילת משימת מתן ציון מחדש לבעיה  '<%= problem_id %>'. ודא שמזהה הבעיה"
-" שלם ונכון. "
-
-#: lms/static/coffee/src/instructor_dashboard/student_admin.js
-#: lms/static/js/instructor_dashboard/student_admin.js
-msgid "Error listing task history for this student and problem."
-msgstr "שגיאה ברישום היסטורית משימות עבור סטודנט זה ובעיה זו."
-
-#. Translators: a "Task" is a background process such as grading students or
-#. sending email
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Task Type"
-msgstr "סוג משימה"
-
-#. Translators: a "Task" is a background process such as grading students or
-#. sending email
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Task inputs"
-msgstr "תשומות משימה"
-
-#. Translators: a "Task" is a background process such as grading students or
-#. sending email
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Task ID"
-msgstr "מזהה משימה"
-
-#. Translators: a "Requester" is a username that requested a task such as
-#. sending email
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Requester"
-msgstr "מבקש"
-
-#. Translators: A timestamp of when a task (eg, sending email) was submitted
-#. appears after this
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Submitted"
-msgstr "הוגש"
-
-#. Translators: The length of a task (eg, sending email) in seconds appears
-#. this
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Duration (sec)"
-msgstr "משך זמן (שניות)"
-
-#. Translators: The state (eg, "In progress") of a task (eg, sending email)
-#. appears after this.
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "State"
-msgstr "מדינה"
-
-#. Translators: a "Task" is a background process such as grading students or
-#. sending email
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Task Status"
-msgstr "מצב המשימה"
-
-#. Translators: a "Task" is a background process such as grading students or
-#. sending email
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Task Progress"
-msgstr "התקדמות המשימה"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid ""
-"An error occurred retrieving your email. Please try again later, and contact"
-" technical support if the problem persists."
-msgstr ""
-"אירעה שגיאה באחזור הדואר האלקטרוני שלך. אנא נסה שוב מאוחר יותר. אם הבעיה "
-"נמשכת, פנה לתמיכה טכנית. "
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Subject"
-msgstr "נושא"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Sent By"
-msgstr "נשלח על ידי"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Sent To"
-msgstr "נשלח אל"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Time Sent"
-msgstr "זמן השליחה:"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Number Sent"
-msgstr "מספר שנשלח"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Copy Email To Editor"
-msgstr "העתק כתובת דואר אלקטרוני לעורך"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Subject:"
-msgstr "נושא:"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Sent By:"
-msgstr "נשלח על ידי:"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Time Sent:"
-msgstr "זמן השליחה:"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Sent To:"
-msgstr "נשלח אל:"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "Message:"
-msgstr "הודעה:"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "No tasks currently running."
-msgstr "אין משימות בהרצה כרגע."
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid "File Name"
-msgstr "שם הקובץ"
-
-#: lms/static/coffee/src/instructor_dashboard/util.js
-#: lms/static/js/instructor_dashboard/util.js
-msgid ""
-"Links are generated on demand and expire within 5 minutes due to the "
-"sensitive nature of student information."
-msgstr ""
-"קישורים נוצרים לפי דרישה ותוקפם פג לאחר 5 דקות בגלל רגישות מידע על הסטודנט."
-
 #: lms/static/js/Markdown.Editor.js
 msgid "Insert Hyperlink"
 msgstr "הכנס היפר קישור"
 
 #: lms/static/js/Markdown.Editor.js
-msgid "e.g. 'http://google.com/'"
-msgstr "לדוגמה: 'http://google.com/'"
+msgid "e.g. 'http://google.com'"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Link Description"
@@ -3708,8 +2925,11 @@ msgid "Heading"
 msgstr "כותרת עליונה"
 
 #: lms/static/js/ajax-error.js
-msgid "You have been logged out of your edX account. "
-msgstr "התנתקת מחשבון הקמפוס שלך."
+msgid ""
+"You have been logged out of your edX account. Click Okay to log in again "
+"now. Click Cancel to stay on this page (you must log in again to save your "
+"work)."
+msgstr ""
 
 #: lms/static/js/api_admin/views/catalog_preview.js
 msgid "Preview this query"
@@ -3733,6 +2953,12 @@ msgstr "סמן עמוד זה"
 msgid "Click to remove"
 msgstr "לחץ להסרה"
 
+#: lms/static/js/bookmarks/views/bookmarks_list.js
+#: lms/static/js/instructor_dashboard/data_download.js
+#: lms/templates/search/search_loading.underscore
+msgid "Loading"
+msgstr "טוען"
+
 #: lms/static/js/ccx/schedule.js
 msgid "All subsections"
 msgstr "כל תתי הקטעים"
@@ -3741,8 +2967,7 @@ msgstr "כל תתי הקטעים"
 msgid "All units"
 msgstr "כל היחידות"
 
-#: lms/static/js/ccx/schedule.js lms/static/js/ccx/schedule.js.c
-#: lms/templates/ccx/schedule.underscore
+#: lms/static/js/ccx/schedule.js lms/templates/ccx/schedule.underscore
 msgid "Click to change"
 msgstr "לחץ לשינוי"
 
@@ -3750,7 +2975,7 @@ msgstr "לחץ לשינוי"
 msgid "Select a chapter"
 msgstr "בחר פרק"
 
-#: lms/static/js/ccx/schedule.js lms/static/js/ccx/schedule.js.c
+#: lms/static/js/ccx/schedule.js
 msgid "Save changes"
 msgstr "שמור שינויים"
 
@@ -3771,11 +2996,21 @@ msgid "Enter Start Date and Time"
 msgstr "הזן תאריך התחלה ושעה"
 
 #: lms/static/js/certificates/models/certificate_exception.js
-#: lms/static/js/certificates/models/certificate_invalidation.js
-msgid "Student username/email field is required and can not be empty. "
+msgid ""
+"Student username/email field is required and can not be empty. Kindly fill "
+"in username/email and then press \"Add to Exception List\" button."
 msgstr ""
-"השדה של שם המשתמש/דואר אלקטרוני של הסטודנט הוא שדה חובה ולא ניתן להשאירו "
-"ריק. "
+"שדה שם המשתמש/דואר אלקטרוני של הסטודנט הוא שדה חובה ולא ניתן להשאירו ריק. "
+"אנא מלא את שם המשתמש/הדואר האלקטרוני ולאחר מכן לחץ על הלחצן \"הוסף לרשימת "
+"חריגים\"."
+
+#: lms/static/js/certificates/models/certificate_invalidation.js
+msgid ""
+"Student username/email field is required and can not be empty. Kindly fill "
+"in username/email and then press \"Invalidate Certificate\" button."
+msgstr ""
+"שדה שם המשתמש/דואר אלקטרוני של הסטודנט הוא שדה חובה ולא ניתן להשאירו ריק. "
+"אנא מלא את שם המשתמש/דואר אלקטרוני ולאחר מכן לחץ על הלחצן \"פסילת תעודה\"."
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid "Uploaded file issues. Click on \"+\" to view."
@@ -3790,36 +3025,37 @@ msgid " learner is successfully added to the exception list"
 msgstr " הלומד נוסף בהצלחה לרשימת החריגים"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " records are not in correct format and not added to"
-msgstr " הרשומות אינן בתבנית הנכונה ולא נוספו ל"
+msgid " records are not in correct format and not added to the exception list"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " record is not in correct format and not added to the exception"
-msgstr " הרשומה אינה בתבנית הנכונה ולא נוספה לחריגים"
+msgid " record is not in correct format and not added to the exception list"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners do not exist in LMS and not added to the"
-msgstr " הלומדים אינם קיימים ב-LMS ולא נוספו ל"
+msgid " learners do not exist in LMS and not added to the exception list"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learner does not exist in LMS and not added to the exception list"
 msgstr " הלומד אינו קיים ב-LMS ולא נוסף לרשימת החריגים"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners are already white listed and not added to"
-msgstr " הלומדים כבר נוספו לרשימה הלבנה ולא נוספו ל"
+msgid " learners are already white listed and not added to the exception list"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner is already white listed and not added to the exception "
-msgstr " הלומד כבר נוסף לרשימה הלבנה ולא נוסף לחריגים "
+msgid " learner is already white listed and not added to the exception list"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners are not enrolled in course and not added to"
-msgstr " הלומדים אינם רשומים לקורס ולא נוספו ל"
+msgid ""
+" learners are not enrolled in course and not added to the exception list"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner is not enrolled in course and not added to the exception"
-msgstr " הלומד אינו רשום בקורס ולא נוסף לחריגים"
+msgid " learner is not enrolled in course and not added to the exception list"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
 msgid ""
@@ -3895,14 +3131,14 @@ msgid "An error occurred. Please try again later."
 msgstr "אירעה שגיאה. אנא נסה שוב מאוחר יותר."
 
 #: lms/static/js/discovery/views/search_form.js
-#, c-format
+#, javascript-format
 msgid "Viewing %s course"
 msgid_plural "Viewing %s courses"
 msgstr[0] "מציג קורס %s"
 msgstr[1] "מציג %s קורסים"
 
 #: lms/static/js/discovery/views/search_form.js
-#, c-format
+#, javascript-format
 msgid "We couldn't find any results for \"%s\"."
 msgstr "לא נמצאה אף תוצאה עבור \"%s\"."
 
@@ -3967,6 +3203,10 @@ msgstr "תוצאות חיפוש"
 #: lms/static/js/edxnotes/views/tabs/tags.js
 msgid "[no tags]"
 msgstr "[no tags]"
+
+#: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
+msgid "Unable to submit application"
+msgstr "לא ניתן לשלוח אפליקציה"
 
 #: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
 #: lms/static/js/student_account/views/LoginView.js
@@ -4154,6 +3394,50 @@ msgstr "להתחיל ביצירה מחדש של תעודות עבור הסטוד
 msgid "Error while regenerating certificates. Please try again."
 msgstr "אירעה שגיאה בעת יצירה מחדש של התעודות. נסה שוב."
 
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Loading data..."
+msgstr "טוען נתונים..."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error getting issued certificates list."
+msgstr "אירעה שגיאה בעת קבלת רשימת התעודות שנופקו."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating proctored exam results. Please try again."
+msgstr "אירעה שגיאה בעת יצירת תוצאות מבחנים תחת פיקוח. נא נסה שוב."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating survey results. Please try again."
+msgstr "אירעה שגיאה בעת יצירת תוצאות סקר. נא נסה שוב."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating student profile information. Please try again."
+msgstr "שגיאת בזמן יצירת פרופיל סטודנט. נא נסה שוב."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error getting student list."
+msgstr "שגיאה בקבלת רשימת הסטודנטים."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating list of students who may enroll. Please try again."
+msgstr "אירעה שגיאה בעת יצירת רשימת סטודנטים שעשויים להירשם. נא נסה שוב."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error retrieving grading configuration."
+msgstr "שגיאה בטעינה של קונפיגורציית ציונים."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating grades. Please try again."
+msgstr "שגיאה בזמן יצירת ציונים. נא נסה שוב."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating problem grade report. Please try again."
+msgstr "אירעה שגיאה בעת יצירת דוח דירוג בעיות. נא נסה שוב."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating ORA data report. Please try again."
+msgstr "אירעה שגיאה בעת דוח נתוני ORA. נא נסה שוב."
+
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid ""
 "There was a problem creating the report. Select \"Create Executive Summary\""
@@ -4176,6 +3460,259 @@ msgstr "שחזר קוד הרשמה"
 msgid "Mark enrollment code as unused"
 msgstr "סמן את קוד ההרשמה כ'אינו בשימוש'"
 
+#: lms/static/js/instructor_dashboard/membership.js
+#: lms/static/js/student_account/views/account_settings_factory.js
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Username"
+msgstr "שם משתמש"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Email"
+msgstr "דואר אלקטרוני"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Revoke access"
+msgstr "שלול גישה"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Enter username or email"
+msgstr "הכנס שם משתמש או כתובת דואר אלקטרוני"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Please enter a username or email."
+msgstr "אנא הכנס שם משתמש או כתובת דואר אלקטרוני"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Error changing user's permissions."
+msgstr "שגיאה בשינוי אישורי משתמש"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Could not find a user with username or email address '<%- identifier %>'."
+msgstr ""
+"לא ניתן היה לאתר משתמש באמצעות שם המשתמש או כתובת הדואר האלקטרוני '<%- "
+"identifier %>'."
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Error: User '<%- username %>' has not yet activated their account. Users "
+"must create and activate their accounts before they can be assigned a role."
+msgstr ""
+"שגיאה: משתמש '<%- username %>'  לא הפעיל עדיין את חשבונו. משתמשים חייבים "
+"ליצור ולהפעיל את חשבונותיהם לפני שניתן להקצות להם תפקיד."
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Error: You cannot remove yourself from the Instructor group!"
+msgstr "שגיאה: אינך יכול להסיר עצמך מקבוצת המדריכים."
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Errors"
+msgstr "שגיאות"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "The following errors were generated:"
+msgstr "השגיאות הבאות נוצרו:"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Warnings"
+msgstr "אזהרות"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "The following warnings were generated:"
+msgstr "האזהרות הבאות נוצרו:"
+
+#: lms/static/js/instructor_dashboard/membership.js
+#: lms/static/js/views/fields.js
+msgid "Success"
+msgstr "הצלחה"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "All accounts were created successfully."
+msgstr "כל החשבונות נוצרו בהצלחה"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Error adding/removing users as beta testers."
+msgstr "שגיאה בהוספה/הסרה של משתמשים כבודקי בטא."
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users were successfully added as beta testers:"
+msgstr "משתמשים אלה נוספו בהצלחה כבודקי בטא:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users were successfully removed as beta testers:"
+msgstr "משתמשים אלו הוסרו בהצלחה כבודקי בטא:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users were not added as beta testers:"
+msgstr "משתמשים אלה לא נוספו כבודקי בטא:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users were not removed as beta testers:"
+msgstr "משתמשים אלה לא הוסרו כבודקי בטא:"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Users must create and activate their account before they can be promoted to "
+"beta tester."
+msgstr ""
+"משתמשים חייבים ליצור ולהפעיל את החשבון שלהם לפני שיוכלו להתקדם לתפקיד בוחן "
+"בטא."
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Could not find users associated with the following identifiers:"
+msgstr "לא הצלחתי למצוא משתמשים המשוייכים למזהים הבאים:"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Reason field should not be left blank."
+msgstr "שדה הסיבה אינו יכול להישאר ריק."
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Error enrolling/unenrolling users."
+msgstr "שגיאה בהרשמה/ביטול הרשמה של משתמשים."
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "The following email addresses and/or usernames are invalid:"
+msgstr "כתובות הדואר האלקטרוני הבאות ו/או שמות המשתמש אינן חוקיות:"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Successfully enrolled and sent email to the following users:"
+msgstr "נרשם בהצלחה ושלח דואר אלקטרוני למשתמשים הבאים:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Successfully enrolled the following users:"
+msgstr "המשתמשים הבאים נרשמו בהצלחה:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Successfully sent enrollment emails to the following users. They will be "
+"allowed to enroll once they register:"
+msgstr ""
+"הודעות הרשמה נשלחו בהצלחה למשתמשים הבאים. הם יהיו רשאים להירשם לקורס לאחר "
+"שישלימו את ההרשמה לאתר:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users will be allowed to enroll once they register:"
+msgstr "המשתמשים הבאים יהיו רשאים להירשם לאחר שישלימו את הרשמתם לאתר:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Successfully sent enrollment emails to the following users. They will be "
+"enrolled once they register:"
+msgstr ""
+"הודעות הרשמה נשלחו בהצלחה למשתמשים הבאים. הם יהיו רשאים להירשם לקורס לאחר "
+"שישלימו את ההרשמה לאתר:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users will be enrolled once they register:"
+msgstr "המשתמשים הבאים יירשמו לקורס ברגע שירשמו לאתר:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Emails successfully sent. The following users are no longer enrolled in the "
+"course:"
+msgstr ""
+"הודעות דואר אלקטרוני נשלחו בהצלחה. המשתמשים הבאים כבר אינם רשומים לקורס:"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "The following users are no longer enrolled in the course:"
+msgstr "המשתמשים הבאים כבר אינם רשומים לקורס:"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"These users were not affiliated with the course so could not be unenrolled:"
+msgstr "משתמשים אלה לא היו קשורים לקורס ולכן לא ניתן לבטל הרשמתם:"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Your message must have a subject."
+msgstr "הודעתך חייבת להכיל נושא."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Your message cannot be blank."
+msgstr "הודעתך אינה יכולה להיות ריקה."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Your message must have at least one target."
+msgstr "ההודעה שלך חייבת להכיל יעד אחד לפחות."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid ""
+"There are invalid keywords in your email. Check the following keywords and "
+"try again."
+msgstr ""
+"ישנן מילות מפתח לא חוקיות בדואר אלקטרוני שלך. אנא בדוק את מילות המפתח הבאות "
+"ונסה שוב."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Yourself"
+msgstr "אתה"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Everyone who has staff privileges in this course"
+msgstr "כל אחד שיש לו זכויות של צוות בקורס זה"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "All learners who are enrolled in this course"
+msgstr "כל הלומדים שרשומים לקורס זה"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "All learners in the {cohort_name} cohort"
+msgstr "כל הלומדים בקבוצת הלימוד {cohort_name}"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid ""
+"Your email message was successfully queued for sending. In courses with a "
+"large number of learners, email messages to learners might take up to an "
+"hour to be sent."
+msgstr ""
+"הודעת הדואר אלקטרוני נכנסה בהצלחה להמתנה למשלוח. בקורסים עם מספר גדול של "
+"לומדים, ייתכן שייקח עד שעה עד שהודעות הדואר האלקטרוני לכל הלומדים יישלחו."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid ""
+"You are sending an email message with the subject {subject} to the following"
+" recipients."
+msgstr "אתה שולח הודעת דואר אלקטרוני עם הנושא {subject} לנמענים הבאים."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Is this OK?"
+msgstr "האם זה בסדר?"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Error sending email."
+msgstr "שגיאה בזמן שליחת דואר אלקטרוני."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "There is no email history for this course."
+msgstr "לא קיימת היסטוריה בדואר אלקטרוני לקורס זה."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "There was an error obtaining email task history for this course."
+msgstr "אירעה שגיאה בקבלת היסטורית משימות דואר אלקטרוני לקורס זה."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "There was an error obtaining email content history for this course."
+msgstr "אירעה שגיאה בקבלת היסטורית התוכן של דואר אלקטרוני לקורס זה."
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Send to:"
+msgstr "שלח אל:"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Please enter a student email address or username."
+msgstr "נא הכנס את כתובת הדואר אלקטרוני או שם המשתמש של הסטודנט. "
+
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error getting student progress url for '<%- student_id %>'. Make sure that "
@@ -4183,6 +3720,10 @@ msgid ""
 msgstr ""
 "שגיאה בקבלת כתובת URL של התקדמות הסטודנט עבור '<%- student_id %>'. ודא שמזהה"
 " הסטודנט מאוית כהלכה."
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Please enter a problem location."
+msgstr "נא להזין את מיקום בעיה."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -4217,6 +3758,10 @@ msgstr ""
 "%>'. ודא כי מזהי הבעיה והסטודנט שלמים ומדויקים. "
 
 #: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Module state successfully deleted."
+msgstr "מצב מודול נמחק בהצלחה"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error getting task history for problem '<%- problem_id %>' and student '<%- "
 "student_id %>'. Make sure that the problem and student identifiers are "
@@ -4224,6 +3769,57 @@ msgid ""
 msgstr ""
 "שגיאה בזמן קבלת היסטוריית משימות עבור הבעיה '<%- problem_id %>' והסטודנט  "
 "'<%- student_id %>'. ודא שמזהה הבעיה והסטודנט הם מלאים ונכונים."
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Entrance exam attempts is being reset for student '{student_id}'."
+msgstr "בחינת כניסה עבור סטודנט '{student_id}' בתהליך איפוס כעת."
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error resetting entrance exam attempts for student '{student_id}'. Make sure"
+" student identifier is correct."
+msgstr ""
+"טעות באיפוס ניסיונות לבחינת הכניסה עבור סטודנט  '{student_id}'. ודא כי מזהה "
+"הסטודנט מדויק. "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Enter a student's username or email address."
+msgstr "הזן שם משתמש או כתובת דואר אלקטרוני של סטודנט"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Do you want to allow this student ('{student_id}') to skip the entrance "
+"exam?"
+msgstr ""
+"האם אתה מעוניין לאפשר לסטודנט זה ('{student_id}')  לדלג על מבחן הכניסה? "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"An error occurred. Make sure that the student's username or email address is"
+" correct and try again."
+msgstr ""
+"אירעה שגיאה. אנא ודא כי שם המשתמש של הסטודנט או כתובת הדואר האלקטרוני שלו "
+"נכונה ונסה שוב."
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Entrance exam state is being deleted for student '{student_id}'."
+msgstr "מצב בחינת הכניסה נמחק עבור סטודנט '{student_id}'."
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error deleting entrance exam state for student '{student_id}'. Make sure "
+"student identifier is correct."
+msgstr ""
+"טעות במחיקה של מצב מבחן הכניסה עבור סטודנט '{student_id}'. ודא שמזהה הסטודנט"
+" נכון. "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error getting entrance exam task history for student '{student_id}'. Make "
+"sure student identifier is correct."
+msgstr ""
+"שגיאה בקבלת ההיסטוריה של המשימות במבחן הכניסה עבור סטודנט '{student_id}'. "
+"ודא שמזהה הסטודנט נכון.  "
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Reset attempts for all students on problem '<%- problem_id %>'?"
@@ -4245,6 +3841,10 @@ msgid ""
 msgstr ""
 "שגיאה בהתחלת משימה לאיפוס ניסיונות לכל הסטודנטים בבעיה '<%- problem_id %>'. "
 "ודא כי מזהה הבעיה מושלם ונכון."
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Error listing task history for this student and problem."
+msgstr "שגיאה ברישום היסטורית משימות עבור סטודנט זה ובעיה זו."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -4273,6 +3873,15 @@ msgstr ""
 " סטטוס משימות' כדי להציג את סטטוס המשימה."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error starting a task to rescore entrance exam for student '{student_id}'. "
+"Make sure that entrance exam has problems in it and student identifier is "
+"correct."
+msgstr ""
+"שגיאה בעת מתן ציון מחדש למבחן הכניסה לסטודנט  '{student_id}'. ודא שיש בעיות "
+"במבחן הכניסה וכי מזהה הסטודנט נכון."
+
+#: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Rescore problem '<%- problem_id %>' for all students?"
 msgstr "לתת ציון מחדש עבור בעיה '<%- problem_id %>' לכלל הסטודנטים? "
 
@@ -4292,8 +3901,129 @@ msgstr ""
 "שגיאה בהתחלת משימה לתת ציון מחדש לבעיה  '<%- problem_id %>'. ודא שמזהה הבעיה"
 " מושלם ונכון. "
 
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task Type"
+msgstr "סוג משימה"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task inputs"
+msgstr "תשומות משימה"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task ID"
+msgstr "מזהה משימה"
+
+#. Translators: a "Requester" is a username that requested a task such as
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Requester"
+msgstr "מבקש"
+
+#. Translators: A timestamp of when a task (eg, sending email) was submitted
+#. appears after this
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Submitted"
+msgstr "הוגש"
+
+#. Translators: The length of a task (eg, sending email) in seconds appears
+#. this
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Duration (sec)"
+msgstr "משך זמן (שניות)"
+
+#. Translators: The state (eg, "In progress") of a task (eg, sending email)
+#. appears after this.
+#: lms/static/js/instructor_dashboard/util.js
+msgid "State"
+msgstr "מדינה"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task Status"
+msgstr "מצב המשימה"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task Progress"
+msgstr "התקדמות המשימה"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid ""
+"An error occurred retrieving your email. Please try again later, and contact"
+" technical support if the problem persists."
+msgstr ""
+"אירעה שגיאה באחזור הדואר האלקטרוני שלך. אנא נסה שוב מאוחר יותר. אם הבעיה "
+"נמשכת, פנה לתמיכה טכנית. "
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Subject"
+msgstr "נושא"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Sent By"
+msgstr "נשלח על ידי"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Sent To"
+msgstr "נשלח אל"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Time Sent"
+msgstr "זמן השליחה:"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Number Sent"
+msgstr "מספר שנשלח"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Copy Email To Editor"
+msgstr "העתק כתובת דואר אלקטרוני לעורך"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Subject:"
+msgstr "נושא:"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Sent By:"
+msgstr "נשלח על ידי:"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Time Sent:"
+msgstr "זמן השליחה:"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Sent To:"
+msgstr "נשלח אל:"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Message:"
+msgstr "הודעה:"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "No tasks currently running."
+msgstr "אין משימות בהרצה כרגע."
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "File Name"
+msgstr "שם הקובץ"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid ""
+"Links are generated on demand and expire within 5 minutes due to the "
+"sensitive nature of student information."
+msgstr ""
+"קישורים נוצרים לפי דרישה ותוקפם פג לאחר 5 דקות בגלל רגישות מידע על הסטודנט."
+
 #: lms/static/js/search/base/views/search_results_view.js
-#, c-format
+#, javascript-format
 msgid "%s result"
 msgid_plural "%s results"
 msgstr[0] "תוצאה %s"
@@ -4379,12 +4109,34 @@ msgstr "הוספת הקורס שנבחר לעגלת הקניות שלך"
 msgid "Loading your courses"
 msgstr "טוען את הקורסים שלך"
 
+#: lms/static/js/student_account/views/FormView.js
+#: lms/static/js/student_account/views/RegisterView.js
+msgid "An error occurred."
+msgstr "אירעה שגיאה."
+
+#: lms/static/js/student_account/views/LoginView.js
+msgid "We couldn't sign you in."
+msgstr "לא ניתן לחבר אותך."
+
+#: lms/static/js/student_account/views/LoginView.js
+#, javascript-format
+msgid "An error occurred when signing you in to %s."
+msgstr ""
+
+#: lms/static/js/student_account/views/LoginView.js
+#: lms/templates/verify_student/intro_step.underscore
+msgid "Check Your Email"
+msgstr "בדוק את הדואר האלקטרוני שלך"
+
 #: lms/static/js/student_account/views/LoginView.js
 msgid ""
 "{paragraphStart}You entered {boldStart}{email}{boldEnd}. If this email "
 "address is associated with your {platform_name} account, we will send a "
 "message with password reset instructions to this email "
-"address.{paragraphEnd}"
+"address.{paragraphEnd}{paragraphStart}If you do not receive a password reset"
+" message, verify that you entered the correct email address, or check your "
+"spam folder.{paragraphEnd}{paragraphStart}If you need further assistance, "
+"{anchorStart}contact technical support{anchorEnd}.{paragraphEnd}"
 msgstr ""
 
 #: lms/static/js/student_account/views/LoginView.js
@@ -4392,6 +4144,30 @@ msgid ""
 "An error has occurred. Try refreshing the page, or check your Internet "
 "connection."
 msgstr "אירעה שגיאה. נסה לרענן את הדף או בדוק את חיבור האינטרנט."
+
+#: lms/static/js/student_account/views/LoginView.js
+msgid ""
+"You have successfully signed into %(currentProvider)s, but your "
+"%(currentProvider)s account does not have a linked %(platformName)s account."
+" To link your accounts, sign in now using your %(platformName)s password."
+msgstr ""
+"נרשמת בהצלחה ל-%(currentProvider)s, אך לחשבון %(currentProvider)sאין חשבון "
+"%(platformName)s מקושר. כדי לקשר את חשבונותייך, היכנס כעת באמצעות סיסמת "
+"%(platformName)s."
+
+#: lms/static/js/student_account/views/RegisterView.js
+msgid "We couldn't create your account."
+msgstr "לא ניתן ליצור את החשבון שלך. "
+
+#: lms/static/js/student_account/views/RegisterView.js
+msgid "You've successfully signed into %(currentProvider)s."
+msgstr "התחברת בהצלחה ל%(currentProvider)s."
+
+#: lms/static/js/student_account/views/RegisterView.js
+msgid ""
+"We just need a little more information before you start learning with "
+"%(platformName)s."
+msgstr "אנו זקוקים למידע נוסף לפני שתתחיל ללמוד עם %(platformName)s."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Basic Account Information"
@@ -4482,6 +4258,10 @@ msgstr ""
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "All Time Zones"
 msgstr "כל אזורי הזמן"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Default (Local Time Zone)"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Additional Information"
@@ -4881,10 +4661,6 @@ msgstr ""
 "אינך יכול לצפות בקורס זה כסטודנט או משתמש בגרסת הבטא לפני תאריך ההשקה של "
 "הקורס."
 
-#: lms/templates/class_dashboard/all_section_metrics.js
-msgid "Unable to retrieve data, please try again later."
-msgstr "לא ניתן לאחזר נתונים, אנא נסה שוב מאוחר יותר."
-
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "%(num_students)s student opened Subsection"
 msgid_plural "%(num_students)s students opened Subsection"
@@ -4909,9 +4685,9 @@ msgstr "מספר לומדים"
 
 #: lms/templates/courseware/progress_graph.js
 msgid "Overall Score"
-msgstr ""
+msgstr "ניקוד כללי"
 
-#: cms/static/cms/js/main.js
+#: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 msgid ""
 "This may be happening because of an error with our server or your internet "
 "connection. Try refreshing the page or making sure you are online."
@@ -5004,7 +4780,7 @@ msgid "Image must be in PNG format."
 msgstr "התמונה חייבת להיות בתבנית PNG."
 
 #: cms/static/js/collections/group.js
-#, c-format
+#, javascript-format
 msgid "Group %s"
 msgstr "קבוצה %s"
 
@@ -5419,9 +5195,31 @@ msgstr "פרסם"
 msgid "Marketing Slug is required."
 msgstr "שם הסלאג לשיווק הוא שדה חובה."
 
+#: cms/static/js/views/active_video_upload.js cms/static/js/views/assets.js
+msgid "Your file could not be uploaded"
+msgstr "לא ניתן להעלות את הקובץ שלך"
+
 #: cms/static/js/views/active_video_upload_list.js
 msgid "Your video uploads are not complete."
 msgstr "העלאות סרטוני הווידאו לא הושלמו."
+
+#: cms/static/js/views/active_video_upload_list.js
+msgid "Upload completed for video {fileName}"
+msgstr ""
+
+#: cms/static/js/views/active_video_upload_list.js
+msgid "Upload failed for video {fileName}"
+msgstr ""
+
+#: cms/static/js/views/active_video_upload_list.js
+msgid ""
+"{filename} is not in a supported file format. Supported file formats are "
+"{supportedFileFormats}."
+msgstr ""
+
+#: cms/static/js/views/active_video_upload_list.js
+msgid "{filename} exceeds maximum size of {maxFileSizeInGB} GB."
+msgstr ""
 
 #: cms/static/js/views/active_video_upload_list.js
 msgid ": video upload complete."
@@ -5472,19 +5270,15 @@ msgstr ""
 "{maxFileSizeRedirectUrl}"
 
 #: cms/static/js/views/assets.js
-msgid "Your file could not be uploaded"
-msgstr "לא ניתן להעלות את הקובץ שלך"
-
-#: cms/static/js/views/assets.js
 msgid "Max file size exceeded"
 msgstr "הגודל המקסימלי של הקובץ חרג יתר על המידה"
 
-#: cms/static/js/views/assets.js cms/static/js/views/assets.js.c
+#: cms/static/js/views/assets.js
 #: cms/templates/js/asset-upload-modal.underscore
 msgid "Upload New File"
 msgstr "העלה קובץ חדש"
 
-#: cms/static/js/views/assets.js cms/static/js/views/assets.js.c
+#: cms/static/js/views/assets.js
 msgid "Load Another File"
 msgstr "טען קובץ אחר"
 
@@ -5886,13 +5680,15 @@ msgstr "בהמתנה"
 
 #: cms/static/js/views/previous_video_upload.js
 msgid "Are you sure you want to remove this video from the list?"
-msgstr ""
+msgstr "האם אתה בטוח שברצונך להסיר את סרטון וידאו זה מהרשימה?"
 
 #: cms/static/js/views/previous_video_upload.js
 msgid ""
 "Removing a video from this list does not affect course content. Any content "
 "that uses a previously uploaded video ID continues to display in the course."
 msgstr ""
+"הסרת סרטון וידאו מרשימה זו אינה משפיעה על תוכן הקורס. כל תוכן המשתמש במספר "
+"מזהה של סרטון שהועלה בעבר ממשיך להציג בקורס זה."
 
 #: cms/static/js/views/settings/advanced.js
 msgid ""
@@ -6001,7 +5797,7 @@ msgstr "משכפל"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Deleting this {xblock_type} is permanent and cannot be undone."
-msgstr ""
+msgstr "מחיקת {xblock_type} זה היא קבועה ואינה הפיכה."
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid ""
@@ -6011,15 +5807,15 @@ msgstr "גם בכל תוכן שרשם תוכן זה כדרישה מוקדמת י
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Delete this {xblock_type} (and prerequisite)?"
-msgstr ""
+msgstr "האם למחוק את  {xblock_type} (and prerequisite) זה? "
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Yes, delete this {xblock_type}"
-msgstr ""
+msgstr "כן, מחק את {xblock_type} זה"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Delete this {xblock_type}?"
-msgstr ""
+msgstr "האם למחוק את {xblock_type} זה?"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "section"
@@ -6116,7 +5912,7 @@ msgstr "הגדרות"
 
 #: cms/static/js/views/xblock_outline.js
 msgid "New {component_type}"
-msgstr ""
+msgstr "חדש {component_type} "
 
 #. Translators: This message will be added to the front of messages of type
 #. warning,
@@ -6156,7 +5952,6 @@ msgstr "הקודם"
 
 #: cms/templates/js/previous-video-upload-list.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
-#: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Status"
 msgstr "סטטוס"
 
@@ -6256,12 +6051,12 @@ msgid "Error posting your message."
 msgstr "שגיאה בזמן פרסום ההודעה שלך"
 
 #: common/static/common/templates/discussion/new-post.underscore
-msgid "Visible To:"
-msgstr "ניתן לצפייה על ידי:"
+msgid "Add a Post"
+msgstr "הוסף פוסט"
 
 #: common/static/common/templates/discussion/new-post.underscore
-msgid "All Groups"
-msgstr "כל הקבוצות"
+msgid "Visible to"
+msgstr "גלוי עבור:"
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid ""
@@ -6272,9 +6067,8 @@ msgstr ""
 "הסטודנטים או להגבילם לקבוצה ספציפית של סטודנטים. "
 
 #: common/static/common/templates/discussion/new-post.underscore
-#: common/static/common/templates/discussion/thread-edit.underscore
-msgid "Title:"
-msgstr "כותרת:"
+msgid "All Groups"
+msgstr "כל הקבוצות"
 
 #: common/static/common/templates/discussion/new-post.underscore
 #: common/static/common/templates/discussion/thread-edit.underscore
@@ -6282,8 +6076,8 @@ msgid "Add a clear and descriptive title to encourage participation."
 msgstr "הוסף כותרת ברורה ותיאורית על מנת לעודד את ההשתתפות בדיון. "
 
 #: common/static/common/templates/discussion/new-post.underscore
-msgid "Enter your question or comment."
-msgstr "הזן את שאלתך או הערתך."
+msgid "Your question or idea"
+msgstr "שאלתך או רעיונך"
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "follow this post"
@@ -6298,8 +6092,11 @@ msgid "post anonymously to classmates"
 msgstr "שלח באופן אנונימי לסטודנטים אחרים"
 
 #: common/static/common/templates/discussion/new-post.underscore
-msgid "Add Post"
-msgstr "הוסף פוסט"
+#: common/static/common/templates/discussion/thread-response.underscore
+#: common/static/common/templates/discussion/thread.underscore
+#: lms/templates/verify_student/incourse_reverify.underscore
+msgid "Submit"
+msgstr "שלח"
 
 #: common/static/common/templates/discussion/post-user-display.underscore
 #: common/static/common/templates/discussion/thread-list-item.underscore
@@ -6424,12 +6221,6 @@ msgstr[1] "הצג תגובות (%(num_comments)s)"
 msgid "Add a comment"
 msgstr "הוסף הערה"
 
-#: common/static/common/templates/discussion/thread-response.underscore
-#: common/static/common/templates/discussion/thread.underscore
-#: lms/templates/verify_student/incourse_reverify.underscore
-msgid "Submit"
-msgstr "שלח"
-
 #: common/static/common/templates/discussion/thread-show.underscore
 #, python-format
 msgid "%(post_type)s posted %(time_ago)s by %(author)s"
@@ -6454,16 +6245,8 @@ msgid "This post is visible to everyone."
 msgstr "פוסט זה גלוי לכולם."
 
 #: common/static/common/templates/discussion/thread-type.underscore
-msgid "Post type:"
-msgstr "סוג הפוסט:"
-
-#: common/static/common/templates/discussion/thread-type.underscore
-msgid "Question"
-msgstr "שאלה"
-
-#: common/static/common/templates/discussion/thread-type.underscore
-msgid "Discussion"
-msgstr "דיון"
+msgid "Post type"
+msgstr "סוג הפוסט"
 
 #: common/static/common/templates/discussion/thread-type.underscore
 msgid ""
@@ -6473,6 +6256,14 @@ msgstr ""
 "בעזרת לחצן 'שאלות' תוכל להעלות סוגיה מסוימת המצריכה תשובה. בעזרת לחצן "
 "'דיונים' תוכל לחלוק רעיונות ולהתחיל בשיחות על נושאי הקורס השונים."
 
+#: common/static/common/templates/discussion/thread-type.underscore
+msgid "Question"
+msgstr "שאלה"
+
+#: common/static/common/templates/discussion/thread-type.underscore
+msgid "Discussion"
+msgstr "דיון"
+
 #: common/static/common/templates/discussion/thread.underscore
 msgid "Add a Response"
 msgstr "הוסף תגובה"
@@ -6481,17 +6272,9 @@ msgstr "הוסף תגובה"
 msgid "Add a response:"
 msgstr "הוסף תגובה:"
 
-#: common/static/common/templates/discussion/thread.underscore
-msgid "Expand discussion"
-msgstr "הרחב דיון"
-
-#: common/static/common/templates/discussion/thread.underscore
-msgid "Collapse discussion"
-msgstr "כווץ דיון"
-
 #: common/static/common/templates/discussion/topic.underscore
-msgid "Topic Area:"
-msgstr "תחום הנושא:"
+msgid "Topic area"
+msgstr "תחום הנושא"
 
 #: common/static/common/templates/discussion/topic.underscore
 msgid "Add your post to a relevant topic to help others find it."
@@ -6556,8 +6339,8 @@ msgstr ""
 "שלא נקראו בפוסטים שאתה עוקב אחריהם. "
 
 #: lms/djangoapps/discussion/static/discussion/templates/user-profile.underscore
-msgid "Active Threads"
-msgstr "שרשורים פעילים"
+msgid "All Posts"
+msgstr "כל הפוסטים"
 
 #: lms/djangoapps/support/static/support/templates/certificates.underscore
 msgid "username or email"
@@ -7050,10 +6833,6 @@ msgstr "פרטי הזמנה"
 #: lms/templates/financial-assistance/financial_assessment_submitted.underscore
 msgid "Financial Assistance Application"
 msgstr "בקשה לעזרה כספית"
-
-#: lms/templates/financial-assistance/financial_assessment_form.underscore
-msgid "Unable to submit application"
-msgstr "לא ניתן לשלוח אפליקציה"
 
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
 msgid "About You"
@@ -7634,31 +7413,6 @@ msgid "Register through edX"
 msgstr "הירשם דרך edX"
 
 #: lms/templates/student_account/login.underscore
-#, python-format
-msgid ""
-"You have successfully signed into %(currentProvider)s, but your "
-"%(currentProvider)s account does not have a linked %(platformName)s account."
-" To link your accounts, sign in now using your %(platformName)s password."
-msgstr ""
-"נרשמת בהצלחה ל-%(currentProvider)s, אך לחשבון %(currentProvider)sאין חשבון "
-"%(platformName)s מקושר. כדי לקשר את חשבונותייך, היכנס כעת באמצעות סיסמת "
-"%(platformName)s."
-
-#: lms/templates/student_account/login.underscore
-#: lms/templates/verify_student/intro_step.underscore
-msgid "Check Your Email"
-msgstr "בדוק את הדואר האלקטרוני שלך"
-
-#: lms/templates/student_account/login.underscore
-msgid "We couldn't sign you in."
-msgstr "לא יכולנו לחבר אותך."
-
-#: lms/templates/student_account/login.underscore
-#, python-format
-msgid "An error occurred when signing you in to %(platformName)s."
-msgstr "אירעה שגיאה בעת חיבורך ל-%(platformName)s."
-
-#: lms/templates/student_account/login.underscore
 msgid ""
 "Sign in here using your email address and password, or use one of the "
 "providers listed below."
@@ -7698,11 +7452,6 @@ msgid "Create an account"
 msgstr "צור חשבון"
 
 #: lms/templates/student_account/password_reset.underscore
-#: lms/templates/student_account/register.underscore
-msgid "An error occurred."
-msgstr "אירעה שגיאה."
-
-#: lms/templates/student_account/password_reset.underscore
 msgid "Password assistance"
 msgstr "עזרה עם סיסמה"
 
@@ -7717,22 +7466,6 @@ msgstr ""
 #: lms/templates/student_account/password_reset.underscore
 msgid "Reset my password"
 msgstr "שחזר את הסיסמה שלי"
-
-#: lms/templates/student_account/register.underscore
-msgid "We couldn't create your account."
-msgstr "לא הצלחנו ליצור את החשבון שלך. "
-
-#: lms/templates/student_account/register.underscore
-#, python-format
-msgid "You've successfully signed into %(currentProvider)s."
-msgstr "התחברת בהצלחה ל%(currentProvider)s."
-
-#: lms/templates/student_account/register.underscore
-#, python-format
-msgid ""
-"We just need a little more information before you start learning with "
-"%(platformName)s."
-msgstr "אנו זקוקים רק למידע מועט נוסף לפני שתתחיל ללמוד עם %(platformName)s."
 
 #: lms/templates/student_account/register.underscore
 msgid "Create an account using"
@@ -7849,11 +7582,6 @@ msgstr "רשימת קורסים להם נרשמת כסטודנט בעל זהות
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Course"
 msgstr "קורס"
-
-#: lms/templates/verify_student/enrollment_confirmation_step.underscore
-#, python-format
-msgid "Starts: %(start)s"
-msgstr "מתחיל: %(start)s "
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Explore your course!"
@@ -8131,6 +7859,8 @@ msgid ""
 "you will need to have these by {date} to qualify to earn a Verified "
 "Certificate."
 msgstr ""
+"אתה יכול לשלם עכשיו אפילו אם אין לך את הפריטים הבאים, אבל תצטרך אותם עד "
+"{date} על מנת לעמוד בתנאים לקבלת תעודת סיום מאומתת. "
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid ""
@@ -8217,7 +7947,7 @@ msgstr "תעודה מאומתת עבור {courseName}"
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid ""
 "To receive a certificate, you must also verify your identity before {date}."
-msgstr ""
+msgstr "לפני קבלת התעודה, עליך לאמת את זהותך {date}. "
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid "To receive a certificate, you must also verify your identity."
@@ -8423,6 +8153,14 @@ msgstr "גרור ושחרר או לחץ כאן על מנת להעלות קבצי
 #: cms/templates/js/active-video-upload-list.underscore
 msgid "Active Uploads"
 msgstr "העלאות פעילות"
+
+#: cms/templates/js/active-video-upload.underscore
+msgid "Read More"
+msgstr "קרא עוד"
+
+#: cms/templates/js/active-video-upload.underscore
+msgid "details about the failure"
+msgstr "פרטים אודות חוסר ההצלחה"
 
 #: cms/templates/js/add-xblock-component-button.underscore
 msgid "Add Component:"
@@ -8806,7 +8544,7 @@ msgstr "מבחן תחת פיקוח"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Timed Exam"
-msgstr ""
+msgstr "מבחן מתוזמן"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
@@ -8824,7 +8562,7 @@ msgstr "הגדר"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Duplicate"
-msgstr ""
+msgstr "שכפל"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Drag to reorder"
@@ -9213,11 +8951,11 @@ msgstr "מזהה וידאו"
 
 #: cms/templates/js/previous-video-upload.underscore
 msgid "Remove this video"
-msgstr ""
+msgstr "הסר סרטון וידאו זה "
 
 #: cms/templates/js/previous-video-upload.underscore
 msgid "Remove {video_name} video"
-msgstr ""
+msgstr "הסר את סרטון הוידאו  {video_name}   "
 
 #: cms/templates/js/publish-history.underscore
 msgid "Never published"
