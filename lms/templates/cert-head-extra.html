@@ -4,7 +4,6 @@ from django.utils.translation import get_language_bidi
 from microsite_configuration import microsite
 %>
 <%namespace name='static' file='static_content.html'/>
-<%namespace file="main.html" import="is_microsite" />
 
 <link rel="icon" type="image/x-icon" href="${static.url(microsite.get_value('favicon_path', settings.FAVICON_PATH))}"/>
 <%
