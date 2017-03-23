@@ -8,6 +8,6 @@
 -r custom.txt
 
 # For HTML email:
-git+https://github.com/eduNEXT/openedx-email-extensions.git@ab614e69ae9d7d48d2e2c1e7dfd1bb53d0c3bb7b#egg=openedx-email-extensions==0.1.1
+git+https://github.com/eduNEXT/openedx-email-extensions.git@a91563cad0970fbc0d77c6dacdb7aa3a045404e7#egg=openedx-email-extensions==0.1.2
 # For general Edunext extensions
 git+https://github.com/eduNEXT/edunext-openedx-extensions@d1169a7f275abd4cda2a8f2bc2dff796ebce77f1#egg=edunext-openedx-extensions==0.3.0
