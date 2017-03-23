@@ -95,11 +95,14 @@ def get_lms_link_for_item(location, preview=False):
     # checks LMS_BASE value in site configuration for the given course_org_filter(org)
     # if not found returns settings.LMS_BASE
     # eduNEXT 19.11.2015 make the link microsite aware, based on the org of the course
-    lms_base = SiteConfiguration.get_value_for_org(
-        location.org,
-        "LMS_BASE",
-        microsite.get_value_for_org(location.org, 'SITE_NAME', settings.LMS_BASE)
-    )
+    lms_base = microsite.get_value_for_org(location.org, 'SITE_NAME')
+
+    if not lms_base:
+        lms_base = SiteConfiguration.get_value_for_org(
+            location.org,
+            "LMS_BASE",
+            settings.LMS_BASE
+        )
 
     if lms_base is None:
         return None
@@ -130,11 +133,14 @@ def get_lms_link_for_certificate_web_view(user_id, course_key, mode):
     assert isinstance(course_key, CourseKey)
 
     # checks LMS_BASE value in SiteConfiguration against course_org_filter if not found returns settings.LMS_BASE
-    lms_base = SiteConfiguration.get_value_for_org(
-        course_key.org,
-        "LMS_BASE",
-        microsite.get_value_for_org(course_key.org, 'SITE_NAME', settings.LMS_BASE)
-    )
+    lms_base = microsite.get_value_for_org(course_key.org, 'SITE_NAME')
+
+    if not lms_base:
+        lms_base = SiteConfiguration.get_value_for_org(
+            course_key.org,
+            "LMS_BASE",
+            settings.LMS_BASE
+        )
 
     if lms_base is None:
         return None
