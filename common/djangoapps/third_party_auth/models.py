@@ -278,6 +278,26 @@ class OAuth2ProviderConfig(ProviderConfig):
         verbose_name = "Provider Configuration (OAuth)"
         verbose_name_plural = verbose_name
 
+    @classmethod
+    def current(cls, *args):
+        """
+        Get the current config model for the provider according to the enabled slugs for this site.
+
+        The site configuration expects the value of THIRD_PARTY_AUTH_ENABLED_PROVIDERS to be a dict
+        of backend_name and the slug being used for the configuration object.
+
+        E.g.
+
+        "THIRD_PARTY_AUTH_ENABLED_PROVIDERS":{
+            "google-oauth2":"my-slug-for-this-provider"
+        }
+        """
+        enabled_providers = microsite.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', {})
+        provider_slug = enabled_providers.get(args[0])
+        if provider_slug:
+            return super(OAuth2ProviderConfig, cls).current(provider_slug)
+        return super(OAuth2ProviderConfig, cls).current(*args)
+
     def clean(self):
         """ Standardize and validate fields """
         super(OAuth2ProviderConfig, self).clean()
