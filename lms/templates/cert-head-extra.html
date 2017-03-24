@@ -1,0 +1,25 @@
+## mako
+<%!
+from django.utils.translation import get_language_bidi
+from microsite_configuration import microsite
+%>
+<%namespace name='static' file='static_content.html'/>
+
+<link rel="icon" type="image/x-icon" href="${static.url(microsite.get_value('favicon_path', settings.FAVICON_PATH))}"/>
+<%
+  cert_style_overrides_file = None
+  try:
+    if get_language_bidi():
+      cert_style_overrides_file = microsite.get_value(
+        'cert_css_overrides_file_rtl',
+        microsite.get_value('cert_css_overrides_file')
+      )
+    else:
+      cert_style_overrides_file = microsite.get_value('cert_css_overrides_file')
+  except Exception:
+    cert_style_overrides_file = ''
+%>
+
+% if cert_style_overrides_file:
+  <link rel="stylesheet" type="text/css" href="${static.url(cert_style_overrides_file)}" />
+% endif

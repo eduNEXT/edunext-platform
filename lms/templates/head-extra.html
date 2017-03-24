@@ -1,0 +1,39 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+from django.utils.translation import ugettext as _
+from django.utils.translation import get_language_bidi
+from microsite_configuration import microsite
+%>
+<%namespace name='static' file='static_content.html'/>
+
+<%
+  style_overrides_file = None
+  try:
+    if get_language_bidi():
+      style_overrides_file = microsite.get_value(
+        'css_overrides_file_rtl',
+        microsite.get_value('css_overrides_file')
+      )
+      style_overrides_file = microsite.get_value('css_overrides_file')
+    else:
+      style_overrides_file = microsite.get_value('css_overrides_file')
+  except Exception:
+    style_overrides_file = ''
+%>
+
+% if style_overrides_file:
+  <link rel="stylesheet" type="text/css" href="${static.url(style_overrides_file)}" />
+% endif
+
+## Optional overrides
+<%
+  style_overrides_file_extra = microsite.get_value('css_overrides_file_extra')
+  style_overrides_inline_extra = microsite.get_value('css_overrides_inline_extra')
+%>
+% if style_overrides_file_extra:
+  <link rel="stylesheet" type="text/css" href="${static.url(style_overrides_file_extra)}" />
+% endif
+% if style_overrides_inline_extra:
+  <style type="text/css">${style_overrides_inline_extra}</style>
+% endif
