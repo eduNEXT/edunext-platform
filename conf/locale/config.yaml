@@ -13,8 +13,8 @@ locales:
     # - ca@valencia  # Catalan (Valencia)
     # - cs  # Czech
     # - cy  # Welsh
-    # - da  # Danish
-    # - de_DE  # German (Germany)
+    - da  # Danish
+    - de_DE  # German (Germany)
     # - el  # Greek
     # - en_GB  # English (United Kingdom)
     # # Don't pull these until we figure out why pages randomly display in these locales,
@@ -37,13 +37,13 @@ locales:
     # - gl  # Galician
     # - gu  # Gujarati
     - he  # Hebrew
-    - hi  # Hindi
+    # - hi  # Hindi
     # - hr  # Croatian
     # - hu  # Hungarian
     # - hy_AM  # Armenian (Armenia)
     # - id  # Indonesian
-    # - it_IT  # Italian (Italy)
-    # - ja_JP  # Japanese (Japan)
+    - it_IT  # Italian (Italy)
+    - ja_JP  # Japanese (Japan)
     # - kk_KZ  # Kazakh (Kazakhstan)
     # - km_KH  # Khmer (Cambodia)
     # - kn  # Kannada
@@ -79,7 +79,7 @@ locales:
     # - vi  # Vietnamese
     - zh_CN  # Chinese (China)
     # - zh_HK  # Chinese (Hong Kong)
-    # - zh_TW  # Chinese (Taiwan)
+    - zh_TW  # Chinese (Taiwan)
 
 
 # The locales used for fake-accented English, for testing.
