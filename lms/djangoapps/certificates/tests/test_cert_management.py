@@ -67,6 +67,7 @@ class CertificateManagementTest(ModuleStoreTestCase):
 
 @attr(shard=1)
 @ddt.ddt
+@patch('student.models.filter_enrollments', lambda x: x)
 class ResubmitErrorCertificatesTest(CertificateManagementTest):
     """Tests for the resubmit_error_certificates management command. """
 
@@ -154,6 +155,7 @@ class ResubmitErrorCertificatesTest(CertificateManagementTest):
 
 @ddt.ddt
 @attr(shard=1)
+@patch('student.models.filter_enrollments', lambda x: x)
 class RegenerateCertificatesTest(CertificateManagementTest):
     """
     Tests for regenerating certificates.
@@ -223,6 +225,7 @@ class RegenerateCertificatesTest(CertificateManagementTest):
 
 
 @attr(shard=1)
+@patch('student.models.filter_enrollments', lambda x: x)
 class UngenerateCertificatesTest(CertificateManagementTest):
     """
     Tests for generating certificates.
