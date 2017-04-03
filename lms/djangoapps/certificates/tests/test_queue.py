@@ -41,6 +41,7 @@ from lms.djangoapps.verify_student.tests.factories import SoftwareSecurePhotoVer
 @ddt.ddt
 @attr(shard=1)
 @override_settings(CERT_QUEUE='certificates')
+@patch('student.models.filter_enrollments', lambda x: x)
 class XQueueCertInterfaceAddCertificateTest(ModuleStoreTestCase):
     """Test the "add to queue" operation of the XQueue interface. """
 
@@ -285,6 +286,7 @@ class XQueueCertInterfaceAddCertificateTest(ModuleStoreTestCase):
 
 @attr(shard=1)
 @override_settings(CERT_QUEUE='certificates')
+@patch('student.models.filter_enrollments', lambda x: x)
 class XQueueCertInterfaceExampleCertificateTest(TestCase):
     """Tests for the XQueue interface for certificate generation. """
 

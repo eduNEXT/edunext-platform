@@ -86,6 +86,7 @@ class WebCertificateTestMixin(object):
 
 
 @attr(shard=1)
+@patch('student.models.filter_enrollments', lambda x: x)
 class CertificateDownloadableStatusTests(WebCertificateTestMixin, ModuleStoreTestCase):
     """Tests for the `certificate_downloadable_status` helper function. """
 
@@ -207,6 +208,7 @@ class CertificateDownloadableStatusTests(WebCertificateTestMixin, ModuleStoreTes
 
 @attr(shard=1)
 @ddt.ddt
+@patch('student.models.filter_enrollments', lambda x: x)
 class CertificateisInvalid(WebCertificateTestMixin, ModuleStoreTestCase):
     """Tests for the `is_certificate_invalid` helper function. """
 
@@ -318,6 +320,7 @@ class CertificateisInvalid(WebCertificateTestMixin, ModuleStoreTestCase):
 
 
 @attr(shard=1)
+@patch('student.models.filter_enrollments', lambda x: x)
 class CertificateGetTests(SharedModuleStoreTestCase):
     """Tests for the `test_get_certificate_for_user` helper function. """
     @classmethod
@@ -453,6 +456,7 @@ class CertificateGetTests(SharedModuleStoreTestCase):
 
 @attr(shard=1)
 @override_settings(CERT_QUEUE='certificates')
+@patch('student.models.filter_enrollments', lambda x: x)
 class GenerateUserCertificatesTest(EventTestMixin, WebCertificateTestMixin, ModuleStoreTestCase):
     """Tests for generating certificates for students. """
 
@@ -545,6 +549,7 @@ class GenerateUserCertificatesTest(EventTestMixin, WebCertificateTestMixin, Modu
 
 @attr(shard=1)
 @ddt.ddt
+@patch('student.models.filter_enrollments', lambda x: x)
 class CertificateGenerationEnabledTest(EventTestMixin, TestCase):
     """Test enabling/disabling self-generated certificates for a course. """
 
@@ -612,6 +617,7 @@ class CertificateGenerationEnabledTest(EventTestMixin, TestCase):
 
 
 @attr(shard=1)
+@patch('student.models.filter_enrollments', lambda x: x)
 class GenerateExampleCertificatesTest(TestCase):
     """Test generation of example certificates. """
 
@@ -700,6 +706,7 @@ def set_microsite(domain):
 
 @override_settings(FEATURES=FEATURES_WITH_CERTS_ENABLED)
 @attr(shard=1)
+@patch('student.models.filter_enrollments', lambda x: x)
 class CertificatesBrandingTest(TestCase):
     """Test certificates branding. """
 
