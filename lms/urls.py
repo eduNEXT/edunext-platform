@@ -2,7 +2,7 @@
 URLs for LMS
 """
 
-from django.conf import settings
+from openedx.conf import settings
 from django.conf.urls import patterns, include, url
 from django.views.generic.base import RedirectView
 from ratelimitbackend import admin
