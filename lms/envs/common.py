@@ -92,7 +92,7 @@ FEATURES = {
     'ENABLE_DISCUSSION_EMAIL_DIGEST': False,
 
     'ENABLE_DJANGO_ADMIN_SITE': True,  # set true to enable django's admin site, even on prod (e.g. for course ops)
-    'ENABLE_SQL_TRACKING_LOGS': False,
+    'ENABLE_SQL_TRACKING_LOGS': True,
     'ENABLE_LMS_MIGRATION': False,
     'ENABLE_MANUAL_GIT_RELOAD': False,
 

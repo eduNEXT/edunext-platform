@@ -29,6 +29,7 @@ LOGFIELDS = [
     'page',
     'time',
     'host',
+    'context',
 ]
 
 
