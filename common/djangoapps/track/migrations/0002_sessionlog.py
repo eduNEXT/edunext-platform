@@ -18,7 +18,9 @@ class Migration(migrations.Migration):
                 ('dtcreated', models.DateTimeField(auto_now_add=True, verbose_name=b'creation date')),
                 ('username', models.CharField(max_length=32, blank=True)),
                 ('courseid', models.TextField(blank=True)),
-                ('session_duration', models.DateTimeField(verbose_name=b'session duration')),
+                ('start_time', models.DateTimeField(verbose_name=b'started at')),
+                ('end_time', models.DateTimeField(verbose_name=b'ended at')),
+                ('host', models.CharField(max_length=64, blank=True)),
             ],
         ),
     ]
