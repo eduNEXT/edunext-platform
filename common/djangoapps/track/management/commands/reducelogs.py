@@ -3,7 +3,7 @@
 from django.core.management.base import BaseCommand
 
 from student.models import CourseEnrollment
-from track.models import TrackingLog
+from track.models import TrackingLog, SessionLog
 
 
 class Command(BaseCommand):
@@ -17,9 +17,8 @@ class Command(BaseCommand):
         valid_logs = self.clean_tracking_logs(TrackingLog.objects.all().order_by('time'))
         users_with_logs = TrackingLog.objects.order_by().values('username').distinct()
         courses = CourseEnrollment.objects.order_by().values('course_id').distinct()
-        session_logs = self.reduce_user_logs(users_with_logs, valid_logs, courses)
-
-        self.print_result(session_logs)
+        reduced_logs = self.reduce_user_logs(users_with_logs, valid_logs, courses)
+        self.load_session_logs(reduced_logs)
         self.stdout.write('command finished')
 
     def clean_tracking_logs(self, queryset):
@@ -93,26 +92,29 @@ class Command(BaseCommand):
         diff = log2.time - log1.time
         return diff.total_seconds()
 
-    @staticmethod
-    def generate_session_logs(logslist):
+    def generate_session_logs(self, logslist):
         """
             it returns a session log object for every tracking log object in logs
         """
         session_logs = []
 
         for logs in logslist:
-            splitted_event = logs[0].event_type.split("/")
-            course_id = splitted_event[2]
+            session_object = {}
+            try:
+                splitted_event = logs[0].event_type.split("/")
+                course_id = splitted_event[2]
+            except Exception:
+                self.stdout.write('could not get course_id')
+            else:
+                session_object = {
+                    'username': logs[0].username,
+                    'host': logs[0].host,
+                    'course_id': course_id,
+                    'session_start': logs[0].time,
+                    'session_end': logs[-1].time,
+                }
 
-            session_object = {
-                'username': logs[0].username,
-                'host': logs[0].host,
-                'course_id': course_id,
-                'session_start': logs[0].time,
-                'session_end': logs[-1].time,
-            }
-
-            session_logs.append(session_object)
+                session_logs.append(session_object)
 
         return session_logs
 
@@ -143,5 +145,16 @@ class Command(BaseCommand):
 
         return session_logs
 
-    def print_result(self, loglist):
-        self.stdout.write('method to print result on console')
+    def load_session_logs(self, loglist):
+        """
+            creates session log db records
+        """
+        for session_log in loglist:
+            SessionLog.objects.create(
+                username=session_log['username'],
+                host=session_log['host'],
+                courseid=session_log['course_id'],
+                start_time=session_log['session_start'],
+                end_time=session_log['session_end']
+            )
+        self.stdout.write('session logs loaded on database')
