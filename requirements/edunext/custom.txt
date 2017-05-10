@@ -34,3 +34,6 @@
 -e git+https://github.com/schoolyourself/schoolyourself-xblock.git@5e4d37716e3e72640e832e961f7cc0d38d4ec47b#egg=schoolyourself-xblock
 # Vector drawing xblock
 -e git+https://github.com/open-craft/xblock-vectordraw.git@v0.2.1#egg=vectordraw-xblock==0.2.1
+
+# scorm xblock
+-e git+https://github.com/raccoongang/edx_xblock_scorm.git@4f70ba8642484b6c7af293d081c07de6e5109d01#egg=edx_xblock_scorm==0.1

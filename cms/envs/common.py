@@ -1091,6 +1091,7 @@ OPTIONAL_APPS = (
     'brightcove-video',
     'flow-control',
     'grade-podium',
+    'scormxblock',
 )
 
 
