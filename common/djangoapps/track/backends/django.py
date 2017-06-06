@@ -81,3 +81,20 @@ class DjangoBackend(BaseBackend):
             tldat.save(using=self.name)
         except Exception as e:  # pylint: disable=broad-except
             log.exception(e)
+
+
+class SessionLog(models.Model):
+    """Defines the fields that are stored in the session log database."""
+
+    dtcreated = models.DateTimeField('creation date', auto_now_add=True)
+    username = models.CharField(max_length=32, blank=True)
+    courseid = models.TextField(blank=True)
+    start_time = models.DateTimeField('started at')
+    end_time = models.DateTimeField('ended at')
+    host = models.CharField(max_length=64, blank=True)
+
+    def __unicode__(self):
+        fmt = (
+            u"[{self.session_duration}] {self.username}@{self.courseid}"
+        )
+        return fmt.format(self=self)
