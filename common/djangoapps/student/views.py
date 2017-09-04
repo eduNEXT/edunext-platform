@@ -2626,6 +2626,10 @@ class LogoutView(TemplateView):
         else:
             response = redirect(self.target)
 
+        # Get the session cookie of ecommerce and delete it.
+        # Warning: If session cookie in ecommerce settings.py it's changed it,
+        # this won't works.
+        response.delete_cookie('ecommerce_sessionid')
         # Clear the cookie used by the edx.org marketing site
         delete_logged_in_cookies(response)
 
