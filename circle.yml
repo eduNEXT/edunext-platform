@@ -1,6 +1,8 @@
 machine:
   python:
     version: 2.7.10
+  node:
+    version: 5.12.0
 
 general:
   artifacts:
