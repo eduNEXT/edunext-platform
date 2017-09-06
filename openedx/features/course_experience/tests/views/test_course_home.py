@@ -21,7 +21,6 @@ from lms.djangoapps.commerce.models import CommerceConfiguration
 from lms.djangoapps.commerce.utils import EcommerceService
 from lms.djangoapps.course_goals.api import add_course_goal, remove_course_goal
 import os
-
 from openedx.core.djangoapps.waffle_utils.testutils import WAFFLE_TABLES, override_waffle_flag
 from openedx.features.course_experience import (
     SHOW_REVIEWS_TOOL_FLAG,
