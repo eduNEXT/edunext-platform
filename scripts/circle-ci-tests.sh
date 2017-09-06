@@ -69,7 +69,7 @@ else
             paver run_stylelint -l $STYLELINT_THRESHOLD > stylelint.log || { cat stylelint.log; EXIT=1; }
 
             # Run quality task. Pass in the 'fail-under' percentage to diff-quality
-            paver run_quality -p 100 || EXIT=1
+            paver run_quality -p 100 -b origin/ednx/ginkgo+edunext || EXIT=1
 
             echo "Running code complexity report (python)."
             paver run_complexity > reports/code_complexity.log || echo "Unable to calculate code complexity. Ignoring error."

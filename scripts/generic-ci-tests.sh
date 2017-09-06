@@ -106,6 +106,26 @@ case "$TEST_SUITE" in
 
         mkdir -p reports
 
+        echo "Finding ESLint violations and storing report..."
+        paver run_eslint -l $ESLINT_THRESHOLD > eslint.log || { cat eslint.log; EXIT=1; }
+        echo "Running code complexity report (python)."
+        paver run_complexity || echo "Unable to calculate code complexity. Ignoring error."
+        echo "Running xss linter report."
+        paver run_xsslint -t $XSSLINT_THRESHOLDS > xsslint.log || { cat xsslint.log; EXIT=1; }
+        echo "Running xss commit linter report."
+        paver run_xsscommitlint > xsscommitlint.log || { cat xsscommitlint.log; EXIT=1; }
+        # Run quality task. Pass in the 'fail-under' percentage to diff-quality
+        echo "Running diff quality."
+        paver run_quality -p 100 -b origin/ednx/ginkgo+edunext || EXIT=1
+
+        # Need to create an empty test result so the post-build
+        # action doesn't fail the build.
+        emptyxunit "quality"
+        exit $EXIT
+        ;;
+
+    "lms-unit")
+        PAVER_ARGS="--with-flaky --processes=-1 --cov-args='-p' --with-xunitmp"
         case "$SHARD" in
             1)
                 echo "Finding pylint violations and storing in report..."
