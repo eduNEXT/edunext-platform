@@ -1,6 +1,7 @@
 """
 Tests for grades.scores module.
 """
+import os
 import itertools
 # pylint: disable=protected-access
 from collections import namedtuple
@@ -15,6 +16,7 @@ from lms.djangoapps.grades.models import BlockRecord
 from lms.djangoapps.grades.transformer import GradesTransformer
 from openedx.core.djangoapps.content.block_structure.block_structure import BlockData
 from xmodule.graders import ProblemScore
+from unittest import skipIf
 
 NOW = now()
 
@@ -30,6 +32,7 @@ class TestScoredBlockTypes(TestCase):
         'videosequence', 'problemset', 'acid_parent', 'done', 'wrapper', 'edx_sga',
     }
 
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
     def test_block_types_possibly_scored(self):
         self.assertSetEqual(
             self.possibly_scored_block_types,
