@@ -43,7 +43,7 @@ def render(request, template):
     url(r'^jobs$', 'static_template_view.views.render', {'template': 'jobs.html'}, name="jobs")
     """
     mktg_redirects = microsite.get_value('MKTG_REDIRECTS', {})
-    if template in mktg_redirects and mktg_redirects.get(template) :
+    if template in mktg_redirects and mktg_redirects.get(template):
         return redirect(mktg_redirects.get(template, '/'))
 
     # Guess content type from file extension
