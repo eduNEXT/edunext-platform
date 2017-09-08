@@ -13,6 +13,7 @@
   header.primary {
     @include box-sizing(border-box);
     @include clearfix();
+    @include display(flex);
     max-width: $fg-max-width;
     min-width: $fg-min-width;
     width: flex-grid(12);
@@ -28,12 +29,12 @@
 
   .wrapper-l {
     @include float(left);
-    width: flex-grid(7,12);
+    width: flex-grid(8,12);
   }
 
   .wrapper-r {
     @include float(right);
-    width: flex-grid(4,12);
+    width: flex-grid(3,12);
     @include text-align(right);
   }
 
@@ -289,7 +290,7 @@
     }
 
     .nav-course {
-      width: 45%;
+      width: 60%;
     }
   }
 }
