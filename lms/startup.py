@@ -13,6 +13,7 @@ settings.INSTALLED_APPS  # pylint: disable=pointless-statement
 
 from openedx.core.lib.django_startup import autostartup
 from openedx.core.release import doc_version
+import edxmako
 import analytics
 
 from openedx.core.djangoapps.monkey_patch import django_db_models_options
