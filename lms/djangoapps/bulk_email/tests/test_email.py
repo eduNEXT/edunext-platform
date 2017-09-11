@@ -175,6 +175,7 @@ class LocalizedFromAddressPlatformLangTestCase(SendEmailWithMockedUgettextMixin,
     """
     Tests to ensure that the bulk email has the "From" address localized according to LANGUAGE_CODE.
     """
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
     @override_settings(LANGUAGE_CODE='en')
     def test_english_platform(self):
         """
@@ -184,6 +185,7 @@ class LocalizedFromAddressPlatformLangTestCase(SendEmailWithMockedUgettextMixin,
         message = self.send_email()
         self.assertRegexpMatches(message.from_email, '.*Course Staff.*')
 
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
     @override_settings(LANGUAGE_CODE='eo')
     def test_esperanto_platform(self):
         """
@@ -218,6 +220,7 @@ class LocalizedFromAddressCourseLangTestCase(SendEmailWithMockedUgettextMixin, E
             default_store=ModuleStoreEnum.Type.split
         )
 
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
     @override_settings(LANGUAGE_CODE='eo')
     def test_esperanto_platform_arabic_course(self):
         """
@@ -600,6 +603,7 @@ class TestEmailSendFromDashboardMockedHtmlToText(EmailSendFromDashboardTestCase)
 
 @attr(shard=1)
 @skipIf(os.environ.get("TRAVIS") == 'true', "Skip this test in Travis CI.")
+@skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
 class TestEmailSendFromDashboard(EmailSendFromDashboardTestCase):
     """
     Tests email sending without mocked html_to_text.

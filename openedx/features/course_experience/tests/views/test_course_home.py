@@ -1,6 +1,8 @@
 """
 Tests for the course home page.
 """
+import os
+
 from django.core.urlresolvers import reverse
 from openedx.core.djangoapps.waffle_utils.testutils import WAFFLE_TABLES, override_waffle_flag
 from openedx.features.course_experience import UNIFIED_COURSE_TAB_FLAG
@@ -9,6 +11,7 @@ from student.tests.factories import UserFactory
 from xmodule.modulestore import ModuleStoreEnum
 from xmodule.modulestore.tests.django_utils import SharedModuleStoreTestCase
 from xmodule.modulestore.tests.factories import CourseFactory, ItemFactory, check_mongo_calls
+from unittest import skipIf
 
 from .test_course_updates import create_course_update, remove_course_updates
 
@@ -32,6 +35,7 @@ def course_home_url(course):
     )
 
 
+@skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in CIRCLE CI.")
 class TestCourseHomePage(SharedModuleStoreTestCase):
     """
     Test the course home page.
