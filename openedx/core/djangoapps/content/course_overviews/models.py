@@ -24,6 +24,7 @@ from xmodule.course_module import CourseDescriptor, DEFAULT_START_DATE
 from xmodule.error_module import ErrorDescriptor
 from xmodule.modulestore.django import modulestore
 from openedx.core.djangoapps.xmodule_django.models import CourseKeyField, UsageKeyField
+from microsite_configuration import microsite
 
 log = logging.getLogger(__name__)
 
@@ -533,6 +534,11 @@ class CourseOverview(TimeStampedModel):
 
         if filter_:
             course_overviews = course_overviews.filter(**filter_)
+
+        # Note eduNEXT: We cant allow data leaks, so if the orgs argument is None, we still
+        # must match the orgs to the context of the current microsite
+        if microsite.is_request_in_microsite():
+            log.warn("We have an unfiltered get_all_courses() call in the context of a microsite.")
 
         return course_overviews
 

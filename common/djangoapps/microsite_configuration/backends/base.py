@@ -11,7 +11,6 @@ BaseMicrositeTemplateBackend is Base Class for the microsite template backend.
 from __future__ import absolute_import
 
 import abc
-import edxmako
 import os.path
 import threading
 
@@ -274,7 +273,6 @@ class BaseMicrositeBackend(AbstractBaseMicrositeBackend):
         microsites_root = settings.MICROSITE_ROOT_DIR
 
         if os.path.isdir(microsites_root):
-            edxmako.paths.add_lookup('main', microsites_root)
             settings.STATICFILES_DIRS.insert(0, microsites_root)
             settings.LOCALE_PATHS = (microsites_root / 'conf/locale',) + settings.LOCALE_PATHS
 

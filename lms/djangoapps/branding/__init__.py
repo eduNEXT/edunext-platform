@@ -9,7 +9,7 @@ such as the site visible courses, university name and logo.
 
 from xmodule.modulestore.django import modulestore
 from xmodule.course_module import CourseDescriptor
-from django.conf import settings
+from openedx.conf import settings
 
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
@@ -29,20 +29,15 @@ def get_visible_courses(org=None, filter_=None):
             fields on the course.
     """
     courses = []
-    current_site_org = configuration_helpers.get_value('course_org_filter')
+    current_site_orgs = configuration_helpers.get_current_site_orgs()
 
-    if isinstance(current_site_org, list):
-        courses = []
-        for org in current_site_org:
-            _partial = CourseOverview.get_all_courses(org=org, filter_=filter_)
-            courses = courses + list(_partial)
-
-    elif org and current_site_org:
-        # Return an empty result if the org passed by the caller does not match the designated site org.
-        courses = CourseOverview.get_all_courses(
-            org=org,
-            filter_=filter_,
-        ) if org == current_site_org else []
+    if org:
+        # Check the current site's orgs to make sure the org's courses should be displayed
+        if not current_site_orgs or org in current_site_orgs:
+            courses = CourseOverview.get_all_courses(orgs=[org], filter_=filter_)
+    elif current_site_orgs:
+        # Only display courses that should be displayed on this site
+        courses = CourseOverview.get_all_courses(orgs=current_site_orgs, filter_=filter_)
     else:
         courses = CourseOverview.get_all_courses(filter_=filter_)
 
@@ -62,19 +57,12 @@ def get_visible_courses(org=None, filter_=None):
             [SlashSeparatedCourseKey.from_deprecated_string(c) for c in settings.COURSE_LISTINGS[subdomain]]
         )
 
-    filtered_by_org = configuration_helpers.get_value('course_org_filter')
-
-    if filtered_by_org and isinstance(filtered_by_org, basestring):
-        return [course for course in courses if course.location.org == filtered_by_org]
-    if filtered_by_org and isinstance(filtered_by_org, list):
-        return [course for course in courses if course.location.org in filtered_by_org]
     if filtered_visible_ids:
         return [course for course in courses if course.id in filtered_visible_ids]
     else:
-        # Let's filter out any courses in an "org" that has been declared to be
-        # in a Microsite
-        org_filter_out_set = microsite.get_all_orgs()
-        return [course for course in courses if course.location.org not in org_filter_out_set]
+        # Filter out any courses based on current org, to avoid leaking these.
+        orgs = configuration_helpers.get_all_orgs()
+        return [course for course in courses if course.location.org not in orgs]
 
 
 def get_university_for_request():

@@ -338,3 +338,7 @@ FEATURES['CUSTOM_COURSES_EDX'] = True
 
 # API access management -- needed for simple-history to run.
 INSTALLED_APPS += ('openedx.core.djangoapps.api_admin',)
+
+################### Make tests edunext aware
+
+FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] = False
