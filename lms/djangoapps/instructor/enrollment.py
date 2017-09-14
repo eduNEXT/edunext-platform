@@ -36,6 +36,8 @@ from track.event_transaction_utils import (
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError
 
+from openedx_email_extensions.utils import get_html_message
+
 log = logging.getLogger(__name__)
 
 
@@ -472,7 +474,7 @@ def send_mail_to_student(student, param_dict, language=None):
 
     subject_template, message_template = email_template_dict.get(message_type, (None, None))
     if subject_template is not None and message_template is not None:
-        subject, message = render_message_to_string(
+        subject, message, html_message = render_message_to_string(
             subject_template, message_template, param_dict, language=language
         )
 
@@ -487,7 +489,8 @@ def send_mail_to_student(student, param_dict, language=None):
             settings.DEFAULT_FROM_EMAIL
         )
 
-        send_mail(subject, message, from_address, [student], fail_silently=False)
+        send_mail(subject, message, from_address, [student], fail_silently=False,
+                  html_message=html_message)
 
 
 def render_message_to_string(subject_template, message_template, param_dict, language=None):
@@ -510,7 +513,7 @@ def get_subject_and_message(subject_template, message_template, param_dict):
     """
     subject = render_to_string(subject_template, param_dict)
     message = render_to_string(message_template, param_dict)
-    return subject, message
+    return subject, message, get_html_message(param_dict, base=message_template)
 
 
 def uses_shib(course):
