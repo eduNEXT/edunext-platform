@@ -497,7 +497,7 @@ def render_message_to_string(subject_template, message_template, param_dict, lan
     """
     Render a mail subject and message templates using the parameters from
     param_dict and the given language. If language is None, the platform
-    default language is used.
+    default language is used
 
     Returns two strings that correspond to the rendered, translated email
     subject and message.
