@@ -1035,6 +1035,10 @@ INSTALLED_APPS = (
     # be retried
     'celery_utils',
 
+    # eduNEXT special modules
+    'edunext_openedx_extensions.edunext',
+    'edunext_openedx_extensions.ednx_microsites',
+
     # Waffle related utilities
     'openedx.core.djangoapps.waffle_utils',
 )

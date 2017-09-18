@@ -605,3 +605,8 @@ ECOMMERCE_API_URL = 'https://ecommerce.example.com/api/v2/'
 ENTERPRISE_API_URL = 'http://enterprise.example.com/enterprise/api/v1/'
 
 ACTIVATION_EMAIL_FROM_ADDRESS = 'test_activate@edx.org'
+
+
+################### Make tests edunext aware
+
+FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] = False

@@ -211,8 +211,8 @@ class IndexQueryTestCase(ModuleStoreTestCase):
     NUM_PROBLEMS = 20
 
     @ddt.data(
-        (ModuleStoreEnum.Type.mongo, 10, 143),
-        (ModuleStoreEnum.Type.split, 4, 143),
+        (ModuleStoreEnum.Type.mongo, 10, 144),  # eduNEXT redirection
+        (ModuleStoreEnum.Type.split, 4, 144),  # eduNEXT redirection
     )
     @ddt.unpack
     def test_index_query_counts(self, store_type, expected_mongo_query_count, expected_mysql_query_count):
@@ -1464,7 +1464,8 @@ class ProgressPageTests(ProgressPageBaseTests):
         """Test that query counts remain the same for self-paced and instructor-paced courses."""
         SelfPacedConfiguration(enabled=self_paced_enabled).save()
         self.setup_course(self_paced=self_paced)
-        with self.assertNumQueries(40, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST), check_mongo_calls(1):
+        # eduNEXT redirection
+        with self.assertNumQueries(41, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST), check_mongo_calls(1):
             self._get_progress_page()
 
     @ddt.data(
@@ -1476,14 +1477,14 @@ class ProgressPageTests(ProgressPageBaseTests):
         self.setup_course()
         with grades_waffle().override(ASSUME_ZERO_GRADE_IF_ABSENT, active=enable_waffle):
             with self.assertNumQueries(
-                initial, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST
+                initial + 1, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST  # eduNEXT redirection
             ), check_mongo_calls(1):
                 self._get_progress_page()
 
             # subsequent accesses to the progress page require fewer queries.
             for _ in range(2):
                 with self.assertNumQueries(
-                    subsequent, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST
+                    subsequent + 1, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST  # eduNEXT redirection
                 ), check_mongo_calls(1):
                     self._get_progress_page()
 

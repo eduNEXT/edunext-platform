@@ -139,8 +139,8 @@ class BaseMicrositeBackend(AbstractBaseMicrositeBackend):
         """
         Stores a key value pair in a cache scoped to the thread
         """
-        if hasattr(self.current_request_configuration, 'cache'):
-            self.current_request_configuration.cache[key] = value
+        if not hasattr(self.current_request_configuration, 'cache'):
+            self.current_request_configuration.cache = {}
 
     def set_config_by_domain(self, domain):
         """
@@ -271,8 +271,10 @@ class BaseMicrositeBackend(AbstractBaseMicrositeBackend):
         Configure the paths for the microsites feature
         """
         microsites_root = settings.MICROSITE_ROOT_DIR
+
         if os.path.isdir(microsites_root):
             settings.STATICFILES_DIRS.insert(0, microsites_root)
+            settings.LOCALE_PATHS = (microsites_root / 'conf/locale',) + settings.LOCALE_PATHS
 
             log.info('Loading microsite path at %s', microsites_root)
         else:
