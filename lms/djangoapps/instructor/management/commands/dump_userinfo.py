@@ -28,10 +28,6 @@ from unidecode import unidecode
 from courseware.model_data import FieldDataCache, ScoresClient
 from django.contrib.auth.models import User
 from opaque_keys.edx.locator import BlockUsageLocator
-try:
-    from courseware import grades
-except ImportError:
-    print "Error importing 'from courseware import grades'"
 from courseware.courses import (
     get_course_with_access,
 )
@@ -195,9 +191,10 @@ class Command(BaseCommand):
         ),
         make_option(
             '-g',
-            '--include_grades',
+            '--include-grades',
             metavar='INCLUDE_GRADES',
             dest='include_grades',
+            action='store_true',
             default=False,
             help='If you want the new version of the report.',
         ),
@@ -358,9 +355,25 @@ class Command(BaseCommand):
         Return the scores for each calificable unit per user in a determinated course.
         """
         course = get_course_with_access(user, 'load', course_id, depth=None, check_if_enrolled=True)
-        field_data_cache = grades.field_data_cache_for_grading(course, user)
-        scores_client = ScoresClient.from_field_data_cache(field_data_cache)
-        grade_summary = grades.grade(user, request, course, field_data_cache=field_data_cache, scores_client=scores_client)
+
+        try:
+            # Doing this import here is not very efficient, but it is an easy way to
+            # test for the existence of the package. We have to refactor later on
+            from courseware import grades
+
+            # This is the ficus way
+            field_data_cache = grades.field_data_cache_for_grading(course, user)
+            scores_client = ScoresClient.from_field_data_cache(field_data_cache)
+            grade_summary = grades.grade(user, request, course, field_data_cache=field_data_cache, scores_client=scores_client)
+
+        except ImportError:
+
+            from lms.djangoapps.grades.new.course_grade_factory import CourseGradeFactory
+
+            course_grade = CourseGradeFactory().create(user, course)
+            grade_summary = course_grade.summary
+
+
         return grade_summary
 
     def query_database_for(self, course_id):
