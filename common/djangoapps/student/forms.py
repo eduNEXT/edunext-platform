@@ -21,6 +21,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangoapps.user_api import accounts as accounts_settings
 from student.models import CourseEnrollmentAllowed
 from util.password_policy_validators import validate_password_strength
+from student.edraak_validation import VALIDATE_USERNAME
 
 
 USERNAME_TOO_SHORT_MSG = _("Username must be minimum of two characters long")

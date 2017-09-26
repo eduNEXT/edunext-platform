@@ -73,7 +73,8 @@ class TestCreateAccount(SiteMixin, TestCase):
 
     @ddt.data("en", "eo")
     def test_header_lang_pref_saved(self, lang):
-        response = self.client.post(self.url, self.params, HTTP_ACCEPT_LANGUAGE=lang)
+        response = self.client.post(
+            self.url, self.params, HTTP_ACCEPT_LANGUAGE=lang)
         user = User.objects.get(username=self.username)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(get_user_preference(user, LANGUAGE_KEY), lang)
@@ -91,8 +92,10 @@ class TestCreateAccount(SiteMixin, TestCase):
     def test_marketing_cookie(self):
         response = self.client.post(self.url, self.params)
         self.assertEqual(response.status_code, 200)
-        self.assertIn(settings.EDXMKTG_LOGGED_IN_COOKIE_NAME, self.client.cookies)
-        self.assertIn(settings.EDXMKTG_USER_INFO_COOKIE_NAME, self.client.cookies)
+        self.assertIn(settings.EDXMKTG_LOGGED_IN_COOKIE_NAME,
+                      self.client.cookies)
+        self.assertIn(settings.EDXMKTG_USER_INFO_COOKIE_NAME,
+                      self.client.cookies)
 
     @unittest.skipUnless(
         "microsite_configuration.middleware.MicrositeMiddleware" in settings.MIDDLEWARE_CLASSES,
@@ -228,8 +231,10 @@ class TestCreateAccount(SiteMixin, TestCase):
 
         request = self.request_factory.post(self.url, self.params)
         request.site = self.site
-        # now indicate we are doing ext_auth by setting 'ExternalAuthMap' in the session.
-        request.session = import_module(settings.SESSION_ENGINE).SessionStore()  # empty session
+        # now indicate we are doing ext_auth by setting 'ExternalAuthMap' in
+        # the session.
+        request.session = import_module(
+            settings.SESSION_ENGINE).SessionStore()  # empty session
         extauth = ExternalAuthMap(external_id='withmap@stanford.edu',
                                   external_email='withmap@stanford.edu',
                                   internal_password=self.params['password'],
@@ -295,7 +300,8 @@ class TestCreateAccount(SiteMixin, TestCase):
         affiliate_id = 'test-partner'
         self.client.cookies[settings.AFFILIATE_COOKIE_NAME] = affiliate_id
         user = self.create_account_and_fetch_profile().user
-        self.assertEqual(UserAttribute.get_user_attribute(user, REGISTRATION_AFFILIATE_ID), affiliate_id)
+        self.assertEqual(UserAttribute.get_user_attribute(
+            user, REGISTRATION_AFFILIATE_ID), affiliate_id)
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
     def test_utm_referral_attribution(self):
@@ -318,32 +324,39 @@ class TestCreateAccount(SiteMixin, TestCase):
                 'created_at': timestamp
             }
 
-            created_at = datetime.fromtimestamp(timestamp / float(1000), tz=pytz.UTC)
+            created_at = datetime.fromtimestamp(
+                timestamp / float(1000), tz=pytz.UTC)
 
             self.client.cookies[utm_cookie_name] = json.dumps(utm_cookie)
             user = self.create_account_and_fetch_profile().user
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_source')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_source')),
                 utm_cookie.get('utm_source')
             )
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_medium')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_medium')),
                 utm_cookie.get('utm_medium')
             )
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_campaign')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_campaign')),
                 utm_cookie.get('utm_campaign')
             )
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_term')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_term')),
                 utm_cookie.get('utm_term')
             )
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_content')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_content')),
                 utm_cookie.get('utm_content')
             )
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_CREATED_AT),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_CREATED_AT),
                 str(created_at)
             )
 
@@ -355,16 +368,25 @@ class TestCreateAccount(SiteMixin, TestCase):
             instance = config.return_value
             instance.utm_cookie_name = utm_cookie_name
 
-            self.assertIsNone(self.client.cookies.get(settings.AFFILIATE_COOKIE_NAME))  # pylint: disable=no-member
-            self.assertIsNone(self.client.cookies.get(utm_cookie_name))  # pylint: disable=no-member
+            self.assertIsNone(self.client.cookies.get(
+                settings.AFFILIATE_COOKIE_NAME))  # pylint: disable=no-member
+            self.assertIsNone(self.client.cookies.get(
+                utm_cookie_name))  # pylint: disable=no-member
             user = self.create_account_and_fetch_profile().user
-            self.assertIsNone(UserAttribute.get_user_attribute(user, REGISTRATION_AFFILIATE_ID))
-            self.assertIsNone(UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_source')))
-            self.assertIsNone(UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_medium')))
-            self.assertIsNone(UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_campaign')))
-            self.assertIsNone(UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_term')))
-            self.assertIsNone(UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_content')))
-            self.assertIsNone(UserAttribute.get_user_attribute(user, REGISTRATION_UTM_CREATED_AT))
+            self.assertIsNone(UserAttribute.get_user_attribute(
+                user, REGISTRATION_AFFILIATE_ID))
+            self.assertIsNone(UserAttribute.get_user_attribute(
+                user, REGISTRATION_UTM_PARAMETERS.get('utm_source')))
+            self.assertIsNone(UserAttribute.get_user_attribute(
+                user, REGISTRATION_UTM_PARAMETERS.get('utm_medium')))
+            self.assertIsNone(UserAttribute.get_user_attribute(
+                user, REGISTRATION_UTM_PARAMETERS.get('utm_campaign')))
+            self.assertIsNone(UserAttribute.get_user_attribute(
+                user, REGISTRATION_UTM_PARAMETERS.get('utm_term')))
+            self.assertIsNone(UserAttribute.get_user_attribute(
+                user, REGISTRATION_UTM_PARAMETERS.get('utm_content')))
+            self.assertIsNone(UserAttribute.get_user_attribute(
+                user, REGISTRATION_UTM_CREATED_AT))
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
     def test_incomplete_utm_referral(self):
@@ -387,26 +409,32 @@ class TestCreateAccount(SiteMixin, TestCase):
             user = self.create_account_and_fetch_profile().user
 
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_source')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_source')),
                 utm_cookie.get('utm_source')
             )
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_medium')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_medium')),
                 utm_cookie.get('utm_medium')
             )
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_term')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_term')),
                 utm_cookie.get('utm_term')
             )
             self.assertEqual(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_content')),
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_content')),
                 utm_cookie.get('utm_content')
             )
             self.assertIsNone(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_PARAMETERS.get('utm_campaign'))
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_PARAMETERS.get('utm_campaign'))
             )
             self.assertIsNone(
-                UserAttribute.get_user_attribute(user, REGISTRATION_UTM_CREATED_AT)
+                UserAttribute.get_user_attribute(
+                    user, REGISTRATION_UTM_CREATED_AT)
             )
 
     @patch("openedx.core.djangoapps.site_configuration.helpers.get_value", mock.Mock(return_value=False))
@@ -419,7 +447,8 @@ class TestCreateAccount(SiteMixin, TestCase):
 
     def test_created_on_site_user_attribute_set(self):
         profile = self.create_account_and_fetch_profile(host=self.site.domain)
-        self.assertEqual(UserAttribute.get_user_attribute(profile.user, 'created_on_site'), self.site.domain)
+        self.assertEqual(UserAttribute.get_user_attribute(
+            profile.user, 'created_on_site'), self.site.domain)
 
 
 @ddt.ddt
@@ -427,6 +456,7 @@ class TestCreateAccountValidation(TestCase):
     """
     Test validation of various parameters in the create_account view
     """
+
     def setUp(self):
         super(TestCreateAccountValidation, self).setUp()
         self.url = reverse("create_account")
@@ -476,20 +506,27 @@ class TestCreateAccountValidation(TestCase):
 
         # Missing
         del params["username"]
-        assert_username_error("Username must be minimum of two characters long")
+        assert_username_error(
+            "Username must be minimum of two characters long")
 
         # Empty, too short
         for username in ["", "a"]:
             params["username"] = username
-            assert_username_error("Username must be minimum of two characters long")
+            assert_username_error(
+                "Username must be minimum of two characters long")
 
         # Too long
         params["username"] = "this_username_has_31_characters"
-        assert_username_error("Username cannot be more than 30 characters long")
+        assert_username_error(
+            "Username cannot be more than 30 characters long")
 
         # Invalid
         params["username"] = "invalid username"
-        assert_username_error(str(USERNAME_INVALID_CHARS_ASCII))
+        # Edunext 07.03.2017
+
+        # Fixing test when comparing failure messages
+        assert_username_error("Usernames must contain only letters, numbers, underscores (_), and "
+                              "hyphens (-).")
 
     def test_email(self):
         params = dict(self.minimal_params)
@@ -531,7 +568,8 @@ class TestCreateAccountValidation(TestCase):
 
     @override_settings(
         REGISTRATION_EMAIL_PATTERNS_ALLOWED=[
-            r'.*@edx.org',  # Naive regex omitting '^', '$' and '\.' should still work.
+            # Naive regex omitting '^', '$' and '\.' should still work.
+            r'.*@edx.org',
             r'^.*@(.*\.)?example\.com$',
             r'^(^\w+\.\w+)@school.tld$',
         ]
@@ -596,12 +634,14 @@ class TestCreateAccountValidation(TestCase):
 
         # Missing
         del params["name"]
-        assert_name_error("Your legal name must be a minimum of two characters long")
+        assert_name_error(
+            "Your legal name must be a minimum of two characters long")
 
         # Empty, too short
         for name in ["", "a"]:
             params["name"] = name
-            assert_name_error("Your legal name must be a minimum of two characters long")
+            assert_name_error(
+                "Your legal name must be a minimum of two characters long")
 
     def test_honor_code(self):
         params = dict(self.minimal_params)
@@ -616,12 +656,14 @@ class TestCreateAccountValidation(TestCase):
         with override_settings(REGISTRATION_EXTRA_FIELDS={"honor_code": "required"}):
             # Missing
             del params["honor_code"]
-            assert_honor_code_error("To enroll, you must follow the honor code.")
+            assert_honor_code_error(
+                "To enroll, you must follow the honor code.")
 
             # Empty, invalid
             for honor_code in ["", "false", "not_boolean"]:
                 params["honor_code"] = honor_code
-                assert_honor_code_error("To enroll, you must follow the honor code.")
+                assert_honor_code_error(
+                    "To enroll, you must follow the honor code.")
 
             # True
             params["honor_code"] = "tRUe"
@@ -652,7 +694,8 @@ class TestCreateAccountValidation(TestCase):
         # Empty, invalid
         for terms_of_service in ["", "false", "not_boolean"]:
             params["terms_of_service"] = terms_of_service
-            assert_terms_of_service_error("You must accept the terms of service.")
+            assert_terms_of_service_error(
+                "You must accept the terms of service.")
 
         # True
         params["terms_of_service"] = "tRUe"
