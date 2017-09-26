@@ -20,7 +20,7 @@
 -e git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
 
 # flow control
--e git+https://github.com/eduNEXT/flow-control-xblock.git@021a604e23a553052600cd13e170cf74c9419ed4#egg=flow-control-xblock
+-e git+https://github.com/eduNEXT/flow-control-xblock.git@8162e6c65844462745fd81509146d99e0aa15f01#egg=flow-control-xblock
 
 # Maintained xblocks from openedx xblocks directory (see https://openedx.atlassian.net/wiki/display/COMM/XBlocks+Directory)
 
