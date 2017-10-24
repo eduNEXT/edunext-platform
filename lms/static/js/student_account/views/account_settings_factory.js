@@ -162,19 +162,20 @@
                         },
                         fullnameFieldView,
                         emailFieldView,
-                        {
-                            view: new AccountSettingsFieldViews.PasswordFieldView({
-                                model: userAccountModel,
-                                title: gettext('Password'),
-                                screenReaderTitle: gettext('Reset Your Password'),
-                                valueAttribute: 'password',
-                                emailAttribute: 'email',
-                                passwordResetSupportUrl: passwordResetSupportUrl,
-                                linkTitle: gettext('Reset Your Password'),
-                                linkHref: fieldsData.password.url,
-                                helpMessage: gettext('Check your email account for instructions to reset your password.')  // eslint-disable-line max-len
-                            })
-                        },
+                        // {
+                        //     view: new AccountSettingsFieldViews.PasswordFieldView({
+                        //         model: userAccountModel,
+                        //         title: gettext('Password'),
+                        //         screenReaderTitle: gettext('Reset Your Password'),
+                        //         valueAttribute: 'password',
+                        //         emailAttribute: 'email',
+                        //         passwordResetSupportUrl: passwordResetSupportUrl,
+                        //         linkTitle: gettext('Reset Your Password'),
+                        //         linkHref: fieldsData.password.url,
+                        //         eslint-disable-next-line max-len
+                        //         helpMessage: gettext('Check your email account for instructions to reset your password.')
+                        //     })
+                        // },
                         {
                             view: new AccountSettingsFieldViews.LanguagePreferenceFieldView({
                                 model: userPreferencesModel,

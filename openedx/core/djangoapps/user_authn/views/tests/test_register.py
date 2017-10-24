@@ -951,7 +951,7 @@ class RegistrationViewTestV1(
                     "name": str(year),
                     "default": False
                 }
-                for year in range(this_year, this_year - 120, -1)
+                for year in range(this_year - 16, this_year - 120, -1)
             ]
         )
         self._assert_reg_field(

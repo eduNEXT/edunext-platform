@@ -530,7 +530,7 @@ class UserProfile(models.Model):
 
     # Optional demographic data we started capturing from Fall 2012
     this_year = datetime.now(UTC).year
-    VALID_YEARS = list(range(this_year, this_year - 120, -1))
+    VALID_YEARS = range(this_year - 16, this_year - 120, -1)
     year_of_birth = models.IntegerField(blank=True, null=True, db_index=True)
     GENDER_CHOICES = (
         ('m', gettext_noop('Male')),

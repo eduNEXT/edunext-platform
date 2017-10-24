@@ -112,7 +112,7 @@ define(['backbone',
 
                 var sectionsData = accountSettingsView.options.tabSections.aboutTabSections;
 
-                expect(sectionsData[0].fields.length).toBe(7);
+                expect(sectionsData[0].fields.length).toBe(6);
 
                 var textFields = [sectionsData[0].fields[1], sectionsData[0].fields[2]];
                 for (i = 0; i < textFields.length; i++) {
@@ -185,10 +185,9 @@ define(['backbone',
                 USERNAME: 0,
                 FULL_NAME: 1,
                 EMAIL_ADDRESS: 2,
-                PASSWORD: 3,
-                LANGUAGE: 4,
-                COUNTRY: 5,
-                TIMEZONE: 6
+                LANGUAGE: 3,
+                COUNTRY: 4,
+                TIMEZONE: 5
             };
             var additionalInfoFields = {
                 EDUCATION: 0,
@@ -276,7 +275,7 @@ define(['backbone',
 
                 sectionsData = accountSettingsView.options.tabSections.aboutTabSections;
 
-                expect(sectionsData[accountInfoTab.BASIC_ACCOUNT_INFORMATION].fields.length).toBe(7);
+                expect(sectionsData[accountInfoTab.BASIC_ACCOUNT_INFORMATION].fields.length).toBe(6);
 
                 // Verify that username, name and email fields are readonly
                 textFields = [
