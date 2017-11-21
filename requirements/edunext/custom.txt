@@ -36,4 +36,4 @@
 -e git+https://github.com/open-craft/xblock-vectordraw.git@v0.2.1#egg=vectordraw-xblock==0.2.1
 
 # Scorm Xblock
--e git+https://github.com/raccoongang/edx_xblock_scorm.git@eff4f18963424ac090662e03040dc8f003770cd3#egg=edx_xblock_scorm
+-e git+https://github.com/eduNEXT/edx_xblock_scorm.git@230b8f92239c667166aa99502cb3191b9046c961#egg=edx-xblock-scorm==0.1
