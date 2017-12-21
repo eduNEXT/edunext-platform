@@ -39,4 +39,4 @@
 -e git+https://github.com/eduNEXT/edx_xblock_scorm.git@230b8f92239c667166aa99502cb3191b9046c961#egg=edx-xblock-scorm==0.1
 
 # CRM Xblock
-git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.1.0#egg=crm_integration_xblock==1.1.0
+git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.2.0#egg=crm_integration_xblock==1.2.0
