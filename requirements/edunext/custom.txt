@@ -36,7 +36,7 @@
 -e git+https://github.com/open-craft/xblock-vectordraw.git@v0.2.1#egg=vectordraw-xblock==0.2.1
 
 # Scorm Xblock
--e git+https://github.com/eduNEXT/edx_xblock_scorm.git@153017933fb388798bc6a9d5056feea7298d2089#egg=edx-xblock-scorm==0.1.1
+-e git+https://github.com/eduNEXT/edx_xblock_scorm.git@64ed9a75ee4f3603d9d3810cebae621ca3561718#egg=edx-xblock-scorm==0.1.2
 
 # CRM Xblock
 git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.4.0#egg=crm_integration_xblock==1.4.0
