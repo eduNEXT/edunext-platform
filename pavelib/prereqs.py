@@ -114,7 +114,7 @@ def prereq_cache(cache_name, paths, install_func):
     # then execute the code within the block.
     new_hash = compute_fingerprint(paths)
     if new_hash != old_hash:
-        install_func()
+        # install_func()
 
         # Update the cache with the new hash
         # If the code executed within the context fails (throws an exception),

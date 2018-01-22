@@ -50,10 +50,21 @@ STATICFILES_FINDERS = [
 ############################ PYFS XBLOCKS SERVICE #############################
 # Set configuration for Django pyfilesystem
 
+# DJFS = {
+#     'type': 'osfs',
+#     'directory_root': 'lms/static/djpyfs',
+#     'url_root': '/static/djpyfs',
+# }
+
 DJFS = {
-    'type': 'osfs',
-    'directory_root': 'cms/static/djpyfs',
-    'url_root': '/static/djpyfs',
+    'type': 's3fs',
+    'bucket': 'enext-prod-djfs-pyfs',
+    'prefix' : 'enext-prod-djfs-pyfs',
+    'remove_signature' : True,
+    'use_proxy' : True,
+    'proxy_root': 'djfs-pyfs',
+    'aws_access_key_id': 'xxxxx',
+    'aws_secret_access_key': 'xxxxx',
 }
 
 ############################# ADVANCED COMPONENTS #############################

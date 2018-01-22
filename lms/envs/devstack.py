@@ -34,6 +34,7 @@ LOG_OVERRIDES = [
     ('track.contexts', logging.CRITICAL),
     ('track.middleware', logging.CRITICAL),
     ('dd.dogapi', logging.CRITICAL),
+    ('social', logging.CRITICAL),
     ('django_comment_client.utils', logging.CRITICAL),
 ]
 for log_name, log_level in LOG_OVERRIDES:
@@ -58,18 +59,32 @@ ANALYTICS_DASHBOARD_URL = None
 ############################ PYFS XBLOCKS SERVICE #############################
 # Set configuration for Django pyfilesystem
 
+# DJFS = {
+#     'type': 'osfs',
+#     'directory_root': 'lms/static/djpyfs',
+#     'url_root': '/static/djpyfs',
+# }
+
 DJFS = {
-    'type': 'osfs',
-    'directory_root': 'lms/static/djpyfs',
-    'url_root': '/static/djpyfs',
+    'type': 's3fs',
+    'bucket': 'enext-prod-djfs-pyfs',
+    'prefix' : 'enext-prod-djfs-pyfs',
+    'aws_access_key_id': 'XXXX',
+    'aws_secret_access_key': 'XXXX',
+    # CUSTOM options used to make the SCORM XBLOCK work on a multiserver setup
+    'url_root': '',
+    'use_proxy': True,
+    'proxy_root': 'djfs-pyfs',
+    'remove_signature' : True,
 }
+
 
 ################################ DEBUG TOOLBAR ################################
 
 INSTALLED_APPS += ('debug_toolbar', 'debug_toolbar_mongo')
 MIDDLEWARE_CLASSES += (
-    'django_comment_client.utils.QueryCountDebugMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'django_comment_client.utils.QueryCountDebugMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 INTERNAL_IPS = ('127.0.0.1',)
 
@@ -309,3 +324,4 @@ DATA_API_DEF_PAGE_SIZE = 1000
 DATA_API_MAX_PAGE_SIZE = 30000
 
 ####################### END DATA API CONFIG #########################
+

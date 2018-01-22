@@ -925,6 +925,50 @@ urlpatterns += (
 
 urlpatterns = patterns(*urlpatterns)
 
+import httplib2
+from urllib import urlencode
+from django.http import HttpResponse
+from django.utils.encoding import force_unicode
+
+PROXY_FORMAT = u"https://%s/%s" % (u"enext-prod-djfs-pyfs.s3.amazonaws.com/enext-prod-djfs-pyfs", u"%s")
+
+def proxy(request, url):
+    conn = httplib2.Http()
+    # optionally provide authentication for server
+    #conn.add_credentials('admin','admin-password')
+    if request.method == "GET":
+        url_ending = "%s?%s" % (url, urlencode(request.GET))
+        url = PROXY_FORMAT % url_ending
+        resp, content = conn.request(url, request.method)
+        try:
+            content = content.decode("ascii")
+            return HttpResponse(content, content_type=resp.get('content-type'))
+        except Exception:
+            pass
+        try:
+            content = content.decode("utf-8")
+            return HttpResponse(content, content_type=resp.get('content-type'))
+        except Exception:
+            pass
+        try:
+            content = content.decode("cp1251")
+            return HttpResponse(content, content_type=resp.get('content-type'))
+        except Exception:
+            pass
+        try:
+            content = content.decode("cp1252")
+            return HttpResponse(content, content_type=resp.get('content-type'))
+        except Exception:
+            pass
+
+
+        return HttpResponse(content, content_type=resp.get('content-type'))
+    elif request.method == "POST":
+        url = PROXY_FORMAT % url
+        data = urlencode(request.POST)
+        resp, content = conn.request(url, request.method, data)
+        return HttpResponse(content)
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
@@ -932,6 +976,8 @@ if settings.DEBUG:
         settings.PROFILE_IMAGE_BACKEND['options']['base_url'],
         document_root=settings.PROFILE_IMAGE_BACKEND['options']['location']
     )
+    urlpatterns += url(r'^djfs-pyfs/(?P<url>.*)$', proxy),
+
 
 urlpatterns += url(r'^template/(?P<template>.+)$', 'openedx.core.djangoapps.debug.views.show_reference_template'),
 
