@@ -657,7 +657,7 @@ USAGE_ID_PATTERN = r'(?P<usage_id>(?:i4x://?[^/]+/[^/]+/[^/]+/[^@]+(?:@[^/]+)?)|
 # The space is required for space-dependent languages like Arabic and Farsi.
 # However, backward compatibility with Ficus older releases is still maintained (space is still not valid)
 # in the AccountCreationForm and the user_api through the ENABLE_UNICODE_USERNAME feature flag.
-USERNAME_REGEX_PARTIAL = r'[\w .@_+-]+'
+USERNAME_REGEX_PARTIAL = r'[\w.@_+-]+'
 USERNAME_PATTERN = r'(?P<username>{regex})'.format(regex=USERNAME_REGEX_PARTIAL)
 
 

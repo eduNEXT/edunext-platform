@@ -5,7 +5,9 @@ import re
 from importlib import import_module
 
 from django import forms
-from django.conf import settings
+from openedx_email_extensions.utils import get_html_message
+
+from openedx.conf import settings
 from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.hashers import UNUSABLE_PASSWORD_PREFIX
 from django.contrib.auth.models import User
@@ -21,17 +23,18 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangoapps.user_api import accounts as accounts_settings
 from student.models import CourseEnrollmentAllowed
 from util.password_policy_validators import validate_password_strength
-from student.edraak_validation import VALIDATE_USERNAME
 
 
 USERNAME_TOO_SHORT_MSG = _("Username must be minimum of two characters long")
-USERNAME_TOO_LONG_MSG = _("Username cannot be more than %(limit_value)s characters long")
+USERNAME_TOO_LONG_MSG = _(
+    "Username cannot be more than %(limit_value)s characters long")
 
 # Translators: This message is shown when the Unicode usernames are NOT allowed
 USERNAME_INVALID_CHARS_ASCII = _("Usernames can only contain Roman letters, western numerals (0-9), "
                                  "underscores (_), and hyphens (-).")
 
-# Translators: This message is shown only when the Unicode usernames are allowed
+# Translators: This message is shown only when the Unicode usernames are
+# allowed
 USERNAME_INVALID_CHARS_UNICODE = _("Usernames can only contain letters, numerals, underscore (_), numbers "
                                    "and @/./+/-/_ characters.")
 
@@ -51,7 +54,7 @@ class PasswordResetFormNoActive(PasswordResetForm):
         Validates that a user exists with the given email address.
         """
         email = self.cleaned_data["email"]
-        #The line below contains the only change, removing is_active=True
+        # The line below contains the only change, removing is_active=True
         self.users_cache = User.objects.filter(email__iexact=email)
         if not len(self.users_cache):
             raise forms.ValidationError(self.error_messages['unknown'])
@@ -66,7 +69,8 @@ class PasswordResetFormNoActive(PasswordResetForm):
             email_template_name='registration/password_reset_email.html',
             use_https=False,
             token_generator=default_token_generator,
-            from_email=configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL),
+            from_email=configuration_helpers.get_value(
+                'email_from_address', settings.DEFAULT_FROM_EMAIL),
             request=None
     ):
         """
@@ -74,7 +78,8 @@ class PasswordResetFormNoActive(PasswordResetForm):
         user.
         """
         # This import is here because we are copying and modifying the .save from Django 1.4.5's
-        # django.contrib.auth.forms.PasswordResetForm directly, which has this import in this place.
+        # django.contrib.auth.forms.PasswordResetForm directly, which has this
+        # import in this place.
         from django.core.mail import send_mail
         for user in self.users_cache:
             site_name = configuration_helpers.get_value(
@@ -94,13 +99,15 @@ class PasswordResetFormNoActive(PasswordResetForm):
             # Email subject *must not* contain newlines
             subject = subject.replace('\n', '')
             email = loader.render_to_string(email_template_name, context)
-            send_mail(subject, email, from_email, [user.email])
+            send_mail(subject, email, from_email, [user.email],
+                      html_message=get_html_message(context, base=email_template_name))
 
 
 class TrueCheckbox(widgets.CheckboxInput):
     """
     A checkbox widget that only accepts "true" (case-insensitive) as true.
     """
+
     def value_from_datadict(self, data, files, name):
         value = data.get(name, '')
         return value.lower() == 'true'
@@ -127,7 +134,8 @@ def validate_username(username):
     message = USERNAME_INVALID_CHARS_ASCII
 
     if settings.FEATURES.get("ENABLE_UNICODE_USERNAME"):
-        username_re = r"^{regex}$".format(regex=settings.USERNAME_REGEX_PARTIAL)
+        username_re = r"^{regex}$".format(
+            regex=settings.USERNAME_REGEX_PARTIAL)
         flags = re.UNICODE
         message = USERNAME_INVALID_CHARS_UNICODE
 
@@ -178,7 +186,8 @@ class AccountCreationForm(forms.Form):
 
     _EMAIL_INVALID_MSG = _("A properly formatted e-mail is required")
     _PASSWORD_INVALID_MSG = _("A valid password is required")
-    _NAME_TOO_SHORT_MSG = _("Your legal name must be a minimum of two characters long")
+    _NAME_TOO_SHORT_MSG = _(
+        "Your legal name must be a minimum of two characters long")
 
     # TODO: Resolve repetition
 
@@ -225,7 +234,8 @@ class AccountCreationForm(forms.Form):
         self.enforce_password_policy = enforce_password_policy
         if tos_required:
             self.fields["terms_of_service"] = TrueField(
-                error_messages={"required": _("You must accept the terms of service.")}
+                error_messages={"required": _(
+                    "You must accept the terms of service.")}
             )
 
         # TODO: These messages don't say anything about minimum length
@@ -249,7 +259,8 @@ class AccountCreationForm(forms.Form):
                         )
                 else:
                     required = field_value == "required"
-                    min_length = 1 if field_name in ("gender", "level_of_education") else 2
+                    min_length = 1 if field_name in (
+                        "gender", "level_of_education") else 2
                     error_message = error_message_dict.get(
                         field_name,
                         _("You are missing one or more required fields")
@@ -275,22 +286,26 @@ class AccountCreationForm(forms.Form):
                 "username" in self.cleaned_data and
                 self.cleaned_data["username"] == password
         ):
-            raise ValidationError(_("Username and password fields cannot match"))
+            raise ValidationError(
+                _("Username and password fields cannot match"))
         if self.enforce_password_policy:
             try:
                 validate_password_strength(password)
             except ValidationError, err:
-                raise ValidationError(_("Password: ") + "; ".join(err.messages))
+                raise ValidationError(
+                    _("Password: ") + "; ".join(err.messages))
         return password
 
     def clean_email(self):
         """ Enforce email restrictions (if applicable) """
         email = self.cleaned_data["email"]
         if settings.REGISTRATION_EMAIL_PATTERNS_ALLOWED is not None:
-            # This Open edX instance has restrictions on what email addresses are allowed.
+            # This Open edX instance has restrictions on what email addresses
+            # are allowed.
             allowed_patterns = settings.REGISTRATION_EMAIL_PATTERNS_ALLOWED
             # We append a '$' to the regexs to prevent the common mistake of using a
-            # pattern like '.*@edx\\.org' which would match 'bob@edx.org.badguy.com'
+            # pattern like '.*@edx\\.org' which would match
+            # 'bob@edx.org.badguy.com'
             if not any(re.match(pattern + "$", email) for pattern in allowed_patterns):
                 # This email is not on the whitelist of allowed emails. Check if
                 # they may have been manually invited by an instructor and if not,
