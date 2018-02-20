@@ -60,7 +60,7 @@ from contextlib import contextmanager
 from hashlib import sha256
 from logging import ERROR, getLogger
 
-from django.conf import settings
+from openedx.conf import settings
 from django.contrib.auth import SESSION_KEY
 from django.contrib.auth.views import redirect_to_login
 from django.contrib.sessions.middleware import SessionMiddleware

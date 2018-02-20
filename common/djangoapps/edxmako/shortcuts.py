@@ -22,6 +22,8 @@ from django.template import Context
 
 from edxmako import lookup_template
 from edxmako.request_context import get_template_request_context
+
+from openedx.conf import settings
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.theming.helpers import get_template_path, is_request_in_themed_site
 

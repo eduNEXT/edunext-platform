@@ -1,4 +1,7 @@
-<%! from django.utils.translation import ugettext as _ %>
+<%!
+from django.utils.translation import ugettext as _
+from openedx.conf import settings
+%>
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("This Course Unavailable In Your Country")}</%block>

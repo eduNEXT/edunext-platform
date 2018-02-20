@@ -443,6 +443,7 @@ MICROSITE_CONFIGURATION = {
         "domain_prefix": "test-site",
         "university": "test_site",
         "platform_name": "Test Site",
+        "PLATFORM_NAME": "Test Site",
         "logo_image_url": "test_site/images/header-logo.png",
         "email_from_address": "test_site@edx.org",
         "ACTIVATION_EMAIL_FROM_ADDRESS": "test_activate@edx.org",
