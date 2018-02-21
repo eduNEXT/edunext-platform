@@ -4,7 +4,8 @@ Utility methods related to course
 import logging
 import urllib
 
-from django.conf import settings
+from openedx.conf import settings
+from microsite_configuration import microsite
 
 log = logging.getLogger(__name__)
 
@@ -46,8 +47,12 @@ def get_link_for_about_page(course):
     elif settings.FEATURES.get('ENABLE_MKTG_SITE') and getattr(course, 'marketing_url', None):
         course_about_url = course.marketing_url
     else:
+        # eduNEXT 23.12.2015 make the link microsite aware, based on the org of
+        # the course
+        about_base = microsite.get_value_for_org(
+            course.id.org, 'SITE_NAME', settings.LMS_ROOT_URL)
         course_about_url = u'{about_base_url}/courses/{course_key}/about'.format(
-            about_base_url=settings.LMS_ROOT_URL,
+            about_base_url=about_base,
             course_key=unicode(course.id),
         )
 
