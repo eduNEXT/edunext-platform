@@ -150,7 +150,8 @@ def _parse_metadata_xml(xml, entity_id):
         etree.QName(SAML_XML_NS, "KeyDescriptor"), "{http://www.w3.org/2000/09/xmldsig#}X509Certificate"
     ))
     signing_public_key = sso_desc.findtext("./{}{}//{}".format(
-        etree.QName(SAML_XML_NS, "KeyDescriptor"), "[@use='signing']", "{http://www.w3.org/2000/09/xmldsig#}X509Certificate"
+        etree.QName(
+            SAML_XML_NS, "KeyDescriptor"), "[@use='signing']", "{http://www.w3.org/2000/09/xmldsig#}X509Certificate"
     ))
     if signing_public_key and public_key != signing_public_key:
         public_key = signing_public_key

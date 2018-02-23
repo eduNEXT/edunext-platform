@@ -26,7 +26,8 @@ def get_lms_link_for_about_page(course_key):
     # eduNEXT 23.12.2015 make the link microsite aware, based on the org of the course
     about_base = microsite.get_value_for_org(course_key.org, 'SITE_NAME', about_base)
 
-    return u"{about_base_url}/courses/{course_key}/about".format(
+    return u"{protocol}://{about_base_url}/courses/{course_key}/about".format(
+        protocol="https",
         about_base_url=about_base,
         course_key=course_key.to_deprecated_string()
     )
