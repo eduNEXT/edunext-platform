@@ -1,0 +1,24 @@
+## mako
+<%!
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+  from openedx_email_extensions.settings import proxy_settings
+%>
+<%
+  footer_override = microsite.get_value('html_email_footer_override',  None)
+  email_footer__color = proxy_settings.EMAIL_COLORS['email_footer__color']
+  email_footer__color_link = proxy_settings.EMAIL_COLORS['email_footer__color_link']
+  email_footer__color_small = proxy_settings.EMAIL_COLORS['email_footer__color_small']
+%>
+
+% if footer_override:
+    ${ footer_override }
+% else:
+  <p class="text-center float-center" style="color:${email_footer__color};float:none;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:12px;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
+      Copyright © 2016 <a href="#" style="color:${email_footer__color_link};font-family:Helvetica,Arial,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"> ${proxy_settings.PLATFORM_NAME}</a> All rights reserved.
+  </p>
+
+	<p class="text-center float-center" style="color:${email_footer__color_small};font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center">
+    <small style="font-size: 11px">${_("If you didn't request this, you don't need to do anything. If you require assistance, please write to us at {TECH_SUPPORT_EMAIL}.").format(TECH_SUPPORT_EMAIL=proxy_settings.TECH_SUPPORT_EMAIL)}</small>
+	</p>
+% endif

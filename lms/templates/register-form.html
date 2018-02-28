@@ -159,7 +159,7 @@ from student.models import UserProfile
     % endif
     % if settings.REGISTRATION_EXTRA_FIELDS['country'] != 'hidden':
     <li class="field-group">
-    <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['country']} select" id="field-country">
+      <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['country']} select" id="field-country">
         <label for="country">${_("Country")}</label>
         <select id="country" name="country" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['country'] == 'required' else ''}>
           <option value="">--</option>
@@ -172,7 +172,7 @@ from student.models import UserProfile
     % endif
     % if settings.REGISTRATION_EXTRA_FIELDS['level_of_education'] != 'hidden':
     <li class="field-group field-education-level">
-    <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['level_of_education']} select" id="field-education-level">
+      <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['level_of_education']} select" id="field-education-level">
         <label for="education-level">${_("Highest Level of Education Completed")}</label>
         <select id="education-level" name="level_of_education" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['level_of_education'] == 'required' else ''}>
           <option value="">--</option>
@@ -207,8 +207,8 @@ from student.models import UserProfile
           %endfor
         </select>
       </div>
-      % endif
     </li>
+    % endif
   </ol>
 </div>
 
@@ -237,27 +237,30 @@ from student.models import UserProfile
     <li class="field-group">
 
       % if has_extauth_info is UNDEFINED or ask_for_tos :
-      <div class="field required checkbox" id="field-tos">
-        <input id="tos-yes" type="checkbox" name="terms_of_service" value="true" required aria-required="true" />
-        <label for="tos-yes">${_('I agree to the {link_start}Terms of Service{link_end}').format(
-          link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=marketing_link('TOS')),
-          link_end='</a>')}</label>
-      </div>
+        % if settings.REGISTRATION_EXTRA_FIELDS.get('terms_of_service', True) != 'hidden':
+          <div class="field required checkbox" id="field-tos">
+            <input id="tos-yes" type="checkbox" name="terms_of_service" value="true" required aria-required="true" />
+            <label for="tos-yes">${_('I agree to the {link_start}Terms of Service{link_end}').format(
+              link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=marketing_link('TOS')),
+              link_end='</a>')}</label>
+          </div>
+        % else:
+          <div class="field required checkbox" id="field-tos">
+            <input id="tos-yes" type="hidden" name="terms_of_service" value="true" required aria-required="true" />
+          </div>
+        % endif
       % endif
 
       % if settings.REGISTRATION_EXTRA_FIELDS['honor_code'] != 'hidden':
-      ## check if we have an Honor Code link in our marketing map
-      % if marketing_link('HONOR') and marketing_link('HONOR') != '#':
-      <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['honor_code']} checkbox" id="field-honorcode">
-        <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" />
-        <%
-          honor_code_path = marketing_link('HONOR')
-        %>
-        <label for="honorcode-yes">${_('I agree to the {link_start}Honor Code{link_end}').format(
-          link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=honor_code_path),
-          link_end='</a>')}</label>
-      </div>
-      % endif
+        ## check if we have an Honor Code link in our marketing map
+        % if marketing_link('HONOR') and marketing_link('HONOR') != '#':
+          <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['honor_code']} checkbox" id="field-honorcode">
+            <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" />
+            <label for="honorcode-yes">${_('I agree to the {link_start}Honor Code{link_end}').format(
+              link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=marketing_link('HONOR')),
+              link_end='</a>')}</label>
+          </div>
+        % endif
       % endif
     </li>
   </ol>

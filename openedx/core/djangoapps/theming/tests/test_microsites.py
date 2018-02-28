@@ -36,7 +36,9 @@ class TestComprehensiveThemeLMS(TestCase):
         resp = self.client.get('/', HTTP_HOST=settings.MICROSITE_TEST_HOSTNAME)
         self.assertEqual(resp.status_code, 200)
         # This string comes from footer.html of test-theme
-        self.assertContains(resp, "This is a footer for test-theme.")
+        # eduNEXT 21.02.2018. For edunext it makes sense that microsites take precedence over site-theme
+        self.assertNotContains(resp, "This is a footer for test-theme.")
+        self.assertContains(resp, "This is a Test Site footer")
 
     def test_microsite_footer(self):
         """
