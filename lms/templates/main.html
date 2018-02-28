@@ -14,6 +14,7 @@
 <% online_help_token = self.online_help_token() if hasattr(self, 'online_help_token') else None %>
 <%!
 from branding import api as branding_api
+from microsite_configuration import microsite
 from django.core.urlresolvers import reverse
 from django.utils.http import urlquote_plus
 from django.utils.translation import ugettext as _
@@ -108,27 +109,12 @@ from pipeline_mako import render_require_js_path_overrides
   <%include file="widgets/segment-io.html" />
 
   <meta name="path_prefix" content="${EDX_ROOT_URL}">
-  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
-
-<% ga_acct = static.get_value("GOOGLE_ANALYTICS_ACCOUNT", settings.GOOGLE_ANALYTICS_ACCOUNT) %>
-% if ga_acct:
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '${ga_acct | n, js_escaped_string}']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-% endif
-
+  
+  <%include file="${microsite.get_template_path('google_analytics.html')}" />
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
-
+<%include file="browser-alert.html" />
 <%static:optional_include_mako file="body-initial.html" is_theming_enabled="True" />
 <div id="page-prompt"></div>
 % if not disable_window_wrap:
@@ -137,7 +123,7 @@ from pipeline_mako import render_require_js_path_overrides
     <a class="nav-skip sr-only sr-only-focusable" href="#main">${_("Skip to main content")}</a>
 
     % if not disable_header:
-        <%include file="${static.get_template_path('header.html')}" args="online_help_token=online_help_token" />
+        <%include file="${microsite.get_template_path('header.html')}" args="online_help_token=online_help_token" />
         <%include file="/preview_menu.html" />
     % endif
 
@@ -147,7 +133,7 @@ from pipeline_mako import render_require_js_path_overrides
     </div>
 
     % if not disable_footer:
-        <%include file="${static.get_template_path('footer.html')}" />
+        <%include file="${microsite.get_template_path('footer.html')}" />
     % endif
 
 % if not disable_window_wrap:
