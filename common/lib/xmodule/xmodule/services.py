@@ -4,7 +4,7 @@ Module contains various XModule/XBlock services
 import inspect
 
 from config_models.models import ConfigurationModel
-from django.conf import settings
+from openedx.conf import settings
 
 
 class SettingsService(object):
