@@ -3,7 +3,7 @@ These callables are used by django-wiki to check various permissions
 a user has on an article.
 """
 
-from django.conf import settings
+from openedx.conf import settings
 from django.utils.translation import ugettext_noop
 
 from courseware.tabs import EnrolledTab

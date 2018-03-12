@@ -3,7 +3,7 @@ URLs for LMS
 """
 
 from config_models.views import ConfigurationModelCurrentAPIView
-from django.conf import settings
+from openedx.conf import settings
 from django.conf.urls import include, patterns, url
 from django.conf.urls.static import static
 from django.views.generic.base import RedirectView
