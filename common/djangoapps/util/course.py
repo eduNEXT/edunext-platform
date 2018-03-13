@@ -51,6 +51,13 @@ def get_link_for_about_page(course):
         # the course
         about_base = microsite.get_value_for_org(
             course.id.org, 'SITE_NAME', settings.LMS_ROOT_URL)
+
+        if not about_base.startswith("http"):
+            about_base = u"{protocol}://{base}".format(
+                protocol="https",
+                base=about_base
+            )
+
         course_about_url = u'{about_base_url}/courses/{course_key}/about'.format(
             about_base_url=about_base,
             course_key=unicode(course.id),
