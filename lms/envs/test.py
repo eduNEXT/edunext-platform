@@ -258,6 +258,7 @@ PASSWORD_COMPLEXITY = {}
 
 ######### Third-party auth ##########
 FEATURES['ENABLE_THIRD_PARTY_AUTH'] = True
+FEATURES['ENABLE_THIRD_PARTY_AUTH_FOR_TEST'] = True
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
