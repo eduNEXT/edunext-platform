@@ -13,14 +13,14 @@ log = logging.getLogger('edx.celery.task')
 
 
 @task(bind=True)
-def send_activation_email(self, subject, message, from_address, dest_addr):
+def send_activation_email(self, subject, message, from_address, dest_addr, html_message):
     """
     Sending an activation email to the user.
     """
     max_retries = settings.RETRY_ACTIVATION_EMAIL_MAX_ATTEMPTS
     retries = self.request.retries
     try:
-        mail.send_mail(subject, message, from_address, [dest_addr], fail_silently=False)
+        mail.send_mail(subject, message, from_address, [dest_addr], fail_silently=False, html_message=html_message)
         # Log that the Activation Email has been sent to user without an exception
         log.info("Activation Email has been sent to User {user_email}".format(
             user_email=dest_addr

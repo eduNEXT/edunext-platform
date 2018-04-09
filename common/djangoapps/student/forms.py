@@ -5,7 +5,9 @@ import re
 from importlib import import_module
 
 from django import forms
-from django.conf import settings
+from openedx_email_extensions.utils import get_html_message
+
+from openedx.conf import settings
 from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.hashers import UNUSABLE_PASSWORD_PREFIX
 from django.contrib.auth.models import User
@@ -93,7 +95,8 @@ class PasswordResetFormNoActive(PasswordResetForm):
             # Email subject *must not* contain newlines
             subject = subject.replace('\n', '')
             email = loader.render_to_string(email_template_name, context)
-            send_mail(subject, email, from_email, [user.email])
+            send_mail(subject, email, from_email, [user.email],
+                      html_message=get_html_message(context, base=email_template_name))
 
 
 class TrueCheckbox(widgets.CheckboxInput):
