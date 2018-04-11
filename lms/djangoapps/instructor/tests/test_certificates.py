@@ -68,9 +68,9 @@ class CertificatesInstructorDashTest(SharedModuleStoreTestCase):
         CertificateGenerationConfiguration.objects.create(enabled=True)
 
     def test_visible_only_to_global_staff(self):
-        # Instructors don't see the certificates section
+        # eduNEXT: Instructors see the certificates section
         self.client.login(username=self.instructor.username, password="test")
-        self._assert_certificates_visible(False)
+        self._assert_certificates_visible(True)
 
         # Global staff can see the certificates section
         self.client.login(username=self.global_staff.username, password="test")
@@ -238,10 +238,10 @@ class CertificatesInstructorApiTest(SharedModuleStoreTestCase):
     def test_allow_only_global_staff(self, url_name):
         url = reverse(url_name, kwargs={'course_id': self.course.id})
 
-        # Instructors do not have access
+        # eduNEXT: Instructors  have access
         self.client.login(username=self.instructor.username, password='test')
         response = self.client.post(url)
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 302)
 
         # Global staff have access
         self.client.login(username=self.global_staff.username, password='test')
@@ -306,9 +306,10 @@ class CertificatesInstructorApiTest(SharedModuleStoreTestCase):
         response = self.client.post(url)
         self.assertEqual(response.status_code, 403)
 
+        # eduNEXT: Instructor have access
         self.client.login(username=self.instructor.username, password='test')
         response = self.client.post(url)
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 200)
 
     def test_certificate_generation_api_with_global_staff(self):
         """
