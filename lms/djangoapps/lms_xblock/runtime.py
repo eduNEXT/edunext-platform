@@ -1,7 +1,7 @@
 """
 Module implementing `xblock.runtime.Runtime` functionality for the LMS
 """
-from django.conf import settings
+from openedx.conf import settings
 from django.core.urlresolvers import reverse
 
 from badges.service import BadgingService
