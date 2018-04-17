@@ -10,7 +10,7 @@ from functools import partial
 
 import newrelic.agent
 from capa.xqueue_interface import XQueueInterface
-from django.conf import settings
+from openedx.conf import settings
 from django.contrib.auth.models import User
 from django.core.cache import cache
 from django.core.context_processors import csrf
