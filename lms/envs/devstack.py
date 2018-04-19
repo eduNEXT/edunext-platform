@@ -30,6 +30,7 @@ TIME_ZONE = 'America/Bogota'
 
 FEATURES['SHOW_HEADER_LANGUAGE_SELECTOR'] = True
 FEATURES['SHOW_FOOTER_LANGUAGE_SELECTOR'] = True
+FEATURES['EDNX_SITE_AWARE_LOCALE'] = True
 
 ################################ LOGGERS ######################################
 
