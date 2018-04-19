@@ -3,6 +3,7 @@ Models for the dark-launching languages
 """
 from config_models.models import ConfigurationModel
 from django.db import models
+from microsite_configuration import microsite
 
 
 class DarkLangConfig(ConfigurationModel):
@@ -23,11 +24,13 @@ class DarkLangConfig(ConfigurationModel):
         ``released_languages`` as a list of language codes.
 
         Example: ['it', 'de-at', 'es', 'pt-br']
-        """
-        if not self.released_languages.strip():
-            return []
 
-        languages = [lang.lower().strip() for lang in self.released_languages.split(',')]
-        # Put in alphabetical order
-        languages.sort()
-        return languages
+        eduNEXT: we support only the list of available languages from the site
+        otherwise is the same as having no configuration
+        """
+        site_released_langs = microsite.get_value("released_languages", [])
+        if site_released_langs:
+            site_released_langs = [lang.lower().strip() for lang in site_released_langs.split(',')]
+            site_released_langs.sort()
+
+        return site_released_langs
