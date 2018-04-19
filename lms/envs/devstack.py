@@ -23,6 +23,11 @@ HTTPS = 'off'
 LMS_ROOT_URL = 'http://localhost:8000'
 ENTERPRISE_API_URL = LMS_ROOT_URL + '/enterprise/api/v1/'
 
+############################### LANG ########################
+
+LANGUAGE_CODE = 'en'
+TIME_ZONE = 'America/Bogota'
+
 ################################ LOGGERS ######################################
 
 # Silence noisy logs
