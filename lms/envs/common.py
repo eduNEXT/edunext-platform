@@ -2195,7 +2195,7 @@ INSTALLED_APPS = (
     'edunext_openedx_extensions.ednx_microsites',
     'edunext_openedx_extensions.manage_api',
     'edunext_openedx_extensions.microsite_api',
-
+    'edunext_openedx_extensions.microsite_aware_functions',
 
     # Credentials support
     'openedx.core.djangoapps.credentials',
