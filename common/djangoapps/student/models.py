@@ -40,6 +40,7 @@ from opaque_keys.edx.keys import CourseKey
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from pytz import UTC
 from simple_history.models import HistoricalRecords
+from edunext_openedx_extensions.microsite_aware_functions.enrollments import filter_enrollments
 
 import dogstats_wrapper as dog_stats_api
 import lms.lib.comment_client as cc
@@ -1699,7 +1700,12 @@ class CourseEnrollment(models.Model):
         if not enrollment_state:
             try:
                 record = cls.objects.get(user=user, course_id=course_key)
-                enrollment_state = CourseEnrollmentState(record.mode, record.is_active)
+                # Filter per org
+                filtered = [x for x in filter_enrollments([record])]
+                if not filtered:
+                    enrollment_state = CourseEnrollmentState(None, None)
+                else:
+                    enrollment_state = CourseEnrollmentState(record.mode, record.is_active)
             except cls.DoesNotExist:
                 enrollment_state = CourseEnrollmentState(None, None)
             cls._update_enrollment_in_request_cache(user, course_key, enrollment_state)
