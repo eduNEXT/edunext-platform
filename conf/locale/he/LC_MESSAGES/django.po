@@ -1,91 +1,16 @@
-# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-# edX community translations have been downloaded from Hebrew (http://www.transifex.com/open-edx/edx-platform/language/he/).
-# Copyright (C) 2017 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# dana bublil <dana.bublil@gmail.com>, 2016
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2016-2017
-# e2f he_r1 <e2f_he_r1@outlook.com>, 2016
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# qualityalltext <quality@alltext.co.il>, 2016
-# Ron Rozen <Ronrozen@gmail.com>, 2016
-# shay nativ, 2015
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2015
-# Yoav Caspin <yoavc@pmo.gov.il>, 2016-2017
-# yuval zana, 2015
-# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2017 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2017
-# e2f he_r1 <e2f_he_r1@outlook.com>, 2016
-# Naaman nov <naaman.nov@gmail.com>, 2015
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# qualityalltext <quality@alltext.co.il>, 2016
-# Ron Rozen <Ronrozen@gmail.com>, 2016
-# Yoav Caspin <yoavc@pmo.gov.il>, 2016
-# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
-# edX community translations have been downloaded from Hebrew (http://www.transifex.com/open-edx/edx-platform/language/he/)
-# Copyright (C) 2017 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# dotanlaks <dotanlaks6@gmail.com>, 2014
-# dotanlaks <dotanlaks6@gmail.com>, 2014
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2016-2017
-# e2f he_r1 <e2f_he_r1@outlook.com>, 2016
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# qualityalltext <quality@alltext.co.il>, 2016-2017
-# Ron Rozen <Ronrozen@gmail.com>, 2016
-# Shay Nativ <shay@yeda.org.il>, 2015
-# Yoav Caspin <yoavc@pmo.gov.il>, 2016-2017
-# yuval zana, 2015
-# yuval zana, 2015
-# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2017 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2016-2017
-# e2f he_r1 <e2f_he_r1@outlook.com>, 2016
-# Naaman nov <naaman.nov@gmail.com>, 2015
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# qualityalltext <quality@alltext.co.il>, 2016-2017
-# Ron Rozen <Ronrozen@gmail.com>, 2016
-# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2017 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# Bentsi Magidovich <magidovich@gmail.com>, 2015
-# e2f_HE c1 <e2f_HE_c1@outlook.com>, 2017
-# ERAN RAVIV <eran.raviv.israelx@gmail.com>, 2016
-# Ido, 2014
-# Nadav Stark <nadav@yeda.org.il>, 2015
-# Ned Batchelder <ned@edx.org>, 2016
-# qualityalltext <quality@alltext.co.il>, 2016
+# edunext helper translation file for Hebrew.
+# Copyright (C) 2016 eduNEXT
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2017-06-08 14:59+0000\n"
-"PO-Revision-Date: 2017-03-29 06:21+0000\n"
-"Last-Translator: e2f_HE c1 <e2f_HE_c1@outlook.com>\n"
-"Language-Team: Hebrew (http://www.transifex.com/open-edx/edx-platform/language/he/)\n"
+"POT-Creation-Date: 2018-04-25 22:15+0000\n"
+"PO-Revision-Date: 2018-04-25 20:42+0000\n"
+"Last-Translator: Babel <techical@edunext.co>\n"
+"Language-Team: Hebrew (http://www.transifex.com/open-edx/edx-platform/language/he/) and eduNEXT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
 "Language: he\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -180,7 +105,7 @@ msgid ""
 "photos for verification.  This appies ONLY to modes that require "
 "verification."
 msgstr ""
-"אפשרות: לאחר תאריך/שעה אלו, לא יוכלו יותר המשתמשים לשלוח תמונות לאימות.  "
+"אופציונלי: לאחר תאריך/שעה אלו, לא יוכלו יותר המשתמשים לשלוח תמונות לאימות.  "
 "אפשרות זו חלה אך ורק על מצבים הדורשים אימות."
 
 #: common/djangoapps/course_modes/helpers.py
@@ -230,8 +155,10 @@ msgstr "חינוך מקצועי"
 
 #: common/djangoapps/course_modes/models.py common/lib/xmodule/xmodule/tabs.py
 #: lms/djangoapps/courseware/tabs.py lms/djangoapps/courseware/views/views.py
-#: lms/djangoapps/shoppingcart/reports.py cms/templates/widgets/header.html
-#: lms/templates/help_modal.html lms/templates/courseware/courseware.html
+#: lms/djangoapps/shoppingcart/reports.py
+#: openedx/features/course_experience/__init__.py
+#: cms/templates/widgets/header.html lms/templates/help_modal.html
+#: lms/templates/courseware/courseware.html
 msgid "Course"
 msgstr "קורס"
 
@@ -289,11 +216,6 @@ msgstr ""
 
 #: common/djangoapps/course_modes/models.py
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
-msgid "Audit"
-msgstr "שומע חופשי"
-
-#: common/djangoapps/course_modes/models.py
-#: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Honor"
 msgstr "קוד אתי"
 
@@ -315,7 +237,7 @@ msgstr "פרק הזמן לפני תום הקורס שבו יפוג תוקפו ש
 #: common/djangoapps/course_modes/views.py
 #, python-brace-format
 msgid "Congratulations!  You are now enrolled in {course_name}"
-msgstr ""
+msgstr "ברכות!  אתה רשום כעת ב-{course_name}"
 
 #: common/djangoapps/course_modes/views.py
 #, python-brace-format
@@ -324,6 +246,9 @@ msgid ""
 "{partner_names}, sponsored by {enterprise_name}. Please select your "
 "enrollment information below."
 msgstr ""
+"ברוכ/ה הבאה {username}! את/ה עומד/ת להרשם לקורס {course_name}, מ "
+"{partner_names}, ממומן על ידי {enterprise_name}. בבקשה בחר/י למטה את המידע "
+"שלך עבור הרישום."
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
@@ -363,6 +288,34 @@ msgid "User profile"
 msgstr "פרופיל משתמש"
 
 #: common/djangoapps/student/forms.py
+msgid "Username must be minimum of two characters long"
+msgstr "שם משתמש חייב להיות באורך העולה על שני תווים"
+
+#: common/djangoapps/student/forms.py
+#, python-format
+msgid "Username cannot be more than %(limit_value)s characters long"
+msgstr "שם משתמש יכול להיות באורך מירבי של %(limit_value)s characters תווים"
+
+#. Translators: This message is shown when the Unicode usernames are NOT
+#. allowed
+#: common/djangoapps/student/forms.py
+msgid ""
+"Usernames can only contain Roman letters, western numerals (0-9), "
+"underscores (_), and hyphens (-)."
+msgstr ""
+"שמות המשתמשים יכולים לכלול רק אותיות באנגלית, מספרים (0-9), קווים תחתונים "
+"(_) ומקפים (-)."
+
+#. Translators: This message is shown only when the Unicode usernames are
+#. allowed
+#: common/djangoapps/student/forms.py
+msgid ""
+"Usernames can only contain letters, numerals, underscore (_), numbers and "
+"@/./+/-/_ characters."
+msgstr ""
+"שמות משתמשים יכולים להכיל רק אותיות,קו תחתון (_) מספרים ותווים @/./+/-/_"
+
+#: common/djangoapps/student/forms.py
 msgid ""
 "That e-mail address doesn't have an associated user account. Are you sure "
 "you've registered?"
@@ -375,10 +328,6 @@ msgid ""
 msgstr "לא ניתן לאפס את סיסמת חשבון המשתמש המשויך לכתובת דואר אלקטרוני זו."
 
 #: common/djangoapps/student/forms.py
-msgid "Username must be minimum of two characters long"
-msgstr "שם משתמש חייב להיות באורך העולה על שני תווים"
-
-#: common/djangoapps/student/forms.py
 msgid "A properly formatted e-mail is required"
 msgstr "כתובת דואר אלקטרוני חייבת להיות בפורמט תקין"
 
@@ -389,19 +338,6 @@ msgstr "דרושה סיסמה חוקית"
 #: common/djangoapps/student/forms.py
 msgid "Your legal name must be a minimum of two characters long"
 msgstr "שמך צריך להכיל לפחות שני תווים"
-
-#: common/djangoapps/student/forms.py
-msgid ""
-"Usernames can only contain Roman letters, western numerals (0-9), "
-"underscores (_), and hyphens (-)."
-msgstr ""
-"שמות המשתמשים יכולים לכלול רק אותיות באנגלית, מספרים (0-9), קווים תחתונים "
-"(_) ומקפים (-)."
-
-#: common/djangoapps/student/forms.py
-#, python-format
-msgid "Username cannot be more than %(limit_value)s characters long"
-msgstr "שם משתמש יכול להיות באורך מירבי של %(limit_value)s characters תווים"
 
 #: common/djangoapps/student/forms.py
 #, python-format
@@ -622,12 +558,12 @@ msgstr "בית ספר יסודי"
 #. Translators: 'None' refers to the student's level of education
 #: common/djangoapps/student/models.py
 msgid "No formal education"
-msgstr ""
+msgstr "אין השכלה רשמית"
 
 #. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py
 msgid "Other education"
-msgstr ""
+msgstr "השכלה מסוג אחר"
 
 #: common/djangoapps/student/models.py
 #, python-brace-format
@@ -717,6 +653,38 @@ msgid "The course you are looking for is closed for enrollment as of {date}."
 msgstr "הקורס שאתה מחפש סגור להרשמה החל מ-{date}."
 
 #: common/djangoapps/student/views.py
+msgid "Photos are mismatched"
+msgstr "התמונות אינן תואמות"
+
+#: common/djangoapps/student/views.py
+msgid "Name missing from ID photo"
+msgstr "חסר שם בתמונה מזהה"
+
+#: common/djangoapps/student/views.py
+msgid "ID photo not provided"
+msgstr "לא סופקה תמונה מזהה"
+
+#: common/djangoapps/student/views.py
+msgid "ID is invalid"
+msgstr "מזהה אינו תקין"
+
+#: common/djangoapps/student/views.py
+msgid "Learner photo is blurry"
+msgstr "תמונת הלומד מטושטשת"
+
+#: common/djangoapps/student/views.py
+msgid "Name on ID does not match name on account"
+msgstr "השם בתעודה המזהה אינו תואם את השם בחשבון"
+
+#: common/djangoapps/student/views.py
+msgid "Learner photo not provided"
+msgstr "תמונת הלומד לא סופקה"
+
+#: common/djangoapps/student/views.py
+msgid "ID photo is blurry"
+msgstr "תמונה מזהה מטושטשת"
+
+#: common/djangoapps/student/views.py
 msgid "Course id not specified"
 msgstr "מזהה קורס לא מפורט"
 
@@ -752,6 +720,10 @@ msgid ""
 "an email, check your spam folders or <a href=\"{support_url}\">contact "
 "{platform} Support</a>."
 msgstr ""
+"בכדי להתחבר, את/ה צריכ/ה להפעיל את החשבון שלך. <br /><br />כרגע שלחנו קישור "
+"להפעלה ל<strong>{email}</strong>. אם אינך קיבלת את הדוא\"ל, בדק/י את תיקיית "
+"דואר הזבל או <a href=\"{support_url}\">צור/י קשר עם התמיכה של "
+"{platform}</a>. "
 
 #: common/djangoapps/student/views.py
 #, python-brace-format
@@ -848,7 +820,7 @@ msgstr "חשבון עם דואר אלקטרוני '{email}' קיים כבר."
 #: common/djangoapps/student/views.py
 #, python-brace-format
 msgid "Registration using {provider} has timed out."
-msgstr ""
+msgstr "תם פרק הזמן להרשמה באמצעות {provider}."
 
 #: common/djangoapps/student/views.py
 msgid "An access_token is required when passing value ({}) for provider."
@@ -866,7 +838,7 @@ msgstr "ה-access_token  שסופק אינו חוקי."
 #: openedx/core/djangoapps/user_api/accounts/api.py
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Account creation not allowed."
-msgstr ""
+msgstr "לא ניתן ליצור חשבון."
 
 #: common/djangoapps/student/views.py
 #, python-brace-format
@@ -875,11 +847,13 @@ msgid ""
 "wrong, please <a href=\"{support_url}\">contact support</a> to resolve this "
 "issue."
 msgstr ""
+"{html_start}החשבון שלך לא יכול להיות מופעל{html_end}משהו השתבש, בבקשה <a "
+"href=\"{support_url}\">צור/י קשר עם התמיכה</a> על מנת לפתור בעיה זו."
 
 #: common/djangoapps/student/views.py
 #, python-brace-format
 msgid "{html_start}Success{html_end} You have activated your account."
-msgstr ""
+msgstr "{html_start}הצלחה{html_end}הפעלת את החשבון שלך."
 
 #: common/djangoapps/student/views.py
 #, python-brace-format
@@ -888,11 +862,13 @@ msgid ""
 "receive email updates and alerts from us related to the courses you are "
 "enrolled in. Sign In to continue."
 msgstr ""
+"{html_start}הצלחה! הפעלת את החשבון שלך.{html_end} את/ה תקבל/י מאיתנו עדכונים"
+" והתראות הקשורים לקורסים שאת/ה רשומ/ה אליהם. להמשך התחבר/י."
 
 #: common/djangoapps/student/views.py
 #, python-brace-format
 msgid "{html_start}This account has already been activated.{html_end}"
-msgstr ""
+msgstr "{html_start}חשבון זה כבר הופעל{html_end}"
 
 #: common/djangoapps/student/views.py
 #, python-brace-format
@@ -979,6 +955,9 @@ msgid ""
 "forwarded directly to the login URL of the provider instead of being first "
 "prompted with a login dialog."
 msgstr ""
+"אם אופציה זו מאופשרת, משתמשים המבקרים בכתובת \"TPA מרומזת\" עבור ספק זה "
+"(לדוגמא כתובת הנגמרת עם ?tpa_hint=[provider_name]`) יעוברו ישירות אל כתובת "
+"ההתחברות של הספק במקום להגיע קודם אל תופס ההתחברות."
 
 #: common/djangoapps/third_party_auth/models.py
 msgid ""
@@ -1013,6 +992,9 @@ msgid ""
 "third_party_auth.decorators.tpa_hint_ends_existing_session when a tpa_hint "
 "URL query parameter mapping to this provider is included in the request."
 msgstr ""
+"האם למחוק את נתוני הסשן כאשר ניגשים לתצוגה מעוצבת עם "
+"third_party_auth.decorators.tpa_hint_ends_existing_session כאשר שאילתת UR  "
+"tpa_hint המתמפה לספק זה כלולה בבקשה."
 
 #: common/djangoapps/third_party_auth/models.py
 msgid ""
@@ -1021,6 +1003,19 @@ msgid ""
 "(zero), the session will expire upon the user closing their browser. If left"
 " blank, the Django platform session default length will be used."
 msgstr ""
+"אם אפשרות זו מוגדרת, אז אורך סשן חיבור של משתמשים המתחברים בעזרת ספק SSO זה "
+"יהיו מוגבלים ללא יותר מערך זה. אם מוגדר 0 (אפס), אז הסשן יפוג ברגע שהמשתמש "
+"יסגור את הדפדפן שלו. אם נשאר ריק, ערך ברירת המחדל של פלטפורמט Django יהיה "
+"בשימוש."
+
+#: common/djangoapps/third_party_auth/models.py
+msgid ""
+"If this option is selected, users will be directed to the registration page "
+"immediately after authenticating with the third party instead of the login "
+"page."
+msgstr ""
+"אם אפשרות זו נבחרה, משתמשים יועברו לדף הרישום מייד לאחר ההזדהות עם צד שלישי "
+"במקום דף ההתחברות."
 
 #: common/djangoapps/third_party_auth/models.py
 msgid "The Site that this SAML configuration belongs to."
@@ -1549,7 +1544,7 @@ msgstr "לא נענה"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "submitted"
-msgstr ""
+msgstr "הוגש"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "processing"
@@ -1754,11 +1749,13 @@ msgid ""
 "Answers can include numerals, operation signs, and a few specific "
 "characters, such as the constants e and i."
 msgstr ""
+"תשובות יכולות לכלול מספרים, סימני פעולות חשבון, וכמה תווים מסויימים, כמו "
+"הקבועים e ו i."
 
 #: common/lib/capa/capa/responsetypes.py
 #, python-brace-format
 msgid "Factorial function evaluated outside its domain:'{student_answer}'"
-msgstr ""
+msgstr "פונקציית עצרת משוערכת מחוץ לדומיין שלה: '{student_answer}'"
 
 #: common/lib/capa/capa/responsetypes.py
 #, python-brace-format
@@ -1805,7 +1802,7 @@ msgstr "או"
 #: common/lib/capa/capa/responsetypes.py
 #: cms/templates/widgets/problem-edit.html
 msgid "Text Input"
-msgstr "שדה הכנסת הטקסט"
+msgstr "שדה הכנסת הט"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "error"
@@ -1878,6 +1875,8 @@ msgid ""
 "Factorial function not permitted in answer for this problem. Provided answer"
 " was: {bad_input}"
 msgstr ""
+"פונקציות עצרת לא חוקיות בתשובה עבור בעיה זו. התשובה שניתנה הייתה: "
+"{bad_input}"
 
 #: common/lib/capa/capa/responsetypes.py
 #, python-brace-format
@@ -1959,7 +1958,7 @@ msgstr "מידע XML עבור הסברים"
 #: common/lib/xmodule/xmodule/x_module.py
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion.py
 msgid "The display name for this component."
-msgstr ""
+msgstr "שם התצוגה עבור רכיב זה"
 
 #: common/lib/xmodule/xmodule/annotatable_module.py
 msgid "Annotation"
@@ -1997,13 +1996,13 @@ msgstr "משך הזמן לאחר תאריך היעד בו יתקבלו עדיי�
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Show Results"
-msgstr ""
+msgstr "הצג תוצאות"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
 "Defines when to show whether a learner's answer to the problem is correct. "
 "Configured on the subsection."
-msgstr ""
+msgstr "מגדיר מתי להציג האם תשובת הלומד לבעיה נכונה. מוגדר בתת פרק."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Always"
@@ -2106,7 +2105,7 @@ msgstr "מילון עם התשובות הנוכחיות של הסטודנט"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Whether or not the answers have been saved since last submit"
-msgstr ""
+msgstr "בין אם התשובות נשמרו או לא נשמרו מאז ההגשה האחרונה"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Whether the student has answered the problem"
@@ -2178,10 +2177,12 @@ msgstr ""
 " בו שימוש לרעה. כדי להשיג מפתח עבור הקורס שלך או כדי לדווח על בעיה, צור קשר "
 "עם moocsupport@mathworks.com"
 
-#: common/lib/xmodule/xmodule/capa_base.py lms/templates/help_modal.html
-#: lms/templates/manage_user_standing.html lms/templates/register-shib.html
+#: common/lib/xmodule/xmodule/capa_base.py cms/templates/index.html
+#: lms/templates/help_modal.html lms/templates/manage_user_standing.html
+#: lms/templates/register-shib.html
 #: lms/templates/peer_grading/peer_grading_problem.html
 #: lms/templates/survey/survey.html
+#: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview_lang_include.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Submit"
 msgstr "הגש"
@@ -2230,7 +2231,7 @@ msgstr "רמז ({hint_num} מתוך {hints_count}):"
 #, python-brace-format
 msgid ""
 "Your answers were previously saved. Click '{button_name}' to grade them."
-msgstr ""
+msgstr "תשובותיך נשמרו קודם. לחץ על  '{button_name}' כדי לתת להן ציון."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #, python-brace-format
@@ -2259,7 +2260,7 @@ msgstr "נכון חלקית"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Answer submitted."
-msgstr ""
+msgstr "תשובה נענתה."
 
 #. Translators: 'closed' means the problem's due date has passed. You may no
 #. longer attempt to solve the problem.
@@ -2469,6 +2470,10 @@ msgid "Date that this class ends"
 msgstr "התאריך שבו כיתה זו מסיימת"
 
 #: common/lib/xmodule/xmodule/course_module.py
+msgid "Date that certificates become available to learners"
+msgstr "תאריך בו התעודות הופכת זמינות ללומדים"
+
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Cosmetic Course Display Price"
 msgstr "מחיר קורס לתצוגה"
 
@@ -2483,7 +2488,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Advertised Start"
-msgstr ""
+msgstr "תחילת הקורס המפורסם"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2491,6 +2496,8 @@ msgid ""
 "for the course, such as \"Winter 2018\". If you enter null for this value, "
 "the start date that you have set for this course is used."
 msgstr ""
+"הזן את הטקסט שבו ברצונך להשתמש בתור מסגרת זמן להתחלה שפורסמה עבור הקורס, "
+"למשל \"חורף 2018\". אם תזין null, התאריך יהיה תאריך תחילת הקורס שהגדרת."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Pre-Requisite Courses"
@@ -2789,6 +2796,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 #: lms/templates/courseware/info.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Course Handouts"
 msgstr "דפי מידע של הקורס"
 
@@ -2937,7 +2945,7 @@ msgstr "תצוגת אתר אינטרנט/HTML של תעודה מופעלת"
 msgid "If true, certificate Web/HTML views are enabled for the course."
 msgstr "אם נכון, תצוגות אתר אינטרנט או HTML של תעודה מופעלות עבור הקורס."
 
-#. Translators: This field is the container for course-specific certifcate
+#. Translators: This field is the container for course-specific certificate
 #. configuration values
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Web/HTML View Overrides"
@@ -2953,7 +2961,7 @@ msgstr ""
 "הזן ביטולים ספציפיים לקורס עבור פרמטרי תבנית אתר אינטרנט/HTML כאן (פורמט "
 "JSON)"
 
-#. Translators: This field is the container for course-specific certifcate
+#. Translators: This field is the container for course-specific certificate
 #. configuration values
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Configuration"
@@ -3592,6 +3600,7 @@ msgid ""
 "The display name for this component. Analytics reports may also use the "
 "display name to identify this component."
 msgstr ""
+"שם הרכיב שמוצג. דוחות הניתוח יכולים להשתמש גם בשם התצוגה לזיהוי מרכיב זה."
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "LTI ID"
@@ -3845,6 +3854,8 @@ msgid ""
 "Specify when to show answer correctness and score to learners. Valid values "
 "are \"always\", \"never\", and \"past_due\"."
 msgstr ""
+"מציין מתי להראת ללומד תשובה נכונה וציון. ערכים תקינים הם: \"תמיד\", \"אף "
+"פעם\" ו \"הזמן עבר\"."
 
 #. Translators: DO NOT translate the words in quotes here, they are
 #. specific words for the acceptable values.
@@ -4011,31 +4022,31 @@ msgstr ""
 #: common/lib/xmodule/xmodule/partitions/partitions_service.py
 #: cms/templates/group_configurations.html
 msgid "Enrollment Track Groups"
-msgstr ""
+msgstr "קבוצות מסלול הרשמה"
 
 #: common/lib/xmodule/xmodule/partitions/partitions_service.py
 msgid "Partition for segmenting users by enrollment track"
-msgstr ""
+msgstr "חלוקה לקבוצות משתמשים לפי מסלול הרשמה"
 
 #: common/lib/xmodule/xmodule/poll_module.py
 msgid "Whether this student has voted on the poll"
-msgstr ""
+msgstr "האם סטודנט זה השתתף בסקר"
 
 #: common/lib/xmodule/xmodule/poll_module.py
 msgid "Student answer"
-msgstr ""
+msgstr "תשובת הסטודנט"
 
 #: common/lib/xmodule/xmodule/poll_module.py
 msgid "Poll answers from all students"
-msgstr ""
+msgstr "תשובות כל הסטודנטים על הסקר"
 
 #: common/lib/xmodule/xmodule/poll_module.py
 msgid "Poll answers from xml"
-msgstr ""
+msgstr "תשובות לסקר מקובץ xml"
 
 #: common/lib/xmodule/xmodule/poll_module.py
 msgid "Poll question"
-msgstr ""
+msgstr "שאלה בסקר"
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid "Enter the date by which problems are due."
@@ -4127,12 +4138,12 @@ msgstr "מבחן זה חסוי ללומד."
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid ""
 "Because the course has ended, this assignment is hidden from the learner."
-msgstr ""
+msgstr "מכיוון שהקורס כבר נגמר, מטלה זו מוסתרת."
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid ""
 "Because the due date has passed, this assignment is hidden from the learner."
-msgstr ""
+msgstr "מכיוון שתאריך היעד כבר חלף, מטלה זו מוסתרת."
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid ""
@@ -4151,7 +4162,7 @@ msgstr "לא נבחר "
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "The display name for this component. (Not shown to learners)"
-msgstr ""
+msgstr "שם הרכיב שמופיע בתצוגה. (לא מופיע לתלמידים)"
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "Content Experiment"
@@ -4752,17 +4763,20 @@ msgstr ""
 msgid "Please check the syntax of your entry."
 msgstr "בדוק את תחביר הערך שלך."
 
+#: lms/djangoapps/branding/api.py
+msgid "Take free online courses at edX.org"
+msgstr "הרשמו לקורסים מקוונים בחינם ב edX.org"
+
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
 #: lms/djangoapps/branding/api.py
 #, python-brace-format
 msgid ""
 "© {org_name}.  All rights reserved except where noted.  EdX, Open edX and "
-"the edX and Open EdX logos are registered trademarks or trademarks of edX "
-"Inc."
+"their respective logos are trademarks or registered trademarks of edX Inc."
 msgstr ""
-"© {org_name}.  כל הזכויות שמורות, למעט כשמצוין אחרת‏‎. EdX‏, Open edX וסמלי "
-"הלוגו edX ו-Open EdX הם סימנים מסחריים רשומים או סימנים מסחריים של edX Inc."
+"© {org_name}.  כל הזכויות שמורות, למעט כשמצוין אחרת‏. EdX‏, Open edX והסמלים"
+" הם סימנים מסחריים רשומים או סימנים מסחריים של edX Inc."
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated.
@@ -4778,7 +4792,7 @@ msgstr "מופעל על ידי Open edX"
 #: lms/djangoapps/branding/api.py
 #, python-brace-format
 msgid "{platform_name} for Business"
-msgstr ""
+msgstr "{platform_name} לעסקים"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
 msgid "Blog"
@@ -4833,6 +4847,7 @@ msgstr "מדיניות נגישות"
 msgid "Sitemap"
 msgstr "מפת אתר"
 
+#: lms/djangoapps/branding/api.py
 #: lms/templates/static_templates/media-kit.html
 msgid "Media Kit"
 msgstr "ערכת מדיה"
@@ -4862,11 +4877,11 @@ msgstr "הורד את האפליקציה לנייד של {platform_name} מ-Goog
 #: lms/djangoapps/bulk_email/tasks.py
 #, python-brace-format
 msgid "\"{course_title}\" Course Staff"
-msgstr ""
+msgstr "\"{course_title}\" צוות הקורס"
 
 #: lms/djangoapps/ccx/plugins.py
 msgid "CCX Coach"
-msgstr "מטמון CCX"
+msgstr "מאמן CCX"
 
 #: lms/djangoapps/ccx/utils.py
 msgid ""
@@ -5391,7 +5406,7 @@ msgstr "נתיב לעמוד הקבלה להזמנה."
 
 #: lms/djangoapps/commerce/models.py
 msgid "Automatically approve valid refund requests, without manual processing"
-msgstr ""
+msgstr "אישור אוטומטי של בקשות החזר כספי תקפות, ללא עיבוד ידני"
 
 #: lms/djangoapps/commerce/signals.py
 #, python-brace-format
@@ -5553,6 +5568,7 @@ msgid "Upgrade to Verified Certificate"
 msgstr "שדרג לתעודה מאומתת"
 
 #: lms/djangoapps/courseware/date_summary.py
+#: cms/templates/group_configurations.html
 msgid "Learn More"
 msgstr "למד עוד"
 
@@ -6145,6 +6161,8 @@ msgid ""
 "Number of seconds to delay the sending of User Welcome email after user has "
 "been activated"
 msgstr ""
+"מספר שניות להשהיית המשלוח של הודעת 'ברוכים הבאים' לאחר ההפעלה של חשבון "
+"המשתמש"
 
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
 #, python-brace-format
@@ -6383,11 +6401,11 @@ msgstr "יעדים"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Enrollment Mode"
-msgstr ""
+msgstr "מצב הרשמה"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Verification Status"
-msgstr ""
+msgstr "מצב אימות"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Cohort"
@@ -6930,6 +6948,7 @@ msgstr "חברות"
 msgid "Cohorts"
 msgstr "קבוצות למידה"
 
+#: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/djangoapps/discussion/templates/discussion/discussion_board_fragment.html
 msgid "Discussions"
 msgstr "דיונים"
@@ -6957,7 +6976,7 @@ msgstr "מדדים"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Open Responses"
-msgstr ""
+msgstr "תגובות פתוחות"
 
 #. Translators: number sent refers to the number of emails sent
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
@@ -7065,7 +7084,7 @@ msgstr "הארכות תאריך יעד עבור {0} {1} ({2})"
 
 #: lms/djangoapps/instructor_task/api_helper.py
 msgid "This component cannot be rescored."
-msgstr ""
+msgstr "למרכיב זה לא ניתן לתת ציון מחדש."
 
 #: lms/djangoapps/instructor_task/api_helper.py
 msgid "Not all problems in entrance exam support re-scoring."
@@ -7366,11 +7385,11 @@ msgstr "(מתוך {total})"
 msgid ""
 "This component's access settings refer to deleted or invalid group "
 "configurations."
-msgstr ""
+msgstr "הגדרות גישת ברכיב זה מתייחסות לקבוצת הגדרות מחוקה או לא תקינה."
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid "This component's access settings refer to deleted or invalid groups."
-msgstr ""
+msgstr "הגדרות גישה ברכיב זה מתיחסות לקבוצה מחוקה או לא תקינה."
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid "Whether to display this module in the table of contents"
@@ -8713,31 +8732,6 @@ msgid "Your {platform_name} verification has expired."
 msgstr "אימות ל {platform_name} פג תוקף."
 
 #: lms/djangoapps/verify_student/models.py
-msgid "No photo ID was provided."
-msgstr "לא סופקה תעודה מזהה."
-
-#: lms/djangoapps/verify_student/models.py
-msgid "We couldn't read your name from your photo ID image."
-msgstr "לא הצלחנו לקרוא את שמך בתמונת התעודה מזהה."
-
-#: lms/djangoapps/verify_student/models.py
-msgid ""
-"The name associated with your account and the name on your ID do not match."
-msgstr "השם המשויך לחשבונך והשם בתעודת זהותך אינם תואמים."
-
-#: lms/djangoapps/verify_student/models.py
-msgid "The image of your face was not clear."
-msgstr "תמונת פניך לא הייתה ברורה."
-
-#: lms/djangoapps/verify_student/models.py
-msgid "Your face was not visible in your self-photo."
-msgstr "פנייך לא היו גלויים לעין בתמונה העצמית שלך."
-
-#: lms/djangoapps/verify_student/models.py
-msgid "There was an error verifying your ID photos."
-msgstr "אירעה שגיאה באימות תמונת תעודת הזהות שלך."
-
-#: lms/djangoapps/verify_student/models.py
 msgid "The course for which this deadline applies"
 msgstr "הקורס שעליו חל תאריך היעד"
 
@@ -8817,6 +8811,11 @@ msgstr "נתוני תמונה אינם תקינים."
 #: lms/djangoapps/verify_student/views.py
 msgid "Verification photos received"
 msgstr "התקבלו תמונות אימות"
+
+#: lms/envs/common.py
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Audit"
+msgstr "שומע חופשי"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the website name of www.facebook.com.  Please
@@ -8917,7 +8916,7 @@ msgstr "קוסובו"
 #: lms/envs/common.py
 #, python-brace-format
 msgid "Welcome to {platform_name}."
-msgstr ""
+msgstr "ברוכ/ה הבא/ה ל {platform_name}."
 
 #: lms/envs/common.py
 #, python-brace-format
@@ -8926,6 +8925,9 @@ msgid ""
 "{start_bold}{platform_name}{end_bold} to offer you high-quality learning "
 "opportunities from the world's best universities."
 msgstr ""
+"{start_bold}{enterprise_name}{end_bold} חבר ל "
+"{start_bold}{platform_name}{end_bold} להציע הזדמנות לאיכות למידה גבוהה "
+"מהאונברסיטאות המבוילות בעולם."
 
 #: lms/templates/logout.html
 msgid "Signed Out"
@@ -9379,6 +9381,8 @@ msgstr ""
 #: lms/templates/courseware/courses.html
 #: lms/templates/courseware/courseware.html
 #: lms/templates/edxnotes/edxnotes.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+#: openedx/features/course_search/templates/course_search/course-search-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
 #: themes/stanford-style/lms/templates/index.html
 msgid "Search"
@@ -9573,12 +9577,8 @@ msgid "Internal API URL"
 msgstr "כתובת URL ל-API פנימי"
 
 #: openedx/core/djangoapps/catalog/models.py
-msgid ""
-"API root to be used for server-to-server requests (e.g., https://catalog-"
-"internal.example.com/api/v1/)."
-msgstr ""
-"יש להשתמש בשורש API לבקשות שרת לשרת (למשל, https://catalog-"
-"internal.example.com/api/v1/)."
+msgid "DEPRECATED: Use the setting COURSE_CATALOG_API_URL."
+msgstr "יצא משימוש: השתמש/י בהגדרה COURSE_CATALOG_API_URL."
 
 #: openedx/core/djangoapps/catalog/models.py
 msgid ""
@@ -9591,17 +9591,18 @@ msgstr ""
 msgid ""
 "Username created for Course Catalog Integration, e.g. "
 "lms_catalog_service_user."
-msgstr ""
+msgstr "שם המשתמש שנוצר לשילוב קטלוג הקורסים, למשל lms_catalog_service_user."
 
 #: openedx/core/djangoapps/catalog/models.py
 msgid "Page Size"
-msgstr ""
+msgstr "גודל העמוד"
 
 #: openedx/core/djangoapps/catalog/models.py
 msgid ""
 "Maximum number of records in paginated response of a single request to "
 "catalog service."
 msgstr ""
+"המספר המקסימלי של רשומות בתגובה מחולקת לדפים עבור בקשה אחת לשירות הקטלוג."
 
 #: openedx/core/djangoapps/cors_csrf/models.py
 msgid ""
@@ -9627,16 +9628,6 @@ msgstr "חייבת להיות קבוצת לימוד אחת שאליה ניתן �
 #: openedx/core/djangoapps/course_groups/views.py
 msgid "A cohort with the same name already exists."
 msgstr "קבוצת לימוד בעלת אותו שם כבר קיימת."
-
-#: openedx/core/djangoapps/coursetalk/models.py
-msgid ""
-"The platform key associates CourseTalk widgets with your platform. "
-"Generally, it is the domain name for your platform. For example, if your "
-"platform is http://edx.org, the platform key is \"edx\"."
-msgstr ""
-"מפתח הפלטפורמה משייך את ישומוני CourseTalk לפלטפורמה שלך. לרוב, זהו שם "
-"הדומיין של הפלטפורמה. לדוגמה, אם הפלטפורמה שלך היא http://edx.org, מפתח "
-"הפלטפורמה הוא \"edx\"."
 
 #: openedx/core/djangoapps/credentials/models.py
 msgid "Internal Service URL"
@@ -10050,37 +10041,41 @@ msgstr "נראה כי {username} שייך לחשבון קיים. נסה שוב �
 #. below a field meant to hold the user's email address.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "This is what you will use to login."
-msgstr ""
+msgstr "זה מה שתשתמש/י בו על מנת להתחבר."
 
 #. Translators: This label appears above a field on the registration form
 #. meant to confirm the user's email address.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Confirm Email"
-msgstr ""
+msgstr "אשר/י דוא\"ל"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "The email addresses do not match."
-msgstr ""
+msgstr "כתובת הדוא\"ל אינה תואמת."
 
 #. Translators: This example name is used as a placeholder in
 #. a field on the registration form meant to hold the user's name.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Jane Q. Learner"
-msgstr ""
+msgstr "ג'יין קיו. לרנר"
 
 #. Translators: These instructions appear on the registration form,
 #. immediately
 #. below a field meant to hold the user's full name.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "This name will be used on any certificates that you earn."
-msgstr ""
+msgstr "השם הזה ישמש עבור כל תעודה שתקבל/י."
 
-#: cms/templates/register.html lms/templates/register-form.html
-#: lms/templates/register-shib.html lms/templates/signup_modal.html
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's public username.
+#: openedx/core/djangoapps/user_api/views.py cms/templates/register.html
+#: lms/templates/register-form.html lms/templates/register-shib.html
+#: lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Public Username"
-msgstr "שם קמפוס"
+msgstr "שם משתמש"
 
 #. Translators: These instructions appear on the registration form,
 #. immediately
@@ -10089,12 +10084,14 @@ msgstr "שם קמפוס"
 msgid ""
 "The name that will identify you in your courses. It cannot be changed later."
 msgstr ""
+"שם משתמש באנגלית וללא רווחים, שיזהה אותך בקורסים. אינו ניתן לשינוי מאוחר "
+"יותר."
 
 #. Translators: This example username is used as a placeholder in
 #. a field on the registration form meant to hold the user's username.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Jane_Q_Learner"
-msgstr ""
+msgstr "ג'יין_קיו_לרנר"
 
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's highest completed level of education.
@@ -10182,11 +10179,11 @@ msgstr "מפתח הקורס עבור הקורס שברצוננו להפוך לק
 
 #: openedx/core/djangoapps/waffle_utils/models.py
 msgid "Force On"
-msgstr ""
+msgstr "אלץ דלוק"
 
 #: openedx/core/djangoapps/waffle_utils/models.py
 msgid "Force Off"
-msgstr ""
+msgstr "אלץ כבוי"
 
 #: openedx/core/lib/api/view_utils.py
 msgid "This value is invalid."
@@ -10243,12 +10240,47 @@ msgstr ""
 "שם תת קטגוריה עבור הדיון. השם הזה מופיע בחלונית השמאלית של פורום הדיונים של "
 "הקורס. "
 
+#: openedx/features/course_bookmarks/plugins.py
+#: lms/templates/courseware/courseware.html lms/templates/courseware/info.html
+msgid "Bookmarks"
+msgstr "סימניות"
+
+#: openedx/features/course_experience/plugins.py
+#: cms/templates/widgets/header.html
+msgid "Updates"
+msgstr "עדכונים"
+
+#: openedx/features/course_experience/plugins.py
+#: lms/templates/courseware/info.html
+msgid "Reviews"
+msgstr "ביקורות"
+
+#: openedx/features/enterprise_support/api.py
+#, python-brace-format
+msgid ""
+"If you have concerns about sharing your data, please contact your "
+"administrator at {enterprise_customer_name}."
+msgstr ""
+
+#: openedx/features/enterprise_support/api.py
+#, python-brace-format
+msgid ""
+"If you have concerns about sharing your data, please contact your "
+"administrator at {enterprise_customer_name} at {contact_info}."
+msgstr ""
+
+#: openedx/features/enterprise_support/api.py
+#, python-brace-format
+msgid "Enrollment in {course_name} was not complete."
+msgstr "ההרשמה לקורס {course_name} לא הושלמה."
+
 #: cms/djangoapps/contentstore/course_group_config.py
 msgid ""
 "The groups in this configuration can be mapped to cohorts in the Instructor "
 "Dashboard."
 msgstr ""
 
+#: cms/djangoapps/contentstore/course_group_config.py
 #: cms/templates/group_configurations.html
 msgid "Content Groups"
 msgstr "קבוצות תוכן"
@@ -10359,11 +10391,11 @@ msgstr ""
 #: cms/djangoapps/contentstore/tasks.py
 #, python-brace-format
 msgid "Unknown User ID: {0}"
-msgstr ""
+msgstr "מזהה משתמש לא ידוע: {0}"
 
 #: cms/djangoapps/contentstore/tasks.py
 msgid "Permission denied"
-msgstr ""
+msgstr "ההרשאה נדחתה"
 
 #: cms/djangoapps/contentstore/tasks.py
 #: cms/djangoapps/contentstore/views/import_export.py
@@ -10372,11 +10404,11 @@ msgstr "אנו תומכים בהעלאת קובץ .tar.gz בלבד."
 
 #: cms/djangoapps/contentstore/tasks.py
 msgid "Tar file not found"
-msgstr ""
+msgstr "קובץ Tar לא נמצא"
 
 #: cms/djangoapps/contentstore/tasks.py
 msgid "Unsafe tar file. Aborting import."
-msgstr ""
+msgstr "קובץ ה-Tar אינו בטוח. פעולת הייבוא מופסקת."
 
 #: cms/djangoapps/contentstore/tasks.py
 #, python-brace-format
@@ -10698,7 +10730,7 @@ msgstr "מוכן"
 #. Translators: This is the status for a video that is uploaded completely
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Uploaded"
-msgstr ""
+msgstr "הועלה"
 
 #. Translators: This is the status for a video that the servers have failed to
 #. process
@@ -10710,7 +10742,7 @@ msgstr "נכשל"
 #. by user
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Cancelled"
-msgstr ""
+msgstr "בוטל"
 
 #. Translators: This is the status for a video which has failed
 #. due to being flagged as a duplicate by an external or internal CMS
@@ -10722,7 +10754,7 @@ msgstr "ההעתקה נכשלה"
 #. youtube
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "YouTube Duplicate"
-msgstr ""
+msgstr "כפילות ב-YouTube "
 
 #. Translators: This is the status for a video for which an invalid
 #. processing token was provided in the course settings
@@ -10885,6 +10917,21 @@ msgstr "הגדרות"
 msgid "Course Number"
 msgstr "מספר הקורס"
 
+#: cms/templates/course_info.html
+#: openedx/features/course_experience/templates/course_experience/course-updates-fragment.html
+msgid "Course Updates"
+msgstr "עדכוני הקורס"
+
+#: cms/templates/course_outline.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Course Outline"
+msgstr "מתווה קורס"
+
+#: cms/templates/course_outline.html cms/templates/index.html
+#: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
+msgid "Dismiss"
+msgstr "ביטול"
+
 #: cms/templates/course_outline.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Start Date:"
@@ -10904,10 +10951,13 @@ msgstr "ארגון"
 msgid "Course Number:"
 msgstr "מספר הקורס"
 
-#: cms/templates/index.html lms/templates/navigation.html
-#: lms/templates/sysadmin_dashboard.html
+#: cms/templates/index.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-not-authenticated.html
 #: themes/edx.org/lms/templates/header.html
 #: themes/red-theme/lms/templates/header.html
 msgid "Courses"
@@ -10978,6 +11028,10 @@ msgstr "דוגמה: שלום שלום"
 msgid "Course End Date"
 msgstr "תאריך סיום הקורס"
 
+#: cms/templates/settings.html lms/templates/courseware/program_marketing.html
+msgid "Instructors"
+msgstr "מדריכים"
+
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "Requirements"
 msgstr "דרישות"
@@ -10996,15 +11050,23 @@ msgstr "הצג"
 
 #: cms/templates/darklang/preview_lang.html
 #: lms/templates/darklang/preview_lang.html
+#: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview_lang_include.html
 msgid "Preview Language Setting"
 msgstr "תצוגה מקדימה של הגדרות שפה"
 
 #: cms/templates/maintenance/_force_publish_course.html
 #: lms/templates/problem.html lms/templates/shoppingcart/shopping_cart.html
+#: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview_lang_include.html
 msgid "Reset"
 msgstr "אתחל"
 
-#: cms/templates/widgets/header.html lms/templates/navigation.html
+#: cms/templates/widgets/footer.html lms/templates/footer.html
+#: themes/edx.org/lms/templates/footer.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "Legal"
+msgstr "משפטי"
+
+#: cms/templates/widgets/header.html lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
 msgstr "שפת הקורס"
@@ -11014,7 +11076,9 @@ msgstr "שפת הקורס"
 msgid "Account"
 msgstr "חשבון"
 
-#: cms/templates/widgets/header.html lms/templates/navigation.html
+#: cms/templates/widgets/header.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
 #: themes/edx.org/lms/templates/header.html wiki/plugins/help/wiki_plugin.py
 msgid "Help"
@@ -11188,6 +11252,15 @@ msgstr "מסומן בסימניה"
 msgid "Bookmark this page"
 msgstr "סמן עמוד זה"
 
+#: lms/templates/browser-alert.html lms/templates/navigation/navigation.html
+#: themes/edx.org/lms/templates/header.html
+msgid ""
+"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
+"strongly recommend using {chrome_link} or {ff_link}."
+msgstr ""
+"{begin_strong}אזהרה:{end_strong} הדפדפן שלך אינו נתמך באופן מלא. אנחנו "
+"ממליצים מאוד על השימוש ב-{chrome_link} או ב-{ff_link}."
+
 #: lms/templates/conditional_module.html
 msgid "You do not have access to this dependency module."
 msgstr "אין לך גישה ליחידת תפקוד תלויה זו."
@@ -11217,7 +11290,10 @@ msgstr "לוח בקרה"
 msgid "You are not enrolled in any courses yet."
 msgstr "אינך רשום עדיין באף קורס."
 
-#: lms/templates/dashboard.html lms/templates/navigation.html
+#: lms/templates/dashboard.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-not-authenticated.html
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Explore courses"
 msgstr "גלה קורסים"
@@ -11341,11 +11417,6 @@ msgstr "תיקון באגים"
 msgid "External Authentication failed"
 msgstr "אימות חיצוני נכשל"
 
-#: lms/templates/footer.html themes/edx.org/lms/templates/footer.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "Legal"
-msgstr "משפטי"
-
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
 msgstr "איפוס סיסמה"
@@ -11410,16 +11481,17 @@ msgid ""
 "can find lots of helpful information in the {platform_name} "
 "{link_start}FAQ{link_end}."
 msgstr ""
-"יש לך {strong_start}שאלות כלליות על {platform_name}{strong_end}? יש באפשרותך"
-" למצוא מידע רב ומועיל ב{platform_name} {link_start}שאלות הנפוצות{link_end}."
+"יש לך {strong_start}שאלות כלליות על {platform_name}{strong_end}? בקרוב נוסיף"
+" עמוד שאלות ותשובות ובו תוכל למצוא מידע רב ומועיל ב{platform_name} "
+"{link_start}שאלות נפוצות{link_end}."
 
 #: lms/templates/help_modal.html
 msgid ""
 "Have a {strong_start}question about something specific{strong_end}? You can "
 "contact the {platform_name} general support team directly:"
 msgstr ""
-"יש לך {strong_start}שאלה אודות משהו ספציפי{strong_end}? תוכל ליצור קשר "
-"ישירות עם {platform_name} עם צוות התמיכה:"
+"יש לך {strong_start}שאלה ספציפית{strong_end}? תוכל ליצור קשר ישירות עם צוות "
+"התמיכה של ה{platform_name}:"
 
 #: lms/templates/help_modal.html
 msgid "Report a problem"
@@ -11439,12 +11511,12 @@ msgid ""
 "will do our best to address your inquiry in any language, our responses will"
 " be in English."
 msgstr ""
-"יש לשים לב: צוות התמיכה של {platform_name}  דובר אנגלית. למרות מאמצינו לתת "
-"מענה בכל שפה לשאלותיך, תשובותינו יהיו באנגלית. "
+"יש לשים לב: צוות התמיכה של {platform_name}  דובר עברית ואנגלית. למרות "
+"מאמצינו לתת מענה בכל שפה לשאלותיך, תשובותינו יהיו בעברית או אנגלית. "
 
 #: lms/templates/help_modal.html
 msgid "Briefly describe your issue"
-msgstr "תאר בקצרה את בעייתך"
+msgstr "תאר בקצרה את הבעיה שנתקלת בה"
 
 #: lms/templates/help_modal.html
 msgid "Tell us the details"
@@ -11470,13 +11542,13 @@ msgid ""
 "our {link_start}detailed FAQs{link_end} where most questions have already "
 "been answered."
 msgstr ""
-"תודה על ההודעה או המשוב שלך. בדרך כלל אנו מגיבים לבקשה תוך יום עסקים אחד, "
-"מיום שני עד יום שישי. בינתיים,  אנא בדוק את  {link_start}detailed "
-"FAQs{link_end} שלנו, שם רוב השאלות כבר נענו."
+"תודה על הפניה שלך. בדרך כלל אנו מגיבים לבקשה תוך יום עסקים אחד, מיום ראשון "
+"עד יום חמישי. בקרוב תוכל לבדוק את  {link_start}שאלות ותשובות{link_end} שלנו "
+"לפתרון בעיות נפוצות."
 
 #: lms/templates/help_modal.html
 msgid "- Select -"
-msgstr ""
+msgstr "-בחר-"
 
 #: lms/templates/help_modal.html
 msgid "problem"
@@ -11532,11 +11604,11 @@ msgstr "אנא נסה שוב מאוחר יותר"
 
 #: lms/templates/hidden_content.html
 msgid "The course has ended."
-msgstr ""
+msgstr "הקורס הסתיים"
 
 #: lms/templates/hidden_content.html
 msgid "The due date for this assignment has passed."
-msgstr ""
+msgstr "תאריך היעד למשימה זו עבר."
 
 #: lms/templates/hidden_content.html
 msgid ""
@@ -11544,6 +11616,8 @@ msgid ""
 "available.{line_break}If you have completed this assignment, your grade is "
 "available on the {link_start}progress page{link_end}."
 msgstr ""
+"היות והקורס הסתיים, משימה זו אינה זמינה עוד. {line_break} אם השלמת את המשימה"
+" הזו, הציון שלך יהיה זמין ב-{link_start}progress page{link_end}."
 
 #: lms/templates/hidden_content.html
 msgid ""
@@ -11551,6 +11625,8 @@ msgid ""
 "available.{line_break}If you have completed this assignment, your grade is "
 "available on the {link_start}progress page{link_end}."
 msgstr ""
+"היות ותאריך היעד עבר, משימה זו אינה זמינה עוד. {line_break} אם השלמת את "
+"המשימה הזו, הציון שלך יהיה זמין ב-{link_start}progress page{link_end}."
 
 #: lms/templates/imageannotation.html
 msgid "Note: only instructors may annotate."
@@ -11817,64 +11893,6 @@ msgstr ""
 msgid "Raw data:"
 msgstr "נתונים גולמיים:"
 
-#: lms/templates/navigation.html themes/red-theme/lms/templates/header.html
-msgid "Global"
-msgstr "גלובלי"
-
-#: lms/templates/navigation.html themes/edx.org/lms/templates/header.html
-#: themes/red-theme/lms/templates/header.html
-msgid "{platform_name} Home Page"
-msgstr "{platform_name} עמוד הבית"
-
-#: lms/templates/navigation.html lms/templates/learner_dashboard/programs.html
-#: themes/edx.org/lms/templates/header.html
-#: themes/red-theme/lms/templates/header.html
-msgid "Programs"
-msgstr "תכניות"
-
-#. Translators: This is short for "System administration".
-#: lms/templates/navigation.html themes/red-theme/lms/templates/header.html
-msgid "Sysadmin"
-msgstr "מנהל מערכת"
-
-#: lms/templates/navigation.html lms/templates/shoppingcart/shopping_cart.html
-#: themes/edx.org/lms/templates/header.html
-#: themes/red-theme/lms/templates/header.html
-msgid "Shopping Cart"
-msgstr "עגלת קניות"
-
-#: lms/templates/navigation.html themes/edx.org/lms/templates/header.html
-#: themes/red-theme/lms/templates/header.html
-msgid "How it Works"
-msgstr "כיצד זה עובד"
-
-#: lms/templates/navigation.html themes/red-theme/lms/templates/header.html
-msgid "Schools"
-msgstr "בתי ספר"
-
-#: lms/templates/navigation.html
-msgid "Explore Courses"
-msgstr "גלה קורסים"
-
-#: lms/templates/navigation.html lms/templates/register-form.html
-#: themes/edx.org/lms/templates/header.html
-#: themes/stanford-style/lms/templates/register-form.html
-msgid "Register"
-msgstr "הירשם"
-
-#: lms/templates/navigation.html themes/edx.org/lms/templates/header.html
-#: themes/red-theme/lms/templates/header.html
-msgid "Sign in"
-msgstr "כניסה"
-
-#: lms/templates/navigation.html themes/edx.org/lms/templates/header.html
-msgid ""
-"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
-"strongly recommend using {chrome_link} or {ff_link}."
-msgstr ""
-"{begin_strong}אזהרה:{end_strong} הדפדפן שלך אינו נתמך באופן מלא. אנחנו "
-"ממליצים מאוד על השימוש ב-{chrome_link} או ב-{ff_link}."
-
 #: lms/templates/notes.html lms/templates/textannotation.html
 #: lms/templates/videoannotation.html
 msgid "You do not have any notes."
@@ -11923,6 +11941,8 @@ msgid ""
 "Some problems have options such as save, reset, hints, or show answer. These"
 " options follow the Submit button."
 msgstr ""
+"כדי לפתור חלק מהבעיות אפשר להשתמש באפשרויות כמו שמירה, איפוס, רמזים או 'הצג "
+"תשובה'. אפשרויות אלו מופיעות לאחר לחיצה על כפתור 'הגש'."
 
 #: lms/templates/problem.html
 msgid "Hint"
@@ -12026,7 +12046,7 @@ msgstr "כדי ליצור חשבון חדש, נא מלא את השדות הבא�
 #: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Your legal name, used for any certificates you earn."
-msgstr "שמך החוקי ישמש בכל תעודה שתזכה."
+msgstr "שמך החוקי ישמש בכל תעודה שתונפק עבורך"
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
@@ -12093,6 +12113,14 @@ msgstr "אני מסכים {link_start}לתנאי שימוש{link_end}"
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr "אני מסכים {link_start}לקוד האתי{link_end}"
+
+#: lms/templates/register-form.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "Register"
+msgstr "הירשם"
 
 #: lms/templates/register-form.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-form.html
@@ -12223,7 +12251,7 @@ msgstr "הקודם"
 
 #: lms/templates/seq_module.html
 msgid "Sequence"
-msgstr ""
+msgstr "רצף"
 
 #: lms/templates/seq_module.html
 msgid "Next"
@@ -12335,7 +12363,7 @@ msgstr "אפס את ניסיונות הלומד"
 #: lms/templates/staff_problem_info.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Delete Learner's State"
-msgstr "מחק את מדינת הלומד"
+msgstr "מחק את תשובות הלומד ונתונים קשורים"
 
 #: lms/templates/staff_problem_info.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
@@ -12382,10 +12410,12 @@ msgid "Page"
 msgstr "עמוד"
 
 #: lms/templates/staticbook.html
+#: lms/templates/courseware/program_marketing.html
 msgid "Previous page"
 msgstr "העמוד הקודם"
 
 #: lms/templates/staticbook.html
+#: lms/templates/courseware/program_marketing.html
 msgid "Next page"
 msgstr "העמוד הבא"
 
@@ -12571,7 +12601,7 @@ msgstr "פרופיל"
 
 #: lms/templates/user_dropdown.html
 msgid "More options"
-msgstr ""
+msgstr "אפשרויות נוספות"
 
 #: lms/templates/using.html
 msgid "Using the system"
@@ -13591,7 +13621,7 @@ msgstr "תוצאה"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "CCX Coach Dashboard"
-msgstr "לוח הבקרה של CCX Coach"
+msgstr "לוח בקרה של מאמן CCX"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Name your CCX"
@@ -14074,6 +14104,7 @@ msgstr "{span_start}פרק נוכחי{span_end}"
 
 #: lms/templates/courseware/accordion.html
 #: lms/templates/courseware/progress.html
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "due {date}"
 msgstr "תאריך הגשה {date}"
 
@@ -14082,6 +14113,7 @@ msgid "{section_format} due {{date}}"
 msgstr "{section_format} ב- {{date}}"
 
 #: lms/templates/courseware/accordion.html
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "This content is graded"
 msgstr "תוכן זה מקבל דירוג"
 
@@ -14227,6 +14259,7 @@ msgstr "מקד את חיפושך"
 
 #: lms/templates/courseware/courseware-chromeless.html
 #: lms/templates/courseware/courseware.html
+#: openedx/features/course_bookmarks/templates/course_bookmarks/course-bookmarks.html
 msgid "{course_number} Courseware"
 msgstr "{course_number} לומדה"
 
@@ -14238,10 +14271,6 @@ msgstr "שירותי הקורס"
 #: lms/templates/courseware/courseware-error.html
 msgid "Courseware"
 msgstr "לומדה"
-
-#: lms/templates/courseware/courseware.html lms/templates/courseware/info.html
-msgid "Bookmarks"
-msgstr "סימניות"
 
 #: lms/templates/courseware/courseware.html
 msgid "Course Search"
@@ -14257,6 +14286,8 @@ msgid ""
 "To access course materials, you must score {required_score}% or higher on "
 "this                     exam. Your current score is {current_score}%."
 msgstr ""
+"כדי לגשת לחומרי הקורס, עליך להשיג ציון של {required_score}% ומעלה במבחן. "
+"הציון הנוכחי שלך הוא {current_score}%."
 
 #: lms/templates/courseware/courseware.html
 msgid "Your score is {current_score}%. You have passed the entrance exam."
@@ -14292,33 +14323,23 @@ msgstr " אינך רשום עדיין"
 
 #: lms/templates/courseware/info.html
 msgid ""
-"You are not currently enrolled in this course. {link_start}Sign up "
+"You are not currently enrolled in this course. {link_start}Enroll "
 "now!{link_end}"
-msgstr "אינך רשום כרגע לקורס זה. {link_start}הירשם עכשיו!{link_end}"
+msgstr ""
 
 #: lms/templates/courseware/info.html
 msgid "Welcome to {org}'s {course_name}!"
 msgstr "ברוכים הבאים אל הקורס {course_name} של {org}!"
 
 #: lms/templates/courseware/info.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "Resume Course"
 msgstr "המשך בקורס"
 
 #: lms/templates/courseware/info.html
 msgid "View Updates in Studio"
 msgstr "ראה עדכונים בסטודיו"
-
-#: lms/templates/courseware/info.html
-msgid "Give yourself an additional incentive to complete"
-msgstr ""
-
-#: lms/templates/courseware/info.html
-msgid "Earn a verified certificate."
-msgstr ""
-
-#: lms/templates/courseware/info.html
-msgid "Upgrade Now"
-msgstr ""
 
 #: lms/templates/courseware/info.html
 msgid "Course Updates and News"
@@ -14329,6 +14350,7 @@ msgid "Handout Navigation"
 msgstr "ניווט דפי מידע"
 
 #: lms/templates/courseware/info.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Course Tools"
 msgstr ""
 
@@ -14339,6 +14361,133 @@ msgstr "חדשות - MITx 6.002x"
 #: lms/templates/courseware/news.html
 msgid "Updates to Discussion Posts You Follow"
 msgstr "עדכונים לדיונים שאתה עוקב אחריהם"
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Purchase the Program"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Start Learning"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "View Program Trailer"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Play"
+msgstr "נגן"
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Number of Courses"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "{number_of_courses} courses in program"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Average Length"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "{weeks_to_complete} weeks per course"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Effort"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid ""
+"{min_hours_effort_per_week}-{max_hours_effort_per_week} hours per week, per "
+"course"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Price (USD)"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Original Price"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "${oldPrice}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Discounted Price"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "${newPrice}{htmlEnd} for entire program"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "You save ${discount_value} {currency}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "${full_program_price} for entire program"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Overview"
+msgstr "סקירה"
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Job Outlook"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "What You'll Learn"
+msgstr "מה תלמד"
+
+#: lms/templates/courseware/program_marketing.html
+msgid "{position} at {organization}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+#: lms/templates/static_templates/faq.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "FAQ"
+msgstr "שאלות נפוצות"
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Endorser Image"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Meet the Instructors"
+msgstr ""
+
+#. Translators: Pagination range contains ordinal numbers of the first and the
+#. last instructor
+#. whose information is shown on the current page.
+#: lms/templates/courseware/program_marketing.html
+msgid "{pagination_range} of {number_of_instructors}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Courses in the {program_type}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Starts {course_start_datetime}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Instructor - Paced"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Self - Paced"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "YouTube Video"
+msgstr ""
 
 #: lms/templates/courseware/progress.html
 msgid "{course_number} Progress"
@@ -14960,6 +15109,25 @@ msgid ""
 msgstr "האימות שלך ב-edX נמצא בהמתנה. פרטי האימות שלך הוגשו והם יבדקו בקרוב."
 
 #: lms/templates/dashboard/_dashboard_status_verification.html
+msgid "Current Verification Status: Denied"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_status_verification.html
+msgid ""
+"Your verification submission was not accepted. To receive a verified "
+"certificate, you must submit a new photo of yourself and your government-"
+"issued photo ID before the verification deadline for your course."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_status_verification.html
+msgid "Your verification was denied for the following reasons:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_status_verification.html
+msgid "Resubmit Verification"
+msgstr "הגש מחדש אימות"
+
+#: lms/templates/dashboard/_dashboard_status_verification.html
 msgid "Current Verification Status: Expired"
 msgstr "מצב אימות נוכחי: פג תוקף"
 
@@ -14972,10 +15140,6 @@ msgstr ""
 "תוקף האימות שלך ב-edX פג. כדי לקבל תעודה מאומתת, עליך להגיש תמונה חדשה שלך "
 "ותעודה מזהה בעלת תמונה, שהונפקה בידי הממשלה, לפני מועד סיום האימות של הקורס."
 "   "
-
-#: lms/templates/dashboard/_dashboard_status_verification.html
-msgid "Resubmit Verification"
-msgstr "הגש מחדש אימות"
 
 #: lms/templates/dashboard/_dashboard_third_party_error.html
 msgid "Could Not Link Accounts"
@@ -15043,18 +15207,18 @@ msgstr "סנן:"
 #. Translators: This is a menu option for showing all forum threads unfiltered
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Show all posts"
-msgstr ""
+msgstr "הראה את כל הפוסטים"
 
 #. Translators: This is a menu option for showing only unread forum threads
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Unread posts"
-msgstr ""
+msgstr "פוסטים שלא נקראו"
 
 #. Translators: This is a menu option for showing only unanswered forum
 #. question threads
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Unanswered posts"
-msgstr ""
+msgstr "פוסטים שלא נענו"
 
 #. Translators: This is a menu option for showing only forum threads flagged
 #. for abuse
@@ -15146,6 +15310,18 @@ msgstr "הסתר סיכומי שיעור"
 #: lms/templates/edxnotes/toggle_notes.html
 msgid "Show notes"
 msgstr "הראה סיכומי שיעור"
+
+#: lms/templates/email_layout/footer_content.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/tos.html
+msgid "Copyright"
+msgstr "כל הזכויות שמורות"
+
+#: lms/templates/email_layout/footer_content.html
+msgid ""
+"If you didn't request this, you don't need to do anything. If you require "
+"assistance, please write to us at {TECH_SUPPORT_EMAIL}."
+msgstr ""
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "Welcome to {course_name}"
@@ -16213,7 +16389,8 @@ msgstr "הורד את מידע הפרופיל כ-CSV"
 msgid ""
 "Click to generate a CSV file that lists learners who can enroll in the "
 "course but have not yet done so."
-msgstr "לחץ על צור קובץ CSV המציין מי מהתלמידים יירשם לקורס אך טרם עשה זאת."
+msgstr ""
+"לחץ על צור קובץ CSV המציין מי מהתלמידים יכול להרשם לקורס אך טרם עשה זאת."
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Download a CSV of learners who can enroll"
@@ -17107,16 +17284,11 @@ msgstr "מנהלי דיונים"
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
 "Discussion Admins can edit or delete any post, clear misuse flags, close and"
-" re-open threads, endorse responses, and see posts from all cohorts. Their "
+" re-open threads, endorse responses, and see posts from all groups. Their "
 "posts are marked as 'staff'. They can also add and remove the discussion "
-"moderation roles to manage course team membership. You can only give course "
-"team roles to enrolled users."
+"moderation roles to manage course team membership. Only enrolled users can "
+"be added as Discussion Admins."
 msgstr ""
-"מנהלי דיונים יכולים לערוך או למחוק כל פוסט, להסיר דגלים שנעשה בהם שימוש "
-"לרעה, לסגור ולפתוח מחדש שרשורים ולראות פוסטים מכל חברי קבוצת הלמידה. הפוסטים"
-" שלהם מסומנים כ'צוות'. הם יכולים גם להוסיף ולהסיר את תפקידי מתווך הדיונים על"
-" מנת לנהל את חברות צוות הקורס. תוכל להעניק תפקידי צוות קורס רק למשתמשים "
-"רשומים."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Discussion Admin"
@@ -17129,15 +17301,11 @@ msgstr "מנחי דיונים"
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
 "Discussion Moderators can edit or delete any post, clear misuse flags, close"
-" and re-open threads, endorse responses, and see posts from all cohorts. "
+" and re-open threads, endorse responses, and see posts from all groups. "
 "Their posts are marked as 'staff'. They cannot manage course team membership"
-" by adding or removing discussion moderation roles. You can only give course"
-" team roles to enrolled users."
+" by adding or removing discussion moderation roles. Only enrolled users can "
+"be added as Discussion Moderators."
 msgstr ""
-"מנחי דיונים יכולים לערוך או למחוק כל פוסט, להסיר דגלים שנעשה בהם שימוש לרעה,"
-" לסגור ולפתוח מחדש שרשורים ולראות פוסטים מכל חברי קבוצת הלמידה. הפוסטים שלהם"
-" מסומנים כ'צוות'. הם אינם יכולים לנהל את חברות צוות הקורס באמצעות הוספה או "
-"הסרת תפקיד מנחי הדיונים. תוכל להעניק תפקידי צוות קורס רק למשתמשים רשומים."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Moderator"
@@ -17149,17 +17317,12 @@ msgstr "דיון עוזרי הוראה קהילתיים"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
-"Community TA's are members of the community whom you deem particularly "
+"Community TAs are members of the community whom you deem particularly "
 "helpful on the discussion boards. They can edit or delete any post, clear "
 "misuse flags, close and re-open threads, endorse responses, and see posts "
-"from all cohorts. Their posts are marked as 'Community TA'. You can only "
-"give course team roles to enrolled users."
+"from all groups. Their posts are marked as 'Community TA'. Only enrolled "
+"users can be added as Community TAs."
 msgstr ""
-"עוזרי הוראה קהילתיים הם חברי קהילה המועילים ביותר לדעתך בלוחות דיונים. הם "
-"יכולים לערוך או למחוק כל פוסט, להסיר דגלים שנעשה בהם שימוש לרעה, לסגור "
-"ולפתוח מחדש שרשורים ולראות פוסטים מכל חברי קבוצת הלמידה. הפוסטים שלהם "
-"מסומנים כ'עוזרי הוראה קהילתיים'. תוכל להעניק תפקידי צוות קורס רק למשתמשים "
-"רשומים."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Community TA"
@@ -17285,7 +17448,7 @@ msgstr "(לומדים שלא הוקצו במפורש למחזור לימודים
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Learners in the {track_name} Track"
-msgstr ""
+msgstr "לומדים הנמצאים במסלול {track_name} "
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Subject: "
@@ -17572,6 +17735,14 @@ msgstr "הקורסים שלי"
 msgid "Program Details"
 msgstr "פרטי תכנית"
 
+#: lms/templates/learner_dashboard/programs.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/red-theme/lms/templates/header.html
+msgid "Programs"
+msgstr "תכניות"
+
 #: lms/templates/modal/_modal-settings-language.html
 msgid "Change Preferred Language"
 msgstr "שנה שפה מועדפת"
@@ -17608,6 +17779,57 @@ msgstr "בסדר"
 #: lms/templates/modal/accessible_confirm.html
 msgid "open"
 msgstr "פתוח"
+
+#. Translators: This is short for "System administration".
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/red-theme/lms/templates/header.html
+msgid "Sysadmin"
+msgstr "מנהל מערכת"
+
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: lms/templates/shoppingcart/shopping_cart.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/red-theme/lms/templates/header.html
+msgid "Shopping Cart"
+msgstr "עגלת קניות"
+
+#: lms/templates/navigation/navbar-logo-header.html
+#: lms/templates/navigation/bootstrap/navbar-logo-header.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/red-theme/lms/templates/header.html
+msgid "{platform_name} Home Page"
+msgstr "{platform_name} עמוד הבית"
+
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/red-theme/lms/templates/header.html
+msgid "How it Works"
+msgstr "כיצד זה עובד"
+
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-not-authenticated.html
+#: themes/red-theme/lms/templates/header.html
+msgid "Schools"
+msgstr "בתי ספר"
+
+#: lms/templates/navigation/navbar-not-authenticated.html
+msgid "Explore Courses"
+msgstr "גלה קורסים"
+
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/red-theme/lms/templates/header.html
+msgid "Sign in"
+msgstr "כניסה"
+
+#: lms/templates/navigation/navigation.html
+#: themes/red-theme/lms/templates/header.html
+msgid "Global"
+msgstr "גלובלי"
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid ""
@@ -18352,11 +18574,10 @@ msgid ""
 " sanctions.Unfortunately, because {platform_name} is required to comply with"
 " export controls,we cannot allow you to access this course at this time."
 msgstr ""
-
-#: lms/templates/static_templates/faq.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "FAQ"
-msgstr "שאלות נפוצות"
+"המערכת שלנו מראה על כך שאתה מנסה לגשת לקורס {platform_name} זה מאזור או "
+"ממדינה הכפופים כיום לסנקציות כלכליות ומסחריות מארה\"ב. למרבה הצער, מכיוון "
+"ש-{platform_name} חייב לציית לחוקים ולתקנות הנוגעים לפיקוח על יצוא, אנחנו לא"
+" יכולים לאפשר לך לגשת לקורס זה."
 
 #: lms/templates/static_templates/jobs.html
 #: themes/red-theme/lms/templates/footer.html
@@ -18648,14 +18869,16 @@ msgid ""
 "This website uses cookies to ensure you get the best experience on our "
 "website."
 msgstr ""
+"אתר זה משתמש בקובצי cookie כדי לוודא שתוכל ליהנות מחווית השימוש הטובה ביותר "
+"באתר שלנו."
 
 #: lms/templates/widgets/cookie-consent.html
 msgid "Got it!"
-msgstr ""
+msgstr "הבנתי"
 
 #: lms/templates/widgets/cookie-consent.html
 msgid "Learn more"
-msgstr ""
+msgstr "למידע נוסף"
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "{span_start}(active){span_end}"
@@ -18671,11 +18894,106 @@ msgstr "{span_start}פעיל{span_end}"
 
 #: lms/templates/wiki/includes/breadcrumbs.html
 msgid "Course Wiki"
-msgstr ""
+msgstr "קורס Wiki"
 
 #: lms/templates/wiki/includes/breadcrumbs.html
 msgid "Add article"
 msgstr "הוסף מאמר"
+
+#: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview_lang_include.html
+msgid "Language Code"
+msgstr "קוד שפה"
+
+#: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview_lang_include.html
+msgid "For example use en for English"
+msgstr "השתמש לדוגמה ב-en לציון אנגלית"
+
+#: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview_lang_include.html
+msgid "Please refresh the page to see the changes applied."
+msgstr "נא רענן את העמוד על מנת לראות האם יושמו השינויים."
+
+#: openedx/core/lib/license/templates/license.html
+msgid "All Rights Reserved"
+msgstr "כל הזכויות שמורות"
+
+#: openedx/core/lib/license/templates/license.html
+msgid "Attribution"
+msgstr "יחוס"
+
+#: openedx/core/lib/license/templates/license.html
+msgid "Noncommercial"
+msgstr "לא למטרות מסחר"
+
+#: openedx/core/lib/license/templates/license.html
+msgid "No Derivatives"
+msgstr "ללא נגזרות"
+
+#: openedx/core/lib/license/templates/license.html
+msgid "Share Alike"
+msgstr "שתף"
+
+#: openedx/core/lib/license/templates/license.html
+msgid "Creative Commons licensed content, with terms as follow:"
+msgstr "תוכן ברישיון Creative Commons, כפוף לתנאים הבאים:"
+
+#: openedx/core/lib/license/templates/license.html
+msgid "Some Rights Reserved"
+msgstr "חלק מהזכויות שמורות"
+
+#: openedx/features/course_bookmarks/templates/course_bookmarks/course-bookmarks.html
+#: openedx/features/course_search/templates/course_search/course-search-fragment.html
+msgid "My Bookmarks"
+msgstr "הסימניות שלי"
+
+#: openedx/features/course_experience/templates/course_experience/course-dates-fragment.html
+msgid "Important Course Dates"
+msgstr "תאריכים חשובים של הקורס"
+
+#: openedx/features/course_experience/templates/course_experience/course-dates-fragment.html
+msgid "Today is {date}"
+msgstr "היום {date}"
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+#: openedx/features/course_search/templates/course_search/course-search-fragment.html
+msgid "Search the course"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Start Course"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+msgid "{subsection_format} due {{date}}"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+msgid "This is your last visited course section."
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+msgid "This course has not started yet."
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+msgid "We're still working on course content."
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+msgid ""
+"This course has not started yet, and will launch on {launch_date_html}."
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-reviews-fragment.html
+msgid "Course Reviews"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-updates-fragment.html
+msgid "This course does not have any updates."
+msgstr ""
+
+#: openedx/features/course_search/templates/course_search/course-search-fragment.html
+msgid "Search Results"
+msgstr "תוצאות חיפוש"
 
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid ""
@@ -18713,8 +19031,8 @@ msgstr ""
 
 #: themes/edx.org/lms/templates/footer.html
 msgid ""
-"© 2012-{year} edX Inc.  All rights reserved except where noted.  EdX, Open "
-"edX and the edX and Open EdX logos are registered trademarks or trademarks "
+"© 2012–{year} edX Inc.  All rights reserved except where noted.  EdX, Open "
+"edX and the edX and Open edX logos are registered trademarks or trademarks "
 "of edX Inc."
 msgstr ""
 
@@ -18770,11 +19088,6 @@ msgid "Register Now"
 msgstr "הירשם עכשיו"
 
 #: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/tos.html
-msgid "Copyright"
-msgstr "כל הזכויות שמורות"
-
-#: themes/stanford-style/lms/templates/footer.html
 msgid "Copyright {year}. All rights reserved."
 msgstr "זכויות שמורות {year} . כל הזכויות שמורות."
 
@@ -18809,7 +19122,7 @@ msgstr ""
 
 #: themes/stanford-style/lms/templates/emails/activation_email.txt
 msgid "Thank you for signing up for {platform_name}."
-msgstr ""
+msgstr "תודה רבה על שנרשמת ל{platform_name}."
 
 #: themes/stanford-style/lms/templates/emails/activation_email.txt
 msgid ""
@@ -18817,6 +19130,8 @@ msgid ""
 " account. Click on the link below or copy and paste it into your browser's "
 "address bar."
 msgstr ""
+"שנה את חייך והתחל ללמוד היום באמצעות הפעלת חשבון {platform_name} שלך. לחץ על"
+" הקישור המצורף או העתק והדבק אותו לתוך שורת הכתובת של הדפדפן שלך."
 
 #: themes/stanford-style/lms/templates/emails/activation_email.txt
 #: themes/stanford-style/lms/templates/emails/email_change.txt
@@ -18825,6 +19140,9 @@ msgid ""
 " any more email from us. Please do not reply to this e-mail; if you require "
 "assistance, check the about section of the {platform_name} Courses web site."
 msgstr ""
+"אם לא ביקשת זאת, אין צורך לעשות דבר; לא תקבל עוד הודעות מאיתנו. בבקשה אל "
+"תגיבו להודעה זו; אם אתם זקוקים לעזרה, בדקו את עמוד העזרה באתר "
+"{platform_name}. "
 
 #: themes/stanford-style/lms/templates/emails/confirm_email_change.txt
 msgid ""
@@ -18832,6 +19150,9 @@ msgid ""
 "{platform_name} from {old_email} to {new_email}. If you did not make this "
 "request, please contact us at"
 msgstr ""
+"זוהי הודעה לאשר כי החלפת את כתובת הדואר האלקטרוני המקושרת לחשבון "
+"{platform_name} מ-{old_email} ל-{new_email}. אם לא ביקשת את השינוי הנ\"ל אנא"
+" צור עמנו קשר ב-"
 
 #: themes/stanford-style/lms/templates/emails/reject_name_change.txt
 msgid ""
@@ -18839,6 +19160,9 @@ msgid ""
 "name from {old_name} to {new_name}. If you need further assistance, please "
 "e-mail the tech support at {email}"
 msgstr ""
+"אנחנו מתנצלים, צוות הקורס שלנו לא אישר את בקשתך לשינוי שמך מ-{old_name} "
+"ל-{new_name}. אם אתה זקוק לעזרה נוספת, אנא שלח הודעת דואר אלקטרוני לסיוע  "
+"הטכני ב-{email}"
 
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Put your Terms of Service here!"
@@ -19257,6 +19581,8 @@ msgid ""
 "To create a link to this unit from an HTML component in this course, enter "
 "\"/jump_to_id/<location ID>\" as the URL value."
 msgstr ""
+"על מנת ליצור קישור ליחידה זו מרכיב HTML בקורס זה, הכנס "
+"\"/jump_to_id/<location ID>\"  כערך URL."
 
 #: cms/templates/container.html
 msgid "Location in Course Outline"
@@ -19313,11 +19639,6 @@ msgstr ""
 msgid "Organization"
 msgstr "ארגון"
 
-#. Translators: This is an example for the name of the organization sponsoring
-#. a course, seen when filling out the form to create a new course. The
-#. organization name cannot contain spaces.
-#. Translators: "e.g. UniversityX or OrganizationX" is a placeholder displayed
-#. when user put no data into this field.
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 msgid "e.g. UniversityX or OrganizationX"
 msgstr "לדוגמה: אוניברסיטהX או ארגוןX"
@@ -19348,6 +19669,8 @@ msgid ""
 "(This number will be the same as the original course number and cannot be "
 "changed.)"
 msgstr ""
+"המספר הייחודי המזהה את הקורס החדש בתוך הארגון. (מספר זה יהיה זהה למספר הקורס"
+" המקורי ולא ישתנה)."
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html
@@ -19411,10 +19734,6 @@ msgid "Learn more about Course Re-runs"
 msgstr "למד עוד אודות מחזורי לימודים חדשים"
 
 #: cms/templates/course_info.html
-msgid "Course Updates"
-msgstr "עדכוני הקורס"
-
-#: cms/templates/course_info.html
 msgid "New Update"
 msgstr "עדכון חדש"
 
@@ -19427,10 +19746,6 @@ msgstr ""
 "השתמש בעדכונים על מנת להודיע לסטודנטים על תאריכים חשובים של בחינות, דיונים "
 "מסוימים בפורומים, להכריז על שינויים בלוח הזמנים ועל מנת להגיב לשאלות "
 "סטודנטים. ניתן להוסיף או לערוך עדכונים ב-HTML.  "
-
-#: cms/templates/course_outline.html
-msgid "Course Outline"
-msgstr "מתווה קורס"
 
 #: cms/templates/course_outline.html
 msgid ""
@@ -19447,10 +19762,6 @@ msgstr ""
 "אין תוכן קורס גלוי כעת ואין סטודנטים רשומים. בדוק וקבע מחדש את כל התאריכים "
 "כולל תאריך התחלת הקורס; הגדר  את צוות הקורס; בחן את עדכוני הקורס ונכסים "
 "אחרים עבור חומרים עם תאריכי שחרור; התחל את הדיונים ואת Wiki."
-
-#: cms/templates/course_outline.html cms/templates/index.html
-msgid "Dismiss"
-msgstr "ביטול"
 
 #: cms/templates/course_outline.html
 msgid "Warning"
@@ -20767,6 +21078,22 @@ msgstr ""
 "לשנות זאת."
 
 #: cms/templates/index.html
+msgid "Organization and Library Settings"
+msgstr ""
+
+#: cms/templates/index.html
+msgid "Show all courses in organization:"
+msgstr ""
+
+#: cms/templates/index.html
+msgid "For example, MITx"
+msgstr ""
+
+#: cms/templates/index.html
+msgid "Show content libraries"
+msgstr ""
+
+#: cms/templates/index.html
 msgid "Courses Being Processed"
 msgstr "הקורס בתהליך עיבוד"
 
@@ -21695,10 +22022,6 @@ msgid "Add Learning Outcome"
 msgstr "הוסף תוצאת למידה"
 
 #: cms/templates/settings.html
-msgid "Instructors"
-msgstr "מדריכים"
-
-#: cms/templates/settings.html
 msgid "Add details about the instructors for this course"
 msgstr "הוסף פרטים על המדריכים של קורס זה"
 
@@ -22242,16 +22565,20 @@ msgid ""
 "Your {task_name} task has completed with the status '{task_status}'. Use "
 "this URL to view task details or download any files created: {detail_url}"
 msgstr ""
+"המשימה {task_name} הושלמה והיא בסטטוס  '{task_status}'. השתמש בכתובת URL זו "
+"כדי לראות את פרטי המשימה או להוריד קבצים שנוצרו: {detail_url}"
 
 #: cms/templates/emails/user_task_complete_email.txt
 msgid ""
 "Your {task_name} task has completed with the status '{task_status}'. Sign in"
 " to view the details of your task or download any files created."
 msgstr ""
+"המשימה {task_name} הושלמה והיא בסטטוס '{task_status}'. היכנס כדי לראות את "
+"פרטי המשימה או להוריד קבצים שנוצרו."
 
 #: cms/templates/emails/user_task_complete_email_subject.txt
 msgid "{platform_name} {studio_name}: Task Status Update"
-msgstr ""
+msgstr "{platform_name} {studio_name}: עדכון סטטוס המשימה"
 
 #: cms/templates/maintenance/_force_publish_course.html
 msgid "Required data to force publish course."
@@ -22271,23 +22598,23 @@ msgstr "לוח הבקרה של התחזוקה"
 
 #: cms/templates/registration/activation_complete.html
 msgid "Thanks for activating your account."
-msgstr ""
+msgstr "תודה שהפעלת את חשבונך"
 
 #: cms/templates/registration/activation_complete.html
 msgid "This account has already been activated."
-msgstr ""
+msgstr "חשבון זה כבר הופעל"
 
 #: cms/templates/registration/activation_complete.html
 msgid "Visit your {link_start}dashboard{link_end} to see your courses."
-msgstr ""
+msgstr "פתח את {link_start}לוח הבקרה{link_end} על מנת לראות את הקורסים שלך."
 
 #: cms/templates/registration/activation_complete.html
 msgid "You can now {link_start}sign in{link_end}."
-msgstr ""
+msgstr "אתה יכול עכשיו  {link_start}להתחבר{link_end}."
 
 #: cms/templates/registration/activation_invalid.html
 msgid "Activation Invalid"
-msgstr ""
+msgstr "הפעלה אינה תקפה"
 
 #: cms/templates/registration/activation_invalid.html
 msgid ""
@@ -22295,16 +22622,23 @@ msgid ""
 " make sure the URL you're using is formatted correctly. If you still have "
 "issues, send us an email message at {email_start}{email}{email_end}."
 msgstr ""
+"אירעה תקלה. לפעמים תכניות דואר אלקטרוני מפצלות כתובות URL לשתי שורות, לכן "
+"ודא שכתובת ה-URL שבה אתה משתמש מעוצבת כהלכה. אם אתה עדיין נתקל בבעיות, שלח "
+"לנו הודעת דואר אלקטרוני לכתובת {email_start}{email}{email_end}."
 
 #: cms/templates/registration/activation_invalid.html
 msgid "Return to the {link_start}home page{link_end}."
-msgstr ""
+msgstr "חזור ל {link_start}עמוד הבית{link_end}."
 
 #: cms/templates/registration/reg_complete.html
 msgid ""
 "We've sent an email message to {email} with instructions for activating your"
 " account."
 msgstr "שלחנו הודעת דואר אלקטרוני אל {email} עם הוראות להפעלת החשבון."
+
+#: cms/templates/widgets/footer.html
+msgid "Open edX | Powered by eduNEXT"
+msgstr ""
 
 #. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
 #. Inc.'. Please do not translate any of these trademarks and company names.
@@ -22327,10 +22661,6 @@ msgstr "ניווט קורסים"
 #: cms/templates/widgets/header.html
 msgid "Outline"
 msgstr "מתווה"
-
-#: cms/templates/widgets/header.html
-msgid "Updates"
-msgstr "עדכונים"
 
 #: cms/templates/widgets/header.html
 msgid "Import"
@@ -22591,7 +22921,7 @@ msgstr "מאמר פתוח לעריכה"
 
 #: wiki/forms.py
 msgid "Filter"
-msgstr ""
+msgstr "סינון"
 
 #: wiki/core/plugins/base.py
 msgid "Settings for plugin"
