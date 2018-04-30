@@ -193,7 +193,23 @@ def add_enrollment(user_id, course_id, mode=None, is_active=True, enrollment_att
     if mode is None:
         mode = _default_course_mode(course_id)
     validate_course_mode(course_id, mode, is_active=is_active)
-    enrollment = _data_api().create_course_enrollment(user_id, course_id, mode, is_active)
+
+
+    # TODO: Move this block to EOE
+    # TODO: Check the current user. It has to be a microsite admin for us to allow the forced_registration
+    check_access = True
+    try:
+        def is_forced_enrollment(attr):
+            namespace = attr.get("namespace", "")
+            name = attr.get("name", "")
+            value = attr.get("value", False)
+            return namespace == "access" and name == "forced_registration" and value
+
+        if any(is_forced_enrollment(x) for x in enrollment_attributes):
+            check_access = False
+    except Exception:
+        pass
+    enrollment = _data_api().create_course_enrollment(user_id, course_id, mode, is_active, check_access=check_access)
 
     if enrollment_attributes is not None:
         set_enrollment_attributes(user_id, course_id, enrollment_attributes)
