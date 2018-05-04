@@ -25,6 +25,7 @@ from student.models import (
     EnrollmentClosedError,
     NonExistentCourseError
 )
+from microsite_configuration import microsite
 from edunext_openedx_extensions.microsite_aware_functions.enrollments import filter_enrollments
 
 
@@ -89,10 +90,13 @@ def get_course_enrollment(username, course_id):
             user__username=username, course_id=course_key
         )
         filtered = filter_enrollments([enrollment])
-        if filtered:
-            enrollment = filtered.next()
-            return CourseEnrollmentSerializer(enrollment).data
-        return None
+        try:
+            filtered_enrollment = filtered.next()
+            return CourseEnrollmentSerializer(filtered_enrollment).data
+        except StopIteration:
+            if microsite.get_value("EDNX_ALLOW_UNFILTERED_ENROLLMENTS", False) and enrollment:
+                return CourseEnrollmentSerializer(enrollment).data
+            return None
     except CourseEnrollment.DoesNotExist:
         return None
 
