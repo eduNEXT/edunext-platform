@@ -1240,6 +1240,7 @@ MIDDLEWARE_CLASSES = (
 
     # Needs to run after mako, in case a 404 is thrown
     'edunext_openedx_extensions.ednx_microsites.middleware.MicrositeCrossBrandingFilterMiddleware',
+    'edunext_openedx_extensions.edunext.middleware.PathRedirectionMiddleware',
 
     # This must be last
     'openedx.core.djangoapps.site_configuration.middleware.SessionCookieDomainOverrideMiddleware',
