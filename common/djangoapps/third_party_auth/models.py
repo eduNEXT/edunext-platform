@@ -348,10 +348,12 @@ class OAuth2ProviderConfig(ProviderConfig):
         }
         """
         enabled_providers = microsite.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', {})
+        if not enabled_providers:
+            return super(OAuth2ProviderConfig, cls).current(*args)
         provider_slug = enabled_providers.get(args[0])
         if provider_slug:
             return super(OAuth2ProviderConfig, cls).current(provider_slug)
-        return super(OAuth2ProviderConfig, cls).current(*args)
+        return super(OAuth2ProviderConfig, cls).current(None)
 
     def clean(self):
         """ Standardize and validate fields """
