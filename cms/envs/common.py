@@ -380,7 +380,7 @@ MIDDLEWARE_CLASSES = (
     'openedx.core.djangoapps.monitoring_utils.middleware.MonitoringMemoryMiddleware',
 
     'openedx.core.djangoapps.header_control.middleware.HeaderControlMiddleware',
-    'edunext_openedx_extensions.ednx_microsites.middleware.SimpleMicrositeMiddleware',
+    'edunext_openedx_extensions.ednx_microsites.middleware.MicrositeMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
