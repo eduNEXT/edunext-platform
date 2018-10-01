@@ -41,6 +41,7 @@ from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from pytz import UTC
 from simple_history.models import HistoricalRecords
 from edunext_openedx_extensions.microsite_aware_functions.enrollments import filter_enrollments
+from microsite_configuration import microsite
 
 import dogstats_wrapper as dog_stats_api
 import lms.lib.comment_client as cc
@@ -2038,6 +2039,7 @@ def enforce_single_login(sender, request, user, signal, **kwargs):    # pylint: 
     Sets the current session id in the user profile,
     to prevent concurrent logins.
     """
+    microsite.set_by_domain(request.META.get('HTTP_HOST', None))
     if settings.FEATURES.get('PREVENT_CONCURRENT_LOGINS', False):
         if signal == user_logged_in:
             key = request.session.session_key
@@ -2050,6 +2052,7 @@ def enforce_single_login(sender, request, user, signal, **kwargs):    # pylint: 
             )
             if user_profile:
                 user.profile.set_login_session(key)
+    microsite.clear()
 
 
 class DashboardConfiguration(ConfigurationModel):
