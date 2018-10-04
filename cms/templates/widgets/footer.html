@@ -67,7 +67,7 @@ from openedx.core.djangoapps.lang_pref.api import released_languages
             function handleLangSelection(event) {
                 var $select = $(this);
                 var lang = $select.val();
-                $.cookie('${ settings.LANGUAGE_COOKIE }', lang, { expires: '', path: '' });
+                $.cookie('${ settings.LANGUAGE_COOKIE }', lang, { expires: '', path: '/' });
                 window.document.location.reload();
             }
             $("#footer-language-select").change(handleLangSelection);
