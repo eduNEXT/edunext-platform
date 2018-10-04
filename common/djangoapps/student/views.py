@@ -499,6 +499,9 @@ def register_user(request, extra_context=None):
     ):
         return render_to_response('register-shib.html', context)
 
+
+    third_party_auth_beacon = False  # Note ednx experimental
+
     # If third-party auth is enabled, prepopulate the form with data from the
     # selected provider.
     if third_party_auth.is_enabled() and pipeline.running(request):
@@ -509,6 +512,14 @@ def register_user(request, extra_context=None):
             overrides['running_pipeline'] = running_pipeline
             overrides['selected_provider'] = current_provider.name
             context.update(overrides)
+            third_party_auth_beacon = True  # Note ednx experimental
+
+    # Note: eduNEXT experimental feature
+    if settings.FEATURES.get('ednx_force_third_party_auth', False) and not third_party_auth_beacon:
+        url = settings.FEATURES.get('ednx_custom_register_link', False)
+        if url:
+            return redirect(url)
+        return redirect(reverse('root'))
 
     return render_to_response('register.html', context)
 
