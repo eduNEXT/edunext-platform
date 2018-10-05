@@ -2039,8 +2039,13 @@ def enforce_single_login(sender, request, user, signal, **kwargs):    # pylint: 
     Sets the current session id in the user profile,
     to prevent concurrent logins.
     """
-    microsite.set_by_domain(request.META.get('HTTP_HOST', None))
-    if settings.FEATURES.get('PREVENT_CONCURRENT_LOGINS', False):
+    prevent_concurrent = settings.FEATURES.get('PREVENT_CONCURRENT_LOGINS', False)
+    if not microsite.is_request_in_microsite():
+        microsite.set_by_domain(request.META.get('HTTP_HOST', None))
+        prevent_concurrent = settings.FEATURES.get('PREVENT_CONCURRENT_LOGINS', False)
+        microsite.clear()
+
+    if prevent_concurrent:
         if signal == user_logged_in:
             key = request.session.session_key
         else:
@@ -2052,7 +2057,6 @@ def enforce_single_login(sender, request, user, signal, **kwargs):    # pylint: 
             )
             if user_profile:
                 user.profile.set_login_session(key)
-    microsite.clear()
 
 
 class DashboardConfiguration(ConfigurationModel):
