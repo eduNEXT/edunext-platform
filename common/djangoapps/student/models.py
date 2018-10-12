@@ -59,6 +59,10 @@ from util.milestones_helpers import is_entrance_exams_enabled
 from util.model_utils import emit_field_changed_events, get_changed_fields_dict
 from util.query import use_read_replica_if_available
 
+# ednx backport from hawthorn
+from edx_rest_api_client.exceptions import SlumberBaseException
+from slumber.exceptions import HttpClientError, HttpServerError
+
 UNENROLL_DONE = Signal(providing_args=["course_enrollment", "skip_refund"])
 ENROLL_STATUS_CHANGE = Signal(providing_args=["event", "user", "course_id", "mode", "cost", "currency"])
 log = logging.getLogger(__name__)
@@ -1613,7 +1617,27 @@ class CourseEnrollment(models.Model):
             attribute = self.attributes.filter(namespace='order', name='order_number').last()
 
         order_number = attribute.value
-        order = ecommerce_api_client(self.user).orders(order_number).get()
+
+        # ednx backport from hawthorn
+        try:
+            order = ecommerce_api_client(self.user).orders(order_number).get()
+
+        except HttpClientError:
+            log.warning(
+                u"Encountered HttpClientError while getting order details from ecommerce. "
+                u"Order={number} and user {user}".format(number=order_number, user=self.user.id))
+            return None
+        except HttpServerError:
+            log.warning(
+                u"Encountered HttpServerError while getting order details from ecommerce. "
+                u"Order={number} and user {user}".format(number=order_number, user=self.user.id))
+            return None
+        except SlumberBaseException:
+            log.warning(
+                u"Encountered an error while getting order details from ecommerce. "
+                u"Order={number} and user {user}".format(number=order_number, user=self.user.id))
+            return None
+
         refund_window_start_date = max(
             datetime.strptime(order['date_placed'], ECOMMERCE_DATE_FORMAT),
             self.course_overview.start.replace(tzinfo=None)
