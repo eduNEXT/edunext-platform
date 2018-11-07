@@ -17,6 +17,13 @@ dependencies:
 
     - pip install setuptools
 
+    # Needs mongodb 3.2 to work 
+    - sudo apt-get purge mongodb-org*
+    - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+    - echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-32.list
+    - sudo apt-get update
+    - sudo apt-get install -y mongodb-org=3.2.18 mongodb-org-server=3.2.18 mongodb-org-shell=3.2.18 mongodb-org-mongos=3.2.18 mongodb-org-tools=3.2.18
+
     # Mirror what paver install_prereqs does.
     # After a successful build, CircleCI will
     # cache the virtualenv at that state, so that
