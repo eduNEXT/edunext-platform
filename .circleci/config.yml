@@ -1,15 +1,29 @@
-version: 2.1
-executors:
-  python27-jessie-node:
-    docker:
-      - image: circleci/python:2.7.15-jessie-node-browsers
-    working_directory: /tmp
 
+aliases:
+  - &step_install_mongo
+    run: |
+      # Needs mongodb > 3.2 to work 
+      sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+      echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+      sudo apt-get update
+      sudo apt-get install mongodb-org -y
+
+
+Mongo: &mongodb
+  steps:
+
+version: 2
 jobs:
   build:
-    executor: python27-jessie-node
+    docker:
+      - image: circleci/python:2.7.15-jessie-node-browsers
+    working_directory: ~/workspace
     steps:
       - checkout
+      - *step_install_mongo
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: ~/workspace
       - run: |
           sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
           sudo apt-get install libgeos-dev
@@ -19,12 +33,6 @@ jobs:
           . venv/bin/activate
 
           pip install setuptools
-
-          # Needs mongodb > 3.2 to work 
-          sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
-          echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
-          sudo apt-get update
-          sudo apt-get install mongodb-org -y
 
           # Mirror what paver install_prereqs does.
           # After a successful build, CircleCI will
@@ -47,41 +55,54 @@ jobs:
           pip install coveralls==1.0
           pip freeze
       - persist_to_workspace:
-                # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
-                # taken to be the root directory of the workspace.
-                root: .
-                # Must be relative path from root
-                paths:
-                  - .
+          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
+          # taken to be the root directory of the workspace.
+          root: .
+          # Must be relative path from root
+          paths:
+            - venv
+            - node_modules
   test:
-    executor: python27-jessie-node
+    docker:
+      - image: circleci/python:2.7.15-jessie-node-browsers
     parallelism: 4
+    steps:
+      - checkout
+      - *step_install_mongo
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: ~/workspace
+      - run: |
+          sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
+          sudo apt-get install libgeos-dev
+
+          . venv/bin/activate
+          ./scripts/all-tests.sh
+          # Output the installed python packages to the console to help
+          # with troubleshooting any issues with python requirements.
+  post:
+    docker:
+      - image: circleci/python:2.7.15-jessie-node-browsers
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: /tmp
       - run: |
           . venv/bin/activate
-          ./scripts/all-tests.sh
-          # Output the installed python packages to the console to help
-          # with troubleshooting any issues with python requirements.
-  post:
-    executor: python27-jessie-node
-    steps:
-      export CIRCLE_TEST_REPORTS=~/test_reports
-      mkdir -p $CIRCLE_TEST_REPORTS/junit
-      if [ $(find reports -type f | wc -l) -gt 0 ] ; then cp -r reports/. $CIRCLE_TEST_REPORTS/junit ; fi
-      if [ -z $COVERALLS_REPO_TOKEN ]; then echo "Coveralls token not defined."; else coveralls; fi
+          export CIRCLE_TEST_REPORTS=~/test_reports
+          mkdir -p $CIRCLE_TEST_REPORTS/junit
+          if [ $(find reports -type f | wc -l) -gt 0 ] ; then cp -r reports/. $CIRCLE_TEST_REPORTS/junit ; fi
+          if [ -z $COVERALLS_REPO_TOKEN ]; then echo "Coveralls token not defined."; else coveralls; fi
 
 
 workflows:
-  version: 2.1
+  version: 2
   btd:
     jobs:
       - build
       - test:
           requires:
-            - flow
+            - build
       - post:
           requires:
             - test
