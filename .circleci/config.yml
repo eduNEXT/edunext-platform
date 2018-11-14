@@ -66,8 +66,10 @@ jobs:
     docker:
       - image: circleci/python:2.7.15-jessie-node-browsers
     parallelism: 4
+    working_directory: ~/workspace
     steps:
       - checkout
+
       - *step_install_mongo
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
