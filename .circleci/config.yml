@@ -23,7 +23,7 @@ jobs:
       - *step_install_mongo
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: $HOME
+          at: ~/
       - run: |
           sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
           sudo apt-get install libgeos-dev
@@ -57,7 +57,7 @@ jobs:
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
           # taken to be the root directory of the workspace.
-          root: $HOME
+          root: ~/
           # Must be relative path from root
           paths:
             - workspace
@@ -71,7 +71,7 @@ jobs:
       - *step_install_mongo
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: $HOME
+          at: ~/
       - run: |
           sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
           sudo apt-get install libgeos-dev
@@ -87,7 +87,7 @@ jobs:
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: $HOME
+          at: ~/
       - run: |
           . ../venv/bin/activate
           export CIRCLE_TEST_REPORTS=~/test_reports
