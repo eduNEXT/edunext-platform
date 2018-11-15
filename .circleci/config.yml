@@ -23,7 +23,7 @@ jobs:
       - *step_install_mongo
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: ~/workspace
+          at: ~
       - run: |
           sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
           sudo apt-get install libgeos-dev
@@ -57,23 +57,21 @@ jobs:
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
           # taken to be the root directory of the workspace.
-          root: .
+          root: ~
           # Must be relative path from root
           paths:
-            - ../venv
-            - node_modules
+            - workspace
+            - venv
   test:
     docker:
       - image: circleci/python:2.7.15-jessie-node-browsers
     parallelism: 4
     working_directory: ~/workspace
     steps:
-      - checkout
-
       - *step_install_mongo
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: ~/workspace
+          at: ~
       - run: |
           sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
           sudo apt-get install libgeos-dev
@@ -83,12 +81,13 @@ jobs:
           # Output the installed python packages to the console to help
           # with troubleshooting any issues with python requirements.
   post:
+    working_directory: ~/workspace
     docker:
       - image: circleci/python:2.7.15-jessie-node-browsers
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: ~/workspace
+          at: ~
       - run: |
           . ../venv/bin/activate
           export CIRCLE_TEST_REPORTS=~/test_reports
