@@ -72,14 +72,17 @@ jobs:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: ~/
-      - run: |
-          sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
-          sudo apt-get install libgeos-dev
+      - run:
+          name: all-tests
+          no_output_timeout: 25m
+          command: |
+            sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
+            sudo apt-get install libgeos-dev
 
-          . ../venv/bin/activate
-          ./scripts/all-tests.sh
-          # Output the installed python packages to the console to help
-          # with troubleshooting any issues with python requirements.
+            . ../venv/bin/activate
+            ./scripts/all-tests.sh
+            # Output the installed python packages to the console to help
+            # with troubleshooting any issues with python requirements.
   post:
     working_directory: ~/workspace
     docker:
