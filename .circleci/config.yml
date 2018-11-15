@@ -29,8 +29,8 @@ jobs:
           sudo apt-get install libgeos-dev
           npm install
 
-          virtualenv ~/venv
-          . ~/venv/bin/activate
+          virtualenv ../venv
+          . ../venv/bin/activate
 
           pip install setuptools
 
@@ -60,7 +60,7 @@ jobs:
           root: .
           # Must be relative path from root
           paths:
-            - ~/venv
+            - ../venv
             - node_modules
   test:
     docker:
@@ -78,7 +78,7 @@ jobs:
           sudo apt-get update; sudo apt-get install libxml2-dev libxmlsec1-dev swig -y
           sudo apt-get install libgeos-dev
 
-          . ~/venv/bin/activate
+          . ../venv/bin/activate
           ./scripts/all-tests.sh
           # Output the installed python packages to the console to help
           # with troubleshooting any issues with python requirements.
@@ -90,7 +90,7 @@ jobs:
           # Must be absolute path or relative path from working_directory
           at: ~/workspace
       - run: |
-          . ~/venv/bin/activate
+          . ../venv/bin/activate
           export CIRCLE_TEST_REPORTS=~/test_reports
           mkdir -p $CIRCLE_TEST_REPORTS/junit
           if [ $(find reports -type f | wc -l) -gt 0 ] ; then cp -r reports/. $CIRCLE_TEST_REPORTS/junit ; fi
