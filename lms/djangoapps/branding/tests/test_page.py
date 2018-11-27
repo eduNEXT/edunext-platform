@@ -2,6 +2,8 @@
 Tests for branding page
 """
 import datetime
+import os
+from unittest import skipIf
 
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
@@ -110,6 +112,7 @@ class AnonymousIndexPageTest(ModuleStoreTestCase):
 
 
 @attr(shard=1)
+@skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in Circle CI.")
 class PreRequisiteCourseCatalog(ModuleStoreTestCase, LoginEnrollmentTestCase, MilestonesTestCaseMixin):
     """
     Test to simulate and verify fix for disappearing courses in
@@ -156,6 +159,7 @@ class PreRequisiteCourseCatalog(ModuleStoreTestCase, LoginEnrollmentTestCase, Mi
 
 
 @attr(shard=1)
+@skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in Circle CI.")
 class IndexPageCourseCardsSortingTests(ModuleStoreTestCase):
     """
     Test for Index page course cards sorting
