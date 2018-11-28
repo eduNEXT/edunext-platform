@@ -404,6 +404,8 @@ def _absolute_url_staticfile(is_secure, name):
         unicode
 
     """
+    if name.startswith("https://") or name.startswith("http://"):
+        return name
     url_path = staticfiles_storage.url(name)
 
     # In production, the static files URL will be an absolute
