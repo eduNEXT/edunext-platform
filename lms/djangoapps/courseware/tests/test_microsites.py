@@ -303,6 +303,9 @@ class TestSites(SharedModuleStoreTestCase, LoginEnrollmentTestCase):
         """
         Make sure that Site overrides on the ENABLE_SHOPPING_CART and
         ENABLE_PAID_COURSE_ENROLLMENTS are honored
+
+        eduNEXT, this test was modified to use a different course for the
+        non site, so that the CrossBranding filter does not interfere
         """
         course_mode = CourseMode(
             course_id=self.course_with_visibility.id,
@@ -312,13 +315,21 @@ class TestSites(SharedModuleStoreTestCase, LoginEnrollmentTestCase):
         )
         course_mode.save()
 
+        course_mode = CourseMode(
+            course_id=self.course_outside_site.id,
+            mode_slug=CourseMode.DEFAULT_MODE_SLUG,
+            mode_display_name=CourseMode.DEFAULT_MODE_SLUG,
+            min_price=10,
+        )
+        course_mode.save()
+
         # first try on the non site, which
-        # should pick up the global configuration (where ENABLE_PAID_COURSE_REGISTRATIONS = False)
-        url = reverse('about_course', args=[text_type(self.course_with_visibility.id)])
+        # should pick up the global configuration (where ENABLE_PAID_COURSE_REGISTRATION = False)
+        url = reverse('about_course', args=[text_type(self.course_outside_site.id)])
         resp = self.client.get(url)
         self.assertEqual(resp.status_code, 200)
-        self.assertIn("Enroll in {}".format(self.course_with_visibility.id.course), resp.content)
-        self.assertNotIn("Add {} to Cart ($10)".format(self.course_with_visibility.id.course), resp.content)
+        self.assertIn("Enroll in {}".format(self.course_outside_site.id.course), resp.content)
+        self.assertNotIn("Add {} to Cart ($10)".format(self.course_outside_site.id.course), resp.content)
 
         # now try on the site
         url = reverse('about_course', args=[text_type(self.course_with_visibility.id)])

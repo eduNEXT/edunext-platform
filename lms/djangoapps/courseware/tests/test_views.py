@@ -204,8 +204,8 @@ class IndexQueryTestCase(ModuleStoreTestCase):
     NUM_PROBLEMS = 20
 
     @ddt.data(
-        (ModuleStoreEnum.Type.mongo, 10, 147),
-        (ModuleStoreEnum.Type.split, 4, 147),
+        (ModuleStoreEnum.Type.mongo, 10, 148),  # eduNEXT redirection
+        (ModuleStoreEnum.Type.split, 4, 148),  # eduNEXT redirection
     )
     @ddt.unpack
     def test_index_query_counts(self, store_type, expected_mongo_query_count, expected_mysql_query_count):
@@ -1435,7 +1435,8 @@ class ProgressPageTests(ProgressPageBaseTests):
     def test_progress_queries_paced_courses(self, self_paced, query_count):
         """Test that query counts remain the same for self-paced and instructor-paced courses."""
         self.setup_course(self_paced=self_paced)
-        with self.assertNumQueries(query_count, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST), check_mongo_calls(1):
+        # eduNEXT redirection
+        with self.assertNumQueries(query_count + 1, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST), check_mongo_calls(1):
             self._get_progress_page()
 
     @patch.dict(settings.FEATURES, {'ASSUME_ZERO_GRADE_IF_ABSENT_FOR_ALL_TESTS': False})
@@ -1448,14 +1449,14 @@ class ProgressPageTests(ProgressPageBaseTests):
         self.setup_course()
         with grades_waffle().override(ASSUME_ZERO_GRADE_IF_ABSENT, active=enable_waffle):
             with self.assertNumQueries(
-                initial, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST
+                initial + 1, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST  # eduNEXT redirection
             ), check_mongo_calls(1):
                 self._get_progress_page()
 
             # subsequent accesses to the progress page require fewer queries.
             for _ in range(2):
                 with self.assertNumQueries(
-                    subsequent, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST
+                    subsequent + 1, table_blacklist=QUERY_COUNT_TABLE_BLACKLIST  # eduNEXT redirection
                 ), check_mongo_calls(1):
                     self._get_progress_page()
 

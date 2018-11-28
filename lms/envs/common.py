@@ -235,6 +235,7 @@ FEATURES = {
 
     # Turn on/off Microsites feature
     'USE_MICROSITES': False,
+    'USE_MICROSITE_AVAILABLE_SCREEN': True,
 
     # Turn on third-party auth. Disabled for now because full implementations are not yet available. Remember to run
     # migrations if you enable this; we don't create tables by default.
@@ -1226,7 +1227,8 @@ MIDDLEWARE_CLASSES = [
 
     'mobile_api.middleware.AppVersionUpgrade',
     'openedx.core.djangoapps.header_control.middleware.HeaderControlMiddleware',
-    'microsite_configuration.middleware.MicrositeMiddleware',
+    'edunext_openedx_extensions.ednx_microsites.middleware.MicrositeMiddleware',
+    'edunext_openedx_extensions.edunext.middleware.MicrositeMiddleware',
     'django_comment_client.middleware.AjaxExceptionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sites.middleware.CurrentSiteMiddleware',
@@ -1296,6 +1298,9 @@ MIDDLEWARE_CLASSES = [
     'openedx.core.djangoapps.theming.middleware.CurrentSiteThemeMiddleware',
 
     'waffle.middleware.WaffleMiddleware',
+
+    # Needs to run after mako, in case a 404 is thrown
+    'edunext_openedx_extensions.ednx_microsites.middleware.MicrositeCrossBrandingFilterMiddleware',
 
     # Inserts Enterprise content.
     'openedx.features.enterprise_support.middleware.EnterpriseMiddleware',
@@ -2254,6 +2259,15 @@ INSTALLED_APPS = [
     'openedx.core.djangoapps.self_paced',
 
     'sorl.thumbnail',
+
+    # eduNEXT modules
+    'edunext_openedx_extensions.edunext',
+    'openedx_email_extensions',
+    # External openedx extensions
+    'edunext_openedx_extensions.ednx_microsites',
+    'edunext_openedx_extensions.manage_api',
+    'edunext_openedx_extensions.microsite_api',
+
 
     # edx-milestones service
     'milestones',
@@ -3229,6 +3243,11 @@ MICROSITE_DATABASE_TEMPLATE_CACHE_TTL = 5 * 60
 ################################ Settings for rss_proxy ################################
 
 RSS_PROXY_CACHE_TIMEOUT = 3600  # The length of time we cache RSS retrieved from remote URLs in seconds
+
+######################### DATA API CONFIG ###########################
+
+DATA_API_DEF_PAGE_SIZE = 1000
+DATA_API_MAX_PAGE_SIZE = 30000
 
 #### PROCTORING CONFIGURATION DEFAULTS
 

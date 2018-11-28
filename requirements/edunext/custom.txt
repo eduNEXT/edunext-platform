@@ -1,0 +1,39 @@
+# xBlocks installed for some of our customers
+
+
+# Oppia XBlock
+-e git+https://github.com/oppia/xblock.git@9f6b95b7eb7dbabb96b77198a3202604f96adf65#egg=oppia-xblock
+
+# Microsoft's Office Mix XBlock:
+-e git+https://github.com/OfficeDev/xblock-officemix.git@3f876b5f0267b017812620239533a29c7d562d24#egg=officemix
+
+# This is already on edx requirements/edx/github.txt
+# -e git+https://github.com/edx-solutions/xblock-drag-and-drop-v2.git@v2.0.15#egg=xblock-drag-and-drop-v2==2.0.15
+
+# UBC Peer Instruction Tool for edX
+-e git+https://github.com/ubc/ubcpi.git@279c2267be397b1d49e657d8e6869b8da83457c1#egg=xblock-ubcpi
+
+# private video XBlocks
+# This version of xblock mentoring is deprecated but is a requirement for xblock-ooyala
+-e git+https://github.com/open-craft/xblock-mentoring.git@1a6e2092a361f0befff18d07607517d437046e3b#egg=xblock-mentoring
+-e git+https://github.com/edx-solutions/xblock-ooyala.git@42a65052beaa9e99ce9cf13001ad23905c1551cf#egg=xblock-ooyala
+-e git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
+
+# flow control
+-e git+https://github.com/eduNEXT/flow-control-xblock.git@021a604e23a553052600cd13e170cf74c9419ed4#egg=flow-control-xblock
+
+# Maintained xblocks from openedx xblocks directory (see https://openedx.atlassian.net/wiki/display/COMM/XBlocks+Directory)
+
+# Active table xblock
+-e git+https://github.com/open-craft/xblock-activetable.git@1786a2c8fc06ca3ecfac1972464048982bd486ff#egg=activetable-xblock
+# Image explorer xblock
+-e git+https://github.com/edx-solutions/xblock-image-explorer.git@31e6da363b3c0c61de75efe06f0c8cc502b544e5#egg=xblock-image-explorer
+# Problem builder xblock
+-e git+https://github.com/open-craft/problem-builder.git@v2.6.5#egg=xblock-problem-builder==2.6.5
+# School yourself xblock
+-e git+https://github.com/schoolyourself/schoolyourself-xblock.git@5e4d37716e3e72640e832e961f7cc0d38d4ec47b#egg=schoolyourself-xblock
+# Vector drawing xblock
+-e git+https://github.com/open-craft/xblock-vectordraw.git@v0.2.1#egg=vectordraw-xblock==0.2.1
+
+# Scorm Xblock
+-e git+https://github.com/raccoongang/edx_xblock_scorm.git@eff4f18963424ac090662e03040dc8f003770cd3#egg=edx_xblock_scorm

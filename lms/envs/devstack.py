@@ -204,6 +204,20 @@ VERIFY_STUDENT["SOFTWARE_SECURE"] = {
 }
 DISABLE_ACCOUNT_ACTIVATION_REQUIREMENT_SWITCH = "verify_student_disable_account_activation_requirement"
 
+########################## Microsites #######################
+
+MICROSITE_ROOT_DIR = ENV_ROOT / 'microsites'
+FEATURES['USE_MICROSITES'] = True
+MICROSITE_API_ALLOWED_REMOTES = [
+    '*',
+]
+
+MICROSITE_API_MANAGER = 'staff'
+
+### Select an implementation for the microsite backend
+MICROSITE_BACKEND = 'edunext_openedx_extensions.ednx_microsites.backends.database.EdunextCompatibleDatabaseMicrositeBackend'  # pylint: disable=line-too-long
+MICROSITE_TEMPLATE_BACKEND = 'edunext_openedx_extensions.ednx_microsites.backends.filebased.EdunextCompatibleFilebasedMicrositeTemplateBackend'  # pylint: disable=line-too-long
+
 # Skip enrollment start date filtering
 SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = True
 
@@ -279,3 +293,10 @@ if os.path.isfile(join(dirname(abspath(__file__)), 'private.py')):
 MODULESTORE = convert_module_store_setting_if_needed(MODULESTORE)
 
 SECRET_KEY = '85920908f28904ed733fe576320db18cabd7b6cd'
+
+######################### DATA API CONFIG ###########################
+
+DATA_API_DEF_PAGE_SIZE = 1000
+DATA_API_MAX_PAGE_SIZE = 30000
+
+####################### END DATA API CONFIG #########################

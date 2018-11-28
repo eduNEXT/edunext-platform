@@ -345,3 +345,7 @@ plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.CMS, plugin_c
 ########################## Derive Any Derived Settings  #######################
 
 derive_settings(__name__)
+
+################### Make tests edunext aware
+
+FEATURES['USE_MICROSITE_AVAILABLE_SCREEN'] = False
