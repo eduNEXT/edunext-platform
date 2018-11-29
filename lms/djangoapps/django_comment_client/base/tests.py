@@ -405,8 +405,8 @@ class ViewsQueryCountTestCase(
         return inner
 
     @ddt.data(
-        (ModuleStoreEnum.Type.mongo, 3, 4, 36),  # eduNEXT redirection
-        (ModuleStoreEnum.Type.split, 3, 13, 36),  # eduNEXT redirection
+        (ModuleStoreEnum.Type.mongo, 3, 4, 35),
+        (ModuleStoreEnum.Type.split, 3, 13, 35),
     )
     @ddt.unpack
     @count_queries
@@ -414,8 +414,8 @@ class ViewsQueryCountTestCase(
         self.create_thread_helper(mock_request)
 
     @ddt.data(
-        (ModuleStoreEnum.Type.mongo, 3, 3, 32),  # eduNEXT redirection
-        (ModuleStoreEnum.Type.split, 3, 10, 32),  # eduNEXT redirection
+        (ModuleStoreEnum.Type.mongo, 3, 3, 31),
+        (ModuleStoreEnum.Type.split, 3, 10, 31),
     )
     @ddt.unpack
     @count_queries

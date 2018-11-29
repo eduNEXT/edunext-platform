@@ -4,10 +4,10 @@ based on the current micro site.
 """
 from django import template
 from django.conf import settings
-from microsite_configuration import microsite
-from django.templatetags.static import static
 from django.contrib.staticfiles.storage import staticfiles_storage
+from django.templatetags.static import static
 from django.utils.translation import get_language_bidi
+from microsite_configuration import microsite
 
 register = template.Library()
 
