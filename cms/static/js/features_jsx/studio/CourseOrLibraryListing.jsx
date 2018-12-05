@@ -40,7 +40,7 @@ export function CourseOrLibraryListing(props) {
               </a>
               { item.lms_link && item.rerun_link &&
               <ul className="item-actions course-actions">
-                { allowReruns &&
+                { (allowReruns || item.rerun_permission) &&
                 <li className="action action-rerun">
                   <a
                     href={item.rerun_link}
