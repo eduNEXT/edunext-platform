@@ -996,8 +996,10 @@ class CertificatesViewsTests(CommonCertificatesTestCase):
         self.assertIn("Invalid Certificate Configuration", response.content)
 
         # Verify that Exception is raised when certificate is not in the preview mode
-        with self.assertRaises(Exception):
+        try:
             self.client.get(test_url)
+        except Exception:  # pylint: disable=broad-except
+            self.fail("No exception should be raised when rendering an invalid certificate without preview")
 
     @override_settings(FEATURES=FEATURES_WITH_CERTS_DISABLED)
     def test_request_certificate_without_passing(self):
