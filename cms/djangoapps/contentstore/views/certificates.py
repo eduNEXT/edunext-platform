@@ -40,7 +40,7 @@ from opaque_keys.edx.keys import AssetKey, CourseKey
 from common.djangoapps.course_modes.models import CourseMode
 from common.djangoapps.edxmako.shortcuts import render_to_response
 from common.djangoapps.student.auth import has_studio_write_access
-from common.djangoapps.student.roles import GlobalStaff
+from common.djangoapps.student.roles import GlobalStaff, CourseInstructorRole
 from common.djangoapps.util.db import MYSQL_MAX_INT, generate_int_id
 from common.djangoapps.util.json_request import JsonResponse
 from xmodule.modulestore import EdxJSONEncoder
@@ -427,6 +427,7 @@ def certificates_list_handler(request, course_key_string):
                 'certificate_web_view_url': certificate_web_view_url,
                 'is_active': is_active,
                 'is_global_staff': GlobalStaff().has_user(request.user),
+                'is_course_instructor': CourseInstructorRole(course.id).has_user(request.user),
                 'certificate_activation_handler_url': activation_handler_url,
                 'course_authoring_microfrontend_url': course_authoring_microfrontend_url,
             })
