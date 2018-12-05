@@ -35,7 +35,7 @@ function(_, $, Course, CertificatePreview, TemplateHelpers, ViewHelpers, AjaxHel
                 num: 'course_num',
                 revision: 'course_rev'
             });
-            window.CMS.User = {isGlobalStaff: true};
+            window.CMS.User = {isGlobalStaff: true, isCourseInstructor: true};
 
             TemplateHelpers.installTemplate('certificate-web-preview', true);
             appendSetFixtures('<div class="preview-certificate nav-actions"></div>');
