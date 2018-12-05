@@ -29,6 +29,7 @@ CMS.URL = CMS.URL || {};
 CMS.User = CMS.User || {};
 CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}';
 CMS.User.isGlobalStaff = '${is_global_staff | n, js_escaped_string}'=='True' ? true : false;
+CMS.User.isCourseInstructor = '${is_course_instructor | n, js_escaped_string}'=='True' ? true : false;
 </script>
 </%block>
 
