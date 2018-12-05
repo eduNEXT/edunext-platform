@@ -66,7 +66,7 @@ from common.djangoapps.util.file import (
     store_uploaded_file
 )
 from common.djangoapps.util.json_request import JsonResponse, JsonResponseBadRequest
-from common.djangoapps.util.views import require_global_staff
+from common.djangoapps.util.views import require_global_staff  # pylint: disable=unused-import
 from lms.djangoapps.bulk_email.api import is_bulk_email_feature_enabled
 from lms.djangoapps.bulk_email.models import CourseEmail
 from lms.djangoapps.certificates import api as certs_api
@@ -2446,7 +2446,7 @@ def _instructor_dash_url(course_key, section=None):
     return url
 
 
-@require_global_staff
+@require_course_permission(permissions.GENERATE_EXAMPLE_CERTIFICATES)
 @require_POST
 def generate_example_certificates(request, course_id=None):
     """Start generating a set of example certificates.
@@ -2508,7 +2508,7 @@ def mark_student_can_skip_entrance_exam(request, course_id):
 @transaction.non_atomic_requests
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
-@require_global_staff
+@require_course_permission(permissions.START_CERTIFICATE_GENERATION)
 @require_POST
 @common_exceptions_400
 def start_certificate_generation(request, course_id):
@@ -2530,7 +2530,7 @@ def start_certificate_generation(request, course_id):
 @transaction.non_atomic_requests
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
-@require_global_staff
+@require_course_permission(permissions.START_CERTIFICATE_REGENERATION)
 @require_POST
 @common_exceptions_400
 def start_certificate_regeneration(request, course_id):
@@ -2572,7 +2572,7 @@ def start_certificate_regeneration(request, course_id):
 @transaction.non_atomic_requests
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
-@require_global_staff
+@require_course_permission(permissions.CERTIFICATE_EXCEPTION_VIEW)
 @require_http_methods(['POST', 'DELETE'])
 def certificate_exception_view(request, course_id):
     """
@@ -2877,7 +2877,7 @@ def generate_bulk_certificate_exceptions(request, course_id):
 @transaction.non_atomic_requests
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
-@require_global_staff
+@require_course_permission(permissions.CERTIFICATE_INVALIDATION_VIEW)
 @require_http_methods(['POST', 'DELETE'])
 def certificate_invalidation_view(request, course_id):
     """
