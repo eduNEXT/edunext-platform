@@ -46,3 +46,5 @@ try:
 
 except ImportError:
     LOG.fatal("Could not import eox_tenant signals")
+except AttributeError:
+    LOG.fatal("There was an unexpected access to the settings object without initializing the eox_tenant plugin.")

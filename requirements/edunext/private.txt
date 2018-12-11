@@ -1,0 +1,8 @@
+# eduNEXT plugins:
+
+# plugins must be editable for the settings to appear on the sys path during loading
+-e git+ssh://git@bitbucket.org/edunext/eox-manage.git@b8b4ee79a0e91b8c8bc40e67307970b0d397008f#egg=eox-manage
+
+# eduNEXT xblocks:
+git+ssh://git@bitbucket.org/edunext/sodexo_xblock.git@5c597677f0e60130c07b3263f2e2207a255a64ed#egg=sodexo-game-xblock
+git+ssh://git@bitbucket.org/edunext/grade-podium-xblock.git@159e5024232f325514e89fecef6d63b14bc716a2#egg=grade-podium-xblock
