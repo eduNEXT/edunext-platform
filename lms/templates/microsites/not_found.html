@@ -1,9 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Not found</title>
+ <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Site not found</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="icon" type="image/x-icon" href="https://edunextpublic.s3-us-west-2.amazonaws.com/favicon.ico" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#212121">
+  <meta name="msapplication-navbutton-color" content="#212121">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#212121">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://edunextpublic.s3-us-west-2.amazonaws.com/edxsites/available/main.css">
 </head>
-<body>
-  <h1>Site not found</h1>
-</body>
+
+<body class="oaas-mdl">
+
+  <%include file="/browser-alert.html" />
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <header class="navbar-component mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <div class="navbar-component__logo">
+          <a href="https://www.edunext.co">
+            <img class="navbar-component__logo-img" src="https://d31eg7vyu9l0qx.cloudfront.net/app/themes/oaas/assets/images/logo.png" alt="eduNEXT | Open edX as a Service">
+          </a>
+        </div>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+          <div class="navbar-component__search mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <form class="searchform" method="GET" action="https://www.edunext.co">
+              <label class="navbar-component__search-btn mdl-button mdl-js-button mdl-button--icon" for="search-field"><i class="material-icons">search</i></label>
+              <div class="mdl-textfield__expandable-holder"><input class="mdl-textfield__input" type="text" id="search-field" type="search" name="s"></div>
+            </form>
+          </div>
+          <div class="navbar-component__submenu">
+            <div class="submenu-component">
+              <a class="mdl-navigation__link" href="https://www.edunext.co/open-edx-as-a-service/">Open edX as a Service</a>
+              <ul class="mdl-list mdl-shadow--2dp">
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://www.edunext.co/open-edx-as-a-service/">Open edX in the cloud</a></li>
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://www.edunext.co/pricing/">Features & Pricing</a></li>
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://www.edunext.co/articles/category/exclusive-features/">Exclusive Features</a></li>
+              </ul>
+            </div>
+            <div class="submenu-component">
+              <a class="mdl-navigation__link" href="https://www.edunext.co/consulting-services/">Consulting Services</a>
+            </div>
+            <div class="submenu-component">
+              <a class="mdl-navigation__link" href="https://www.edunext.co/blog/">Resources</a>
+              <ul class="mdl-list mdl-shadow--2dp">
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://www.edunext.co/open-edx/">About Open edX</a></li>
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://www.edunext.co/blog/">Knowledge base</a></li>
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://www.edunext.co/articles/category/freebies/">Freebies</a></li>
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://sandbox.edunext.io">Sandbox</a></li>
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://demo.edunext.io">Demo Site</a></li>
+                <li class="mdl-list__item"><a class="submenu-component__link" href="https://www.edunext.co/support">Customer Support</a></li>
+              </ul>
+            </div>
+            <div class="submenu-component">
+              <a class="mdl-navigation__link" href="https://www.edunext.co/about-edunext/">About Us</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mdl-layout__drawer">
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="https://www.edunext.co/open-edx-as-a-service/">Open edX as a Service</a>
+        <a class="mdl-navigation__link" href="https://www.edunext.co/consulting-services/">Consulting Services</a>
+        <a class="mdl-navigation__link" href="https://www.edunext.co/blog/">Resources</a>
+        <a class="mdl-navigation__link" href="https://www.edunext.co/about-edunext/">About Us</a>
+      </nav>
+    </div>
+
+    <main class="mdl-layout__content">
+      <div class="header-bar--bg">
+        <div class="header-bar mdl-grid container-component" style="margin-bottom: 0;">
+          <i class="header-bar__icon material-icons">announcement</i>
+          <h1 class="header-bar__title mdl-typography--display-2">Site not found</h1>
+        </div>
+      </div>
+
+      <div class="headline-component">
+        <div id="particles-js"></div>
+        <section class="headline-component__content mdl-cell mdl-cell--12-col">
+          <h1 class="headline-component__content-title">The subdomain <span class="headline-component__content-site">${ domain }</span> is available.</h1>
+          <p class="headline-component__content-paragraph">If you are interested in setting up this account to deploy online courses using the Open edX platform, drop us a line at <a href="mailto:contact@edunext.co">contact@edunext.co</a>.</p>
+          <div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer-component mdl-mega-footer">
+      <div class="footer-component__section mdl-mega-footer__bottom-section mdl-grid">
+        <div class="footer-component__logo mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+          <img class="footer-component__logo-img" src="https://www.edunext.co/app/themes/oaas/assets/images/logo-small.png" alt="eduNEXT | Open edX as a Service">
+        </div>
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet">
+          <ul class="footer-component__nav">
+            <li class="footer-component__nav-item"><a href="https://www.edunext.co/open-edx-as-a-service/">Open edX as a Service</a></li>
+            <li class="footer-component__nav-item"><a href="https://www.edunext.co/consulting-services/">Consulting Services</a></li>
+            <li class="footer-component__nav-item"><a href="https://www.edunext.co/blog/">Resources</a></li>
+            <li class="footer-component__nav-item"><a href="https://www.edunext.co/about-edunext/">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-component__bottom mdl-mega-footer__bottom-section mdl-grid">
+        <div class="footer-component__bottom-contact mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet">
+          <i class="material-icons">mail</i> <a href="mailto:contact@edunext.co">contact@edunext.co</a> <div class="divider">|</div> <i class="material-icons">phone</i> <a href="#">PBX +571 3583867</a>
+        </div>
+        <%
+          import datetime
+          now = datetime.datetime.now()
+        %>
+        <div class="footer-component__bottom-copy mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">© ${ now.year }  <a class="" href="https://www.edunext.co/" title="">eduNEXT</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JS Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="https://edunextpublic.s3-us-west-2.amazonaws.com/edxsites/available/jquery.min.js"></script>
+  <script type="text/javascript" src="https://edunextpublic.s3-us-west-2.amazonaws.com/edxsites/available/modernizr.min.js"></script>
+  <script type="text/javascript" src="https://edunextpublic.s3-us-west-2.amazonaws.com/edxsites/available/material.min.js"></script>
+  <script type="text/javascript" src="https://edunextpublic.s3-us-west-2.amazonaws.com/edxsites/available/particles.min.js"></script>
+  <script type="text/javascript" src="https://edunextpublic.s3-us-west-2.amazonaws.com/edxsites/available/main.js"></script>
+
 </html>
