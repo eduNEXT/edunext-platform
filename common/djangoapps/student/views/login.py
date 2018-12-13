@@ -50,6 +50,7 @@ from openedx.core.djangoapps.user_api.accounts.utils import generate_password
 from openedx.core.djangoapps.util.user_messages import PageLevelMessages
 from openedx.features.course_experience import course_home_url_name
 from student.cookies import delete_logged_in_cookies, set_logged_in_cookies
+from student.views import compose_and_send_activation_email
 from student.forms import AccountCreationForm
 from student.helpers import (
     AccountValidationError,
@@ -250,7 +251,8 @@ def _log_and_raise_inactive_user_auth_error(unauthenticated_user):
             unauthenticated_user.username)
         )
 
-    send_reactivation_email_for_user(unauthenticated_user)
+    profile = UserProfile.objects.get(user=unauthenticated_user)
+    compose_and_send_activation_email(unauthenticated_user, profile)
     raise AuthFailedError(_generate_not_activated_message(unauthenticated_user))
 
 
@@ -354,51 +356,6 @@ def _track_user_login(user, request):
                 }
             }
         )
-
-
-def send_reactivation_email_for_user(user):
-    try:
-        registration = Registration.objects.get(user=user)
-    except Registration.DoesNotExist:
-        return JsonResponse({
-            "success": False,
-            "error": _('No inactive user with this e-mail exists'),
-        })
-
-    try:
-        context = generate_activation_email_context(user, registration)
-    except ObjectDoesNotExist:
-        log.error(
-            u'Unable to send reactivation email due to unavailable profile for the user "%s"',
-            user.username,
-            exc_info=True
-        )
-        return JsonResponse({
-            "success": False,
-            "error": _('Unable to send reactivation email')
-        })
-
-    subject = render_to_string('emails/activation_email_subject.txt', context)
-    subject = ''.join(subject.splitlines())
-    message = render_to_string('emails/activation_email.txt', context)
-    from_address = configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
-    from_address = configuration_helpers.get_value('ACTIVATION_EMAIL_FROM_ADDRESS', from_address)
-
-    try:
-        user.email_user(subject, message, from_address)
-    except Exception:  # pylint: disable=broad-except
-        log.error(
-            u'Unable to send reactivation email from "%s" to "%s"',
-            from_address,
-            user.email,
-            exc_info=True
-        )
-        return JsonResponse({
-            "success": False,
-            "error": _('Unable to send reactivation email')
-        })
-
-    return JsonResponse({"success": True})
 
 
 @login_required
