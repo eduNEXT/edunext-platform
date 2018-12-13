@@ -61,6 +61,7 @@ from courseware.models import (
 )
 from enrollment.api import _default_course_mode
 
+from microsite_configuration import microsite
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.request_cache import clear_cache, get_cache
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
@@ -2439,7 +2440,13 @@ def enforce_single_login(sender, request, user, signal, **kwargs):    # pylint: 
     Sets the current session id in the user profile,
     to prevent concurrent logins.
     """
-    if settings.FEATURES.get('PREVENT_CONCURRENT_LOGINS', False):
+    prevent_concurrent = settings.FEATURES.get('PREVENT_CONCURRENT_LOGINS', False)
+    if not microsite.is_request_in_microsite():
+        microsite.set_by_domain(request.META.get('HTTP_HOST', None))
+        prevent_concurrent = settings.FEATURES.get('PREVENT_CONCURRENT_LOGINS', False)
+        microsite.clear()
+
+    if prevent_concurrent:
         if signal == user_logged_in:
             key = request.session.session_key
         else:
