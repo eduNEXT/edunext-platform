@@ -356,6 +356,25 @@ class OAuth2ProviderConfig(ProviderConfig):
         verbose_name = "Provider Configuration (OAuth)"
         verbose_name_plural = verbose_name
 
+    @classmethod
+    def current(cls, *args):
+        """
+        Get the current config model for the provider according to the enabled slugs for this site.
+        The site configuration expects the value of THIRD_PARTY_AUTH_ENABLED_PROVIDERS to be a dict
+        of backend_name and the slug being used for the configuration object.
+        E.g.
+        "THIRD_PARTY_AUTH_ENABLED_PROVIDERS":{
+            "google-oauth2":"my-slug-for-this-provider"
+        }
+        """
+        enabled_providers = configuration_helpers.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', {})
+        if not enabled_providers:
+            return super(OAuth2ProviderConfig, cls).current(*args)
+        provider_slug = enabled_providers.get(args[0])
+        if provider_slug:
+            return super(OAuth2ProviderConfig, cls).current(provider_slug)
+        return super(OAuth2ProviderConfig, cls).current(None)
+
     def clean(self):
         """ Standardize and validate fields """
         super(OAuth2ProviderConfig, self).clean()
@@ -363,6 +382,16 @@ class OAuth2ProviderConfig(ProviderConfig):
 
     def get_setting(self, name):
         """ Get the value of a setting, or raise KeyError """
+        tenant_oauth = configuration_helpers.get_value('SOCIAL_AUTH_OAUTH_SECRETS', False)
+        if tenant_oauth:
+            current = tenant_oauth.get(self.backend_name, {})
+            if name == "KEY":
+                return current.get('KEY')
+            if name == "SECRET":
+                site_key = configuration_helpers.get_value('microsite_config_key')
+                secrets = settings.MICROSITE_SECRETS.get(site_key, {}).get('SOCIAL_AUTH_OAUTH_SECRETS', {})
+                return current.get('SECRET', secrets.get(self.backend_name))
+
         if name == "KEY":
             return self.key
         if name == "SECRET":
