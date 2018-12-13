@@ -27,6 +27,7 @@ from social_core.utils import module_member
 
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.theming.helpers import get_current_request
+from microsite_configuration import microsite
 
 from .lti import LTI_PARAMS_KEY, LTIAuthBackend
 from .saml import STANDARD_SAML_PROVIDER_KEY, get_saml_idp_choices, get_saml_idp_class
@@ -356,6 +357,25 @@ class OAuth2ProviderConfig(ProviderConfig):
         verbose_name = "Provider Configuration (OAuth)"
         verbose_name_plural = verbose_name
 
+    @classmethod
+    def current(cls, *args):
+        """
+        Get the current config model for the provider according to the enabled slugs for this site.
+        The site configuration expects the value of THIRD_PARTY_AUTH_ENABLED_PROVIDERS to be a dict
+        of backend_name and the slug being used for the configuration object.
+        E.g.
+        "THIRD_PARTY_AUTH_ENABLED_PROVIDERS":{
+            "google-oauth2":"my-slug-for-this-provider"
+        }
+        """
+        enabled_providers = microsite.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', {})
+        if not enabled_providers:
+            return super(OAuth2ProviderConfig, cls).current(*args)
+        provider_slug = enabled_providers.get(args[0])
+        if provider_slug:
+            return super(OAuth2ProviderConfig, cls).current(provider_slug)
+        return super(OAuth2ProviderConfig, cls).current(None)
+
     def clean(self):
         """ Standardize and validate fields """
         super(OAuth2ProviderConfig, self).clean()
@@ -363,6 +383,16 @@ class OAuth2ProviderConfig(ProviderConfig):
 
     def get_setting(self, name):
         """ Get the value of a setting, or raise KeyError """
+        microsite_oauth = microsite.get_value('SOCIAL_AUTH_OAUTH_SECRETS', False)
+        if microsite_oauth:
+            current = microsite_oauth.get(self.backend_name, {})
+            if name == "KEY":
+                return current.get('KEY')
+            if name == "SECRET":
+                site_key = microsite.get_value('microsite_config_key')
+                secrets = settings.MICROSITE_SECRETS.get(site_key, {}).get('SOCIAL_AUTH_OAUTH_SECRETS', {})
+                return current.get('SECRET', secrets.get(self.backend_name))
+
         if name == "KEY":
             return self.key
         if name == "SECRET":
