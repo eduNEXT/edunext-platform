@@ -17,6 +17,8 @@ from courseware.courses import get_current_child
 from courseware.model_data import FieldDataCache
 from courseware.module_render import get_module_for_descriptor
 from courseware.views.index import save_positions_recursively_up
+# eduNEXT custom import from eox-tenant plugin.
+from eox_tenant.tenant_aware_functions.enrollments import filter_enrollments
 from experiments.models import ExperimentData
 from student.models import CourseEnrollment, User
 from xmodule.modulestore.django import modulestore
@@ -305,7 +307,7 @@ class UserCourseEnrollmentsList(generics.ListAPIView):
         ).order_by('created').reverse()
         org = self.request.query_params.get('org', None)
         return [
-            enrollment for enrollment in enrollments
+            enrollment for enrollment in filter_enrollments(enrollments)
             if enrollment.course_overview and self.is_org(org, enrollment.course_overview.org) and
             is_mobile_available_for_user(self.request.user, enrollment.course_overview) and
             not self.hide_course_for_enrollment_fee_experiment(self.request.user, enrollment.course_overview.id)

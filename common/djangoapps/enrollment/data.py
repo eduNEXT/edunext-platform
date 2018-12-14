@@ -28,6 +28,9 @@ from student.models import (
     NonExistentCourseError
 )
 
+# eduNEXT custom import from eox-tenant plugin.
+from eox_tenant.tenant_aware_functions.enrollments import filter_enrollments
+
 log = logging.getLogger(__name__)
 
 
@@ -48,7 +51,7 @@ def get_course_enrollments(user_id):
         is_active=True
     ).order_by('created')
 
-    enrollments = CourseEnrollmentSerializer(qset, many=True).data
+    enrollments = CourseEnrollmentSerializer(filter_enrollments(qset), many=True).data
 
     # Find deleted courses and filter them out of the results
     deleted = []
@@ -88,7 +91,11 @@ def get_course_enrollment(username, course_id):
         enrollment = CourseEnrollment.objects.get(
             user__username=username, course_id=course_key
         )
-        return CourseEnrollmentSerializer(enrollment).data
+        filtered = filter_enrollments([enrollment])
+        if filtered:  # pylint: disable=using-constant-test
+            enrollment = filtered.next()
+            return CourseEnrollmentSerializer(enrollment).data
+        return None
     except CourseEnrollment.DoesNotExist:
         return None
 
