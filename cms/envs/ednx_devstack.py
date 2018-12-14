@@ -8,3 +8,6 @@ from .devstack_docker import *
 
 ############################# ADVANCED COMPONENTS #############################
 FEATURES['ENABLE_CREATOR_GROUP'] = True
+
+########################## ORGANIZATIONS APP ################################
+FEATURES['ORGANIZATIONS_APP'] = True
