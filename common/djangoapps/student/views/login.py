@@ -14,19 +14,19 @@ import analytics
 import edx_oauth2_provider
 from django.conf import settings
 from django.contrib import messages
-from django.contrib.auth import authenticate, load_backend, login as django_login, logout
+from django.contrib.auth import authenticate, login as django_login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import AnonymousUser, User
-from django.core.exceptions import ObjectDoesNotExist, PermissionDenied
+from django.contrib.auth.models import User
+from django.core.exceptions import PermissionDenied
 from django.urls import NoReverseMatch, reverse, reverse_lazy
-from django.core.validators import ValidationError, validate_email
+from django.core.validators import ValidationError
 from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
 from django.shortcuts import redirect
 from django.template.context_processors import csrf
-from django.utils.http import base36_to_int, is_safe_url, urlencode, urlsafe_base64_encode
+from django.utils.http import is_safe_url, urlencode
 from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
-from django.views.decorators.http import require_GET, require_POST
+from django.views.decorators.http import require_POST
 from django.views.generic import TemplateView
 from opaque_keys.edx.locator import CourseLocator
 from provider.oauth2.models import Client
@@ -34,13 +34,13 @@ from ratelimitbackend.exceptions import RateLimitException
 from requests import HTTPError
 from six import text_type
 from social_core.backends import oauth as social_oauth
-from social_core.exceptions import AuthAlreadyAssociated, AuthException
+from social_core.exceptions import AuthException
 from social_django import utils as social_utils
 
 import openedx.core.djangoapps.external_auth.views
 import third_party_auth
 from django_comment_common.models import assign_role
-from edxmako.shortcuts import render_to_response, render_to_string
+from edxmako.shortcuts import render_to_response
 from eventtracking import tracker
 from openedx.core.djangoapps.external_auth.login_and_register import login as external_auth_login
 from openedx.core.djangoapps.external_auth.models import ExternalAuthMap
@@ -50,12 +50,12 @@ from openedx.core.djangoapps.user_api.accounts.utils import generate_password
 from openedx.core.djangoapps.util.user_messages import PageLevelMessages
 from openedx.features.course_experience import course_home_url_name
 from student.cookies import delete_logged_in_cookies, set_logged_in_cookies
+from student.views.management import compose_and_send_activation_email
 from student.forms import AccountCreationForm
 from student.helpers import (
     AccountValidationError,
     auth_pipeline_urls,
     create_or_set_user_attribute_created_on_site,
-    generate_activation_email_context,
     get_next_url_for_login_page
 )
 from student.models import (
@@ -250,7 +250,9 @@ def _log_and_raise_inactive_user_auth_error(unauthenticated_user):
             unauthenticated_user.username)
         )
 
-    send_reactivation_email_for_user(unauthenticated_user)
+    profile = UserProfile.objects.get(user=unauthenticated_user)
+    compose_and_send_activation_email(unauthenticated_user, profile)
+
     raise AuthFailedError(_generate_not_activated_message(unauthenticated_user))
 
 
@@ -354,51 +356,6 @@ def _track_user_login(user, request):
                 }
             }
         )
-
-
-def send_reactivation_email_for_user(user):
-    try:
-        registration = Registration.objects.get(user=user)
-    except Registration.DoesNotExist:
-        return JsonResponse({
-            "success": False,
-            "error": _('No inactive user with this e-mail exists'),
-        })
-
-    try:
-        context = generate_activation_email_context(user, registration)
-    except ObjectDoesNotExist:
-        log.error(
-            u'Unable to send reactivation email due to unavailable profile for the user "%s"',
-            user.username,
-            exc_info=True
-        )
-        return JsonResponse({
-            "success": False,
-            "error": _('Unable to send reactivation email')
-        })
-
-    subject = render_to_string('emails/activation_email_subject.txt', context)
-    subject = ''.join(subject.splitlines())
-    message = render_to_string('emails/activation_email.txt', context)
-    from_address = configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
-    from_address = configuration_helpers.get_value('ACTIVATION_EMAIL_FROM_ADDRESS', from_address)
-
-    try:
-        user.email_user(subject, message, from_address)
-    except Exception:  # pylint: disable=broad-except
-        log.error(
-            u'Unable to send reactivation email from "%s" to "%s"',
-            from_address,
-            user.email,
-            exc_info=True
-        )
-        return JsonResponse({
-            "success": False,
-            "error": _('Unable to send reactivation email')
-        })
-
-    return JsonResponse({"success": True})
 
 
 @login_required

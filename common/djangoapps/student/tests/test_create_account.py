@@ -277,7 +277,7 @@ class TestCreateAccount(SiteMixin, TestCase):
         request.user = AnonymousUser()
 
         with mock.patch('edxmako.request_context.get_current_request', return_value=request):
-            with mock.patch('django.core.mail.send_mail') as mock_send_mail:
+            with mock.patch('edx_ace.ace.send') as mock_send_mail:
                 create_account(request)
 
         # check that send_mail is called

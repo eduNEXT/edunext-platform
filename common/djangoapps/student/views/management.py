@@ -19,8 +19,8 @@ from django.contrib.auth import login as django_login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import AnonymousUser, User
 from django.contrib.auth.views import password_reset_confirm
-from django.core import mail
 from django.urls import reverse
+from django.core import mail
 from django.core.validators import ValidationError, validate_email
 from django.db import transaction
 from django.db.models.signals import post_save
@@ -31,10 +31,10 @@ from django.template.context_processors import csrf
 from django.template.response import TemplateResponse
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import base36_to_int, urlsafe_base64_encode
-from django.utils.translation import get_language, ungettext
-from django.utils.translation import ugettext as _
+from django.utils.translation import get_language, ugettext as _
 from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 from django.views.decorators.http import require_GET, require_POST
+from edx_ace.recipient import Recipient
 from eventtracking import tracker
 from ipware.ip import get_ip
 # Note that this lives in LMS, so this dependency should be refactored.
@@ -84,6 +84,7 @@ from student.helpers import (
     generate_activation_email_context,
     get_next_url_for_login_page
 )
+from student.message_types import AccountActivation
 from student.models import (
     CourseEnrollment,
     PasswordHistory,
@@ -105,7 +106,7 @@ from third_party_auth.saml import SAP_SUCCESSFACTORS_SAML_KEY
 from util.bad_request_rate_limiter import BadRequestRateLimiter
 from util.db import outer_atomic
 from util.json_request import JsonResponse
-from util.password_policy_validators import SecurityPolicyError, validate_password
+from util.password_policy_validators import validate_password
 
 log = logging.getLogger("edx.student")
 
@@ -136,8 +137,8 @@ def csrf_token(context):
     token = context.get('csrf_token', '')
     if token == 'NOTPROVIDED':
         return ''
-    return (u'<div style="display:none"><input type="hidden"'
-            ' name="csrfmiddlewaretoken" value="{}" /></div>'.format(token))
+    return (HTML(u'<div style="display:none"><input type="hidden"'
+                 ' name="csrfmiddlewaretoken" value="{}" /></div>').format(Text(token)))
 
 
 # NOTE: This view is not linked to directly--it is called from
@@ -248,6 +249,38 @@ def register_user(request, extra_context=None):
     return render_to_response('register.html', context)
 
 
+def compose_activation_email(root_url, user, user_registration=None, route_enabled=False, profile_name=''):
+    """
+    Construct all the required params for the activation email
+    through celery task
+
+    """
+    if user_registration is None:
+        user_registration = Registration.objects.get(user=user)
+    message_context = generate_activation_email_context(user, user_registration)
+    message_context.update({
+        'confirm_activation_link': '{root_url}/activate/{activation_key}'.format(
+            root_url=root_url,
+            activation_key=message_context['key']
+        ),
+        'route_enabled': route_enabled,
+        'routed_user': user.username,
+        'routed_user_email': user.email,
+        'routed_profile_name': profile_name,
+    })
+    if route_enabled:
+        dest_addr = settings.FEATURES['REROUTE_ACTIVATION_EMAIL']
+    else:
+        dest_addr = user.email
+
+    msg = AccountActivation().personalize(
+        recipient=Recipient(user.username, dest_addr),
+        language=preferences_api.get_user_preference(user, LANGUAGE_KEY),
+        user_context=message_context,
+    )
+    return msg
+
+
 def compose_and_send_activation_email(user, profile, user_registration=None):
     """
     Construct all the required params and send the activation email
@@ -258,21 +291,11 @@ def compose_and_send_activation_email(user, profile, user_registration=None):
         profile: profile object of the current logged-in user
         user_registration: registration of the current logged-in user
     """
-    dest_addr = user.email
-    if user_registration is None:
-        user_registration = Registration.objects.get(user=user)
-    context = generate_activation_email_context(user, user_registration)
-    subject = render_to_string('emails/activation_email_subject.txt', context)
-    # Email subject *must not* contain newlines
-    subject = ''.join(subject.splitlines())
-    message_for_activation = render_to_string('emails/activation_email.txt', context)
-    from_address = configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
-    from_address = configuration_helpers.get_value('ACTIVATION_EMAIL_FROM_ADDRESS', from_address)
-    if settings.FEATURES.get('REROUTE_ACTIVATION_EMAIL'):
-        dest_addr = settings.FEATURES['REROUTE_ACTIVATION_EMAIL']
-        message_for_activation = ("Activation for %s (%s): %s\n" % (user, user.email, profile.name) +
-                                  '-' * 80 + '\n\n' + message_for_activation)
-    send_activation_email.delay(subject, message_for_activation, from_address, dest_addr)
+    route_enabled = settings.FEATURES.get('REROUTE_ACTIVATION_EMAIL')
+    root_url = configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)
+    msg = compose_activation_email(root_url, user, user_registration, route_enabled, profile.name)
+
+    send_activation_email.delay(msg)
 
 
 @login_required
@@ -991,7 +1014,9 @@ def activate_account(request, key):
                 '{html_start}Your account could not be activated{html_end}'
                 'Something went wrong, please <a href="{support_url}">contact support</a> to resolve this issue.'
             )).format(
-                support_url=configuration_helpers.get_value('SUPPORT_SITE_LINK', settings.SUPPORT_SITE_LINK),
+                support_url=configuration_helpers.get_value(
+                    'ACTIVATION_EMAIL_SUPPORT_LINK', settings.ACTIVATION_EMAIL_SUPPORT_LINK
+                ) or settings.SUPPORT_SITE_LINK,
                 html_start=HTML('<p class="message-title">'),
                 html_end=HTML('</p>'),
             ),
