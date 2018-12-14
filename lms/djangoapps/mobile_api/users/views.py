@@ -22,6 +22,8 @@ from experiments.models import ExperimentData, ExperimentKeyValue
 from lms.djangoapps.courseware.access_utils import ACCESS_GRANTED
 from mobile_api.utils import API_V05
 from openedx.features.course_duration_limits.access import check_course_expired
+# eduNEXT custom import from eox-tenant plugin.
+from eox_tenant.tenant_aware_functions.enrollments import filter_enrollments
 from student.models import CourseEnrollment, User
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError
@@ -347,7 +349,7 @@ class UserCourseEnrollmentsList(generics.ListAPIView):
         org = self.request.query_params.get('org', None)
 
         same_org = (
-            enrollment for enrollment in enrollments
+            enrollment for enrollment in filter_enrollments(enrollments)
             if enrollment.course_overview and self.is_org(org, enrollment.course_overview.org)
         )
         mobile_available = (
