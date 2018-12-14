@@ -50,5 +50,5 @@ git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.6.0#egg=crm_integra
 
 # eduNEXT plugins:
 # plugins must be editable for the settings to appear on the sys path during loading
--e git+https://github.com/eduNEXT/eox-tenant.git@78b2974564cd7e0042473d81da11194151fc0d3d#egg=eox-tenant
+-e git+https://github.com/eduNEXT/eox-tenant.git@698a966bac3beda1ff2ba65d0d6fb1f433250728#egg=eox-tenant
 -e git+https://github.com/eduNEXT/eox-core.git@v0.8.0#egg=eox-core==0.8.0

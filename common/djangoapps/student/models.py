@@ -71,6 +71,9 @@ from util.milestones_helpers import is_entrance_exams_enabled
 from util.model_utils import emit_field_changed_events, get_changed_fields_dict
 from util.query import use_read_replica_if_available
 
+# eduNEXT custom import from eox-tenant plugin.
+from eox_tenant.tenant_aware_functions.enrollments import filter_enrollments
+
 log = logging.getLogger(__name__)
 AUDIT_LOG = logging.getLogger("audit")
 SessionStore = import_module(settings.SESSION_ENGINE).SessionStore  # pylint: disable=invalid-name
@@ -2055,7 +2058,12 @@ class CourseEnrollment(models.Model):
         if not enrollment_state:
             try:
                 record = cls.objects.get(user=user, course_id=course_key)
-                enrollment_state = CourseEnrollmentState(record.mode, record.is_active)
+                # Filter per organization.
+                filtered = [x for x in filter_enrollments([record])]
+                if not filtered:
+                    enrollment_state = CourseEnrollmentState(None, None)
+                else:
+                    enrollment_state = CourseEnrollmentState(record.mode, record.is_active)
             except cls.DoesNotExist:
                 enrollment_state = CourseEnrollmentState(None, None)
             cls._update_enrollment_in_request_cache(user, course_key, enrollment_state)
