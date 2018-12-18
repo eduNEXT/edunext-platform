@@ -511,7 +511,7 @@ class EmailMarketingTests(TestCase):
         email_marketing_register_user(None, user=self.user, registration=self.registration)
         self.assertEqual(mock_update_user.call_args[0][0]['ui_lang'], 'es-419')
 
-    @patch.dict(settings.FEATURES, {"ENABLE_THIRD_PARTY_AUTH": False})
+    @patch.dict(settings.FEATURES, {"ENABLE_THIRD_PARTY_AUTH_FOR_TEST": False})
     @patch('email_marketing.signals.crum.get_current_request')
     @patch('lms.djangoapps.email_marketing.tasks.update_user.delay')
     @ddt.data(('auth_userprofile', 'gender', 'f', True),
