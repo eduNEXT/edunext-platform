@@ -23,6 +23,8 @@ from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError
 from xmodule.partitions.partitions_service import get_all_partitions_for_course
 
+from microsite_configuration import microsite
+
 log = logging.getLogger(__name__)
 
 
@@ -109,11 +111,14 @@ def get_lms_link_for_item(location, preview=False):
     lms_base = SiteConfiguration.get_value_for_org(
         location.org,
         "LMS_BASE",
-        settings.LMS_BASE
+        microsite.get_value_for_org(location.org, 'SITE_NAME', settings.LMS_BASE),
     )
 
     if lms_base is None:
         return None
+
+    # eduNEXT Disable preview for now (not microsite aware), it will redirect to a normal course.
+    preview = False
 
     if preview:
         # checks PREVIEW_LMS_BASE value in site configuration for the given course_org_filter(org)
@@ -139,7 +144,11 @@ def get_lms_link_for_certificate_web_view(user_id, course_key, mode):
     assert isinstance(course_key, CourseKey)
 
     # checks LMS_BASE value in SiteConfiguration against course_org_filter if not found returns settings.LMS_BASE
-    lms_base = SiteConfiguration.get_value_for_org(course_key.org, "LMS_BASE", settings.LMS_BASE)
+    lms_base = SiteConfiguration.get_value_for_org(
+        course_key.org,
+        "LMS_BASE",
+        microsite.get_value_for_org(course_key.org, 'SITE_NAME', settings.LMS_BASE),
+    )
 
     if lms_base is None:
         return None

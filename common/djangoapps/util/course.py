@@ -6,6 +6,7 @@ import urllib
 
 from django.conf import settings
 
+from microsite_configuration import microsite
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 
 log = logging.getLogger(__name__)
@@ -51,8 +52,20 @@ def get_link_for_about_page(course):
     elif settings.FEATURES.get('ENABLE_MKTG_SITE') and getattr(course, 'marketing_url', None):
         course_about_url = course.marketing_url
     else:
+        about_base = microsite.get_value_for_org(
+            course.id.org,
+            'SITE_NAME',
+            settings.LMS_ROOT_URL
+        )
+
+        if not about_base.startswith("http"):
+            about_base = u"{protocol}://{base}".format(
+                protocol="https",
+                base=about_base
+            )
+
         course_about_url = u'{about_base_url}/courses/{course_key}/about'.format(
-            about_base_url=configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL),
+            about_base_url=about_base,
             course_key=unicode(course.id),
         )
 
