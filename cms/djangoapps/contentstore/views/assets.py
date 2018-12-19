@@ -23,6 +23,7 @@ from xmodule.modulestore.exceptions import ItemNotFoundError
 from contentstore.utils import reverse_course_url
 from contentstore.views.exception import AssetNotFoundException, AssetSizeTooLargeException
 from edxmako.shortcuts import render_to_response
+from microsite_configuration import microsite
 from openedx.core.djangoapps.contentserver.caching import del_cached_content
 from student.auth import has_course_author_access
 from util.date_utils import get_default_time_display
@@ -572,7 +573,8 @@ def _get_asset_json(display_name, content_type, date, location, thumbnail_locati
     Helper method for formatting the asset information to send to client.
     '''
     asset_url = StaticContent.serialize_asset_key_with_slash(location)
-    external_url = settings.LMS_BASE + asset_url
+    lms_base = microsite.get_value_for_org(location.org, 'SITE_NAME', settings.LMS_BASE)
+    external_url = lms_base + asset_url
     return {
         'display_name': display_name,
         'content_type': content_type,
