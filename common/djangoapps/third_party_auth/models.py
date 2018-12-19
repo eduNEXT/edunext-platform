@@ -369,6 +369,16 @@ class OAuth2ProviderConfig(ProviderConfig):
         }
         """
         enabled_providers = microsite.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', {})
+
+        # In a very specific case, azuread-oauth2 does not have a microsite context.
+        if not microsite.is_request_in_microsite():
+            try:
+                microsite.set_by_domain(get_current_request().site.domain)
+                enabled_providers = microsite.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', {})
+                microsite.clear()
+            except Exception:  # pylint: disable=broad-except
+                pass
+
         if not enabled_providers:
             return super(OAuth2ProviderConfig, cls).current(*args)
         provider_slug = enabled_providers.get(args[0])
