@@ -9,4 +9,10 @@ class PasswordReset(BaseMessageType):
     def __init__(self, *args, **kwargs):
         super(PasswordReset, self).__init__(*args, **kwargs)
 
-        self.options['transactional'] = True
+        self.options['transactional'] = True  # pylint: disable=unsupported-assignment-operation
+
+
+class AccountActivation(BaseMessageType):
+    def __init__(self, *args, **kwargs):
+        super(AccountActivation, self).__init__(*args, **kwargs)
+        self.options['transactional'] = True  # pylint: disable=unsupported-assignment-operation
