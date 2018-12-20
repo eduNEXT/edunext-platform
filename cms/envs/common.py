@@ -474,6 +474,7 @@ MIDDLEWARE_CLASSES = [
     'openedx.core.djangoapps.monitoring_utils.middleware.MonitoringMemoryMiddleware',
 
     'openedx.core.djangoapps.header_control.middleware.HeaderControlMiddleware',
+    'microsite_configuration.middleware.MicrositeMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
