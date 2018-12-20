@@ -5,10 +5,9 @@
 #   git+https://github.com/OWNER/REPO-NAME.git@TAG-OR-SHA#egg=KIT-NAME==VERSION
 #
 
-# checksum change
-
-git+https://github.com/edunext/xblock-lti-consumer.git@028076fc7a2eb7549049d7a20d96ccb361b49346#egg=lti_consumer-xblock==1.1.8-patch1
-git+https://github.com/eduNEXT/openedx-email-extensions.git@v0.1.6#egg=openedx-email-extensions==0.1.6
+#####################
+# Community Xblocks #
+#####################
 
 # Oppia XBlock
 git+https://github.com/oppia/xblock.git@9f6b95b7eb7dbabb96b77198a3202604f96adf65#egg=oppia-xblock
@@ -22,12 +21,17 @@ git+https://github.com/edx-solutions/xblock-drag-and-drop-v2.git@2.1.5#egg=xbloc
 # UBC Peer Instruction Tool for edX
 git+https://github.com/ubc/ubcpi.git@ff69bbb8042e3c2acb268e8d680c739f9d71be59#egg=xblock-ubcpi
 
+# edx-solutions
 git+https://github.com/open-craft/xblock-mentoring.git@1a6e2092a361f0befff18d07607517d437046e3b#egg=xblock-mentoring
 git+https://github.com/edx-solutions/xblock-ooyala.git@c8ac8a9d05bac0224481de9bd9233216c3d203c6#egg=xblock-ooyala
 git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
 
-# flow control
+# eduNEXT supported xblocks
 git+https://github.com/eduNEXT/flow-control-xblock.git@3040d00ce8aac13ad38c82789873f8b5d6cb7e62#egg=flow-control-xblock
+git+https://github.com/eduNEXT/edx_xblock_scorm.git@7a787f92c6be67671634075205e3529df93ead43#egg=edx_xblock_scorm
+git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.6.0#egg=crm_integration_xblock==1.6.0
+# Patched version that includes the fullname
+git+https://github.com/edunext/xblock-lti-consumer.git@028076fc7a2eb7549049d7a20d96ccb361b49346#egg=lti_consumer-xblock==1.1.8-patch1
 
 # Active table xblock
 git+https://github.com/open-craft/xblock-activetable.git@e933d41bb86a8d50fb878787ca680165a092a6d5#egg=activetable-xblock
@@ -43,12 +47,6 @@ git+https://github.com/schoolyourself/schoolyourself-xblock.git@5e4d37716e3e7264
 
 # Vector drawing xblock
 git+https://github.com/open-craft/xblock-vectordraw.git@v0.2.1#egg=vectordraw-xblock==0.2.1
-
-# Scorm Xblock
-git+https://github.com/eduNEXT/edx_xblock_scorm.git@7a787f92c6be67671634075205e3529df93ead43#egg=edx_xblock_scorm
-
-# CRM Xblock
-git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.6.0#egg=crm_integration_xblock==1.6.0
 
 ###################
 # eduNEXT plugins #
