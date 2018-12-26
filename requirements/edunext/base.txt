@@ -5,6 +5,8 @@
 #   git+https://github.com/OWNER/REPO-NAME.git@TAG-OR-SHA#egg=KIT-NAME==VERSION
 #
 
+# checksum change
+
 git+https://github.com/edunext/xblock-lti-consumer.git@028076fc7a2eb7549049d7a20d96ccb361b49346#egg=lti_consumer-xblock==1.1.8-patch1
 git+https://github.com/eduNEXT/openedx-email-extensions.git@v0.1.6#egg=openedx-email-extensions==0.1.6
 
@@ -48,7 +50,9 @@ git+https://github.com/eduNEXT/edx_xblock_scorm.git@7a787f92c6be67671634075205e3
 # CRM Xblock
 git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.6.0#egg=crm_integration_xblock==1.6.0
 
-# eduNEXT plugins:
+###################
+# eduNEXT plugins #
+###################
 # plugins must be editable for the settings to appear on the sys path during loading
--e git+https://github.com/eduNEXT/eox-tenant.git@698a966bac3beda1ff2ba65d0d6fb1f433250728#egg=eox-tenant
+-e git+https://github.com/eduNEXT/eox-tenant.git@61a91d6c30a37e26835680a457ab2883716c2031#egg=eox-tenant
 -e git+https://github.com/eduNEXT/eox-core.git@v0.8.0#egg=eox-core==0.8.0
