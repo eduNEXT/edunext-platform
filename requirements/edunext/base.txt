@@ -54,6 +54,10 @@ git+https://github.com/ibleducation/jupyter-viewer-xblock.git@791e4a09515fdcbb8d
 # Proversity
 git+https://github.com/proversity-org/badgr-xblock.git@7077d499b2f752c78bb41e9c17b4bbc7d57bcd55#egg=badgr-xblock
 
+# Stanford xblocks
+-e git+https://github.com/Stanford-Online/xblock-free-text-response@release/v0.4.0#egg=xblock-free-text-response==0.4.0
+-e git+https://github.com/Stanford-Online/xblock-in-video-quiz.git@release/v0.1.7#egg=invideoquiz_xblock==0.1.7
+
 ###################
 # eduNEXT plugins #
 ###################
