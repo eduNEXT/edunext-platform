@@ -48,6 +48,12 @@ git+https://github.com/schoolyourself/schoolyourself-xblock.git@5e4d37716e3e7264
 # Vector drawing xblock
 git+https://github.com/open-craft/xblock-vectordraw.git@v0.2.1#egg=vectordraw-xblock==0.2.1
 
+# IBL
+git+https://github.com/ibleducation/jupyter-viewer-xblock.git@791e4a09515fdcbb8d022300cf999f2fa49aca5e#egg=jupyter-viewer-xblock
+
+# Proversity
+git+https://github.com/proversity-org/badgr-xblock.git@7077d499b2f752c78bb41e9c17b4bbc7d57bcd55#egg=badgr-xblock
+
 ###################
 # eduNEXT plugins #
 ###################
