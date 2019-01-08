@@ -150,6 +150,7 @@ class CourseEnrollmentForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(CourseEnrollmentForm, self).__init__(*args, **kwargs)
+        self.data = self.data.copy()
 
         if self.data.get('course'):
             try:
