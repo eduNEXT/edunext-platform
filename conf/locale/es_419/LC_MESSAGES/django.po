@@ -1,234 +1,18 @@
-# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-# edX community translations have been downloaded from Spanish (Latin America) (http://www.transifex.com/open-edx/edx-platform/language/es_419/).
-# Copyright (C) 2018 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-#
-# Translators:
-# Adolfo Michel <Michel.14.993@gmail.com>, 2017
-# Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2018
-# arrow1234 <aleoncavallo@gmail.com>, 2014
-# Anatoli F. Peña Castillo <djanatoli@gmail.com>, 2016
-# Anthony Mangano <amangano@edx.org>, 2017
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Bill DeRusha <bill@edx.org>, 2017
-# BS GRUPO <soporte@bsgrupo.com>, 2018
-# Carlos Arias Fernandez <cararias@gmail.com>, 2016
-# Cristian Salamea <ovnicraft@gmail.com>, 2014-2015
-# David Salazar <imdjsg@gmail.com>, 2014
-# dzepeda <davitzepeda@hotmail.com>, 2014
-# diegobe <diegobe@iadb.org>, 2014
-# Diego Rojas <diego.rojas@edunext.co>, 2017
-# David Salazar <imdjsg@gmail.com>, 2014
-# Eduardo Zambrano <ezambrano@edx.org>, 2017-2018
-# Elias Estay <eestay@u.uchile.cl>, 2015
-# Felix Antonio Valdez Noverola <felix@itesm.mx>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# jorgebarrero <jorgebarrero@gmail.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2018
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# karlman72 <karlman72@gmail.com>, 2014
-# Laura Silva <lingison@edx.org>, 2015-2018
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Marcos Buccella <marcosfiore07@gmail.com>, 2018
-# Marina Pastor <mpastor@edx.org>, 2017-2018
-# Matías Olivera <MatiasOlivera@outlook.com>, 2015
-# MarnyLopez, 2014
-# Natalia, 2013
-# Natalia, 2013-2014,2018
-# Ned Batchelder <ned@edx.org>, 2016
-# Ned Weitzman <nweitzman@edx.org>, 2017
-# Nuri Plans Toral <nplans@gmail.com>, 2015
-# Patricia Colmenares <patrusca38@hotmail.com>, 2015
-# rcelaya <rcelaya@ula.ve>, 2014
-# Sarina Canelake <sarina@edx.org>, 2014-2015
-# Ernesto Sánchez Benitez <sbernesto@gmail.com>, 2016
-# Sergio A. Salazar <sergiosalazar@live.ru>, 2015
-# sebasco <sjduranh@gmail.com>, 2014
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
-# xocoyotzin, 2014
-# Valeria Freire <valtodopds@hotmail.com>, 2014-2015
-# wjmendez <walterj.mendez@gmail.com>, 2014
-# José Luis <alagunajs@gmail.com>, 2016
-# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2018 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-#
-# Translators:
-# Addi Hazel Mendoza Sánchez <addictivoh@gmail.com>, 2015
-# Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2018
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Cristian Guerra <cristian.guerra.maya@gmail.com>, 2016
-# Cristian Salamea <ovnicraft@gmail.com>, 2014-2015
-# Diego Rojas <diego.rojas@edunext.co>, 2017
-# Escored <escored@gmail.com>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# Fernando Abramowitz <ferabra@gmail.com>, 2014
-# Jose Antonio Sanchez Romero <isc.antonio.sr@gmail.com>, 2017
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014-2017
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# karlman72 <karlman72@gmail.com>, 2014
-# karlman72 <karlman72@gmail.com>, 2014
-# Laura Silva <lingison@edx.org>, 2016
-# Luis Moreno <morenoluisma@gmail.com>, 2017
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# MarnyLopez, 2014
-# Matías Olivera <MatiasOlivera@outlook.com>, 2015
-# MarnyLopez, 2014
-# Natalia, 2013-2014
-# Natalia, 2013
-# Natalia, 2014,2018
-# Oliver Schulze <oliver.schulze@vivaidea.org>, 2017
-# Valeria Freire <valtodopds@hotmail.com>, 2014
-# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
-# edX community translations have been downloaded from Spanish (Latin America) (http://www.transifex.com/open-edx/edx-platform/language/es_419/)
-# Copyright (C) 2018 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-#
-# Translators:
-# Addi Hazel Mendoza Sánchez <addictivoh@gmail.com>, 2014
-# Adolfo Michel <Michel.14.993@gmail.com>, 2017
-# Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2018
-# Anatoli F. Peña Castillo <djanatoli@gmail.com>, 2016
-# andreslucena <inactive+andreslucena@transifex.com>, 2013
-# andreslucena <inactive+andreslucena@transifex.com>, 2013
-# Angel Kurten <angelkurten@hotmail.com>, 2016
-# Anthony Mangano <amangano@edx.org>, 2017
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Benjy Malca Bautista <bnmalcabis@gmail.com>, 2015
-# Cristian Salamea <ovnicraft@gmail.com>, 2013-2016
-# morsoinferno <cristobal.acosta@usach.cl>, 2014-2015
-# David Salazar <imdjsg@gmail.com>, 2014
-# dzepeda <davitzepeda@hotmail.com>, 2014
-# Developer EdX <mperez_ges@galileo.edu>, 2016
-# Diego Rojas <diego.rojas@edunext.co>, 2017
-# David Salazar <imdjsg@gmail.com>, 2014
-# Eduardo Zambrano <ezambrano@edx.org>, 2017-2018
-# Elias Estay <eestay@u.uchile.cl>, 2015
-# Fabio Avellaneda <fabio_avellaneda@javeriana.edu.co>, 2015
-# Felix Antonio Valdez Noverola <felix@itesm.mx>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2013
-# Fernando Abramowitz <ferabra@gmail.com>, 2013
-# Herty Nava <translation@bolmedia.ca>, 2013
-# Irvin Cabrera <pirpinachisloco@hotmail.com>, 2014
-# Ismael Saavedra <isma.18.94@gmail.com>, 2014
-# jimenaianina <jime.ianina@gmail.com>, 2014
-# Jonathan Amaya <jonathan.amaya88@yahoo.com>, 2014
-# jorgebarrero <jorgebarrero@gmail.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2018
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013
-# Juan Fernando Villa <elite.linux@gmail.com>, 2015
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# Lalo Cabrera <laloogcabrera@yahoo.com.mx>, 2014
-# Laura Silva <lingison@edx.org>, 2016-2017
-# camilomaiden <inactive+camilomaiden@transifex.com>, 2014
-# Luis Benites <lbenitesanchez@gmail.com>, 2016
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Luis Moreno <morenoluisma@gmail.com>, 2017
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013-2014
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Marco Morales, 2014,2017
-# Marina Pastor <mpastor@edx.org>, 2017
-# emgl <marsh_melow@hotmail.es>, 2014
-# Matías Olivera <MatiasOlivera@outlook.com>, 2015
-# Miguel Hidalgo <mike08ahj@hotmail.com>, 2017
-# MarnyLopez, 2014
-# Natalia, 2013
-# Natalia, 2013-2014,2016,2018
-# Ned Batchelder <ned@edx.org>, 2016-2017
-# Ned Weitzman <nweitzman@edx.org>, 2017-2018
-# Nestor Alejandro Mendoza Espinoza <name1984@gmail.com>, 2015
-# Nicolas CS <nicolascs23@gmail.com>, 2016
-# Cristian Salamea <ovnicraft@gmail.com>, 2013
-# palichis <palichis@solid-ec.org>, 2015
-# Etna Pretelín Ricárdez, 2014
-# Rubén Torres <r.torres@usal.es>, 2015
-# Santiago Salkin <salkin.santiago@gmail.com>, 2014
-# Sarina Canelake <sarina@edx.org>, 2014-2015
-# Ernesto Sánchez Benitez <sbernesto@gmail.com>, 2016
-# Tala Aoun <talaaoun@gmail.com>, 2016
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
-# Valeria Freire <valtodopds@hotmail.com>, 2014-2015
-# Yleana Munoz <yleana.munoz@gmail.com>, 2015
-# José Luis <alagunajs@gmail.com>, 2016
-# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2018 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-#
-# Translators:
-# Addi Hazel Mendoza Sánchez <addictivoh@gmail.com>, 2015
-# Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2018
-# andreslucena <inactive+andreslucena@transifex.com>, 2013
-# Antonio Pardo <apardo@alabs.org>, 2013
-# Armindo Perozo-Mena <aperozomena@gmail.com>, 2016
-# Aylén <aylen_00@hotmail.com>, 2014
-# Cristian Salamea <ovnicraft@gmail.com>, 2014
-# morsoinferno <cristobal.acosta@usach.cl>, 2014
-# diegobe <diegobe@iadb.org>, 2014
-# Diego Rojas <diego.rojas@edunext.co>, 2017
-# David Salazar <imdjsg@gmail.com>, 2014
-# Felix Antonio Valdez Noverola <felix@itesm.mx>, 2015
-# Fernando Abramowitz <ferabra@gmail.com>, 2013
-# Giancarlo  De  Agostini <giancarlo.deagostini@iaen.edu.ec>, 2015
-# Herty Nava <translation@bolmedia.ca>, 2013
-# Ismael Saavedra <isma.18.94@gmail.com>, 2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2013-2014
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2015-2018
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# Juan <juan.marrero@utec.edu.uy>, 2015
-# karlman72 <karlman72@gmail.com>, 2014
-# Laura Silva <lingison@edx.org>, 2015-2016
-# Luis Ricardo Ruiz <luislicardo1307@gmail.com>, 2013
-# Matías Olivera <MatiasOlivera@outlook.com>, 2015
-# Natalia, 2013
-# Natalia, 2016
-# Nuri Plans Toral <nplans@gmail.com>, 2015
-# Cristian Salamea <ovnicraft@gmail.com>, 2013
-# Patricia Colmenares <patrusca38@hotmail.com>, 2015
-# palichis <palichis@solid-ec.org>, 2015
-# Sarina Canelake <sarina@edx.org>, 2014
-# Tala Aoun <talaaoun@gmail.com>, 2016
-# UAbierta Universidad de Chile <uabierta@u.uchile.cl>, 2015
-# Valeria Freire <valtodopds@hotmail.com>, 2015
-# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2018 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-#
-# Translators:
-# Cristian Salamea <ovnicraft@gmail.com>, 2015
-# Diego Rojas <diego.rojas@edunext.co>, 2017
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014,2018
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2014
-# Laura Silva <lingison@edx.org>, 2016
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2018
+# edunext helper translation file for Spanish.
+# Copyright (C) 2016 eduNEXT
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2018-06-25 13:22+0000\n"
-"PO-Revision-Date: 2018-06-06 15:12+0000\n"
-"Last-Translator: Muhammad Ayub khan <ayubkhan@edx.org>\n"
-"Language-Team: Spanish (Latin America) (http://www.transifex.com/open-edx/edx-platform/language/es_419/)\n"
+"POT-Creation-Date: 2019-01-08 22:04+0000\n"
+"PO-Revision-Date: 2018-04-25 20:42+0000\n"
+"Last-Translator: Babel <techical@edunext.co>\n"
+"Language-Team: Spanish (Latin America) (http://www.transifex.com/open-edx/edx-platform/language/es_419/) and eduNEXT\n"
 "Language: es_419\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 1.3\n"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
@@ -1034,15 +818,6 @@ msgid "Email or password is incorrect."
 msgstr "Correo electrónico o contraseña incorrectos."
 
 #: common/djangoapps/student/views/login.py
-msgid "No inactive user with this e-mail exists"
-msgstr ""
-"No existe un usuario inactivo con esta dirección de correo electrónico"
-
-#: common/djangoapps/student/views/login.py
-msgid "Unable to send reactivation email"
-msgstr "No fue posible enviar el correo de reactivación"
-
-#: common/djangoapps/student/views/login.py
 msgid "Superuser creation not allowed"
 msgstr "Creación de super usuario no permitida."
 
@@ -1700,71 +1475,71 @@ msgstr "Sistema de hito definido"
 #, python-brace-format
 msgid "{num} letter"
 msgid_plural "{num} letters"
-msgstr[0] "{num} Letra"
-msgstr[1] "{num} Letras"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "{num} uppercase letter"
 msgid_plural "{num} uppercase letters"
-msgstr[0] "{num} Letra mayúscula"
-msgstr[1] "{num} Letras mayúsculas"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "{num} lowercase letter"
 msgid_plural "{num} lowercase letters"
-msgstr[0] "{num} Letra minúscula"
-msgstr[1] "{num} Letras minúsculas"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "{num} digit"
 msgid_plural "{num} digits"
-msgstr[0] "{num} dígito"
-msgstr[1] "{num} dígitos"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "{num} number"
 msgid_plural "{num} numbers"
-msgstr[0] "{num} numero"
-msgstr[1] "{num} números"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "{num} punctuation mark"
 msgid_plural "{num} punctuation marks"
-msgstr[0] "{num} signo de puntuación"
-msgstr[1] "{num} signos de puntuación"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "{num} symbol"
 msgid_plural "{num} symbols"
-msgstr[0] "{num} símbolo"
-msgstr[1] "{num} símbolos"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "{num} word"
 msgid_plural "{num} words"
-msgstr[0] "{num} palabra"
-msgstr[1] "{num} palabras"
+msgstr[0] ""
+msgstr[1] ""
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "Your password must contain at least {num} character."
 msgid_plural "Your password must contain at least {num} characters."
-msgstr[0] "Su contraseña debe tener al menos {num} caracter."
-msgstr[1] "Su contraseña debe tener al menos {num} caracteres."
+msgstr[0] ""
+msgstr[1] ""
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
@@ -1775,10 +1550,7 @@ msgid_plural ""
 "Your password must contain at least {num} characters, including "
 "{requirements}."
 msgstr[0] ""
-"Su contraseña debe tener al menos {num} caracter, incluyendo {requirements}."
 msgstr[1] ""
-"Su contraseña debe tener al menos {num} caracteres. incluyendo "
-"{requirements}."
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Invalid password."
@@ -1787,7 +1559,7 @@ msgstr "Contraseña inválida."
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "Enter a password with at least {requirements}."
-msgstr "Ingrese una contraseña con al menos {requirements}."
+msgstr ""
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
@@ -1825,15 +1597,15 @@ msgstr[1] ""
 #, python-brace-format
 msgid "{num} character"
 msgid_plural "{num} characters"
-msgstr[0] "{num} caracter"
-msgstr[1] "{num} caracteres"
+msgstr[0] ""
+msgstr[1] ""
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-brace-format
 msgid "Enter a password with at most {num} character."
 msgid_plural "Enter a password with at most {num} characters."
-msgstr[0] "Ingrese una contraseña con máximo {num} caracter."
-msgstr[1] "Ingrese una contraseña con máximo {num} caracteres."
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This message is shown to users who enter a password matching
 #. the username they enter(ed).
@@ -1843,7 +1615,7 @@ msgstr "La contraseña no puede ser igual al nombre de usuario."
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Password is too similar to a dictionary word."
-msgstr "La contraseña es muy parecida a una palabra del diccionario."
+msgstr ""
 
 #: common/djangoapps/xblock_django/admin.py
 msgid ""
@@ -2824,6 +2596,10 @@ msgstr "ID de la respuesta"
 #: common/lib/xmodule/xmodule/capa_module.py
 msgid "Question"
 msgstr "Pregunta"
+
+#: common/lib/xmodule/xmodule/capa_module.py
+msgid "Correct Answer"
+msgstr "Respuesta Correcta"
 
 #: common/lib/xmodule/xmodule/conditional_module.py
 msgid "Conditional"
@@ -5423,6 +5199,65 @@ msgstr "Todas las posibles palabras, de todos los estudiantes."
 msgid "Top num_top_words words for word cloud."
 msgstr "Top de num_top_words para la nube de palabras."
 
+#: common/templates/student/edx_ace/accountactivation/email/body.html
+#, python-format
+msgid ""
+"This is a routed Account Activation email for %(routed_user)s "
+"(%(routed_user_email)s): %(routed_profile_name)s"
+msgstr ""
+
+#: common/templates/student/edx_ace/accountactivation/email/body.html
+msgid "Account Activation"
+msgstr ""
+
+#: common/templates/student/edx_ace/accountactivation/email/body.html
+#: common/templates/student/edx_ace/accountactivation/email/body.txt
+#, python-format
+msgid ""
+"You're almost there! Use the link below to activate your account to access "
+"engaging, high-quality %(platform_name)s courses. Note that you will not be "
+"able to log back into your account until you have activated it."
+msgstr ""
+
+#: common/templates/student/edx_ace/accountactivation/email/body.html
+msgid "Activate Your Account"
+msgstr ""
+
+#: common/templates/student/edx_ace/accountactivation/email/body.html
+#: common/templates/student/edx_ace/accountactivation/email/body.txt
+#, python-format
+msgid "Enjoy learning with %(platform_name)s."
+msgstr ""
+
+#: common/templates/student/edx_ace/accountactivation/email/body.html
+#, python-format
+msgid ""
+"If you need help, please use our web form at <a "
+"href=\"%(support_url)s\">%(support_url)s</a> or email <a "
+"href=\"mailto:%(support_email)s\">%(support_email)s</a>."
+msgstr ""
+
+#: common/templates/student/edx_ace/accountactivation/email/body.html
+#: common/templates/student/edx_ace/accountactivation/email/body.txt
+#, python-format
+msgid ""
+"This email message was automatically sent by %(lms_url)s because someone "
+"attempted to create an account on %(platform_name)s using this email "
+"address."
+msgstr ""
+
+#: common/templates/student/edx_ace/accountactivation/email/body.txt
+#, python-format
+msgid ""
+"If you need help, please use our web form at %(support_url)s or email "
+"%(support_email)s."
+msgstr ""
+
+#: common/templates/student/edx_ace/accountactivation/email/subject.txt
+#, python-format
+msgid "Action Required: Activate your %(platform_name)s account"
+msgstr ""
+
 #: common/templates/student/edx_ace/passwordreset/email/body.html
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
@@ -7351,6 +7186,8 @@ msgstr "El usuario no existe."
 msgid ""
 "Found a conflict with given identifier. Please try an alternative identifier"
 msgstr ""
+"Se encontró un conflicto con el identificador proveído. Por favor encuentre "
+"un identificador alternativo"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -10171,6 +10008,30 @@ msgid "Your Platform Description Here"
 msgstr "Tu descripción de la plataforma aquí"
 
 #: lms/envs/common.py
+msgid "Read access"
+msgstr ""
+
+#: lms/envs/common.py
+msgid "Write access"
+msgstr ""
+
+#: lms/envs/common.py
+msgid "Know your email address"
+msgstr ""
+
+#: lms/envs/common.py
+msgid "Know your name and username"
+msgstr ""
+
+#: lms/envs/common.py
+msgid "Retrieve your grades for your enrolled courses"
+msgstr ""
+
+#: lms/envs/common.py
+msgid "Retrieve your course certificates"
+msgstr ""
+
+#: lms/envs/common.py
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Audit"
 msgstr "Tomar como asistente"
@@ -10284,13 +10145,6 @@ msgid ""
 "note that {platform_name} has a different {privacy_policy_link_start}Privacy"
 " Policy{privacy_policy_link_end} from {enterprise_name}."
 msgstr ""
-"Ha salido de la página web de  {start_bold}{enterprise_name}{end_bold} y "
-"está ahora en la página de  {platform_name}. {enterprise_name} se ha "
-"asociado con {platform_name} para ofrecerle la más alta calidad, siempre "
-"programas de aprendizaje disponibles para ayudarle a avanzar en su "
-"conocimiento y carrera. {line_break}Por favor note que {platform_name} tiene"
-" una {privacy_policy_link_start}política de privacidad diferente "
-"{privacy_policy_link_end} de {enterprise_name}."
 
 #: lms/templates/logout.html
 msgid "Signed Out"
@@ -10325,6 +10179,14 @@ msgid ""
 "The above application requests the following permissions from your account:"
 msgstr ""
 "La aplicación indicada arriba pide los siguientes permisos de su cuenta:"
+
+#: lms/templates/oauth2_provider/authorize.html
+msgid ""
+"These permissions will be granted for data from your courses associated with"
+" the following content providers:"
+msgstr ""
+"Estos permisos serán otorgados para información de sus cursos asociada con "
+"el siguiente contenido de proveedores:"
 
 #: lms/templates/oauth2_provider/authorize.html
 msgid ""
@@ -10568,6 +10430,7 @@ msgid "Create new merged version"
 msgstr "Crear una nueva versión fusionada."
 
 #: lms/templates/wiki/includes/anonymous_blocked.html
+#: wiki/templates/wiki/includes/anonymous_blocked.html
 #, python-format
 msgid ""
 "\n"
@@ -11419,14 +11282,12 @@ msgid ""
 "Comma-separated list of scopes that this application will be allowed to "
 "request."
 msgstr ""
+"Lista de ámbitos separada por comas que esta aplicación será autorizada a "
+"solicitar."
 
 #: openedx/core/djangoapps/oauth_dispatch/models.py
 msgid "Content Provider"
-msgstr ""
-
-#: openedx/core/djangoapps/oauth_dispatch/models.py
-msgid "The short_name of an existing Organization."
-msgstr ""
+msgstr "Proveedor de Contenido"
 
 #: openedx/core/djangoapps/password_policy/apps.py
 msgid "Password Policy"
@@ -12145,7 +12006,7 @@ msgstr "No se suministraron datos para actualizar la preferencia de usuario"
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.txt
 #, python-format
 msgid "Hello %(full_name)s,"
-msgstr ""
+msgstr "Hola %(full_name)s,"
 
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.html
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.txt
@@ -12154,6 +12015,8 @@ msgid ""
 "We received a deletion request for your account on %(platform_name)s. We're "
 "sorry to see you go!"
 msgstr ""
+"Recibimos una solicitud para borrar su cuenta en  %(platform_name)s. ¡ "
+"Lamentamos que se vaya.!"
 
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.html
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.txt
@@ -12163,6 +12026,12 @@ msgid ""
 "If you want to opt-out of emails before then, please unsubscribe from the "
 "footer of any email."
 msgstr ""
+"Su cuenta será eliminada prontamente. La eliminación de la cuenta, "
+"incluyendo remover información de listas de correo electrónico, puede tomar "
+"un par de semanas para ejecutar el proceso completamente en nuestro sistema."
+" Si desea optar por no recibir correos electrónicos antes de esa fecha, "
+"cancele su suscripción desde el pie de página de cualquier correo "
+"electrónico."
 
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.html
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.txt
@@ -12171,16 +12040,18 @@ msgid ""
 "This is an informational email only. If you did not initiate this request, "
 "please contact %(contact_email)s."
 msgstr ""
+"Este es un correo electrónico solo de información. Si usted no inició esta "
+"solicitud, por favor contacte%(contact_email)s."
 
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.html
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/body.txt
 #, python-format
 msgid "Best, %(platform_name)s"
-msgstr ""
+msgstr "El mejor, %(platform_name)s"
 
 #: openedx/core/djangoapps/user_api/templates/user_api/edx_ace/deletionnotificationmessage/email/subject.txt
 msgid "Your Account Has Been Queued For Deletion"
-msgstr ""
+msgstr "Su cuenta ha sido marcada para ser borrada"
 
 #: openedx/core/djangoapps/util/user_messages.py
 #, python-brace-format
@@ -13541,6 +13412,8 @@ msgid ""
 "You must complete the prerequisites for '{prereq_section_name}' to access "
 "this content."
 msgstr ""
+"Debe completar los prerequisitos para '{prereq_section_name}' Para acceder a"
+" este contenido."
 
 #: lms/templates/_gated_content.html
 msgid "Go to Prerequisite Section"
@@ -13566,6 +13439,15 @@ msgstr "Añadido a marcadores"
 #: lms/templates/bookmark_button.html
 msgid "Bookmark this page"
 msgstr "Marcar esta página"
+
+#: lms/templates/browser-alert.html lms/templates/header/header.html
+#: lms/templates/navigation/navigation.html
+msgid ""
+"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
+"strongly recommend using {chrome_link} or {ff_link}."
+msgstr ""
+"{begin_strong}Aviso:{end_strong} Tu navegador no es soportado completamente."
+" Recomendamos el uso de {chrome_link} o {ff_link}."
 
 #: lms/templates/conditional_module.html
 msgid "You do not have access to this dependency module."
@@ -17270,7 +17152,6 @@ msgstr ""
 "nuevos cursos de {platform_name}!"
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
-#: lms/templates/emails/activation_email.txt
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "The {platform_name} Team"
 msgstr "El Equipo de {platform_name}"
@@ -18057,41 +17938,6 @@ msgstr "Se recomienda que cambies tu contraseña."
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "Sincerely yours,The {course_name} Team"
 msgstr "Atentamente, el equipo {course_name}"
-
-#: lms/templates/emails/activation_email.txt
-msgid ""
-"You're almost there! Use the link to activate your account to access "
-"engaging, high-quality {platform_name} courses. Note that you will not be "
-"able to log back into your account until you have activated it."
-msgstr ""
-"¡Estás a punto de terminar! Usa el enlace para activar tu cuenta para "
-"acceder a cursos interesantes de alta calidad en {platform_name}. Fíjate que"
-" no podrás ingresar a tu cuenta nuevamente antes de activarla."
-
-#: lms/templates/emails/activation_email.txt
-msgid "Enjoy learning with {platform_name}."
-msgstr "Disfruta de tu aprendizaje con {platform_name}."
-
-#: lms/templates/emails/activation_email.txt
-msgid ""
-"If you need help, please use our web form at {support_url} or email "
-"{support_email}."
-msgstr ""
-"Si necesitas ayuda, por favor usa nuestro formulario web en {support_url} o "
-"mándenos un correo para {support_email}."
-
-#: lms/templates/emails/activation_email.txt
-msgid ""
-"This email message was automatically sent by {lms_url} because someone "
-"attempted to create an account on {platform_name} using this email address."
-msgstr ""
-"Este correo electrónico fue enviado automáticamente por {lms_url} porque "
-"alguien intentó crear una cuenta en {platform_name} usando esta dirección de"
-" correo electrónico."
-
-#: lms/templates/emails/activation_email_subject.txt
-msgid "Action Required: Activate your {platform_name} account"
-msgstr "Acción Necesaria: Activar tu cuenta en {platform_name}"
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 #: lms/templates/emails/enroll_email_enrolledmessage.txt
@@ -18880,14 +18726,6 @@ msgstr "{platform_name} Página de inicio"
 #: lms/templates/header/header.html lms/templates/header/user_dropdown.html
 msgid "Options Menu"
 msgstr "Opciones"
-
-#: lms/templates/header/header.html lms/templates/navigation/navigation.html
-msgid ""
-"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
-"strongly recommend using {chrome_link} or {ff_link}."
-msgstr ""
-"{begin_strong}Aviso:{end_strong} Tu navegador no es soportado completamente."
-" Recomendamos el uso de {chrome_link} o {ff_link}."
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/learner_dashboard/programs.html
@@ -22557,7 +22395,7 @@ msgstr "Configuración avanzada"
 
 #: cms/templates/checklists.html cms/templates/widgets/header.html
 msgid "Checklists"
-msgstr ""
+msgstr "Listas de chequeo"
 
 #: cms/templates/checklists.html cms/templates/export.html
 #: cms/templates/export_git.html cms/templates/import.html
@@ -22739,11 +22577,6 @@ msgstr ""
 msgid "Organization"
 msgstr "Organización"
 
-#. Translators: This is an example for the name of the organization sponsoring
-#. a course, seen when filling out the form to create a new course. The
-#. organization name cannot contain spaces.
-#. Translators: "e.g. UniversityX or OrganizationX" is a placeholder displayed
-#. when user put no data into this field.
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 msgid "e.g. UniversityX or OrganizationX"
 msgstr "Ej: UniversidadX o OrganizaciónX"
@@ -23445,7 +23278,7 @@ msgstr "¿Que tipo de contenido es exportado?"
 
 #: cms/templates/export.html
 msgid "The following content is exported."
-msgstr ""
+msgstr "El siguiente contenido es exportado."
 
 #: cms/templates/export.html cms/templates/import.html
 msgid "Course content and structure"
@@ -23468,10 +23301,12 @@ msgid ""
 "Settings on the Advanced Settings page, including MATLAB API keys and LTI "
 "passports"
 msgstr ""
+"Ajustes en la Página de configuración Avanzada, incluyen MATLAB, llaves API "
+"y pasaportes LTI"
 
 #: cms/templates/export.html
 msgid "The following content is not exported."
-msgstr ""
+msgstr "El siguiente contenido no es exportado."
 
 #: cms/templates/export.html cms/templates/import.html
 msgid ""
@@ -25195,13 +25030,15 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course About Sidebar HTML"
-msgstr ""
+msgstr "HTML de la barra lateral en la página de resumen del curso"
 
 #: cms/templates/settings.html
 msgid ""
 "Custom sidebar content for {a_link_start}your course summary "
 "page{a_link_end} (formatted in HTML)"
 msgstr ""
+"Contenido personalizado de la barra lateral para {a_link_start} su página de"
+" resumen del curso {a_link_end} (formatted in HTML)"
 
 #: cms/templates/settings.html
 msgid "Course Card Image"
@@ -25746,29 +25583,6 @@ msgstr ""
 "Este grupo ya no existe. Seleccione otro grupo o borre la restricción de "
 "acceso."
 
-#: cms/templates/emails/activation_email.txt
-msgid ""
-"Thank you for signing up for {studio_name}! To activate your account, please"
-" copy and paste this address into your web browser's address bar:"
-msgstr ""
-"Gracias por registrarse en {studio_name}! Para activar su cuenta, por favor "
-"ingrese a la siguiente dirección en una ventana de su navegador:"
-
-#: cms/templates/emails/activation_email.txt
-msgid ""
-"If you didn't request this, you don't need to do anything; you won't receive"
-" any more email from us. Please do not reply to this e-mail; if you require "
-"assistance, check the help section of the {studio_name} web site."
-msgstr ""
-"Si usted no solicitó este cambio, no necesita hacer nada; no recibirá ningún"
-" correo adicional por parte de nosotros. Por favor no responda a este "
-"correo; si requiere mayor asistencia, visite la sección de Ayuda en la "
-"página web de {studio_name} ."
-
-#: cms/templates/emails/activation_email_subject.txt
-msgid "Your account for {studio_name}"
-msgstr "Su cuenta de {studio_name}"
-
 #: cms/templates/emails/course_creator_admin_subject.txt
 msgid "{email} has requested {studio_name} course creator privileges on edge"
 msgstr ""
@@ -25898,6 +25712,10 @@ msgid ""
 msgstr ""
 "Hemos enviado un correo electrónico a {email} con instrucciones para la "
 "activación de su cuenta."
+
+#: cms/templates/widgets/footer.html
+msgid "Open edX | Powered by eduNEXT"
+msgstr ""
 
 #: cms/templates/widgets/footer.html
 msgid "Policies"
