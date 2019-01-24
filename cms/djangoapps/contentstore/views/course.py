@@ -553,6 +553,7 @@ def course_listing(request):
     active_courses, archived_courses = _process_courses_list(courses_iter, in_process_course_actions, split_archived)
     in_process_course_actions = [format_in_process_course_view(uca) for uca in in_process_course_actions]
     active_courses = _set_rerun_permission_for_courses(user, active_courses)
+    archived_courses = _set_rerun_permission_for_courses(user, archived_courses)
 
     return render_to_response(u'index.html', {
         u'courses': active_courses,
