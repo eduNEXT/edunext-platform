@@ -8,6 +8,7 @@ import urllib
 
 import waffle
 from babel.dates import format_datetime
+from babel.numbers import get_currency_symbol
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.db import transaction
@@ -176,6 +177,7 @@ class ChooseModeView(View):
                 if x.strip()
             ]
             context["currency"] = verified_mode.currency.upper()
+            context["currency_symbol"] = get_currency_symbol(verified_mode.currency.upper())
             context["min_price"] = verified_mode.min_price
             context["verified_name"] = verified_mode.name
             context["verified_description"] = verified_mode.description
