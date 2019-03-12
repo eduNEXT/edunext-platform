@@ -30,6 +30,7 @@ git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334
 git+https://github.com/eduNEXT/flow-control-xblock.git@3040d00ce8aac13ad38c82789873f8b5d6cb7e62#egg=flow-control-xblock
 -e git+https://github.com/eduNEXT/edx_xblock_scorm.git@be7d4c420d843391c7e0fdbcb6de414ee9446fc5#egg=scormxblock-xblock
 git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.6.0#egg=crm_integration_xblock==1.6.0
+git+https://github.com/eduNEXT/jupyter-viewer-xblock@v2.0.1#egg=xblock_jupyter_viewer==2.0.1
 # Patched version that includes the fullname
 git+https://github.com/edunext/xblock-lti-consumer.git@028076fc7a2eb7549049d7a20d96ccb361b49346#egg=lti_consumer-xblock==1.1.8-patch1
 
@@ -47,9 +48,6 @@ git+https://github.com/schoolyourself/schoolyourself-xblock.git@5e4d37716e3e7264
 
 # Vector drawing xblock
 git+https://github.com/open-craft/xblock-vectordraw.git@v0.2.1#egg=vectordraw-xblock==0.2.1
-
-# IBL
-git+https://github.com/ibleducation/jupyter-viewer-xblock.git@791e4a09515fdcbb8d022300cf999f2fa49aca5e#egg=jupyter-viewer-xblock
 
 # Proversity
 git+https://github.com/proversity-org/badgr-xblock.git@7077d499b2f752c78bb41e9c17b4bbc7d57bcd55#egg=badgr-xblock
