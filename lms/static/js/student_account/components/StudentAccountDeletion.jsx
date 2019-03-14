@@ -117,12 +117,14 @@ export class StudentAccountDeletion extends React.Component {
             open
           />
         }
-        {deletionModalOpen && <StudentAccountDeletionModal
-                                onClose={this.closeDeletionModal}
-                                platformName={this.props.platformName}
-                                siteName={this.props.siteName}
-                                lmsUrlRoot={this.props.lmsUrlRoot}
-                              />}
+        {deletionModalOpen &&
+          <StudentAccountDeletionModal
+            onClose={this.closeDeletionModal}
+            platformName={this.props.platformName}
+            siteName={this.props.siteName}
+            lmsUrlRoot={this.props.lmsUrlRoot}
+          />
+        }
       </div>
     );
   }
@@ -136,4 +138,10 @@ StudentAccountDeletion.propTypes = {
   platformName: PropTypes.string,
   siteName: PropTypes.string,
   lmsUrlRoot: PropTypes.string,
+};
+
+StudentAccountDeletion.defaultProps = {
+  platformName: '',
+  siteName: '',
+  lmsUrlRoot: '',
 };
