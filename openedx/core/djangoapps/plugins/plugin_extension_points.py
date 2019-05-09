@@ -32,12 +32,12 @@ def run_extension_point(extension_point, *args, **kwargs):
         module = import_module(module)
         extension_function = getattr(module, func_name)
         return extension_function(*args, **kwargs)
-    except ImportError as e:
-        log.error('Could not import the extension point %s : %s with message: %s', extension_point, module, str(e))
+    except ImportError:
+        log.info('Could not import the %s : %s', extension_point, module)
         return
     except AttributeError:
-        log.error('Could not import the function %s in the module %s', func_name, module)
+        log.info('Could not import the function %s in the module %s', func_name, module)
         return
     except ValueError:
-        log.error('Could not load the information from \"%s\"', path)
+        log.info('Could not load the information from \"%s\"', path)
         return
