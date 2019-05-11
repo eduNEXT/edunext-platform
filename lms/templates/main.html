@@ -146,6 +146,11 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
     <meta name="google-site-verification" content="${google_site_verification_id}" />
   % endif
 
+  <% educast_site_id = configuration_helpers.get_value('EDUCAST_SITE_ID', '')%>
+  % if educast_site_id:
+    <meta name="integration" content="${educast_site_id}">
+  % endif
+
   <meta name="openedx-release-line" content="${RELEASE_LINE}" />
 
 <% ga_acct = static.get_value("GOOGLE_ANALYTICS_ACCOUNT", settings.GOOGLE_ANALYTICS_ACCOUNT) %>
