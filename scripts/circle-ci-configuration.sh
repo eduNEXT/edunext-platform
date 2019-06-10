@@ -33,6 +33,8 @@ curl -L https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add 
 echo "deb https://deb.nodesource.com/node_6.x xenial main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 echo "deb-src https://deb.nodesource.com/node_6.x xenial main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list
 
+# Pulling the latest edx's ppa apt key
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 69464050
 sudo apt-get update
 cat requirements/system/ubuntu/apt-packages.txt | DEBIAN_FRONTEND=noninteractive xargs apt-get -yq install
 apt-get install -y mongodb-org=3.2.21 mongodb-org-server=3.2.21 mongodb-org-shell=3.2.21 mongodb-org-mongos=3.2.21 mongodb-org-tools=3.2.21
@@ -55,21 +57,21 @@ dpkg -i $FIREFOX_FILE || DEBIAN_FRONTEND=noninteractive apt-get -fyq install
 firefox --version
 
 # libsqlite 3.11.0-1ubuntu1 included with Xenial can cause segfault.
-export SQLITE_FILE="downloads/libsqlite3-0_3.19.3-3_amd64.deb"
+export SQLITE_FILE="downloads/libsqlite3-0_3.22.0-1_amd64.deb"
 if [ -f $SQLITE_FILE ]; then
    echo "File $SQLITE_FILE found."
 else
-   echo "Downloading libsqlite3-0_3.19.3-3_amd64.deb."
-   curl --silent --show-error --location --fail --retry 3 --output $SQLITE_FILE https://mirrors.kernel.org/ubuntu/pool/main/s/sqlite3/libsqlite3-0_3.19.3-3_amd64.deb
+   echo "Downloading libsqlite3-0_3.22.0-1_amd64.deb."
+   curl --silent --show-error --location --fail --retry 3 --output $SQLITE_FILE https://mirrors.kernel.org/ubuntu/pool/main/s/sqlite3/libsqlite3-0_3.22.0-1_amd64.deb
 fi
 dpkg -i $SQLITE_FILE || DEBIAN_FRONTEND=noninteractive apt-get -fyq install
 
-export SQLITE_FILE="downloads/libsqlite3-dev_3.19.3-3_amd64.deb"
+export SQLITE_FILE="downloads/libsqlite3-dev_3.22.0-1_amd64.deb"
 if [ -f $SQLITE_FILE ]; then
    echo "File $SQLITE_FILE found."
 else
-   echo "Downloading libsqlite3-dev_3.19.3-3_amd64.deb."
-   curl --silent --show-error --location --fail --retry 3 --output $SQLITE_FILE https://mirrors.kernel.org/ubuntu/pool/main/s/sqlite3/libsqlite3-dev_3.19.3-3_amd64.deb
+   echo "Downloading libsqlite3-dev_3.22.0-1_amd64.deb."
+   curl --silent --show-error --location --fail --retry 3 --output $SQLITE_FILE https://mirrors.kernel.org/ubuntu/pool/main/s/sqlite3/libsqlite3-dev_3.22.0-1_amd64.deb
 fi
 dpkg -i $SQLITE_FILE || DEBIAN_FRONTEND=noninteractive apt-get -fyq install
 
