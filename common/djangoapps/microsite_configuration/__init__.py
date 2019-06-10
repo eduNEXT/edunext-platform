@@ -11,7 +11,6 @@ from microsite_configuration import settings
 """
 import logging
 from django.conf import settings as base_settings
-from django.core import signals
 
 from microsite_configuration import microsite
 
@@ -32,19 +31,3 @@ class MicrositeAwareSettings(object):
             return microsite.get_value(name, getattr(base_settings, name))
         except KeyError:
             return getattr(base_settings, name)
-
-try:
-    from eox_tenant.signals import (
-        start_tenant,
-        finish_tenant,
-        clear_tenant,
-    )
-
-    signals.request_started.connect(start_tenant)
-    signals.request_finished.connect(finish_tenant)
-    signals.got_request_exception.connect(clear_tenant)
-
-except ImportError:
-    LOG.fatal("Could not import eox_tenant signals")
-except AttributeError:
-    LOG.fatal("There was an unexpected access to the settings object without initializing the eox_tenant plugin.")
