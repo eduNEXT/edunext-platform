@@ -4,8 +4,8 @@ gfortran
 libatlas-dev
 libblas-dev
 liblapack-dev
-liblapack3gf
 curl
+gettext
 git
 python-virtualenv
 python-scipy
@@ -16,7 +16,7 @@ gfortran
 libfreetype6-dev
 libpng12-dev
 libjpeg-dev
-libtiff4-dev
+libtiff5-dev
 zlib1g-dev
 libxml2-dev
 libxslt-dev
@@ -37,3 +37,6 @@ libgeos-ruby1.8
 lynx-cur
 libxmlsec1-dev
 swig
+wget
+libgtk-3-dev
+ubuntu-restricted-extras
