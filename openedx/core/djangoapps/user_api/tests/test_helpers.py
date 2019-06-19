@@ -4,7 +4,9 @@ Tests for helper functions.
 
 
 import json
+import os
 import re
+from unittest import skipIf
 
 import ddt
 import mock
@@ -87,6 +89,8 @@ class InterceptErrorsTest(TestCase):
 
 class FormDescriptionTest(TestCase):
     """Tests of helper functions which generate form descriptions."""
+
+    @skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in Circle CI.")
     def test_to_json(self):
         desc = FormDescription("post", "/submit")
         desc.add_field(
