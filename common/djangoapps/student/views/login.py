@@ -363,7 +363,7 @@ def _tenant_aware_authentication_filter(request, unauthenticated_user):
     Prevents users that signed up on a different tenant site to login in this site.
     """
     sources = unauthenticated_user.usersignupsource_set.all()
-    authorized_sources = getattr(settings, 'EDNX_STRICT_LOGIN_SOURCES', [])
+    authorized_sources = getattr(settings, 'EDNX_STRICT_LOGIN_SOURCES', [request.META.get("HTTP_HOST")])
 
     is_authorized = False
     for source in sources:
