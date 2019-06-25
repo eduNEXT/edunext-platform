@@ -362,8 +362,11 @@ def _tenant_aware_authentication_filter(request, unauthenticated_user):
     """
     Prevents users that signed up on a different tenant site to login in this site.
     """
-    sources = unauthenticated_user.usersignupsource_set.all()
+    if not unauthenticated_user:
+        return
+
     authorized_sources = getattr(settings, 'EDNX_STRICT_LOGIN_SOURCES', [request.META.get("HTTP_HOST")])
+    sources = unauthenticated_user.usersignupsource_set.all()
 
     is_authorized = False
     for source in sources:
@@ -381,7 +384,8 @@ def _tenant_aware_authentication_filter(request, unauthenticated_user):
             raise AuthFailedError(_('User not authorized to perform this action'))
         else:
             AUDIT_LOG.warning(
-                u"User `%s` tried to login in site `%s`, the permission should have beed denied based on the signup sources.",
+                u"User `%s` tried to login in site `%s`, the permission "
+                "should have beed denied based on the signup sources.",
                 loggable_id,
                 request.site,
             )
