@@ -358,6 +358,39 @@ def _track_user_login(user, request):
         )
 
 
+def _tenant_aware_authentication_filter(request, unauthenticated_user):
+    """
+    Prevents users that signed up on a different tenant site to login in this site.
+    """
+    if not unauthenticated_user:
+        return
+
+    authorized_sources = getattr(settings, 'EDNX_STRICT_LOGIN_SOURCES', [request.META.get("HTTP_HOST")])
+    sources = unauthenticated_user.usersignupsource_set.all()
+
+    is_authorized = False
+    for source in sources:
+        if source.site in authorized_sources:
+            is_authorized = True
+
+    if not is_authorized:
+        loggable_id = unauthenticated_user.id if unauthenticated_user else "<unknown>"
+        if settings.FEATURES.get('EDNX_ENABLE_STRICT_LOGIN', False):
+            AUDIT_LOG.warning(
+                u"User `%s` tried to login in site `%s`, but was denied permission based on the signup sources.",
+                loggable_id,
+                request.site,
+            )
+            raise AuthFailedError(_('User not authorized to perform this action'))
+        else:
+            AUDIT_LOG.warning(
+                u"User `%s` tried to login in site `%s`, the permission "
+                "should have beed denied based on the signup sources.",
+                loggable_id,
+                request.site,
+            )
+
+
 @login_required
 @ensure_csrf_cookie
 def verify_user_password(request):
@@ -415,6 +448,8 @@ def login_user(request):
         _check_forced_password_reset(email_user)
 
         possibly_authenticated_user = email_user
+
+        _tenant_aware_authentication_filter(request, email_user)
 
         if not was_authenticated_third_party:
             possibly_authenticated_user = _authenticate_first_party(request, email_user)
