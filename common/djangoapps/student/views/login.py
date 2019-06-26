@@ -7,6 +7,7 @@ Much of this file was broken out from views.py, previous history can be found th
 import datetime
 import logging
 import uuid
+import re
 import warnings
 from urlparse import parse_qs, urlsplit, urlunsplit
 
@@ -365,13 +366,23 @@ def _tenant_aware_authentication_filter(request, unauthenticated_user):
     if not unauthenticated_user:
         return
 
-    authorized_sources = getattr(settings, 'EDNX_STRICT_LOGIN_SOURCES', [request.META.get("HTTP_HOST")])
+    current_domain = request.META.get("HTTP_HOST")
+
+    authorized_sources = getattr(settings, 'EDNX_ACCOUNT_REGISTRATION_SOURCES', [current_domain])
     sources = unauthenticated_user.usersignupsource_set.all()
 
     is_authorized = False
     for source in sources:
-        if source.site in authorized_sources:
+        if any(re.match(pattern + "$", source.site) for pattern in authorized_sources):
             is_authorized = True
+
+    email = getattr(unauthenticated_user, 'email', None)
+    if settings.REGISTRATION_EMAIL_PATTERNS_ALLOWED is not None:
+        # Taken from forms.AccountCreationForm
+        allowed_patterns = settings.REGISTRATION_EMAIL_PATTERNS_ALLOWED
+        if not any(re.match(pattern + "$", email) for pattern in allowed_patterns):
+            # This email is not on the whitelist of allowed emails.
+            is_authorized = False
 
     if not is_authorized:
         loggable_id = unauthenticated_user.id if unauthenticated_user else "<unknown>"
@@ -379,7 +390,7 @@ def _tenant_aware_authentication_filter(request, unauthenticated_user):
             AUDIT_LOG.warning(
                 u"User `%s` tried to login in site `%s`, but was denied permission based on the signup sources.",
                 loggable_id,
-                request.site,
+                current_domain,
             )
             raise AuthFailedError(_('User not authorized to perform this action'))
         else:
@@ -387,7 +398,7 @@ def _tenant_aware_authentication_filter(request, unauthenticated_user):
                 u"User `%s` tried to login in site `%s`, the permission "
                 "should have beed denied based on the signup sources.",
                 loggable_id,
-                request.site,
+                current_domain,
             )
 
 
