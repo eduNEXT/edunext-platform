@@ -34,6 +34,7 @@ boto==2.39.0                        # Deprecated version of the AWS SDK; we shou
 boto3==1.4.8                        # Amazon Web Services SDK for Python
 botocore==1.8.17                    # via boto3, s3transfer
 celery==3.1.25                      # Asynchronous task execution library
+ddt==0.8.0                          # via xblock-drag-and-drop-v2 (which probably shouldn't require it)
 defusedxml==0.4.1                   # XML bomb protection for common XML parsers
 Django==1.11.21                     # Web application framework
 django-babel-underscore             # underscore template extractor for django-babel (internationalization utilities)
@@ -131,8 +132,8 @@ pyuca==1.1                          # For more accurate sorting of translated co
 reportlab                           # Used for shopping cart's pdf invoice/receipt generation
 rest-condition                      # DRF's recommendation for supporting complex permissions
 rfc6266-parser                      # Used to generate Content-Disposition headers.
-social-auth-app-django<3.0.0
-social-auth-core<2.0.0
+social-auth-app-django==3.1.0
+social-auth-core==3.0.0
 pysrt                               # Support for SubRip subtitle files, used in the video XModule
 pytz                                # Time zone information database
 PyYAML                              # Used to parse XModule resource templates
