@@ -62,7 +62,7 @@ class EnrollmentTestMixin:
             is_active=None,
             enrollment_attributes=None,
             min_mongo_calls=0,
-            max_mongo_calls=0,
+            max_mongo_calls=8,
             linked_enterprise_customer=None,
             cohort=None,
     ):
