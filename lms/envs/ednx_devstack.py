@@ -16,7 +16,6 @@ LOGGING['handlers']['tracking'] = {
 
 LOGGING['loggers']['tracking']['handlers'] = ['tracking']
 
-
 ################################ ASYNC WORKERS ################################
 
 # Require a separate celery worker
@@ -44,3 +43,11 @@ GRADES_DOWNLOAD = {
     'BUCKET': 'openedx-grades',
     'ROOT_PATH': '/edx/var/edxapp/uploads',
 }
+
+############################### LANG ########################
+
+LANGUAGE_CODE = 'en'
+TIME_ZONE = 'America/Bogota'
+FEATURES['SHOW_HEADER_LANGUAGE_SELECTOR'] = True
+FEATURES['SHOW_FOOTER_LANGUAGE_SELECTOR'] = True
+FEATURES['EDNX_SITE_AWARE_LOCALE'] = True
