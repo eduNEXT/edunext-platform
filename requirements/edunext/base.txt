@@ -1,0 +1,61 @@
+# Requirements for edunext.co
+#
+# A correct GitHub reference looks like this:
+#
+#   git+https://github.com/OWNER/REPO-NAME.git@TAG-OR-SHA#egg=KIT-NAME==VERSION
+#
+
+#####################
+# Community Xblocks #
+#####################
+
+# Oppia XBlock
+git+https://github.com/oppia/xblock.git@b65908013cbe494c939f66db67e1632b9cd271ba#egg=oppia-xblock
+
+# Microsoft's Office Mix XBlock:
+git+https://github.com/OfficeDev/xblock-officemix.git@fc8eb981b98ca1d475ad2061329727b58b9f8c37#egg=officemix
+
+# UBC Peer Instruction Tool for edX
+git+https://github.com/ubc/ubcpi.git@372497dfcf42c9dbeaa318308a14a1babb36f2c6#egg=xblock-ubcpi
+
+# edx-solutions
+git+https://github.com/open-craft/xblock-mentoring.git@203c9d2b87c301b3170b209a9b1358583a8f0e8b#egg=xblock-mentoring
+git+https://github.com/edx-solutions/xblock-ooyala.git@ba7f0ebb17e8a906cb9de6085502e9b5a10d4880#egg=xblock-ooyala
+git+https://github.com/edx-solutions/xblock-brightcove.git@b8d13b6b3b0c3c31a3334cf887b448076dc2bad8#egg=xblock-brightcove
+
+# eduNEXT supported xblocks
+git+https://github.com/eduNEXT/flow-control-xblock.git@d747cedf591cf3b77947c65ba4d98bf0cf315539#egg=flow-control-xblock
+-e git+https://github.com/eduNEXT/edx_xblock_scorm.git@be7d4c420d843391c7e0fdbcb6de414ee9446fc5#egg=scormxblock-xblock
+git+https://github.com/eduNEXT/crm-integration-xblock.git@v1.9.0#egg=crm_integration_xblock==1.9.0
+git+https://github.com/eduNEXT/jupyter-viewer-xblock@v2.0.1#egg=xblock_jupyter_viewer==2.0.1
+# Patched version that includes the fullname
+git+https://github.com/edunext/xblock-lti-consumer.git@028076fc7a2eb7549049d7a20d96ccb361b49346#egg=lti_consumer-xblock==1.1.8-patch1
+
+# Active table xblock
+git+https://github.com/open-craft/xblock-activetable.git@e933d41bb86a8d50fb878787ca680165a092a6d5#egg=activetable-xblock
+
+# Image explorer xblock
+git+https://github.com/edx-solutions/xblock-image-explorer.git@f2d732daaccd6bbed89bae0b06135e34441dd584#egg=xblock-image-explorer
+
+# Problem builder xblock
+git+https://github.com/open-craft/problem-builder.git@v3.3.8#egg=xblock-problem-builder==3.3.8
+
+# School yourself xblock
+git+https://github.com/schoolyourself/schoolyourself-xblock.git@5e4d37716e3e72640e832e961f7cc0d38d4ec47b#egg=schoolyourself-xblock
+
+# Vector drawing xblock
+git+https://github.com/open-craft/xblock-vectordraw.git@v0.2.1#egg=vectordraw-xblock==0.2.1
+
+# Proversity
+git+https://github.com/proversity-org/badgr-xblock.git@7077d499b2f752c78bb41e9c17b4bbc7d57bcd55#egg=badgr-xblock
+
+# Stanford xblocks
+-e git+https://github.com/Stanford-Online/xblock-free-text-response@release/v0.4.0#egg=xblock-free-text-response==0.4.0
+-e git+https://github.com/Stanford-Online/xblock-in-video-quiz.git@release/v0.1.7#egg=invideoquiz_xblock==0.1.7
+
+###################
+# eduNEXT plugins #
+###################
+# plugins must be editable for the settings to appear on the sys path during loading
+-e git+https://github.com/eduNEXT/eox-tenant.git@v0.6.1#egg=eox-tenant==0.6.1
+git+https://github.com/eduNEXT/eox-core.git@v1.3.0#egg=eox-core==1.3.0
