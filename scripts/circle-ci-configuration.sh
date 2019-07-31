@@ -25,7 +25,9 @@ EXIT=0
 sleep $[ ( $RANDOM % 5 )  + 1 ]s
 
 # Manually installing the mongo-3.2
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+apt-get update
+apt-get install wget -y
+wget -qO - https://www.mongodb.org/static/pgp/server-3.2.asc | sudo apt-key add -
 echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
 sudo apt-get update
