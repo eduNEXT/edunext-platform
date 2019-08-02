@@ -117,7 +117,7 @@ def get_value(val_name, default=None, **kwargs):
     # Attempt to perform a dictionary update using the provided default
     # This will fail if either the default or the microsite value is not a dictionary
     try:
-        value = dict(default)
+        value = default
         value.update(configuration_value)
 
     # If the dictionary update fails, just use the microsite value
