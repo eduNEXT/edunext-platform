@@ -117,8 +117,12 @@ def get_value(val_name, default=None, **kwargs):
     # Attempt to perform a dictionary update using the provided default
     # This will fail if either the default or the microsite value is not a dictionary
     try:
-        value = default
-        value.update(configuration_value)
+        # To avoid this method always returning a dict in the case of empty objects like lists
+        if not configuration_value and not default:
+            value = configuration_value
+        else:
+            value = dict(default)
+            value.update(configuration_value)
 
     # If the dictionary update fails, just use the microsite value
     # TypeError: default is not iterable (simple value or None)
