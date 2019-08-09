@@ -42,9 +42,14 @@ class WelcomeMessageFragmentView(EdxFragmentView):
             'welcome_message_html': welcome_message_html,
         }
 
-        if get_course_tag(request.user, course_key, PREFERENCE_KEY) == 'False':
+        latest_update_id = get_latest_update_id(request, course)
+
+        # If the course tag is the same as the latest update id then the message was dismissed
+        if (get_course_tag(request.user, course_key, PREFERENCE_KEY) == latest_update_id or
+                latest_update_id is None):
             return None
         else:
+            # If the tag is different from the latest update, then there's a new update to show
             html = render_to_string('course_experience/welcome-message-fragment.html', context)
             return Fragment(html)
 
@@ -68,5 +73,21 @@ def dismiss_welcome_message(request, course_id):
     Given the course_id in the request, disable displaying the welcome message for the user.
     """
     course_key = CourseKey.from_string(course_id)
-    set_course_tag(request.user, course_key, PREFERENCE_KEY, 'False')
+    course = get_course_with_access(request.user, 'load', course_key, check_if_enrolled=True)
+    latest_update_id = get_latest_update_id(request, course)
+    # The course tag will be the id of the dissmised update.
+    set_course_tag(request.user, course_key, PREFERENCE_KEY, latest_update_id)
+
     return HttpResponse()
+
+
+def get_latest_update_id(request, course):
+    """
+    Returns the most recent update id or None if there are no updates.
+    """
+    ordered_updates = get_ordered_updates(request, course)
+    latest_update_id = None
+    if ordered_updates:
+        latest_update_id = ordered_updates[0]['id']
+
+    return str(latest_update_id)
