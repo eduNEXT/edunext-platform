@@ -37,12 +37,13 @@ class WelcomeMessageFragmentView(EdxFragmentView):
             'openedx.course_experience.dismiss_welcome_message', kwargs={'course_id': unicode(course_key)}
         )
 
+        latest_update_id = get_latest_update_id(request, course)
+
         context = {
             'dismiss_url': dismiss_url,
             'welcome_message_html': welcome_message_html,
+            'welcome_message_id': latest_update_id
         }
-
-        latest_update_id = get_latest_update_id(request, course)
 
         # If the course tag is the same as the latest update id then the message was dismissed
         if (get_course_tag(request.user, course_key, PREFERENCE_KEY) == latest_update_id or

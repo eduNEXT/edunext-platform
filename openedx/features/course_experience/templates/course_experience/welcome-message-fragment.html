@@ -10,7 +10,7 @@ from openedx.core.djangolib.markup import HTML
 %>
 
 <%block name="content">
-<div class="welcome-message">
+<div class="welcome-message" id=${welcome_message_id}>
     <div class="dismiss-message">
         <button type="button" class="btn-link">
             <span class="sr">${_("Dismiss")}</span>

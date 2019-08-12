@@ -24,16 +24,31 @@ export class WelcomeMessage {  // eslint-disable-line import/prefer-default-expo
     if ($('.welcome-message').length > 0) {
       // If the welcome message has been viewed.
       if ($.cookie('welcome-message-viewed') === 'True') {
-        // If the timer cookie no longer exists, dismiss the welcome message permanently.
+
+        // If the welcome message is different from the previous one, update the cookies.
+        if ($('.welcome-message')[0].id !== $.cookie('welcome-message-id')) {
+          $.cookie('welcome-message-viewed', 'True', { expires: 365 });
+          $.cookie('welcome-message-timer', 'True', { expires: 7 });
+          $.cookie('welcome-message-id', $('.welcome-message')[0].id, { expires: 365 });
+        }
+        // If the timer cookie no longer exists, dismiss the welcome message.
         if ($.cookie('welcome-message-timer') !== 'True') {
           WelcomeMessage.dismissWelcomeMessage(options.dismissUrl);
+          $.cookie('welcome-message-viewed', 'False', { expires: 365 });
         }
+
       } else {
-        // Set both the viewed cookie and the timer cookie.
+        // Set the viewed cookie, the timer cookie and the id coookie.
         $.cookie('welcome-message-viewed', 'True', { expires: 365 });
         $.cookie('welcome-message-timer', 'True', { expires: 7 });
+        $.cookie('welcome-message-id', $('.welcome-message')[0].id, { expires: 365 });
       }
     }
-    $('.dismiss-message button').click(() => WelcomeMessage.dismissWelcomeMessage(options.dismissUrl));
+    $('.dismiss-message button').click(() => {
+      WelcomeMessage.dismissWelcomeMessage(options.dismissUrl);
+      // If the dissmiss button is clicked, set timer and viewed cookie to False.
+      $.cookie('welcome-message-viewed', 'False', { expires: 365 });
+      $.cookie('welcome-message-timer', 'False', { expires: 7 });
+    });
   }
 }
