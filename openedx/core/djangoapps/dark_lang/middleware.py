@@ -71,10 +71,12 @@ class DarkLangMiddleware(object):
 
     def process_request(self, request):
         """
-        Prevent user from requesting un-released languages except by using the preview-lang query string.
+        eduNEXT: this middleware will always process the requests.
+        The model has been modified to not even attempt the db lookup
         """
-        if not DarkLangConfig.current().enabled:
-            return
+        if not settings.FEATURES.get("EDNX_SITE_AWARE_LOCALE", False):
+            if not DarkLangConfig.current().enabled:
+                return
 
         self._clean_accept_headers(request)
         self._activate_preview_language(request)
@@ -97,8 +99,13 @@ class DarkLangMiddleware(object):
         Remove any language that is not either in ``self.released_langs`` or
         a territory of one of those languages.
         """
+        ednx_locale = settings.FEATURES.get("EDNX_SITE_AWARE_LOCALE", False)
         accept = request.META.get('HTTP_ACCEPT_LANGUAGE', None)
         if accept is None or accept == '*':
+            if ednx_locale:
+                # eduNEXT: return the site aware settings.LANGUAGE_CODE
+                # so that django.utils.locale.LocaleMiddleware can pick it up
+                request.META['HTTP_ACCEPT_LANGUAGE'] = "{};q={}".format(settings.LANGUAGE_CODE, "0.1")
             return
 
         new_accept = []
@@ -107,6 +114,9 @@ class DarkLangMiddleware(object):
             if fuzzy_code:
                 # Formats lang and priority into a valid accept header fragment.
                 new_accept.append("{};q={}".format(fuzzy_code, priority))
+            elif ednx_locale:
+                # eduNEXT: if there is no match, we set it to the settings.LANGUAGE_CODE
+                new_accept.append("{};q={}".format(settings.LANGUAGE_CODE, "0.1"))
 
         new_accept = ", ".join(new_accept)
 
