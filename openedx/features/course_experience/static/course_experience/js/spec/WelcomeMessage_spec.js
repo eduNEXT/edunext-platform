@@ -69,6 +69,8 @@ describe('Welcome Message factory', () => {
     it('Message is dismissed if the timer has expired and the message has been viewed.', () => {
       const requests = mockRequests(this);
       $.cookie('welcome-message-viewed', 'True');
+      $.cookie('welcome-message-timer', 'False');
+      $.cookie('welcome-message-id', '1');
       createWelcomeMessage();
 
       const $message = $('.welcome-message');
