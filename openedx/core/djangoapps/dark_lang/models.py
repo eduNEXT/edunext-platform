@@ -4,6 +4,7 @@ Models for the dark-launching languages
 
 
 from config_models.models import ConfigurationModel
+from django.conf import settings
 from django.db import models
 
 
@@ -35,13 +36,19 @@ class DarkLangConfig(ConfigurationModel):
         ``released_languages`` as a list of language codes.
 
         Example: ['it', 'de-at', 'es', 'pt-br']
-        """
-        if not self.released_languages.strip():
-            return []
 
-        languages = [lang.lower().strip() for lang in self.released_languages.split(',')]
+        eduNEXT: we support only the list of available languages from the site
+        otherwise is the same as having no configuration
+        """
+        released_languages = self.released_languages
+
+        if settings.FEATURES.get("EDNX_SITE_AWARE_LOCALE", False):
+            released_languages = getattr(settings, "released_languages", "")
+
+        languages = [lang.lower().strip() for lang in released_languages.split(',')]
         # Put in alphabetical order
         languages.sort()
+
         return languages
 
     @property
