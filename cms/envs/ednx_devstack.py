@@ -5,3 +5,6 @@
 # pylint: disable=wildcard-import, unused-wildcard-import
 
 from .devstack_docker import *
+
+############################# ADVANCED COMPONENTS #############################
+FEATURES['ENABLE_CREATOR_GROUP'] = True
