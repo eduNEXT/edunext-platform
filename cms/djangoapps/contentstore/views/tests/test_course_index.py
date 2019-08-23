@@ -398,13 +398,13 @@ class TestCourseIndexArchived(CourseTestCase):
 
     @ddt.data(
         # Staff user has course staff access
-        (True, 'staff', None, 3, 21),
-        (False, 'staff', None, 3, 21),
+        (True, 'staff', None, 3, 23),
+        (False, 'staff', None, 3, 23),
         # Base user has global staff access
-        (True, 'user', ORG, 3, 21),
-        (False, 'user', ORG, 3, 21),
-        (True, 'user', None, 3, 21),
-        (False, 'user', None, 3, 21),
+        (True, 'user', ORG, 3, 23),
+        (False, 'user', ORG, 3, 23),
+        (True, 'user', None, 3, 23),
+        (False, 'user', None, 3, 23),
     )
     @ddt.unpack
     def test_separate_archived_courses(self, separate_archived_courses, username, org, mongo_queries, sql_queries):
