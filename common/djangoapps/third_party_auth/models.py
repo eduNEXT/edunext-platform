@@ -367,7 +367,10 @@ class OAuth2ProviderConfig(ProviderConfig):
             "google-oauth2":"my-slug-for-this-provider"
         }
         """
-        enabled_providers = configuration_helpers.get_value('THIRD_PARTY_AUTH_ENABLED_PROVIDERS', {})
+        enabled_providers = configuration_helpers.get_value(
+            'THIRD_PARTY_AUTH_ENABLED_PROVIDERS',
+            getattr(settings, 'THIRD_PARTY_AUTH_ENABLED_PROVIDERS', {})
+        )
         if not enabled_providers:
             return super(OAuth2ProviderConfig, cls).current(*args)
         provider_slug = enabled_providers.get(args[0])
