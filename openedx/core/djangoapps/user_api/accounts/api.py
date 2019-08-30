@@ -23,6 +23,7 @@ from common.djangoapps.student.models import (
 from common.djangoapps.util.model_utils import emit_settings_changed_event
 from common.djangoapps.util.password_policy_validators import validate_password
 
+from openedx.core.djangoapps.plugins.plugin_extension_points import run_extension_point
 from openedx.core.djangoapps.user_api import accounts, errors, helpers
 from openedx.core.djangoapps.user_api.errors import (
     AccountUpdateError,
@@ -156,6 +157,13 @@ def update_account_settings(requesting_user, update, username=None):
         _store_old_name_if_needed(old_name, user_profile, requesting_user)
         _update_extended_profile_if_needed(update, user_profile)
         _update_state_if_needed(update, user_profile)
+
+        # Allow a plugin to save the updated values
+        run_extension_point(
+            'NAU_STUDENT_ACCOUNT_PARTIAL_UPDATE',
+            update=update,
+            user=user,
+        )
 
     except PreferenceValidationError as err:
         raise AccountValidationError(err.preference_errors)  # lint-amnesty, pylint: disable=raise-missing-from
