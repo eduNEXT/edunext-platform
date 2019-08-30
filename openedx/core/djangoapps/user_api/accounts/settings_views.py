@@ -22,6 +22,7 @@ from lms.djangoapps.commerce.utils import EcommerceService
 from openedx.core.djangoapps.commerce.utils import ecommerce_api_client
 from openedx.core.djangoapps.dark_lang.models import DarkLangConfig
 from openedx.core.djangoapps.lang_pref.api import all_languages, released_languages
+from openedx.core.djangoapps.plugins.plugin_extension_points import run_extension_point
 from openedx.core.djangoapps.programs.models import ProgramsApiConfig
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.user_api.accounts.toggles import (
@@ -177,6 +178,13 @@ def account_settings_context(request):
             # in with, or if the user is already authenticated with them.
         } for state in auth_states if state.provider.display_for_login or state.has_account]
 
+    # Append/Override the existing view context values with plugin defined values
+    run_extension_point(
+        'NAU_STUDENT_ACCOUNT_CONTEXT_EXTENSION',
+        context=context,
+        request=request,
+        user=user,
+    )
     return context
 
 
