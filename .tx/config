@@ -61,6 +61,102 @@ source_file = conf/locale/en/LC_MESSAGES/edx_proctoring_proctortrack.po
 source_lang = en
 type = PO
 
+[edx-platform.openassessment]
+file_filter = conf/locale/<lang>/LC_MESSAGES/openassessment.po
+source_file = conf/locale/en/LC_MESSAGES/openassessment.po
+source_lang = en
+type = PO
+
+[edx-platform.openassessment-js]
+file_filter = conf/locale/<lang>/LC_MESSAGES/openassessment-js.po
+source_file = conf/locale/en/LC_MESSAGES/openassessment-js.po
+source_lang = en
+type = PO
+
+[edx-platform.edx-proctoring]
+file_filter = conf/locale/<lang>/LC_MESSAGES/edx_proctoring.po
+source_file = conf/locale/en/LC_MESSAGES/edx_proctoring.po
+source_lang = en
+type = PO
+
+[edx-platform.edx-proctoring-js]
+file_filter = conf/locale/<lang>/LC_MESSAGES/edx_proctoring-js.po
+source_file = conf/locale/en/LC_MESSAGES//edx_proctoring-js.po
+source_lang = en
+type = PO
+
+[xblocks.xblock-done]
+source_file = conf/locale/en/LC_MESSAGES/done.po
+file_filter = conf/locale/<lang>/LC_MESSAGES/done.po
+source_lang = en
+type = PO
+
+[xblocks.xblock-free-text-response]
+source_file = conf/locale/en/LC_MESSAGES/freetextresponse.po
+file_filter = conf/locale/<lang>/LC_MESSAGES/freetextresponse.po
+source_lang = en
+type = PO
+
+[xblocks.ubcpi-peer-instruction]
+file_filter = conf/locale/<lang>/LC_MESSAGES/ubcpi.po
+source_file = conf/locale/en/LC_MESSAGES/ubcpi.po
+source_lang = en
+type = PO
+
+[xblocks.drag-and-drop-v2]
+file_filter = conf/locale/<lang>/LC_MESSAGES/drag_and_drop_v2.po
+source_file = conf/locale/en/LC_MESSAGES/drag_and_drop_v2.po
+source_lang = en
+type = PO
+
+[xblocks.xblock-google-drive]
+source_file = conf/locale/en/LC_MESSAGES/google_drive.po
+file_filter = conf/locale/<lang>/LC_MESSAGES/google_drive.po
+source_lang = en
+type = PO
+
+[xblocks.image-explorer]
+file_filter = conf/locale/<lang>/LC_MESSAGES/image_explorer.po
+source_file = conf/locale/en/LC_MESSAGES/image_explorer.po
+source_lang = en
+type = PO
+
+[xblocks.lti-consumer]
+file_filter = conf/locale/<lang>/LC_MESSAGES/lti_consumer.po
+source_file = conf/locale/en/LC_MESSAGES/lti_consumer.po
+source_lang = en
+type = PO
+
+[xblocks.xblock-poll]
+source_file = conf/locale/en/LC_MESSAGES/poll.po
+file_filter = conf/locale/<lang>/LC_MESSAGES/poll.po
+source_lang = en
+type = PO
+
+[xblocks.xblock-poll-js]
+source_file = conf/locale/en/LC_MESSAGES/poll-js.po
+file_filter = conf/locale/<lang>/LC_MESSAGES/poll-js.po
+source_lang = en
+type = PO
+
+[xblocks.problem-builder]
+file_filter = conf/locale/<lang>/LC_MESSAGES/problem_builder.po
+source_file = conf/locale/en/LC_MESSAGES/problem_builder.po
+source_lang = en
+type = PO
+
+[xblocks.problem-builder-js]
+file_filter = conf/locale/<lang>/LC_MESSAGES/problem_builder-js.po
+source_file = conf/locale/en/LC_MESSAGES/problem_builder-js.po
+source_lang = en
+type = PO
+
+[xblocks.recommender]
+file_filter = conf/locale/<lang>/LC_MESSAGES/recommender.po
+source_file = conf/locale/en/LC_MESSAGES/recommender.po
+source_lang = en
+type = PO
+
 [open-edx-releases.release-ironwood]
 file_filter = conf/locale/<lang>/LC_MESSAGES/django.po
 source_file = conf/locale/en/LC_MESSAGES/django.po
