@@ -140,6 +140,9 @@ ignore_dirs:
 third_party:
     - wiki
     - edx_proctoring_proctortrack
+    - openassessment
+    - drag_and_drop_v2
+    - edx_proctoring
 
 
 # How should .po files be segmented?  See i18n/segment.py for details. Strings
@@ -173,8 +176,15 @@ generate_merge:
         - mako-studio.po
         - wiki.po
         - edx_proctoring_proctortrack.po
+        - openassessment.po
+        - drag_and_drop_v2.po
+        - edx_proctoring.po
+
     djangojs.po:
         - djangojs-partial.po
         - djangojs-studio.po
         - underscore.po
         - underscore-studio.po
+        - openassessment-js.po
+        - drag_and_drop_v2.po
+        - edx_proctoring-js.po

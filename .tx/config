@@ -61,6 +61,36 @@ source_file = conf/locale/en/LC_MESSAGES/edx_proctoring_proctortrack.po
 source_lang = en
 type = PO
 
+[edx-platform.openassessment]
+file_filter = conf/locale/<lang>/LC_MESSAGES/openassessment.po
+source_file = conf/locale/en/LC_MESSAGES/openassessment.po
+source_lang = en
+type = PO
+
+[edx-platform.openassessment-js]
+file_filter = conf/locale/<lang>/LC_MESSAGES/oppenassessment-js.po
+source_file = conf/locale/en/LC_MESSAGES/openassessment-js.po
+source_lang = en
+type = PO
+
+[edx-platform.edx-proctoring]
+file_filter = conf/locale/<lang>/LC_MESSAGES/edx_proctoring.po
+source_file = conf/locale/en/LC_MESSAGES/edx_proctoring.po
+source_lang = en
+type = PO
+
+[edx-platform.edx-proctoring-js]
+file_filter = conf/locale/<lang>/LC_MESSAGES/edx_proctoring-js.po
+source_file = conf/locale/en/LC_MESSAGES//edx_proctoring-js.po
+source_lang = en
+type = PO
+
+[xblocks.drag-and-drop-v2]
+file_filter = conf/locale/<lang>/LC_MESSAGES/draganddrop.po
+source_file = conf/locale/en/LC_MESSAGES/draganddrop.po
+source_lang = en
+type = PO
+
 [open-edx-releases.release-ironwood]
 file_filter = conf/locale/<lang>/LC_MESSAGES/django.po
 source_file = conf/locale/en/LC_MESSAGES/django.po
