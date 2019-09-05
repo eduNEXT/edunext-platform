@@ -28,12 +28,36 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2019.
 #
+# #-#-#-#-#  edx_proctoring_proctortrack.po (0.1a)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2019 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2019.
+#
+# #-#-#-#-#  openassessment.po (0.1a)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2019 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2019.
+#
+# #-#-#-#-#  drag_and_drop_v2.po (0.1a)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2019 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2019.
+#
+# #-#-#-#-#  edx_proctoring.po (0.1a)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2019 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2019.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-06-03 19:01+0000\n"
-"PO-Revision-Date: 2019-06-03 19:01:38.490808\n"
+"POT-Creation-Date: 2019-09-05 17:45+0000\n"
+"PO-Revision-Date: 2019-09-05 17:45:44.958116\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -137,6 +161,20 @@ msgstr ""
 #: cms/djangoapps/contentstore/views/videos.py
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/templates/shoppingcart/receipt.html
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+#: openassessment/templates/openassessmentblock/message/oa_message_closed.html
+#: openassessment/templates/openassessmentblock/message/oa_message_complete.html
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_closed.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_complete.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode_waiting.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_waiting.html
+#: openassessment/templates/openassessmentblock/response/oa_response_cancelled.html
+#: openassessment/templates/openassessmentblock/response/oa_response_closed.html
+#: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#: openassessment/templates/openassessmentblock/self/oa_self_closed.html
+#: openassessment/templates/openassessmentblock/student_training/student_training_closed.html
 msgid "Status"
 msgstr ""
 
@@ -173,6 +211,7 @@ msgstr ""
 #: common/djangoapps/course_modes/admin.py
 #: common/djangoapps/course_modes/models.py
 #: common/lib/xmodule/xmodule/library_content_module.py
+#: drag_and_drop_v2/drag_and_drop_v2.py
 msgid "Mode"
 msgstr ""
 
@@ -206,6 +245,7 @@ msgstr ""
 
 #: common/djangoapps/course_modes/helpers.py
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
+#: edx_proctoring/admin.py
 msgid "Verified"
 msgstr ""
 
@@ -869,6 +909,11 @@ msgid ""
 msgstr ""
 
 #: common/djangoapps/student/views/management.py
+msgid ""
+"Your previous request is in progress, please try again in a few moments."
+msgstr ""
+
+#: common/djangoapps/student/views/management.py
 msgid "Some error occured during password change. Please try again"
 msgstr ""
 
@@ -1013,6 +1058,7 @@ msgstr ""
 
 #: common/djangoapps/third_party_auth/templates/third_party_auth/post_custom_auth_entry.html
 #: lms/templates/student_account/finish_auth.html
+#: openassessment/templates/openassessmentblock/instructor_dashboard/oa_listing.html
 msgid "Please wait"
 msgstr ""
 
@@ -2047,6 +2093,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 #: common/lib/xmodule/xmodule/x_module.py
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion/__init__.py
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
 msgid "The display name for this component."
 msgstr ""
 
@@ -2068,6 +2115,7 @@ msgid "Maximum Attempts"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#: drag_and_drop_v2/drag_and_drop_v2.py
 msgid ""
 "Defines the number of times a student can try to answer this problem. If the"
 " value is not set, infinite attempts are allowed."
@@ -2216,6 +2264,7 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
+#: drag_and_drop_v2/drag_and_drop_v2.py
 msgid "Problem Weight"
 msgstr ""
 
@@ -2266,6 +2315,7 @@ msgstr ""
 #: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview-language-fragment.html
 #: openedx/core/djangoapps/theming/templates/theming/theming-admin-fragment.html
 #: themes/stanford-style/lms/templates/register-shib.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
 msgid "Submit"
 msgstr ""
 
@@ -3705,6 +3755,9 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 #: common/lib/xmodule/xmodule/seq_module.py lms/templates/ccx/schedule.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
 msgid "Due Date"
 msgstr ""
 
@@ -4035,6 +4088,7 @@ msgid "Group ID {group_id}"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/split_test_module.py
+#: openassessment/templates/openassessmentblock/edit/oa_training_example_criterion.html
 msgid "Not Selected"
 msgstr ""
 
@@ -5588,6 +5642,7 @@ msgid "Learn More"
 msgstr ""
 
 #: lms/djangoapps/courseware/date_summary.py
+#: edx_proctoring/templates/proctored_exam/id_verification.html
 msgid "Retry Verification"
 msgstr ""
 
@@ -6425,6 +6480,7 @@ msgid "Language"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
 msgid "Location"
 msgstr ""
 
@@ -6519,7 +6575,7 @@ msgid "Coupon Code"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
-#: openedx/core/djangoapps/schedules/admin.py
+#: openedx/core/djangoapps/schedules/admin.py edx_proctoring/admin.py
 msgid "Course Id"
 msgstr ""
 
@@ -6966,10 +7022,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
+#: openassessment/templates/openassessmentblock/response/oa_response_graded.html
+#: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#: openassessment/templates/openassessmentblock/self/oa_self_complete.html
+#: openassessment/templates/openassessmentblock/student_training/student_training_complete.html
+#: openassessment/xblock/staff_assessment_mixin.py
 msgid "Complete"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
+#: openassessment/templates/openassessmentblock/response/oa_response_closed.html
+#: openassessment/templates/openassessmentblock/self/oa_self_closed.html
+#: openassessment/templates/openassessmentblock/student_training/student_training_closed.html
 msgid "Incomplete"
 msgstr ""
 
@@ -7178,7 +7242,7 @@ msgstr ""
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: openedx/core/djangoapps/user_api/accounts/settings_views.py
 #: openedx/core/djangoapps/user_api/api.py wiki/forms.py
-#: wiki/templates/wiki/dir.html
+#: wiki/templates/wiki/dir.html drag_and_drop_v2/drag_and_drop_v2.py
 msgid "Title"
 msgstr ""
 
@@ -8056,6 +8120,7 @@ msgid "Currency"
 msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
+#: openassessment/templates/openassessmentblock/oa_rubric.html
 msgid "Comments"
 msgstr ""
 
@@ -8865,6 +8930,8 @@ msgstr ""
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: cms/templates/videos_index_pagination.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
 msgid "Cancel"
 msgstr ""
 
@@ -8874,7 +8941,7 @@ msgstr ""
 
 #: lms/templates/oauth2_provider/authorize.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
-#: lms/templates/ccx/schedule.html
+#: lms/templates/ccx/schedule.html edx_proctoring/admin.py
 msgid "Error"
 msgstr ""
 
@@ -8986,6 +9053,8 @@ msgstr ""
 #: lms/templates/modal/_modal-settings-language.html
 #: themes/edx.org/lms/templates/dashboard.html
 #: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+#: edx_proctoring/templates/proctored_exam/error_modal.html
 msgid "Close"
 msgstr ""
 
@@ -10996,6 +11065,7 @@ msgstr ""
 
 #: openedx/features/enterprise_support/utils.py
 #: lms/templates/peer_grading/peer_grading_problem.html
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
 msgid "Continue"
 msgstr ""
 
@@ -11528,9 +11598,12 @@ msgstr ""
 msgid "Uploading"
 msgstr ""
 
+#. #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 #. Translators: This is the status for a video that the servers are currently
 #. processing
 #: cms/djangoapps/contentstore/views/videos.py
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+#: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
 msgid "In Progress"
 msgstr ""
 
@@ -11551,9 +11624,15 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
+#. #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 #. Translators: This is the status for a video that is cancelled during upload
 #. by user
 #: cms/djangoapps/contentstore/views/videos.py
+#: openassessment/templates/openassessmentblock/peer/oa_peer_cancelled.html
+#: openassessment/templates/openassessmentblock/response/oa_response_cancelled.html
+#: openassessment/templates/openassessmentblock/self/oa_self_cancelled.html
+#: openassessment/templates/openassessmentblock/student_training/student_training_cancelled.html
+#: openassessment/xblock/staff_assessment_mixin.py
 msgid "Cancelled"
 msgstr ""
 
@@ -11732,6 +11811,7 @@ msgstr ""
 #: lms/templates/wiki/includes/article_menu.html
 #: wiki/templates/wiki/settings.html
 #: wiki/templates/wiki/includes/article_menu.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
 msgid "Settings"
 msgstr ""
 
@@ -11743,6 +11823,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: openedx/features/learner_profile/templates/learner_profile/learner_profile.html
+#: openassessment/templates/openassessmentblock/oa_base.html
 msgid "Loading"
 msgstr ""
 
@@ -12753,6 +12834,8 @@ msgid "Hint"
 msgstr ""
 
 #: lms/templates/problem.html lms/templates/word_cloud.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
 msgid "Save"
 msgstr ""
 
@@ -14396,6 +14479,8 @@ msgid "Schedule a Unit"
 msgstr ""
 
 #: lms/templates/ccx/schedule.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
 msgid "Start Date"
 msgstr ""
 
@@ -18337,6 +18422,9 @@ msgid "Available"
 msgstr ""
 
 #: lms/templates/peer_grading/peer_grading.html
+#: openassessment/templates/openassessmentblock/oa_rubric.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
 msgid "Required"
 msgstr ""
 
@@ -18443,6 +18531,7 @@ msgid "Keep Flag"
 msgstr ""
 
 #: lms/templates/peer_grading/peer_grading_problem.html
+#: edx_proctoring/templates/proctored_exam/confirm-decline.html
 msgid "Go Back"
 msgstr ""
 
@@ -18676,6 +18765,7 @@ msgid "Billed To Details"
 msgstr ""
 
 #: lms/templates/shoppingcart/receipt.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
 msgid "N/A"
 msgstr ""
 
@@ -18846,6 +18936,10 @@ msgstr ""
 
 #: lms/templates/shoppingcart/shopping_cart.html
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/delete.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_option.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_prompt.html
+#: openassessment/templates/openassessmentblock/edit/oa_training_example.html
 msgid "Remove"
 msgstr ""
 
@@ -22277,6 +22371,7 @@ msgid "Prerequisite Course"
 msgstr ""
 
 #: cms/templates/settings.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
 msgid "None"
 msgstr ""
 
@@ -23933,4 +24028,3117 @@ msgstr ""
 msgid ""
 "A new revision was created: Merge between Revision #%(r1)d and Revision "
 "#%(r2)d"
+msgstr ""
+
+#: edx_proctoring_proctortrack/backends/proctortrack_rest.py
+msgid ""
+"Click on the \"Start System Check\" link below to download and run the "
+"proctoring software."
+msgstr ""
+
+#: edx_proctoring_proctortrack/backends/proctortrack_rest.py
+msgid ""
+"Once you have verified your identity and reviewed the exam guidelines in "
+"Proctortrack, you will be redirected back to this page."
+msgstr ""
+
+#: edx_proctoring_proctortrack/backends/proctortrack_rest.py
+msgid ""
+"To confirm that proctoring has started, make sure your webcam feed and the "
+"blue Proctortrack box are both visible on your screen."
+msgstr ""
+
+#: edx_proctoring_proctortrack/backends/proctortrack_rest.py
+msgid "Click on the \"Start Proctored Exam\" button below to continue."
+msgstr ""
+
+#: openassessment/assessment/api/student_training.py
+msgid "Could not parse serialized rubric"
+msgstr ""
+
+#: openassessment/assessment/api/student_training.py
+msgid ""
+"If your assignment includes a learner training step, the rubric must have at"
+" least one criterion, and that criterion must have at least one option."
+msgstr ""
+
+#: openassessment/assessment/api/student_training.py
+msgid "Example {example_number} has a validation error: {error}"
+msgstr ""
+
+#: openassessment/assessment/api/student_training.py
+msgid ""
+"Example {example_number} has an invalid option for \"{criterion_name}\": "
+"\"{option_name}\""
+msgstr ""
+
+#: openassessment/assessment/api/student_training.py
+msgid "Example {example_number} has an extra option for \"{criterion_name}\""
+msgstr ""
+
+#: openassessment/assessment/api/student_training.py
+msgid "Example {example_number} is missing an option for \"{criterion_name}\""
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/oa_base.html
+msgid ""
+"This assignment has several steps. In the first step, you'll provide a "
+"response to the prompt. The other steps appear below the Your Response "
+"field."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/oa_latex_preview.html
+msgid "Preview in LaTeX"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/oa_latex_preview.html
+msgid "Click to preview your submission in LaTeX."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/oa_latex_preview.html
+msgid "Preview Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/oa_rubric.html
+#: openassessment/templates/openassessmentblock/edit/oa_training_example_criterion.html
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "points"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/oa_submission_answer.html
+msgid "The question for this section"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/oa_uploaded_file.html
+msgid "View the files associated with this submission:"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/oa_uploaded_file.html
+msgid ""
+"Caution: These files were uploaded by another course learner and have not "
+"been verified, screened, approved, reviewed, or endorsed by the site "
+"administrator. If you access the files, you do so at your own risk.)"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Open Response Assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Rubric"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_prompt.html
+msgid "Prompt"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Rubric Change Impacts Settings Section"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid ""
+"A change that you made to this assessment's rubric has an impact on some "
+"examples laid out in the settings tab. For more information, go to the "
+"Settings section and fix the areas highlighted in red."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "close alert"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Display Name "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Response Start Date"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Response Start Time"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "The date and time when learners can begin submitting responses."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Response Due Date"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Response Due Time"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "The date and time when learners can no longer submit responses."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Text Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid ""
+"Specify whether learners must include a text based response to this "
+"problem's prompt."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "File Uploads Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid ""
+"Specify whether learners are able to upload files as a part of their "
+"response."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "File Upload Types"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "PDF or Image Files"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Image Files"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Custom File Types"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid ""
+"Specify whether learners can submit files along with their text responses. "
+"Select Images to allow JPG, GIF, or PNG files. Select PDF or Images to allow"
+" PDF files and images. Select Custom File Types to allow files with "
+"extensions that you specify below. (Use the Select Custom File Types option "
+"with caution.)"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "File Types"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid ""
+"Enter the file extensions, separated by commas, that you want learners to be"
+" able to upload. For example: pdf,doc,docx."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Allow LaTeX Responses"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "False"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "True"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid "Specify whether learners can write LaTeX formatted strings"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+#: openassessment/templates/openassessmentblock/leaderboard/oa_leaderboard_show.html
+#: openassessment/templates/openassessmentblock/leaderboard/oa_leaderboard_waiting.html
+msgid "Top Responses"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid ""
+"Specify the number of top scoring responses to display. Valid numbers are 0 "
+"to 99. If the number is 0, the Top Responses section does not appear to "
+"learners."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html
+msgid ""
+"In this assignment, you can include learner training, peer assessment, self "
+"assessment, and staff assessment steps. Select the steps that you want "
+"below, and then drag them into the order you want. If you include a learner "
+"training step, it must precede all other steps. If you include a staff "
+"assessment step, it must be the final step. After you release an ORA "
+"assignment, you cannot change the type and number of assessment steps."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info_assessment_detail.html
+msgid "Criterion"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+msgid "You cannot delete a criterion after the assignment has been released."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+msgid "Criterion Name"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+msgid "Criterion Prompt"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+msgid "Add Option"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+msgid "Feedback for This Criterion"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+msgid "Optional"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_criterion.html
+msgid ""
+"Select one of the options above. This describes whether or not the learner "
+"will have to provide criterion feedback."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_option.html
+msgid "Option"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_option.html
+msgid "Option Name"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_option.html
+msgid "Option Points"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_option.html
+msgid "Option Explanation"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid "Step: Peer Assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid ""
+"Learners assess a specified number of other learners' responses using the "
+"rubric for the assignment."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid "Specify the following values for the peer assessment step."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid "Must Grade"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid ""
+"Specify the number of peer assessments that each learner must complete. "
+"Valid numbers are 0 to 99."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid "Graded By"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid ""
+"Specify the number of learners that each response must be assessed by. Valid"
+" numbers are 0 to 99."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
+msgid "Start Time"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid ""
+"Enter the date and time when learners can begin assessing peer responses."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
+msgid "Due Time"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html
+msgid "Enter the date and time when all peer assessments must be complete."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_prompt.html
+msgid "You cannot delete a prompt after the assignment has been released."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_prompts.html
+msgid ""
+"Prompts. Replace the sample text with your own text. For more information, "
+"see the ORA documentation."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_prompts.html
+msgid "Add Prompt"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_rubric.html
+msgid ""
+"Rubrics are made up of criteria, which usually contain one or more options. "
+"Each option has a point value. This template contains two sample criteria "
+"and their options. Replace the sample text with your own text. For more "
+"information, see the ORA documentation."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_rubric.html
+msgid "Add Criterion"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_rubric.html
+msgid "Feedback for This Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_rubric.html
+msgid "Feedback Instructions"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_rubric.html
+msgid ""
+"Encourage learners to provide feedback on the response they have graded. You"
+" can replace the sample text with your own."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_rubric.html
+msgid "Default Feedback Text"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_rubric.html
+msgid ""
+"Enter feedback text that learners will see before they enter their own "
+"feedback. Use this text to show learners a good example peer assessment."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
+msgid "Step: Self Assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
+msgid ""
+"Learners assess their own responses using the rubric for the assignment."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
+msgid "Specify start and due dates for the self assessment step."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
+msgid ""
+"Enter the date and time when learners can begin assessing their responses."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_self_assessment.html
+msgid "Enter the date and time when all self assessments must be complete."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_staff_assessment.html
+msgid "Step: Staff Assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_staff_assessment.html
+msgid ""
+"Staff members assess learners' responses using the rubric for the "
+"assignment."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_student_training.html
+msgid "Step: Learner Training"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_student_training.html
+msgid ""
+"Learners learn to assess responses by scoring pre-assessed sample responses "
+"that you provide. Learners move to the next step when the scores they give "
+"match your scores. Note that if you add this step, you must also add a peer "
+"assessment step. This step must come before the peer assessment step."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_student_training.html
+msgid ""
+"Enter one or more sample responses that you've created, and then specify the"
+" options that you would choose for each criterion in your rubric. Note that "
+"you must add your rubric to the Rubric tab before you can complete this "
+"step."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_student_training.html
+msgid "Add Sample Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_training_example.html
+msgid "Scored Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_training_example.html
+msgid "Response Score"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_training_example.html
+msgid "Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_assessment_feedback.html
+#, python-format
+msgid ""
+"\n"
+"                %(start_tag)s%(title)s%(end_tag)s%(start_grade_tag)s - %(grade)s%(end_tag)s\n"
+"              "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_assessment_title.html
+#, python-format
+msgid ""
+"\n"
+"                      %(assessment_title)s - %(points)s point\n"
+"                  "
+msgid_plural ""
+"\n"
+"                      %(assessment_title)s - %(points)s points\n"
+"                  "
+msgstr[0] ""
+msgstr[1] ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_assessment_title.html
+#, python-format
+msgid "More information about %(name)s"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_cancelled.html
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+#: openassessment/templates/openassessmentblock/grade/oa_grade_incomplete.html
+#: openassessment/templates/openassessmentblock/grade/oa_grade_not_started.html
+#: openassessment/templates/openassessmentblock/grade/oa_grade_waiting.html
+msgid "Your Grade"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_cancelled.html
+#, python-format
+msgid ""
+"\n"
+"                                        %(points_earned)s out of %(points_possible)s\n"
+"                                    "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_cancelled.html
+msgid "Your submission has been cancelled."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+#, python-format
+msgid ""
+"\n"
+"                                            %(points_earned)s out of %(points_possible)s\n"
+"                                        "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Your Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "Your Upload"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "Assessments of Your Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "Overall Grade"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info_assessment_detail.html
+msgid "Points"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "Additional comments on your response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "Provide feedback on peer assessments"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "Submitting Feedback"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid ""
+"Your feedback has been submitted. Course staff will be able to see this "
+"feedback when they review course records."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid ""
+"Course staff will be able to see any feedback that you provide here when "
+"they review course records."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid ""
+"Select the statements below that best reflect your experience with peer "
+"assessments."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "These assessments were useful."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "These assessments were not useful."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "I disagree with one or more of the peer assessments of my response."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "Some comments I received were inappropriate."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid ""
+"Provide feedback on the grade or comments that you received from your peers."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "I feel the feedback I received was..."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "We could not submit your feedback"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+msgid "Submit feedback on peer assessments"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_incomplete.html
+msgid "Not Completed"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_incomplete.html
+msgid "You have not completed all the steps of this problem."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_not_started.html
+msgid "Not Started"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_not_started.html
+msgid "You have not started this problem yet."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_waiting.html
+msgid "Waiting for Assessments"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/grade/oa_grade_waiting.html
+msgid ""
+"You have completed your steps in the assignment, but some assessments still "
+"need to be done on your response. When the assessments of your response are "
+"complete, you will see feedback from everyone who assessed your response, "
+"and you will receive your final grade."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/instructor_dashboard/oa_grade_available_responses.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Grade Available Responses"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/instructor_dashboard/oa_grade_available_responses.html
+msgid ""
+"Grade Available Responses is unavailable. This item is not configured for "
+"Staff Assessment."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/leaderboard/oa_leaderboard_show.html
+#, python-format
+msgid "%(num_points)s points"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/leaderboard/oa_leaderboard_show.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode.html
+msgid "Your peer's response to the prompt above"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/leaderboard/oa_leaderboard_waiting.html
+msgid ""
+"After you complete all the steps of this assignment, you can see the top-"
+"scoring responses from your peers."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_closed.html
+msgid ""
+"This task is not yet available. Check back to complete the assignment once "
+"this section has opened."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_closed.html
+msgid ""
+"This assignment has closed. One or more deadlines for this assignment have "
+"passed. You will receive an incomplete grade for this assignment."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_complete.html
+msgid ""
+"You have completed this assignment. Your final grade will be available when "
+"the assessments of your response are complete."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_complete.html
+msgid ""
+"You have completed this assignment. Review your grade and your assessment "
+"details."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+msgid ""
+"This assignment is in progress. Learner training will close soon. Complete "
+"the learner training step to move on."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+msgid ""
+"This assignment is in progress. Complete the learner training step to move "
+"on."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+msgid ""
+"This assignment is in progress. Check back later when the assessment period "
+"has started."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+#, python-format
+msgid ""
+"\n"
+"                                    %(start_strong)sThis assignment is in progress. The self assessment step will close soon.%(end_strong)s You still need to complete the %(start_link)sself assessment%(end_link)s step.\n"
+"                                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+#, python-format
+msgid ""
+"\n"
+"                                    This assignment is in progress. You still need to complete the %(start_link)sself assessment%(end_link)s step.\n"
+"                                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+#, python-format
+msgid ""
+"\n"
+"                                    This assignment is in progress.%(start_strong)sThe peer assessment step will close soon.%(end_strong)s All submitted peer responses have been assessed. Check back later to see if more learners have submitted responses. You still need to complete the %(start_link)speer assessment%(end_link)s step.\n"
+"                                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+#, python-format
+msgid ""
+"\n"
+"                                    This assignment is in progress. All submitted peer responses have been assessed. Check back later to see if more learners have submitted responses. You still need to complete the %(start_link)speer assessment%(end_link)s step.\n"
+"                                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+#, python-format
+msgid ""
+"\n"
+"                                    This assignment is in progress. %(start_strong)sThe peer assessment step will close soon.%(end_strong)s You still need to complete the %(start_link)speer assessment%(end_link)s step.\n"
+"                                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_incomplete.html
+#, python-format
+msgid ""
+"\n"
+"                                    This assignment is in progress. You still need to complete the %(start_link)speer assessment%(end_link)s step.\n"
+"                                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_open.html
+#, python-format
+msgid ""
+"\n"
+"                    Assignment submissions will close soon. To receive a grade, first provide a response to the prompt, then complete the steps below the %(start_tag)sYour Response%(end_tag)s field.\n"
+"                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_open.html
+#, python-format
+msgid ""
+"\n"
+"                    This assignment has several steps. In the first step, you'll provide a response to the prompt. The other steps appear below the %(start_tag)sYour Response%(end_tag)s field.\n"
+"                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_unavailable.html
+msgid "Instructions Unavailable"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/message/oa_message_unavailable.html
+msgid "The instructions for this step could not be loaded."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+msgid "Assess Peers"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#, python-format
+msgid ""
+"\n"
+"            <span id=\"oa_step_deadline_peer\" class=\"date ora-datetime\" data-datetime=\"%(start_date)s\" data-string=\"available {date} (in %(time_until)s)\" data-timezone=\"%(user_timezone)s\" data-language=\"%(user_language)s\"></span>\n"
+"            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#, python-format
+msgid ""
+"\n"
+"            <span id=\"oa_step_deadline_peer\" class=\"date ora-datetime\" data-datetime=\"%(due_date)s\" data-string=\"due {date} (in %(time_until)s)\" data-timezone=\"%(user_timezone)s\" data-language=\"%(user_language)s\"></span>\n"
+"            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#, python-format
+msgid ""
+"\n"
+"                    In Progress (%(review_number)s of %(num_must_grade)s)\n"
+"                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode.html
+msgid "Read and assess the following response from one of your peers."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode.html
+#: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_override_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Associated Files"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode.html
+#: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_override_assessment.html
+msgid "We could not submit your assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_closed.html
+#, python-format
+msgid ""
+"\n"
+"            Incomplete (%(num_graded)s of %(num_must_grade)s)\n"
+"        "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_closed.html
+msgid ""
+"The due date for this step has passed. This step is now closed. You can no "
+"longer complete peer assessments or continue with this assignment, and you "
+"will receive a grade of Incomplete."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_complete.html
+msgid "Completed"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_complete.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode_waiting.html
+msgid ""
+"You have successfully completed all of the required peer assessments for "
+"this assignment. You may assess additional peer responses if you want to. "
+"Completing additional assessments will not affect your final grade."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_complete.html
+msgid "We could not retrieve additional submissions for assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_complete.html
+msgid "Continue Assessing Peers"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode.html
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode_waiting.html
+#, python-format
+msgid ""
+"\n"
+"        Complete (%(num_graded)s)\n"
+"      "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode_waiting.html
+msgid ""
+"All submitted peer responses have been assessed. Check back later to see if "
+"more learners have submitted responses."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_unavailable.html
+#: openassessment/templates/openassessmentblock/response/oa_response_unavailable.html
+#: openassessment/templates/openassessmentblock/self/oa_self_unavailable.html
+#: openassessment/templates/openassessmentblock/student_training/student_training_unavailable.html
+#: openassessment/xblock/staff_assessment_mixin.py
+msgid "Not Available"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_waiting.html
+#, python-format
+msgid ""
+"\n"
+"          In Progress (%(review_number)s of %(num_must_grade)s)\n"
+"        "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/peer/oa_peer_waiting.html
+msgid ""
+"All available peer responses have been assessed. Check back later to see if "
+"more learners have submitted responses. You will receive your grade after "
+"you've completed all the steps for this problem and your peers have assessed"
+" your response."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+#, python-format
+msgid ""
+"\n"
+"            <span id=\"oa_step_deadline_response\" class=\"date ora-datetime\" data-datetime=\"%(start_date)s\" data-string=\"available {date} (in %(time_until)s)\" data-timezone=\"%(user_timezone)s\" data-language=\"%(user_language)s\"></span>\n"
+"            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+#, python-format
+msgid ""
+"\n"
+"            <span id=\"oa_step_deadline_response\" class=\"date ora-datetime\" data-datetime=\"%(due_date)s\" data-string=\"due {date} (in %(time_until)s)\" data-timezone=\"%(user_timezone)s\" data-language=\"%(user_language)s\"></span>\n"
+"            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Enter your response to the prompt."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid ""
+"You can save your progress and return to complete your response at any time "
+"before the due date"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid ""
+"You can save your progress and return to complete your response at any time."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "After you submit your response, you cannot edit it"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "The prompt for this section"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Your response (required)"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Your response (optional)"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Enter your response to the prompt above."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "We could not save your progress"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Save your progress"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Your Submission Status"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "We could not upload files"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Select a file to upload for this submission."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Upload files"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "You may continue to work on your response until you submit it."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "We could not submit your response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Submit your response and move to the next step"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_cancelled.html
+msgid "Your submission was cancelled. "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_cancelled.html
+#, python-format
+msgid ""
+"\n"
+"                                Your submission has been cancelled by %(removed_by_username)s on %(removed_datetime)s\n"
+"                            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_cancelled.html
+#, python-format
+msgid ""
+"\n"
+"                               Your submission was cancelled on %(removed_datetime)s\n"
+"                            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_cancelled.html
+#, python-format
+msgid ""
+"\n"
+"                            Comments: %(comments)s\n"
+"                        "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_closed.html
+msgid ""
+"The due date for this step has passed. This step is now closed. You can no "
+"longer submit a response or continue with this problem, and you will receive"
+" a grade of Incomplete. If you saved but did not submit a response, the "
+"response appears in the course records."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_graded.html
+#: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
+msgid "Your response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_graded.html
+#: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+msgid "Your Uploaded Files"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+msgid ""
+"Your response has been submitted. You will receive your grade after all "
+"steps are complete and your response is fully assessed."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#, python-format
+msgid ""
+"\n"
+"                        You still need to complete the %(peer_start_tag)speer assessment%(end_tag)s and %(self_start_tag)sself assessment%(end_tag)s steps.\n"
+"                    "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#, python-format
+msgid ""
+"\n"
+"                        You still need to complete the %(start_tag)speer assessment%(end_tag)s step.\n"
+"                    "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#, python-format
+msgid ""
+"\n"
+"                        You still need to complete the %(start_tag)sself assessment%(end_tag)s step.\n"
+"                    "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
+msgid "Assess Your Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
+#, python-format
+msgid ""
+"\n"
+"               <span id=\"oa_step_deadline_self\" class=\"date ora-datetime\" data-datetime=\"%(start_date)s\" data-string=\"available {date} (in %(time_until)s)\" data-timezone=\"%(user_timezone)s\" data-language=\"%(user_language)s\"></span>\n"
+"           "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
+#, python-format
+msgid ""
+"\n"
+"               <span id=\"oa_step_deadline_self\" class=\"date ora-datetime\" data-datetime=\"%(due_date)s\" data-string=\"due {date} (in %(time_until)s)\" data-timezone=\"%(user_timezone)s\" data-language=\"%(user_language)s\"></span>\n"
+"           "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
+msgid "Submit your assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/self/oa_self_closed.html
+msgid ""
+"The due date for this step has passed. This step is now closed. You can no "
+"longer complete a self assessment or continue with this assignment, and you "
+"will receive a grade of Incomplete."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff/oa_staff_grade.html
+#: openassessment/xblock/grade_mixin.py
+msgid "Staff Grade"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Manage Individual Learners"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "View Assignment Statistics"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Enter an individual learner's username or email"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Response total"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Learner Progress"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Problem Step"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Active Learners in Step"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Dates"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_area.html
+msgid "Release Date"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners.html
+msgid "Staff Assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_assessment.html
+msgid "Give this learner a grade using the problem's rubric."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_assessment.html
+#, python-format
+msgid ""
+"\n"
+"                                        Response for: %(student_username)s\n"
+"                                    "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_override_assessment.html
+msgid "Learner Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_override_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "The learner's response to the prompt above"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_assessment.html
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_override_assessment.html
+msgid "Submit assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_assessment.html
+msgid "Submit assessment and continue grading"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_grade_learners_count.html
+#, python-format
+msgid ""
+"\n"
+"                %(ungraded)s Available and %(in_progress)s Checked Out\n"
+"            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_override_assessment.html
+msgid "Override this learner's current grade using the problem's rubric."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_staff_override_assessment.html
+#, python-format
+msgid ""
+"\n"
+"                                    Response for: %(student_username)s\n"
+"                                "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+#, python-format
+msgid ""
+"\n"
+"                Viewing learner: %(learner)s\n"
+"            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Learner's Response"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+#, python-format
+msgid ""
+"\n"
+"                            Learner submission removed by %(removed_by_username)s on %(removed_datetime)s\n"
+"                        "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+#, python-format
+msgid ""
+"\n"
+"                            Learner submission removed on %(removed_datetime)s\n"
+"                        "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+#, python-format
+msgid ""
+"\n"
+"                        Comments: %(comments)s\n"
+"                    "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Peer Assessments for This Learner"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Peer Assessments Completed by This Learner"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Learner's Self Assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Staff Assessment for This Learner"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Learner's Final Grade"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+#, python-format
+msgid ""
+"\n"
+"                            Final grade: %(points_earned)s out of %(points_possible)s\n"
+"                        "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Final Grade Details"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+#, python-format
+msgid ""
+"\n"
+"                                        %(assessment_label)s - %(points)s point\n"
+"                                    "
+msgid_plural ""
+"\n"
+"                                        %(assessment_label)s - %(points)s points\n"
+"                                    "
+msgstr[0] ""
+msgstr[1] ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Feedback Recorded"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "The submission is waiting for assessments."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid ""
+"The learner's submission has been removed from peer assessment. The learner "
+"receives a grade of zero unless you delete the learner's state for the "
+"problem to allow them to resubmit a response."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "The problem has not been started."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "The problem has not been completed."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Submit Assessment Grade Override"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Remove Submission From Peer Grading"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Caution: This Action Cannot Be Undone"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid ""
+"Removing a learner's submission cannot be undone and should be done with "
+"caution."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Comments:"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "Remove submission"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info.html
+msgid "A response was not found for this learner."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info_assessment_detail.html
+#, python-format
+msgid ""
+"\n"
+"                            Assessment %(assessment_num)s:\n"
+"                        "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info_assessment_detail.html
+msgid "Assessment Details"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info_assessment_detail.html
+msgid "Selected Option"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info_assessment_detail.html
+msgid "Feedback"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info_assessment_detail.html
+msgid "Points Possible"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/staff_area/oa_student_info_assessment_detail.html
+msgid "Overall Feedback"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "Learn to Assess Responses"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+#, python-format
+msgid ""
+"\n"
+"                      In Progress (%(current_progress_num)s of %(training_available_num)s)\n"
+"                  "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+#, python-format
+msgid ""
+"\n"
+"            <span id=\"oa_step_deadline\" class=\"date ora-datetime\" data-datetime=\"%(start_date)s\" data-string=\"available {date} (in %(time_until)s)\" data-timezone=\"%(user_timezone)s\" data-language=\"%(user_language)s\"></span>\n"
+"            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+#, python-format
+msgid ""
+"\n"
+"            <span id=\"oa_step_deadline\" class=\"date ora-datetime\" data-datetime=\"%(due_date)s\" data-string=\"due {date} (in %(time_until)s)\" data-timezone=\"%(user_timezone)s\" data-language=\"%(user_language)s\"></span>\n"
+"            "
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "Learning to Assess Responses"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid ""
+"Before you begin to assess your peers' responses, you'll learn how to "
+"complete peer assessments by reviewing responses that instructors have "
+"already assessed. If you select the same options for the response that the "
+"instructor selected, you'll move to the next step. If you don't select the "
+"same options, you'll review the response and try again."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid ""
+"Your assessment differs from the instructor's assessment of this response. "
+"Review the response and consider why the instructor may have assessed it "
+"differently. Then, try the assessment again."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "The response to the prompt above:"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "Selected Options Agree"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "The option you selected is the option that the instructor selected."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "Selected Options Differ"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid ""
+"The option you selected is not the option that the instructor selected."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "We could not check your assessment"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training.html
+msgid "Compare your selections with the instructor's selections"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training_closed.html
+msgid ""
+"The due date for this step has passed. This step is now closed. You can no "
+"longer continue with this assignment, and you will receive a grade of "
+"Incomplete."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training_error.html
+msgid "Error Loading Learner Training Examples"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/student_training/student_training_error.html
+msgid "The Learner Training Step of this assignment could not be loaded."
+msgstr ""
+
+#: openassessment/xblock/data_conversion.py
+msgid "You must provide options selected in the assessment."
+msgstr ""
+
+#: openassessment/xblock/data_conversion.py
+msgid "You must provide overall feedback in the assessment."
+msgstr ""
+
+#: openassessment/xblock/data_conversion.py
+msgid "You must provide feedback for criteria in the assessment."
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+#: openassessment/xblock/leaderboard_mixin.py
+#: openassessment/xblock/self_assessment_mixin.py
+#: openassessment/xblock/student_training_mixin.py
+msgid "An unexpected error occurred."
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Peer Assessment"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Self Assessment"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Assessment feedback could not be saved."
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Feedback saved."
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Staff Comments"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Peer Median Grade"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Peer {peer_index}"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Peer Comments"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Self Assessment Grade"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Your Self Assessment"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Your Comments"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Waiting for peer reviews"
+msgstr ""
+
+#: openassessment/xblock/grade_mixin.py
+msgid "Peer"
+msgstr ""
+
+#: openassessment/xblock/peer_assessment_mixin.py
+msgid "You must submit a response before you can perform a peer assessment."
+msgstr ""
+
+#: openassessment/xblock/peer_assessment_mixin.py
+msgid ""
+"This feedback has already been submitted or the submission has been "
+"cancelled."
+msgstr ""
+
+#: openassessment/xblock/peer_assessment_mixin.py
+msgid "Your peer assessment could not be submitted."
+msgstr ""
+
+#: openassessment/xblock/peer_assessment_mixin.py
+#: openassessment/xblock/student_training_mixin.py
+msgid "Could not update workflow status."
+msgstr ""
+
+#: openassessment/xblock/peer_assessment_mixin.py
+msgid "Could not load peer assessment."
+msgstr ""
+
+#: openassessment/xblock/peer_assessment_mixin.py
+msgid "Submit your assessment and review another response"
+msgstr ""
+
+#: openassessment/xblock/peer_assessment_mixin.py
+msgid "Submit your assessment and move to next step"
+msgstr ""
+
+#: openassessment/xblock/peer_assessment_mixin.py
+msgid "Submit your assessment and move to response #{response_number}"
+msgstr ""
+
+#: openassessment/xblock/resolve_dates.py
+msgid ""
+"'{date}' is an invalid date format. Make sure the date is formatted as YYYY-"
+"MM-DDTHH:MM:SS."
+msgstr ""
+
+#: openassessment/xblock/resolve_dates.py
+msgid "'{date}' must be a date string or datetime"
+msgstr ""
+
+#: openassessment/xblock/resolve_dates.py
+msgid ""
+"This step's start date '{start}' cannot be earlier than the previous step's "
+"start date '{prev}'."
+msgstr ""
+
+#: openassessment/xblock/resolve_dates.py
+msgid ""
+"This step's due date '{due}' cannot be later than the next step's due date "
+"'{prev}'."
+msgstr ""
+
+#: openassessment/xblock/resolve_dates.py
+msgid "The start date '{start}' cannot be later than the due date '{due}'"
+msgstr ""
+
+#: openassessment/xblock/self_assessment_mixin.py
+msgid "You must submit a response before you can perform a self-assessment."
+msgstr ""
+
+#: openassessment/xblock/self_assessment_mixin.py
+msgid "Your self assessment could not be submitted."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "You do not have permission to schedule training"
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "You do not have permission to reschedule tasks."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "You do not have permission to access the ORA staff area"
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "You do not have permission to access ORA learner information."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "You do not have permission to access ORA staff grading."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "Error getting learner information."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "Error loading the checked out learner response."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "No other learner responses are available for grading at this time."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "Error getting staff grade information."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "Error getting staff grade ungraded and checked out counts."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid "Please enter valid reason to remove the submission."
+msgstr ""
+
+#: openassessment/xblock/staff_area_mixin.py
+msgid ""
+"The learner submission has been removed from peer assessment. The learner "
+"receives a grade of zero unless you delete the learner's state for the "
+"problem to allow them to resubmit a response."
+msgstr ""
+
+#: openassessment/xblock/staff_assessment_mixin.py
+msgid "The submission ID of the submission being assessed was not found."
+msgstr ""
+
+#: openassessment/xblock/staff_assessment_mixin.py
+msgid "Your staff assessment could not be submitted."
+msgstr ""
+
+#: openassessment/xblock/staff_assessment_mixin.py
+msgid "Waiting for a Staff Grade"
+msgstr ""
+
+#: openassessment/xblock/staff_assessment_mixin.py
+msgid ""
+"Check back later to see if a course staff member has assessed your response."
+" You will receive your grade after the assessment is complete."
+msgstr ""
+
+#: openassessment/xblock/staff_assessment_mixin.py
+msgid "You Must Complete the Steps Above to View Your Grade"
+msgstr ""
+
+#: openassessment/xblock/staff_assessment_mixin.py
+msgid ""
+"Although a course staff member has assessed your response, you will receive "
+"your grade only after you have completed all the required steps of this "
+"problem."
+msgstr ""
+
+#: openassessment/xblock/student_training_mixin.py
+msgid "Missing options_selected key in request"
+msgstr ""
+
+#: openassessment/xblock/student_training_mixin.py
+msgid "options_selected must be a dictionary"
+msgstr ""
+
+#: openassessment/xblock/student_training_mixin.py
+msgid "Your scores could not be checked."
+msgstr ""
+
+#: openassessment/xblock/studio_mixin.py
+msgid "Error updating XBlock configuration"
+msgstr ""
+
+#: openassessment/xblock/studio_mixin.py
+msgid "Error: both text and file upload responses can't be disabled"
+msgstr ""
+
+#: openassessment/xblock/studio_mixin.py
+msgid ""
+"Error: in case if text response is disabled file upload response must be "
+"required"
+msgstr ""
+
+#: openassessment/xblock/studio_mixin.py
+msgid ""
+"Error: in case if file upload response is disabled text response must be "
+"required"
+msgstr ""
+
+#: openassessment/xblock/studio_mixin.py
+msgid "Validation error: {error}"
+msgstr ""
+
+#: openassessment/xblock/studio_mixin.py
+msgid "Successfully updated OpenAssessment XBlock"
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "\"submission\" required to submit answer."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "To submit a response, view this component in Preview or Live mode."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "Multiple submissions are not allowed."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "API returned unclassified exception."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "This response could not be saved."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "This response was not submitted."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "Files descriptions could not be saved."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "Files descriptions were not submitted."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "There was an error uploading your file."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "Content type must be GIF, PNG or JPG."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "Content type must be PDF, GIF, PNG or JPG."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "File type must be one of the following types: {}"
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "File type is not allowed."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "Error retrieving upload URL."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "This response has been saved but not submitted."
+msgstr ""
+
+#: openassessment/xblock/submission_mixin.py
+msgid "This response has not been saved."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "This problem must include at least one assessment."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "The assessment order you selected is invalid."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "In peer assessment, the \"Must Grade\" value must be a positive integer."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "In peer assessment, the \"Graded By\" value must be a positive integer."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid ""
+"In peer assessment, the \"Must Grade\" value must be greater than or equal "
+"to the \"Graded By\" value."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "You must provide at least one example response for learner training."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "Each example response for learner training must be unique."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "The \"required\" value must be true if staff assessment is the only step."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid ""
+"The number of assessments cannot be changed after the problem has been "
+"released."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid ""
+"The assessment type cannot be changed after the problem has been released."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "This rubric definition is not valid."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "Options in '{criterion}' have duplicate name(s): {duplicates}"
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "Criteria with no options must require written feedback."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "Prompts cannot be created or deleted after a problem is released."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "The number of criteria cannot be changed after a problem is released."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "Criteria names cannot be changed after a problem is released"
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "The number of options cannot be changed after a problem is released."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "Point values cannot be changed after a problem is released."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "Learner training must have at least one training example."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "Leaderboard number is invalid."
+msgstr ""
+
+#: openassessment/xblock/validation.py
+msgid "The submission format is invalid."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid ""
+"An isosceles triangle with three layers of similar height. It is shown "
+"upright, so the widest layer is located at the bottom, and the narrowest "
+"layer is located at the top."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "The Top Zone"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "The Middle Zone"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "The Bottom Zone"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Use this zone to associate an item with the top layer of the triangle."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid ""
+"Use this zone to associate an item with the middle layer of the triangle."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid ""
+"Use this zone to associate an item with the bottom layer of the triangle."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Correct! This one belongs to {zone}."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "No, this item does not belong here. Try again."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "You silly, there are no zones for this one."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Of course it goes here! It goes anywhere!"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Goes to the top"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Goes to the middle"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Goes to the bottom"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Goes anywhere"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "I don't belong anywhere"
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Drag the items onto the image above."
+msgstr ""
+
+#: drag_and_drop_v2/default_data.py
+msgid "Good work! You have completed this drag and drop problem."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid ""
+"The title of the drag and drop problem. The title is displayed to learners."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Drag and Drop"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid ""
+"Standard mode: the problem provides immediate feedback each time a learner "
+"drops an item on a target zone. Assessment mode: the problem provides "
+"feedback only after a learner drops all available items on target zones."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Standard"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Assessment"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Maximum attempts"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Show title"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Display the title to the learner?"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Problem text"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "The description of the problem or instructions shown to the learner."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Show \"Problem\" heading"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Display the heading \"Problem\" above the problem text?"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Defines the number of points the problem is worth."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Item background color"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid ""
+"The background color of draggable items in the problem (example: 'blue' or "
+"'#0000ff')."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Item text color"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Text color to use for draggable items (example: 'white' or '#ffffff')."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Maximum items per zone"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid ""
+"This setting limits the number of items that can be dropped into a single "
+"zone."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Problem data"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid ""
+"Information about zones, items, feedback, and background image for this "
+"problem. This information is derived from the input that a course author "
+"provides via the interactive editor when configuring the problem."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid ""
+"Information about current positions of items that a learner has dropped on "
+"the target image."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Number of attempts learner used"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Indicates whether a learner has completed the problem at least once"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid ""
+"DEPRECATED. Keeps maximum score achieved by student as a weighted value."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid ""
+"Keeps maximum score achieved by student as a raw value between 0 and 1."
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Unknown DnDv2 mode {mode} - course is misconfigured"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "show_answer handler should only be called for assessment mode"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "There are attempts remaining"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "do_attempt handler should only be called for assessment mode"
+msgstr ""
+
+#: drag_and_drop_v2/drag_and_drop_v2.py
+msgid "Max number of attempts reached"
+msgstr ""
+
+#: drag_and_drop_v2/utils.py
+msgid "Your highest score is {score}"
+msgstr ""
+
+#: drag_and_drop_v2/utils.py
+msgid "Final attempt was used, highest score is {score}"
+msgstr ""
+
+#: drag_and_drop_v2/utils.py
+msgid "Correctly placed {correct_count} item."
+msgid_plural "Correctly placed {correct_count} items."
+msgstr[0] ""
+msgstr[1] ""
+
+#: drag_and_drop_v2/utils.py
+msgid "Misplaced {misplaced_count} item."
+msgid_plural "Misplaced {misplaced_count} items."
+msgstr[0] ""
+msgstr[1] ""
+
+#: drag_and_drop_v2/utils.py
+msgid ""
+"Misplaced {misplaced_count} item. Misplaced item was returned to item bank."
+msgid_plural ""
+"Misplaced {misplaced_count} items. Misplaced items were returned to item "
+"bank."
+msgstr[0] ""
+msgstr[1] ""
+
+#: drag_and_drop_v2/utils.py
+msgid "Did not place {missing_count} required item."
+msgid_plural "Did not place {missing_count} required items."
+msgstr[0] ""
+msgstr[1] ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop.html
+msgid "Loading drag and drop problem."
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Basic Settings"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Introductory feedback"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Final feedback"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Zones"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Background Image"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Provide custom image"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Generate image automatically"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Background URL"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Change background"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid ""
+"For example, 'http://example.com/background.png' or "
+"'/static/background.png'."
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Zone Layout"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Number of columns"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Number of rows"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Number of columns and rows."
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Zone Size"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Zone width"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Zone height"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Size of a single zone in pixels."
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Generate image and zones"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Background description"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid ""
+"\n"
+"                            Please provide a description of the image for non-visual users.\n"
+"                            The description should provide sufficient information to allow anyone\n"
+"                            to solve the problem even without seeing the image.\n"
+"                        "
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Zone labels"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Display label names on the image"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Zone borders"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Display zone borders on the image"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Zone definitions"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Add a zone"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Items"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Item definitions"
+msgstr ""
+
+#: drag_and_drop_v2/templates/html/drag_and_drop_edit.html
+msgid "Add an item"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "internally reviewed"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "All Unreviewed"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "All Unreviewed Failures"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "active proctored exams"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "courses with active proctored exams"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Created"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Download Software Clicked"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Ready To Start"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Started"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Ready To Submit"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Declined"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Timed Out"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Submitted"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Second Review Required"
+msgstr ""
+
+#: edx_proctoring/admin.py
+msgid "Rejected"
+msgstr ""
+
+#: edx_proctoring/api.py
+msgid "your course"
+msgstr ""
+
+#: edx_proctoring/api.py
+msgid "Proctoring Results For {course_name} {exam_name}"
+msgstr ""
+
+#: edx_proctoring/api.py
+msgid "Proctoring Review In Progress For {course_name} {exam_name}"
+msgstr ""
+
+#: edx_proctoring/api.py
+msgid "Proctored exam {exam_name} in {course_name} for user {username}"
+msgstr ""
+
+#: edx_proctoring/api.py
+msgid "short_description"
+msgstr ""
+
+#: edx_proctoring/utils.py
+msgid "{num_of_hours} hour"
+msgstr ""
+
+#: edx_proctoring/utils.py
+msgid "{num_of_hours} hours"
+msgstr ""
+
+#: edx_proctoring/utils.py
+msgid "{num_of_minutes} minutes"
+msgstr ""
+
+#: edx_proctoring/utils.py
+msgid " and {num_of_minutes} minute"
+msgstr ""
+
+#: edx_proctoring/utils.py
+msgid "{num_of_minutes} minute"
+msgstr ""
+
+#: edx_proctoring/utils.py
+msgid " and {num_of_minutes} minutes"
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "could not determine the course_id"
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "Must be a Staff User to Perform this request."
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "you have {remaining_time} remaining"
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "you have less than a minute remaining"
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "timed"
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "practice"
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "proctored"
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "No exams in course {course_id}."
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "No instructor dashboard for {proctor_service}"
+msgstr ""
+
+#: edx_proctoring/views.py
+msgid "No proctored exams in course {course_id}"
+msgstr ""
+
+#: edx_proctoring/templates/emails/proctoring_attempt_satisfactory_email.html
+#: edx_proctoring/templates/emails/proctoring_attempt_submitted_email.html
+#: edx_proctoring/templates/emails/proctoring_attempt_unsatisfactory_email.html
+#, python-format
+msgid ""
+"\n"
+"        Hi %(username)s,\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/emails/proctoring_attempt_satisfactory_email.html
+#, python-format
+msgid ""
+"\n"
+"        Your proctored exam \"%(exam_name)s\" in\n"
+"        <a href=\"%(course_url)s\">%(course_name)s</a> was reviewed and you\n"
+"        met all exam requirements.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/emails/proctoring_attempt_satisfactory_email.html
+#: edx_proctoring/templates/emails/proctoring_attempt_unsatisfactory_email.html
+#, python-format
+msgid ""
+"\n"
+"        If you have any questions about your results, contact %(platform)s\n"
+"        support at\n"
+"        <a href=\"mailto:%(contact_email)s?Subject=%(support_email_subject)s\">\n"
+"            %(contact_email)s\n"
+"        </a>.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/emails/proctoring_attempt_submitted_email.html
+#, python-format
+msgid ""
+"\n"
+"        Your proctored exam \"%(exam_name)s\" in\n"
+"        <a href=\"%(course_url)s\">%(course_name)s</a> was submitted\n"
+"        successfully and will now be reviewed to ensure all proctoring exam\n"
+"        rules were followed. You should receive an email with your updated exam\n"
+"        status within 5 business days.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/emails/proctoring_attempt_submitted_email.html
+#, python-format
+msgid ""
+"\n"
+"        If you have any questions about proctoring, contact %(platform)s\n"
+"        support at\n"
+"        <a href=\"mailto:%(contact_email)s?Subject=%(support_email_subject)s\">\n"
+"            %(contact_email)s\n"
+"        </a>.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/emails/proctoring_attempt_unsatisfactory_email.html
+#, python-format
+msgid ""
+"\n"
+"        Your proctored exam \"%(exam_name)s\" in\n"
+"        <a href=\"%(course_url)s\">%(course_name)s</a> was reviewed and the\n"
+"        team found one or more violations of the proctored exam rules. Examples\n"
+"        of behaviors that may result in a rules violation include browsing\n"
+"        the internet, using a phone, or getting help from another person. As a\n"
+"        result of the violation(s), you did not successfully meet the proctored\n"
+"        exam requirements.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/entrance.html
+msgid ""
+"\n"
+"      Try a proctored exam\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/entrance.html
+msgid ""
+"\n"
+"      Get familiar with proctoring for real exams later in the course. This practice exam has no impact\n"
+"      on your grade in the course.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/entrance.html
+msgid "Continue to my practice exam"
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/entrance.html
+msgid ""
+"\n"
+"        You will be guided through steps to set up online proctoring software and verify your identity.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/error.html
+msgid ""
+"\n"
+"      There was a problem with your practice proctoring session\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/error.html
+msgid ""
+"\n"
+"      Your practice proctoring results: <b class=\"failure\"> Unsatisfactory </b>\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/error.html
+msgid ""
+"\n"
+"      Your proctoring session ended before you completed this practice exam.\n"
+"      You can retry this practice exam if you had problems setting up the online proctoring software.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/error.html
+msgid "Try this practice exam again"
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/submitted.html
+msgid ""
+"\n"
+"      You have submitted this practice proctored exam\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/submitted.html
+msgid ""
+"\n"
+"      Practice exams do not affect your grade.\n"
+"      You have completed this practice exam and can continue with your course work.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/practice_exam/submitted.html
+msgid "You can also retry this practice exam"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/confirm-decline.html
+msgid ""
+"\n"
+"        Are you sure you want to take this exam without proctoring?\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/confirm-decline.html
+msgid ""
+"\n"
+"        If you take this exam without proctoring, you will not be eligible for course credit or the MicroMasters credential if either applies to this course.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/confirm-decline.html
+msgid "Continue Exam Without Proctoring"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/entrance.html
+#: edx_proctoring/templates/proctored_exam/failed-prerequisites.html
+#: edx_proctoring/templates/proctored_exam/pending-prerequisites.html
+msgid ""
+"\n"
+"      This exam is proctored\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/entrance.html
+msgid ""
+"\n"
+"      To be eligible for credit or the program credential associated with this course, you must pass the proctoring review for this exam.\n"
+"\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/entrance.html
+msgid "Continue to my proctored exam."
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/entrance.html
+msgid ""
+"\n"
+"        You will be guided through steps to set up online proctoring software and verify your identity.</br>\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/error.html
+msgid ""
+"\n"
+"      Error with proctored exam\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/error.html
+#, python-format
+msgid ""
+"\n"
+"      A technical error has occurred with your proctored exam. All\n"
+"      exam data, including completed answers, has been lost. To\n"
+"      resolve this error, please\n"
+"      contact <a href=\"mailto:%(tech_support_email)s\">technical\n"
+"      support</a>.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/error.html
+msgid ""
+"\n"
+"      Once the error is resolved, you will need to restart the exam\n"
+"      and answer all questions again. If you have concerns about your\n"
+"      proctoring session results, please contact your course team.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/expired.html
+#: edx_proctoring/templates/timed_exam/expired.html
+msgid ""
+"\n"
+"      The due date for this exam has passed\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/expired.html
+#: edx_proctoring/templates/timed_exam/expired.html
+msgid ""
+"\n"
+"      Because the due date has passed, you are no longer able to take this exam.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/failed-prerequisites.html
+msgid ""
+"\n"
+"    You did not satisfy the requirements for taking this exam with proctoring.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/failed-prerequisites.html
+msgid ""
+"\n"
+"    You did not satisfy the following prerequisites:\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/failed-prerequisites.html
+msgid ""
+"\n"
+"        Due to unsatisfied prerequisites, you can only take this exam without proctoring.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/failed-prerequisites.html
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your requirements, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/footer.html
+msgid ""
+"\n"
+"        About Proctored Exams\n"
+"        "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                Complete your verification before starting the proctored exam.\n"
+"            "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                You must successfully complete identity verification before you can start the proctored exam.\n"
+"            "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                    Your verification is pending. Results should be available 2-3 days after you\n"
+"                    submit your verification.\n"
+"                "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                    Your verification attempt failed. Please read our guidelines to make\n"
+"                    sure you understand the requirements for successfully completing verification,\n"
+"                    then try again.\n"
+"                "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                    Your verification has expired. You must successfully complete a new identity verification\n"
+"                    before you can start the proctored exam.\n"
+"                "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/id_verification.html
+msgid "Continue to Verification"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                    Make sure you are on a computer with a webcam, and that you have valid photo identification\n"
+"                    such as a driver's license or passport, before you continue.\n"
+"                "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"      Follow these steps to set up and start your proctored exam.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"          Note: As part of the proctored exam setup, you will be asked\n"
+"          to verify your identity. Before you begin, make sure you are\n"
+"          on a computer with a webcam, and that you have a valid form\n"
+"          of photo identification such as a driver’s license or\n"
+"          passport.\n"
+"        "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+#, python-format
+msgid ""
+"\n"
+"            If you have issues relating to proctoring, you can contact %(provider_name)s technical support by emailing %(provider_tech_support_email)s  or by calling %(provider_tech_support_phone)s.\n"
+"          "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid "Start System Check"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        1. Copy this unique exam code. You will be prompted to paste this code later before you start the exam.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        Select the exam code, then copy it using Command+C (Mac) or Control+C (Windows).\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        2. Click the button below to set up proctoring.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        A new window will open. You will run a system check before downloading the proctoring application.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        You will be asked to verify your identity as part of the proctoring exam set up.\n"
+"        Make sure you are on a computer with a webcam, and that you have valid photo identification\n"
+"        such as a driver's license or passport, before you continue.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"          3. When you have finished setting up proctoring, start the exam.\n"
+"        "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+msgid "Start Proctored Exam"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/instructions.html
+#: edx_proctoring/templates/proctored_exam/proctoring_opt_out_button.html
+msgid "Take this exam without proctoring."
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/pending-prerequisites.html
+msgid ""
+"\n"
+"    You have not completed the prerequisites for this exam. All requirements must be satisfied before you can take this proctored exam.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/pending-prerequisites.html
+msgid ""
+"\n"
+"    The following prerequisites are in a <strong>pending</strong> state and must be successfully completed before you can proceed:\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/pending-prerequisites.html
+msgid ""
+"\n"
+"    You can take this exam with proctoring only when all prerequisites have been successfully completed.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html
+msgid " Your Proctoring Session Has Started "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html
+msgid ""
+" From this point in time, you must follow the <a "
+"href=\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">online "
+"proctoring rules</a> to pass the proctoring review for your exam. "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html
+msgid ""
+"\n"
+"            Do not close this window before you finish your exam. if you close this window, your proctoring session ends, and you will not successfully complete the proctored exam.\n"
+"          "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html
+#, python-format
+msgid ""
+"\n"
+"            Return to the %(platform_name)s course window to start your exam. When you have finished your exam and\n"
+"            have marked it as complete, you can close this window to end the proctoring session\n"
+"            and upload your proctoring session data for review.\n"
+"          "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+msgid ""
+"\n"
+"      Important\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+#, python-format
+msgid ""
+"\n"
+"        &#8226; You have %(total_time)s to complete this exam. </br>\n"
+"        &#8226; Once you start the exam, you cannot stop the timer. </br>\n"
+"        &#8226; For all question types, you must click \"submit\" to complete your answer. </br>\n"
+"        &#8226; If time expires before you click \"End My Exam\", only your submitted answers will be graded.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+msgid ""
+"\n"
+"      Proctored Exam Rules\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+msgid ""
+"\n"
+"         You must adhere to the following rules while you complete this exam.\n"
+"         <strong>If you violate these rules, you will receive a score of 0 on the exam, and you will not be eligible for academic course credit.\n"
+"         </strong></br>\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+#, python-format
+msgid ""
+"\n"
+"          %(platform_name)s Rules for Online Proctored Exams\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+msgid ""
+"\n"
+"      Additional Exam Rules\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+#, python-format
+msgid ""
+"\n"
+"        The following additional rules apply to this exam. These rules take precedence over the Rules for Online Proctored Exams.</br> </br>\n"
+"\n"
+"        %(exam_review_policy)s </br>\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+msgid "Start my exam"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_start.html
+msgid "Starting Exam"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Are you sure you want to end your proctored exam?\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_submit.html
+msgid ""
+"Make sure that you have selected \"Submit\" for each answer before you "
+"submit your exam."
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_submit.html
+msgid ""
+"Once you click \"Yes, end my proctored exam\", the exam will be closed, and "
+"your proctoring session will be submitted for review."
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_submit.html
+msgid "Yes, end my proctored exam"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_submit.html
+msgid "Ending Exam"
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/ready_to_submit.html
+msgid ""
+"\n"
+"        No, I'd like to continue working\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/rejected.html
+msgid ""
+"\n"
+"      Your proctoring session was reviewed, but did not pass all requirements\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/rejected.html
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your proctoring session results, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/rejected.html
+msgid ""
+"\n"
+"      If you have concerns about your proctoring session results, contact your course team.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/submitted.html
+msgid ""
+"\n"
+"      You have submitted this proctored exam for review\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/submitted.html
+msgid "Your recorded data should now be uploaded for review."
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/submitted.html
+msgid ""
+"If the proctoring software window is still open, close it now and confirm "
+"that you want to quit the application."
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/submitted.html
+msgid ""
+"Proctoring results are usually available within 5 business days after you "
+"submit your exam."
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/submitted.html
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your proctored exam results, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/verified.html
+msgid ""
+"\n"
+"      Your proctoring session was reviewed successfully. Go to your progress page to view your exam grade.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/visit_exam_content.html
+msgid ""
+"\n"
+"      To view your exam questions and responses, select <strong>View my exam</strong>. The exam's review status is shown in the left navigation pane.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/proctored_exam/visit_exam_content.html
+msgid "View my exam"
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/entrance.html
+#, python-format
+msgid ""
+"\n"
+"    %(exam_name)s is a Timed Exam (%(total_time)s)\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/entrance.html
+msgid "This exam has a time limit associated with it."
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/entrance.html
+msgid "To pass this exam, you must complete the problems in the time allowed."
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/entrance.html
+msgid "After you select "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/entrance.html
+msgid "I am ready to start this timed exam,"
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/entrance.html
+msgid "you will have "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/entrance.html
+msgid " to complete and submit the exam."
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/entrance.html
+msgid ""
+"\n"
+"        I am ready to start this timed exam.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/footer.html
+msgid "Can I request additional time to complete my exam?"
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/footer.html
+msgid ""
+"\n"
+"      If you have disabilities,\n"
+"      you might be eligible for an additional time allowance on timed exams.\n"
+"      Ask your course team for information about additional time allowances.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Are you sure that you want to submit your timed exam?\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Make sure that you have selected \"Submit\" for each problem before you submit your exam.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      After you submit your exam, your exam will be graded.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Yes, submit my timed exam.\n"
+"    "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"        No, I want to continue working.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/submitted.html
+msgid ""
+"\n"
+"        The time allotted for this exam has expired. Your exam has been submitted and any work you completed will be graded.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/submitted.html
+msgid ""
+"\n"
+"        You have submitted your timed exam.\n"
+"      "
+msgstr ""
+
+#: edx_proctoring/templates/timed_exam/submitted.html
+msgid ""
+"\n"
+"        After the due date has passed, you can review the exam, but you cannot change your answers.\n"
+"      "
 msgstr ""
