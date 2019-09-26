@@ -19,6 +19,7 @@ from openedx.core.djangoapps.user_authn.views.deprecated import create_account
 from util.password_policy_validators import create_validator_config
 
 
+@patch.dict("django.conf.settings.FEATURES", {'AUTOMATIC_AUTH_FOR_TESTING': True})
 class TestPasswordPolicy(TestCase):
     """
     Go through some password policy tests to make sure things are properly working
