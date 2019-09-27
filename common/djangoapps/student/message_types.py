@@ -24,3 +24,10 @@ class EmailChange(BaseMessageType):
         super(EmailChange, self).__init__(*args, **kwargs)
 
         self.options['transactional'] = True
+
+
+class AccountActivation(BaseMessageType):
+    def __init__(self, *args, **kwargs):
+        super(AccountActivation, self).__init__(*args, **kwargs)
+
+        self.options['transactional'] = True  # pylint: disable=unsupported-assignment-operation

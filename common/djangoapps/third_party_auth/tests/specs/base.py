@@ -500,6 +500,7 @@ class IntegrationTestMixin(testutil.TestCase, test.TestCase, HelperMixin):
 
 @unittest.skipUnless(
     testutil.AUTH_FEATURES_KEY in django_settings.FEATURES, testutil.AUTH_FEATURES_KEY + ' not in settings.FEATURES')
+@mock.patch.dict("django.conf.settings.FEATURES", {'AUTOMATIC_AUTH_FOR_TESTING': True})
 @django_utils.override_settings()  # For settings reversion on a method-by-method basis.
 class IntegrationTest(testutil.TestCase, test.TestCase, HelperMixin):
     """Abstract base class for provider integration tests."""
@@ -731,7 +732,8 @@ class IntegrationTest(testutil.TestCase, test.TestCase, HelperMixin):
             actions.do_complete(request.backend, social_views._do_login, user=user, request=request))
         self.assert_account_settings_context_looks_correct(account_settings_context(request))
 
-    def test_signin_fails_if_account_not_active(self):
+    @mock.patch('openedx.core.djangoapps.user_authn.views.login.compose_and_send_activation_email')
+    def test_signin_fails_if_account_not_active(self, _mock_activation_email):
         _, strategy = self.get_request_and_strategy(
             auth_entry=pipeline.AUTH_ENTRY_LOGIN, redirect_uri='social:complete')
         strategy.request.backend.auth_complete = mock.MagicMock(return_value=self.fake_auth_complete(strategy))
