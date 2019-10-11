@@ -16,7 +16,7 @@ git+https://github.com/oppia/xblock.git@b65908013cbe494c939f66db67e1632b9cd271ba
 git+https://github.com/OfficeDev/xblock-officemix.git@fc8eb981b98ca1d475ad2061329727b58b9f8c37#egg=officemix
 
 # UBC Peer Instruction Tool for edX
-git+https://github.com/ubc/ubcpi.git@372497dfcf42c9dbeaa318308a14a1babb36f2c6#egg=xblock-ubcpi
+git+https://github.com/edunext/ubcpi.git@8770d2ef5b62fc997f66a6e8f1bb7dc2655a8d4f#egg=ubcpi-xblock==0.6.6ednx
 
 # edx-solutions
 git+https://github.com/open-craft/xblock-mentoring.git@203c9d2b87c301b3170b209a9b1358583a8f0e8b#egg=xblock-mentoring
