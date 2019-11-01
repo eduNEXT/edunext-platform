@@ -201,13 +201,13 @@ class CoursewareIndex(View):
             if not allow_anonymous:
                 PageLevelMessages.register_warning_message(
                     request,
-                    Text(_("You are not signed in. To see additional course content, {sign_in_link} or "
-                           "{register_link}, and enroll in this course.")).format(
-                        sign_in_link=HTML('<a href="{url}">{sign_in_label}</a>').format(
+                    Text(_(u"You are not signed in. To see additional course content, {sign_in_link} or "
+                       u"{register_link}, and enroll in this course.")).format(
+                        sign_in_link=HTML(u'<a href="{url}">{sign_in_label}</a>').format(
                             sign_in_label=_('sign in'),
                             url='{}?{}'.format(reverse('signin_user'), qs),
                         ),
-                        register_link=HTML('<a href="/{url}">{register_label}</a>').format(
+                        register_link=HTML(u'<a href="/{url}">{register_label}</a>').format(
                             register_label=_('register'),
                             url='{}?{}'.format(reverse('register_user'), qs),
                         ),
@@ -319,7 +319,7 @@ class CoursewareIndex(View):
             if not child:
                 # User may be trying to access a child that isn't live yet
                 if not self._is_masquerading_as_student():
-                    raise Http404('No {block_type} found with name {url_name}'.format(
+                    raise Http404(u'No {block_type} found with name {url_name}'.format(
                         block_type=block_type,
                         url_name=url_name,
                     ))
