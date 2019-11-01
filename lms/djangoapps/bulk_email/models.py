@@ -152,10 +152,10 @@ class CohortTarget(Target):
         return self.short_display()
 
     def short_display(self):
-        return u"{}-{}".format(self.target_type, self.cohort.name)
+        return u"{}-{}".format(self.target_type, self.cohort.name).encode('utf8')
 
     def long_display(self):
-        return u"Cohort: {}".format(self.cohort.name)
+        return u"Cohort: {}".format(self.cohort.name).encode('utf8')
 
     @classmethod
     def ensure_valid_cohort(cls, cohort_name, course_id):
