@@ -152,10 +152,10 @@ class CohortTarget(Target):
         return self.short_display()
 
     def short_display(self):
-        return "{}-{}".format(self.target_type, self.cohort.name)
+        return u"{}-{}".format(self.target_type, self.cohort.name)
 
     def long_display(self):
-        return "Cohort: {}".format(self.cohort.name)
+        return u"Cohort: {}".format(self.cohort.name)
 
     @classmethod
     def ensure_valid_cohort(cls, cohort_name, course_id):
@@ -170,7 +170,7 @@ class CohortTarget(Target):
             cohort = get_cohort_by_name(name=cohort_name, course_key=course_id)
         except CourseUserGroup.DoesNotExist:
             raise ValueError(
-                "Cohort {cohort} does not exist in course {course_id}".format(
+                u"Cohort {cohort} does not exist in course {course_id}".format(
                     cohort=cohort_name,
                     course_id=course_id
                 )
