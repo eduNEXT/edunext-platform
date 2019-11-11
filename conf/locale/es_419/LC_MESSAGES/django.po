@@ -13,12 +13,6 @@
 # AngelesAlvarez, 2019
 # Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2019
 #
-# #-#-#-#-#  ubcpi.po (XBlocks)  #-#-#-#-#
-# Translators:
-# Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2018
-# Diego Rojas <diego.rojas@edunext.co>, 2017
-# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2017
-# Liz Pacheco <alamofort@gmail.com>, 2016
 # #-#-#-#-#  openassessment.po (edx-platform)  #-#-#-#-#
 # #-#-#-#-#  django.po (edx-ora2)  #-#-#-#-#
 # edX translation file
@@ -4147,13 +4141,14 @@ msgstr "LTI ID"
 msgid ""
 "Enter the LTI ID for the external LTI provider.  This value must be the same"
 " LTI ID that you entered in the LTI Passports setting on the Advanced "
-"Settings page.<br />See {docs_anchor_open}the edX LTI "
+"Settings page.{break_tag}See {docs_anchor_open}the edX LTI "
 "documentation{anchor_close} for more details on this setting."
 msgstr ""
-"Ingrese el ID LTI para el proveedor externo de LTI. Este valor debe ser el "
-"mismo ID LTI que ingresado en la configuración de Passport LTI en la página "
-"de Configuración Avanzada.<br />Vea {docs_anchor_open}la documentación de "
-"edX LTI{anchor_close} para conocer detalles sobre esta configuración."
+"Ingresa tu LTI ID para el proveedor externo de LTI . Este valor debe ser el "
+"mismo LTI ID que ingresaste en la configuración del password de LTI en la "
+"página de configuración avanzada. {break_tag} Consulta {docs_anchor_open} la"
+" documentación de edX LTI {anchor_close} para obtener más detalles sobre "
+"esta configuración."
 
 #: common/lib/xmodule/xmodule/lti_module.py lti_consumer.py
 msgid "LTI URL"
@@ -4163,14 +4158,14 @@ msgstr "LTI URL"
 #, python-brace-format
 msgid ""
 "Enter the URL of the external tool that this component launches. This "
-"setting is only used when Hide External Tool is set to False.<br />See "
+"setting is only used when Hide External Tool is set to False.{break_tag}See "
 "{docs_anchor_open}the edX LTI documentation{anchor_close} for more details "
 "on this setting."
 msgstr ""
-"Ingrese la URL de la herramienta externa que este componente inicializa. "
-"Esta configuración es utilizada cuando la opción OCULTAR LA HERRAMIENTA "
-"EXTERNA  está en FALSO.<br />Vea {docs_anchor_open}the edX LTI "
-"documentation{anchor_close} for more details on this setting. "
+"Ingrese el URL de la herramienta externa que inicia este Componente. Esta "
+"configuración solo se usa cuando la herramienta externa falso {break_tag} "
+"Consulte {docs_anchor_open} la documentación de edX LTI {anchor_close} para "
+"obtener más detalles sobre esta configuración."
 
 #: common/lib/xmodule/xmodule/lti_module.py lti_consumer.py
 msgid "Custom Parameters"
@@ -4180,14 +4175,15 @@ msgstr "Parámetros personalizados"
 #, python-brace-format
 msgid ""
 "Add the key/value pair for any custom parameters, such as the page your "
-"e-book should open to or the background color for this component.<br />See "
-"{docs_anchor_open}the edX LTI documentation{anchor_close} for more details "
-"on this setting."
+"e-book should open to or the background color for this "
+"component.{break_tag}See {docs_anchor_open}the edX LTI "
+"documentation{anchor_close} for more details on this setting."
 msgstr ""
-"Añada el par clave / valor para cualquier parámetro personalizado, como la "
-"página en que su libro electrónico debe abrirse o el color de fondo para "
-"este componente. <br />Vea {docs_anchor_open}la documentación de edX "
-"LTI{anchor_close} para conocer detalles sobre esta configuración."
+"Agregue la clave / valor para cualquier parámetro personalizado, como la "
+"página en la que su libro electrónico  debería abrirse o el color de fondo "
+"de este Componente. {break_tag} Consulte {docs_anchor_open} la documentación"
+" LTI de edX  {anchor_close} para obtener más detalles sobre esta "
+"configuración ."
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Open in New Page"
@@ -14448,12 +14444,12 @@ msgstr "Ocurrió un error al iniciar tu sesión en {platform_name}."
 #: lms/templates/login.html
 msgid ""
 "Please provide the following information to log into your {platform_name} "
-"account. Required fields are noted by <strong class=\"indicator\">bold text "
-"and an asterisk (*)</strong>."
+"account. Required fields are noted by {strong_start}bold text and an "
+"asterisk (*){strong_end}."
 msgstr ""
 "Por favor ingresa la siguiente información para iniciar sesión en tu cuenta "
-"de {platform_name}. Los campos obligatorios se denotan con <strong "
-"class=\"indicator\">texto en negrita y un asterisco (*)</strong>."
+"de {platform_name}. Los campos obligatorios se denotan con {strong_start} "
+"texto en negrita y un asterisco (*){strong_end}."
 
 #: lms/templates/login.html
 msgid "Account Preferences"
@@ -14704,9 +14700,8 @@ msgstr "Ingresar con {provider_name}"
 msgid "Create your own {platform_name} account below"
 msgstr "Crea tu cuenta en {platform_name} a continuación:"
 
-#: lms/templates/register-form.html lms/templates/register-shib.html
+#: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
 msgid ""
 "Required fields are noted by <strong class=\"indicator\">bold text and an "
 "asterisk (*)</strong>."
@@ -14828,6 +14823,14 @@ msgstr "Actualizar mi cuenta de {platform_name}"
 msgid "Welcome {username}!  Please set your preferences below"
 msgstr ""
 "Bienvenido {username}! Por favor ajusta tus preferencias a continuación"
+
+#: lms/templates/register-shib.html
+msgid ""
+"Required fields are noted by {strong_start}bold text and an asterisk "
+"(*){strong_end}."
+msgstr ""
+"Los campos obligatorios se denotan con {strong_start} texto en negrita y un "
+"asterisco (*){strong_end}."
 
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -14989,8 +14992,8 @@ msgid "e.g. Your Name (for certificates)"
 msgstr "Ej: Tu nombre (así aparecerá en los certificados)"
 
 #: lms/templates/signup_modal.html
-msgid "<i>Welcome</i> {name}"
-msgstr "<i>Bienvenido</i> {name}"
+msgid "{italic_start}Welcome{italic_end} {name}"
+msgstr "{italic_start}Bienvenido{italic_end} {name}"
 
 #: lms/templates/signup_modal.html
 msgid "Full Name *"
@@ -18075,10 +18078,10 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid ""
 "You have completed this course and are eligible to purchase course credit. "
-"Select <strong>Get Credit</strong> to get started."
+"Select {strong_start}Get Credit{strong_end} to get started."
 msgstr ""
 "Has completado este curso y ahora tu eres elegible para comprar créditos de "
-"curso. Selecciona <strong>Obtener Créditos</strong> para comenzar."
+"curso. Selecciona {strong_start}Obtener Créditos{strong_end} para comenzar."
 
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid "You are now eligible for credit from {provider}. Congratulations!"
@@ -18094,12 +18097,12 @@ msgstr "Obten créditos"
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid ""
 "Thank you for your payment. To receive course credit, you must now request "
-"credit at the {link_to_provider_site} website. Select <b>Request Credit</b> "
-"to get started."
+"credit at the {link_to_provider_site} website. Select {break_start}Request "
+"Credit{break_end} to get started."
 msgstr ""
 "Gracias por tu pago. Para recibir el crédito del curso, tú debes hacer la "
-"solicitud en el sitio web {link_to_provider_site}. Selecciona <b>Solicitar "
-"crédito</b> para comenzar."
+"solicitud en el sitio web {link_to_provider_site}. Selecciona "
+"{break_start}Solicitar crédito{break_end} para comenzar."
 
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid "Request Credit"
@@ -18123,13 +18126,13 @@ msgstr "Ver detalles"
 #. provider.
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid ""
-"<b>Congratulations!</b> {provider_name} has approved your request for course"
-" credit. To see your course credit, visit the {link_to_provider_site} "
-"website."
+"{break_start}Congratulations!{break_end} {provider_name} has approved your "
+"request for course credit. To see your course credit, visit the "
+"{link_to_provider_site} website."
 msgstr ""
-"<b>¡Felicitaciones!</b> {provider_name} ha aprobado tu solicitud de créditos"
-" del curso. Para ver tus créditos, visita el sitio web de "
-"{link_to_provider_site}."
+"{break_start}¡Felicitaciones!{break_end} {provider_name} ha aprobado tu "
+"solicitud de créditos del curso. Para ver tus créditos, visita el sitio web "
+"de {link_to_provider_site}."
 
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid "View Credit"
@@ -22645,6 +22648,14 @@ msgstr "Derechos de autor {year}. Todos los derechos reservados."
 msgid "For anyone, anywhere, anytime"
 msgstr "Para cualquiera, en cualquier lugar, en cualquier momento"
 
+#: themes/stanford-style/lms/templates/register-shib.html
+msgid ""
+"Required fields are noted by {strong_indicator}bold text and an asterisk "
+"(*).{strong_close}"
+msgstr ""
+"Los campos obligatorios se denotan con {strong_indicator} texto en negrita y"
+" un asterisco (*){strong_close}."
+
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid ""
 "You will receive an activation email.  You must click on the activation link"
@@ -22925,8 +22936,9 @@ msgstr ""
 msgid "Learn more about certificates"
 msgstr "Aprender más acerca de los certificados"
 
-#: cms/templates/certificates.html cms/templates/settings_graders.html
-msgid "Details &amp; Schedule"
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/settings_advanced.html
+msgid "Details & Schedule"
 msgstr "Detalles y Calendario"
 
 #: cms/templates/certificates.html cms/templates/group_configurations.html
@@ -24030,11 +24042,6 @@ msgstr ""
 "configuración de grupo sólo si no está en uso en un experimento. Para "
 "eliminar una configuración, pase el ratón sobre su cuadro y haga clic en el "
 "icono de borrar."
-
-#: cms/templates/group_configurations.html
-#: cms/templates/settings_advanced.html
-msgid "Details & Schedule"
-msgstr "Detalles y Calendario"
 
 #: cms/templates/howitworks.html
 msgid "Welcome"
@@ -25977,6 +25984,10 @@ msgstr ""
 " exámenes y especificar el peso que tendrá cada actividad en la calificación"
 " final del estudiante."
 
+#: cms/templates/settings_graders.html
+msgid "Details &amp; Schedule"
+msgstr "Detalles y Calendario"
+
 #: cms/templates/studio_xblock_wrapper.html
 msgid "Expand or Collapse"
 msgstr "Expandir o Colapsar"
@@ -27688,585 +27699,6 @@ msgstr ""
 "(Si es realmente un usuario experimentado, en OLX, le permitimos\n"
 "    añadir una etiqueta align, la cual puede ubicar a la izquierda-centro, o justificar a la derecha el\n"
 "    XBlock)"
-
-msgid "Your rationale must be a minimum of {{rationale_size.min}} characters."
-msgstr ""
-"Tu justificación debe tener un mínimo de {{rationale_size.min}} caracteres."
-
-msgid ""
-"\"Simple\" means examples for different answer possibilities are "
-"intentionally selected when students are viewing peer answers.<br>\"Random\""
-" means examples are selected at random and may not include different answer "
-"possibilities."
-msgstr ""
-"\"Simple\" significa que ejemplos para diferentes posibilidades de respuesta"
-" son intencionalmente seleccionados cuando los estudiantes están viendo las "
-"respuestas de sus compañeros.<br>\"Random\" significa que los ejemplos son "
-"seleccionados de manera aleatoria y pueden no incluir diferentes "
-"posibilidades de respuestas."
-
-msgid "&nbsp;({{weight}} point possible)"
-msgstr "&nbsp;({{weight}} posible punto)"
-
-msgid "&nbsp;({{weight}} points possible)"
-msgstr "&nbsp;({{weight}} posibles puntos)"
-
-msgid "(Option {{rc.answer_original + 1}})"
-msgstr "(Opción {{rc.answer_original + 1}})"
-
-msgid "(Option {{rc.answer_revised + 1}})"
-msgstr "(Opción {{rc.answer_revised + 1}})"
-
-msgid "(You chose this option)"
-msgstr "(Seleccionaste esta opción)"
-
-msgid "(correct)"
-msgstr "(Correcto)"
-
-msgid "({{weight}} point possible)"
-msgstr "({{weight}} punto posible)"
-
-msgid "({{weight}} points possible)"
-msgstr "({{weight}} puntos posibles)"
-
-msgid ", Completed"
-msgstr ", Completado"
-
-msgid ", In Progress"
-msgstr ", En Progreso"
-
-msgid ", Upcoming"
-msgstr ", Próximo"
-
-msgid "Add New Answer"
-msgstr "Añadir Nueva Respuesta"
-
-msgid "Add New Example"
-msgstr "Añadir Nuevo Ejemplo"
-
-msgid ""
-"Add example answers to the answer pool for this question. Students most "
-"likely to see these answers are those completing the assignment first, when "
-"the answer pool is small."
-msgstr ""
-"Añada respuestas de ejemplo a el grupo de respuestas para esta pregunta. Los"
-" estudiantes con más posibilidades de ver estas respuestas son aquellos que "
-"terminan la tarea primero, cuando el grupo de respuestas es pequeño."
-
-msgid ""
-"Add the text for this answer. If you wish to add an image, press the button "
-"below."
-msgstr ""
-"Añada el texto para esta respuesta. Si desea agregar una imagen, de clic en "
-"el botón de abajo."
-
-msgid ""
-"Alternative text - a description of the image for non-visual users. The "
-"description should provide all the information needed for someone to answer "
-"the question if the image did not load."
-msgstr ""
-"Texto alternativo -una descripción de la imagen para usuarios no visuales. "
-"La descripción debería proveer toda la información necesaria para alguien "
-"responda a la pregunta si la imagen no cargó."
-
-msgid "Answer Options"
-msgstr "Opciones de respuesta"
-
-msgid "Answer {{$index + 1}}"
-msgstr "Respuesta {{$index + 1}}"
-
-msgid "Answers Students See - Number Selected <font color=\"red\">*</font>"
-msgstr ""
-"Respuestas que los Estudiantes ven - Seleccionar Número de ejemplos <font "
-"color=\"red\">*</font>"
-
-msgid "Answers Students See - Selection Logic <font color=\"red\">*</font>"
-msgstr ""
-"Respuestas que los Estudiantes ven - Selección Lógica <font "
-"color=\"red\">*</font>"
-
-msgid ""
-"Choose if you want the image to appear above or below the question text."
-msgstr ""
-"Elige si quieres que la imagen aparezca abajo o arriba del texto de la "
-"pregunta."
-
-msgid "Choose if you want the image to appear above or below the question."
-msgstr ""
-"Elige si quieres que la imagen aparezca abajo o arriba del texto de la "
-"pregunta."
-
-msgid ""
-"Choose the answer you consider correct, or select \"n/a\" if there is no "
-"correct answer."
-msgstr ""
-"Seleccione la respuesta que considere correcta o seleccione \"n/a\" si no "
-"hay respuesta correcta."
-
-msgid "Choose the answer."
-msgstr "Escoger esta respuesta."
-
-msgid "Class Breakdown"
-msgstr "Desglose de la Clase"
-
-msgid "Correct Answer <font color=\"red\">*</font>"
-msgstr "Respuesta Correcta <font color=\"red\">*</font>"
-
-msgid "Correct Option"
-msgstr "Opción Correcta"
-
-msgid "Display Name <font color=\"red\">*</font>"
-msgstr "Nombre para mostrar <font color=\"red\">*</font>"
-
-msgid "Error retrieving data!"
-msgstr "Error recuperando los datos!"
-
-msgid "Error retrieving statistics!"
-msgstr "Error recuperando las estadísticas!"
-
-msgid "Error saving question"
-msgstr "Error guardando la pregunta"
-
-msgid "Error submitting answer!"
-msgstr "Error enviando la respuesta!"
-
-msgid "Example Answer {{$index + 1}}"
-msgstr "Ejemplo de Respuesta {{$index + 1}}"
-
-msgid "Example Answers <font color=\"red\">*</font>"
-msgstr "Respuestas de Ejemplo <font color=\"red\">*</font>"
-
-msgid "Explain to other students why you chose this answer (Required):"
-msgstr ""
-"Explica a otros estudiantes porque seleccionaste esta respuestas "
-"(Requerido):"
-
-msgid "Explanation (optional)"
-msgstr "Explicación (opcional)"
-
-msgid "Explanation <font color=\"red\">*</font>"
-msgstr "Explicación <font color=\"red\">*</font>"
-
-msgid "Final Answer Selection"
-msgstr "Selección de respuesta final"
-
-msgid "Final Answer Selection:"
-msgstr "Selección de respuesta final:"
-
-msgid ""
-"First, the learner answers a multiple choice question and provides an "
-"explanation for the answer. Next, the learner sees answers and explanations "
-"submitted by other learners. After reflecting on these peer responses, the "
-"learner can make revisions and submit a final answer and explanation. "
-"Finally, the learner sees the correct answer, if supplied, and any "
-"explanation that you provided for it."
-msgstr ""
-"Primero, el estudiante responde una pregunta de selección múltiple y provee "
-"una explicación para la respuesta. Luego, el estudiante ve las respuestas y "
-"explicaciones enviadas por otros estudiantes. Después de reflexionar sobre "
-"las respuestas de sus compañeros, el estudiante puede hacer revisiones y "
-"enviar una respuesta y explicación final. Finalmente, el estudiante ve la "
-"respuesta correcta. Si se suministró, y cualquier explicación que haya "
-"proveído."
-
-msgid ""
-"In order to move to the next step please briefly explain why you chose this "
-"answer."
-msgstr ""
-"Para seguir al siguiente paso por favor explique brevemente por qué eligió "
-"esta respuesta."
-
-msgid "In order to move to the next step please choose an answer."
-msgstr "Para pasar al siguiente paso por favor elija una respuesta."
-
-msgid ""
-"In order to move to the next step, please choose an answer and briefly "
-"explain your choice."
-msgstr ""
-"Para mover al siguiente paso, por favor selecciona una respuesta y explique "
-"brevemente tu elección."
-
-msgid ""
-"In the next step, you will be shown a selection of other responses that may "
-"help you refine your answer."
-msgstr ""
-"En el siguiente paso, se le mostrará una selección de respuestas que pueden "
-"ayudarte a clarificar su respuesta."
-
-msgid "Initial Answer Selection"
-msgstr "Selección de respuesta inicial"
-
-msgid "Initial Answer Selection:"
-msgstr "Selección de respuesta inicial:"
-
-msgid "Instructor's Explanation"
-msgstr "Explicación del Instructor"
-
-msgid "Maximum Characters <font color=\"red\">*</font>"
-msgstr "Número Máximo de caracteres <font color=\"red\">*</font>"
-
-msgid "Minimum Characters <font color=\"red\">*</font>"
-msgstr "Número Mínimo de caracteres <font color=\"red\">*</font>"
-
-#: step.py templates/html/mentoring_with_steps.html
-msgid "Next Step"
-msgstr "Siguiente Paso"
-
-msgid "Not enough data to generate the chart. Please check back later."
-msgstr ""
-"No hay datos suficientes para generar el gráfico. Por favor revise mas "
-"tarde."
-
-msgid "Note:"
-msgstr "Nota:"
-
-msgid "Option {{ $index + 1 }}"
-msgstr "Opción {{ $index + 1 }}"
-
-msgid "Option {{$index + 1}}: {{rc.calc($index)}}"
-msgstr "Opción {{$index + 1}}: {{rc.calc($index)}}"
-
-msgid "Peer Instruction"
-msgstr "Instrucción por pares"
-
-msgid ""
-"Peer instruction problems give learners more interactive engagement while "
-"they complete a multiple choice question that may or may not have a correct "
-"answer. The tool supports deeper consideration of the learner’s "
-"understanding of a concept and the correctness (if applicable) of an initial"
-" answer. Learners complete these problems in three steps."
-msgstr ""
-"Los problemas de instrucción por pares brindan a los estudiantes la "
-"posibilidad de una participación más interactiva mientras completan una "
-"pregunta de opción múltiple que puede o no tener una respuesta correcta. La "
-"herramienta soporta una consideración más profunda de la comprensión del "
-"estudiante de un concepto y la exactitud (si aplica) de una respuesta "
-"inicial. Los estudiantes completan estos problemas en tres pasos"
-
-msgid ""
-"Please edit your explanation so that it is less than {{rationale_size.max}} "
-"characters."
-msgstr ""
-"Por favor edite su explicación para que sea menos de  {{rationale_size.max}}"
-" caracteres."
-
-msgid "Please refresh the page and try again!"
-msgstr "Por favor recargue la página e intente de nuevo!"
-
-msgid "Possible Answers <font color=\"red\">*</font>"
-msgstr "Posibles respuestas <font color=\"red\">*</font>"
-
-msgid ""
-"Provide alternative text - a description of the image for non-visual users. "
-"The description should provide all the information needed for someone to "
-"answer the question if the image did not load."
-msgstr ""
-"Provee un texto alternativo -una descripción de la imagen para usuarios no "
-"visuales. La descripción debería proveer toda la información necesaria para "
-"alguien responda a la pregunta si la imagen no cargó."
-
-msgid "Provide an explanation for this answer."
-msgstr "Proporcione una explicación para esta respuesta."
-
-msgid "Question Text <font color=\"red\">*</font>"
-msgstr "Texto de la pregunta <font color=\"red\">*</font>"
-
-msgid "Reflection"
-msgstr "Reflexión"
-
-msgid "Results"
-msgstr "Resultados"
-
-msgid "Saving"
-msgstr "Guardando"
-
-msgid "See how your classmates answered <a href=\"#classbreakdown\">below</a>"
-msgstr ""
-"Mire como sus compañeros contestaron <a href=\"#classbreakdown\">abajo</a>"
-
-msgid ""
-"Step 1) Your Initial Answer <span class=\"inline-hint\">You can change this "
-"answer later, if you change your mind.</span>"
-msgstr ""
-"Paso 1) Tu respuesta inicial <span class=\"inline-hint\">Puedes cambiar esta"
-" respuesta después, si cambias de parecer.</span>"
-
-msgid "Step 2) Read Other Students Answers"
-msgstr "Paso 2) Lee la respuesta de otros estudiantes"
-
-msgid ""
-"Step 3) Your Final Answer <span class=\"inline-hint\">You now have the "
-"option to change your initial selection and explanation, if you wish.</span>"
-msgstr ""
-"Paso 3) Tu respuesta final <span class=\"inline-hint\">Ahora tienes la "
-"opción de cambiar tu selección inicial y explicación, si lo deseas.</span>"
-
-msgid "Student Answer: {{options[answer.option].text}}"
-msgstr "Respuesta del Estudiante: {{options[answer.option].text}}"
-
-msgid "Student Rationale"
-msgstr "Justificación del Estudiante"
-
-msgid "Students see the explanation after seeing the final answer."
-msgstr "Los estudiantes ven la explicación después de ver la respuesta final."
-
-msgid ""
-"The answers appear as choices underneath the question, with a maximum of 10 "
-"allowed per question. Each answer may contain text, an image, or a "
-"combination of both. <br><br>To add another answer press the \"Add New "
-"Answer\" button. To remove an answer press the blue \"x\" next to the blue "
-"option you want to remove."
-msgstr ""
-"Las respuestas aparecen como opciones abajo de la pregunta, con un máximo de"
-" 10 opciones permitidas por pregunta. Cada respuesta puede contener texto, "
-"una imagen o una combinación de ambos <br><br>Para agregar otra respuesta, "
-"de clic en \"Añadir nueva respuesta\". Para eliminar una respuesta de clic "
-"en la \"x\" azul que está al lado de la respuesta que quiere eliminar."
-
-msgid ""
-"The question appears above the possible answers that you set below. You can "
-"use text, an image, or a combination of both. If you wish to add an image to"
-" your question, press the \"Add Image To Question\" button."
-msgstr ""
-"Esta pregunta aparece arriba de las opciones de respuesta que se configuran "
-"en la parte de abajo. Puede usar texto, imagen o una combinación de ambos. "
-"Si desea agregar una imagen a la pregunta, haga clic en el botón \"Añadir "
-"Imagen\"."
-
-msgid ""
-"These are samples of other student answers for this question. Read them and "
-"then compare with your answer below."
-msgstr ""
-"Estas son muestras de otras respuestas de estudiantes para esta pregunta. "
-"Léelos y luego compara con tu respuesta."
-
-msgid ""
-"This is a look at how your classmates answered the question during the "
-"initial and final rounds."
-msgstr ""
-"Esto es una mirada a la manera de como sus compañeros respondieron la "
-"pregunta durante las rondas iniciales y finales."
-
-msgid ""
-"This is the maximum number of characters the student explanations may "
-"contain."
-msgstr ""
-"Este es el número máximo caracteres que la explicación del estudiante puede "
-"contener."
-
-msgid ""
-"This is the minimum number of characters the student explanations must "
-"contain."
-msgstr ""
-"Este es el número mínimo caracteres que la explicación del estudiante puede "
-"contener."
-
-msgid ""
-"This is the number of examples shown to the students after they answer. "
-"Enter the # symbol to use the same number as the answer possibilities you've"
-" set."
-msgstr ""
-"Este es el número de ejemplos mostrados a los estudiantes después de "
-"responder. Ingrese el símbolo # para usar el mismo número de las "
-"posibilidades de respuesta que estableció."
-
-#: google_drive/google_calendar.py google_drive/google_docs.py
-#: google_drive/templates/html/google_calendar_edit.html
-#: google_drive/templates/html/google_docs_edit.html
-msgid "This name appears in the horizontal navigation at the top of the page."
-msgstr ""
-"Este nombre aparece en la barra de título superior horizontal del "
-"componente."
-
-msgid ""
-"Upload a file first using Content > Files &amp; Uploads. Then copy the "
-"'Studio URL'. Paste that into the text field here."
-msgstr ""
-"Sube un archivo primero usando Contenido >Archivos & Subir. Luego copia el "
-"'Studio URL'. Pégalo dentro del campo de texto aquí."
-
-msgid ""
-"Upload a file using Content > Files &amp; Uploads. Then copy the 'Studio "
-"URL'. Paste that into the text field above."
-msgstr ""
-"Sube un archivo primero usando Contenido >Archivos & Subir. Luego copia el "
-"'Studio URL'. Pégalo dentro del campo de texto abajo."
-
-msgid "View Question Statistics"
-msgstr "Ver estadísticas del ejercicio."
-
-msgid ""
-"You are approaching the limit of {{rationale_size.max}} characters for this "
-"answer. Characters left: {{rationale_size.max - rc.rationale.length}}"
-msgstr ""
-"Se está acercando al límite de {{rationale_size.max}} caracteres  para esta "
-"respuesta. Caracteres faltantes: {{rationale_size.max - "
-"rc.rationale.length}}"
-
-msgid "You are unable to save this form as there are errors:"
-msgstr "No puede guardar este formulario ya que hay errores:"
-
-msgid "Your final answer:"
-msgstr "Tu respuesta final."
-
-msgid "Your initial answer:"
-msgstr "Su respuesta inicial."
-
-msgid "Your rationale must be a maximum of {{rationale_size.max}} characters."
-msgstr ""
-"Tu justificación debe tener un máximo de {{rationale_size.max}} caracteres."
-
-msgid "Option "
-msgstr "Opción"
-
-msgid "Missing option seed(s): "
-msgstr "Elemento semilla no encontrado(s):"
-
-msgid "Missing 1 option seed"
-msgstr "1 Elemento semilla no encontrado"
-
-msgid "Question must have text element."
-msgstr "La pregunta debe tener elemento de texto."
-
-msgid "Option must have text element."
-msgstr "La opción debe tener elemento de texto."
-
-msgid "Missing rationale for correct answer."
-msgstr "Falta justificación para la respuesta correcta."
-
-msgid "Only one correct answer can be defined in options."
-msgstr "Únicamente una respuesta correcta puede ser definida en opciones."
-
-msgid ""
-"Correct answer and rationale are required and have to be defined in one of "
-"the option."
-msgstr ""
-"Respuesta correcta y justificación son requeridos y tienen que estar "
-"definidos en una de las opciones."
-
-msgid "Seed element must have an option attribute."
-msgstr "El elemento semilla debe tener un atributo opción"
-
-msgid "Every peer instruction tool must contain an \"ubcpi\" element."
-msgstr "Cada herramienta de instrucción debe contener un elemento \"ubcpi\"."
-
-msgid "Every peer instruction tool must contain a \"display_name\" element."
-msgstr ""
-"Cada herramienta de instrucción debe contener un elemento \"display_name\""
-
-msgid "Every peer instruction must tool contain a \"question\" element."
-msgstr "Cada herramienta de instrucción debe contener un elemento \"pregunta\""
-
-msgid "Every peer instruction must tool contain a \"options\" element."
-msgstr "Cada herramienta de instrucción debe contener un elemento \"opciones\""
-
-msgid "Every peer instruction must tool contain a \"seeds\" element."
-msgstr ""
-"Cada instancia de la herramienta de instrucción de pares debe tener un "
-"elemento \"semilla\"."
-
-msgid "Minimum Characters"
-msgstr "Caracteres mínimos"
-
-msgid "Maximum Characters"
-msgstr "Caracteres máximos"
-
-msgid "Number of Responses"
-msgstr "Número de respuestas"
-
-msgid "Not an Integer"
-msgstr "No es un Entero"
-
-msgid "Invalid Option(s): "
-msgstr "Opcion(es) inválidas:"
-
-msgid "Peer Instruction Question"
-msgstr "Pregunta de instrucción por pares"
-
-msgid "<p>Where does most of the mass in a fully grown tree originate?</p>"
-msgstr ""
-"<p>¿Dónde se origina la mayor parte de la masa de un árbol completamente "
-"crecido?</p>"
-
-msgid ""
-"The question the students see. This question appears above the possible "
-"answers which you set below. You can use text, an image or a combination of "
-"both. If you wish to add an image to your question, press the 'Add Image' "
-"button."
-msgstr ""
-"La pregunta que los estudiantes ven. Esta pregunta aparece arriba de las "
-"opciones de respuesta que se configuran en la parte de abajo. Puede usar "
-"texto, imagen o una combinación de ambos. Si desea agregar una imagen a su "
-"pregunta, presione el botón \"Añadir Imagen\"."
-
-msgid "Air"
-msgstr "Aire"
-
-msgid "Soil"
-msgstr "Suelo"
-
-msgid "Water"
-msgstr "Agua"
-
-msgid "The possible options from which the student may select"
-msgstr "Las posibles opciones de las cuáles el estudiante puede seleccionar."
-
-msgid ""
-"The minimum and maximum number of characters a student is allowed for their "
-"rationale."
-msgstr ""
-"Mínimos y máximos caracteres permitidos para la justificación de un "
-"estudiante."
-
-msgid "The correct option for the question"
-msgstr "La opción correcta para esta pregunta"
-
-msgid "Photosynthesis"
-msgstr "Fotosíntesis"
-
-msgid "The feedback for student for the correct answer"
-msgstr "La retroalimentación para la respuesta correcta del estudiantes"
-
-msgid "Overall stats for the instructor"
-msgstr "Estadísticas generales para el instructor"
-
-msgid "Tree gets carbon from air."
-msgstr "El árbol obtiene carbono del aire."
-
-msgid "Tree gets minerals from soil."
-msgstr "El árbol obtiene minerales del suelo."
-
-msgid "Tree drinks water."
-msgstr "El árbol bebe agua."
-
-msgid ""
-"Instructor configured examples to give to students during the revise stage."
-msgstr ""
-"El instructor configuró ejemplos para dar a los estudiantes durante la etapa"
-" de revisión."
-
-msgid "System selected answers to give to students during the revise stage."
-msgstr ""
-"El sistema seleccionó respuestas para dar a los estudiantes durante la etapa"
-" de revisión."
-
-msgid "The algorithm for selecting which answers to be presented to students"
-msgstr ""
-"El algoritmo para seleccionar qué respuestas se presentarán a los "
-"estudiantes."
-
-msgid "System will select one of each option to present to the students."
-msgstr ""
-"El sistema seleccionará una de cada opción para presentar a los estudiantes."
-
-msgid "Completely random selection from the response pool."
-msgstr "Selección completamente aleatoria del grupo de respuestas."
-
-msgid "Appears above"
-msgstr "Aparece arriba"
-
-msgid "Appears below"
-msgstr "Aparece abajo"
 
 msgid "Could not parse serialized rubric"
 msgstr "No se pudo analizar la rúbrica serializada."
@@ -32571,6 +32003,14 @@ msgstr "Envíos por otros"
 msgid "No responses to show at this time"
 msgstr "No hay respuestas para mostrar en este momento."
 
+#: google_drive/google_calendar.py google_drive/google_docs.py
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "This name appears in the horizontal navigation at the top of the page."
+msgstr ""
+"Este nombre aparece en la barra de título superior horizontal del "
+"componente."
+
 #: google_drive/google_calendar.py
 #: google_drive/templates/html/google_calendar_edit.html
 msgid "Public Calendar ID"
@@ -34156,6 +33596,10 @@ msgstr "Etiqueta del botón Siguiente"
 #: step.py
 msgid "Customize the text of the 'Next' button."
 msgstr "Personalice el texto del botón Siguiente."
+
+#: step.py templates/html/mentoring_with_steps.html
+msgid "Next Step"
+msgstr "Próximo paso"
 
 #: step.py
 msgid "Feedback or instructional message which pops up after submitting."
