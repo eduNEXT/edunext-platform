@@ -586,7 +586,7 @@ msgstr "Editando: {title}"
 
 #: cms/static/js/views/modals/edit_xblock.js common/static/bundles/commons.js
 msgid "Plugins"
-msgstr "Plug-ins"
+msgstr ""
 
 #: cms/static/js/views/modals/edit_xblock.js common/static/bundles/commons.js
 #: lms/templates/ccx/schedule.underscore
@@ -10042,7 +10042,7 @@ msgstr "Examen especial"
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 #, python-format
 msgid " %(exam_display_name)s "
-msgstr "%(exam_display_name)s"
+msgstr ""
 
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
 msgid "Exam Type"
@@ -10098,7 +10098,7 @@ msgstr "Finalizado a las"
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 #, python-format
 msgid " %(username)s "
-msgstr "%(username)s"
+msgstr ""
 
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 msgid "Bookmarked on"
@@ -10178,24 +10178,22 @@ msgstr ""
 " a Backpack."
 
 #: openedx/features/learner_profile/static/learner_profile/templates/share_modal.underscore
-#, python-format
 msgid ""
-"Create a %(link_start)sMozilla Backpack%(link_end)s account, or log in to "
-"your existing account"
+"Create a {link_start}Mozilla Backpack{link_end} account, or log in to your "
+"existing account"
 msgstr ""
-"Crea una cuenta de %(link_start)sMozilla Backpack%(link_end)s, o inicia "
-"sesión usando una cuenta existente"
+"Crea una cuenta de {link_start}Mozilla Backpack{link_end}, o inicia sesión "
+"usando una cuenta existente"
 
 #: openedx/features/learner_profile/static/learner_profile/templates/share_modal.underscore
-#, python-format
 msgid ""
-"%(download_link_start)sDownload this image (right-click or option-click, "
-"save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to "
-"your backpack.</li>"
+"{download_link_start}Download this image (right-click or option-click, save "
+"as){link_end} and then {upload_link_start}upload{link_end} it to your "
+"backpack."
 msgstr ""
-"%(download_link_start)sDescarga esta imagen (haz clic derecho o pulsa "
-"opción, guardar como)%(link_end)s y después "
-"%(upload_link_start)ssubirla%(link_end)s a tu mochila.</li>"
+"{download_link_start}Descarga esta imagen (haz clic derecho o pulsa opción, "
+"guardar como){link_end} y después {upload_link_start}subirla{link_end} a tu "
+"mochila."
 
 #: cms/templates/js/access-editor.underscore
 msgid "Limit Access"
