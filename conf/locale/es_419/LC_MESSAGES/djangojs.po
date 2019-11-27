@@ -57,14 +57,20 @@
 # Farhanah Sheets <fsheets@edx.org>, 2018
 # Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2019
 #
+# #-#-#-#-#  edx_sga-js.po  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: edx-proctoring\n"
-"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2017-02-15 17:16-0500\n"
-"PO-Revision-Date: 2016-12-20 19:55+0000\n"
-"Last-Translator: Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2019\n"
-"Language-Team: Spanish (Latin America) (https://www.transifex.com/open-edx/teams/6205/es_419/)\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-22 21:49+0000\n"
+"PO-Revision-Date: 2019-11-22 19:21-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: es_419\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,8 +80,6 @@ msgstr ""
 "#-#-#-#-#  djangojs-partial.po (PACKAGE VERSION)  #-#-#-#-#\n"
 "#-#-#-#-#  edx_proctoring-js.po (edx-proctoring)  #-#-#-#-#\n"
 "X-Generator: Poedit 1.8.7.1\n"
-"#-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#\n"
-"#-#-#-#-#  openassessment-js.po (edx-platform)  #-#-#-#-#\n"
 
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js common/static/bundles/commons.js
@@ -13176,3 +13180,65 @@ msgstr "práctica"
 
 msgid "proctored"
 msgstr "supervisado"
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Started preparing student submissions zip file. This may take a while."
+msgstr ""
+"Preparando archivo zip de envíos por los estudiantes. Este proceso puede "
+"tomar algún tiempo."
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Submission failed. Please contact your course instructor."
+msgstr "El envío falló. Por favor contacte al instructor del curso."
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Uploading..."
+msgstr "Subiendo..."
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "The file you are trying to upload is too large."
+msgstr "El archivo que está intentando subir es muy grande."
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "There was an error uploading your file."
+msgstr "Hubo un error subiendo su archivo."
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Uploading... %(percent)s %"
+msgstr "Subiendo... %(percent)s %"
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "yes"
+msgstr "sí"
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Grade must be a number."
+msgstr "La calificación debe ser un número."
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Grade must be an integer."
+msgstr "La calificación debe ser un entero."
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Grade must be positive."
+msgstr "La calificación debe ser un entero positivo."
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Maximum score is %(max_score)s"
+msgstr "El puntaje máximo es %(max_score)s"
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "No grade to remove."
+msgstr "No hay una calificación para remover"
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid ""
+"The download file was not created. Please try again or contact "
+"%(support_email)s"
+msgstr ""
+"El archivo no fue creado. Por favor intente de nuevo o contacte "
+"%(support_email)s"
+
+#: edx_sga/static/js/src/edx_sga.js
+msgid "Student submission file ready for download"
+msgstr "El archivo subido por el estudiante está listo para descargar."
