@@ -1124,9 +1124,6 @@ INSTALLED_APPS = [
     'lms.djangoapps.verify_student.apps.VerifyStudentConfig',
     'completion',
 
-    # Microsite configuration application
-    'microsite_configuration',
-
     # Static i18n support
     'statici18n',
 
