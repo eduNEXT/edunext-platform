@@ -30,7 +30,10 @@ class DarkLangConfig(ConfigurationModel):
         otherwise is the same as having no configuration
         """
         if settings.FEATURES.get("EDNX_SITE_AWARE_LOCALE", False):
-            site_released_langs = configuration_helpers.get_value("released_languages", None)
+            site_released_langs = configuration_helpers.get_value(
+                "released_languages",
+                getattr(settings, "released_languages", [])
+            )
 
             # If there aren't any released_languages configured
             if not site_released_langs:
