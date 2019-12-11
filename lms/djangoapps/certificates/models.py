@@ -188,7 +188,19 @@ class CertificateWhitelist(models.Model):
         return result
 
 
-class EligibleCertificateManager(models.Manager):
+class fake(models.Manager):
+    """
+    """
+
+    def get_queryset(self):
+        """
+        """
+        a = super(fake, self).get_queryset()
+        b = [g.course_id for g in a if g.course_id.org not in getattr(settings, "course_org_filter", [])]
+        return a.exclude(course_id__in=b)
+
+
+class EligibleCertificateManager(fake):
     """
     A manager for `GeneratedCertificate` models that automatically
     filters out ineligible certs.
@@ -225,7 +237,7 @@ class GeneratedCertificate(models.Model):
     # Normal object manager, which should only be used when ineligible
     # certificates (i.e. new audit certs) should be included in the
     # results. Django requires us to explicitly declare this.
-    objects = models.Manager()
+    objects = fake()
 
     MODES = Choices('verified', 'honor', 'audit', 'professional', 'no-id-professional')
 

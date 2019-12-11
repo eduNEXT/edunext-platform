@@ -526,6 +526,13 @@ def render_html_view(request, user_id, course_id):
         log.info(error_str, course_id, user_id, str(exception))
         return _render_invalid_certificate(course_id, platform_name, configuration)
 
+    # organizations = organization_api.get_course_organizations(course_id=course.id)
+
+    # if organizations:
+    #     # TODO Need to add support for multiple organizations, Currently we are interested in the first one.
+    #     if not organizations[0].get("name") in getattr(settings, "course_org_filter", []):
+    #         raise Http404
+
     # Kick the user back to the "Invalid" screen if the feature is disabled for the course
     if not course.cert_html_view_enabled:
         log.info(
