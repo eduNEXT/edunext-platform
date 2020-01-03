@@ -14,6 +14,7 @@ from collections import defaultdict
 
 import django.utils
 from ccx_keys.locator import CCXLocator
+from crum import get_current_user
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied, ValidationError
@@ -25,6 +26,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.http import require_GET, require_http_methods
 from edx_django_utils.monitoring import function_trace
 from edx_toggles.toggles import LegacyWaffleSwitchNamespace
+from eox_tenant.tenant_wise.proxies import TenantSiteConfigProxy
 from milestones import api as milestones_api
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
@@ -800,6 +802,10 @@ def _process_courses_list(courses_iter, in_process_course_actions, split_archive
             'run': course.location.run
         }
 
+    if get_current_user().is_superuser:
+        TenantSiteConfigProxy.pre_load_values_by_org('SITE_NAME')
+        TenantSiteConfigProxy.pre_load_values_by_org('LMS_BASE')
+
     in_process_action_course_keys = {uca.course_key for uca in in_process_course_actions}
     active_courses = []
     archived_courses = []
@@ -1135,29 +1141,35 @@ def settings_handler(request, course_key_string):  # lint-amnesty, pylint: disab
 
             # see if the ORG of this course can be attributed to a defined configuration . In that case, the
             # course about page should be editable in Studio
-            publisher_enabled = configuration_helpers.get_value_for_org(
-                course_module.location.org,
-                'ENABLE_PUBLISHER',
-                settings.FEATURES.get('ENABLE_PUBLISHER', False)
-            )
-            marketing_enabled = configuration_helpers.get_value_for_org(
-                course_module.location.org,
-                'ENABLE_MKTG_SITE',
-                settings.FEATURES.get('ENABLE_MKTG_SITE', False)
-            )
-            enable_extended_course_details = configuration_helpers.get_value_for_org(
-                course_module.location.org,
-                'ENABLE_EXTENDED_COURSE_DETAILS',
-                settings.FEATURES.get('ENABLE_EXTENDED_COURSE_DETAILS', False)
-            )
+            if configuration_helpers.get_value("EDNX_ENABLE_FIXED_SETTINGS_VALUES_ORG_STUDIO", False):
+                publisher_enabled = False
+                marketing_enabled = False
+                enable_extended_course_details = False
+                short_description_editable = True
+            else:
+                publisher_enabled = configuration_helpers.get_value_for_org(
+                    course_module.location.org,
+                    'ENABLE_PUBLISHER',
+                    settings.FEATURES.get('ENABLE_PUBLISHER', False)
+                )
+                marketing_enabled = configuration_helpers.get_value_for_org(
+                    course_module.location.org,
+                    'ENABLE_MKTG_SITE',
+                    settings.FEATURES.get('ENABLE_MKTG_SITE', False)
+                )
+                enable_extended_course_details = configuration_helpers.get_value_for_org(
+                    course_module.location.org,
+                    'ENABLE_EXTENDED_COURSE_DETAILS',
+                    settings.FEATURES.get('ENABLE_EXTENDED_COURSE_DETAILS', False)
+                )
+                short_description_editable = configuration_helpers.get_value_for_org(
+                    course_module.location.org,
+                    'EDITABLE_SHORT_DESCRIPTION',
+                    settings.FEATURES.get('EDITABLE_SHORT_DESCRIPTION', True)
+                )
 
             about_page_editable = not publisher_enabled
             enrollment_end_editable = GlobalStaff().has_user(request.user) or not publisher_enabled
-            short_description_editable = configuration_helpers.get_value_for_org(
-                course_module.location.org,
-                'EDITABLE_SHORT_DESCRIPTION',
-                settings.FEATURES.get('EDITABLE_SHORT_DESCRIPTION', True)
-            )
             sidebar_html_enabled = course_experience_waffle().is_enabled(ENABLE_COURSE_ABOUT_SIDEBAR_HTML)
             # self_paced_enabled = SelfPacedConfiguration.current().enabled
 
