@@ -12,6 +12,7 @@ import string
 import django.utils
 import six
 from ccx_keys.locator import CCXLocator
+from crum import get_current_user
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied, ValidationError
@@ -56,6 +57,7 @@ from course_action_state.managers import CourseActionStateItemNotFoundError
 from course_action_state.models import CourseRerunState, CourseRerunUIStateManager
 from course_creators.views import add_user_with_status_unrequested, get_course_creator_status
 from edxmako.shortcuts import render_to_response
+from eox_tenant.tenant_wise.proxies import TenantSiteConfigProxy
 from milestones import api as milestones_api
 from models.settings.course_grading import CourseGradingModel
 from models.settings.course_metadata import CourseMetadata
@@ -727,6 +729,10 @@ def _process_courses_list(courses_iter, in_process_course_actions, split_archive
             'number': course.display_number_with_default,
             'run': course.location.run
         }
+
+    if get_current_user().is_superuser:
+        TenantSiteConfigProxy.pre_load_values_by_org('SITE_NAME')
+        TenantSiteConfigProxy.pre_load_values_by_org('LMS_BASE')
 
     in_process_action_course_keys = {uca.course_key for uca in in_process_course_actions}
     active_courses = []
