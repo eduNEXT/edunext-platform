@@ -113,7 +113,6 @@
     " to complete and submit the exam.": "para completar e submeter o exame.", 
     "${listPrice}": "${listPrice}", 
     "%(cohort_name)s (%(user_count)s)": "%(cohort_name)s (%(user_count)s)", 
-    "%(download_link_start)sDownload this image (right-click or option-click, save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to your backpack.</li>": " %(download_link_start)s Download esta imagem (clique com o bot\u00e3o direito ou clique em op\u00e7\u00e3o, salvar como) %(link_end)s e, em seguida, %(upload_link_start)supload %(link_end)s -lo para sua mochila. </li>", 
     "%(earned)s/%(possible)s point (graded)": [
       "%(earned)s/%(possible)s ponto (classificado) ", 
       "%(earned)s/%(possible)s pontos (classificado) "
@@ -624,7 +623,6 @@
     "Create": "Criar", 
     "Create Account": "Criar Conta", 
     "Create Re-run": "Criar Nova Edi\u00e7\u00e3o do Curso", 
-    "Create a %(link_start)sMozilla Backpack%(link_end)s account, or log in to your existing account": "Crie uma conta %(link_start)s Mozilla backpack %(link_end)s ou fa\u00e7a \"iniciar sess\u00e3o\" caso j\u00e1 tenha uma conta ", 
     "Create a New Team": "Criar nova equipa", 
     "Create a content group": "Criar um grupo de conte\u00fado", 
     "Create a new team if you can't find an existing team to join, or if you would like to learn with friends you know.": "Crie uma nova equipa se n\u00e3o encontrar uma equipa existente para ingressar ou se gostaria de estudar apenas com pessoas que conhece.", 
@@ -1266,6 +1264,7 @@
     "Once in position, use the camera button {icon} to capture your photo": "Uma vez na posi\u00e7\u00e3o, clique no bot\u00e3o da c\u00e2mara {icon} para tirar a sua fotografia", 
     "Once you complete one of the program requirements you have a program record. This record is marked complete once you meet all program requirements. A program record can be used to continue your learning journey and demonstrate your learning to others.": "Assim que concluir um dos requisitos do programa, ficar\u00e1 registado. Este registro ser\u00e1 assinalado como completo quando cumprir todos os requisitos do programa. Um registro de programa pode ser utilizado para continuar o seu percurso de aprendizagem e demonstrar o que aprendeu aos outros.", 
     "One or more rescheduling tasks failed.": "Ocorreu erro no reagendamento de uma ou mais tarefas.", 
+    "Only ": "Apenas", 
     "Only <%= fileTypes %> files can be uploaded. Please select a file ending in <%= fileExtensions %> to upload.": "Apenas os ficheiros <%= fileTypes %> podem ser carregados. Por favor, selecione um ficheiro com a extens\u00e3o <%= fileExtensions %> para carregar.", 
     "Only properly formatted .csv files will be accepted.": "Apenas ficheiros .csv formatados corretamente ser\u00e3o aceites.", 
     "Only the parent course staff of a CCX can create content groups.": "Apenas os respons\u00e1veis pela cria\u00e7\u00e3o do curso de CCX podem criar grupos de conte\u00fado.", 
