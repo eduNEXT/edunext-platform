@@ -2,6 +2,12 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.urls import reverse
+from django.conf import settings
+
+try:
+    currency = settings.PAID_COURSE_REGISTRATION_CURRENCY[0]
+except:
+    currency = 'usd'
 %>
 <section id="set-course-mode-price-modal" class="modal" role="dialog" tabindex="-1" aria-labelledby="header-course-price">
     <h2 id="header-course-price" class="hd hd-2">${_("Set Course Mode Price")}</h2>
@@ -37,7 +43,7 @@ from django.urls import reverse
             <li class="field required text" id="set-course-mode-modal-field-currency">
               <label for="course_mode_currency" class="required text">${_("Currency")}</label>
               <select class="field required" id="course_mode_currency" name="currency">
-                <option value="usd">USD</option>
+	         <option value="${currency}">${currency.upper()}</option>
               </select>
             </li>
           </ol>
