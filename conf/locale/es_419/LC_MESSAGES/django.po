@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-01-08 22:04+0000\n"
+"POT-Creation-Date: 2020-01-27 22:56+0000\n"
 "PO-Revision-Date: 2018-04-25 20:42+0000\n"
 "Last-Translator: Babel <techical@edunext.co>\n"
 "Language-Team: Spanish (Latin America) (http://www.transifex.com/open-edx/edx-platform/language/es_419/) and eduNEXT\n"
@@ -13,6 +13,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"#-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#\n"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
@@ -816,6 +818,10 @@ msgstr ""
 #: lms/templates/provider_login.html
 msgid "Email or password is incorrect."
 msgstr "Correo electrónico o contraseña incorrectos."
+
+#: common/djangoapps/student/views/login.py
+msgid "User not authorized to perform this action"
+msgstr ""
 
 #: common/djangoapps/student/views/login.py
 msgid "Superuser creation not allowed"
@@ -5205,10 +5211,12 @@ msgid ""
 "This is a routed Account Activation email for %(routed_user)s "
 "(%(routed_user_email)s): %(routed_profile_name)s"
 msgstr ""
+"Este es un correo electrónico de activación de cuenta dirigido a "
+"%(routed_user)s (%(routed_user_email)s): %(routed_profile_name)s"
 
 #: common/templates/student/edx_ace/accountactivation/email/body.html
 msgid "Account Activation"
-msgstr ""
+msgstr "Activación de cuenta"
 
 #: common/templates/student/edx_ace/accountactivation/email/body.html
 #: common/templates/student/edx_ace/accountactivation/email/body.txt
@@ -5218,16 +5226,19 @@ msgid ""
 "engaging, high-quality %(platform_name)s courses. Note that you will not be "
 "able to log back into your account until you have activated it."
 msgstr ""
+"¡Estás a punto de terminar! Usa el siguiente enlace para activar tu cuenta "
+"para acceder a cursos interesantes de alta calidad en %(platform_name)s. "
+"Fíjate que no podrás ingresar a tu cuenta nuevamente antes de activarla."
 
 #: common/templates/student/edx_ace/accountactivation/email/body.html
 msgid "Activate Your Account"
-msgstr ""
+msgstr "Activar tu cuenta"
 
 #: common/templates/student/edx_ace/accountactivation/email/body.html
 #: common/templates/student/edx_ace/accountactivation/email/body.txt
 #, python-format
 msgid "Enjoy learning with %(platform_name)s."
-msgstr ""
+msgstr "Disfruta de tu aprendizaje con %(platform_name)s."
 
 #: common/templates/student/edx_ace/accountactivation/email/body.html
 #, python-format
@@ -5236,6 +5247,9 @@ msgid ""
 "href=\"%(support_url)s\">%(support_url)s</a> or email <a "
 "href=\"mailto:%(support_email)s\">%(support_email)s</a>."
 msgstr ""
+"Si necesitas ayuda, por favor usa nuestro formulario web en <a "
+"href=\"%(support_url)s\">%(support_url)s</a> o mándenos un correo para <a "
+"href=\"mailto:%(support_email)s\">%(support_email)s</a>."
 
 #: common/templates/student/edx_ace/accountactivation/email/body.html
 #: common/templates/student/edx_ace/accountactivation/email/body.txt
@@ -5245,6 +5259,9 @@ msgid ""
 "attempted to create an account on %(platform_name)s using this email "
 "address."
 msgstr ""
+"Este correo electrónico fue enviado automáticamente por %(lms_url)s porque "
+"alguien intentó crear una cuenta en %(platform_name)s usando esta dirección "
+"de correo electrónico."
 
 #: common/templates/student/edx_ace/accountactivation/email/body.txt
 #, python-format
@@ -5252,11 +5269,13 @@ msgid ""
 "If you need help, please use our web form at %(support_url)s or email "
 "%(support_email)s."
 msgstr ""
+"Si necesitas ayuda, por favor usa nuestro formulario web en %(support_url)s "
+"o mándenos un correo para %(support_email)s."
 
 #: common/templates/student/edx_ace/accountactivation/email/subject.txt
 #, python-format
 msgid "Action Required: Activate your %(platform_name)s account"
-msgstr ""
+msgstr "Acción Necesaria: Activar tu cuenta en %(platform_name)s"
 
 #: common/templates/student/edx_ace/passwordreset/email/body.html
 #: lms/templates/forgot_password_modal.html
@@ -6513,18 +6532,6 @@ msgid ""
 msgstr ""
 "Usted está inscrito en el curso como asistente. Este modo de tomar el curso "
 "no incluye la obtención de un certificado."
-
-#: lms/djangoapps/courseware/views/views.py
-msgid "Your enrollment: Honor track"
-msgstr "Su inscripción: Modo Honor"
-
-#: lms/djangoapps/courseware/views/views.py
-msgid ""
-"You are enrolled in the honor track for this course. The honor track does "
-"not include a certificate."
-msgstr ""
-"Está inscrito en el modo Honor para este curso. El modo honor no incluye un "
-"certificado."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "We're working on it..."
@@ -10430,7 +10437,6 @@ msgid "Create new merged version"
 msgstr "Crear una nueva versión fusionada."
 
 #: lms/templates/wiki/includes/anonymous_blocked.html
-#: wiki/templates/wiki/includes/anonymous_blocked.html
 #, python-format
 msgid ""
 "\n"
@@ -26332,13 +26338,13 @@ msgstr "Un archivo ha sido borrado: %s"
 
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/delete.html
 msgid ""
-"\n"
-"    The file may be referenced on other articles. Deleting it means that they will loose their references to this file. The following articles reference this file:\n"
-"    "
+"The file may be referenced on other articles. Deleting it means that they "
+"will loose their references to this file. The following articles reference "
+"this file:"
 msgstr ""
-"\n"
-"    El archivo puede ser referenciado en otros artículos. Eliminarlo significa que perderán sus referencias a este archivo. Los siguientes artículos hacen referencia a este archivo:\n"
-"    "
+"El archivo puede tener referencias en otros artículos. Borrarlo significa "
+"que no habrá referencia del archivo en los otros artículos. Los siguientes "
+"artículos hacen referencia a este archivo."
 
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/delete.html
 msgid "Delete it!"
@@ -26346,13 +26352,11 @@ msgstr "¡Bórralo!"
 
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/delete.html
 msgid ""
-"\n"
-"    You can remove a reference to a file, but it will retain its references on other articles.\n"
-"    "
+"You can remove a reference to a file, but it will retain its references on "
+"other articles."
 msgstr ""
-"\n"
-"    Puede eliminar una referencia a un archivo, pero conservará sus referencias en otros artículos.\n"
-"    "
+"Puede remover una referencia a un archivo, pero el archivo va a mantener sus"
+" referencias en otros artículos."
 
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/delete.html
 msgid "Remove reference"
@@ -26393,13 +26397,21 @@ msgstr "¡Utilizar esta!"
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/replace.html
 #, python-format
 msgid ""
-"\n"
-"  Replacing an attachment means adding a new file that will be used in its place. All references to the file will be replaced by the one you upload and the file will be downloaded as <strong>%(filename)s</strong>. Please note that this attachment is in use on other articles, you may distort contents. However, do not hestitate to take advantage of this and make replacements for the listed articles where necessary. This way of working is more efficient....\n"
-"  "
+"Replacing an attachment means adding a new file that will be used in its "
+"place. All references to the file will be replaced by the one you upload and"
+" the file will be downloaded as <strong>%(filename)s</strong>. Please note "
+"that this attachment is in use on other articles, you may distort contents. "
+"However, do not hestitate to take advantage of this and make replacements "
+"for the listed articles where necessary. This way of working is more "
+"efficient...."
 msgstr ""
-"\n"
-"  Reemplazar un archivo adjunto significa agregar un nuevo archivo que se usará en su lugar. Todas las referencias al archivo se reemplazarán por la que cargue y el archivo se descargará como <strong>%(filename)s</strong>. Tenga en cuenta que este archivo adjunto está en uso en otros artículos, puede distorsionar los contenidos. Sin embargo, no dude en aprovechar esto y hacer reemplazos para los artículos enumerados cuando sea necesario. Esta forma de trabajar es más eficiente....\n"
-"  "
+"Reemplazar un archivo adjunto significa añadir un nuevo archivo que será "
+"usado en su lugar. Todas las referencias hacia el archivo serán reemplazadas"
+" con el archivo que usted suba y el archivo será descargado como "
+"<strong>%(filename)s</strong>. Por favor note que este archivo adjunto es "
+"usado en otros artículos, podría distorsionar los contenidos. Sin embargo, "
+"no dude en aprovechar esto y hacer los reemplazos para la lista de artículos"
+" donde sea necesario. Esta forma de trabajo es más eficiente...."
 
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/replace.html
 msgid "Articles using"
@@ -26408,13 +26420,14 @@ msgstr "Artículos usando"
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/replace.html
 #, python-format
 msgid ""
-"\n"
-"  Replacing an attachment means adding a new file that will be used in its place. All references to the file will be replaced by the one you upload and the file will be downloaded as <strong>%(filename)s</strong>.\n"
-"  "
+"Replacing an attachment means adding a new file that will be used in its "
+"place. All references to the file will be replaced by the one you upload and"
+" the file will be downloaded as <strong>%(filename)s</strong>."
 msgstr ""
-"\n"
-"  Reemplazar un archivo adjunto significa agregar un nuevo archivo que se usará en su lugar. Todas las referencias al archivo se reemplazarán por la que cargue y el archivo se descargará como <strong>%(filename)s</strong>.\n"
-"  "
+"Reemplazar un archivo adjunto significa añadir un nuevo archivo que será "
+"usado en su lugar. Todas las referencias hacia el archivo serán reemplazadas"
+" con el archivo que usted suba y el archivo será descargado como "
+"<strong>%(filename)s</strong>."
 
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/replace.html
 #: wiki/plugins/images/templates/wiki/plugins/images/revision_add.html
@@ -26801,14 +26814,8 @@ msgstr "coincidencias,coincidencia"
 
 #: wiki/templates/wiki/dir.html
 #, python-format
-msgid ""
-"\n"
-"        %(cnt)s %(articles_plur)s in this level %(match_plur)s your search.\n"
-"      "
-msgstr ""
-"\n"
-"        %(cnt)s %(articles_plur)s en este nivel %(match_plur)s su búsqueda.\n"
-"      "
+msgid "%(cnt)s %(articles_plur)s in this level %(match_plur)s your search."
+msgstr "%(cnt)s %(articles_plur)s en este nivel %(match_plur)s su búsqueda."
 
 #: wiki/templates/wiki/dir.html
 msgid "is,are"
@@ -26816,14 +26823,8 @@ msgstr "es,son"
 
 #: wiki/templates/wiki/dir.html
 #, python-format
-msgid ""
-"\n"
-"        There %(articles_plur_verb)s %(cnt)s %(articles_plur)s in this level.\n"
-"      "
-msgstr ""
-"\n"
-"        Hay %(articles_plur_verb)s %(cnt)s %(articles_plur)s en este nivel.\n"
-"      "
+msgid "There %(articles_plur_verb)s %(cnt)s %(articles_plur)s in this level."
+msgstr "There %(articles_plur_verb)s %(cnt)s %(articles_plur)s en este nivel."
 
 #: wiki/templates/wiki/dir.html
 msgid "Last modified"
@@ -26898,6 +26899,15 @@ msgstr "Artículo raíz"
 #: wiki/templates/wiki/article/create_root.html
 msgid "Create root"
 msgstr "Crear raíz"
+
+#: wiki/templates/wiki/includes/anonymous_blocked.html
+#, python-format
+msgid ""
+"You need to <a href=\"%(login_url)s\">log in</a> or <a "
+"href=\"%(signup_url)s\">sign up</a> to use this function."
+msgstr ""
+"  Debe <a href=\"%(login_url)s\">iniciar sesión</a> o <a "
+"href=\"%(signup_url)s\">registrarse</a> para usar esta función.  "
 
 #: wiki/templates/wiki/includes/anonymous_blocked.html
 msgid "You need to log in og sign up to use this function."

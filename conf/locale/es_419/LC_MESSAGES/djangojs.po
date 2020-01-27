@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-01-08 22:04+0000\n"
+"POT-Creation-Date: 2020-01-27 22:55+0000\n"
 "PO-Revision-Date: 2018-04-25 20:42+0000\n"
 "Last-Translator: Babel <techical@edunext.co>\n"
 "Language-Team: Spanish (Latin America) (http://www.transifex.com/open-edx/edx-platform/language/es_419/) and eduNEXT\n"
@@ -13,6 +13,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"#-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#\n"
 
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js common/static/bundles/commons.js
@@ -198,27 +200,27 @@ msgstr "Hubo un error con la subida del archivo"
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Organization:"
-msgstr ""
+msgstr "Organización:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Number:"
-msgstr ""
+msgstr "Número del curso:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Run:"
-msgstr ""
+msgstr "Edición del curso:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "(Read-only)"
-msgstr ""
+msgstr "(Solo lectura)"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Re-run Course"
-msgstr ""
+msgstr "Relanzar Curso"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
@@ -286,7 +288,7 @@ msgstr "o"
 #: cms/static/js/models/xblock_validation.js
 #: common/static/bundles/js/factories/xblock_validation.js
 msgid "This unit has validation issues."
-msgstr ""
+msgstr "Esta unidad tiene errores de validación"
 
 #: cms/static/js/models/xblock_validation.js
 #: common/static/bundles/js/factories/xblock_validation.js
@@ -513,11 +515,6 @@ msgstr "Guardar"
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Advanced"
 msgstr "Avanzado"
-
-#. Translators: "title" is the name of the current component being edited.
-#: cms/static/js/views/modals/edit_xblock.js common/static/bundles/commons.js
-msgid "Editing: %(title)s"
-msgstr "Editando: %(title)s"
 
 #: cms/static/js/views/modals/edit_xblock.js common/static/bundles/commons.js
 #: lms/templates/ccx/schedule.underscore
@@ -924,7 +921,7 @@ msgstr ""
 #: cms/static/js/views/video/translations_editor.js
 #: cms/static/js/views/video_transcripts.js common/static/bundles/commons.js
 msgid "Are you sure you want to remove this transcript?"
-msgstr ""
+msgstr "¿Esta seguro de que quiere eliminar esta transcripción?"
 
 #: cms/static/js/views/video/translations_editor.js
 #: common/static/bundles/commons.js
@@ -932,11 +929,13 @@ msgid ""
 "If you remove this transcript, the transcript will not be available for this"
 " component."
 msgstr ""
+"Si elimina esta transcripción, la transcripción no estará disponible para "
+"este componente."
 
 #: cms/static/js/views/video/translations_editor.js
 #: common/static/bundles/commons.js
 msgid "Remove Transcript"
-msgstr ""
+msgstr "Eliminar Transcripción."
 
 #: cms/static/js/views/video/translations_editor.js
 #: common/static/bundles/commons.js
@@ -1010,32 +1009,32 @@ msgid "text_word_{uniqueId}"
 msgstr "text_word_{uniqueId}"
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
-#: common/static/bundles/commons.js
+#: common/static/bundles/AnnotatableModule.js
 msgid "Show Annotations"
 msgstr "Mostrar anotaciones"
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
-#: common/static/bundles/commons.js
+#: common/static/bundles/AnnotatableModule.js
 msgid "Hide Annotations"
 msgstr "Ocultar anotaciones"
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
-#: common/static/bundles/commons.js
+#: common/static/bundles/AnnotatableModule.js
 msgid "Expand Instructions"
 msgstr "Expandir instrucciones"
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
-#: common/static/bundles/commons.js
+#: common/static/bundles/AnnotatableModule.js
 msgid "Collapse Instructions"
 msgstr "Contraer instrucciones"
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
-#: common/static/bundles/commons.js
+#: common/static/bundles/AnnotatableModule.js
 msgid "Commentary"
 msgstr "Comentario"
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
-#: common/static/bundles/commons.js
+#: common/static/bundles/AnnotatableModule.js
 msgid "Reply to Annotation"
 msgstr "Responder a la anotación"
 
@@ -2969,6 +2968,8 @@ msgid ""
 "There was an error in setting your goal, please reload the page and try "
 "again."
 msgstr ""
+"Ocurrió un error estableciendo su objetivo, por favor cargue la página "
+"nuevamente e intente de nuevo."
 
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
@@ -2979,6 +2980,16 @@ msgstr "Ha actualizado exitosamente su objetivo."
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "There was an error updating your goal."
 msgstr "Hubo un error actualizando su objetivo."
+
+#: common/static/bundles/CourseOutline.js
+#: lms/templates/ccx/schedule.underscore
+msgid "Expand All"
+msgstr "Expandir todo"
+
+#: common/static/bundles/CourseOutline.js
+#: lms/templates/ccx/schedule.underscore
+msgid "Collapse All"
+msgstr "Colapsar todo"
 
 #: common/static/bundles/EntitlementFactory.js
 #: common/static/bundles/ProgramDetailsFactory.js
@@ -3099,12 +3110,6 @@ msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Reset Your Password"
-msgstr "Restablecer tu contraseña"
-
-#: common/static/bundles/PasswordResetConfirmation.js
-#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Enter and confirm your new password."
 msgstr ""
 
@@ -3129,9 +3134,36 @@ msgid "Reset My Password"
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Reset Your Password"
+msgstr "Restablecer tu contraseña"
+
+#: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetInput.jsx
 msgid "Error: "
 msgstr "Error:"
+
+#: common/static/bundles/ProblemBrowser.js
+#: cms/templates/js/move-xblock-list.underscore
+msgid "View child items"
+msgstr "Ver items hijos"
+
+#: common/static/bundles/ProblemBrowser.js
+msgid "Navigate up"
+msgstr ""
+
+#: common/static/bundles/ProblemBrowser.js
+msgid "Browsing"
+msgstr ""
+
+#: common/static/bundles/ProblemBrowser.js
+msgid "Select"
+msgstr ""
+
+#: common/static/bundles/ProblemBrowser.js
+msgid "Select a section or problem"
+msgstr "Seleccione una sección o problema"
 
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/program_details_sidebar_view.js
@@ -3340,34 +3372,53 @@ msgstr "Antes de continuar, por favor {htmlStart} active su cuenta {htmlEnd}."
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
-msgid "We’re sorry to see you go!"
-msgstr "¡Sentimos que te vayas!"
+msgid ""
+"{htmlStart}Want to change your email, name, or password instead?{htmlEnd}"
+msgstr ""
+"{htmlStart}En lugar de eso, ¿quieres cambiar tu correo electrónico, nombre o"
+" contraseña?{htmlEnd}"
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+msgid ""
+"{strongStart}Warning: Account deletion is permanent.{strongEnd} Please read "
+"the above carefully before proceeding. This is an irreversible action, and "
+"{strongStart}you will no longer be able to use the same email on "
+"{platformName}.{strongEnd}"
+msgstr ""
+"{strongStart}Warning: La eliminación de la cuenta es permanente.{strongEnd} "
+"Por favor lee la información de más arriba con atención antes de proceder. "
+"Esta es una acción irreversible, y {strongStart}no podrás volver a usar el "
+"mismo correo electrónico en {platformName}.{strongEnd}"
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
 "Please note: Deletion of your account and personal data is permanent and "
-"cannot be undone. EdX will not be able to recover your account or the data "
-"that is deleted."
+"cannot be undone. {platformName} will not be able to recover your account or"
+" the data that is deleted."
 msgstr ""
+"Cuidado: la eliminación de tu cuenta y datos personales es permanente e "
+"irreversible. {platformName} no podrá recuperar ni tu cuenta ni los datos "
+"eliminados."
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
-"Once your account is deleted, you cannot use it to take courses on the edX "
-"app, edx.org, or any other site hosted by edX. This includes access to "
-"edx.org from your employer’s or university’s system and access to private "
-"sites offered by MIT Open Learning, Wharton Executive Education, and Harvard"
-" Medical School."
+"Once your account is deleted, you cannot use it to take courses on the "
+"{platformName} app, {siteName}, or any other site hosted by {platformName}."
 msgstr ""
-"Una vez tu cuenta haya sido eliminada, no la podrás usar para tomar cursos "
-"en la app de edX, edx.org o en cualquier otro sitio administrado por edX. "
-"Esto incluye el acceso a edx.org desde el sistema de tu empleador o de tu "
-"universidad y el acceso a páginas privadas ofrecidas por MIT Open Learning, "
-"Wharton Online y Harvard Medical School."
+"Una vez su cuenta haya sido eliminada, no la podrá usar para tomar cursos en"
+" la app de {platformName}, {siteName} o en cualquier otro sitio administrado"
+" por {platformName}."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
+msgid "We’re sorry to see you go!"
+msgstr "¡Sentimos que te vayas!"
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
@@ -3415,23 +3466,24 @@ msgstr "Se requiere una contraseña"
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "You have selected “Delete my account.” Deletion of your account and personal"
-" data is permanent and cannot be undone. EdX will not be able to recover "
-"your account or the data that is deleted."
+" data is permanent and cannot be undone. {platformName} will not be able to "
+"recover your account or the data that is deleted."
 msgstr ""
 "Has seleccionado “Eliminar mi cuenta”. La eliminación de tu cuenta y datos "
-"personales es permanente e irreversible. EdX no será capaz de recuperar tu "
-"cuenta o los datos que se hayan borrado."
+"personales es permanente e irreversible. {platformName} no será capaz de "
+"recuperar tu cuenta o los datos que se hayan borrado."
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "If you proceed, you will be unable to use this account to take courses on "
-"the edX app, edx.org, or any other site hosted by edX. This includes access "
-"to edx.org from your employer’s or university’s system and access to private"
-" sites offered by MIT Open Learning, Wharton Executive Education, and "
-"Harvard Medical School."
+"the {platformName} app, {siteName}, or any other site hosted by "
+"{platformName}."
 msgstr ""
+"Si procedes, no será posible usar esta cuenta para tomar cursos ni en la "
+"aplicación móvil de {platformName}, ni en {siteName}, ni en cualquier otro "
+"sitio hospedado por {platformName}."
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
@@ -3490,6 +3542,15 @@ msgstr "Ocurrió un error. Por favor intenta nuevamente."
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
 msgid "Bookmark this page"
 msgstr "Marcar esta página"
+
+#. Translators: "title" is the name of the current component being edited.
+#: common/static/bundles/commons.js
+msgid "Editing: {title}"
+msgstr "Editando: {title}"
+
+#: common/static/bundles/commons.js
+msgid "Plugins"
+msgstr ""
 
 #: common/static/bundles/commons.js
 #: common/static/common/js/components/utils/view_utils.js
@@ -4567,13 +4628,12 @@ msgstr "Encabezado"
 
 #: lms/static/js/ajax-error.js
 msgid ""
-"You have been logged out of your edX account. Click Okay to log in again "
-"now. Click Cancel to stay on this page (you must log in again to save your "
-"work)."
+"You have been logged out of your account. Click Okay to log in again now. "
+"Click Cancel to stay on this page (you must log in again to save your work)."
 msgstr ""
-"Tu sesión ha sido cerrada. Haz clic en Aceptar para volver a iniciar sesión."
-" Haz clic en Cancelar para permanecer en está página (Deberas iniciar sesión"
-" nuevamente para guardar tu trabajo)."
+"Su sesión ha sido cerrada. Haga clic en Aceptar para volver a iniciar "
+"sesión. Haga clic en Cancelar para permanecer en esta página (Deberá iniciar"
+" sesión nuevamente para guardar su trabajo)."
 
 #: lms/static/js/api_admin/views/catalog_preview.js
 msgid "Preview this query"
@@ -5291,11 +5351,14 @@ msgstr "Marcar código de inscripción como no utilizado"
 #: cms/templates/js/transcript-organization-credentials.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Username"
 msgstr "Nombre de usuario"
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
 msgid "Email"
 msgstr "Correo electrónico"
 
@@ -7009,6 +7072,7 @@ msgstr "Fecha añadida"
 
 #: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Type"
 msgstr "Tipo"
 
@@ -7300,6 +7364,11 @@ msgstr "Básico"
 msgid "Visibility"
 msgstr "Visibilidad"
 
+#. Translators: "title" is the name of the current component being edited.
+#: cms/static/js/views/modals/edit_xblock.js
+msgid "Editing: %(title)s"
+msgstr "Editando: %(title)s"
+
 #: cms/static/js/views/modals/validation_error_modal.js
 msgid "Validation Error While Saving"
 msgstr "Error de Validación al Guardar"
@@ -7497,6 +7566,7 @@ msgid "Video duration is {humanizeDuration}"
 msgstr "La duración del vídeo es {humanizeDuration}"
 
 #: cms/static/js/views/video_thumbnail.js
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
 msgid "minutes"
 msgstr "minutos"
 
@@ -7602,8 +7672,15 @@ msgstr "Actualizando Etiquetas"
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/basic-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Actions"
 msgstr "Acciones"
+
+#: cms/templates/js/course-outline.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Timed Exam"
+msgstr "Examen cronometrado"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -8047,6 +8124,7 @@ msgid "Course Key"
 msgstr "Llave del curso"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Status"
 msgstr "Estado"
 
@@ -8279,14 +8357,6 @@ msgstr ""
 #: lms/templates/api_admin/catalog-results.underscore
 msgid "This catalog's courses:"
 msgstr "Los cursos de este catálogo:"
-
-#: lms/templates/ccx/schedule.underscore
-msgid "Expand All"
-msgstr "Expandir todo"
-
-#: lms/templates/ccx/schedule.underscore
-msgid "Collapse All"
-msgstr "Colapsar todo"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Start Date"
@@ -9909,6 +9979,75 @@ msgstr "Tomar nuevamente la foto"
 msgid "Take Photo"
 msgstr "Tomar foto"
 
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Add a New Allowance"
+msgstr "Añadir nueva autorización"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Special Exam"
+msgstr "Examen especial"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+#, python-format
+msgid " %(exam_display_name)s "
+msgstr ""
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Exam Type"
+msgstr "Tipo de exámen"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+msgid "Allowance Type"
+msgstr "Tipo de autorización"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Additional Time (minutes)"
+msgstr "Tiempo adicional (minutos)"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Value"
+msgstr "Valor"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Username or Email"
+msgstr "Nombre de usuario o correo electrónico"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+msgid "Allowances"
+msgstr "Autorizaciones"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+msgid "Add Allowance"
+msgstr "Añadir autorización"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Exam Name"
+msgstr "Nombre del examen"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+msgid "Allowance Value"
+msgstr "Valor de la autorización"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Time Limit"
+msgstr "Límite de tiempo"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Started At"
+msgstr "Iniciado a las"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Completed At"
+msgstr "Finalizado a las"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+#, python-format
+msgid " %(username)s "
+msgstr ""
+
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 msgid "Bookmarked on"
 msgstr "Añadido a marcadores en"
@@ -10492,10 +10631,6 @@ msgid "Proctored Exam"
 msgstr "Examen supervisado"
 
 #: cms/templates/js/course-outline.underscore
-msgid "Timed Exam"
-msgstr "Examen cronometrado"
-
-#: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
 #, python-format
 msgid "Collapse/Expand this %(xblock_type)s"
@@ -10995,10 +11130,6 @@ msgstr "{categoryText} en {parentDisplayname}"
 #: cms/templates/js/move-xblock-list.underscore
 msgid "Current location"
 msgstr "Ubicación actual"
-
-#: cms/templates/js/move-xblock-list.underscore
-msgid "View child items"
-msgstr "Ver items hijos"
 
 #: cms/templates/js/move-xblock-list.underscore
 msgid "Currently selected"
