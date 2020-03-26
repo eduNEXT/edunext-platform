@@ -1071,7 +1071,7 @@ def activate_account(request, key):
         # marketing_link returns '#' if it is not found a match for the name
         # passed as argument.
         if post_activation != '#':
-            redirect(post_activation)
+            return redirect(post_activation)
 
     return redirect('dashboard')
 
