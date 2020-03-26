@@ -48,6 +48,7 @@ from social_core.exceptions import AuthAlreadyAssociated, AuthException
 from social_django import utils as social_utils
 from xmodule.modulestore.django import modulestore
 
+from edxmako.shortcuts import marketing_link
 import openedx.core.djangoapps.external_auth.views
 import third_party_auth
 import track.views
@@ -1064,6 +1065,13 @@ def activate_account(request, key):
                 ),
                 extra_tags='account-activation aa-icon',
             )
+    if settings.FEATURES.get('ENABLE_MKTG_SITE'):
+        post_activation = marketing_link('ACTIVATION')
+
+        # marketing_link returns '#' if it is not found a match for the name
+        # passed as argument.
+        if post_activation != '#':
+            redirect(post_activation)
 
     return redirect('dashboard')
 
