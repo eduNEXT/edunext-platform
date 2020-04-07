@@ -20,7 +20,8 @@ class Command(BaseCommand):
         $ ./manage.py cms delete_course 'course-v1:edX+DemoX+Demo_Course' --settings=devstack
         $ ./manage.py cms delete_course 'course-v1:edX+DemoX+Demo_Course' --keep-instructors --settings=devstack
         $ ./manage.py cms delete_course 'course-v1:edX+DemoX+Demo_Course' --remove-assets --settings=devstack
-
+        $ ./manage.py cms delete_course 'course-v1:edX+DemoX+Demo_Course' --unenroll --settings=devstack
+        $ ./manage.py cms delete_course 'course-v1:edX+DemoX+Demo_Course' --remove-enrollments --settings=devstack
     Note:
         The keep-instructors option is useful for resolving issues that arise when a course run's ID is duplicated
         in a case-insensitive manner. MongoDB is case-sensitive, but MySQL is case-insensitive. This results in
@@ -31,6 +32,9 @@ class Command(BaseCommand):
 
         Use the remove-assets option to ensure all assets are deleted. This is especially relevant to users of the
         split Mongo modulestore.
+
+        --remove-enrollments overwrite unenroll, so if you don't want to delete all course enrollments rows, you must use
+        the unenroll argument.
     """
     help = 'Delete a MongoDB backed course'
 
@@ -54,6 +58,22 @@ class Command(BaseCommand):
                  'Be careful! These assets may be associated with another course',
         )
 
+        parser.add_argument(
+            '--unenroll',
+            action='store_true',
+            default=False,
+            help='Unenroll all users from course'
+        )
+
+        parser.add_argument(
+            '--remove-enrollments',
+            action='store_true',
+            default=False,
+            help='Delete all enrollments from course. '
+                'Be careful! if you use this setting, the unenroll won`t work.',
+        )
+
+
     def handle(self, *args, **options):
         try:
             # a course key may have unicode chars in it
@@ -73,7 +93,15 @@ class Command(BaseCommand):
 
         if query_yes_no('Are you sure you want to delete course {}?'.format(course_key), default='no'):
             if query_yes_no('Are you sure? This action cannot be undone!', default='no'):
-                delete_course(course_key, ModuleStoreEnum.UserID.mgmt_command, options['keep_instructors'])
+
+                if 'remove_enrollments' in options:
+                    delete_course(course_key, ModuleStoreEnum.UserID.mgmt_command, options['keep_instructors'],
+                        False, options['remove_enrollments'])
+                elif 'unenroll' in options:
+                    delete_course(course_key, ModuleStoreEnum.UserID.mgmt_command, options['keep_instructors'],
+                        options['unenroll'], False)
+                else:
+                    delete_course(course_key, ModuleStoreEnum.UserID.mgmt_command, options['keep_instructors'])
 
                 if options['remove_assets']:
                     contentstore().delete_all_course_assets(course_key)

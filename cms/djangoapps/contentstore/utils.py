@@ -71,12 +71,35 @@ def remove_all_instructors(course_key):
     instructor_role.remove_users(*instructor_role.users_with_role())
 
 
-def delete_course(course_key, user_id, keep_instructors=False):
+def remove_all_enrollments(course_key):
+    """
+    Remove all course enrollments
+    """
+    CourseEnrollment.objects.filter(course_id=course_key).delete()
+
+
+def unenroll(course_key):
+    """
+    Unenroll users from course
+    """
+    enrollments = CourseEnrollment.objects.filter(course_id=course_key)
+    for enrollment in enrollments:
+        CourseEnrollment.unenroll(user=enrollment.user, course_id=course_key)
+
+
+def delete_course(course_key, user_id, keep_instructors=False, unenroll=False,
+    remove_enrollments=False):
     """
     Delete course from module store and if specified remove user and
     groups permissions from course.
     """
     _delete_course_from_modulestore(course_key, user_id)
+
+    if unenroll:
+        _unenroll(course_key)
+
+    if remove_enrollments:
+        _remove_enrollments(course_key)
 
     if not keep_instructors:
         _remove_instructors(course_key)
@@ -91,6 +114,30 @@ def _delete_course_from_modulestore(course_key, user_id):
 
     with module_store.bulk_operations(course_key):
         module_store.delete_course(course_key, user_id)
+
+
+def _unenroll(course_key):
+    """
+    unenroll user from course
+    """
+    print('unenrolling users from course....')
+
+    try:
+        unenroll(course_key)
+    except Exception as err:
+        log.error("Error in unroll users for {0}: {1}".format(course_key, err))
+
+
+def _remove_enrollments(course_key):
+    """
+    remove all student enrollments associated with this course
+    """
+    print('removing enrollments from course....')
+
+    try:
+        remove_all_enrollments(course_key)
+    except Exception as err:
+        log.error("Error in deleting course enrollments for {0}: {1}".format(course_key, err))
 
 
 def _remove_instructors(course_key):
