@@ -149,7 +149,7 @@ class SafeCookieData(object):
                 "SafeCookieData BWC parse error: {0!r}.".format(safe_cookie_string)
             )
         else:
-            if safe_cookie_data.version != cls.CURRENT_VERSION and safe_cookie_data.version != "\"{}".format(cls.CURRENT_VERSION):
+            if safe_cookie_data.version != cls.CURRENT_VERSION:
                 raise SafeCookieError(
                     "SafeCookieData version {0!r} is not supported. Current version is {1}.".format(
                         safe_cookie_data.version,
@@ -263,7 +263,11 @@ class SafeSessionMiddleware(SessionMiddleware):
         """
 
         cookie_data_string = request.COOKIES.get(settings.SESSION_COOKIE_NAME)
+
         if cookie_data_string:
+
+            # Remove leading and trailing quote
+            cookie_data_string = cookie_data_string.strip("\"")
 
             try:
                 safe_cookie_data = SafeCookieData.parse(cookie_data_string)  # Step 1
