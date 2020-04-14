@@ -149,7 +149,7 @@ class SafeCookieData(object):
                 "SafeCookieData BWC parse error: {0!r}.".format(safe_cookie_string)
             )
         else:
-            if safe_cookie_data.version != cls.CURRENT_VERSION:
+            if safe_cookie_data.version != cls.CURRENT_VERSION and safe_cookie_data.version != "\"{}".format(cls.CURRENT_VERSION):
                 raise SafeCookieError(
                     "SafeCookieData version {0!r} is not supported. Current version is {1}.".format(
                         safe_cookie_data.version,
