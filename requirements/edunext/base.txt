@@ -58,4 +58,4 @@ git+https://github.com/proversity-org/badgr-xblock.git@7077d499b2f752c78bb41e9c1
 ###################
 # plugins must be editable for the settings to appear on the sys path during loading
 -e git+https://github.com/eduNEXT/eox-tenant.git@v2.5.1#egg=eox-tenant==2.5.1
-git+https://github.com/eduNEXT/eox-core.git@v2.12.0#egg=eox-core[sentry]==2.12.0
+git+https://github.com/eduNEXT/eox-core.git@v2.12.1#egg=eox-core[sentry,tpa]==2.12.1
