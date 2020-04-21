@@ -635,7 +635,7 @@ class TestCreateAccountValidation(TestCase):
             assert_username_error(USERNAME_BAD_LENGTH_MSG)
 
         # Too long
-        params["username"] = "this_username_has_31_characters"
+        params["username"] = "this_username_has_31_characters" * 5 # Now it has 155
         assert_username_error(USERNAME_BAD_LENGTH_MSG)
 
         # Invalid
