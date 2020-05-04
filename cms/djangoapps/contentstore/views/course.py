@@ -1064,24 +1064,29 @@ def settings_handler(request, course_key_string):
 
             # see if the ORG of this course can be attributed to a defined configuration . In that case, the
             # course about page should be editable in Studio
-            marketing_site_enabled = configuration_helpers.get_value_for_org(
-                course_module.location.org,
-                'ENABLE_MKTG_SITE',
-                settings.FEATURES.get('ENABLE_MKTG_SITE', False)
-            )
-            enable_extended_course_details = configuration_helpers.get_value_for_org(
-                course_module.location.org,
-                'ENABLE_EXTENDED_COURSE_DETAILS',
-                settings.FEATURES.get('ENABLE_EXTENDED_COURSE_DETAILS', False)
-            )
+            if configuration_helpers.get_value("EDNX_ENABLE_FIXED_SETTINGS_VALUES_ORG_STUDIO", False):
+                marketing_site_enabled = False
+                enable_extended_course_details = False
+                short_description_editable = True
+            else:
+                marketing_site_enabled = configuration_helpers.get_value_for_org(
+                    course_module.location.org,
+                    'ENABLE_MKTG_SITE',
+                    settings.FEATURES.get('ENABLE_MKTG_SITE', False)
+                )
+                enable_extended_course_details = configuration_helpers.get_value_for_org(
+                    course_module.location.org,
+                    'ENABLE_EXTENDED_COURSE_DETAILS',
+                    settings.FEATURES.get('ENABLE_EXTENDED_COURSE_DETAILS', False)
+                )
+                short_description_editable = configuration_helpers.get_value_for_org(
+                    course_module.location.org,
+                    'EDITABLE_SHORT_DESCRIPTION',
+                    settings.FEATURES.get('EDITABLE_SHORT_DESCRIPTION', True)
+                )
 
             about_page_editable = not marketing_site_enabled
             enrollment_end_editable = GlobalStaff().has_user(request.user) or not marketing_site_enabled
-            short_description_editable = configuration_helpers.get_value_for_org(
-                course_module.location.org,
-                'EDITABLE_SHORT_DESCRIPTION',
-                settings.FEATURES.get('EDITABLE_SHORT_DESCRIPTION', True)
-            )
             sidebar_html_enabled = course_experience_waffle().is_enabled(ENABLE_COURSE_ABOUT_SIDEBAR_HTML)
             # self_paced_enabled = SelfPacedConfiguration.current().enabled
 
