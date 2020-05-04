@@ -111,6 +111,12 @@ def get_lms_link_for_item(location, preview=False):
     """
     assert isinstance(location, UsageKey)
 
+    if getattr(settings, "EDNX_ENABLE_INTERNAL_LMS_JUMP", False):
+        return u"/jumpt_to_lms/{course_key}/jump_to/{location}".format(
+            course_key=text_type(location.course_key),
+            location=text_type(location),
+        )
+
     # checks LMS_BASE value in site configuration for the given course_org_filter(org)
     # if not found returns settings.LMS_BASE
     lms_base = SiteConfiguration.get_value_for_org(
