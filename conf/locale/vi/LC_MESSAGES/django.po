@@ -1,4 +1,19 @@
 # #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edunext helper translation file for Vietnamese.
+# Copyright (C) 2016 eduNEXT
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edunext helper translation file for Vietnamese.
+# Copyright (C) 2016 eduNEXT
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edunext translation file
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edunext helper translation file for Vietnamese.
+# Copyright (C) 2016 eduNEXT
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edunext helper translation file for Vietnamese.
+# Copyright (C) 2016 eduNEXT
+# #-#-#-#-#  edx_proctoring_proctortrack.po (edx-platform)  #-#-#-#-#
 # edunext helper translation file for Vietnamese.
 # Copyright (C) 2016 eduNEXT
 # #-#-#-#-#  done.po (PACKAGE VERSION)  #-#-#-#-#
@@ -10,33 +25,6 @@
 # Translators:
 # Vu Bach, 2019
 #
-# #-#-#-#-#  ubcpi.po (XBlocks)  #-#-#-#-#
-# Translators:
-# Vu Bach, 2019
-# #-#-#-#-#  openassessment.po (edx-platform)  #-#-#-#-#
-# #-#-#-#-#  django.po (edx-ora2)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2018 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-#
-# Translators:
-# dangitdang <dangpham@mit.edu>, 2014
-# Doan Viet Hung <viethung.doan@gmail.com>, 2014
-# Duong Nguyen <supermanikin@yahoo.com>, 2015
-# Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2017
-# Hoang Ha <halink0803@gmail.com>, 2014
-# hung nguyen <nguyenhungblog@gmail.com>, 2017
-# Lê Như Ý <nhuyle89@gmail.com>, 2014
-# Minh Tue Vo <mvo@edx.org>, 2014
-# NGUYEN CONG NAM <congnam0409@gmail.com>, 2014
-# NGUYEN HOANG AN <neyugn2909@gmail.com>, 2014
-# Nguyen Nhat Quang <technicalmanager@gmail.com>, 2016
-# Sarina Canelake <sarina@edx.org>, 2014
-# Thi Thanh Nga Do <thanhnga.ftu2@gmail.com>, 2015
-# Theodora. Tôn Nữ Quý Thiện <thien.tonnu1001@gmail.com>, 2015
-# Trần Tử Thiêng <trantuthieng26256@gmail.com>, 2014
-# Trung V. Nguyen <trung.ngvan@gmail.com>, 2015
-# Vinh Nguyen <vinhmaivy@gmail.com>, 2016
 # #-#-#-#-#  drag_and_drop_v2.po (XBlocks)  #-#-#-#-#
 # Translators:
 # Vu Bach, 2019
@@ -80,6 +68,30 @@
 # Translators:
 # #-#-#-#-#  lti_consumer.po (XBlocks)  #-#-#-#-#
 # Translators:
+# #-#-#-#-#  openassessment.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  django.po (edx-ora2)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2018 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+#
+# Translators:
+# dangitdang <dangpham@mit.edu>, 2014
+# Doan Viet Hung <viethung.doan@gmail.com>, 2014
+# Duong Nguyen <supermanikin@yahoo.com>, 2015
+# Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2017
+# Hoang Ha <halink0803@gmail.com>, 2014
+# hung nguyen <nguyenhungblog@gmail.com>, 2017
+# Lê Như Ý <nhuyle89@gmail.com>, 2014
+# Minh Tue Vo <mvo@edx.org>, 2014
+# NGUYEN CONG NAM <congnam0409@gmail.com>, 2014
+# NGUYEN HOANG AN <neyugn2909@gmail.com>, 2014
+# Nguyen Nhat Quang <technicalmanager@gmail.com>, 2016
+# Sarina Canelake <sarina@edx.org>, 2014
+# Thi Thanh Nga Do <thanhnga.ftu2@gmail.com>, 2015
+# Theodora. Tôn Nữ Quý Thiện <thien.tonnu1001@gmail.com>, 2015
+# Trần Tử Thiêng <trantuthieng26256@gmail.com>, 2014
+# Trung V. Nguyen <trung.ngvan@gmail.com>, 2015
+# Vinh Nguyen <vinhmaivy@gmail.com>, 2016
 # #-#-#-#-#  poll.po (XBlocks)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
@@ -121,10 +133,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 1.3\n"
+"#-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#\n"
+"#-#-#-#-#  done.po (PACKAGE VERSION)  #-#-#-#-#\n"
 "X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: lti_consumer.py\n"
-"#-#-#-#-#  poll.po (XBlocks)  #-#-#-#-#\n"
+"#-#-#-#-#  openassessment.po (edx-platform)  #-#-#-#-#\n"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
@@ -3980,13 +3995,9 @@ msgstr "LTI ID"
 msgid ""
 "Enter the LTI ID for the external LTI provider.  This value must be the same"
 " LTI ID that you entered in the LTI Passports setting on the Advanced "
-"Settings page.<br />See {docs_anchor_open}the edX LTI "
+"Settings page.{break_tag}See {docs_anchor_open}the edX LTI "
 "documentation{anchor_close} for more details on this setting."
 msgstr ""
-"Nhập LTI ID cho nhà cung cập LTI bên ngoài. Giá trị này phải trùng với LTI "
-"ID bạn đã nhập vào thiết lập LTI Passports trong phần Cài Đặt Nâng Cao.<br "
-"/>Xem {docs_anchor_open}tài liệu edX LTI{anchor_close} để có thêm thông tin "
-"về cài đặt."
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "LTI URL"
@@ -3996,14 +4007,10 @@ msgstr "LTI URL"
 #, python-brace-format
 msgid ""
 "Enter the URL of the external tool that this component launches. This "
-"setting is only used when Hide External Tool is set to False.<br />See "
+"setting is only used when Hide External Tool is set to False.{break_tag}See "
 "{docs_anchor_open}the edX LTI documentation{anchor_close} for more details "
 "on this setting."
 msgstr ""
-"Điền URL của công cụ bên ngoài mà thành phần này khởi động. Cài đặt này chỉ "
-"có thể sử dụng khi Giấu Công Cụ Bên Ngoài được đặt thành Sai <br /> Xem "
-"{docs_anchor_open}tài liệu edx LTI{anchor_close} để biết thêm chi tiết về "
-"thiết lập này."
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Custom Parameters"
@@ -4013,13 +4020,10 @@ msgstr "Custom Parameters"
 #, python-brace-format
 msgid ""
 "Add the key/value pair for any custom parameters, such as the page your "
-"e-book should open to or the background color for this component.<br />See "
-"{docs_anchor_open}the edX LTI documentation{anchor_close} for more details "
-"on this setting."
+"e-book should open to or the background color for this "
+"component.{break_tag}See {docs_anchor_open}the edX LTI "
+"documentation{anchor_close} for more details on this setting."
 msgstr ""
-"Thêm khóa/giá trị đồng bộ cho mỗi thông số, như là số trang ebook cần được "
-"mở hoặc màu nền cho thành phần này. <br /> Xem {docs_anchor_open}tài liệu "
-"edx LTI {anchor_close} để biết thêm chi tiết về thiết lập này."
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Open in New Page"
@@ -13712,7 +13716,7 @@ msgstr "Đây là địa chỉ e-mail mà bạn đã sử dụng để đăng k�
 
 #: lms/templates/forgot_password_modal.html
 msgid "Reset My Password"
-msgstr "Đặt lại mật khẩu"
+msgstr "Đổi mật khẩu"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
@@ -14026,12 +14030,9 @@ msgstr "Đã có lỗi khi đăng nhập vào {platform_name}."
 #: lms/templates/login.html
 msgid ""
 "Please provide the following information to log into your {platform_name} "
-"account. Required fields are noted by <strong class=\"indicator\">bold text "
-"and an asterisk (*)</strong>."
+"account. Required fields are noted by {strong_start}bold text and an "
+"asterisk (*){strong_end}."
 msgstr ""
-"Vui lòng cung cấp các thông tin sau để đăng nhập vào tài khoản "
-"{platform_name} của bạn. Các thông tin bắt buộc được đánh dấu bằng <strong "
-"class=\"indicator\">chữ đậm và dấu hoa thị (*)</strong>."
 
 #: lms/templates/login.html
 msgid "Account Preferences"
@@ -14279,9 +14280,8 @@ msgstr "Đăng ký qua {provider_name}"
 msgid "Create your own {platform_name} account below"
 msgstr "Tạo tài khoản trên {platform_name} "
 
-#: lms/templates/register-form.html lms/templates/register-shib.html
+#: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
 msgid ""
 "Required fields are noted by <strong class=\"indicator\">bold text and an "
 "asterisk (*)</strong>."
@@ -14400,6 +14400,12 @@ msgstr "Cập nhật tài khoản {platform_name}"
 msgid "Welcome {username}!  Please set your preferences below"
 msgstr ""
 "Chào mừng {username}! Xin vui lòng thiết lập tùy chỉnh của bạn dưới đây"
+
+#: lms/templates/register-shib.html
+msgid ""
+"Required fields are noted by {strong_start}bold text and an asterisk "
+"(*){strong_end}."
+msgstr ""
 
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -14556,8 +14562,8 @@ msgid "e.g. Your Name (for certificates)"
 msgstr "Ví dụ: họ tên (trên giấy chứng nhận)"
 
 #: lms/templates/signup_modal.html
-msgid "<i>Welcome</i> {name}"
-msgstr "<i>Chào</i> {name}"
+msgid "{italic_start}Welcome{italic_end} {name}"
+msgstr ""
 
 #: lms/templates/signup_modal.html
 msgid "Full Name *"
@@ -17417,10 +17423,8 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid ""
 "You have completed this course and are eligible to purchase course credit. "
-"Select <strong>Get Credit</strong> to get started."
+"Select {strong_start}Get Credit{strong_end} to get started."
 msgstr ""
-"Bạn đã hoàn thành khoá học này và đủ yêu cầu để mua tín chỉ. Hãy chọn "
-"<strong>Lấy tín chỉ</strong> để bắt đầu."
 
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid "You are now eligible for credit from {provider}. Congratulations!"
@@ -17436,8 +17440,8 @@ msgstr "Lấy tín chỉ"
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid ""
 "Thank you for your payment. To receive course credit, you must now request "
-"credit at the {link_to_provider_site} website. Select <b>Request Credit</b> "
-"to get started."
+"credit at the {link_to_provider_site} website. Select {break_start}Request "
+"Credit{break_end} to get started."
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_credit_info.html
@@ -17462,12 +17466,10 @@ msgstr "Xem chi tiết"
 #. provider.
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid ""
-"<b>Congratulations!</b> {provider_name} has approved your request for course"
-" credit. To see your course credit, visit the {link_to_provider_site} "
-"website."
+"{break_start}Congratulations!{break_end} {provider_name} has approved your "
+"request for course credit. To see your course credit, visit the "
+"{link_to_provider_site} website."
 msgstr ""
-"<b>Chúc mừng</b> {provider_name} đã phê duyệt yêu cầu cấp tín chỉ của bạn. "
-"Để xem tín chỉ, hãy tới trang {link_to_provider_site}."
 
 #: lms/templates/dashboard/_dashboard_credit_info.html
 msgid "View Credit"
@@ -21842,6 +21844,12 @@ msgstr "Bản quyền {year}. Bản quyền đã được bảo hộ"
 msgid "For anyone, anywhere, anytime"
 msgstr "Cho mọi người, mọi nơi, mọi lúc"
 
+#: themes/stanford-style/lms/templates/register-shib.html
+msgid ""
+"Required fields are noted by {strong_indicator}bold text and an asterisk "
+"(*).{strong_close}"
+msgstr ""
+
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid ""
 "You will receive an activation email.  You must click on the activation link"
@@ -22119,9 +22127,10 @@ msgstr ""
 msgid "Learn more about certificates"
 msgstr "Tìm hiểu thêm về chứng chỉ"
 
-#: cms/templates/certificates.html cms/templates/settings_graders.html
-msgid "Details &amp; Schedule"
-msgstr "Chi Tiết &amp; Lịch Trình"
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/settings_advanced.html
+msgid "Details & Schedule"
+msgstr "Chi tiết & Lịch trình"
 
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
@@ -23199,11 +23208,6 @@ msgstr ""
 "{em_end}. Bạn chỉ có thể xóa một cấu hình nhóm nếu nó không được sử dụng "
 "trong một thử nghiệm. Để xóa cấu hình, hãy di chuột qua ô của nó và bấm vào "
 "biểu tượng xóa."
-
-#: cms/templates/group_configurations.html
-#: cms/templates/settings_advanced.html
-msgid "Details & Schedule"
-msgstr "Chi tiết & Lịch trình"
 
 #: cms/templates/howitworks.html
 msgid "Welcome"
@@ -25106,6 +25110,10 @@ msgstr ""
 "thí nghiệm, các câu đố, và các kỳ thi, và xác định có bao nhiêu lớp của học "
 "sinh mỗi loại phân công là phù hợp."
 
+#: cms/templates/settings_graders.html
+msgid "Details &amp; Schedule"
+msgstr "Chi Tiết &amp; Lịch Trình"
+
 #: cms/templates/studio_xblock_wrapper.html
 msgid "Expand or Collapse"
 msgstr "Mở rộng hoặc Thu gọn"
@@ -26749,343 +26757,1685 @@ msgid ""
 "    XBlock)"
 msgstr ""
 
-msgid "Option {{ $index + 1 }}"
-msgstr "Lựa Chọn {{ $index + 1 }}"
-
+#: default_data.py
 msgid ""
-"\"Simple\" means examples for different answer possibilities are "
-"intentionally selected when students are viewing peer answers.<br>\"Random\""
-" means examples are selected at random and may not include different answer "
-"possibilities."
-msgstr ""
-"\"Đơn giản\" nghĩa là ví dụ cho mỗi khả năng đáp án khác nhau được chủ định "
-"chọn khi học viên xem đáp án của bạn khác. <br> \"Ngẫu Nhiên\" nghĩa là ví "
-"dụ được chọn ngẫu nhiên và không bao gồm khả năng đáp án khác nhau. "
-
-msgid "&nbsp;({{weight}} point possible)"
-msgstr "&nbsp;({{weight}} điểm tối đa) "
-
-msgid "&nbsp;({{weight}} points possible)"
-msgstr "&nbsp;({{weight}} điểm tối đa) "
-
-msgid "(Option {{rc.answer_original + 1}})"
-msgstr "(Lựa chọn {{rc.answer_original + 1}}) "
-
-msgid "(Option {{rc.answer_revised + 1}})"
-msgstr "(Lựa chọn {{rc.answer_revised + 1}}) "
-
-msgid "(You chose this option)"
-msgstr "(Bạn đã chọn mục này) "
-
-msgid "(correct)"
-msgstr "(đúng)"
-
-msgid "({{weight}} point possible)"
-msgstr "({{weight}} điểm tối đa) "
-
-msgid "({{weight}} points possible)"
-msgstr "({{weight}} điểm tối đa) "
-
-msgid ", Completed"
-msgstr ", Đã hoàn thành "
-
-msgid ", In Progress"
-msgstr ", Trong tiến trình"
-
-msgid ", Upcoming"
-msgstr ", Sắp tới"
-
-msgid "Add New Answer"
-msgstr "Thêm Đáp Án Mới "
-
-msgid "Add New Example"
-msgstr "Thêm Ví Dụ Mới "
-
-msgid ""
-"Add example answers to the answer pool for this question. Students most "
-"likely to see these answers are those completing the assignment first, when "
-"the answer pool is small."
-msgstr ""
-"Thêm đáp án ví dụ vào ngân hàng đáp án cho câu hỏi này. Học viên thường sẽ "
-"thấy đáp án sẽ là những người hoàn thành bài tập trước, khi ngân hàng đáp án"
-" ít. "
-
-msgid ""
-"Add the text for this answer. If you wish to add an image, press the button "
-"below."
-msgstr ""
-"Thêm chữ cho câu hỏi này. Nếu bạn muốn thêm ảnh, bấm vào nút bên dưới. "
-
-msgid ""
-"Alternative text - a description of the image for non-visual users. The "
-"description should provide all the information needed for someone to answer "
-"the question if the image did not load."
-msgstr ""
-"Chữ thay thế - mô tả bức ảnh cho người dùng ko nhìn được. Mô tả nên bao gồm "
-"mọi thông tin cần thiết cho người xem có thể trả lời nếu ảnh không tải được."
-" "
-
-msgid "Answer Options"
-msgstr "Lựa Chọn Đáp Án "
-
-msgid "Answer {{$index + 1}}"
-msgstr "Đáp Án {{$index + 1}} "
-
-msgid "Answers Students See - Number Selected <font color=\"red\">*</font>"
-msgstr "Đáp Án Mà Học Viên Thấy - Con số Chọn <font color=\"red\">*</font> "
-
-msgid "Answers Students See - Selection Logic <font color=\"red\">*</font>"
-msgstr "Đáp Án Mà Học Viên Thấy - Chọn theo Logic <font color=\"red\">*</font>"
-
-msgid ""
-"Choose if you want the image to appear above or below the question text."
-msgstr "Hãy chọn nếu bạn muốn ảnh hiển thị trên hoặc dưới chữ câu hỏi. "
-
-msgid "Choose if you want the image to appear above or below the question."
-msgstr "Hãy chọn nếu bạn muốn ảnh hiển thị trên hoặc dưới câu hỏi. "
-
-msgid ""
-"Choose the answer you consider correct, or select \"n/a\" if there is no "
-"correct answer."
-msgstr ""
-"Chọn đáp áp bạn nghĩ là đúng, hoặc chọn \"n/a\" nếu không có câu trả lời "
-"đúng. "
-
-msgid "Choose the answer."
-msgstr "Chọn đáp án. "
-
-msgid "Class Breakdown"
-msgstr "Phân Loại Lớp "
-
-msgid "Correct Answer <font color=\"red\">*</font>"
-msgstr "Đáp Án Đúng <font color=\"red\">*</font>"
-
-msgid "Correct Option"
-msgstr "Lựa Chọn Đúng "
-
-msgid "Display Name <font color=\"red\">*</font>"
-msgstr "Hiển Thị Tên <font color=\"red\">*</font> "
-
-msgid "Error retrieving data!"
-msgstr "Lỗi khi lấy dữ liệu! "
-
-msgid "Error retrieving statistics!"
-msgstr "Lỗi khi lấy thống kê!"
-
-msgid "Error saving question"
-msgstr "Lỗi khi lưu câu hỏi "
-
-msgid "Error submitting answer!"
-msgstr "Lỗi khi nộp đáp án! "
-
-msgid "Example Answer {{$index + 1}}"
-msgstr "Đáp Án Ví Dụ {{$index + 1}}"
-
-msgid "Example Answers <font color=\"red\">*</font>"
-msgstr "Đáp Án Ví  Dụ <font color=\"red\">*</font> "
-
-msgid "Explain to other students why you chose this answer (Required):"
-msgstr "Giải thích cho học viên khác tại sao bạn chọn đáp án này (Bắt buộc): "
-
-msgid "Explanation (optional)"
-msgstr "Giải thích (không bắt buộc) "
-
-msgid "Explanation <font color=\"red\">*</font>"
-msgstr "Giải thích <font color=\"red\">*</font> "
-
-msgid "Final Answer Selection"
-msgstr "Chọn Đáp Án Cuối "
-
-msgid "Final Answer Selection:"
-msgstr "Chọn Đáp Án Cuối: "
-
-msgid ""
-"First, the learner answers a multiple choice question and provides an "
-"explanation for the answer. Next, the learner sees answers and explanations "
-"submitted by other learners. After reflecting on these peer responses, the "
-"learner can make revisions and submit a final answer and explanation. "
-"Finally, the learner sees the correct answer, if supplied, and any "
-"explanation that you provided for it."
-msgstr ""
-"Trước tiên, học viên cần trả lời một câu hỏi nhiều lựa chọn và đưa ra giải "
-"thích cho câu hỏi. Sau đó, học viên sẽ thấy đáp án và giải thích của các bạn"
-" khác. Sau khi đã tham khảo, học viên có thể thay đổi và nộp đáp án cuối "
-"cùng kèm giải thích. Cuối cùng học viên sẽ thấy đáp án đúng, và lời giải "
-"thích đúng nếu bạn có cung cấp. "
-
-msgid ""
-"In order to move to the next step please briefly explain why you chose this "
-"answer."
-msgstr "Để tiếp tục hãy giải thích qua tại sao bạn lại chọn đáp án này. "
-
-msgid "In order to move to the next step please choose an answer."
-msgstr "Để tiếp tục tới bước tiếp theo, hãy chọn một đáp án."
-
-msgid ""
-"In order to move to the next step, please choose an answer and briefly "
-"explain your choice."
-msgstr ""
-"Để tiếp tục, hãy chọn một đáp án và giải thích qua tại sao bạn lại chọn đáp "
-"án này. "
-
-msgid ""
-"In the next step, you will be shown a selection of other responses that may "
-"help you refine your answer."
-msgstr ""
-"Tại bước kế tiếp, bạn sẽ được xem những câu trả lời khác có thể giúp bạn "
-"hoàn thiện đáp án của mình. "
-
-msgid "Initial Answer Selection"
-msgstr "Đáp Án Chọn Ban Đầu"
-
-msgid "Initial Answer Selection:"
-msgstr "Đáp Án Chọn Ban Đầu: "
-
-msgid "Instructor's Explanation"
-msgstr "Giải thích của Người Dạy "
-
-msgid "Maximum Characters <font color=\"red\">*</font>"
-msgstr "Kí Tự Tối Đa  <font color=\"red\">*</font>"
-
-msgid "Minimum Characters <font color=\"red\">*</font>"
-msgstr "Kí Tự Tối Thiểu <font color=\"red\">*</font> "
-
-#: step.py templates/html/mentoring_with_steps.html
-msgid "Next Step"
-msgstr "Bước tiếp theo"
-
-msgid "Not enough data to generate the chart. Please check back later."
-msgstr "Không đủ dữ liệu để tạo biểu đồ. Hãy xem lại sau. "
-
-msgid "Note:"
-msgstr "Lưu ý: "
-
-msgid "Option {{$index + 1}}: {{rc.calc($index)}}"
-msgstr "Lựa Chọn {{$index + 1}}: {{rc.calc($index)}} "
-
-msgid "Peer Instruction"
-msgstr "Hướng dẫn bạn "
-
-msgid ""
-"Peer instruction problems give learners more interactive engagement while "
-"they complete a multiple choice question that may or may not have a correct "
-"answer. The tool supports deeper consideration of the learner’s "
-"understanding of a concept and the correctness (if applicable) of an initial"
-" answer. Learners complete these problems in three steps."
-msgstr ""
-"Câu hỏi hướng dẫn bạn cho học viên được tương tác nhiều hơn khi họ hoàn "
-"thành một câu hỏi trắc nghiệm mà có hoặc có thể không có đáp án đúng. Công "
-"cụ này hỗ trợ cân nhắc khả năng hiểu của người học và cách sửa sai (nếu "
-"được) cho đáp án ban đầu. Học viên hoàn thành những câu hỏi qua ba bước. "
-
-msgid ""
-"Please edit your explanation so that it is less than {{rationale_size.max}} "
-"characters."
-msgstr ""
-"Hãy chỉnh sửa giải thích của bạn để ngắn hơn {{rationale_size.max}} kí tự."
-
-msgid "Please refresh the page and try again!"
-msgstr "Hãy tải lại trang và thử lại! "
-
-msgid "Possible Answers <font color=\"red\">*</font>"
-msgstr "Các Đáp Án Có Thể Đúng <font color=\"red\">*</font> "
-
-msgid ""
-"Provide alternative text - a description of the image for non-visual users. "
-"The description should provide all the information needed for someone to "
-"answer the question if the image did not load."
-msgstr ""
-"Cung cấp văn bản thay thế - mô tả bức ảnh cho người dùng ko nhìn được. Mô tả"
-" nên bao gồm mọi thông tin cần thiết cho người xem có thể trả lời nếu ảnh "
-"không tải được. "
-
-msgid "Provide an explanation for this answer."
-msgstr "Cung cấp giải thích cho câu hỏi này. "
-
-msgid "Question Text <font color=\"red\">*</font>"
-msgstr "Văn Bản Câu Hỏi <font color=\"red\">*</font> "
-
-msgid "Reflection"
-msgstr "Phản ánh "
-
-msgid "Results"
-msgstr "Kết quả "
-
-msgid "Saving"
-msgstr "Đang lưu"
-
-msgid "See how your classmates answered <a href=\"#classbreakdown\">below</a>"
-msgstr "Xem các bạn cùng lớp trả lời <a href=\"#classbreakdown\"> ở dưới</a> "
-
-msgid ""
-"Step 1) Your Initial Answer <span class=\"inline-hint\">You can change this "
-"answer later, if you change your mind.</span>"
-msgstr ""
-"Bước 1) Đáp Án Ban Đầu của bạn <span class=\"inline-hint\">Bạn có thể thay "
-"đổi đáp án này sau, nếu bạn muốn đổi.</span> "
-
-msgid "Step 2) Read Other Students Answers"
-msgstr "Bước 2) Đọc Đáp Án của Bạn Khác "
-
-msgid ""
-"Step 3) Your Final Answer <span class=\"inline-hint\">You now have the "
-"option to change your initial selection and explanation, if you wish.</span>"
-msgstr ""
-"Bước 3) Đáp Án Cuối Cùng của bạn <span class=\"inline-hint\">Bạn giờ có thể "
-"thay đổi lựa chọn và giải thích ban đầu, nếu bạn muốn.</span> "
-
-msgid "Student Answer: {{options[answer.option].text}}"
-msgstr "Đáp Án Học Viên: {{options[answer.option].text}} "
-
-msgid "Student Rationale"
-msgstr "Lý luận của Học Viên "
-
-msgid "Students see the explanation after seeing the final answer."
-msgstr "Học viên có thể thấy lời giải thích sau khi nhìn thấy đáp án cuối. "
-
-msgid ""
-"The answers appear as choices underneath the question, with a maximum of 10 "
-"allowed per question. Each answer may contain text, an image, or a "
-"combination of both. <br><br>To add another answer press the \"Add New "
-"Answer\" button. To remove an answer press the blue \"x\" next to the blue "
-"option you want to remove."
-msgstr ""
-"Đáp án hiển thị dưới dạng lựa chọn phía dưới câu hỏi, với tối đa 10 cái mỗi "
-"câu hỏi. Mỗi đáp án có thể chứa chữ, một bức ảnh hoặc kết hợp của cả hai. "
-"<br><br> Để thêm đáp án mới chọn nút \"Thêm Đáp Án Mới\". Để loại bỏ một đáp"
-" án chọn chữ \"x\" màu xanh ngay cạnh lựa chọn bạn muốn loại bỏ. "
-
-msgid ""
-"The question appears above the possible answers that you set below. You can "
-"use text, an image, or a combination of both. If you wish to add an image to"
-" your question, press the \"Add Image To Question\" button."
+"An isosceles triangle with three layers of similar height. It is shown "
+"upright, so the widest layer is located at the bottom, and the narrowest "
+"layer is located at the top."
 msgstr ""
 
-msgid ""
-"These are samples of other student answers for this question. Read them and "
-"then compare with your answer below."
+#: default_data.py
+msgid "Of course it goes here! It goes anywhere!"
 msgstr ""
 
-msgid ""
-"This is a look at how your classmates answered the question during the "
-"initial and final rounds."
+#: default_data.py
+msgid "Goes anywhere"
 msgstr ""
 
-msgid ""
-"This is the maximum number of characters the student explanations may "
-"contain."
+#: default_data.py
+msgid "The Top Zone"
 msgstr ""
 
-msgid ""
-"This is the minimum number of characters the student explanations must "
-"contain."
+#: default_data.py
+msgid "The Middle Zone"
 msgstr ""
 
-msgid ""
-"This is the number of examples shown to the students after they answer. "
-"Enter the # symbol to use the same number as the answer possibilities you've"
-" set."
+#: default_data.py
+msgid "The Bottom Zone"
 msgstr ""
+
+#: default_data.py
+msgid "Use this zone to associate an item with the top layer of the triangle."
+msgstr ""
+
+#: default_data.py
+msgid ""
+"Use this zone to associate an item with the middle layer of the triangle."
+msgstr ""
+
+#: default_data.py
+msgid ""
+"Use this zone to associate an item with the bottom layer of the triangle."
+msgstr ""
+
+#: default_data.py
+#, python-brace-format
+msgid "Correct! This one belongs to {zone}."
+msgstr ""
+
+#: default_data.py
+msgid "No, this item does not belong here. Try again."
+msgstr ""
+
+#: default_data.py
+msgid "You silly, there are no zones for this one."
+msgstr ""
+
+#: default_data.py
+msgid "Drag the items onto the image above."
+msgstr ""
+
+#: default_data.py
+msgid "Good work! You have completed this drag and drop problem."
+msgstr ""
+
+#: default_data.py
+msgid "Goes to the top"
+msgstr ""
+
+#: default_data.py
+msgid "Goes to the middle"
+msgstr ""
+
+#: default_data.py
+msgid "Goes to the bottom"
+msgstr ""
+
+#: default_data.py
+msgid "I don't belong anywhere"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid ""
+"The title of the drag and drop problem. The title is displayed to learners."
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Drag and Drop"
+msgstr "Kéo và Thả"
+
+#: drag_and_drop_v2.py
+msgid ""
+"Standard mode: the problem provides immediate feedback each time a learner "
+"drops an item on a target zone. Assessment mode: the problem provides "
+"feedback only after a learner drops all available items on target zones."
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Standard"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Assessment"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Maximum attempts"
+msgstr ""
+
+#: drag_and_drop_v2.py mentoring.py mixins.py
+msgid "Show title"
+msgstr "Hiện tiêu đề"
+
+#: drag_and_drop_v2.py
+msgid "Display the title to the learner?"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Problem text"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "The description of the problem or instructions shown to the learner."
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Show \"Problem\" heading"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Display the heading \"Problem\" above the problem text?"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Defines the number of points the problem is worth."
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Item background color"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid ""
+"The background color of draggable items in the problem (example: 'blue' or "
+"'#0000ff')."
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Item text color"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Text color to use for draggable items (example: 'white' or '#ffffff')."
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Problem data"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid ""
+"Information about zones, items, feedback, and background image for this "
+"problem. This information is derived from the input that a course author "
+"provides via the interactive editor when configuring the problem."
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid ""
+"Information about current positions of items that a learner has dropped on "
+"the target image."
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Number of attempts learner used"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Indicates whether a learner has completed the problem at least once"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "do_attempt handler should only be called for assessment mode"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Max number of attempts reached"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "show_answer handler should only be called for assessment mode"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "There are attempts remaining"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Unknown DnDv2 mode {mode} - course is misconfigured"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Remove zone"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Keeps maximum score achieved by student"
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid "Failed to parse \"Maximum items per zone\""
+msgstr ""
+
+#: drag_and_drop_v2.py
+msgid ""
+"\"Maximum items per zone\" should be positive integer, got "
+"{max_items_per_zone}"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Describe this zone to non-visual users."
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "width"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "height"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Alignment"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "none"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "left"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "center"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "right"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Align dropped items to the left, center, or right."
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Remove item"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Zone"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Image URL (alternative to the text)"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "For example, 'http://example.com/image.png' or '/static/image.png'."
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid ""
+"Image description (should provide sufficient information to place the item "
+"even if the image did not load)"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Success feedback"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Error feedback"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Show advanced settings"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Preferred width"
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid ""
+"Specify preferred width as percentage of the background image width. Leave "
+"blank for automatic width."
+msgstr ""
+
+#: templates/html/js_templates.html
+msgid "Use text that is clear and descriptive of the item to be placed."
+msgstr ""
+
+#: templates/html/drag_and_drop.html
+msgid "Loading drag and drop problem."
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid ""
+"Note: do not edit the problem if students have already completed it. Delete "
+"the problem and create a new one."
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Introductory feedback"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Final feedback"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html templates/html/js_templates.html
+msgid "Zones"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Background URL"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid ""
+"For example, 'http://example.com/background.png' or "
+"'/static/background.png'."
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Change background"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Background description"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid ""
+"\n"
+"                            Please provide a description of the image for non-visual users.\n"
+"                            The description should provide sufficient information to allow anyone\n"
+"                            to solve the problem even without seeing the image.\n"
+"                        "
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Zone definitions"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Zone labels"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Display label names on the image"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Zone borders"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Display zone borders on the image"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Add a zone"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Items"
+msgstr ""
+
+#: templates/html/drag_and_drop_edit.html
+msgid "Add an item"
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "ok"
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "Item Bank"
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "Placed in: {zone_title}"
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "Correctly placed in: {zone_title}"
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ", draggable, grabbed"
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ", draggable"
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "Hide Answer"
+msgstr ""
+
+#: mentoring.py
+msgid "Feedback"
+msgstr "Phản hồi"
+
+#: public/js/drag_and_drop.js
+msgid "Keyboard Help"
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid "This is a screen reader-friendly problem"
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ""
+"You can complete this problem using only your keyboard by following the "
+"guidance below:"
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ""
+"Drag and Drop problems consist of draggable items and dropzones. Users "
+"should select a draggable item with their keyboard and then navigate to an "
+"appropriate dropzone to drop it."
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ""
+"Use only TAB and SHIFT+TAB to navigate between draggable items and drop "
+"zones."
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid "Press CTRL+M to select a draggable item (effectively picking it up)."
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ""
+"Navigate using TAB and SHIFT+TAB to the appropriate dropzone and press "
+"CTRL+M once more to drop it here."
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ""
+"Press ESC if you want to cancel the drop operation (for example, to select a"
+" different item)."
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ""
+"TAB back to the list of draggable items and repeat this process until all of"
+" the draggable items have been placed on their respective dropzones."
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "Go to Beginning"
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "An error occurred. Unable to load drag and drop problem."
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "You have used {used} of {total} attempts."
+msgstr ""
+
+#: public/js/drag_and_drop.js
+msgid "Some of your answers were not correct."
+msgstr ""
+
+#: public/js/drag_and_drop_edit.js
+msgid "There was an error with your form."
+msgstr ""
+
+#: public/js/drag_and_drop_edit.js
+msgid "Please check over your submission."
+msgstr ""
+
+# Translators: {earned} is the number of points earned. {possible} is the
+# total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
+# points will always be at least 1. We pluralize based on the total number of
+# points (example: 0/1 point; 1/2 points).
+#: public/js/drag_and_drop.js
+msgid "{earned}/{possible} point (graded)"
+msgid_plural "{earned}/{possible} points (graded)"
+msgstr[0] ""
+
+# Translators: {earned} is the number of points earned. {possible} is the
+# total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
+# points will always be at least 1. We pluralize based on the total number of
+# points (example: 0/1 point; 1/2 points).
+#: public/js/drag_and_drop.js
+msgid "{earned}/{possible} point (ungraded)"
+msgid_plural "{earned}/{possible} points (ungraded)"
+msgstr[0] ""
+
+# Translators: {possible} is the number of points possible (examples: 1, 3,
+# 10).
+#: public/js/drag_and_drop.js
+msgid "{possible} point possible (graded)"
+msgid_plural "{possible} points possible (graded)"
+msgstr[0] ""
+
+# Translators: {possible} is the number of points possible (examples: 1, 3,
+# 10).
+#: public/js/drag_and_drop.js
+msgid "{possible} point possible (ungraded)"
+msgid_plural "{possible} points possible (ungraded)"
+msgstr[0] ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid "Hints:"
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid ", dropzone"
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid "Drag and Drop Problem"
+msgstr ""
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js
+msgid "Drop Targets"
+msgstr ""
+
+#: utils.py
+msgid "Your highest score is {score}"
+msgstr ""
+
+#: utils.py
+msgid "Final attempt was used, highest score is {score}"
+msgstr ""
+
+#: utils.py
+msgid "Correctly placed {correct_count} item."
+msgid_plural "Correctly placed {correct_count} items."
+msgstr[0] ""
+
+#: utils.py
+msgid "Misplaced {misplaced_count} item."
+msgid_plural "Misplaced {misplaced_count} items."
+msgstr[0] ""
+
+#: utils.py
+msgid ""
+"Misplaced {misplaced_count} item. Misplaced item was returned to item bank."
+msgid_plural ""
+"Misplaced {misplaced_count} items. Misplaced items were returned to item "
+"bank."
+msgstr[0] ""
+
+#: utils.py
+msgid "Did not place {missing_count} required item."
+msgid_plural "Did not place {missing_count} required items."
+msgstr[0] ""
+
+msgid ""
+"\n"
+"        You will be guided through steps to set up online proctoring software and to perform various checks.</br>\n"
+"      "
+msgstr ""
+"\n"
+"        Bạn sẽ được hướng dẫn các bước để thiết lập phần mềm giám sát trực tuyến và thực hiện các bước rà soát khác.</br>\n"
+"      "
+
+msgid "internally reviewed"
+msgstr "đã đánh giá nội bộ"
+
+msgid "All Unreviewed"
+msgstr "Tất cả Chưa đánh giá"
+
+msgid "All Unreviewed Failures"
+msgstr "Tất cả Thất bại Chưa đánh giá"
+
+msgid "active proctored exams"
+msgstr "các cuộc thi có giám thị đang hoạt động"
+
+msgid "courses with active proctored exams"
+msgstr "các khoá học với các cuộc thi có giám thị đang hoạt động"
+
+msgid "Created"
+msgstr "Đã tạo"
+
+msgid "Download Software Clicked"
+msgstr "Tải Phần mềm Được bấm"
+
+msgid "Ready To Start"
+msgstr "Sẵn sàng Để Bắt đầu"
+
+msgid "Started"
+msgstr "Bắt đầu"
+
+msgid "Ready To Submit"
+msgstr "Sẵn sàng Để Bắt đầu"
+
+msgid "Declined"
+msgstr "Bị từ chối"
+
+msgid "Timed Out"
+msgstr "Hết giờ"
+
+msgid "Submitted"
+msgstr "Đã gửi"
+
+msgid "Second Review Required"
+msgstr "Cần Đánh giá Lần thứ hai"
+
+msgid "Rejected"
+msgstr "Bị từ chối"
+
+msgid "your course"
+msgstr "khoá học của bạn"
+
+#, python-brace-format
+msgid "Proctoring Session Results Update for {course_name} {exam_name}"
+msgstr "Cập nhật Kết quả Buổi Kiểm tra cho {course_name} {exam_name}"
+
+msgid "Taking As Proctored Exam"
+msgstr "Tham gia Kiểu Bài thi Có giám sát"
+
+msgid "Proctored Option Available"
+msgstr "Tùy chọn Giám sát Có sẵn"
+
+msgid "Taking As Open Exam"
+msgstr "Tham gia Kiểu Bài thi Mở"
+
+msgid "Pending Session Review"
+msgstr "Kiểm tra Phiên Đang chờ"
+
+msgid "Passed Proctoring"
+msgstr "Đậu Bài thi có giám sát"
+
+msgid "Failed Proctoring"
+msgstr "Trượt Bài thi có giám sát"
+
+msgid "Proctored Option No Longer Available"
+msgstr "Tùy chọn Giám sát Không còn hiệu lực"
+
+msgid "Ungraded Practice Exam"
+msgstr "Bài thi Thực hành Không phân loại"
+
+msgid "Practice Exam Completed"
+msgstr "Bài thi Thực hành Đã hoàn thành"
+
+msgid "Practice Exam Failed"
+msgstr "Bài thi Thực hành Không thành công"
+
+msgid "Timed Exam"
+msgstr "Bài thi Khống chế thời gian"
+
+msgid "satisfactory"
+msgstr "đạt yêu cầu"
+
+msgid "unsatisfactory"
+msgstr "không đạt yêu cầu"
+
+msgid "Taking as Proctored"
+msgstr "Tham gia dạng Có gián thị"
+
+msgid "Is Sample Attempt"
+msgstr "Là Làm Thử"
+
+msgid "Additional Time (minutes)"
+msgstr "Thời gian bổ sung (phút)"
+
+msgid "Review Policy Exception"
+msgstr "Rà soát Chính sách Không hợp lệ"
+
+#, python-format
+msgid ""
+"\n"
+"\n"
+"This email is to let you know that the status of your proctoring session review for %(exam_name)s in\n"
+"<a href=\"%(course_url)s\">%(course_name)s </a> is %(status)s. If you have any questions about proctoring,\n"
+"contact %(platform)s support at %(contact_email)s.\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Email này là để cho bạn biết rằng trạng thái của buổi kiểm tra có giám thị của bạn cho %(exam_name)s trong\n"
+"<a href=\"%(course_url)s\">%(course_name)s </a> là %(status)s. Nếu bạn có thắc mắc về giám thị,\n"
+"liên hệ hỗ trợ %(platform)s qua email %(contact_email)s.\n"
+"\n"
+
+msgid ""
+"\n"
+"      Try a proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"      Thử bài thi có giám sát\n"
+"    "
+
+msgid ""
+"\n"
+"      Get familiar with proctoring for real exams later in the course. This practice exam has no impact\n"
+"      on your grade in the course.\n"
+"    "
+msgstr ""
+"\n"
+"      Làm quen với việc có giám thị trong các kỳ thi thực tế sau này trong khóa học. Kỳ thi thực hành này không ảnh hưởng\n"
+"       tới thứ hạng của bạn trong khóa học."
+
+msgid "Continue to my practice exam"
+msgstr "Tiếp tục bài kiểm tra thực hành của tôi"
+
+msgid ""
+"\n"
+"        You will be guided through steps to set up online proctoring software and to perform various checks.\n"
+"      "
+msgstr ""
+"\n"
+"        Bạn sẽ được hướng dẫn các bước để thiết lập phần mềm giám sát trực tuyến và thực hiện các bước rà soát khác.\n"
+"      "
+
+msgid ""
+"\n"
+"      There was a problem with your practice proctoring session\n"
+"    "
+msgstr ""
+"\n"
+"      Đã xảy ra sự cố với buổi kiểm tra thực hành có giám sát của bạn\n"
+"    "
+
+msgid ""
+"\n"
+"      Your practice proctoring results: <b class=\"failure\"> Unsatisfactory </b>\n"
+"    "
+msgstr ""
+"\n"
+"      Kết quả buổi kiểm tra thực hành có giám sát của bạn: <b class=\"failure\"> Không đạt yêu cầu</b>\n"
+"    "
+
+msgid ""
+"\n"
+"      Your proctoring session ended before you completed this practice exam.\n"
+"      You can retry this practice exam if you had problems setting up the online proctoring software.\n"
+"    "
+msgstr ""
+"\n"
+"      Buổi kiểm tra thực hành có giám sát của bạn kết thúc trước khi bạn hoàn thành bài thi.\n"
+"      Bạn có thể làm lại bài kiểm tra thực hành này nếu bạn gặp sự cố khi thiết lập phần mềm giám sát trực tuyến.\n"
+"    "
+
+msgid "Try this practice exam again"
+msgstr "Thử lại bài thi thực hành này"
+
+msgid ""
+"\n"
+"      You have submitted this practice proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"      Bạn đã gửi bài thi thực hành có giám sát\n"
+"    "
+
+msgid ""
+"\n"
+"      Practice exams do not affect your grade or your credit eligibility.\n"
+"      You have completed this practice exam and can continue with your course work.\n"
+"    "
+msgstr ""
+"\n"
+"       Bài kiểm tra thực hành không ảnh hưởng đến mức độ hội đủ điều kiện của bạn.\n"
+"       Bạn đã hoàn thành kỳ thi thực hành này và có thể tiếp tục môn học của mình."
+
+msgid "You can also retry this practice exam"
+msgstr "Bạn cũng có thể thử lại bài kiểm tra thực hành này"
+
+msgid ""
+"\n"
+"        Are you sure you want to take this exam without proctoring?\n"
+"      "
+msgstr ""
+"\n"
+"        Bạn có chắc chắn muốn tham gia kỳ thi này mà không cần giám thị?\n"
+"      "
+
+msgid ""
+"\n"
+"        If you take this exam without proctoring, you will <strong> no longer be eligible for academic credit. </strong>\n"
+"      "
+msgstr ""
+"\n"
+"        Nếu bạn thực hiện bài kiểm tra này mà không có giám sát, bạn sẽ <strong>không còn đủ điều kiện cho tín chỉ học tập.</strong>\n"
+"      "
+
+msgid "Continue Exam Without Proctoring"
+msgstr "Tiếp tục Thi mà Không có Giám sát"
+
+msgid ""
+"\n"
+"      This exam is proctored\n"
+"    "
+msgstr ""
+"\n"
+"      Bài thi này có giám sát\n"
+"    "
+
+msgid ""
+"\n"
+"      To be eligible for course credit or for a MicroMasters credential, you must pass the proctoring review for this exam.\n"
+"    "
+msgstr ""
+"\n"
+"      Để đủ điều kiện tín chỉ khóa học hoặc để có chứng chỉ MicroMasters, bạn phải vượt qua bài kiểm tra có giám sát của kỳ thi này.\n"
+"    "
+
+msgid "Continue to my proctored exam. I want to be eligible for credit."
+msgstr ""
+"Tiếp tục tham dự kỳ thi có giám sát. Tôi muốn đủ điều kiện cho tín chỉ."
+
+msgid ""
+"\n"
+"      Error with proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"      Lỗi với kỳ thi có giám sát\n"
+"    "
+
+#, python-format
+msgid ""
+"\n"
+"      A technical error has occurred with your proctored exam. To resolve this problem, contact\n"
+"      <a href=\"mailto:%(tech_support_email)s\">technical support</a>. All exam data, including answers\n"
+"      for completed problems, has been lost. When the problem is resolved you will need to restart\n"
+"      the exam and complete all problems again.\n"
+"    "
+msgstr ""
+"\n"
+"      Đã xảy ra lỗi kỹ thuật với kỳ thi dự thi của bạn. Để giải quyết vấn đề này, hãy liên hệ\n"
+"      <a href=\"mailto:%(tech_support_email)s\">bộ phậnhỗ trợ kỹ thuật</a>.Tất cả dữ liệu kỳ thi, bao gồm câu trả lời\n"
+"       cho các câu hỏi đã hoàn thành, đã bị mất. Khi câu hỏi được giải quyết, bạn sẽ cần phải khởi động lại\n"
+"       bài kiểm tra và hoàn thành tất cả các câu hỏi một lần nữa.\n"
+"    "
+
+#, python-format
+msgid ""
+"\n"
+"      View your credit eligibility status on your <a href=\"%(progress_page_url)s\">Progress</a> page.\n"
+"    "
+msgstr ""
+"\n"
+"      Xem tình trạng đủ điều kiện tín chỉ của bạn trên trang <a href=\"%(progress_page_url)s\">Tiến độ</a>.\n"
+"    "
+
+msgid ""
+"\n"
+"      If you have concerns about your proctoring session results, contact your course team.\n"
+"    "
+msgstr ""
+"\n"
+"      Nếu bạn có thắc mắc về kết quả của buổi kiểm tra có giám sát, hãy liên hệ với nhóm điều hành khóa học của bạn.\n"
+"    "
+
+msgid ""
+"\n"
+"      The due date for this exam has passed\n"
+"    "
+msgstr ""
+"\n"
+"      Hạn cho kỳ thi này đã qua\n"
+"    "
+
+msgid ""
+"\n"
+"      Because the due date has passed, you are no longer able to take this exam.\n"
+"    "
+msgstr ""
+"\n"
+"      Bởi vì ngày hết hạn đã qua, bạn không còn có thể làm bài kiểm tra này nữa.\n"
+"    "
+
+#, python-format
+msgid ""
+"\n"
+"    You did not satisfy the requirements for taking this exam with proctoring, and are not eligible for credit. See your <a href=\"%(progress_page_url)s\">Progress</a> page for a list of requirements and your status for each.\n"
+"    "
+msgstr ""
+"\n"
+"    Bạn đã không đáp ứng được các yêu cầu để tham dự kỳ thi này có kiểm soát, và không đủ điều kiện cho tín chỉ. Xem trang <a href=\"%(progress_page_url)s\">Tiến độ</a> của bạn để biết danh sách các yêu cầu và tình trạng của bạn.\n"
+"    "
+
+msgid ""
+"\n"
+"    You did not satisfy the following prerequisites:\n"
+"    "
+msgstr ""
+"\n"
+"    Bạn không đáp ứng được các điều kiện bắt buộc sau:\n"
+"    "
+
+msgid ""
+"\n"
+"        Due to unsatisfied prerequisites, you can only take this exam without proctoring.\n"
+"      "
+msgstr ""
+"\n"
+"        Do các điều kiện bắt buộc chưa đạt yêu cầu, bạn chỉ có thể thực hiện bài kiểm tra này mà không có giám thị.\n"
+"      "
+
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your requirements for course credit, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"      Nếu bạn có thắc mắc về tình trạng của các yêu cầu của bạn đối với tín chỉ khóa học, hãy liên hệ %(platform_name)s Hỗ trợ.\n"
+"    "
+
+msgid ""
+"\n"
+"        About Proctored Exams\n"
+"        "
+msgstr ""
+"\n"
+"        Giới thiệu về Các kỳ thi Có giám sát\n"
+"        "
+
+msgid ""
+"\n"
+"                Complete your verification before starting the proctored exam.\n"
+"            "
+msgstr ""
+"\n"
+"                Hoàn thành xác minh của bạn trước khi bắt đầu kỳ thi có giám sát.\n"
+"            "
+
+msgid ""
+"\n"
+"                You must successfully complete identity verification before you can start the proctored exam.\n"
+"            "
+msgstr ""
+"\n"
+"                Bạn phải hoàn thành xác minh danh tính thành công trước khi bạn có thể bắt đầu kỳ thi có giám sát.\n"
+"            "
+
+msgid ""
+"\n"
+"                    Your verification is pending. Results should be available 2-3 days after you\n"
+"                    submit your verification.\n"
+"                "
+msgstr ""
+"\n"
+"                    Xác minh của bạn đang chờ xử lý. Kết quả sẽ có trong vòng 2-3 ngày sau khi bạn\n"
+"                     gửi xác minh của bạn.\n"
+"                "
+
+msgid ""
+"\n"
+"                    Your verification attempt failed. Please read our guidelines to make\n"
+"                    sure you understand the requirements for successfully completing verification,\n"
+"                    then try again.\n"
+"                "
+msgstr ""
+"\n"
+"                    Quá trình xác minh của bạn không thành công. Xin vui lòng đọc hướng dẫn của chúng tôi để\n"
+"                     chắc chắn bạn hiểu các yêu cầu để hoàn thành xác minh,\n"
+"                     sau đó thử lại.\n"
+"                "
+
+msgid ""
+"\n"
+"                    Your verification has expired. You must successfully complete a new identity verification\n"
+"                    before you can start the proctored exam.\n"
+"                "
+msgstr ""
+"\n"
+"                    Xác minh của bạn đã hết hạn. Bạn phải hoàn thành xác minh một danh tính mới\n"
+"                     trước khi bạn có thể bắt đầu kỳ thi có giám sát.\n"
+"                "
+
+msgid "Continue to Verification"
+msgstr "Tiếp tục tới Xác minh"
+
+msgid ""
+"\n"
+"                    Make sure you are on a computer with a webcam, and that you have valid photo identification\n"
+"                    such as a driver's license or passport, before you continue.\n"
+"                "
+msgstr ""
+"\n"
+"                    Đảm bảo rằng bạn đang ở trên máy tính có webcam và bạn có ảnh nhận dạng hợp lệ\n"
+"                     chẳng hạn như bằng lái xe hoặc hộ chiếu, trước khi bạn tiếp tục.\n"
+"                "
+
+msgid ""
+"\n"
+"      Follow these steps to set up and start your proctored exam.\n"
+"    "
+msgstr ""
+"\n"
+"      Thực hiện theo các bước sau để thiết lập và bắt đầu bài thi có giám sát của bạn.\n"
+"    "
+
+msgid ""
+"\n"
+"        1. Copy this unique exam code. You will be prompted to paste this code later before you start the exam.\n"
+"      "
+msgstr ""
+"\n"
+"        1. Sao chép mã bài thi duy nhất này. Bạn sẽ được nhắc dán mã này sau khi bạn bắt đầu bài thi.\n"
+"      "
+
+msgid ""
+"\n"
+"        Select the exam code, then copy it using Command+C (Mac) or Control+C (Windows).\n"
+"      "
+msgstr ""
+"\n"
+"        Chọn mã bài thi, sau đó sao chép bằng cách sử dụng phím Command+C (Mac) hoặc Control+C (Windows).\n"
+"      "
+
+msgid ""
+"\n"
+"        2. Follow the link below to set up proctoring.\n"
+"      "
+msgstr ""
+"\n"
+"        2. Theo liên kết dưới đây để thiết lập giám sát.\n"
+"      "
+
+msgid "Start System Check"
+msgstr "Bắt đầu Kiểm tra Hệ thống"
+
+msgid ""
+"\n"
+"        A new window will open. You will run a system check before downloading the proctoring application.\n"
+"      "
+msgstr ""
+"\n"
+"        Một cửa sổ mới sẽ mở ra. Bạn sẽ chạy kiểm tra hệ thống trước khi tải về ứng dụng giám sát.\n"
+"      "
+
+msgid ""
+"\n"
+"        You will be asked to verify your identity as part of the proctoring exam set up.\n"
+"        Make sure you are on a computer with a webcam, and that you have valid photo identification\n"
+"        such as a driver's license or passport, before you continue.\n"
+"      "
+msgstr ""
+"\n"
+"        Bạn sẽ được yêu cầu xác minh danh tính của mình như một phần của việc thiết lập kỳ thi có giám sát.\n"
+"         Đảm bảo rằng bạn đang ở trên máy tính có webcam và bạn đã có ảnh nhận dạng hợp lệ\n"
+"         chẳng hạn như bằng lái xe hoặc hộ chiếu, trước khi bạn tiếp tục.\n"
+"      "
+
+msgid ""
+"\n"
+"          3. When you have finished setting up proctoring, start the exam.\n"
+"        "
+msgstr ""
+"\n"
+"          3. Khi bạn đã hoàn thành thiết lập việc giám sát, bắt đầu bài thi.\n"
+"        "
+
+msgid "Start Proctored Exam"
+msgstr "Bắt đầu Bài thi Có giám sát"
+
+msgid "Cannot Start Proctored Exam"
+msgstr "Không thể Bắt đầu Bài thi Có giám sát"
+
+msgid "Take this exam without proctoring."
+msgstr "Thực hiện bài thi này mà không có giám sát."
+
+msgid "Doing so means that you are no longer eligible for academic credit."
+msgstr ""
+"Làm như vậy có nghĩa là bạn không còn đủ điều kiện cho tín chỉ học tập."
+
+#, python-format
+msgid ""
+"\n"
+"    You have not completed the prerequisites for this exam. All requirements must be satisfied before you can take this proctored exam and be eligible for credit. See your <a href=\"%(progress_page_url)s\">Progress</a> page for a list of requirements in the order that they must be completed.\n"
+"    "
+msgstr ""
+"\n"
+"    Bạn chưa hoàn thành các điều kiện bắt buộc cho kỳ thi này. Tất cả các yêu cầu đều phải được đáp ứng trước khi bạn có thể thực hiện bài thi có giám sát này và đủ điều kiện tín chỉ. Xem trang <a href=\"%(progress_page_url)s\">Tiến độ</a> của bạn để có danh sách các yêu cầu theo thứ tự mà bạn phải hoàn thành.\n"
+"    "
+
+msgid ""
+"\n"
+"    The following prerequisites are in a <strong>pending</strong> state and must be successfully completed before you can proceed:\n"
+"    "
+msgstr ""
+"\n"
+"    Các điều kiện bắt buộc sau đây đang có trạng thái  <strong>đợi</strong> và phải được hoàn thành trước khi bạn có thể tiến hành:\n"
+"    "
+
+#, python-format
+msgid ""
+"\n"
+"    You can take this exam with proctoring only when all prerequisites have been successfully completed. Check your <a href=\"%(progress_page_url)s\">Progress</a>  page to see if prerequisite results have been updated. You can also take this exam now without proctoring, but you will not be eligible for credit.\n"
+"    "
+msgstr ""
+"\n"
+"    Bạn chỉ có thể tham dự bài thi có giám sát này khi tất cả các điều kiện bắt buộc đã được hoàn thành. Kiểm tra trang <a href=\"%(progress_page_url)s\">Tiến độ</a> của bạn để xem các kết quả bắt buộc đã được cập nhật. Bạn cũng có thể thực hiện bài thi này ngay bây giờ mà không có giám sát, nhưng bạn sẽ không đủ điều kiện tín chỉ.\n"
+"    "
+
+msgid " Your Proctoring Session Has Started "
+msgstr "Bài thi có gián sát của bạn đã bắt đầu"
+
+#, python-format
+msgid ""
+" From this point in time, you must follow the <a "
+"href=\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">online "
+"proctoring rules</a> to pass the proctoring review for your exam. "
+msgstr ""
+" Từ thời điểm này, bạn phải tuân theo <a "
+"href=\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">những quy "
+"tắc giám sát trực tuyến</a> để vượt qua việc kiểm tra giám sát cho bài thi "
+"của bạn."
+
+msgid ""
+"\n"
+"            Do not close this window before you finish your exam. if you close this window, your proctoring session ends, and you will not successfully complete the proctored exam.\n"
+"          "
+msgstr ""
+"\n"
+"            Không đóng cửa sổ này trước khi bạn hoàn thành bài thi. nếu bạn đóng cửa sổ này, phiên giám sát của bạn kết thúc, và bạn sẽ không hoàn thành bài thi có giám sát.\n"
+"          "
+
+#, python-format
+msgid ""
+"\n"
+"            Return to the %(platform_name)s course window to start your exam. When you have finished your exam and\n"
+"            have marked it as complete, you can close this window to end the proctoring session\n"
+"            and upload your proctoring session data for review.\n"
+"          "
+msgstr ""
+"\n"
+"            Trở lại %(platform_name)s cửa sổ khoá học để khởi động bài thi của bạn. Khi bạn đã hoàn thành bài thi và\n"
+"            đã đánh dấu nó là hoàn thành, bạn có thể đóng cửa sổ này để kết thúc phiên giám sát\n"
+"            và tải dữ liệu phiên giám sát của bạn lên để đánh giá.\n"
+"          "
+
+msgid ""
+"\n"
+"        I am not interested in academic credit.\n"
+"      "
+msgstr ""
+"\n"
+"        Tôi không quan tâm đến tín chỉ học tập.\n"
+"      "
+
+msgid ""
+"\n"
+"      Follow these instructions\n"
+"    "
+msgstr ""
+"\n"
+"     Thực hiện theo các hướng dẫn này\n"
+"    "
+
+#, python-format
+msgid ""
+"\n"
+"        &#8226; When you start your exam you will have %(total_time)s to complete it. </br>\n"
+"        &#8226; You cannot stop the timer once you start. </br>\n"
+"        &#8226; If time expires before you finish your exam, your completed answers will be\n"
+"                submitted for review. </br>\n"
+"      "
+msgstr ""
+"\n"
+"        &#8226; Khi bạn bắt đầu bài thi, bạn sẽ có %(total_time)s để hoàn thành. </br>\n"
+"        &#8226; Bạn không thể ngừng đếm giờ khi bạn bắt đầu. </br>\n"
+"        &#8226; Nếu thời gian hết hạn trước khi bạn hoàn thành bài thi, câu trả lời hoàn thành của bạn sẽ là\n"
+"                đã gửi để đánh giá. </br>\n"
+"      "
+
+msgid ""
+"\n"
+"          Start my exam\n"
+"        "
+msgstr ""
+"\n"
+"          Bắt đầu làm bài\n"
+"        "
+
+msgid ""
+"\n"
+"      Are you sure you want to end your proctored exam?\n"
+"    "
+msgstr ""
+"\n"
+"      Bạn có chắc chắn muốn kết thúc bài thi của mình?\n"
+"    "
+
+msgid ""
+"\n"
+"      Make sure that you have selected \"Submit\" for each problem before you submit your exam.\n"
+"    "
+msgstr ""
+"\n"
+"      Đảm bảo rằng bạn đã chọn \"Gửi\" cho từng câu hỏi trước khi gửi bài kiểm tra.\n"
+"    "
+
+msgid ""
+"\n"
+"      After you submit your exam, your responses are graded and your proctoring session is reviewed.\n"
+"      You might be eligible to earn academic credit for this course if you complete all required exams\n"
+"      as well as achieve a final grade that meets credit requirements for the course.\n"
+"    "
+msgstr ""
+"\n"
+"       Sau khi bạn gửi bài kiểm tra, thong tin của bạn được xếp loại và phiên giám sát của bạn được kiểm tra lại.\n"
+"       Bạn có thể đủ điều kiện để có được tín chỉ học tập cho khóa học này nếu bạn hoàn thành tất cả các bài thi bắt buộc\n"
+"       cũng như đạt được điểm cuối cùng đáp ứng yêu cầu về tín chỉ cho khóa học."
+
+msgid ""
+"\n"
+"      Yes, end my proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"      Đồng ý, kết thúc bài thi của tôi\n"
+"    "
+
+msgid ""
+"\n"
+"        No, I'd like to continue working\n"
+"      "
+msgstr ""
+"\n"
+"        Không, tôi muốn tiếp tục làm bài\n"
+"      "
+
+msgid ""
+"\n"
+"      Your proctoring session was reviewed and did not pass requirements\n"
+"    "
+msgstr ""
+"\n"
+"      Phiên giám sát của bạn đã được xem xét và không vượt qua được những yêu cầu\n"
+"    "
+
+#, python-format
+msgid ""
+"\n"
+"      You are no longer eligible for academic credit for this course, regardless of your final grade.\n"
+"      If you have questions about the status of your proctored exam results, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"      Bạn không còn đủ điều kiện cho tín chỉ học tập cho khóa học này, bất kể điểm cuối cùng của bạn.\n"
+"      Nếu bạn có thắc mắc về kết quả bài thi của mình, liên hệ với %(platform_name)s Hỗ trợ.\n"
+"    "
+
+msgid ""
+"\n"
+"      You have submitted this proctored exam for review\n"
+"    "
+msgstr ""
+"\n"
+"      Bạn đã gửi bài thi có giám sát này để xem xét\n"
+"    "
+
+msgid ""
+"\n"
+"      If the proctoring software window is still open, you can close it now. Confirm that you want to quit the application when you are prompted.\n"
+"    "
+msgstr ""
+"\n"
+"      Nếu cửa sổ phần mềm giám sát vẫn mở, bạn có thể đóng nó bây giờ. Xác nhận rằng bạn muốn thoát khỏi ứng dụng khi bạn được hỏi.\n"
+"    "
+
+msgid ""
+"\n"
+"      &#8226; After you quit the proctoring session, the recorded data is uploaded for review. </br>\n"
+"      &#8226; Proctoring results are usually available within 5 business days after you submit your exam.\n"
+"    "
+msgstr ""
+"\n"
+"      &#8226; Sau khi bạn thoát khỏi phiên giám sát, dữ liệu được ghi lại sẽ được tải lên để xem xét. </br>\n"
+"      &#8226; Kết quả giám sát thường có kết quả trong vòng 5 ngày làm việc sau khi bạn gửi bài kiểm tra.\n"
+"    "
+
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your proctored exam results, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"      Nếu bạn có thắc mắc về các kết quả bài thi có giám sát của bạn, liên hệ với %(platform_name)s Hỗ trợ.\n"
+"    "
+
+msgid ""
+"\n"
+"      Your proctoring session was reviewed and passed all requirements\n"
+"    "
+msgstr ""
+"\n"
+"      Phiên giám sát của bạn đã được xem xét và đã vượt qua tất cả các yêu cầu\n"
+"    "
+
+msgid ""
+"\n"
+"      You are eligible to purchase academic credit for this course if you complete all required exams\n"
+"      and also achieve a final grade that meets the credit requirements for the course.\n"
+"    "
+msgstr ""
+"\n"
+"      Bạn đủ điều kiện để mua tín chỉ học tập cho khóa học này nếu bạn hoàn thành tất cả các bài thi bắt buộc\n"
+"       và cũng đạt được điểm cuối cùng đáp ứng các yêu cầu về tín chỉ cho khóa học.\n"
+"    "
+
+msgid ""
+"\n"
+"      To view your exam questions and responses, select <strong>View my exam</strong>. The exam's review status is shown in the left navigation pane.\n"
+"    "
+msgstr ""
+"\n"
+"      Để xem các câu hỏi và câu trả lời bài thi của bạn, hãy chọn <strong>Xem bài thi của tôi</strong>. Trạng thái xem xét bài thi được hiển thị trong ô điều hướng bên trái.\n"
+"    "
+
+msgid "View my exam"
+msgstr "Xem bài thi của tôi"
+
+msgid ""
+"\n"
+"      After the due date for this exam has passed, you will be able to review your answers on this page.\n"
+"    "
+msgstr ""
+"\n"
+"      Sau khi kết thúc bài thi này, bạn sẽ có thể xem lại câu trả lời của mình trên trang này.\n"
+"    "
+
+#, python-format
+msgid ""
+"\n"
+"    %(exam_name)s is a Timed Exam (%(total_time)s)\n"
+"    "
+msgstr ""
+"\n"
+"    %(exam_name)s là Bài thi Tính giờ (%(total_time)s)\n"
+"    "
+
+msgid "This exam has a time limit associated with it."
+msgstr "Bài thi này có giới hạn thời gian thi."
+
+msgid "To pass this exam, you must complete the problems in the time allowed."
+msgstr ""
+"Để vượt qua bài thi này, bạn phải hoàn thành các câu hỏi trong thời gian cho"
+" phép."
+
+msgid "After you select "
+msgstr "Sau khi bạn chọn"
+
+msgid "I am ready to start this timed exam,"
+msgstr "Tôi đã sẵn sàng bắt đầu làm bài."
+
+msgid "you will have "
+msgstr "bạn sẽ có "
+
+msgid " to complete and submit the exam."
+msgstr " để hoàn thành và nộp bài."
+
+msgid ""
+"\n"
+"        I am ready to start this timed exam.\n"
+"      "
+msgstr ""
+"\n"
+"        Tôi đã sẵn sàng để bắt đầu bài thi này.\n"
+"      "
+
+msgid "Can I request additional time to complete my exam?"
+msgstr ""
+"Tôi có thể yêu cầu thêm thời gian để hoàn thành bài thi của mình không?"
+
+msgid ""
+"\n"
+"      If you have disabilities,\n"
+"      you might be eligible for an additional time allowance on timed exams.\n"
+"      Ask your course team for information about additional time allowances.\n"
+"    "
+msgstr ""
+"\n"
+"       Nếu bạn bị khuyết tật,\n"
+"       bạn có thể đủ điều kiện để được có thêm thời gian cho những bài thi có tính giờ.\n"
+"       Hãy hỏi nhóm điều hành của bạn để biết thông tin về việc bổ sung thêm thời gian."
+
+msgid ""
+"\n"
+"      Are you sure that you want to submit your timed exam?\n"
+"    "
+msgstr ""
+"\n"
+"      Bạn có chắc chắn muốn gửi bài kiểm tra của mình?\n"
+"    "
+
+msgid ""
+"\n"
+"      After you submit your exam, your exam will be graded.\n"
+"    "
+msgstr ""
+"\n"
+"      Sau khi bạn nộp bài, bài thi của bạn sẽ được chấm.\n"
+"    "
+
+msgid ""
+"\n"
+"      Yes, submit my timed exam.\n"
+"    "
+msgstr ""
+"\n"
+"      Đồng ý, gửi bài kiểm tra của tôi.\n"
+"    "
+
+msgid ""
+"\n"
+"        No, I want to continue working.\n"
+"      "
+msgstr ""
+"\n"
+"        Không, tôi muốn tiếp tục làm bài\n"
+"      "
+
+msgid ""
+"\n"
+"        The time allotted for this exam has expired. Your exam has been submitted and any work you completed will be graded.\n"
+"      "
+msgstr ""
+"\n"
+"        Thời gian cho bài thi này đã hết hạn. Bài thi của bạn đã được gửi và sẽ được chấm tất cả những phần bạn đã hoàn thành.\n"
+"      "
+
+msgid ""
+"\n"
+"        You have submitted your timed exam.\n"
+"      "
+msgstr ""
+"\n"
+"        Bạn đã gửi bài thi.\n"
+"      "
+
+#, python-format
+msgid ""
+"\n"
+"      Your grade for this timed exam will be immediately available on the <a href=\"%(progress_page_url)s\">Progress</a> page.\n"
+"    "
+msgstr ""
+"\n"
+"      Điểm của bạn cho bài thi có giới hạn thời gian này sẽ được cung cấp ngay lập tức trên trang <a href=\"%(progress_page_url)s\">Tiến độ</a>.\n"
+"    "
+
+msgid ""
+"\n"
+"        After the due date has passed, you can review the exam, but you cannot change your answers.\n"
+"      "
+msgstr ""
+"\n"
+"        Sau khi hết hạn, bạn có thể xem lại bài thi, nhưng bạn không thể thay đổi câu trả lời.\n"
+"      "
+
+#, python-brace-format
+msgid "{num_of_hours} hour"
+msgstr "{num_of_hours} giờ"
+
+#, python-brace-format
+msgid "{num_of_hours} hours"
+msgstr "{num_of_hours} giờ"
+
+#, python-brace-format
+msgid "{num_of_minutes} minutes"
+msgstr "{num_of_minutes} phút"
+
+#, python-brace-format
+msgid " and {num_of_minutes} minute"
+msgstr " and {num_of_minutes} phút"
+
+#, python-brace-format
+msgid "{num_of_minutes} minute"
+msgstr "{num_of_minutes} phút"
+
+#, python-brace-format
+msgid " and {num_of_minutes} minutes"
+msgstr " and {num_of_minutes} phút"
+
+msgid "could not determine the course_id"
+msgstr "không thể định trước course_id"
+
+msgid "Must be a Staff User to Perform this request."
+msgstr "Phải Là Nhân Viên để Thực hiện yêu cầu này."
+
+#, python-brace-format
+msgid "you have {remaining_time} remaining"
+msgstr "bạn còn lại  {remaining_time} lần"
+
+msgid "you have less than a minute remaining"
+msgstr "bạn còn ít hơn một phút"
+
+msgid "timed"
+msgstr "timed"
+
+msgid "practice"
+msgstr "thực hành"
+
+msgid "proctored"
+msgstr "có giám sát"
+
+#: freetextresponse.py
+msgid "Display Correctness?"
+msgstr "Hiển Thị Chỉnh Sửa?  "
+
+#: freetextresponse.py
+msgid ""
+"This is a flag that indicates if the indicator icon should be displayed "
+"after a student enters their response"
+msgstr ""
+"Đây là một lá cờ cho biết nếu biểu tượng hiển thị nên xuất hiện sau khi một "
+"học viên nhập trả lời của họ."
+
+#: freetextresponse.py
+msgid "Display Other Student Responses"
+msgstr "Hiển Thị Trả Lời Khác của Học Viên "
+
+#: freetextresponse.py
+msgid ""
+"This will display other student responses to the student after they submit "
+"their response."
+msgstr ""
+"Sẽ hiển thị những câu trả lời khác của học viên tới học viên sau khi họ đã "
+"gửi phản hổi. "
+
+#: freetextresponse.py
+msgid "System selected answers to give to students"
+msgstr "Hệ thống đã chọn đáp án để đưa cho học viên"
+
+#: freetextresponse.py
+msgid "This is the title for this question type"
+msgstr "Đây là tiêu đề cho dạng câu hỏi này"
+
+#: freetextresponse.py
+msgid "Full-Credit Key Phrases"
+msgstr "Từ Khóa Toàn Bộ Điểm "
+
+#: freetextresponse.py
+msgid ""
+"This is a list of words or phrases, one of which must be present in order "
+"for the student's answer to receive full credit"
+msgstr ""
+"Đây là danh sách những từ hoặc cụm từ, nếu xuất hiện trong đáp án của học "
+"viên thì họ sẽ được nhận điểm tối đa. "
+
+#: freetextresponse.py
+msgid "Half-Credit Key Phrases"
+msgstr "Từ Khóa Nửa Điểm "
+
+#: freetextresponse.py
+msgid ""
+"This is a list of words or phrases, one of which must be present in order "
+"for the student's answer to receive half credit"
+msgstr ""
+"Đây là danh sách những từ hoặc cụm từ, nếu xuất hiện trong đáp án của học "
+"viên thì họ sẽ chỉ được nhận nửa số điểm tối đa.  "
+
+#: freetextresponse.py
+msgid "Maximum Number of Attempts"
+msgstr "Số Lần Thử Tối Đa  "
+
+#: freetextresponse.py
+msgid ""
+"This is the maximum number of times a student is allowed to attempt the "
+"problem"
+msgstr "Đây là số lần tối đa mà học viên được phép thử đối với câu hỏi."
+
+#: freetextresponse.py
+msgid "Maximum Word Count"
+msgstr "Số Từ Tối Đa "
+
+#: freetextresponse.py
+msgid "This is the maximum number of words allowed for this question"
+msgstr "Đây là số lượng từ tối đa dùng cho câu hỏi này. "
+
+#: freetextresponse.py
+msgid "Minimum Word Count"
+msgstr "Số Từ Tối Thiểu "
+
+#: freetextresponse.py
+msgid "This is the minimum number of words required for this question"
+msgstr "Đây là số lượng từ tối thiểu dùng cho câu hỏi này. "
+
+#: freetextresponse.py
+msgid "Prompt"
+msgstr "Gợi ý"
+
+#: freetextresponse.py
+msgid ""
+"This is the prompt students will see when asked to enter their response"
+msgstr ""
+"Đây là lời nhắc mà học viên sẽ thấy khi họ được hỏi để nhập câu trả lời "
+
+#: freetextresponse.py
+msgid "Please enter your response within this text area"
+msgstr "Hãy nhập câu trả lời của bạn tạị khung chữ này "
+
+#: freetextresponse.py
+msgid "Submission Received Message"
+msgstr "Tin Nhắn Sau Khi Đã Nộp Bài "
+
+#: freetextresponse.py
+msgid "This is the message students will see upon submitting their response"
+msgstr "Đây là tin nhắn học viên sẽ thấy sau khi nộp câu trả lời của họ "
+
+#: freetextresponse.py
+msgid "This assigns an integer value representing the weight of this problem"
+msgstr "Đặt một giá trị số hiển thị tỷ trọng của câu hỏi "
+
+#: freetextresponse.py
+msgid "Draft Received Message"
+msgstr "Tin Nhắn Sau Khi Đã Nộp Nháp "
+
+#: freetextresponse.py
+msgid "This is the message students will see upon submitting a draft response"
+msgstr "Đây là tin nhắn học viên sẽ thấy sau khi nộp bản nháp phản h của họ"
+
+#: freetextresponse.py
+#, python-brace-format
+msgid "Your response must be between {min} and {max} word."
+msgid_plural "Your response must be between {min} and {max} words."
+msgstr[0] "Giới hạn {min}-{max} từ."
+
+#: freetextresponse.py
+#, python-brace-format
+msgid "Invalid Word Count. {word_count_message}"
+msgstr "Số từ không hợp lệ. {word_count_message}"
+
+#: freetextresponse.py
+#, python-brace-format
+msgid "{weight} point possible"
+msgid_plural "{weight} points possible"
+msgstr[0] "{weight} điểm tối đa "
+
+#: freetextresponse.py
+#, python-brace-format
+msgid "{score_string}/{weight} point"
+msgid_plural "{score_string}/{weight} points"
+msgstr[0] "{score_string}/{weight} điểm "
+
+#: freetextresponse.py
+#, python-brace-format
+msgid "You have used {count_attempts} of {max_attempts} submission"
+msgid_plural "You have used {count_attempts} of {max_attempts} submissions"
+msgstr[0] "Bạn đã thử {count_attempts} của {max_attempts} lần\""
+
+#: templates/freetextresponse_view.html
+msgid ""
+"Allow my response to possibly be visible by other learners after submitting "
+"their response"
+msgstr ""
+"Cho phép phản hổi của mình được nhìn thấy bởi học viên khác sau khi họ đã "
+"nộp bài "
+
+#: templates/freetextresponse_view.html
+msgid "Checking..."
+msgstr "Đang kiểm tra..."
+
+#: templates/freetextresponse_view.html
+msgid "peer responses"
+msgstr "trả lời của bạn khác "
+
+#: templates/freetextresponse_view.html
+msgid "Submissions by others"
+msgstr "Bài nộp của Học viên khác "
+
+#: templates/freetextresponse_view.html
+msgid "No responses to show at this time"
+msgstr "Hiện tại không có phản hồi nào để hiển thị "
 
 #: google_drive/google_calendar.py google_drive/google_docs.py
 #: google_drive/templates/html/google_calendar_edit.html
@@ -27093,169 +28443,186 @@ msgstr ""
 msgid "This name appears in the horizontal navigation at the top of the page."
 msgstr ""
 
+#: google_drive/google_calendar.py
+#: google_drive/templates/html/google_calendar_edit.html
+msgid "Public Calendar ID"
+msgstr ""
+
+#: google_drive/google_calendar.py
 msgid ""
-"Upload a file first using Content > Files &amp; Uploads. Then copy the "
-"'Studio URL'. Paste that into the text field here."
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field."
 msgstr ""
 
+#: google_drive/google_calendar.py
+#: google_drive/templates/html/google_calendar_edit.html
+msgid "Default View"
+msgstr ""
+
+#: google_drive/google_calendar.py
+#: google_drive/templates/html/google_calendar_edit.html
 msgid ""
-"Upload a file using Content > Files &amp; Uploads. Then copy the 'Studio "
-"URL'. Paste that into the text field above."
+"The calendar view that students see by default. A student can change this "
+"view."
 msgstr ""
 
-msgid "View Question Statistics"
+#: google_drive/google_docs.py
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Embed Code"
 msgstr ""
 
+#: google_drive/google_docs.py
+#: google_drive/templates/html/google_docs_edit.html
 msgid ""
-"You are approaching the limit of {{rationale_size.max}} characters for this "
-"answer. Characters left: {{rationale_size.max - rc.rationale.length}}"
+"Google provides an embed code for Drive documents. In the Google Drive "
+"document, from the File menu, select Publish to the Web. Modify settings as "
+"needed, click Publish, and copy the embed code into this field."
 msgstr ""
 
-msgid "You are unable to save this form as there are errors:"
+#: google_drive/google_docs.py
+msgid "Alternative Text"
 msgstr ""
 
-msgid "Your final answer:"
-msgstr ""
-
-msgid "Your initial answer:"
-msgstr ""
-
-msgid "Your rationale must be a maximum of {{rationale_size.max}} characters."
-msgstr ""
-
-msgid "Your rationale must be a minimum of {{rationale_size.min}} characters."
-msgstr ""
-
-msgid "Option "
-msgstr ""
-
-msgid "Missing option seed(s): "
-msgstr ""
-
-msgid "Missing 1 option seed"
-msgstr ""
-
-msgid "Question must have text element."
-msgstr ""
-
-msgid "Option must have text element."
-msgstr ""
-
-msgid "Missing rationale for correct answer."
-msgstr ""
-
-msgid "Only one correct answer can be defined in options."
-msgstr ""
-
+#: google_drive/google_docs.py
+#: google_drive/templates/html/google_docs_edit.html
 msgid ""
-"Correct answer and rationale are required and have to be defined in one of "
-"the option."
+"Alternative text describes an image and appears if the image is unavailable."
 msgstr ""
 
-msgid "Seed element must have an option attribute."
+#: google_drive/templates/html/google_calendar_edit.html
+msgid "Invalid Google Calendar"
 msgstr ""
 
-msgid "Every peer instruction tool must contain an \"ubcpi\" element."
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Please correct the outlined fields."
 msgstr ""
 
-msgid "Every peer instruction tool must contain a \"display_name\" element."
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Clear Value"
 msgstr ""
 
-msgid "Every peer instruction must tool contain a \"question\" element."
-msgstr ""
-
-msgid "Every peer instruction must tool contain a \"options\" element."
-msgstr ""
-
-msgid "Every peer instruction must tool contain a \"seeds\" element."
-msgstr ""
-
-msgid "Minimum Characters"
-msgstr ""
-
-msgid "Maximum Characters"
-msgstr ""
-
-msgid "Number of Responses"
-msgstr ""
-
-msgid "Not an Integer"
-msgstr ""
-
-msgid "Invalid Option(s): "
-msgstr ""
-
-msgid "Peer Instruction Question"
-msgstr ""
-
-msgid "<p>Where does most of the mass in a fully grown tree originate?</p>"
-msgstr ""
-
+#: google_drive/templates/html/google_calendar_edit.html
 msgid ""
-"The question the students see. This question appears above the possible "
-"answers which you set below. You can use text, an image or a combination of "
-"both. If you wish to add an image to your question, press the 'Add Image' "
-"button."
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field. You can "
 msgstr ""
 
-msgid "Air"
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Invalid Google Document"
 msgstr ""
 
-msgid "Soil"
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Alternative text"
 msgstr ""
 
-msgid "Water"
+#: image_explorer.py
+msgid "Missing event_type in JSON data"
 msgstr ""
 
-msgid "The possible options from which the student may select"
+#: lti_consumer.py
+msgid "No valid user id found in endpoint URL"
 msgstr ""
 
+#: lti_consumer.py
 msgid ""
-"The minimum and maximum number of characters a student is allowed for their "
-"rationale."
+"Enter the name that students see for this component. Analytics reports may "
+"also use the display name to identify this component."
 msgstr ""
 
-msgid "The correct option for the question"
+#: lti_consumer.py
+msgid "LTI Consumer"
 msgstr ""
 
-msgid "Photosynthesis"
-msgstr ""
-
-msgid "The feedback for student for the correct answer"
-msgstr ""
-
-msgid "Overall stats for the instructor"
-msgstr ""
-
-msgid "Tree gets carbon from air."
-msgstr ""
-
-msgid "Tree gets minerals from soil."
-msgstr ""
-
-msgid "Tree drinks water."
-msgstr ""
-
+#: lti_consumer.py
+#, python-brace-format
 msgid ""
-"Instructor configured examples to give to students during the revise stage."
+"Enter the LTI ID for the external LTI provider. This value must be the same "
+"LTI ID that you entered in the LTI Passports setting on the Advanced "
+"Settings page.<br />See the {docs_anchor_open}edX LTI "
+"documentation{anchor_close} for more details on this setting."
 msgstr ""
 
-msgid "System selected answers to give to students during the revise stage."
+#: lti_consumer.py
+#, python-brace-format
+msgid ""
+"Enter the URL of the external tool that this component launches. This "
+"setting is only used when Hide External Tool is set to False.<br />See the "
+"{docs_anchor_open}edX LTI documentation{anchor_close} for more details on "
+"this setting."
 msgstr ""
 
-msgid "The algorithm for selecting which answers to be presented to students"
+#: lti_consumer.py
+#, python-brace-format
+msgid ""
+"Add the key/value pair for any custom parameters, such as the page your "
+"e-book should open to or the background color for this component. Ex. "
+"[\"page=1\", \"color=white\"]<br />See the {docs_anchor_open}edX LTI "
+"documentation{anchor_close} for more details on this setting."
 msgstr ""
 
-msgid "System will select one of each option to present to the students."
+#: lti_consumer.py
+msgid "LTI Launch Target"
 msgstr ""
 
-msgid "Completely random selection from the response pool."
+#: lti_consumer.py
+msgid ""
+"Select Inline if you want the LTI content to open in an IFrame in the "
+"current page. Select Modal if you want the LTI content to open in a modal "
+"window in the current page. Select New Window if you want the LTI content to"
+" open in a new browser window. This setting is only used when Hide External "
+"Tool is set to False."
 msgstr ""
 
-msgid "Appears above"
+#: lti_consumer.py
+msgid ""
+"Enter the text on the button used to launch the third party application. "
+"This setting is only used when Hide External Tool is set to False and LTI "
+"Launch Target is set to Modal or New Window."
 msgstr ""
 
-msgid "Appears below"
+#: lti_consumer.py
+msgid "Inline Height"
+msgstr ""
+
+#: lti_consumer.py
+msgid ""
+"Enter the desired pixel height of the iframe which will contain the LTI "
+"tool. This setting is only used when Hide External Tool is set to False and "
+"LTI Launch Target is set to Inline."
+msgstr ""
+
+#: lti_consumer.py
+msgid "Modal Height"
+msgstr ""
+
+#: lti_consumer.py
+msgid ""
+"Enter the desired viewport percentage height of the modal overlay which will"
+" contain the LTI tool. This setting is only used when Hide External Tool is "
+"set to False and LTI Launch Target is set to Modal."
+msgstr ""
+
+#: lti_consumer.py
+msgid "Modal Width"
+msgstr ""
+
+#: lti_consumer.py
+msgid ""
+"Enter the desired viewport percentage width of the modal overlay which will "
+"contain the LTI tool. This setting is only used when Hide External Tool is "
+"set to False and LTI Launch Target is set to Modal."
+msgstr ""
+
+#: lti_consumer.py
+msgid "Could not get user id for current request"
+msgstr ""
+
+#: lti_consumer.py
+msgid "[LTI]: Real user not found against anon_id: {}"
 msgstr ""
 
 #. Translators: This string displays a date to the user, then tells them the
@@ -27307,10 +28674,6 @@ msgstr "Đánh Giá Câu Trả Lời Mở"
 
 msgid "Rubric"
 msgstr "Phiếu tự đánh giá"
-
-#: freetextresponse.py
-msgid "Prompt"
-msgstr "Gợi ý"
 
 msgid "Rubric Change Impacts Settings Section"
 msgstr "Phiếu tự đánh giá ảnh hưởng thay đổi Cài đặt Mục"
@@ -28545,10 +29908,6 @@ msgstr "Chi tiết Đánh giá"
 msgid "Selected Option"
 msgstr "Lựa chọn chọn"
 
-#: mentoring.py
-msgid "Feedback"
-msgstr "Phản hồi"
-
 msgid "Points Possible"
 msgstr "Chỉ có thể xảy ra"
 
@@ -29469,1860 +30828,6 @@ msgstr "Đánh giá dựa trên ví dụ không thể có giá trị điểm tr�
 msgid ""
 "Learner training and example-based assessments must have at least one "
 "training example."
-msgstr ""
-
-#: default_data.py
-msgid ""
-"An isosceles triangle with three layers of similar height. It is shown "
-"upright, so the widest layer is located at the bottom, and the narrowest "
-"layer is located at the top."
-msgstr ""
-
-#: default_data.py
-msgid "Of course it goes here! It goes anywhere!"
-msgstr ""
-
-#: default_data.py
-msgid "Goes anywhere"
-msgstr ""
-
-#: default_data.py
-msgid "The Top Zone"
-msgstr ""
-
-#: default_data.py
-msgid "The Middle Zone"
-msgstr ""
-
-#: default_data.py
-msgid "The Bottom Zone"
-msgstr ""
-
-#: default_data.py
-msgid "Use this zone to associate an item with the top layer of the triangle."
-msgstr ""
-
-#: default_data.py
-msgid ""
-"Use this zone to associate an item with the middle layer of the triangle."
-msgstr ""
-
-#: default_data.py
-msgid ""
-"Use this zone to associate an item with the bottom layer of the triangle."
-msgstr ""
-
-#: default_data.py
-#, python-brace-format
-msgid "Correct! This one belongs to {zone}."
-msgstr ""
-
-#: default_data.py
-msgid "No, this item does not belong here. Try again."
-msgstr ""
-
-#: default_data.py
-msgid "You silly, there are no zones for this one."
-msgstr ""
-
-#: default_data.py
-msgid "Drag the items onto the image above."
-msgstr ""
-
-#: default_data.py
-msgid "Good work! You have completed this drag and drop problem."
-msgstr ""
-
-#: default_data.py
-msgid "Goes to the top"
-msgstr ""
-
-#: default_data.py
-msgid "Goes to the middle"
-msgstr ""
-
-#: default_data.py
-msgid "Goes to the bottom"
-msgstr ""
-
-#: default_data.py
-msgid "I don't belong anywhere"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid ""
-"The title of the drag and drop problem. The title is displayed to learners."
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Drag and Drop"
-msgstr "Kéo và Thả"
-
-#: drag_and_drop_v2.py
-msgid ""
-"Standard mode: the problem provides immediate feedback each time a learner "
-"drops an item on a target zone. Assessment mode: the problem provides "
-"feedback only after a learner drops all available items on target zones."
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Standard"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Assessment"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Maximum attempts"
-msgstr ""
-
-#: drag_and_drop_v2.py mentoring.py mixins.py
-msgid "Show title"
-msgstr "Hiện tiêu đề"
-
-#: drag_and_drop_v2.py
-msgid "Display the title to the learner?"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Problem text"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "The description of the problem or instructions shown to the learner."
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Show \"Problem\" heading"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Display the heading \"Problem\" above the problem text?"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Defines the number of points the problem is worth."
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Item background color"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid ""
-"The background color of draggable items in the problem (example: 'blue' or "
-"'#0000ff')."
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Item text color"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Text color to use for draggable items (example: 'white' or '#ffffff')."
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Problem data"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid ""
-"Information about zones, items, feedback, and background image for this "
-"problem. This information is derived from the input that a course author "
-"provides via the interactive editor when configuring the problem."
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid ""
-"Information about current positions of items that a learner has dropped on "
-"the target image."
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Number of attempts learner used"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Indicates whether a learner has completed the problem at least once"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "do_attempt handler should only be called for assessment mode"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Max number of attempts reached"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "show_answer handler should only be called for assessment mode"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "There are attempts remaining"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Unknown DnDv2 mode {mode} - course is misconfigured"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Remove zone"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Keeps maximum score achieved by student"
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid "Failed to parse \"Maximum items per zone\""
-msgstr ""
-
-#: drag_and_drop_v2.py
-msgid ""
-"\"Maximum items per zone\" should be positive integer, got "
-"{max_items_per_zone}"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Describe this zone to non-visual users."
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "width"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "height"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Alignment"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "none"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "left"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "center"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "right"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Align dropped items to the left, center, or right."
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Remove item"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Zone"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Image URL (alternative to the text)"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "For example, 'http://example.com/image.png' or '/static/image.png'."
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid ""
-"Image description (should provide sufficient information to place the item "
-"even if the image did not load)"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Success feedback"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Error feedback"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Show advanced settings"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Preferred width"
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid ""
-"Specify preferred width as percentage of the background image width. Leave "
-"blank for automatic width."
-msgstr ""
-
-#: templates/html/js_templates.html
-msgid "Use text that is clear and descriptive of the item to be placed."
-msgstr ""
-
-#: templates/html/drag_and_drop.html
-msgid "Loading drag and drop problem."
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid ""
-"Note: do not edit the problem if students have already completed it. Delete "
-"the problem and create a new one."
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Introductory feedback"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Final feedback"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html templates/html/js_templates.html
-msgid "Zones"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Background URL"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid ""
-"For example, 'http://example.com/background.png' or "
-"'/static/background.png'."
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Change background"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Background description"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid ""
-"\n"
-"                            Please provide a description of the image for non-visual users.\n"
-"                            The description should provide sufficient information to allow anyone\n"
-"                            to solve the problem even without seeing the image.\n"
-"                        "
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Zone definitions"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Zone labels"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Display label names on the image"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Zone borders"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Display zone borders on the image"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Add a zone"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Items"
-msgstr ""
-
-#: templates/html/drag_and_drop_edit.html
-msgid "Add an item"
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "ok"
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "Item Bank"
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "Placed in: {zone_title}"
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "Correctly placed in: {zone_title}"
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ", draggable, grabbed"
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ", draggable"
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "Hide Answer"
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "Keyboard Help"
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid "This is a screen reader-friendly problem"
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ""
-"You can complete this problem using only your keyboard by following the "
-"guidance below:"
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ""
-"Drag and Drop problems consist of draggable items and dropzones. Users "
-"should select a draggable item with their keyboard and then navigate to an "
-"appropriate dropzone to drop it."
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ""
-"Use only TAB and SHIFT+TAB to navigate between draggable items and drop "
-"zones."
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid "Press CTRL+M to select a draggable item (effectively picking it up)."
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ""
-"Navigate using TAB and SHIFT+TAB to the appropriate dropzone and press "
-"CTRL+M once more to drop it here."
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ""
-"Press ESC if you want to cancel the drop operation (for example, to select a"
-" different item)."
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ""
-"TAB back to the list of draggable items and repeat this process until all of"
-" the draggable items have been placed on their respective dropzones."
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "Go to Beginning"
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "An error occurred. Unable to load drag and drop problem."
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "You have used {used} of {total} attempts."
-msgstr ""
-
-#: public/js/drag_and_drop.js
-msgid "Some of your answers were not correct."
-msgstr ""
-
-#: public/js/drag_and_drop_edit.js
-msgid "There was an error with your form."
-msgstr ""
-
-#: public/js/drag_and_drop_edit.js
-msgid "Please check over your submission."
-msgstr ""
-
-# Translators: {earned} is the number of points earned. {possible} is the
-# total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
-# points will always be at least 1. We pluralize based on the total number of
-# points (example: 0/1 point; 1/2 points).
-#: public/js/drag_and_drop.js
-msgid "{earned}/{possible} point (graded)"
-msgid_plural "{earned}/{possible} points (graded)"
-msgstr[0] ""
-
-# Translators: {earned} is the number of points earned. {possible} is the
-# total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
-# points will always be at least 1. We pluralize based on the total number of
-# points (example: 0/1 point; 1/2 points).
-#: public/js/drag_and_drop.js
-msgid "{earned}/{possible} point (ungraded)"
-msgid_plural "{earned}/{possible} points (ungraded)"
-msgstr[0] ""
-
-# Translators: {possible} is the number of points possible (examples: 1, 3,
-# 10).
-#: public/js/drag_and_drop.js
-msgid "{possible} point possible (graded)"
-msgid_plural "{possible} points possible (graded)"
-msgstr[0] ""
-
-# Translators: {possible} is the number of points possible (examples: 1, 3,
-# 10).
-#: public/js/drag_and_drop.js
-msgid "{possible} point possible (ungraded)"
-msgid_plural "{possible} points possible (ungraded)"
-msgstr[0] ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid "Hints:"
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid ", dropzone"
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid "Drag and Drop Problem"
-msgstr ""
-
-#: drag_and_drop_v2/public/js/drag_and_drop.js
-msgid "Drop Targets"
-msgstr ""
-
-#: utils.py
-msgid "Your highest score is {score}"
-msgstr ""
-
-#: utils.py
-msgid "Final attempt was used, highest score is {score}"
-msgstr ""
-
-#: utils.py
-msgid "Correctly placed {correct_count} item."
-msgid_plural "Correctly placed {correct_count} items."
-msgstr[0] ""
-
-#: utils.py
-msgid "Misplaced {misplaced_count} item."
-msgid_plural "Misplaced {misplaced_count} items."
-msgstr[0] ""
-
-#: utils.py
-msgid ""
-"Misplaced {misplaced_count} item. Misplaced item was returned to item bank."
-msgid_plural ""
-"Misplaced {misplaced_count} items. Misplaced items were returned to item "
-"bank."
-msgstr[0] ""
-
-#: utils.py
-msgid "Did not place {missing_count} required item."
-msgid_plural "Did not place {missing_count} required items."
-msgstr[0] ""
-
-msgid ""
-"\n"
-"        You will be guided through steps to set up online proctoring software and to perform various checks.</br>\n"
-"      "
-msgstr ""
-"\n"
-"        Bạn sẽ được hướng dẫn các bước để thiết lập phần mềm giám sát trực tuyến và thực hiện các bước rà soát khác.</br>\n"
-"      "
-
-msgid "internally reviewed"
-msgstr "đã đánh giá nội bộ"
-
-msgid "All Unreviewed"
-msgstr "Tất cả Chưa đánh giá"
-
-msgid "All Unreviewed Failures"
-msgstr "Tất cả Thất bại Chưa đánh giá"
-
-msgid "active proctored exams"
-msgstr "các cuộc thi có giám thị đang hoạt động"
-
-msgid "courses with active proctored exams"
-msgstr "các khoá học với các cuộc thi có giám thị đang hoạt động"
-
-msgid "Created"
-msgstr "Đã tạo"
-
-msgid "Download Software Clicked"
-msgstr "Tải Phần mềm Được bấm"
-
-msgid "Ready To Start"
-msgstr "Sẵn sàng Để Bắt đầu"
-
-msgid "Started"
-msgstr "Bắt đầu"
-
-msgid "Ready To Submit"
-msgstr "Sẵn sàng Để Bắt đầu"
-
-msgid "Declined"
-msgstr "Bị từ chối"
-
-msgid "Timed Out"
-msgstr "Hết giờ"
-
-msgid "Submitted"
-msgstr "Đã gửi"
-
-msgid "Second Review Required"
-msgstr "Cần Đánh giá Lần thứ hai"
-
-msgid "Rejected"
-msgstr "Bị từ chối"
-
-msgid "your course"
-msgstr "khoá học của bạn"
-
-#, python-brace-format
-msgid "Proctoring Session Results Update for {course_name} {exam_name}"
-msgstr "Cập nhật Kết quả Buổi Kiểm tra cho {course_name} {exam_name}"
-
-msgid "Taking As Proctored Exam"
-msgstr "Tham gia Kiểu Bài thi Có giám sát"
-
-msgid "Proctored Option Available"
-msgstr "Tùy chọn Giám sát Có sẵn"
-
-msgid "Taking As Open Exam"
-msgstr "Tham gia Kiểu Bài thi Mở"
-
-msgid "Pending Session Review"
-msgstr "Kiểm tra Phiên Đang chờ"
-
-msgid "Passed Proctoring"
-msgstr "Đậu Bài thi có giám sát"
-
-msgid "Failed Proctoring"
-msgstr "Trượt Bài thi có giám sát"
-
-msgid "Proctored Option No Longer Available"
-msgstr "Tùy chọn Giám sát Không còn hiệu lực"
-
-msgid "Ungraded Practice Exam"
-msgstr "Bài thi Thực hành Không phân loại"
-
-msgid "Practice Exam Completed"
-msgstr "Bài thi Thực hành Đã hoàn thành"
-
-msgid "Practice Exam Failed"
-msgstr "Bài thi Thực hành Không thành công"
-
-msgid "Timed Exam"
-msgstr "Bài thi Khống chế thời gian"
-
-msgid "satisfactory"
-msgstr "đạt yêu cầu"
-
-msgid "unsatisfactory"
-msgstr "không đạt yêu cầu"
-
-msgid "Taking as Proctored"
-msgstr "Tham gia dạng Có gián thị"
-
-msgid "Is Sample Attempt"
-msgstr "Là Làm Thử"
-
-msgid "Additional Time (minutes)"
-msgstr "Thời gian bổ sung (phút)"
-
-msgid "Review Policy Exception"
-msgstr "Rà soát Chính sách Không hợp lệ"
-
-#, python-format
-msgid ""
-"\n"
-"\n"
-"This email is to let you know that the status of your proctoring session review for %(exam_name)s in\n"
-"<a href=\"%(course_url)s\">%(course_name)s </a> is %(status)s. If you have any questions about proctoring,\n"
-"contact %(platform)s support at %(contact_email)s.\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"Email này là để cho bạn biết rằng trạng thái của buổi kiểm tra có giám thị của bạn cho %(exam_name)s trong\n"
-"<a href=\"%(course_url)s\">%(course_name)s </a> là %(status)s. Nếu bạn có thắc mắc về giám thị,\n"
-"liên hệ hỗ trợ %(platform)s qua email %(contact_email)s.\n"
-"\n"
-
-msgid ""
-"\n"
-"      Try a proctored exam\n"
-"    "
-msgstr ""
-"\n"
-"      Thử bài thi có giám sát\n"
-"    "
-
-msgid ""
-"\n"
-"      Get familiar with proctoring for real exams later in the course. This practice exam has no impact\n"
-"      on your grade in the course.\n"
-"    "
-msgstr ""
-"\n"
-"      Làm quen với việc có giám thị trong các kỳ thi thực tế sau này trong khóa học. Kỳ thi thực hành này không ảnh hưởng\n"
-"       tới thứ hạng của bạn trong khóa học."
-
-msgid "Continue to my practice exam"
-msgstr "Tiếp tục bài kiểm tra thực hành của tôi"
-
-msgid ""
-"\n"
-"        You will be guided through steps to set up online proctoring software and to perform various checks.\n"
-"      "
-msgstr ""
-"\n"
-"        Bạn sẽ được hướng dẫn các bước để thiết lập phần mềm giám sát trực tuyến và thực hiện các bước rà soát khác.\n"
-"      "
-
-msgid ""
-"\n"
-"      There was a problem with your practice proctoring session\n"
-"    "
-msgstr ""
-"\n"
-"      Đã xảy ra sự cố với buổi kiểm tra thực hành có giám sát của bạn\n"
-"    "
-
-msgid ""
-"\n"
-"      Your practice proctoring results: <b class=\"failure\"> Unsatisfactory </b>\n"
-"    "
-msgstr ""
-"\n"
-"      Kết quả buổi kiểm tra thực hành có giám sát của bạn: <b class=\"failure\"> Không đạt yêu cầu</b>\n"
-"    "
-
-msgid ""
-"\n"
-"      Your proctoring session ended before you completed this practice exam.\n"
-"      You can retry this practice exam if you had problems setting up the online proctoring software.\n"
-"    "
-msgstr ""
-"\n"
-"      Buổi kiểm tra thực hành có giám sát của bạn kết thúc trước khi bạn hoàn thành bài thi.\n"
-"      Bạn có thể làm lại bài kiểm tra thực hành này nếu bạn gặp sự cố khi thiết lập phần mềm giám sát trực tuyến.\n"
-"    "
-
-msgid "Try this practice exam again"
-msgstr "Thử lại bài thi thực hành này"
-
-msgid ""
-"\n"
-"      You have submitted this practice proctored exam\n"
-"    "
-msgstr ""
-"\n"
-"      Bạn đã gửi bài thi thực hành có giám sát\n"
-"    "
-
-msgid ""
-"\n"
-"      Practice exams do not affect your grade or your credit eligibility.\n"
-"      You have completed this practice exam and can continue with your course work.\n"
-"    "
-msgstr ""
-"\n"
-"       Bài kiểm tra thực hành không ảnh hưởng đến mức độ hội đủ điều kiện của bạn.\n"
-"       Bạn đã hoàn thành kỳ thi thực hành này và có thể tiếp tục môn học của mình."
-
-msgid "You can also retry this practice exam"
-msgstr "Bạn cũng có thể thử lại bài kiểm tra thực hành này"
-
-msgid ""
-"\n"
-"        Are you sure you want to take this exam without proctoring?\n"
-"      "
-msgstr ""
-"\n"
-"        Bạn có chắc chắn muốn tham gia kỳ thi này mà không cần giám thị?\n"
-"      "
-
-msgid ""
-"\n"
-"        If you take this exam without proctoring, you will <strong> no longer be eligible for academic credit. </strong>\n"
-"      "
-msgstr ""
-"\n"
-"        Nếu bạn thực hiện bài kiểm tra này mà không có giám sát, bạn sẽ <strong>không còn đủ điều kiện cho tín chỉ học tập.</strong>\n"
-"      "
-
-msgid "Continue Exam Without Proctoring"
-msgstr "Tiếp tục Thi mà Không có Giám sát"
-
-msgid ""
-"\n"
-"      This exam is proctored\n"
-"    "
-msgstr ""
-"\n"
-"      Bài thi này có giám sát\n"
-"    "
-
-msgid ""
-"\n"
-"      To be eligible for course credit or for a MicroMasters credential, you must pass the proctoring review for this exam.\n"
-"    "
-msgstr ""
-"\n"
-"      Để đủ điều kiện tín chỉ khóa học hoặc để có chứng chỉ MicroMasters, bạn phải vượt qua bài kiểm tra có giám sát của kỳ thi này.\n"
-"    "
-
-msgid "Continue to my proctored exam. I want to be eligible for credit."
-msgstr ""
-"Tiếp tục tham dự kỳ thi có giám sát. Tôi muốn đủ điều kiện cho tín chỉ."
-
-msgid ""
-"\n"
-"      Error with proctored exam\n"
-"    "
-msgstr ""
-"\n"
-"      Lỗi với kỳ thi có giám sát\n"
-"    "
-
-#, python-format
-msgid ""
-"\n"
-"      A technical error has occurred with your proctored exam. To resolve this problem, contact\n"
-"      <a href=\"mailto:%(tech_support_email)s\">technical support</a>. All exam data, including answers\n"
-"      for completed problems, has been lost. When the problem is resolved you will need to restart\n"
-"      the exam and complete all problems again.\n"
-"    "
-msgstr ""
-"\n"
-"      Đã xảy ra lỗi kỹ thuật với kỳ thi dự thi của bạn. Để giải quyết vấn đề này, hãy liên hệ\n"
-"      <a href=\"mailto:%(tech_support_email)s\">bộ phậnhỗ trợ kỹ thuật</a>.Tất cả dữ liệu kỳ thi, bao gồm câu trả lời\n"
-"       cho các câu hỏi đã hoàn thành, đã bị mất. Khi câu hỏi được giải quyết, bạn sẽ cần phải khởi động lại\n"
-"       bài kiểm tra và hoàn thành tất cả các câu hỏi một lần nữa.\n"
-"    "
-
-#, python-format
-msgid ""
-"\n"
-"      View your credit eligibility status on your <a href=\"%(progress_page_url)s\">Progress</a> page.\n"
-"    "
-msgstr ""
-"\n"
-"      Xem tình trạng đủ điều kiện tín chỉ của bạn trên trang <a href=\"%(progress_page_url)s\">Tiến độ</a>.\n"
-"    "
-
-msgid ""
-"\n"
-"      If you have concerns about your proctoring session results, contact your course team.\n"
-"    "
-msgstr ""
-"\n"
-"      Nếu bạn có thắc mắc về kết quả của buổi kiểm tra có giám sát, hãy liên hệ với nhóm điều hành khóa học của bạn.\n"
-"    "
-
-msgid ""
-"\n"
-"      The due date for this exam has passed\n"
-"    "
-msgstr ""
-"\n"
-"      Hạn cho kỳ thi này đã qua\n"
-"    "
-
-msgid ""
-"\n"
-"      Because the due date has passed, you are no longer able to take this exam.\n"
-"    "
-msgstr ""
-"\n"
-"      Bởi vì ngày hết hạn đã qua, bạn không còn có thể làm bài kiểm tra này nữa.\n"
-"    "
-
-#, python-format
-msgid ""
-"\n"
-"    You did not satisfy the requirements for taking this exam with proctoring, and are not eligible for credit. See your <a href=\"%(progress_page_url)s\">Progress</a> page for a list of requirements and your status for each.\n"
-"    "
-msgstr ""
-"\n"
-"    Bạn đã không đáp ứng được các yêu cầu để tham dự kỳ thi này có kiểm soát, và không đủ điều kiện cho tín chỉ. Xem trang <a href=\"%(progress_page_url)s\">Tiến độ</a> của bạn để biết danh sách các yêu cầu và tình trạng của bạn.\n"
-"    "
-
-msgid ""
-"\n"
-"    You did not satisfy the following prerequisites:\n"
-"    "
-msgstr ""
-"\n"
-"    Bạn không đáp ứng được các điều kiện bắt buộc sau:\n"
-"    "
-
-msgid ""
-"\n"
-"        Due to unsatisfied prerequisites, you can only take this exam without proctoring.\n"
-"      "
-msgstr ""
-"\n"
-"        Do các điều kiện bắt buộc chưa đạt yêu cầu, bạn chỉ có thể thực hiện bài kiểm tra này mà không có giám thị.\n"
-"      "
-
-#, python-format
-msgid ""
-"\n"
-"      If you have questions about the status of your requirements for course credit, contact %(platform_name)s Support.\n"
-"    "
-msgstr ""
-"\n"
-"      Nếu bạn có thắc mắc về tình trạng của các yêu cầu của bạn đối với tín chỉ khóa học, hãy liên hệ %(platform_name)s Hỗ trợ.\n"
-"    "
-
-msgid ""
-"\n"
-"        About Proctored Exams\n"
-"        "
-msgstr ""
-"\n"
-"        Giới thiệu về Các kỳ thi Có giám sát\n"
-"        "
-
-msgid ""
-"\n"
-"                Complete your verification before starting the proctored exam.\n"
-"            "
-msgstr ""
-"\n"
-"                Hoàn thành xác minh của bạn trước khi bắt đầu kỳ thi có giám sát.\n"
-"            "
-
-msgid ""
-"\n"
-"                You must successfully complete identity verification before you can start the proctored exam.\n"
-"            "
-msgstr ""
-"\n"
-"                Bạn phải hoàn thành xác minh danh tính thành công trước khi bạn có thể bắt đầu kỳ thi có giám sát.\n"
-"            "
-
-msgid ""
-"\n"
-"                    Your verification is pending. Results should be available 2-3 days after you\n"
-"                    submit your verification.\n"
-"                "
-msgstr ""
-"\n"
-"                    Xác minh của bạn đang chờ xử lý. Kết quả sẽ có trong vòng 2-3 ngày sau khi bạn\n"
-"                     gửi xác minh của bạn.\n"
-"                "
-
-msgid ""
-"\n"
-"                    Your verification attempt failed. Please read our guidelines to make\n"
-"                    sure you understand the requirements for successfully completing verification,\n"
-"                    then try again.\n"
-"                "
-msgstr ""
-"\n"
-"                    Quá trình xác minh của bạn không thành công. Xin vui lòng đọc hướng dẫn của chúng tôi để\n"
-"                     chắc chắn bạn hiểu các yêu cầu để hoàn thành xác minh,\n"
-"                     sau đó thử lại.\n"
-"                "
-
-msgid ""
-"\n"
-"                    Your verification has expired. You must successfully complete a new identity verification\n"
-"                    before you can start the proctored exam.\n"
-"                "
-msgstr ""
-"\n"
-"                    Xác minh của bạn đã hết hạn. Bạn phải hoàn thành xác minh một danh tính mới\n"
-"                     trước khi bạn có thể bắt đầu kỳ thi có giám sát.\n"
-"                "
-
-msgid "Continue to Verification"
-msgstr "Tiếp tục tới Xác minh"
-
-msgid ""
-"\n"
-"                    Make sure you are on a computer with a webcam, and that you have valid photo identification\n"
-"                    such as a driver's license or passport, before you continue.\n"
-"                "
-msgstr ""
-"\n"
-"                    Đảm bảo rằng bạn đang ở trên máy tính có webcam và bạn có ảnh nhận dạng hợp lệ\n"
-"                     chẳng hạn như bằng lái xe hoặc hộ chiếu, trước khi bạn tiếp tục.\n"
-"                "
-
-msgid ""
-"\n"
-"      Follow these steps to set up and start your proctored exam.\n"
-"    "
-msgstr ""
-"\n"
-"      Thực hiện theo các bước sau để thiết lập và bắt đầu bài thi có giám sát của bạn.\n"
-"    "
-
-msgid ""
-"\n"
-"        1. Copy this unique exam code. You will be prompted to paste this code later before you start the exam.\n"
-"      "
-msgstr ""
-"\n"
-"        1. Sao chép mã bài thi duy nhất này. Bạn sẽ được nhắc dán mã này sau khi bạn bắt đầu bài thi.\n"
-"      "
-
-msgid ""
-"\n"
-"        Select the exam code, then copy it using Command+C (Mac) or Control+C (Windows).\n"
-"      "
-msgstr ""
-"\n"
-"        Chọn mã bài thi, sau đó sao chép bằng cách sử dụng phím Command+C (Mac) hoặc Control+C (Windows).\n"
-"      "
-
-msgid ""
-"\n"
-"        2. Follow the link below to set up proctoring.\n"
-"      "
-msgstr ""
-"\n"
-"        2. Theo liên kết dưới đây để thiết lập giám sát.\n"
-"      "
-
-msgid "Start System Check"
-msgstr "Bắt đầu Kiểm tra Hệ thống"
-
-msgid ""
-"\n"
-"        A new window will open. You will run a system check before downloading the proctoring application.\n"
-"      "
-msgstr ""
-"\n"
-"        Một cửa sổ mới sẽ mở ra. Bạn sẽ chạy kiểm tra hệ thống trước khi tải về ứng dụng giám sát.\n"
-"      "
-
-msgid ""
-"\n"
-"        You will be asked to verify your identity as part of the proctoring exam set up.\n"
-"        Make sure you are on a computer with a webcam, and that you have valid photo identification\n"
-"        such as a driver's license or passport, before you continue.\n"
-"      "
-msgstr ""
-"\n"
-"        Bạn sẽ được yêu cầu xác minh danh tính của mình như một phần của việc thiết lập kỳ thi có giám sát.\n"
-"         Đảm bảo rằng bạn đang ở trên máy tính có webcam và bạn đã có ảnh nhận dạng hợp lệ\n"
-"         chẳng hạn như bằng lái xe hoặc hộ chiếu, trước khi bạn tiếp tục.\n"
-"      "
-
-msgid ""
-"\n"
-"          3. When you have finished setting up proctoring, start the exam.\n"
-"        "
-msgstr ""
-"\n"
-"          3. Khi bạn đã hoàn thành thiết lập việc giám sát, bắt đầu bài thi.\n"
-"        "
-
-msgid "Start Proctored Exam"
-msgstr "Bắt đầu Bài thi Có giám sát"
-
-msgid "Cannot Start Proctored Exam"
-msgstr "Không thể Bắt đầu Bài thi Có giám sát"
-
-msgid "Take this exam without proctoring."
-msgstr "Thực hiện bài thi này mà không có giám sát."
-
-msgid "Doing so means that you are no longer eligible for academic credit."
-msgstr ""
-"Làm như vậy có nghĩa là bạn không còn đủ điều kiện cho tín chỉ học tập."
-
-#, python-format
-msgid ""
-"\n"
-"    You have not completed the prerequisites for this exam. All requirements must be satisfied before you can take this proctored exam and be eligible for credit. See your <a href=\"%(progress_page_url)s\">Progress</a> page for a list of requirements in the order that they must be completed.\n"
-"    "
-msgstr ""
-"\n"
-"    Bạn chưa hoàn thành các điều kiện bắt buộc cho kỳ thi này. Tất cả các yêu cầu đều phải được đáp ứng trước khi bạn có thể thực hiện bài thi có giám sát này và đủ điều kiện tín chỉ. Xem trang <a href=\"%(progress_page_url)s\">Tiến độ</a> của bạn để có danh sách các yêu cầu theo thứ tự mà bạn phải hoàn thành.\n"
-"    "
-
-msgid ""
-"\n"
-"    The following prerequisites are in a <strong>pending</strong> state and must be successfully completed before you can proceed:\n"
-"    "
-msgstr ""
-"\n"
-"    Các điều kiện bắt buộc sau đây đang có trạng thái  <strong>đợi</strong> và phải được hoàn thành trước khi bạn có thể tiến hành:\n"
-"    "
-
-#, python-format
-msgid ""
-"\n"
-"    You can take this exam with proctoring only when all prerequisites have been successfully completed. Check your <a href=\"%(progress_page_url)s\">Progress</a>  page to see if prerequisite results have been updated. You can also take this exam now without proctoring, but you will not be eligible for credit.\n"
-"    "
-msgstr ""
-"\n"
-"    Bạn chỉ có thể tham dự bài thi có giám sát này khi tất cả các điều kiện bắt buộc đã được hoàn thành. Kiểm tra trang <a href=\"%(progress_page_url)s\">Tiến độ</a> của bạn để xem các kết quả bắt buộc đã được cập nhật. Bạn cũng có thể thực hiện bài thi này ngay bây giờ mà không có giám sát, nhưng bạn sẽ không đủ điều kiện tín chỉ.\n"
-"    "
-
-msgid " Your Proctoring Session Has Started "
-msgstr "Bài thi có gián sát của bạn đã bắt đầu"
-
-#, python-format
-msgid ""
-" From this point in time, you must follow the <a "
-"href=\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">online "
-"proctoring rules</a> to pass the proctoring review for your exam. "
-msgstr ""
-" Từ thời điểm này, bạn phải tuân theo <a "
-"href=\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">những quy "
-"tắc giám sát trực tuyến</a> để vượt qua việc kiểm tra giám sát cho bài thi "
-"của bạn."
-
-msgid ""
-"\n"
-"            Do not close this window before you finish your exam. if you close this window, your proctoring session ends, and you will not successfully complete the proctored exam.\n"
-"          "
-msgstr ""
-"\n"
-"            Không đóng cửa sổ này trước khi bạn hoàn thành bài thi. nếu bạn đóng cửa sổ này, phiên giám sát của bạn kết thúc, và bạn sẽ không hoàn thành bài thi có giám sát.\n"
-"          "
-
-#, python-format
-msgid ""
-"\n"
-"            Return to the %(platform_name)s course window to start your exam. When you have finished your exam and\n"
-"            have marked it as complete, you can close this window to end the proctoring session\n"
-"            and upload your proctoring session data for review.\n"
-"          "
-msgstr ""
-"\n"
-"            Trở lại %(platform_name)s cửa sổ khoá học để khởi động bài thi của bạn. Khi bạn đã hoàn thành bài thi và\n"
-"            đã đánh dấu nó là hoàn thành, bạn có thể đóng cửa sổ này để kết thúc phiên giám sát\n"
-"            và tải dữ liệu phiên giám sát của bạn lên để đánh giá.\n"
-"          "
-
-msgid ""
-"\n"
-"        I am not interested in academic credit.\n"
-"      "
-msgstr ""
-"\n"
-"        Tôi không quan tâm đến tín chỉ học tập.\n"
-"      "
-
-msgid ""
-"\n"
-"      Follow these instructions\n"
-"    "
-msgstr ""
-"\n"
-"     Thực hiện theo các hướng dẫn này\n"
-"    "
-
-#, python-format
-msgid ""
-"\n"
-"        &#8226; When you start your exam you will have %(total_time)s to complete it. </br>\n"
-"        &#8226; You cannot stop the timer once you start. </br>\n"
-"        &#8226; If time expires before you finish your exam, your completed answers will be\n"
-"                submitted for review. </br>\n"
-"      "
-msgstr ""
-"\n"
-"        &#8226; Khi bạn bắt đầu bài thi, bạn sẽ có %(total_time)s để hoàn thành. </br>\n"
-"        &#8226; Bạn không thể ngừng đếm giờ khi bạn bắt đầu. </br>\n"
-"        &#8226; Nếu thời gian hết hạn trước khi bạn hoàn thành bài thi, câu trả lời hoàn thành của bạn sẽ là\n"
-"                đã gửi để đánh giá. </br>\n"
-"      "
-
-msgid ""
-"\n"
-"          Start my exam\n"
-"        "
-msgstr ""
-"\n"
-"          Bắt đầu làm bài\n"
-"        "
-
-msgid ""
-"\n"
-"      Are you sure you want to end your proctored exam?\n"
-"    "
-msgstr ""
-"\n"
-"      Bạn có chắc chắn muốn kết thúc bài thi của mình?\n"
-"    "
-
-msgid ""
-"\n"
-"      Make sure that you have selected \"Submit\" for each problem before you submit your exam.\n"
-"    "
-msgstr ""
-"\n"
-"      Đảm bảo rằng bạn đã chọn \"Gửi\" cho từng câu hỏi trước khi gửi bài kiểm tra.\n"
-"    "
-
-msgid ""
-"\n"
-"      After you submit your exam, your responses are graded and your proctoring session is reviewed.\n"
-"      You might be eligible to earn academic credit for this course if you complete all required exams\n"
-"      as well as achieve a final grade that meets credit requirements for the course.\n"
-"    "
-msgstr ""
-"\n"
-"       Sau khi bạn gửi bài kiểm tra, thong tin của bạn được xếp loại và phiên giám sát của bạn được kiểm tra lại.\n"
-"       Bạn có thể đủ điều kiện để có được tín chỉ học tập cho khóa học này nếu bạn hoàn thành tất cả các bài thi bắt buộc\n"
-"       cũng như đạt được điểm cuối cùng đáp ứng yêu cầu về tín chỉ cho khóa học."
-
-msgid ""
-"\n"
-"      Yes, end my proctored exam\n"
-"    "
-msgstr ""
-"\n"
-"      Đồng ý, kết thúc bài thi của tôi\n"
-"    "
-
-msgid ""
-"\n"
-"        No, I'd like to continue working\n"
-"      "
-msgstr ""
-"\n"
-"        Không, tôi muốn tiếp tục làm bài\n"
-"      "
-
-msgid ""
-"\n"
-"      Your proctoring session was reviewed and did not pass requirements\n"
-"    "
-msgstr ""
-"\n"
-"      Phiên giám sát của bạn đã được xem xét và không vượt qua được những yêu cầu\n"
-"    "
-
-#, python-format
-msgid ""
-"\n"
-"      You are no longer eligible for academic credit for this course, regardless of your final grade.\n"
-"      If you have questions about the status of your proctored exam results, contact %(platform_name)s Support.\n"
-"    "
-msgstr ""
-"\n"
-"      Bạn không còn đủ điều kiện cho tín chỉ học tập cho khóa học này, bất kể điểm cuối cùng của bạn.\n"
-"      Nếu bạn có thắc mắc về kết quả bài thi của mình, liên hệ với %(platform_name)s Hỗ trợ.\n"
-"    "
-
-msgid ""
-"\n"
-"      You have submitted this proctored exam for review\n"
-"    "
-msgstr ""
-"\n"
-"      Bạn đã gửi bài thi có giám sát này để xem xét\n"
-"    "
-
-msgid ""
-"\n"
-"      If the proctoring software window is still open, you can close it now. Confirm that you want to quit the application when you are prompted.\n"
-"    "
-msgstr ""
-"\n"
-"      Nếu cửa sổ phần mềm giám sát vẫn mở, bạn có thể đóng nó bây giờ. Xác nhận rằng bạn muốn thoát khỏi ứng dụng khi bạn được hỏi.\n"
-"    "
-
-msgid ""
-"\n"
-"      &#8226; After you quit the proctoring session, the recorded data is uploaded for review. </br>\n"
-"      &#8226; Proctoring results are usually available within 5 business days after you submit your exam.\n"
-"    "
-msgstr ""
-"\n"
-"      &#8226; Sau khi bạn thoát khỏi phiên giám sát, dữ liệu được ghi lại sẽ được tải lên để xem xét. </br>\n"
-"      &#8226; Kết quả giám sát thường có kết quả trong vòng 5 ngày làm việc sau khi bạn gửi bài kiểm tra.\n"
-"    "
-
-#, python-format
-msgid ""
-"\n"
-"      If you have questions about the status of your proctored exam results, contact %(platform_name)s Support.\n"
-"    "
-msgstr ""
-"\n"
-"      Nếu bạn có thắc mắc về các kết quả bài thi có giám sát của bạn, liên hệ với %(platform_name)s Hỗ trợ.\n"
-"    "
-
-msgid ""
-"\n"
-"      Your proctoring session was reviewed and passed all requirements\n"
-"    "
-msgstr ""
-"\n"
-"      Phiên giám sát của bạn đã được xem xét và đã vượt qua tất cả các yêu cầu\n"
-"    "
-
-msgid ""
-"\n"
-"      You are eligible to purchase academic credit for this course if you complete all required exams\n"
-"      and also achieve a final grade that meets the credit requirements for the course.\n"
-"    "
-msgstr ""
-"\n"
-"      Bạn đủ điều kiện để mua tín chỉ học tập cho khóa học này nếu bạn hoàn thành tất cả các bài thi bắt buộc\n"
-"       và cũng đạt được điểm cuối cùng đáp ứng các yêu cầu về tín chỉ cho khóa học.\n"
-"    "
-
-msgid ""
-"\n"
-"      To view your exam questions and responses, select <strong>View my exam</strong>. The exam's review status is shown in the left navigation pane.\n"
-"    "
-msgstr ""
-"\n"
-"      Để xem các câu hỏi và câu trả lời bài thi của bạn, hãy chọn <strong>Xem bài thi của tôi</strong>. Trạng thái xem xét bài thi được hiển thị trong ô điều hướng bên trái.\n"
-"    "
-
-msgid "View my exam"
-msgstr "Xem bài thi của tôi"
-
-msgid ""
-"\n"
-"      After the due date for this exam has passed, you will be able to review your answers on this page.\n"
-"    "
-msgstr ""
-"\n"
-"      Sau khi kết thúc bài thi này, bạn sẽ có thể xem lại câu trả lời của mình trên trang này.\n"
-"    "
-
-#, python-format
-msgid ""
-"\n"
-"    %(exam_name)s is a Timed Exam (%(total_time)s)\n"
-"    "
-msgstr ""
-"\n"
-"    %(exam_name)s là Bài thi Tính giờ (%(total_time)s)\n"
-"    "
-
-msgid "This exam has a time limit associated with it."
-msgstr "Bài thi này có giới hạn thời gian thi."
-
-msgid "To pass this exam, you must complete the problems in the time allowed."
-msgstr ""
-"Để vượt qua bài thi này, bạn phải hoàn thành các câu hỏi trong thời gian cho"
-" phép."
-
-msgid "After you select "
-msgstr "Sau khi bạn chọn"
-
-msgid "I am ready to start this timed exam,"
-msgstr "Tôi đã sẵn sàng bắt đầu làm bài."
-
-msgid "you will have "
-msgstr "bạn sẽ có "
-
-msgid " to complete and submit the exam."
-msgstr " để hoàn thành và nộp bài."
-
-msgid ""
-"\n"
-"        I am ready to start this timed exam.\n"
-"      "
-msgstr ""
-"\n"
-"        Tôi đã sẵn sàng để bắt đầu bài thi này.\n"
-"      "
-
-msgid "Can I request additional time to complete my exam?"
-msgstr ""
-"Tôi có thể yêu cầu thêm thời gian để hoàn thành bài thi của mình không?"
-
-msgid ""
-"\n"
-"      If you have disabilities,\n"
-"      you might be eligible for an additional time allowance on timed exams.\n"
-"      Ask your course team for information about additional time allowances.\n"
-"    "
-msgstr ""
-"\n"
-"       Nếu bạn bị khuyết tật,\n"
-"       bạn có thể đủ điều kiện để được có thêm thời gian cho những bài thi có tính giờ.\n"
-"       Hãy hỏi nhóm điều hành của bạn để biết thông tin về việc bổ sung thêm thời gian."
-
-msgid ""
-"\n"
-"      Are you sure that you want to submit your timed exam?\n"
-"    "
-msgstr ""
-"\n"
-"      Bạn có chắc chắn muốn gửi bài kiểm tra của mình?\n"
-"    "
-
-msgid ""
-"\n"
-"      After you submit your exam, your exam will be graded.\n"
-"    "
-msgstr ""
-"\n"
-"      Sau khi bạn nộp bài, bài thi của bạn sẽ được chấm.\n"
-"    "
-
-msgid ""
-"\n"
-"      Yes, submit my timed exam.\n"
-"    "
-msgstr ""
-"\n"
-"      Đồng ý, gửi bài kiểm tra của tôi.\n"
-"    "
-
-msgid ""
-"\n"
-"        No, I want to continue working.\n"
-"      "
-msgstr ""
-"\n"
-"        Không, tôi muốn tiếp tục làm bài\n"
-"      "
-
-msgid ""
-"\n"
-"        The time allotted for this exam has expired. Your exam has been submitted and any work you completed will be graded.\n"
-"      "
-msgstr ""
-"\n"
-"        Thời gian cho bài thi này đã hết hạn. Bài thi của bạn đã được gửi và sẽ được chấm tất cả những phần bạn đã hoàn thành.\n"
-"      "
-
-msgid ""
-"\n"
-"        You have submitted your timed exam.\n"
-"      "
-msgstr ""
-"\n"
-"        Bạn đã gửi bài thi.\n"
-"      "
-
-#, python-format
-msgid ""
-"\n"
-"      Your grade for this timed exam will be immediately available on the <a href=\"%(progress_page_url)s\">Progress</a> page.\n"
-"    "
-msgstr ""
-"\n"
-"      Điểm của bạn cho bài thi có giới hạn thời gian này sẽ được cung cấp ngay lập tức trên trang <a href=\"%(progress_page_url)s\">Tiến độ</a>.\n"
-"    "
-
-msgid ""
-"\n"
-"        After the due date has passed, you can review the exam, but you cannot change your answers.\n"
-"      "
-msgstr ""
-"\n"
-"        Sau khi hết hạn, bạn có thể xem lại bài thi, nhưng bạn không thể thay đổi câu trả lời.\n"
-"      "
-
-#, python-brace-format
-msgid "{num_of_hours} hour"
-msgstr "{num_of_hours} giờ"
-
-#, python-brace-format
-msgid "{num_of_hours} hours"
-msgstr "{num_of_hours} giờ"
-
-#, python-brace-format
-msgid "{num_of_minutes} minutes"
-msgstr "{num_of_minutes} phút"
-
-#, python-brace-format
-msgid " and {num_of_minutes} minute"
-msgstr " and {num_of_minutes} phút"
-
-#, python-brace-format
-msgid "{num_of_minutes} minute"
-msgstr "{num_of_minutes} phút"
-
-#, python-brace-format
-msgid " and {num_of_minutes} minutes"
-msgstr " and {num_of_minutes} phút"
-
-msgid "could not determine the course_id"
-msgstr "không thể định trước course_id"
-
-msgid "Must be a Staff User to Perform this request."
-msgstr "Phải Là Nhân Viên để Thực hiện yêu cầu này."
-
-#, python-brace-format
-msgid "you have {remaining_time} remaining"
-msgstr "bạn còn lại  {remaining_time} lần"
-
-msgid "you have less than a minute remaining"
-msgstr "bạn còn ít hơn một phút"
-
-msgid "timed"
-msgstr "timed"
-
-msgid "practice"
-msgstr "thực hành"
-
-msgid "proctored"
-msgstr "có giám sát"
-
-#: freetextresponse.py
-msgid "Display Correctness?"
-msgstr "Hiển Thị Chỉnh Sửa?  "
-
-#: freetextresponse.py
-msgid ""
-"This is a flag that indicates if the indicator icon should be displayed "
-"after a student enters their response"
-msgstr ""
-"Đây là một lá cờ cho biết nếu biểu tượng hiển thị nên xuất hiện sau khi một "
-"học viên nhập trả lời của họ."
-
-#: freetextresponse.py
-msgid "Display Other Student Responses"
-msgstr "Hiển Thị Trả Lời Khác của Học Viên "
-
-#: freetextresponse.py
-msgid ""
-"This will display other student responses to the student after they submit "
-"their response."
-msgstr ""
-"Sẽ hiển thị những câu trả lời khác của học viên tới học viên sau khi họ đã "
-"gửi phản hổi. "
-
-#: freetextresponse.py
-msgid "System selected answers to give to students"
-msgstr "Hệ thống đã chọn đáp án để đưa cho học viên"
-
-#: freetextresponse.py
-msgid "This is the title for this question type"
-msgstr "Đây là tiêu đề cho dạng câu hỏi này"
-
-#: freetextresponse.py
-msgid "Full-Credit Key Phrases"
-msgstr "Từ Khóa Toàn Bộ Điểm "
-
-#: freetextresponse.py
-msgid ""
-"This is a list of words or phrases, one of which must be present in order "
-"for the student's answer to receive full credit"
-msgstr ""
-"Đây là danh sách những từ hoặc cụm từ, nếu xuất hiện trong đáp án của học "
-"viên thì họ sẽ được nhận điểm tối đa. "
-
-#: freetextresponse.py
-msgid "Half-Credit Key Phrases"
-msgstr "Từ Khóa Nửa Điểm "
-
-#: freetextresponse.py
-msgid ""
-"This is a list of words or phrases, one of which must be present in order "
-"for the student's answer to receive half credit"
-msgstr ""
-"Đây là danh sách những từ hoặc cụm từ, nếu xuất hiện trong đáp án của học "
-"viên thì họ sẽ chỉ được nhận nửa số điểm tối đa.  "
-
-#: freetextresponse.py
-msgid "Maximum Number of Attempts"
-msgstr "Số Lần Thử Tối Đa  "
-
-#: freetextresponse.py
-msgid ""
-"This is the maximum number of times a student is allowed to attempt the "
-"problem"
-msgstr "Đây là số lần tối đa mà học viên được phép thử đối với câu hỏi."
-
-#: freetextresponse.py
-msgid "Maximum Word Count"
-msgstr "Số Từ Tối Đa "
-
-#: freetextresponse.py
-msgid "This is the maximum number of words allowed for this question"
-msgstr "Đây là số lượng từ tối đa dùng cho câu hỏi này. "
-
-#: freetextresponse.py
-msgid "Minimum Word Count"
-msgstr "Số Từ Tối Thiểu "
-
-#: freetextresponse.py
-msgid "This is the minimum number of words required for this question"
-msgstr "Đây là số lượng từ tối thiểu dùng cho câu hỏi này. "
-
-#: freetextresponse.py
-msgid ""
-"This is the prompt students will see when asked to enter their response"
-msgstr ""
-"Đây là lời nhắc mà học viên sẽ thấy khi họ được hỏi để nhập câu trả lời "
-
-#: freetextresponse.py
-msgid "Please enter your response within this text area"
-msgstr "Hãy nhập câu trả lời của bạn tạị khung chữ này "
-
-#: freetextresponse.py
-msgid "Submission Received Message"
-msgstr "Tin Nhắn Sau Khi Đã Nộp Bài "
-
-#: freetextresponse.py
-msgid "This is the message students will see upon submitting their response"
-msgstr "Đây là tin nhắn học viên sẽ thấy sau khi nộp câu trả lời của họ "
-
-#: freetextresponse.py
-msgid "This assigns an integer value representing the weight of this problem"
-msgstr "Đặt một giá trị số hiển thị tỷ trọng của câu hỏi "
-
-#: freetextresponse.py
-msgid "Draft Received Message"
-msgstr "Tin Nhắn Sau Khi Đã Nộp Nháp "
-
-#: freetextresponse.py
-msgid "This is the message students will see upon submitting a draft response"
-msgstr "Đây là tin nhắn học viên sẽ thấy sau khi nộp bản nháp phản h của họ"
-
-#: freetextresponse.py
-#, python-brace-format
-msgid "Your response must be between {min} and {max} word."
-msgid_plural "Your response must be between {min} and {max} words."
-msgstr[0] "Giới hạn {min}-{max} từ."
-
-#: freetextresponse.py
-#, python-brace-format
-msgid "Invalid Word Count. {word_count_message}"
-msgstr "Số từ không hợp lệ. {word_count_message}"
-
-#: freetextresponse.py
-#, python-brace-format
-msgid "{weight} point possible"
-msgid_plural "{weight} points possible"
-msgstr[0] "{weight} điểm tối đa "
-
-#: freetextresponse.py
-#, python-brace-format
-msgid "{score_string}/{weight} point"
-msgid_plural "{score_string}/{weight} points"
-msgstr[0] "{score_string}/{weight} điểm "
-
-#: freetextresponse.py
-#, python-brace-format
-msgid "You have used {count_attempts} of {max_attempts} submission"
-msgid_plural "You have used {count_attempts} of {max_attempts} submissions"
-msgstr[0] "Bạn đã thử {count_attempts} của {max_attempts} lần\""
-
-#: templates/freetextresponse_view.html
-msgid ""
-"Allow my response to possibly be visible by other learners after submitting "
-"their response"
-msgstr ""
-"Cho phép phản hổi của mình được nhìn thấy bởi học viên khác sau khi họ đã "
-"nộp bài "
-
-#: templates/freetextresponse_view.html
-msgid "Checking..."
-msgstr "Đang kiểm tra..."
-
-#: templates/freetextresponse_view.html
-msgid "peer responses"
-msgstr "trả lời của bạn khác "
-
-#: templates/freetextresponse_view.html
-msgid "Submissions by others"
-msgstr "Bài nộp của Học viên khác "
-
-#: templates/freetextresponse_view.html
-msgid "No responses to show at this time"
-msgstr "Hiện tại không có phản hồi nào để hiển thị "
-
-#: google_drive/google_calendar.py
-#: google_drive/templates/html/google_calendar_edit.html
-msgid "Public Calendar ID"
-msgstr ""
-
-#: google_drive/google_calendar.py
-msgid ""
-"Google provides an ID for publicly available calendars. In the Google "
-"Calendar, open Settings and copy the ID from the Calendar Address section "
-"into this field."
-msgstr ""
-
-#: google_drive/google_calendar.py
-#: google_drive/templates/html/google_calendar_edit.html
-msgid "Default View"
-msgstr ""
-
-#: google_drive/google_calendar.py
-#: google_drive/templates/html/google_calendar_edit.html
-msgid ""
-"The calendar view that students see by default. A student can change this "
-"view."
-msgstr ""
-
-#: google_drive/google_docs.py
-#: google_drive/templates/html/google_docs_edit.html
-msgid "Embed Code"
-msgstr ""
-
-#: google_drive/google_docs.py
-#: google_drive/templates/html/google_docs_edit.html
-msgid ""
-"Google provides an embed code for Drive documents. In the Google Drive "
-"document, from the File menu, select Publish to the Web. Modify settings as "
-"needed, click Publish, and copy the embed code into this field."
-msgstr ""
-
-#: google_drive/google_docs.py
-msgid "Alternative Text"
-msgstr ""
-
-#: google_drive/google_docs.py
-#: google_drive/templates/html/google_docs_edit.html
-msgid ""
-"Alternative text describes an image and appears if the image is unavailable."
-msgstr ""
-
-#: google_drive/templates/html/google_calendar_edit.html
-msgid "Invalid Google Calendar"
-msgstr ""
-
-#: google_drive/templates/html/google_calendar_edit.html
-#: google_drive/templates/html/google_docs_edit.html
-msgid "Please correct the outlined fields."
-msgstr ""
-
-#: google_drive/templates/html/google_calendar_edit.html
-#: google_drive/templates/html/google_docs_edit.html
-msgid "Clear Value"
-msgstr ""
-
-#: google_drive/templates/html/google_calendar_edit.html
-msgid ""
-"Google provides an ID for publicly available calendars. In the Google "
-"Calendar, open Settings and copy the ID from the Calendar Address section "
-"into this field. You can "
-msgstr ""
-
-#: google_drive/templates/html/google_docs_edit.html
-msgid "Invalid Google Document"
-msgstr ""
-
-#: google_drive/templates/html/google_docs_edit.html
-msgid "Alternative text"
-msgstr ""
-
-#: image_explorer.py
-msgid "Missing event_type in JSON data"
-msgstr ""
-
-#: lti_consumer.py
-msgid "No valid user id found in endpoint URL"
-msgstr ""
-
-#: lti_consumer.py
-msgid ""
-"Enter the name that students see for this component. Analytics reports may "
-"also use the display name to identify this component."
-msgstr ""
-
-#: lti_consumer.py
-msgid "LTI Consumer"
-msgstr ""
-
-#: lti_consumer.py
-#, python-brace-format
-msgid ""
-"Enter the LTI ID for the external LTI provider. This value must be the same "
-"LTI ID that you entered in the LTI Passports setting on the Advanced "
-"Settings page.<br />See the {docs_anchor_open}edX LTI "
-"documentation{anchor_close} for more details on this setting."
-msgstr ""
-
-#: lti_consumer.py
-#, python-brace-format
-msgid ""
-"Enter the URL of the external tool that this component launches. This "
-"setting is only used when Hide External Tool is set to False.<br />See the "
-"{docs_anchor_open}edX LTI documentation{anchor_close} for more details on "
-"this setting."
-msgstr ""
-
-#: lti_consumer.py
-#, python-brace-format
-msgid ""
-"Add the key/value pair for any custom parameters, such as the page your "
-"e-book should open to or the background color for this component. Ex. "
-"[\"page=1\", \"color=white\"]<br />See the {docs_anchor_open}edX LTI "
-"documentation{anchor_close} for more details on this setting."
-msgstr ""
-
-#: lti_consumer.py
-msgid "LTI Launch Target"
-msgstr ""
-
-#: lti_consumer.py
-msgid ""
-"Select Inline if you want the LTI content to open in an IFrame in the "
-"current page. Select Modal if you want the LTI content to open in a modal "
-"window in the current page. Select New Window if you want the LTI content to"
-" open in a new browser window. This setting is only used when Hide External "
-"Tool is set to False."
-msgstr ""
-
-#: lti_consumer.py
-msgid ""
-"Enter the text on the button used to launch the third party application. "
-"This setting is only used when Hide External Tool is set to False and LTI "
-"Launch Target is set to Modal or New Window."
-msgstr ""
-
-#: lti_consumer.py
-msgid "Inline Height"
-msgstr ""
-
-#: lti_consumer.py
-msgid ""
-"Enter the desired pixel height of the iframe which will contain the LTI "
-"tool. This setting is only used when Hide External Tool is set to False and "
-"LTI Launch Target is set to Inline."
-msgstr ""
-
-#: lti_consumer.py
-msgid "Modal Height"
-msgstr ""
-
-#: lti_consumer.py
-msgid ""
-"Enter the desired viewport percentage height of the modal overlay which will"
-" contain the LTI tool. This setting is only used when Hide External Tool is "
-"set to False and LTI Launch Target is set to Modal."
-msgstr ""
-
-#: lti_consumer.py
-msgid "Modal Width"
-msgstr ""
-
-#: lti_consumer.py
-msgid ""
-"Enter the desired viewport percentage width of the modal overlay which will "
-"contain the LTI tool. This setting is only used when Hide External Tool is "
-"set to False and LTI Launch Target is set to Modal."
-msgstr ""
-
-#: lti_consumer.py
-msgid "Could not get user id for current request"
-msgstr ""
-
-#: lti_consumer.py
-msgid "[LTI]: Real user not found against anon_id: {}"
 msgstr ""
 
 #: poll/poll.py
@@ -32513,6 +32018,10 @@ msgstr ""
 #: step.py
 msgid "Customize the text of the 'Next' button."
 msgstr ""
+
+#: step.py templates/html/mentoring_with_steps.html
+msgid "Next Step"
+msgstr "Bước tiếp theo"
 
 #: step.py
 msgid "Feedback or instructional message which pops up after submitting."
