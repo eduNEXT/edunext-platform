@@ -1,6 +1,30 @@
 # #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edunext translation file
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
 # edunext helper translation file for Vietnamese.
 # Copyright (C) 2016 eduNEXT
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edunext translation file
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edunext helper translation file for Vietnamese.
+# Copyright (C) 2016 eduNEXT
+# #-#-#-#-#  edx_proctoring-js.po (edx-proctoring)  #-#-#-#-#
+# #-#-#-#-#  django.po (edx-proctoring)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2018 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2018.
+#
+# Translators:
+# Theodora. Tôn Nữ Quý Thiện <thien.tonnu1001@gmail.com>, 2016
+# Hung The Hung <hoangthehung92@gmail.com>, 2016
+# Trung V. Nguyen <trung.ngvan@gmail.com>, 2016
+# NGUYEN HOANG AN <neyugn2909@gmail.com>, 2016
+# Ha Ngoc Chung <ngocchung75@gmail.com>, 2016
+# Anh Phan <vietnamesel10n@gmail.com>, 2016
+# Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2017
+#
 # #-#-#-#-#  openassessment-js.po (edx-platform)  #-#-#-#-#
 # #-#-#-#-#  djangojs.po (edx-ora2)  #-#-#-#-#
 # edX translation file
@@ -36,29 +60,13 @@
 # Translators:
 # Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2019
 #
-# #-#-#-#-#  edx_proctoring-js.po (edx-proctoring)  #-#-#-#-#
-# #-#-#-#-#  django.po (edx-proctoring)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2018 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2018.
-#
-# Translators:
-# Theodora. Tôn Nữ Quý Thiện <thien.tonnu1001@gmail.com>, 2016
-# Hung The Hung <hoangthehung92@gmail.com>, 2016
-# Trung V. Nguyen <trung.ngvan@gmail.com>, 2016
-# NGUYEN HOANG AN <neyugn2909@gmail.com>, 2016
-# Ha Ngoc Chung <ngocchung75@gmail.com>, 2016
-# Anh Phan <vietnamesel10n@gmail.com>, 2016
-# Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2017
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: edx-proctoring\n"
-"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2017-02-15 17:16-0500\n"
-"PO-Revision-Date: 2016-12-20 19:52+0000\n"
-"Last-Translator: Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2017\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-31 14:04+0300\n"
+"PO-Revision-Date: 2019-07-27 14:08+0000\n"
+"Last-Translator: Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2019\n"
 "Language-Team: Vietnamese (https://www.transifex.com/open-edx/teams/6205/vi/)\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +75,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.7.0\n"
 "#-#-#-#-#  djangojs-partial.po (PACKAGE VERSION)  #-#-#-#-#\n"
-"#-#-#-#-#  edx_proctoring-js.po (edx-proctoring)  #-#-#-#-#\n"
 
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js common/static/bundles/commons.js
@@ -319,14 +326,6 @@ msgid "All chapters must have a name and asset"
 msgstr "Tất cả các chương phải có tên và liên kết chương"
 
 #: cms/static/js/models/uploads.js common/static/bundles/commons.js
-msgid ""
-"Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
-"<%= fileExtensions %> to upload."
-msgstr ""
-"Chỉ tập tin dạng <%= fileTypes %> có thể được tải lên. Xin vui lòng chọn một"
-" tập tin kết thúc bằng  <%= fileExtensions %> để tải lên."
-
-#: cms/static/js/models/uploads.js common/static/bundles/commons.js
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
@@ -419,11 +418,6 @@ msgstr "Không"
 #: lms/djangoapps/teams/static/teams/templates/edit-team-member.underscore
 msgid "Remove"
 msgstr "Loại bỏ"
-
-#: cms/static/js/views/edit_chapter.js
-#: common/static/bundles/js/factories/textbooks.js
-msgid "Upload a new PDF to “<%= name %>”"
-msgstr "Tải lên một file PDF mới lên “<%= name %>”"
 
 #: cms/static/js/views/edit_chapter.js
 #: common/static/bundles/js/factories/textbooks.js
@@ -3151,7 +3145,7 @@ msgstr "Mật khẩu không khớp"
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Reset My Password"
-msgstr "Đặt lại mật khẩu"
+msgstr "Đổi mật khẩu"
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
@@ -3556,6 +3550,14 @@ msgid "Bookmark this page"
 msgstr "Đánh dấu trang này"
 
 #: common/static/bundles/commons.js
+msgid ""
+"Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
+"<%= fileExtensions %> to upload."
+msgstr ""
+"Chỉ tập tin dạng <%= fileTypes %> có thể được tải lên. Xin vui lòng chọn một"
+" tập tin kết thúc bằng  <%= fileExtensions %> để tải lên."
+
+#: common/static/bundles/commons.js
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Required field."
 msgstr "Thông tin bắt buộc."
@@ -3576,6 +3578,10 @@ msgstr ""
 #: common/static/common/js/components/views/paging_footer.js
 msgid "Pagination"
 msgstr "Phân trang"
+
+#: common/static/bundles/js/factories/textbooks.js
+msgid "Upload a new PDF to “<%= name %>”"
+msgstr "Tải lên một file PDF mới lên “<%= name %>”"
 
 #: common/static/common/js/components/views/paginated_view.js
 msgid ""
@@ -6763,6 +6769,12 @@ msgstr "Thời gian gia hạn phải được xác định trong định dạng 
 msgid "Not able to set passing grade to less than %(minimum_grade_cutoff)s%."
 msgstr "Không thể đặt số lên lớp nhỏ hơn  %(minimum_grade_cutoff)s%."
 
+#: cms/static/js/models/uploads.js
+msgid ""
+"Only <%- fileTypes %> files can be uploaded. Please select a file ending in "
+"<%- (fileExtensions) %> to upload."
+msgstr ""
+
 #: cms/static/js/views/active_video_upload.js cms/static/js/views/assets.js
 msgid "Your file could not be uploaded"
 msgstr "Không thể tải tệp của bạn lên"
@@ -6920,6 +6932,10 @@ msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
 msgid "{selectedProvider} credentials saved"
+msgstr ""
+
+#: cms/static/js/views/edit_chapter.js
+msgid "Upload a new PDF to “<%- name %>”"
 msgstr ""
 
 #: cms/static/js/views/export.js
@@ -8270,7 +8286,7 @@ msgstr "Đánh dấu bài thi đã hoàn thành"
 
 #: lms/templates/courseware/proctored-exam-status.underscore
 msgid "You are taking \"{exam_link}\" as {exam_type}. "
-msgstr ""
+msgstr "Bạn đang làm bài \"{exam_link}\"."
 
 #: lms/templates/courseware/proctored-exam-status.underscore
 msgid "a timed exam"
@@ -8278,7 +8294,7 @@ msgstr ""
 
 #: lms/templates/courseware/proctored-exam-status.underscore
 msgid "The timer on the right shows the time remaining in the exam."
-msgstr ""
+msgstr "Thanh hiển thị thời gian làm bài nằm ở dưới."
 
 #: lms/templates/courseware/proctored-exam-status.underscore
 msgid ""
@@ -9898,18 +9914,16 @@ msgstr ""
 "bạn vào Backpack."
 
 #: openedx/features/learner_profile/static/learner_profile/templates/share_modal.underscore
-#, python-format
 msgid ""
-"Create a %(link_start)sMozilla Backpack%(link_end)s account, or log in to "
-"your existing account"
+"Create a {link_start}Mozilla Backpack{link_end} account, or log in to your "
+"existing account"
 msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/templates/share_modal.underscore
-#, python-format
 msgid ""
-"%(download_link_start)sDownload this image (right-click or option-click, "
-"save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to "
-"your backpack.</li>"
+"{download_link_start}Download this image (right-click or option-click, save "
+"as){link_end} and then {upload_link_start}upload{link_end} it to your "
+"backpack."
 msgstr ""
 
 #: cms/templates/js/access-editor.underscore
@@ -11650,328 +11664,6 @@ msgstr ""
 msgid "Use Current Transcript"
 msgstr "Sử dụng phụ đề hiện tại"
 
-msgid "This section could not be loaded."
-msgstr "Không thể tải mục này."
-
-msgid "The staff assessment form could not be loaded."
-msgstr "Không thể tải về đánh giá của giáo viên."
-
-msgid "The display of ungraded and checked out responses could not be loaded."
-msgstr "Không thể tải nội dung chưa kiểm tra và phân loại."
-
-msgid "This response could not be submitted."
-msgstr "Không thể gửi câu trả lời này."
-
-msgid "This response could not be saved."
-msgstr "Không thể lưu câu trả lời này."
-
-msgid "This feedback could not be submitted."
-msgstr "Không thể gửi phản hồi này."
-
-msgid "This assessment could not be submitted."
-msgstr "Không thể gửi đánh giá này."
-
-msgid "One or more rescheduling tasks failed."
-msgstr "Một hoặc nhiều tác vụ điều chỉnh lịch học đã thất bại."
-
-msgid "This problem could not be saved."
-msgstr "Không thể lưu câu hỏi này."
-
-msgid "The server could not be contacted."
-msgstr "Không thể liên hệ với máy chủ."
-
-msgid "Could not retrieve upload url."
-msgstr "Không thể tìm thấy đường dẫn tải lên."
-
-msgid "Server error."
-msgstr "Lỗi máy chủ."
-
-msgid "Could not retrieve download url."
-msgstr "Không thể tìm thấy đường dẫn tải xuống."
-
-msgid "The submission could not be removed from the grading pool."
-msgstr "Bài nộp không thể gỡ bỏ khỏi hệ thống chấm điểm."
-
-msgid "Unable to load"
-msgstr "Không tải được"
-
-msgid "Unit Name"
-msgstr "Tên Đơn vị"
-
-msgid "Assessment"
-msgstr "Đánh giá"
-
-msgid "Assessments"
-msgstr "Đánh giá"
-
-msgid "Total Responses"
-msgstr "Tổng số Phản hồi"
-
-msgid "Training"
-msgstr "Đào tạo"
-
-msgid "Peer"
-msgstr "Bạn học"
-
-msgid "Self"
-msgstr "Tự bản thân"
-
-msgid "Waiting"
-msgstr "Đang đợi"
-
-msgid "Final Grade Received"
-msgstr "Đã nhận Điểm Cuối cùng"
-
-msgid "List of Open Assessments is unavailable"
-msgstr "Danh sách các Đánh giá mở không có sẵn"
-
-msgid "Please wait"
-msgstr "Vui lòng chờ"
-
-msgid "Block view is unavailable"
-msgstr "Xem khối không khả dụng"
-
-msgid "Back to Full List"
-msgstr "Quay lại Danh sách Đầy đủ"
-
-msgid ""
-"If you leave this page without submitting your peer assessment, you will "
-"lose any work you have done."
-msgstr ""
-"Nếu bạn rời khỏi trang này mà không gửi đánh giá ngang hàng, bạn sẽ mất công"
-" việc bạn đã làm."
-
-msgid ""
-"After you upload new files all your previously uploaded files will be "
-"overwritten. Continue?"
-msgstr ""
-"Sau khi bạn tải lên các tệp mới, tất cả các tệp tải lên trước đó của bạn sẽ "
-"bị ghi đè. Tiếp tục?"
-
-msgid "Your file "
-msgstr ""
-
-msgid "Status of Your Response"
-msgstr "Trạng Thái Trả Lời Của Bạn"
-
-msgid "This response has not been saved."
-msgstr "Câu trả lời này chưa được lưu."
-
-msgid ""
-"If you leave this page without saving or submitting your response, you will "
-"lose any work you have done on the response."
-msgstr ""
-"Nếu bạn rời khỏi trang này mà không lưu hoặc gửi câu trả lời của bạn, bạn sẽ"
-" mất công việc bạn đã thực hiện cho phản hồi."
-
-msgid "Saving..."
-msgstr "Đang lưu..."
-
-msgid "This response has been saved but not submitted."
-msgstr "Câu trả lời này đã được lưu nhưng chưa được gửi đi."
-
-msgid "Do you want to upload your file before submitting?"
-msgstr "Bạn có muốn tải tệp lên trước khi gửi không?"
-
-msgid ""
-"You're about to submit your response for this assignment. After you submit "
-"this response, you can't change it or submit a new response."
-msgstr ""
-"Bạn sắp nộp câu trả lời cho bài tập này. Sau khi gửi bài bạn sẽ không thể "
-"chỉnh sửa hoặc nộp bài mới. "
-
-msgid "File size must be {max_files_mb}MB or less."
-msgstr ""
-
-msgid "You can upload files with these file types: "
-msgstr "Bạn có thể tải lên các loại tệp sau:"
-
-msgid "File type is not allowed."
-msgstr "Loại tệp không được phép."
-
-msgid "Describe "
-msgstr "Miêu tả "
-
-msgid "(required):"
-msgstr "(bắt buộc)"
-
-msgid "Thumbnail view of "
-msgstr "Xem đại diện của"
-
-msgid ""
-"If you leave this page without submitting your self assessment, you will "
-"lose any work you have done."
-msgstr ""
-"Nếu bạn rời khỏi trang này mà không gửi bản tự đánh giá của bạn, bạn sẽ mất "
-"công việc bạn đã làm."
-
-msgid "Unexpected server error."
-msgstr "Đã xảy ra lỗi máy chủ không mong muốn."
-
-msgid "You must provide a learner name."
-msgstr "Bạn phải cung cấp tên người học."
-
-msgid "Error getting the number of ungraded responses"
-msgstr "Lỗi nhận được số phản hồi chưa phân loại"
-
-msgid ""
-"If you leave this page without submitting your staff assessment, you will "
-"lose any work you have done."
-msgstr ""
-"Nếu bạn rời khỏi trang này mà không gửi bản tự đánh giá nhân viên, bạn sẽ "
-"mất công việc bạn đã làm."
-
-msgid "Feedback available for selection."
-msgstr "Phản hồi có sẵn để lựa chọn."
-
-msgid "Unnamed Option"
-msgstr "Tùy Chọn Chưa Đặt Tên"
-
-msgid "Not Selected"
-msgstr "Không Được Chọn"
-
-msgid "Couldn't Save This Assignment"
-msgstr "Không Thể Lưu Bài Tập Này"
-
-msgid "Please correct the outlined fields."
-msgstr "Vui lòng chỉnh lại lề."
-
-msgid ""
-"This problem has already been released. Any changes will apply only to "
-"future assessments."
-msgstr ""
-"Câu hỏi này đã được đăng. Bất kỳ thay đổi nào cũng chỉ ảnh hưởng đến những "
-"đánh giá trong tương lai."
-
-msgid "Criterion Added"
-msgstr "Đã Thêm Tiêu Chuẩn"
-
-msgid ""
-"You have added a criterion. You will need to select an option for the "
-"criterion in the Learner Training step. To do this, click the Settings tab."
-msgstr ""
-"Bạn đã thêm một tiêu chí. Bạn sẽ cần phải chọn một lựa chọn cho tiêu chí "
-"trong bước Đào tạo Người học. Để thực hiện việc này, hãy nhấp vào tab Cài "
-"đặt."
-
-msgid "Option Deleted"
-msgstr "Đã Xóa Tùy Chọn"
-
-msgid ""
-"You have deleted an option. That option has been removed from its criterion "
-"in the sample responses in the Learner Training step. You might have to "
-"select a new option for the criterion."
-msgstr ""
-"Bạn đã xóa một tùy chọn. Lựa chọn đó đã được loại bỏ khỏi tiêu chí của nó "
-"trong các câu trả lời mẫu trong bước Đào tạo Người học. Bạn có thể phải chọn"
-" một tùy chọn mới cho tiêu chí."
-
-msgid ""
-"You have deleted all the options for this criterion. The criterion has been "
-"removed from the sample responses in the Learner Training step."
-msgstr ""
-"Bạn đã xóa tất cả các tùy chọn cho tiêu chí này. Tiêu chí đã được loại bỏ "
-"khỏi các câu trả lời mẫu trong bước Đào tạo Người học."
-
-msgid "Criterion Deleted"
-msgstr "Đã Xoá Tiêu Chuẩn"
-
-msgid ""
-"You have deleted a criterion. The criterion has been removed from the "
-"example responses in the Learner Training step."
-msgstr ""
-"Bạn đã xóa một tiêu chí. Tiêu chí đã được xoá khỏi các câu trả lời mẫu trong"
-" bước Đào tạo Người học."
-
-msgid ""
-"Changes to steps that are not selected as part of the assignment will not be"
-" saved."
-msgstr ""
-"Những thay đổi ở các bước không được chọn thuộc một phần của bài tập sẽ "
-"không được lưu."
-
-msgid "File types can not be empty."
-msgstr "Loại tệp không thể để trống."
-
-msgid "The following file types are not allowed: "
-msgstr "Không cho phép các loại tệp sau:"
-
-msgid "File size must be 5MB or less."
-msgstr "Tệp tin phải 5MB trở xuống."
-
-#: poll/public/handlebars/poll_results.handlebars
-#: poll/public/handlebars/survey_results.handlebars
-msgid "Results"
-msgstr "Kết quả "
-
-#: poll/public/handlebars/poll_results.handlebars
-#: poll/public/handlebars/survey_results.handlebars
-msgid "Results gathered from {total} respondent."
-msgid_plural "Results gathered from {total} respondents."
-msgstr[0] ""
-
-#: poll/public/handlebars/poll_results.handlebars
-#: poll/public/handlebars/survey_results.handlebars
-msgid "Feedback"
-msgstr ""
-
-#: poll/public/handlebars/poll_studio.handlebars
-msgid "move poll up"
-msgstr ""
-
-#: poll/public/handlebars/poll_studio.handlebars
-msgid "move poll down"
-msgstr ""
-
-#: poll/public/handlebars/poll_studio.handlebars
-msgid "Answer"
-msgstr "Đáp Án "
-
-#: poll/public/handlebars/poll_studio.handlebars
-msgid "Image URL"
-msgstr ""
-
-#: poll/public/handlebars/poll_studio.handlebars
-msgid "Image alternative text"
-msgstr ""
-
-#: poll/public/handlebars/poll_studio.handlebars
-msgid ""
-"You can make limited use of Markdown in answer texts, preferably only bold "
-"and italics."
-msgstr ""
-
-#: poll/public/handlebars/poll_studio.handlebars
-msgid ""
-"This must have an image URL or text, and can have both.  If you add an "
-"image, you must also provide an alternative text that describes the image in"
-" a way that would allow someone to answer the poll if the image did not "
-"load."
-msgstr ""
-
-#: templates/html/mentoring_attempts.underscore
-msgid "You have used {num_used} of 1 submission."
-msgid_plural "You have used {num_used} of {max_attempts} submissions."
-msgstr[0] ""
-
-#: public/js/instructor_tool.js
-msgid "All"
-msgstr "Tất cả"
-
-#: public/js/instructor_tool.js
-msgid "Data export failed. Reason: <%= error %>"
-msgstr ""
-
-#: public/js/instructor_tool.js
-msgid "Results retrieved on <%= creation_time %> (<%= seconds %> second)."
-msgid_plural ""
-"Results retrieved on <%= creation_time %> (<%= seconds %> seconds)."
-msgstr[0] ""
-
-#: public/js/instructor_tool.js
-msgid "The report is currently being generated…"
-msgstr ""
-
 msgid ""
 "\n"
 "        You will be guided through steps to set up online proctoring software and to perform various checks.</br>\n"
@@ -12924,3 +12616,325 @@ msgstr "thực hành"
 
 msgid "proctored"
 msgstr "có giám sát"
+
+msgid "This section could not be loaded."
+msgstr "Không thể tải mục này."
+
+msgid "The staff assessment form could not be loaded."
+msgstr "Không thể tải về đánh giá của giáo viên."
+
+msgid "The display of ungraded and checked out responses could not be loaded."
+msgstr "Không thể tải nội dung chưa kiểm tra và phân loại."
+
+msgid "This response could not be submitted."
+msgstr "Không thể gửi câu trả lời này."
+
+msgid "This response could not be saved."
+msgstr "Không thể lưu câu trả lời này."
+
+msgid "This feedback could not be submitted."
+msgstr "Không thể gửi phản hồi này."
+
+msgid "This assessment could not be submitted."
+msgstr "Không thể gửi đánh giá này."
+
+msgid "One or more rescheduling tasks failed."
+msgstr "Một hoặc nhiều tác vụ điều chỉnh lịch học đã thất bại."
+
+msgid "This problem could not be saved."
+msgstr "Không thể lưu câu hỏi này."
+
+msgid "The server could not be contacted."
+msgstr "Không thể liên hệ với máy chủ."
+
+msgid "Could not retrieve upload url."
+msgstr "Không thể tìm thấy đường dẫn tải lên."
+
+msgid "Server error."
+msgstr "Lỗi máy chủ."
+
+msgid "Could not retrieve download url."
+msgstr "Không thể tìm thấy đường dẫn tải xuống."
+
+msgid "The submission could not be removed from the grading pool."
+msgstr "Bài nộp không thể gỡ bỏ khỏi hệ thống chấm điểm."
+
+msgid "Unable to load"
+msgstr "Không tải được"
+
+msgid "Unit Name"
+msgstr "Tên Đơn vị"
+
+msgid "Assessment"
+msgstr "Đánh giá"
+
+msgid "Assessments"
+msgstr "Đánh giá"
+
+msgid "Total Responses"
+msgstr "Tổng số Phản hồi"
+
+msgid "Training"
+msgstr "Đào tạo"
+
+msgid "Peer"
+msgstr "Bạn học"
+
+msgid "Self"
+msgstr "Tự bản thân"
+
+msgid "Waiting"
+msgstr "Đang đợi"
+
+msgid "Final Grade Received"
+msgstr "Đã nhận Điểm Cuối cùng"
+
+msgid "List of Open Assessments is unavailable"
+msgstr "Danh sách các Đánh giá mở không có sẵn"
+
+msgid "Please wait"
+msgstr "Vui lòng chờ"
+
+msgid "Block view is unavailable"
+msgstr "Xem khối không khả dụng"
+
+msgid "Back to Full List"
+msgstr "Quay lại Danh sách Đầy đủ"
+
+msgid ""
+"If you leave this page without submitting your peer assessment, you will "
+"lose any work you have done."
+msgstr ""
+"Nếu bạn rời khỏi trang này mà không gửi đánh giá ngang hàng, bạn sẽ mất công"
+" việc bạn đã làm."
+
+msgid ""
+"After you upload new files all your previously uploaded files will be "
+"overwritten. Continue?"
+msgstr ""
+"Sau khi bạn tải lên các tệp mới, tất cả các tệp tải lên trước đó của bạn sẽ "
+"bị ghi đè. Tiếp tục?"
+
+msgid "Your file "
+msgstr ""
+
+msgid "Status of Your Response"
+msgstr "Trạng Thái Trả Lời Của Bạn"
+
+msgid "This response has not been saved."
+msgstr "Câu trả lời này chưa được lưu."
+
+msgid ""
+"If you leave this page without saving or submitting your response, you will "
+"lose any work you have done on the response."
+msgstr ""
+"Nếu bạn rời khỏi trang này mà không lưu hoặc gửi câu trả lời của bạn, bạn sẽ"
+" mất công việc bạn đã thực hiện cho phản hồi."
+
+msgid "Saving..."
+msgstr "Đang lưu..."
+
+msgid "This response has been saved but not submitted."
+msgstr "Câu trả lời này đã được lưu nhưng chưa được gửi đi."
+
+msgid "Do you want to upload your file before submitting?"
+msgstr "Bạn có muốn tải tệp lên trước khi gửi không?"
+
+msgid ""
+"You're about to submit your response for this assignment. After you submit "
+"this response, you can't change it or submit a new response."
+msgstr ""
+"Bạn sắp nộp câu trả lời cho bài tập này. Sau khi gửi bài bạn sẽ không thể "
+"chỉnh sửa hoặc nộp bài mới. "
+
+msgid "File size must be {max_files_mb}MB or less."
+msgstr ""
+
+msgid "You can upload files with these file types: "
+msgstr "Bạn có thể tải lên các loại tệp sau:"
+
+msgid "File type is not allowed."
+msgstr "Loại tệp không được phép."
+
+msgid "Describe "
+msgstr "Miêu tả "
+
+msgid "(required):"
+msgstr "(bắt buộc)"
+
+msgid "Thumbnail view of "
+msgstr "Xem đại diện của"
+
+msgid ""
+"If you leave this page without submitting your self assessment, you will "
+"lose any work you have done."
+msgstr ""
+"Nếu bạn rời khỏi trang này mà không gửi bản tự đánh giá của bạn, bạn sẽ mất "
+"công việc bạn đã làm."
+
+msgid "Unexpected server error."
+msgstr "Đã xảy ra lỗi máy chủ không mong muốn."
+
+msgid "You must provide a learner name."
+msgstr "Bạn phải cung cấp tên người học."
+
+msgid "Error getting the number of ungraded responses"
+msgstr "Lỗi nhận được số phản hồi chưa phân loại"
+
+msgid ""
+"If you leave this page without submitting your staff assessment, you will "
+"lose any work you have done."
+msgstr ""
+"Nếu bạn rời khỏi trang này mà không gửi bản tự đánh giá nhân viên, bạn sẽ "
+"mất công việc bạn đã làm."
+
+msgid "Feedback available for selection."
+msgstr "Phản hồi có sẵn để lựa chọn."
+
+msgid "Unnamed Option"
+msgstr "Tùy Chọn Chưa Đặt Tên"
+
+msgid "Not Selected"
+msgstr "Không Được Chọn"
+
+msgid "Couldn't Save This Assignment"
+msgstr "Không Thể Lưu Bài Tập Này"
+
+msgid "Please correct the outlined fields."
+msgstr "Vui lòng chỉnh lại lề."
+
+msgid ""
+"This problem has already been released. Any changes will apply only to "
+"future assessments."
+msgstr ""
+"Câu hỏi này đã được đăng. Bất kỳ thay đổi nào cũng chỉ ảnh hưởng đến những "
+"đánh giá trong tương lai."
+
+msgid "Criterion Added"
+msgstr "Đã Thêm Tiêu Chuẩn"
+
+msgid ""
+"You have added a criterion. You will need to select an option for the "
+"criterion in the Learner Training step. To do this, click the Settings tab."
+msgstr ""
+"Bạn đã thêm một tiêu chí. Bạn sẽ cần phải chọn một lựa chọn cho tiêu chí "
+"trong bước Đào tạo Người học. Để thực hiện việc này, hãy nhấp vào tab Cài "
+"đặt."
+
+msgid "Option Deleted"
+msgstr "Đã Xóa Tùy Chọn"
+
+msgid ""
+"You have deleted an option. That option has been removed from its criterion "
+"in the sample responses in the Learner Training step. You might have to "
+"select a new option for the criterion."
+msgstr ""
+"Bạn đã xóa một tùy chọn. Lựa chọn đó đã được loại bỏ khỏi tiêu chí của nó "
+"trong các câu trả lời mẫu trong bước Đào tạo Người học. Bạn có thể phải chọn"
+" một tùy chọn mới cho tiêu chí."
+
+msgid ""
+"You have deleted all the options for this criterion. The criterion has been "
+"removed from the sample responses in the Learner Training step."
+msgstr ""
+"Bạn đã xóa tất cả các tùy chọn cho tiêu chí này. Tiêu chí đã được loại bỏ "
+"khỏi các câu trả lời mẫu trong bước Đào tạo Người học."
+
+msgid "Criterion Deleted"
+msgstr "Đã Xoá Tiêu Chuẩn"
+
+msgid ""
+"You have deleted a criterion. The criterion has been removed from the "
+"example responses in the Learner Training step."
+msgstr ""
+"Bạn đã xóa một tiêu chí. Tiêu chí đã được xoá khỏi các câu trả lời mẫu trong"
+" bước Đào tạo Người học."
+
+msgid ""
+"Changes to steps that are not selected as part of the assignment will not be"
+" saved."
+msgstr ""
+"Những thay đổi ở các bước không được chọn thuộc một phần của bài tập sẽ "
+"không được lưu."
+
+msgid "File types can not be empty."
+msgstr "Loại tệp không thể để trống."
+
+msgid "The following file types are not allowed: "
+msgstr "Không cho phép các loại tệp sau:"
+
+msgid "File size must be 5MB or less."
+msgstr "Tệp tin phải 5MB trở xuống."
+
+#: poll/public/handlebars/poll_results.handlebars
+#: poll/public/handlebars/survey_results.handlebars
+msgid "Results"
+msgstr "Kết quả "
+
+#: poll/public/handlebars/poll_results.handlebars
+#: poll/public/handlebars/survey_results.handlebars
+msgid "Results gathered from {total} respondent."
+msgid_plural "Results gathered from {total} respondents."
+msgstr[0] ""
+
+#: poll/public/handlebars/poll_results.handlebars
+#: poll/public/handlebars/survey_results.handlebars
+msgid "Feedback"
+msgstr ""
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "move poll up"
+msgstr ""
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "move poll down"
+msgstr ""
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "Answer"
+msgstr "Đáp Án "
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "Image URL"
+msgstr ""
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "Image alternative text"
+msgstr ""
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid ""
+"You can make limited use of Markdown in answer texts, preferably only bold "
+"and italics."
+msgstr ""
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid ""
+"This must have an image URL or text, and can have both.  If you add an "
+"image, you must also provide an alternative text that describes the image in"
+" a way that would allow someone to answer the poll if the image did not "
+"load."
+msgstr ""
+
+#: templates/html/mentoring_attempts.underscore
+msgid "You have used {num_used} of 1 submission."
+msgid_plural "You have used {num_used} of {max_attempts} submissions."
+msgstr[0] ""
+
+#: public/js/instructor_tool.js
+msgid "All"
+msgstr "Tất cả"
+
+#: public/js/instructor_tool.js
+msgid "Data export failed. Reason: <%= error %>"
+msgstr ""
+
+#: public/js/instructor_tool.js
+msgid "Results retrieved on <%= creation_time %> (<%= seconds %> second)."
+msgid_plural ""
+"Results retrieved on <%= creation_time %> (<%= seconds %> seconds)."
+msgstr[0] ""
+
+#: public/js/instructor_tool.js
+msgid "The report is currently being generated…"
+msgstr ""
