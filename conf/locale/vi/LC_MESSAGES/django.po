@@ -28,22 +28,8 @@
 # #-#-#-#-#  drag_and_drop_v2.po (XBlocks)  #-#-#-#-#
 # Translators:
 # Vu Bach, 2019
-# #-#-#-#-#  edx_proctoring.po (edx-proctoring)  #-#-#-#-#
-# #-#-#-#-#  django.po (edx-proctoring)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2018 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2018.
-#
-# Translators:
-# Theodora. Tôn Nữ Quý Thiện <thien.tonnu1001@gmail.com>, 2016
-# Hung The Hung <hoangthehung92@gmail.com>, 2016
-# Trung V. Nguyen <trung.ngvan@gmail.com>, 2016
-# NGUYEN HOANG AN <neyugn2909@gmail.com>, 2016
-# Ha Ngoc Chung <ngocchung75@gmail.com>, 2016
-# Anh Phan <vietnamesel10n@gmail.com>, 2016
-# Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2017
-#
+# #-#-#-#-#  edx_proctoring.po (edx-platform)  #-#-#-#-#
+# edunext translation file
 # #-#-#-#-#  freetextresponse.po (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
@@ -134,8 +120,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 1.3\n"
-"#-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#\n"
-"#-#-#-#-#  done.po (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  freetextresponse.po (PACKAGE VERSION)  #-#-#-#-#\n"
 "X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: lti_consumer.py\n"
@@ -27321,6 +27306,21 @@ msgid "Did not place {missing_count} required item."
 msgid_plural "Did not place {missing_count} required items."
 msgstr[0] ""
 
+msgid "I am ready to start this timed exam,"
+msgstr "Tôi đã sẵn sàng bắt đầu làm bài,"
+
+msgid ""
+"\n"
+"      If you have disabilities,\n"
+"      you might be eligible for an additional time allowance on timed exams.\n"
+"      Ask your course team for information about additional time allowances.\n"
+"    "
+msgstr ""
+"\n"
+"      Nếu bạn bị khuyết tật,\n"
+"      bạn có thể đủ điều kiện để được có thêm thời gian cho những bài thi có tính giờ.\n"
+"      Hãy hỏi nhóm điều hành của bạn để biết thông tin về việc bổ sung thêm thời gian."
+
 msgid ""
 "\n"
 "        You will be guided through steps to set up online proctoring software and to perform various checks.</br>\n"
@@ -28115,9 +28115,6 @@ msgstr ""
 msgid "After you select "
 msgstr "Sau khi bạn chọn"
 
-msgid "I am ready to start this timed exam,"
-msgstr "Tôi đã sẵn sàng bắt đầu làm bài."
-
 msgid "you will have "
 msgstr "bạn sẽ có "
 
@@ -28136,18 +28133,6 @@ msgstr ""
 msgid "Can I request additional time to complete my exam?"
 msgstr ""
 "Tôi có thể yêu cầu thêm thời gian để hoàn thành bài thi của mình không?"
-
-msgid ""
-"\n"
-"      If you have disabilities,\n"
-"      you might be eligible for an additional time allowance on timed exams.\n"
-"      Ask your course team for information about additional time allowances.\n"
-"    "
-msgstr ""
-"\n"
-"       Nếu bạn bị khuyết tật,\n"
-"       bạn có thể đủ điều kiện để được có thêm thời gian cho những bài thi có tính giờ.\n"
-"       Hãy hỏi nhóm điều hành của bạn để biết thông tin về việc bổ sung thêm thời gian."
 
 msgid ""
 "\n"

@@ -9,22 +9,8 @@
 # #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
 # edunext helper translation file for Vietnamese.
 # Copyright (C) 2016 eduNEXT
-# #-#-#-#-#  edx_proctoring-js.po (edx-proctoring)  #-#-#-#-#
-# #-#-#-#-#  django.po (edx-proctoring)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2018 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2018.
-#
-# Translators:
-# Theodora. Tôn Nữ Quý Thiện <thien.tonnu1001@gmail.com>, 2016
-# Hung The Hung <hoangthehung92@gmail.com>, 2016
-# Trung V. Nguyen <trung.ngvan@gmail.com>, 2016
-# NGUYEN HOANG AN <neyugn2909@gmail.com>, 2016
-# Ha Ngoc Chung <ngocchung75@gmail.com>, 2016
-# Anh Phan <vietnamesel10n@gmail.com>, 2016
-# Hoà Lê Thanh <hoa.lethanh@gmail.com>, 2017
-#
+# #-#-#-#-#  edx_proctoring-js.po (edx-platform)  #-#-#-#-#
+# edunext translation file
 # #-#-#-#-#  openassessment-js.po (edx-platform)  #-#-#-#-#
 # #-#-#-#-#  djangojs.po (edx-ora2)  #-#-#-#-#
 # edX translation file
@@ -326,6 +312,12 @@ msgid "All chapters must have a name and asset"
 msgstr "Tất cả các chương phải có tên và liên kết chương"
 
 #: cms/static/js/models/uploads.js common/static/bundles/commons.js
+msgid ""
+"Only <%- fileTypes %> files can be uploaded. Please select a file ending in "
+"<%- (fileExtensions) %> to upload."
+msgstr ""
+
+#: cms/static/js/models/uploads.js common/static/bundles/commons.js
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
@@ -418,6 +410,11 @@ msgstr "Không"
 #: lms/djangoapps/teams/static/teams/templates/edit-team-member.underscore
 msgid "Remove"
 msgstr "Loại bỏ"
+
+#: cms/static/js/views/edit_chapter.js
+#: common/static/bundles/js/factories/textbooks.js
+msgid "Upload a new PDF to “<%- name %>”"
+msgstr ""
 
 #: cms/static/js/views/edit_chapter.js
 #: common/static/bundles/js/factories/textbooks.js
@@ -3550,14 +3547,6 @@ msgid "Bookmark this page"
 msgstr "Đánh dấu trang này"
 
 #: common/static/bundles/commons.js
-msgid ""
-"Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
-"<%= fileExtensions %> to upload."
-msgstr ""
-"Chỉ tập tin dạng <%= fileTypes %> có thể được tải lên. Xin vui lòng chọn một"
-" tập tin kết thúc bằng  <%= fileExtensions %> để tải lên."
-
-#: common/static/bundles/commons.js
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Required field."
 msgstr "Thông tin bắt buộc."
@@ -3578,10 +3567,6 @@ msgstr ""
 #: common/static/common/js/components/views/paging_footer.js
 msgid "Pagination"
 msgstr "Phân trang"
-
-#: common/static/bundles/js/factories/textbooks.js
-msgid "Upload a new PDF to “<%= name %>”"
-msgstr "Tải lên một file PDF mới lên “<%= name %>”"
 
 #: common/static/common/js/components/views/paginated_view.js
 msgid ""
@@ -6769,12 +6754,6 @@ msgstr "Thời gian gia hạn phải được xác định trong định dạng 
 msgid "Not able to set passing grade to less than %(minimum_grade_cutoff)s%."
 msgstr "Không thể đặt số lên lớp nhỏ hơn  %(minimum_grade_cutoff)s%."
 
-#: cms/static/js/models/uploads.js
-msgid ""
-"Only <%- fileTypes %> files can be uploaded. Please select a file ending in "
-"<%- (fileExtensions) %> to upload."
-msgstr ""
-
 #: cms/static/js/views/active_video_upload.js cms/static/js/views/assets.js
 msgid "Your file could not be uploaded"
 msgstr "Không thể tải tệp của bạn lên"
@@ -6932,10 +6911,6 @@ msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
 msgid "{selectedProvider} credentials saved"
-msgstr ""
-
-#: cms/static/js/views/edit_chapter.js
-msgid "Upload a new PDF to “<%- name %>”"
 msgstr ""
 
 #: cms/static/js/views/export.js
@@ -11664,6 +11639,9 @@ msgstr ""
 msgid "Use Current Transcript"
 msgstr "Sử dụng phụ đề hiện tại"
 
+msgid "I am ready to start this timed exam,"
+msgstr "Tôi đã sẵn sàng bắt đầu làm bài,"
+
 msgid ""
 "\n"
 "        You will be guided through steps to set up online proctoring software and to perform various checks.</br>\n"
@@ -12463,9 +12441,6 @@ msgstr ""
 
 msgid "After you select "
 msgstr "Sau khi bạn chọn"
-
-msgid "I am ready to start this timed exam,"
-msgstr "Tôi đã sẵn sàng bắt đầu làm bài."
 
 msgid "you will have "
 msgstr "bạn sẽ có "
