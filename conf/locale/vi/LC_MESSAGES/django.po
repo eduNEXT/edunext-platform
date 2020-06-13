@@ -1,7 +1,6 @@
 # #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 # #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-# edunext helper translation file for Vietnamese.
-# Copyright (C) 2016 eduNEXT
+# edunext translation file
 # #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 # edunext helper translation file for Vietnamese.
 # Copyright (C) 2016 eduNEXT
@@ -2543,7 +2542,7 @@ msgstr[0] "Đúng ({progress} điểm)"
 #, python-brace-format
 msgid "Partially correct ({progress} point)"
 msgid_plural "Partially correct ({progress} points)"
-msgstr[0] "Có phần đúng ({progress} điểm)"
+msgstr[0] "Tổng điểm ({progress} điểm)"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Partially Correct"
