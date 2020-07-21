@@ -1,5 +1,6 @@
 from student.signals.signals import (
     ENROLLMENT_TRACK_UPDATED,
+    EOX_HOOKS_PRE_ENROLLMENT,
     UNENROLL_DONE,
     ENROLL_STATUS_CHANGE,
     REFUND_ORDER,

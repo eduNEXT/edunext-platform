@@ -52,7 +52,7 @@ from user_util import user_util
 
 from edx_django_utils.cache import RequestCache
 import lms.lib.comment_client as cc
-from student.signals import UNENROLL_DONE, ENROLL_STATUS_CHANGE, ENROLLMENT_TRACK_UPDATED
+from student.signals import ENROLL_STATUS_CHANGE, ENROLLMENT_TRACK_UPDATED, EOX_HOOKS_PRE_ENROLLMENT, UNENROLL_DONE
 from lms.djangoapps.certificates.models import GeneratedCertificate
 from course_modes.models import CourseMode
 from courseware.models import (
@@ -1076,8 +1076,19 @@ class CourseEnrollment(models.Model):
         ).format(self.user, self.course_id, self.created, self.is_active)
 
     def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
-        super(CourseEnrollment, self).save(force_insert=force_insert, force_update=force_update, using=using,
-                                           update_fields=update_fields)
+        o = EOX_HOOKS_PRE_ENROLLMENT.send(
+            sender=self.__class__,
+            model=self,
+            force_insert=force_insert,
+            force_update=force_update,
+            using=using,
+            update_fields=update_fields,
+        )
+        data = {}
+        for v in o:
+            data.update(v[-1])
+
+        super(CourseEnrollment, self).save(**data)
 
         # Delete the cached status hash, forcing the value to be recalculated the next time it is needed.
         cache.delete(self.enrollment_status_hash_cache_key(self.user))
