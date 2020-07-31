@@ -6,6 +6,10 @@ This definition is still experimental. See: https://docs.google.com/document/d/1
 import django.dispatch
 
 
+class TriggerException(Exception):
+    pass
+
+
 # This definition is the first POC used in production for adding additional business rules to the enrollment
 pre_enrollment = django.dispatch.Signal(providing_args=[
     "user",

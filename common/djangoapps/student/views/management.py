@@ -64,6 +64,7 @@ from openedx.core.djangoapps.user_api.models import UserRetirementRequest
 from openedx.core.djangoapps.user_api.preferences import api as preferences_api
 
 from openedx.core.djangolib.markup import HTML, Text
+from openedx.core.lib.triggers.v1 import TriggerException
 from openedx.features.journals.api import get_journals_context
 from student.forms import AccountCreationForm, PasswordResetFormNoActive, get_registration_extension_form
 from student.helpers import (
@@ -384,11 +385,10 @@ def change_enrollment(request, check_access=True):
                 enroll_mode = CourseMode.auto_enroll_mode(course_id, available_modes)
                 if enroll_mode:
                     CourseEnrollment.enroll(user, course_id, check_access=check_access, mode=enroll_mode)
+            except TriggerException as error:
+                return HttpResponseBadRequest(error.message)
             except Exception as error:  # pylint: disable=broad-except
-                message = error.message
-                if not message:
-                    message = _("Could not enroll")
-                return HttpResponseBadRequest(message)
+                return HttpResponseBadRequest(_("Could not enroll"))
 
         # If we have more than one course mode or professional ed is enabled,
         # then send the user to the choose your track page.
