@@ -384,8 +384,11 @@ def change_enrollment(request, check_access=True):
                 enroll_mode = CourseMode.auto_enroll_mode(course_id, available_modes)
                 if enroll_mode:
                     CourseEnrollment.enroll(user, course_id, check_access=check_access, mode=enroll_mode)
-            except Exception:  # pylint: disable=broad-except
-                return HttpResponseBadRequest(_("Could not enroll"))
+            except Exception as error:  # pylint: disable=broad-except
+                message = error.message
+                if not message:
+                    message = _("Could not enroll")
+                return HttpResponseBadRequest(message)
 
         # If we have more than one course mode or professional ed is enabled,
         # then send the user to the choose your track page.
