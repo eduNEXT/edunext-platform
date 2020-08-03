@@ -144,7 +144,7 @@ class BasketsView(APIView):
             try:
                 self._enroll(course_key, user, default_enrollment_mode.slug)
             except TriggerException as error:
-                return DetailResponse(error.message, status=HTTP_406_NOT_ACCEPTABLE)
+                return DetailResponse(error.message, status=HTTP_406_NOT_ACCEPTABLE)  # pylint: disable=no-member
             mode = CourseMode.AUDIT if audit_mode else CourseMode.HONOR
             SAILTHRU_AUDIT_PURCHASE.send(
                 sender=None, user=user, mode=mode, course_id=course_id

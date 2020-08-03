@@ -387,7 +387,7 @@ def change_enrollment(request, check_access=True):
                     CourseEnrollment.enroll(user, course_id, check_access=check_access, mode=enroll_mode)
             except TriggerException as error:
                 return HttpResponseBadRequest(error.message)
-            except Exception as error:  # pylint: disable=broad-except
+            except Exception:  # pylint: disable=broad-except
                 return HttpResponseBadRequest(_("Could not enroll"))
 
         # If we have more than one course mode or professional ed is enabled,

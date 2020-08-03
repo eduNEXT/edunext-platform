@@ -1,12 +1,14 @@
 """
 This module defines the signals supported for public consumption.
 
-This definition is still experimental. See: https://docs.google.com/document/d/1jhnudz6AVtVt0ZSRSwOwj9gJ0lsDDn_8mUCPehLPzLw/edit
+This definition is still experimental.
+See: https://docs.google.com/document/d/1jhnudz6AVtVt0ZSRSwOwj9gJ0lsDDn_8mUCPehLPzLw/edit.
 """
 import django.dispatch
 
 
 class TriggerException(Exception):
+    """Raised when the sending of the signal of a trigger fails"""
     pass
 
 

@@ -1321,11 +1321,11 @@ class CourseEnrollment(models.Model):
         except Exception as error:  # pylint: disable=broad-except
             raise TriggerException(error.message)
 
-        for receiver, response in hook_result:
+        for receiver_func, func_response in hook_result:
             log.info(
                 u"This is the result of calling the pre_enrollment signal. Receiver was %s and response %s",
-                receiver,
-                response,
+                receiver_func,
+                func_response,
             )
 
         if mode is None:
