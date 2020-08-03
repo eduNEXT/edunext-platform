@@ -66,6 +66,7 @@ from openedx.core.djangoapps.content.course_overviews.models import CourseOvervi
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.xmodule_django.models import NoneToEmptyManager
 from openedx.core.djangolib.model_mixins import DeletableByUserValue
+from openedx.core.lib.triggers.v1 import pre_enrollment, TriggerException
 from track import contexts, segment
 from util.milestones_helpers import is_entrance_exams_enabled
 from util.model_utils import emit_field_changed_events, get_changed_fields_dict
@@ -1310,7 +1311,23 @@ class CourseEnrollment(models.Model):
         verified the user authentication.
 
         Also emits relevant events for analytics purposes.
+
+        This method triggers a public signal that may prevent the creation of the enrollment.
         """
+
+        # This signal allows plugins to extend the behaviour of the enrollment process.
+        try:
+            hook_result = pre_enrollment.send(sender=None, user=user, course_key=course_key, mode=mode)
+        except Exception as error:  # pylint: disable=broad-except
+            raise TriggerException(error.message)
+
+        for receiver_func, func_response in hook_result:
+            log.info(
+                u"This is the result of calling the pre_enrollment signal. Receiver was %s and response %s",
+                receiver_func,
+                func_response,
+            )
+
         if mode is None:
             mode = _default_course_mode(text_type(course_key))
         # All the server-side checks for whether a user is allowed to enroll.

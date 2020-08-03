@@ -20,6 +20,7 @@ from openedx.core.djangoapps.commerce.utils import ecommerce_api_client
 from openedx.core.djangoapps.embargo import api as embargo_api
 from openedx.core.djangoapps.user_api.preferences.api import update_email_opt_in
 from openedx.core.lib.api.authentication import OAuth2AuthenticationAllowInactiveUser
+from openedx.core.lib.triggers.v1 import TriggerException
 from student.models import CourseEnrollment
 from student.signals import SAILTHRU_AUDIT_PURCHASE
 from util.json_request import JsonResponse
@@ -140,7 +141,10 @@ class BasketsView(APIView):
                     username=user.username
                 )
             log.info(msg)
-            self._enroll(course_key, user, default_enrollment_mode.slug)
+            try:
+                self._enroll(course_key, user, default_enrollment_mode.slug)
+            except TriggerException as error:
+                return DetailResponse(error.message, status=HTTP_406_NOT_ACCEPTABLE)  # pylint: disable=no-member
             mode = CourseMode.AUDIT if audit_mode else CourseMode.HONOR
             SAILTHRU_AUDIT_PURCHASE.send(
                 sender=None, user=user, mode=mode, course_id=course_id
