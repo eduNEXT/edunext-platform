@@ -112,7 +112,7 @@ jobs:
           name: Install local pip packages
           command: |
             source /tmp/workspace/venv/bin/activate
-            pip install -r requirements/edx/local.in
+            pip install -r requirements/edx/testing.txt
 
       - run:
           name: Run tests
@@ -150,7 +150,7 @@ jobs:
           name: Install local pip packages
           command: |
             source /tmp/workspace/venv/bin/activate
-            pip install -r requirements/edx/local.in
+            pip install -r requirements/edx/testing.txt
 
       - run:
           name: Run tests
@@ -187,7 +187,7 @@ jobs:
           name: Install local pip packages
           command: |
             source /tmp/workspace/venv/bin/activate
-            pip install -r requirements/edx/local.in
+            pip install -r requirements/edx/testing.txt
 
       - run:
           name: Run tests
@@ -224,7 +224,7 @@ jobs:
           name: Install local pip packages
           command: |
             source /tmp/workspace/venv/bin/activate
-            pip install -r requirements/edx/local.in
+            pip install -r requirements/edx/testing.txt
 
       - run:
           name: Run tests
@@ -262,7 +262,7 @@ jobs:
           name: Install local pip packages
           command: |
             source /tmp/workspace/venv/bin/activate
-            pip install -r requirements/edx/local.in
+            pip install -r requirements/edx/testing.txt
 
       - run:
           name: Run tests
