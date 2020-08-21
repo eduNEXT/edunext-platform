@@ -2129,8 +2129,11 @@ class CourseAccessRole(models.Model):
         """
         return self._key < other._key  # pylint: disable=protected-access
 
-    def __unicode__(self):
-        return "[CourseAccessRole] user: {}   role: {}   org: {}   course: {}".format(self.user.username, self.role, self.org, self.course_id)
+    def __str__(self):
+        return "[CourseAccessRole] user: {}   role: {}   org: {}   course: {}".format(
+            self.user.username.encode('utf-8'),
+            self.role, self.org, self.course_id,
+        )
 
 
 #### Helper methods for use from python manage.py shell and other classes.
