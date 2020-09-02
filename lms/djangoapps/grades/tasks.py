@@ -259,12 +259,23 @@ def _has_db_updated_with_new_score(self, scored_block_usage_key, **kwargs):
         found_modified_time = score.modified if score is not None else None
 
     elif kwargs['score_db_table'] == ScoreDatabaseTableEnum.submissions:
+        # This block_type assignation is to address this issue with edx sga xblock:
+        # https://discuss.openedx.org/t/problems-with-sga-grade-submission/2415
+        # As mentioned there, this is only a quick fix and should not be
+        # migrated and should be removed as soon as we find a proper
+        # and maintainable solution.
+        block_type = (
+            scored_block_usage_key.block_type
+            if scored_block_usage_key.block_type != 'edx_sga'
+            else 'sga'
+        )
+
         score = sub_api.get_score(
             {
                 "student_id": kwargs['anonymous_user_id'],
                 "course_id": unicode(scored_block_usage_key.course_key),
                 "item_id": unicode(scored_block_usage_key),
-                "item_type": scored_block_usage_key.block_type,
+                "item_type": block_type,
             }
         )
         found_modified_time = score['created_at'] if score is not None else None
