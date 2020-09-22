@@ -8,7 +8,6 @@ import json
 import unittest
 
 import mock
-import pytest
 import requests
 
 from ..xqueue import StubXQueueService
@@ -44,7 +43,6 @@ class StubXQueueServiceTest(unittest.TestCase):
         timer.side_effect = FakeTimer
         self.addCleanup(patcher.stop)
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (JU)")
     def test_grade_request(self):
 
         # Post a submission to the stub XQueue

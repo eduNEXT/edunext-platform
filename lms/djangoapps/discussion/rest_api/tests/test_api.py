@@ -9,7 +9,6 @@ from datetime import datetime, timedelta
 import ddt
 import httpretty
 import mock
-import pytest
 import six
 from django.core.exceptions import ValidationError
 from django.test.client import RequestFactory
@@ -666,7 +665,6 @@ class GetThreadListTest(ForumsEnableMixin, CommentsServiceMockMixin, UrlResetMix
             "per_page": ["14"],
         })
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (JU)")
     def test_thread_content(self):
         self.course.cohort_config = {"cohorted": True}
         modulestore().update_item(self.course, ModuleStoreEnum.UserID.test)

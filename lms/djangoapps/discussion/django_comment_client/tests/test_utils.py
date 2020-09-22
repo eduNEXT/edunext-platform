@@ -7,7 +7,6 @@ import json
 
 import ddt
 import mock
-import pytest
 import six
 from django.test import RequestFactory, TestCase
 from django.urls import reverse
@@ -562,7 +561,6 @@ class CategoryMapTestCase(CategoryMapTestMixin, ModuleStoreTestCase):
             exclude_unstarted=False
         )
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (JU)")
     def test_tree(self):
         self.create_discussion("Chapter 1", "Discussion 1")
         self.create_discussion("Chapter 1", "Discussion 2")
@@ -731,7 +729,6 @@ class CategoryMapTestCase(CategoryMapTestMixin, ModuleStoreTestCase):
             }
         )
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (JU)")
     def test_self_paced_start_date_filter(self):
         self.course.self_paced = True
 
@@ -952,7 +949,6 @@ class CategoryMapTestCase(CategoryMapTestMixin, ModuleStoreTestCase):
             }
         )
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (JU)")
     def test_sort_intermediates(self):
         self.create_discussion("Chapter B", "Discussion 2")
         self.create_discussion("Chapter C", "Discussion")

@@ -10,7 +10,6 @@ import json
 import ddt
 import httpretty
 import mock
-import pytest
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
 from django.test import TestCase
@@ -289,7 +288,6 @@ class TestRefundSignal(TestCase):
             self.assertFalse(success)
             self.assertTrue(mock_post.called)
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (JU)")
     @httpretty.activate
     def test_create_zendesk_ticket(self):
         """ Verify the Zendesk API is called. """
