@@ -619,7 +619,9 @@ class CourseGradingTest(CourseTestCase):
                     'event_transaction_id': 'mockUUID',
                 }
             ) for policy_hash in {grading_policy_1, grading_policy_2, grading_policy_3}
-        ])
+        ],
+            any_order=True,
+        )
 
     @mock.patch('track.event_transaction_utils.uuid4')
     @mock.patch('models.settings.course_grading.tracker')
