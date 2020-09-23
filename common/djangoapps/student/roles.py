@@ -292,6 +292,33 @@ class CourseBetaTesterRole(CourseRole):
 
 
 @register_access_role
+class CourseRerunCreatorRole(CourseRole):
+    """A course staff with ability to rerun"""
+    ROLE = 'rerun_creator'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(self.ROLE, *args, **kwargs)
+
+
+@register_access_role
+class OrgRerunCreatorRole(OrgRole):
+    """An ORG staff with ability to rerun all courses"""
+    ROLE = 'org_rerun_creator_group'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(self.ROLE, *args, **kwargs)
+
+
+@register_access_role
+class OrgCourseCreatorRole(OrgRole):
+    """An ORG staff with ability to create new courses"""
+    ROLE = 'org_course_creator_group'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(self.ROLE, *args, **kwargs)
+
+
+@register_access_role
 class LibraryUserRole(CourseRole):
     """
     A user who can view a library and import content from it, but not edit it.

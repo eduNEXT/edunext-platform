@@ -20,6 +20,6 @@ class OrganizationListView(View):
     @method_decorator(login_required)
     def get(self, request, *args, **kwargs):  # lint-amnesty, pylint: disable=unused-argument
         """Returns organization list as json."""
-        organizations = get_organizations()
-        org_names_list = [(org["short_name"]) for org in organizations]
+        # EDUNEXT: Organizations list must not be visible for users, reason why an empty array is returned
+        org_names_list = []
         return HttpResponse(dump_js_escaped_json(org_names_list), content_type='application/json; charset=utf-8')  # lint-amnesty, pylint: disable=http-response-with-content-type-json

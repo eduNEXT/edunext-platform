@@ -17,7 +17,8 @@ class TestOrganizationListing(TestCase):
         self.staff = UserFactory(is_staff=True)
         self.client.login(username=self.staff.username, password='test')
         self.org_names_listing_url = reverse('organizations')
-        self.org_short_names = ["alphaX", "betaX", "orgX"]
+        # EDUNEXT: Organizations list must not be visible for users, reason why an empty array is set
+        self.org_short_names = []
         for index, short_name in enumerate(self.org_short_names):
             add_organization(organization_data={
                 'name': 'Test Organization %s' % index,

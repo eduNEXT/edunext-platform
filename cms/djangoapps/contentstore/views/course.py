@@ -47,7 +47,10 @@ from common.djangoapps.student.roles import (
     CourseInstructorRole,
     CourseStaffRole,
     GlobalStaff,
-    UserBasedRole
+    UserBasedRole,
+    CourseRerunCreatorRole,
+    OrgRerunCreatorRole,
+    OrgCourseCreatorRole,
 )
 from common.djangoapps.util.course import get_link_for_about_page
 from common.djangoapps.util.date_utils import get_default_time_display
@@ -304,10 +307,11 @@ def course_rerun_handler(request, course_key_string):
     GET
         html: return html page with form to rerun a course for the given course id
     """
-    # Only global staff (PMs) are able to rerun courses during the soft launch
-    if not GlobalStaff().has_user(request.user):
-        raise PermissionDenied()
     course_key = CourseKey.from_string(course_key_string)
+
+    if not GlobalStaff().has_user(request.user) and not _rerun_permission(request.user, course_key):
+        raise PermissionDenied()
+
     with modulestore().bulk_operations(course_key):
         course_module = get_course_and_check_access(course_key, request.user, depth=3)
         if request.method == 'GET':
@@ -550,6 +554,8 @@ def course_listing(request):
     split_archived = settings.FEATURES.get('ENABLE_SEPARATE_ARCHIVED_COURSES', False)
     active_courses, archived_courses = _process_courses_list(courses_iter, in_process_course_actions, split_archived)
     in_process_course_actions = [format_in_process_course_view(uca) for uca in in_process_course_actions]
+    active_courses = _set_rerun_permission_for_courses(user, active_courses)
+    archived_courses = _set_rerun_permission_for_courses(user, archived_courses)
 
     return render_to_response('index.html', {
         'courses': active_courses,
@@ -849,11 +855,17 @@ def _create_or_rerun_course(request):
     Returns the destination course_key and overriding fields for the new course.
     Raises DuplicateCourseError and InvalidKeyError
     """
-    if not auth.user_has_role(request.user, CourseCreatorRole()):
-        raise PermissionDenied()
-
     try:
         org = request.json.get('org')
+
+        rerun_permission = (
+            OrgRerunCreatorRole(org).has_user(request.user)
+            or OrgCourseCreatorRole(org).has_user(request.user)
+        )
+
+        if not auth.user_has_role(request.user, CourseCreatorRole()) and not rerun_permission:
+            raise PermissionDenied()
+
         course = request.json.get('number', request.json.get('course'))
         display_name = request.json.get('display_name')
         # force the start date for reruns and allow us to override start via the client
@@ -1863,3 +1875,24 @@ def _get_course_creator_status(user):
         course_creator_status = 'granted'
 
     return course_creator_status
+
+
+def _rerun_permission(user, course_key):
+    """
+    Helper method to check if user can rerun-course
+    """
+    return (
+        CourseRerunCreatorRole(course_key).has_user(user)
+        or OrgRerunCreatorRole(course_key.org).has_user(user)
+    )
+
+
+def _set_rerun_permission_for_courses(user, courses):
+    """
+    iterate over courses dict and set the key 'rerun_permission'
+    """
+    for course in courses:
+        course_key = CourseKey.from_string(course['course_key'])
+        course['rerun_permission'] = _rerun_permission(user, course_key)
+
+    return courses
