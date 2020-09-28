@@ -15,7 +15,12 @@ from openedx.core.djangolib.markup import HTML, Text
 
     <div class="footer-content-primary">
       <div class="colophon">
+<<<<<<< HEAD
         <p>&copy; ${datetime.now(pytz.timezone(settings.TIME_ZONE)).year} <a href="${marketing_link('ROOT')}" rel="external">${settings.PLATFORM_NAME}</a>.</p>
+=======
+        <!-- Since we are using eox-tenant in studio we can set the marketing urls and the platform-name, why  not ? -->
+        <p>&copy; ${datetime.now(pytz.timezone(settings.TIME_ZONE)).year} <a data-rel="edx.org" href="${getattr(settings, 'EDUNEXT_SITE_PAGE', marketing_link('ROOT'))}" rel="external">${getattr(settings, 'EDUNEXT_STUDIO_MESSAGE', settings.PLATFORM_NAME)}</a>.</p>
+>>>>>>> f0b099a2eb (Add settings for the studio copyright link and text.)
       </div>
 
         <nav class="nav-peripheral" aria-label="${_("Policies")}">
