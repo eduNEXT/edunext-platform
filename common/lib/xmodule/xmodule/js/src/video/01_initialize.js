@@ -165,11 +165,20 @@ function(VideoPlayer, i18n, moment, _) {
                 //
                 // If this global function is already defined, we store it first, and make
                 // sure that it gets executed when our Deferred object is resolved.
-                setupOnYouTubeIframeAPIReady = function() {
+                setupOnYouTubeIframeAPIReady = function setupOnYouTubeIframeAPIReady() {
                     _oldOnYouTubeIframeAPIReady = window.onYouTubeIframeAPIReady || undefined;
 
                     window.onYouTubeIframeAPIReady = function() {
-                        window.onYouTubeIframeAPIReady.resolve();
+                        var i = 0;
+                        while(i < 10) {
+                            try {
+                                window.onYouTubeIframeAPIReady.resolve();
+                                i = 10;
+                            }
+                            catch(err) {
+                                setTimeout(function(){ console.log("Loading Youtube Video..."); i++}, 1000);
+                            }
+                        }
                     };
 
                     window.onYouTubeIframeAPIReady.resolve = _youtubeApiDeferred.resolve;
