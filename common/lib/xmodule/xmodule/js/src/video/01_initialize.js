@@ -169,16 +169,22 @@ function(VideoPlayer, i18n, moment, _) {
                     _oldOnYouTubeIframeAPIReady = window.onYouTubeIframeAPIReady || undefined;
 
                     window.onYouTubeIframeAPIReady = function() {
-                        var i = 0;
-                        while(i < 10) {
-                            try {
-                                window.onYouTubeIframeAPIReady.resolve();
-                                i = 10;
+                        async function asyncCall() {
+                            console.log('calling');
+                            var i = 0;
+                            while(i < 10) {
+                                try {
+                                    window.onYouTubeIframeAPIReady.resolve();
+                                    i = 10;
+                                }
+                                catch(err) {
+                                    console.log("[Video info]: Continue loading YouTube video.")
+                                    await new Promise(r => setTimeout(r, 1000));
+                                    i++;
+                                }
                             }
-                            catch(err) {
-                                setTimeout(function(){ console.log("Loading Youtube Video..."); i++}, 1000);
-                            }
-                        }
+                        };
+                        asyncCall();
                     };
 
                     window.onYouTubeIframeAPIReady.resolve = _youtubeApiDeferred.resolve;
