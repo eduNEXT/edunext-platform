@@ -17,7 +17,7 @@ from rest_framework.authentication import SessionAuthentication
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework_oauth.authentication import OAuth2Authentication
+from openedx.core.lib.api.authentication import BearerAuthentication
 
 import eventtracking
 from openedx.core.djangoapps.bookmarks.api import BookmarksLimitReachedError
@@ -155,7 +155,7 @@ class BookmarksListView(ListCreateAPIView, BookmarksViewMixin):
             * created: ISO 8601 String. The timestamp of bookmark's creation.
 
     """
-    authentication_classes = (OAuth2Authentication, SessionAuthentication)
+    authentication_classes = (BearerAuthentication, SessionAuthentication)
     pagination_class = BookmarksPagination
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = BookmarkSerializer
@@ -299,7 +299,7 @@ class BookmarksDetailView(APIView, BookmarksViewMixin):
         to a requesting user's bookmark a 404 is returned. 404 will also be returned
         if the bookmark does not exist.
     """
-    authentication_classes = (OAuth2Authentication, SessionAuthentication)
+    authentication_classes = (BearerAuthentication, SessionAuthentication)
     permission_classes = (permissions.IsAuthenticated, IsUserInUrl)
 
     serializer_class = BookmarkSerializer
