@@ -19,7 +19,7 @@ from openedx.core.djangoapps.course_groups.cohorts import (
     add_user_to_cohort,
 )
 from openedx.core.djangoapps.course_groups.models import CourseUserGroup
-from openedx.core.lib.api.authentication import OAuth2Authentication
+from openedx.core.lib.api.authentication import BearerAuthentication
 from openedx.core.lib.api.permissions import IsStaff
 from util.disable_rate_limit import can_disable_rate_limit
 
@@ -69,7 +69,7 @@ class BulkEnrollView(APIView):
         to the 'before' and 'after' states.
     """
 
-    authentication_classes = JwtAuthentication, OAuth2Authentication
+    authentication_classes = JwtAuthentication, BearerAuthentication
     permission_classes = (IsStaff,)
     throttle_classes = (EnrollmentUserThrottle,)
 

@@ -13,9 +13,9 @@ from rest_framework import exceptions, status, throttling
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework_oauth.authentication import OAuth2Authentication
 from social_django.models import UserSocialAuth
 
+from openedx.core.lib.api.authentication import BearerAuthentication
 from openedx.core.lib.api.authentication import OAuth2AuthenticationAllowInactiveUser
 from openedx.core.lib.api.permissions import ApiKeyHeaderPermission
 from third_party_auth import pipeline
@@ -330,7 +330,7 @@ class UserMappingView(ListAPIView):
             * remote_id: The Id from third party auth provider
     """
     authentication_classes = (
-        OAuth2Authentication,
+        BearerAuthentication,
     )
 
     serializer_class = serializers.UserMappingSerializer
