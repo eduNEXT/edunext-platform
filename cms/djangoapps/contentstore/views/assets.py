@@ -22,6 +22,7 @@ from six import text_type
 from contentstore.views.exception import AssetNotFoundException, AssetSizeTooLargeException
 from edxmako.shortcuts import render_to_response
 from openedx.core.djangoapps.contentserver.caching import del_cached_content
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from student.auth import has_course_author_access
 from util.date_utils import get_default_time_display
 from util.json_request import JsonResponse
@@ -593,7 +594,8 @@ def _get_asset_json(display_name, content_type, date, location, thumbnail_locati
     Helper method for formatting the asset information to send to client.
     '''
     asset_url = StaticContent.serialize_asset_key_with_slash(location)
-    external_url = settings.LMS_BASE + asset_url
+    lms_base = configuration_helpers.get_value_for_org(location.org, 'LMS_BASE', settings.LMS_BASE)
+    external_url = lms_base + asset_url
     return {
         'display_name': display_name,
         'content_type': content_type,
