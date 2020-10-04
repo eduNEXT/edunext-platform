@@ -5,6 +5,7 @@ View logic for handling course welcome messages.
 
 import six
 from django.http import HttpResponse
+from django.conf import settings
 from django.template.loader import render_to_string
 from django.urls import reverse
 from django.views.decorators.csrf import ensure_csrf_cookie
@@ -45,7 +46,9 @@ class WelcomeMessageFragmentView(EdxFragmentView):
             'welcome_message_html': welcome_message_html,
         }
 
-        if get_course_tag(request.user, course_key, PREFERENCE_KEY) == 'False':
+        # HA-24 added by edunext in order to disable the permanent welcome message dismiss
+        if (not settings.FEATURES.get('EDNX_DISABLE_DISMISS_WELCOME_MESSAGE', False) and
+                get_course_tag(request.user, course_key, PREFERENCE_KEY) == 'False'):
             return None
         else:
             html = render_to_string('course_experience/welcome-message-fragment.html', context)
