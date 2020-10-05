@@ -433,7 +433,7 @@ def _update_organization_context(context, course):
     partner_short_name = course.display_organization if course.display_organization else course.org
     organizations = organization_api.get_course_organizations(course_id=course.id)
     if organizations:
-        #TODO Need to add support for multiple organizations, Currently we are interested in the first one.
+        # TODO Need to add support for multiple organizations, Currently we are interested in the first one.
         organization = organizations[0]
         partner_long_name = organization.get('name', partner_long_name)
         partner_short_name = organization.get('short_name', partner_short_name)
@@ -463,6 +463,17 @@ def render_preview_certificate(request, course_id):
     This view renders the course certificate in preview mode
     """
     return render_html_view(request, six.text_type(course_id))
+
+
+def _update_minimal_context(context):
+    """
+    This is an eduNEXT function to make the regular certificate work out of the box
+    """
+    context['company_privacy_url'] = ''
+    context['logo_src'] = ''
+    context['company_tos_url'] = ''
+    context['company_about_url'] = ''
+    context['logo_url'] = ''
 
 
 def render_cert_by_uuid(request, certificate_uuid):
@@ -572,6 +583,8 @@ def render_html_view(request, course_id, certificate=None):
     # Generate the certificate context in the correct language, then render the template.
     with translation.override(certificate_language):
         context = {'user_language': user_language}
+
+        _update_minimal_context(context)  # load the bare minimum
 
         _update_context_with_basic_info(context, course_id, platform_name, configuration)
 
