@@ -525,6 +525,8 @@ OAUTH2_PROVIDER = {
     'SCOPES': dict(OAUTH2_DEFAULT_SCOPES, **{
         'grades:read': _('Retrieve your grades for your enrolled courses'),
         'certificates:read': _('Retrieve your course certificates'),
+        "openid": "Openid",
+        "permissions": "Permissions",
     }),
     'DEFAULT_SCOPES': OAUTH2_DEFAULT_SCOPES,
     'REQUEST_APPROVAL_PROMPT': 'auto_even_if_expired',

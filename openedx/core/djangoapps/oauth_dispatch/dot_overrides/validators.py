@@ -97,6 +97,12 @@ class EdxOAuth2Validator(OAuth2Validator):
         available_scopes = get_scopes_backend().get_available_scopes(application=client, request=request)
         return set(scopes).issubset(set(available_scopes))
 
+    def validate_user_match(self, id_token_hint, scopes, claims, request):
+        # This method has not been implemented in the current django-oauth-toolkit version,
+        # since this is a copy of the lastest version
+        # https://github.com/jazzband/django-oauth-toolkit/blob/master/oauth2_provider/oauth2_validators.py#L897
+        return True
+
     def _update_token_expiry_if_restricted_client(self, token, client):
         """
         Update the token's expires_in value if the given client is a
