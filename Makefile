@@ -100,3 +100,8 @@ upgrade: ## update the pip requirements files to use the latest releases satisfy
 	grep -e "^django==" requirements/edx/base.txt > requirements/edx/django.txt
 	sed '/^[dD]jango==/d' requirements/edx/testing.txt > requirements/edx/testing.tmp
 	mv requirements/edx/testing.tmp requirements/edx/testing.txt
+
+edunext-upgrade: export CUSTOM_COMPILE_COMMAND=make edunext-upgrade
+edunext-upgrade: #Update edunext dependencies.
+	pip install -qr requirements/edx/pip-tools.txt
+	pip-compile -v --no-emit-trusted-host --no-index --upgrade -o requirements/edunext/base.txt requirements/edunext/base.in || exit 1;
