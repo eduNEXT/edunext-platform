@@ -25,7 +25,7 @@ function setup_debug(element_id, edit_link, staff_context){
             var location = $("#" + element_id + "_history_location").val();
 
             $("#" + element_id + "_history_text").load('/courses/' + "${unicode(course.id) | u}" +
-                "/submission_history/" + username + "/" + location);
+                "/submission_history/" + encodeURIComponent(username) + "/" + location);
             return false;
         }
     );
