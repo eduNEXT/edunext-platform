@@ -3,13 +3,9 @@
 # If you open a pull request that adds a new dependency, you should:
 #   * verify that the dependency has a license compatible with AGPLv3
 #   * confirm that it has no system requirements beyond what we already install
-#   * run "make upgrade" to update the detailed requirements files
+#   * run "make edunext-upgrade" to update the detailed requirements files
 #
 # Do *NOT* install Python packages from GitHub unless it's absolutely necessary!
-# "I don't have time to add automatic Travis upload to PyPI." is *not* an
-# acceptable excuse. Non-wheel module installations slow down the dev/building process.
-# Travis/PyPI instructions are here:
-# https://openedx.atlassian.net/wiki/spaces/OpenOPS/pages/41911049/Publishing+a+Package+to+PyPI+using+Travis
 #
 # A correct GitHub reference looks like this:
 #
@@ -53,3 +49,21 @@
 #####################
 # Community Xblocks #
 #####################
+
+# Oppia XBlock
+git+https://github.com/oppia/xblock.git@3b5c17c5832b4f8ef132c6bbf48da8a86df43b3d#egg=oppia-xblock
+
+# Active table xblock
+git+https://github.com/open-craft/xblock-activetable.git@v0.2.2#egg=activetable-xblock==0.2.2
+
+# Image explorer xblock
+git+https://github.com/edx-solutions/xblock-image-explorer.git@9a4ea322507f0f196aaf1283ce62aa017ed69e40#egg=xblock-image-explorer
+
+# Problem builder xblock.
+-e git+https://github.com/open-craft/problem-builder.git@v4.1.5#egg=xblock-problem-builder==4.1.5
+
+# School yourself xblock
+git+https://github.com/schoolyourself/schoolyourself-xblock.git@2093048720cfb36cc05b3143cd6f2585c7c64d85#egg=schoolyourself-xblock
+
+# Vector drawing xblock
+git+https://github.com/open-craft/xblock-vectordraw.git@v0.3.2#egg=vectordraw-xblock==0.3.2
