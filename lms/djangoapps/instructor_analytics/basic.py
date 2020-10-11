@@ -337,9 +337,12 @@ def list_problem_responses(course_key, problem_location, limit_responses=None):
     if problem_key.course_key != course_key:
         return []
 
-    smdat = StudentModule.objects.filter(
+    inner_ids = StudentModule.objects.filter(
         course_id=course_key,
         module_state_key=problem_key
+    ).values_list('pk', flat=True)
+    smdat = StudentModule.objects.filter(
+        id__in=list(inner_ids),
     )
     smdat = smdat.order_by('student')
     if limit_responses is not None:

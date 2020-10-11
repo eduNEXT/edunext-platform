@@ -106,7 +106,7 @@ class TestAnalyticsBasic(ModuleStoreTestCase):
                 # Check if list_problem_responses called UsageKey.from_string to look up problem key:
                 patched_from_string.assert_called_once_with(mock_problem_location)
                 # Check if list_problem_responses called StudentModule.objects.filter to obtain relevant records:
-                patched_manager.filter.assert_called_once_with(
+                patched_manager.filter.assert_any_call(
                     course_id=self.course_key, module_state_key=mock_problem_key
                 )
 
