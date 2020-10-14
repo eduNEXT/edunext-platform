@@ -63,7 +63,7 @@ class MFEContextViewTest(ThirdPartyAuthTestMixin, APITestCase):
         """
         return [
             {
-                'id': 'oa2-facebook',
+                'id': 'oa2-1-facebook',
                 'name': 'Facebook',
                 'iconClass': 'fa-facebook',
                 'iconImage': None,
@@ -72,7 +72,7 @@ class MFEContextViewTest(ThirdPartyAuthTestMixin, APITestCase):
                 'registerUrl': self._third_party_login_url('facebook', 'register', params)
             },
             {
-                'id': 'oa2-google-oauth2',
+                'id': 'oa2-1-google-oauth2',
                 'name': 'Google',
                 'iconClass': 'fa-google-plus',
                 'iconImage': None,
@@ -99,7 +99,7 @@ class MFEContextViewTest(ThirdPartyAuthTestMixin, APITestCase):
             'countryCode': self.country_code
         }
 
-    @patch.dict(settings.FEATURES, {'ENABLE_THIRD_PARTY_AUTH': False})
+    @patch.dict(settings.FEATURES, {'ENABLE_THIRD_PARTY_AUTH_FOR_TEST': False})
     def test_no_third_party_auth_providers(self):
         """
         Test that if third party auth is enabled, context returned by API contains
