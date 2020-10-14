@@ -45,7 +45,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-{{ checksum ".circleci/config.yml" }}-pip-deps-{{ checksum "requirements/edx/base.txt" }}-{{ checksum "requirements/edx/testing.txt" }}-{{ checksum "requirements/edx/django.txt" }}
+            - v1-{{ checksum ".circleci/config.yml" }}-pip-deps-{{ checksum "requirements/edx/base.txt" }}-{{ checksum "requirements/edx/testing.txt" }}-{{ checksum "requirements/edx/django.txt" }}-{{ checksum "requirements/edunext/base.txt" }}
 
       - run:
           name: Install pip packages
@@ -61,6 +61,7 @@ jobs:
             pip install --exists-action w -r requirements/edx/django.txt
             pip install --exists-action w -r requirements/edx/testing.txt
             pip install --exists-action w -r requirements/edx/paver.txt
+            pip install --exists-action w -r requirements/edunext/base.txt
 
       - persist_to_workspace:
           root: /tmp/workspace
