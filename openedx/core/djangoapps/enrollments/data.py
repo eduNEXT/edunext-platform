@@ -10,6 +10,8 @@ from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imp
 from django.db import transaction
 from opaque_keys.edx.keys import CourseKey
 
+# eduNEXT custom import to use filter with eox-tenant pipeline.
+from openedx_filters.tooling import OpenEdxPublicFilter
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.enrollments.errors import (
     CourseEnrollmentClosedError,
@@ -33,6 +35,26 @@ from common.djangoapps.student.roles import RoleCache
 log = logging.getLogger(__name__)
 
 
+# Custom filter to use with eox-tenant pipeline.
+class CourseEnrollmentSiteFilterRequested(OpenEdxPublicFilter):
+    """
+    Custom class used to filter user's course enrollments by site.
+    """
+
+    filter_type = "org.openedx.learning.course_enrollments_site.filter.requested.v1"
+
+    @classmethod
+    def run_filter(cls, context):
+        """
+        Execute a filter with the signature specified.
+
+        Arguments:
+        context (QuerySet): list of all user's course enrollments
+        """
+        data = super().run_pipeline(context=context)
+        return data.get("context")
+
+
 def get_course_enrollments(username, include_inactive=False):
     """Retrieve a list representing all aggregated data for a user's course enrollments.
 
@@ -53,6 +75,11 @@ def get_course_enrollments(username, include_inactive=False):
 
     if not include_inactive:
         qset = qset.filter(is_active=True)
+
+    # Custom filter to use with eox-tenant pipeline.
+    ## .. filter_implemented_name: CourseEnrollmentSiteFilterRequested
+    ## .. filter_type: org.openedx.learning.course_enrollments_site.filter.requested.v1
+    qset = CourseEnrollmentSiteFilterRequested.run_filter(context=qset)
 
     enrollments = CourseEnrollmentSerializer(qset, many=True).data
 
