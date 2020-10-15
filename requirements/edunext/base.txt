@@ -32,6 +32,7 @@ edx-proctoring==2.4.0     # via -c requirements/edunext/../edx/base.txt, eox-cor
 edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-core[sentry,tpa]==3.0.1  # via -r requirements/edunext/base.in
+eox-tenant==3.3.4         # via -r requirements/edunext/base.in
 event-tracking==0.3.2     # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 fs==2.0.18                # via -c requirements/edunext/../edx/base.txt, xblock
 future==0.18.2            # via -c requirements/edunext/../edx/base.txt, pyjwkest
