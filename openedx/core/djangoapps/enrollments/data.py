@@ -8,6 +8,8 @@ import logging
 
 from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imported-auth-user
 from django.db import transaction
+# eduNEXT custom import from eox-tenant plugin.
+from eox_tenant.tenant_aware_functions.enrollments import filter_enrollments
 from opaque_keys.edx.keys import CourseKey
 
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
@@ -54,7 +56,7 @@ def get_course_enrollments(username, include_inactive=False):
     if not include_inactive:
         qset = qset.filter(is_active=True)
 
-    enrollments = CourseEnrollmentSerializer(qset, many=True).data
+    enrollments = CourseEnrollmentSerializer(filter_enrollments(qset), many=True).data
 
     # Find deleted courses and filter them out of the results
     deleted = []
@@ -94,7 +96,10 @@ def get_course_enrollment(username, course_id):
         enrollment = CourseEnrollment.objects.get(
             user__username=username, course_id=course_key
         )
-        return CourseEnrollmentSerializer(enrollment).data
+        enrollment = next(filter_enrollments([enrollment]), None)
+        if enrollment:
+            return CourseEnrollmentSerializer(enrollment).data
+        return None
     except CourseEnrollment.DoesNotExist:
         return None
 
