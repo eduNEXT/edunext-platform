@@ -44,6 +44,8 @@ from django.utils.translation import ugettext_noop
 from django_countries.fields import CountryField
 from edx_django_utils.cache import RequestCache
 from edx_rest_api_client.exceptions import SlumberBaseException
+# eduNEXT custom import from eox-tenant plugin.
+from eox_tenant.tenant_aware_functions.enrollments import filter_enrollments
 from eventtracking import tracker
 from model_utils.models import TimeStampedModel
 from opaque_keys.edx.django.models import CourseKeyField
@@ -2031,7 +2033,11 @@ class CourseEnrollment(models.Model):
         if not enrollment_state:
             try:
                 record = cls.objects.get(user=user, course_id=course_key)
-                enrollment_state = CourseEnrollmentState(record.mode, record.is_active)
+                # Filter per organization.
+                if not next(filter_enrollments([record]), False):
+                    enrollment_state = CourseEnrollmentState(None, None)
+                else:
+                    enrollment_state = CourseEnrollmentState(record.mode, record.is_active)
             except cls.DoesNotExist:
                 enrollment_state = CourseEnrollmentState(None, None)
             cls._update_enrollment_in_request_cache(user, course_key, enrollment_state)
