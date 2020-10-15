@@ -9,6 +9,8 @@ from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imp
 from django.contrib.auth.signals import user_logged_in
 from django.shortcuts import redirect
 from django.utils import dateparse
+# eduNEXT custom import from eox-tenant plugin.
+from eox_tenant.tenant_aware_functions.enrollments import filter_enrollments
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import UsageKey
 from rest_framework import generics, views
@@ -330,7 +332,7 @@ class UserCourseEnrollmentsList(generics.ListAPIView):
         org = self.request.query_params.get('org', None)
 
         same_org = (
-            enrollment for enrollment in enrollments
+            enrollment for enrollment in filter_enrollments(enrollments)
             if enrollment.course_overview and self.is_org(org, enrollment.course_overview.org)
         )
         mobile_available = (
