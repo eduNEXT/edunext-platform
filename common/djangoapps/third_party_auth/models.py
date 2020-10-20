@@ -18,7 +18,7 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from provider.oauth2.models import Client
 from provider.utils import long_token
-from six import text_type
+from six import string_types, text_type
 from social_core.backends.base import BaseAuth
 from social_core.backends.oauth import OAuthAuth
 from social_core.backends.saml import SAMLAuth
@@ -385,23 +385,26 @@ class OAuth2ProviderConfig(ProviderConfig):
 
     def get_setting(self, name):
         """ Get the value of a setting, or raise KeyError """
-        tenant_oauth = configuration_helpers.get_value('SOCIAL_AUTH_OAUTH_SECRETS', False)
-        if tenant_oauth:
-            current = tenant_oauth.get(self.backend_name, {})
-            if name == "KEY":
-                return current.get('KEY')
-            if name == "SECRET":
-                site_key = configuration_helpers.get_value('microsite_config_key')
-                secrets = settings.MICROSITE_SECRETS.get(site_key, {}).get('SOCIAL_AUTH_OAUTH_SECRETS', {})
-                return current.get('SECRET', secrets.get(self.backend_name))
+        tenant_oauth = getattr(settings, 'SOCIAL_AUTH_OAUTH_SECRETS', {})
 
         if name == "KEY":
-            return self.key
+            # In case we have KEY in tenant settings:
+            current = tenant_oauth.get(self.backend_name, {})
+            # In case we have BACKEND_NAME: <SECRET> or BACKEND_NAME: {KEY: <KEY>}
+            key = '' if isinstance(current, string_types) else current.get('KEY')
+            return key if key else self.key
         if name == "SECRET":
             if self.secret:
                 return self.secret
-            # To allow instances to avoid storing secrets in the DB, the secret can also be set via Django:
-            return getattr(settings, 'SOCIAL_AUTH_OAUTH_SECRETS', {}).get(self.backend_name, '')
+            # In case we don't have secrets in the model:
+            site_key = getattr(settings, 'microsite_config_key', '')
+            secrets = getattr(settings, 'MICROSITE_SECRETS', {}).get(site_key, {}).get('SOCIAL_AUTH_OAUTH_SECRETS', {})
+            # In case we have BACKEND_NAME: <SECRET> or BACKEND_NAME: {SECRET: <SECRET>} or MICROSITE_SECRETS
+            current = tenant_oauth.get(self.backend_name, {})
+            return current if isinstance(current, string_types) else current.get(
+                'SECRET',
+                secrets.get(self.backend_name, ''),
+            )
         if self.other_settings:
             other_settings = json.loads(self.other_settings)
             assert isinstance(other_settings, dict), "other_settings should be a JSON object (dictionary)"
