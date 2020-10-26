@@ -28,3 +28,13 @@
 ###################
 eox-core[sentry,tpa]                # Edunext core modifications. This plugin is necessary since this contains the most of edunext custom changes and the edunext logic businesses[required by saas].
 eox-tenant                          # Edunext multi-tenant plugin, allows a multi-tenant instance.
+
+#####################
+# eduNEXT Xblocks #
+#####################
+flow-control-xblock                 # XBlock Flow Control.
+
+#####################
+# Community Xblocks #
+#####################
+ubcpi-xblock                        # UBC Peer Instruction Tool for edX. This is used by some clients.
