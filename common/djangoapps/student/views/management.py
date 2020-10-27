@@ -53,6 +53,7 @@ from openedx.core.djangoapps.user_api.preferences import api as preferences_api
 from openedx.core.djangolib.markup import HTML, Text
 from student.helpers import DISABLE_UNENROLL_CERT_STATES, cert_info, generate_activation_email_context
 from student.message_types import AccountActivation, EmailChange, EmailChangeConfirmation, RecoveryEmailCreate
+from openedx.core.lib.triggers.v1 import TriggerException
 from student.models import (
     AccountRecovery,
     CourseEnrollment,
@@ -360,6 +361,8 @@ def change_enrollment(request, check_access=True):
                 enroll_mode = CourseMode.auto_enroll_mode(course_id, available_modes)
                 if enroll_mode:
                     CourseEnrollment.enroll(user, course_id, check_access=check_access, mode=enroll_mode)
+            except TriggerException as error:
+                return HttpResponseBadRequest(error.message)  # pylint: disable=no-member
             except Exception:  # pylint: disable=broad-except
                 return HttpResponseBadRequest(_("Could not enroll"))
 
