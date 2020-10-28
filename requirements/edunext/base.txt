@@ -36,6 +36,11 @@ edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-p
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-core[sentry,tpa]==3.0.1  # via -r requirements/edunext/base.in
 eox-tenant==3.3.4         # via -r requirements/edunext/base.in
+git+https://github.com/eduNEXT/eox-hooks.git@v0.2.1#egg=eox-hooks==0.2.1
+git+ssh://git@bitbucket.org/edunext/eox-manage.git@e033956ada83140da52b66c90e8b176c9a8c910b#egg=eox-manage==0.5.0
+git+ssh://git@bitbucket.org/edunext/eox-support.git@7fe2011b0973007c0c214bfc3c97d011be471938#egg=eox-support==0.8.0
+git+https://github.com/eduNEXT/eox-tagging.git@v0.10.0#egg=eox-tagging==0.10.0
+git+ssh://git@bitbucket.org/edunext/eox-taylor.git@v0.5.0#egg=eox-taylor==0.5.0
 event-tracking==0.3.2     # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 flow-control-xblock==1.0.1  # via -r requirements/edunext/base.in
 fs==2.0.18                # via -c requirements/edunext/../edx/base.txt, xblock
