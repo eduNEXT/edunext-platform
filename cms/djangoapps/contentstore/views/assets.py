@@ -594,7 +594,11 @@ def _get_asset_json(display_name, content_type, date, location, thumbnail_locati
     Helper method for formatting the asset information to send to client.
     '''
     asset_url = StaticContent.serialize_asset_key_with_slash(location)
-    lms_base = configuration_helpers.get_value_for_org(location.org, 'LMS_BASE', settings.LMS_BASE)
+    if getattr(settings, "EDNX_ENABLE_FIXED_LMS_BASE", False):
+        lms_base = "https://openedx.edunext.co"
+    else:
+        lms_base = configuration_helpers.get_value_for_org(location.org, 'SITE_NAME', settings.LMS_BASE)
+
     external_url = lms_base + asset_url
     return {
         'display_name': display_name,
