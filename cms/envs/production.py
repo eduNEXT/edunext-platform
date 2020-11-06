@@ -170,6 +170,12 @@ if 'loc_cache' not in CACHES:
         'LOCATION': 'edx_location_mem_cache',
     }
 
+# Load all AWS_ prefixed variables to allow an S3Boto3Storage to be configured
+_locals = locals()
+for key, value in ENV_TOKENS.items():
+    if key.startswith('AWS_'):
+        _locals[key] = value
+
 SESSION_COOKIE_DOMAIN = ENV_TOKENS.get('SESSION_COOKIE_DOMAIN')
 SESSION_COOKIE_HTTPONLY = ENV_TOKENS.get('SESSION_COOKIE_HTTPONLY', True)
 SESSION_ENGINE = ENV_TOKENS.get('SESSION_ENGINE', SESSION_ENGINE)
