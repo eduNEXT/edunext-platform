@@ -5,6 +5,7 @@ Classes that override default django-oauth-toolkit behavior
 
 from datetime import datetime, timedelta
 
+from django.conf import settings
 from django.contrib.auth import authenticate, get_user_model
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
@@ -81,7 +82,12 @@ class EdxOAuth2Validator(OAuth2Validator):
             # associate access tokens issued with the client_credentials grant to users.
             request.user = request.client.user
 
-        super().save_bearer_token(token, request, *args, **kwargs)
+            # ednx: JU-10. Tokens for the machine-to-machine comunication should be longer lived
+            #       for backwards compatibility with eox-core and other plugin APIs.
+            #       Without this modification the BearerToken class will set this to 3600
+            request.expires_in = getattr(settings, 'CLIENT_CREDENTIALS_ACCESS_TOKEN_EXPIRE_SECONDS', 31557600)
+
+        super(EdxOAuth2Validator, self).save_bearer_token(token, request, *args, **kwargs)
 
         is_restricted_client = self._update_token_expiry_if_restricted_client(token, request.client)
         if not is_restricted_client:
