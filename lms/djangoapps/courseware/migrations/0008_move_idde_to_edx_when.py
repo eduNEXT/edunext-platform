@@ -2,7 +2,6 @@
 
 
 import json
-import logging
 
 from django.db import migrations
 
@@ -12,7 +11,6 @@ def move_overrides_to_edx_when(apps, schema_editor):
     from edx_when import api
     date_field = Date()
     StudentFieldOverride = apps.get_model('courseware', 'StudentFieldOverride')
-    log = logging.getLogger(__name__)
     for override in StudentFieldOverride.objects.filter(field='due'):
         try:
             abs_date = date_field.from_json(json.loads(override.value))
@@ -23,7 +21,10 @@ def move_overrides_to_edx_when(apps, schema_editor):
                 abs_date,
                 user=override.student)
         except Exception:  # pylint: disable=broad-except
-            log.exception("migrating %d %r: %r", override.id, override.location, override.value)
+            # The following line is commented since these logs only add noise to output console
+            # Thi migration only works with IDDE
+            # log.exception("migrating %d %r: %r", override.id, override.location, override.value)
+            pass
 
 
 class Migration(migrations.Migration):
