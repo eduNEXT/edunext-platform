@@ -3,7 +3,7 @@
 Tests for OAuth token exchange forms
 """
 
-
+import os
 import unittest
 
 import httpretty
@@ -53,7 +53,7 @@ class AccessTokenExchangeFormTest(AccessTokenExchangeTestMixin):
 
 
 # This is necessary because cms does not implement third party auth
-@unittest.skipUnless(TPA_FEATURE_ENABLED, TPA_FEATURES_KEY + " not enabled")
+@unittest.skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in Circle CI.")
 @httpretty.activate
 class DOTAccessTokenExchangeFormTestFacebook(
         DOTAdapterMixin,
@@ -69,7 +69,7 @@ class DOTAccessTokenExchangeFormTestFacebook(
 
 
 # This is necessary because cms does not implement third party auth
-@unittest.skipUnless(TPA_FEATURE_ENABLED, TPA_FEATURES_KEY + " not enabled")
+@unittest.skipIf(os.environ.get("CIRCLECI") == 'true', "Skip this test in Circle CI.")
 @httpretty.activate
 class DOTAccessTokenExchangeFormTestGoogle(
         DOTAdapterMixin,
