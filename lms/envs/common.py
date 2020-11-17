@@ -3756,6 +3756,7 @@ REGISTRATION_FIELD_ORDER = [
 # Optional setting to restrict registration / account creation to only emails
 # that match a regex in this list. Set to None to allow any email (default).
 REGISTRATION_EMAIL_PATTERNS_ALLOWED = None
+REGISTRATION_USERNAME_PATTERNS_ALLOWED = None
 
 # String length for the configurable part of the auto-generated username
 AUTO_GENERATED_USERNAME_RANDOM_STRING_LENGTH = 4
