@@ -52,7 +52,7 @@ import lms.envs.common
 #   https://open-edx-proposals.readthedocs.io/en/latest/oep-0045-arch-ops-and-config.html
 from lms.envs.common import (
     USE_TZ, ALL_LANGUAGES, ASSET_IGNORE_REGEX,
-    PARENTAL_CONSENT_AGE_LIMIT, REGISTRATION_EMAIL_PATTERNS_ALLOWED,
+    PARENTAL_CONSENT_AGE_LIMIT, REGISTRATION_EMAIL_PATTERNS_ALLOWED, REGISTRATION_USERNAME_PATTERNS_ALLOWED,
     # The following PROFILE_IMAGE_* settings are included as they are
     # indirectly accessed through the email opt-in API, which is
     # technically accessible through the CMS via legacy URLs.

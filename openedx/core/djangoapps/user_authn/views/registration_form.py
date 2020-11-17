@@ -135,6 +135,14 @@ class UsernameField(forms.CharField):
         """
 
         value = self.to_python(value).strip()
+        
+        if settings.REGISTRATION_USERNAME_PATTERNS_ALLOWED is not None:
+            # This Open edX instance has restrictions on what usernames are allowed.
+            allowed_patterns = settings.REGISTRATION_USERNAME_PATTERNS_ALLOWED
+            
+            if not any(re.match(pattern + "$", value) for pattern in allowed_patterns):
+                raise ValidationError(_(u"Unauthorized username."))
+
         return super().clean(value)
 
 
