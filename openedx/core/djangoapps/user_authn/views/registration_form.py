@@ -296,7 +296,7 @@ class RegistrationFormFactory(object):
 
     DEFAULT_FIELDS = ["email", "name", "username", "password"]
 
-    EXTRA_FIELDS = [
+    EXTRA_FIELDS_BASE = [
         "confirm_email",
         "first_name",
         "last_name",
@@ -344,7 +344,7 @@ class RegistrationFormFactory(object):
         self.field_handlers = {}
         valid_fields = self.DEFAULT_FIELDS + self.EXTRA_FIELDS
         for field_name in valid_fields:
-            handler = getattr(self, "_add_{field_name}_field".format(field_name=field_name))
+            handler = getattr(self, "_add_{field_name}_field".format(field_name=field_name), self._add_custom_field)
             self.field_handlers[field_name] = handler
 
         field_order = configuration_helpers.get_value('REGISTRATION_FIELD_ORDER')
@@ -357,6 +357,20 @@ class RegistrationFormFactory(object):
             field_order.extend(difference)
 
         self.field_order = field_order
+
+    @property
+    def EXTRA_FIELDS(self):
+        """eduNEXT: Property that returns extra fields list plus extended profile fields. This
+        property allows us to add custom fields to the registration form using extended_profile_fields.
+        """
+        extended_profile_fields = getattr(settings, 'extended_profile_fields', [])
+
+        # In case there's duplicates
+        if set(self.EXTRA_FIELDS_BASE) != set(extended_profile_fields):
+            difference = set(extended_profile_fields).difference(set(self.EXTRA_FIELDS_BASE))
+            return self.EXTRA_FIELDS_BASE + list(difference)
+
+        return self.EXTRA_FIELDS_BASE + extended_profile_fields
 
     def get_registration_form(self, request):
         """Return a description of the registration form.
@@ -425,9 +439,12 @@ class RegistrationFormFactory(object):
                 if field_name in self.DEFAULT_FIELDS:
                     self.field_handlers[field_name](form_desc, required=True)
                 elif self._is_field_visible(field_name):
-                    self.field_handlers[field_name](
+                    field_handler = self.field_handlers[field_name]
+                    extra_field = {"field_name": field_name} if field_handler.__name__ == "_add_custom_field" else {}
+                    field_handler(
                         form_desc,
-                        required=self._is_field_required(field_name)
+                        required=self._is_field_required(field_name),
+                        **extra_field
                     )
 
         return form_desc
@@ -625,6 +642,44 @@ class RegistrationFormFactory(object):
             required=required
         )
 
+    def _get_custom_field_dict(self, field_name):
+        """Given a field name searches for its definition dictionary.
+        Arguments:
+            field_name (str): the name of the field to search for.
+        """
+        custom_fields = getattr(settings, "EDNX_CUSTOM_REGISTRATION_FIELDS", [])
+        for field in custom_fields:
+            if field.get("name") == field_name:
+                return field
+
+        return {}
+
+    def _add_custom_field(self, form_desc, required=True, **kwargs):
+        """Adds custom fields to a form description.
+        Arguments:
+            form_desc: A form description
+
+        Keyword Arguments:
+            required (bool): Whether this field is required; defaults to False
+        """
+        field_name = kwargs.pop("field_name")
+
+        custom_field_dict = self._get_custom_field_dict(field_name)
+
+        form_desc.add_field(
+            field_name,
+            label= _(custom_field_dict.get("label")),
+            field_type=custom_field_dict.get("type"),
+            options=custom_field_dict.get("options"),
+            instructions=custom_field_dict.get("instructions"),
+            placeholder=custom_field_dict.get("placeholder"),
+            restrictions=custom_field_dict.get("restrictions"),
+            include_default_option=True if custom_field_dict.get("default") else False,
+            default=custom_field_dict.get("default"),
+            required=required,
+            error_messages=custom_field_dict.get("errorMessages")
+        )
+
     def _add_field_with_configurable_select_options(self, field_name, field_label, form_desc, required=False):
         """Add a field to a form description.
             If select options are given for this field, it will be a select type
@@ -637,11 +692,10 @@ class RegistrationFormFactory(object):
 
         Keyword Arguments:
             required (bool): Whether this field is required; defaults to False
-
         """
-
-        extra_field_options = configuration_helpers.get_value('EXTRA_FIELD_OPTIONS')
-        if extra_field_options is None or extra_field_options.get(field_name) is None:
+        custom_options = self._get_custom_field_dict(field_name).get("options")
+        extra_field_options = configuration_helpers.get_value('EXTRA_FIELD_OPTIONS', {})
+        if extra_field_options.get(field_name) is None and custom_options is None:
             field_type = "text"
             include_default_option = False
             options = None
@@ -650,7 +704,7 @@ class RegistrationFormFactory(object):
         else:
             field_type = "select"
             include_default_option = True
-            field_options = extra_field_options.get(field_name)
+            field_options = extra_field_options.get(field_name) or custom_options
             options = [(six.text_type(option.lower()), option) for option in field_options]
             error_msg = ''
             error_msg = getattr(accounts, u'REQUIRED_FIELD_{}_SELECT_MSG'.format(field_name.upper()))
