@@ -5,7 +5,10 @@ django-oauth-toolkit as appropriate.
 
 from __future__ import unicode_literals
 
+import base64
+import binascii
 import json
+from urllib import unquote_plus
 
 from django.conf import settings
 from django.views.generic import View
@@ -79,10 +82,41 @@ class _DispatchingView(View):
         """
         Return the client_id from the provided request
         """
+        auth_string = self._extract_basic_auth(request)
+
+        if auth_string:
+            try:
+                b64_decoded = base64.b64decode(auth_string)
+                auth_string_decoded = b64_decoded.decode('utf-8')
+                client_id, client_secret = map(unquote_plus, auth_string_decoded.split(":", 1))
+
+                return client_id
+            except (TypeError, binascii.Error, UnicodeDecodeError, ValueError):
+                pass
+
         if request.method == u'GET':
             return request.GET.get('client_id')
         else:
             return request.POST.get('client_id')
+
+    def _extract_basic_auth(self, request):
+        """
+        Return authentication string if request contains basic auth credentials,
+        otherwise return None
+        """
+        auth = request.META.get("HTTP_AUTHORIZATION", None)
+        if not auth:
+            return None
+
+        splitted = auth.split(" ", 1)
+        if len(splitted) != 2:
+            return None
+        auth_type, auth_string = splitted
+
+        if auth_type != "Basic":
+            return None
+
+        return auth_string
 
 
 class AccessTokenView(RatelimitMixin, _DispatchingView):
