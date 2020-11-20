@@ -88,7 +88,7 @@ class _DispatchingView(View):
             try:
                 b64_decoded = base64.b64decode(auth_string)
                 auth_string_decoded = b64_decoded.decode('utf-8')
-                client_id, client_secret = map(unquote_plus, auth_string_decoded.split(":", 1))
+                client_id, _ = map(unquote_plus, auth_string_decoded.split(":", 1))
 
                 return client_id
             except (TypeError, binascii.Error, UnicodeDecodeError, ValueError):
