@@ -75,4 +75,4 @@ git+https://github.com/edx/xblock-free-text-response@release/v1.1.1#egg=xblock-f
 git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.0#egg=edx_xblock_scorm==1.0.0
 
 # Patched version that includes the fullname
-git+https://github.com/eduNEXT/xblock-lti-consumer.git@v2.3.2#egg=xblock-lti-consumer==2.3.2
+git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=xblock-lti-consumer==v1.2.6.1
