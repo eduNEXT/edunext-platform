@@ -19,19 +19,19 @@ cryptography==2.9.2       # via -c requirements/edunext/../edx/base.txt, social-
 cssselect==1.1.0          # via parsel
 defusedxml==0.6.0         # via -c requirements/edunext/../edx/base.txt, python3-openid, social-auth-core
 django-crum==0.7.6        # via -c requirements/edunext/../edx/base.txt, edx-proctoring
-django-filter==2.2.0      # via -c requirements/edunext/../edx/base.txt, eox-core, lti-consumer-xblock
+django-filter==2.2.0      # via -c requirements/edunext/../edx/base.txt, eox-core
 django-ipware==2.1.0      # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 django-model-utils==4.0.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring, edx-when
 django-oauth-toolkit==1.3.2  # via -c requirements/edunext/../edx/base.txt, eox-core
 django-waffle==0.18.0     # via -c requirements/edunext/../edx/base.txt, edx-django-utils, edx-drf-extensions, edx-proctoring, eox-core
 django-webpack-loader==0.7.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
-django==2.2.16            # via -c requirements/edunext/../edx/base.txt, django-crum, django-filter, django-model-utils, django-oauth-toolkit, drf-jwt, edx-django-utils, edx-drf-extensions, edx-opaque-keys, edx-proctoring, edx-when, eox-hooks, event-tracking, jsonfield2, lti-consumer-xblock, rest-condition, xblock-free-text-response
+django==2.2.16            # via -c requirements/edunext/../edx/base.txt, django-crum, django-filter, django-model-utils, django-oauth-toolkit, drf-jwt, edx-django-utils, edx-drf-extensions, edx-opaque-keys, edx-proctoring, edx-when, eox-hooks, event-tracking, jsonfield2, rest-condition, xblock-free-text-response
 djangorestframework==3.9.4  # via -c requirements/edunext/../edx/base.txt, drf-jwt, edx-drf-extensions, edx-proctoring, eox-core, eox-hooks, rest-condition
 drf-jwt==1.14.0           # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
 ecdsa==0.14.1             # via python-jose
 edx-django-utils==3.2.2   # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions, edx-rest-api-client, edx-when
 edx-drf-extensions==6.0.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring, edx-when
-edx-opaque-keys[django]==2.1.0  # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions, edx-proctoring, edx-when, eox-core, flow-control-xblock, lti-consumer-xblock
+edx-opaque-keys[django]==2.1.0  # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions, edx-proctoring, edx-when, eox-core, flow-control-xblock
 edx-proctoring==2.4.0     # via -c requirements/edunext/../edx/base.txt, eox-core
 edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
@@ -46,8 +46,7 @@ future==0.18.2            # via -c requirements/edunext/../edx/base.txt, pyjwkes
 idna==2.9                 # via -c requirements/edunext/../edx/base.txt, requests
 jsonfield2==3.0.3         # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 kombu==3.0.37             # via -c requirements/edunext/../edx/base.txt, celery
-lazy==1.4                 # via -c requirements/edunext/../edx/base.txt, lti-consumer-xblock
-git+https://github.com/eduNEXT/xblock-lti-consumer.git@v2.3.2#egg=xblock-lti-consumer==2.3.2  # via -r requirements/edunext/github.in
+git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=xblock-lti-consumer==v1.2.6.1  # via -r requirements/edunext/github.in
 lxml==4.5.0               # via -c requirements/edunext/../edx/base.txt, lti-consumer-xblock, parsel, xblock
 mako==1.0.2               # via -c requirements/edunext/../edx/base.txt, lti-consumer-xblock, schoolyourself-xblock, xblock-utils
 markupsafe==1.1.1         # via -c requirements/edunext/../edx/base.txt, mako, xblock
@@ -60,8 +59,8 @@ pbr==5.4.5                # via -c requirements/edunext/../edx/base.txt, stevedo
 psutil==1.2.1             # via -c requirements/edunext/../edx/base.txt, edx-django-utils
 pyasn1==0.4.8             # via python-jose, rsa
 pycparser==2.20           # via -c requirements/edunext/../edx/base.txt, cffi
-pycryptodomex==3.9.7      # via -c requirements/edunext/../edx/base.txt, edx-proctoring, lti-consumer-xblock, pyjwkest
-pyjwkest==1.4.2           # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions, lti-consumer-xblock
+pycryptodomex==3.9.7      # via -c requirements/edunext/../edx/base.txt, edx-proctoring, pyjwkest
+pyjwkest==1.4.2           # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
 pyjwt==1.5.2              # via -c requirements/edunext/../edx/base.txt, drf-jwt, edx-rest-api-client, social-auth-core
 pymongo==3.9.0            # via -c requirements/edunext/../edx/base.txt, edx-opaque-keys, event-tracking
 pyparsing==2.4.7          # via -c requirements/edunext/../edx/base.txt, packaging
