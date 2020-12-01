@@ -4,6 +4,7 @@ Objects and utilities used to construct registration forms.
 
 
 import copy
+from collections import OrderedDict
 from importlib import import_module
 import logging
 import re
@@ -364,16 +365,14 @@ class RegistrationFormFactory(object):
     @property
     def EXTRA_FIELDS(self):
         """eduNEXT: Property that returns extra fields list plus extended profile fields. This
-        property allows us to add custom fields to the registration form using extended_profile_fields.
+        property allows us to add custom fields to the registration form using extended_profile_fields and
+        REGISTRATION_EXTRA_FIELDS.
         """
         extended_profile_fields = getattr(settings, 'extended_profile_fields', [])
+        extra_fields = list(configuration_helpers.get_value('REGISTRATION_EXTRA_FIELDS', {}).keys())
 
-        # In case there's duplicates
-        if set(self.EXTRA_FIELDS_BASE) != set(extended_profile_fields):
-            difference = set(extended_profile_fields).difference(set(self.EXTRA_FIELDS_BASE))
-            return self.EXTRA_FIELDS_BASE + list(difference)
-
-        return self.EXTRA_FIELDS_BASE + extended_profile_fields
+        # Removing duplicates while mantaining order, important when running tests.
+        return list(OrderedDict.fromkeys(self.EXTRA_FIELDS_BASE + extended_profile_fields + extra_fields))
 
     def get_registration_form(self, request):
         """Return a description of the registration form.
