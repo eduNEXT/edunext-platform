@@ -7,12 +7,11 @@
 -e git+https://github.com/edx/acid-block.git@98aecba94ecbfa934e2d00262741c0ea9f557fc9#egg=acid-xblock  # via -r requirements/edx/github.in
 -e common/lib/capa  # via -r requirements/edx/local.in
 -e git+https://github.com/edx/codejail.git@4127fc4bd5775cc72aee8d7f0a70e31405e22439#egg=codejail  # via -r requirements/edx/github.in
--e git+https://github.com/jsocol/django-ratelimit.git@72edbe8949fbf6699848e5847645a1998f121d46#egg=ratelimit  # via -r requirements/edx/github.in
+-e git+https://github.com/jsocol/django-ratelimit.git@72edbe8949fbf6699848e5847645a1998f121d46#egg=django-ratelimit  # via -r requirements/edx/github.in
 -e git+https://github.com/edx/django-wiki.git@0.0.27#egg=django-wiki  # via -r requirements/edx/github.in
 -e git+https://github.com/edx/DoneXBlock.git@2.0.2#egg=done-xblock  # via -r requirements/edx/github.in
 -e git+https://github.com/jazkarta/edx-jsme.git@690dbf75441fa91c7c4899df0b83d77f7deb5458#egg=edx-jsme  # via -r requirements/edx/github.in
 -e .  # via -r requirements/edx/local.in
--e git+https://github.com/dementrock/pystache_custom.git@776973740bdaad83a3b029f96e415a7d1e8bec2f#egg=pystache_custom-dev  # via -r requirements/edx/github.in
 -e git+https://github.com/edx/RateXBlock.git@2.0#egg=rate-xblock  # via -r requirements/edx/github.in
 -e common/lib/safe_lxml  # via -r requirements/edx/local.in
 -e common/lib/sandbox-packages  # via -r requirements/edx/local.in
@@ -188,7 +187,7 @@ pycryptodome==3.9.7       # via pdfminer.six
 pycryptodomex==3.9.7      # via -r requirements/edx/base.in, edx-proctoring, pyjwkest
 pygments==2.6.1           # via -r requirements/edx/base.in
 pyjwkest==1.4.2           # via -r requirements/edx/base.in, edx-drf-extensions
-pyjwt==1.5.2              # via -r requirements/edx/base.in, drf-jwt, edx-rest-api-client, social-auth-core
+pyjwt==1.7.1              # via -r requirements/edx/base.in, drf-jwt, edx-rest-api-client, social-auth-core
 pymongo==3.9.0            # via -r requirements/edx/base.in, -r requirements/edx/paver.txt, edx-opaque-keys, event-tracking, mongodbproxy, mongoengine
 pynliner==0.8.0           # via -r requirements/edx/base.in
 pyparsing==2.4.7          # via chem, openedx-calc, packaging, pycontracts

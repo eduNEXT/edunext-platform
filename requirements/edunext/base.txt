@@ -62,7 +62,7 @@ pyasn1==0.4.8             # via python-jose, rsa
 pycparser==2.20           # via -c requirements/edunext/../edx/base.txt, cffi
 pycryptodomex==3.9.7      # via -c requirements/edunext/../edx/base.txt, edx-proctoring, pyjwkest
 pyjwkest==1.4.2           # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
-pyjwt==1.5.2              # via -c requirements/edunext/../edx/base.txt, drf-jwt, edx-rest-api-client, social-auth-core
+pyjwt==1.7.1              # via -c requirements/edunext/../edx/base.txt, drf-jwt, edx-rest-api-client, social-auth-core
 pymongo==3.9.0            # via -c requirements/edunext/../edx/base.txt, edx-opaque-keys, event-tracking
 pyparsing==2.4.7          # via -c requirements/edunext/../edx/base.txt, packaging
 python-dateutil==2.4.0    # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions, edx-proctoring, xblock

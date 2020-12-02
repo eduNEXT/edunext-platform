@@ -119,7 +119,7 @@ pycryptodomex
 pygments                            # Used to support colors in paver command output
 pyjwkest
 # TODO Replace PyJWT usage with pyjwkest
-PyJWT==1.5.2
+PyJWT==1.7.1
 pymongo                             # MongoDB driver
 pynliner                            # Inlines CSS styles into HTML for email notifications
 python-dateutil
