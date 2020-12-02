@@ -76,7 +76,7 @@ rest-condition==1.0.3     # via -c requirements/edunext/../edx/base.txt, edx-drf
 rsa==4.6                  # via python-jose
 rules==2.2                # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 git+https://github.com/schoolyourself/schoolyourself-xblock.git@2093048720cfb36cc05b3143cd6f2585c7c64d85#egg=schoolyourself-xblock  # via -r requirements/edunext/github.in
-git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.0#egg=scormxblock-xblock==1.0.0  # via -r requirements/edunext/github.in
+git+https://github.com/eduNEXT/edx_xblock_scorm.git@1c8c85ed9a78665064c1890753dbcf3e15676eea#egg=scormxblock-xblock  # via -r requirements/edunext/github.in
 semantic-version==2.8.5   # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
 sentry-sdk==0.14.3        # via eox-core
 simplejson==3.17.0        # via -c requirements/edunext/../edx/base.txt, xblock-utils
