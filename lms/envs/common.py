@@ -5092,3 +5092,5 @@ DISCUSSION_MODERATION_CLOSE_REASON_CODES = {
     "duplicate": _("Post is a duplicate"),
     "off-topic": _("Post is off-topic"),
 }
+#################### DELETION TEXT ###########################
+SITE_SPECIFIC_DELETION_TEXT = ''
