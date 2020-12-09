@@ -37,14 +37,7 @@ export class StudentAccountDeletion extends React.Component {
   }
 
   render() {
-    const { deletionModalOpen, socialAuthConnected, isActive } = this.state;
-    const loseAccessText = StringUtils.interpolate(
-      gettext('You may also lose access to verified certificates and other program credentials like MicroMasters certificates. If you want to make a copy of these for your records before proceeding with deletion, follow the instructions for {htmlStart}printing or downloading a certificate{htmlEnd}.'),
-      {
-        htmlStart: '<a href="https://edx.readthedocs.io/projects/edx-guide-for-students/en/latest/SFD_certificates.html#printing-a-certificate" rel="noopener" target="_blank">',
-        htmlEnd: '</a>',
-      },
-    );
+    const { deletionModalOpen, socialAuthConnected, isActive } = this.state
 
     const showError = socialAuthConnected || !isActive;
 
@@ -60,14 +53,6 @@ export class StudentAccountDeletion extends React.Component {
       gettext('Before proceeding, please {htmlStart}activate your account{htmlEnd}.'),
       {
         htmlStart: '<a href="https://support.edx.org/hc/en-us/articles/115000940568-How-do-I-activate-my-account-" rel="noopener" target="_blank">',
-        htmlEnd: '</a>',
-      },
-    );
-
-    const changeAcctInfoText = StringUtils.interpolate(
-      gettext('{htmlStart}Want to change your email, name, or password instead?{htmlEnd}'),
-      {
-        htmlStart: '<a href="https://support.edx.org/hc/en-us/sections/115004139268-Manage-Your-Account-Settings" rel="noopener" target="_blank">',
         htmlEnd: '</a>',
       },
     );
@@ -113,16 +98,8 @@ export class StudentAccountDeletion extends React.Component {
               <span>{bodyDeletion2}</span>
         </p>
         <p
-          className="account-settings-header-subtitle"
-          dangerouslySetInnerHTML={{ __html: loseAccessText }}
-        />
-        <p
           className="account-settings-header-subtitle-warning"
           dangerouslySetInnerHTML={{ __html: acctDeletionWarningText }}
-        />
-        <p
-          className="account-settings-header-subtitle"
-          dangerouslySetInnerHTML={{ __html: changeAcctInfoText }}
         />
         <Button
           id="delete-account-btn"
