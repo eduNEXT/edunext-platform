@@ -76,3 +76,6 @@ git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.0#egg=scormxblock-xblock==1
 
 # Patched version that includes the fullname
 git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=lti_consumer-xblock==v1.2.6.1
+
+# Temporary eox-tenant requirement
+git+https://github.com/eduNEXT/eox-tenant.git@78a2d11844b48ddf42a8b78376dbde1a331dce44#egg=v4.0.0
