@@ -37,7 +37,7 @@ edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-p
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-core[sentry,tpa]==3.2.0  # via -r requirements/edunext/base.in, eox-tagging
 eox-hooks==0.3.0          # via -r requirements/edunext/base.in
-eox-tagging==1.0.0        # via -r requirements/edunext/base.in
+eox-tagging==1.1.0        # via -r requirements/edunext/base.in
 eox-tenant==3.3.6         # via -r requirements/edunext/base.in
 eox-theming==1.0.1        # via -r requirements/edunext/base.in
 event-tracking==0.3.2     # via -c requirements/edunext/../edx/base.txt, edx-proctoring
