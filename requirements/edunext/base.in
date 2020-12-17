@@ -9,6 +9,7 @@
 #
 
 -c ../edx/base.txt
+-c constraints.txt
 
 -r github.in              # Forks and other dependencies not yet on PyPI
 
