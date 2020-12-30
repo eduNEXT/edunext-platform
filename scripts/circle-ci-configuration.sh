@@ -59,7 +59,7 @@ if [ -f $FIREFOX_FILE ]; then
    echo "File $FIREFOX_FILE found."
 else
    echo "Downloading firefox-mozilla-build_61.0-0ubuntu1_amd64.deb."
-   wget -O $FIREFOX_FILE sourceforge.net/projects/ubuntuzilla/files/mozilla/apt/pool/main/f/firefox-mozilla-build/firefox-mozilla-build_61.0-0ubuntu1_amd64.deb
+   wget -O $FIREFOX_FILE sourceforge.net/projects/ubuntuzilla/files/mozilla/apt/pool/main/f/firefox-mozilla-build/firefox-mozilla-build_61.0.1-0ubuntu1_amd64.deb
 fi
 dpkg -i $FIREFOX_FILE || DEBIAN_FRONTEND=noninteractive apt-get -fyq install
 firefox --version
