@@ -72,7 +72,7 @@ git+https://github.com/open-craft/xblock-vectordraw.git@v0.3.2#egg=vectordraw-xb
 git+https://github.com/edx/xblock-free-text-response@release/v1.1.1#egg=xblock-free-text-response==1.1.1
 
 # eduNEXT supported xblocks
-git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.0#egg=scormxblock-xblock==1.0.0
+git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1.0.1
 
 # Patched version that includes the fullname
 git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=lti_consumer-xblock==v1.2.6.1
