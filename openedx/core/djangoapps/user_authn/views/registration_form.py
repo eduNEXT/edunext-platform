@@ -679,6 +679,9 @@ class RegistrationFormFactory(object):
             field_name (str): Name used to get field information when creating it.
         """
         field_name = kwargs.pop("field_name")
+        if field_name in getattr(settings, "EDNX_IGNORE_REGISTER_FIELDS", []):
+            return
+
         custom_field_dict = self._get_custom_field_dict(field_name)
         if not custom_field_dict:
             log.error("Field with name {} must have a definition dictionary.".format(field_name))
