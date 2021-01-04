@@ -106,14 +106,12 @@ def generate_offer_html(user, course):
     should not be shown an offer message.
     """
     if user and not user.is_anonymous and course:
-        now = datetime.now(tz=pytz.UTC).strftime(u"%Y-%m-%d %H:%M:%S%z")
-        saw_banner = ExperimentData.objects.filter(
-            user=user, experiment_id=REV1008_EXPERIMENT_ID, key=str(course)
+        ExperimentData.objects.get_or_create(
+            user=user, experiment_id=REV1008_EXPERIMENT_ID, key=str(course),
+            defaults={
+                'value': datetime.now(tz=pytz.UTC).strftime('%Y-%m-%d %H:%M:%S%z'),
+            },
         )
-        if not saw_banner:
-            ExperimentData.objects.create(
-                user=user, experiment_id=REV1008_EXPERIMENT_ID, key=str(course), value=now
-            )
         discount_expiration_date = get_discount_expiration_date(user, course)
         if (discount_expiration_date and
                 can_receive_discount(user=user, course=course, discount_expiration_date=discount_expiration_date)):

@@ -8,13 +8,16 @@ import itertools
 import json
 import unittest
 from datetime import datetime, timedelta
-from pytz import utc
 from uuid import uuid4
 
 import crum
 import ddt
+import lms.djangoapps.courseware.views.views as views
 import six
+from capa.tests.response_xml_factory import MultipleChoiceResponseXMLFactory
 from completion.test_utils import CompletionWaffleTestMixin
+from course_modes.models import CourseMode
+from course_modes.tests.factories import CourseModeFactory
 from crum import set_current_request
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
@@ -24,32 +27,6 @@ from django.test.client import Client
 from django.test.utils import override_settings
 from django.urls import reverse, reverse_lazy
 from freezegun import freeze_time
-from markupsafe import escape
-from milestones.tests.utils import MilestonesTestCaseMixin
-from mock import MagicMock, PropertyMock, call, create_autospec, patch
-from opaque_keys.edx.locator import BlockUsageLocator, CourseLocator
-from pytz import UTC
-from six import text_type
-from six.moves import range
-from six.moves.html_parser import HTMLParser
-from six.moves.urllib.parse import quote, urlencode
-from web_fragments.fragment import Fragment
-from xblock.core import XBlock
-from xblock.fields import Scope, String
-
-import lms.djangoapps.courseware.views.views as views
-
-from capa.tests.response_xml_factory import MultipleChoiceResponseXMLFactory
-from course_modes.models import CourseMode
-from course_modes.tests.factories import CourseModeFactory
-from lms.djangoapps.courseware.access_utils import check_course_open_for_learner
-from lms.djangoapps.courseware.model_data import FieldDataCache, set_score
-from lms.djangoapps.courseware.module_render import get_module, handle_xblock_callback
-from lms.djangoapps.courseware.tests.factories import GlobalStaffFactory, RequestFactoryNoCsrf, StudentModuleFactory
-from lms.djangoapps.courseware.tests.helpers import get_expiration_banner_text
-from lms.djangoapps.courseware.testutils import RenderXBlockTestMixin
-from lms.djangoapps.courseware.url_helpers import get_redirect_url
-from lms.djangoapps.courseware.user_state_client import DjangoXBlockUserStateClient
 from lms.djangoapps.certificates import api as certs_api
 from lms.djangoapps.certificates.models import (
     CertificateGenerationConfiguration,
@@ -59,17 +36,28 @@ from lms.djangoapps.certificates.models import (
 from lms.djangoapps.certificates.tests.factories import CertificateInvalidationFactory, GeneratedCertificateFactory
 from lms.djangoapps.commerce.models import CommerceConfiguration
 from lms.djangoapps.commerce.utils import EcommerceService
-from lms.djangoapps.courseware.views.index import show_courseware_mfe_link
+from lms.djangoapps.courseware.access_utils import check_course_open_for_learner
+from lms.djangoapps.courseware.model_data import FieldDataCache, set_score
+from lms.djangoapps.courseware.module_render import get_module, handle_xblock_callback
+from lms.djangoapps.courseware.tests.factories import GlobalStaffFactory, RequestFactoryNoCsrf, StudentModuleFactory
+from lms.djangoapps.courseware.tests.helpers import get_expiration_banner_text
+from lms.djangoapps.courseware.testutils import RenderXBlockTestMixin
 from lms.djangoapps.courseware.toggles import (
     COURSEWARE_MICROFRONTEND_COURSE_TEAM_PREVIEW,
-    REDIRECT_TO_COURSEWARE_MICROFRONTEND,
+    REDIRECT_TO_COURSEWARE_MICROFRONTEND
 )
-from lms.djangoapps.courseware.url_helpers import get_microfrontend_url
+from lms.djangoapps.courseware.url_helpers import get_microfrontend_url, get_redirect_url
+from lms.djangoapps.courseware.user_state_client import DjangoXBlockUserStateClient
+from lms.djangoapps.courseware.views.index import show_courseware_mfe_link
 from lms.djangoapps.grades.config.waffle import ASSUME_ZERO_GRADE_IF_ABSENT
 from lms.djangoapps.grades.config.waffle import waffle as grades_waffle
 from lms.djangoapps.verify_student.models import VerificationDeadline
 from lms.djangoapps.verify_student.services import IDVerificationService
+from markupsafe import escape
+from milestones.tests.utils import MilestonesTestCaseMixin
+from mock import MagicMock, PropertyMock, call, create_autospec, patch
 from opaque_keys.edx.keys import CourseKey, UsageKey
+from opaque_keys.edx.locator import BlockUsageLocator, CourseLocator
 from openedx.core.djangoapps.catalog.tests.factories import CourseFactory as CatalogCourseFactory
 from openedx.core.djangoapps.catalog.tests.factories import CourseRunFactory, ProgramFactory
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
@@ -90,17 +78,24 @@ from openedx.features.course_experience import (
 )
 from openedx.features.course_experience.tests.views.helpers import add_course_mode
 from openedx.features.enterprise_support.tests.mixins.enterprise import EnterpriseTestConsentRequired
+from pytz import UTC, utc
+from six import text_type
+from six.moves import range
+from six.moves.html_parser import HTMLParser
+from six.moves.urllib.parse import quote, urlencode
 from student.models import CourseEnrollment
 from student.roles import CourseStaffRole
 from student.tests.factories import TEST_PASSWORD, AdminFactory, CourseEnrollmentFactory, UserFactory
 from util.tests.test_date_utils import fake_pgettext, fake_ugettext
 from util.url import reload_django_url_config
 from util.views import ensure_valid_course_key
+from web_fragments.fragment import Fragment
+from xblock.core import XBlock
+from xblock.fields import Scope, String
 from xmodule.course_module import COURSE_VISIBILITY_PRIVATE, COURSE_VISIBILITY_PUBLIC, COURSE_VISIBILITY_PUBLIC_OUTLINE
 from xmodule.graders import ShowCorrectness
 from xmodule.modulestore import ModuleStoreEnum
 from xmodule.modulestore.django import modulestore
-
 from xmodule.modulestore.tests.django_utils import (
     TEST_DATA_MIXED_MODULESTORE,
     TEST_DATA_SPLIT_MODULESTORE,
@@ -272,8 +267,8 @@ class IndexQueryTestCase(ModuleStoreTestCase):
     NUM_PROBLEMS = 20
 
     @ddt.data(
-        (ModuleStoreEnum.Type.mongo, 10, 167),
-        (ModuleStoreEnum.Type.split, 4, 165),
+        (ModuleStoreEnum.Type.mongo, 10, 169),
+        (ModuleStoreEnum.Type.split, 4, 167),
     )
     @ddt.unpack
     def test_index_query_counts(self, store_type, expected_mongo_query_count, expected_mysql_query_count):
