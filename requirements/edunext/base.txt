@@ -35,7 +35,7 @@ edx-opaque-keys[django]==2.1.0  # via -c requirements/edunext/../edx/base.txt, e
 edx-proctoring==2.4.0     # via -c requirements/edunext/../edx/base.txt, eox-core
 edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
-eox-core[sentry,tpa]==3.3.0  # via -r requirements/edunext/base.in, eox-tagging
+eox-core[sentry,tpa]==3.4.0  # via -r requirements/edunext/base.in, eox-tagging
 eox-hooks==0.3.0          # via -r requirements/edunext/base.in
 eox-tagging==1.1.0        # via -r requirements/edunext/base.in
 eox-tenant==3.3.7         # via -r requirements/edunext/base.in
@@ -76,7 +76,7 @@ rest-condition==1.0.3     # via -c requirements/edunext/../edx/base.txt, edx-drf
 rsa==4.6                  # via python-jose
 rules==2.2                # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 git+https://github.com/schoolyourself/schoolyourself-xblock.git@2093048720cfb36cc05b3143cd6f2585c7c64d85#egg=schoolyourself-xblock  # via -r requirements/edunext/github.in
-git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.0#egg=scormxblock-xblock==1.0.0  # via -r requirements/edunext/github.in
+git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1.0.1  # via -r requirements/edunext/github.in
 semantic-version==2.8.5   # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
 sentry-sdk==0.14.3        # via eox-core
 simplejson==3.17.0        # via -c requirements/edunext/../edx/base.txt, xblock-utils
