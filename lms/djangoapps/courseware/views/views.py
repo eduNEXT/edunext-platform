@@ -298,8 +298,13 @@ def load_metadata_from_youtube(video_id, request):
     This method is used via the standalone /courses/yt_video_metadata REST API
     endpoint, or via the video XBlock as a its 'yt_video_metadata' handler.
     """
-    metadata = {}
+    cache_key = "yt_video_metadata_cache.{video}".format(video=video_id)
+    metadata = cache.get(cache_key, {})
     status_code = 500
+
+    if metadata:
+        return metadata, 200
+
     if video_id and settings.YOUTUBE_API_KEY and settings.YOUTUBE_API_KEY != 'PUT_YOUR_API_KEY_HERE':
         yt_api_key = settings.YOUTUBE_API_KEY
         yt_metadata_url = settings.YOUTUBE['METADATA_URL']
@@ -319,6 +324,11 @@ def load_metadata_from_youtube(video_id, request):
                     res_json = res.json()
                     if res_json.get('items', []):
                         metadata = res_json
+                        cache.set(
+                            cache_key,
+                            metadata,
+                            getattr(settings, 'YT_VIDEO_METADATA_CACHE_TIMEOUT', 3600 * 24),
+                        )
                     else:
                         logging.warning(u'Unable to find the items in response. Following response '
                                         u'was received: {res}'.format(res=res.text))
