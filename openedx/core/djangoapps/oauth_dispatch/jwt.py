@@ -9,7 +9,7 @@ from edx_django_utils.monitoring import set_custom_metric
 from edx_rbac.utils import create_role_auth_claim_for_user
 from jwkest import jwk
 from jwkest.jws import JWS
-
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from student.models import UserProfile, anonymous_id_for_user
 
 
@@ -178,9 +178,17 @@ def _attach_email_claim(payload, user):
 
 def _attach_profile_claim(payload, user):
     """Add the profile claim details to the JWT payload."""
+    extended_profile_fields = None
+
     try:
         # Some users (e.g., service users) may not have user profiles.
-        name = UserProfile.objects.get(user=user).name
+        profile = UserProfile.objects.get(user=user)
+        name = profile.name
+        fields = configuration_helpers.get_value('extended_profile_fields', [])
+
+        if fields and configuration_helpers.get_value('JWT_EXTENDED_PROFILE', False):
+            extended_profile_fields = {key: value for key, value in json.loads(profile.meta).items() if key in fields}
+
     except UserProfile.DoesNotExist:
         name = None
 
@@ -190,6 +198,7 @@ def _attach_profile_claim(payload, user):
         'given_name': user.first_name,
         'administrator': user.is_staff,
         'superuser': user.is_superuser,
+        'extended_profile_fields': extended_profile_fields,
     })
 
 
