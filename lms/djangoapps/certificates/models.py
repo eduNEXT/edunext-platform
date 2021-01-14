@@ -401,9 +401,14 @@ class GeneratedCertificate(models.Model):
         signal iff we are saving a record of a learner passing the course.
         As well as the COURSE_CERT_CHANGED for any save event.
         """
-        super().save(*args, **kwargs)
+        if GeneratedCertificate.__base__.__name__ == 'GeneratedCertificate':
+            super(GeneratedCertificate.__base__, self).save(*args, **kwargs)
+            sending_class = GeneratedCertificate.__base__
+        else:
+            super(GeneratedCertificate, self).save(*args, **kwargs)
+            sending_class = GeneratedCertificate
         COURSE_CERT_CHANGED.send_robust(
-            sender=self.__class__,
+            sender=sending_class,
             user=self.user,
             course_key=self.course_id,
             mode=self.mode,
@@ -411,7 +416,7 @@ class GeneratedCertificate(models.Model):
         )
         if CertificateStatuses.is_passing_status(self.status):
             COURSE_CERT_AWARDED.send_robust(
-                sender=self.__class__,
+                sender=sending_class,
                 user=self.user,
                 course_key=self.course_id,
                 mode=self.mode,
