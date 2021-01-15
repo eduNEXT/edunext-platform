@@ -15,6 +15,8 @@ celery==3.1.26.post2      # via -c requirements/edunext/../edx/base.txt, eox-cor
 certifi==2020.4.5.1       # via -c requirements/edunext/../edx/base.txt, requests, sentry-sdk
 cffi==1.14.0              # via -c requirements/edunext/../edx/base.txt, cryptography
 chardet==3.0.4            # via -c requirements/edunext/../edx/base.txt, requests
+coreapi==2.3.3            # via -c requirements/edunext/../edx/base.txt, drf-yasg
+coreschema==0.0.4         # via -c requirements/edunext/../edx/base.txt, coreapi, drf-yasg
 cryptography==2.9.2       # via -c requirements/edunext/../edx/base.txt, social-auth-core
 cssselect==1.1.0          # via parsel
 defusedxml==0.6.0         # via -c requirements/edunext/../edx/base.txt, python3-openid, social-auth-core
@@ -23,19 +25,22 @@ django-filter==2.2.0      # via -c requirements/edunext/../edx/base.txt, eox-cor
 django-ipware==2.1.0      # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 django-model-utils==4.0.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring, edx-when
 django-oauth-toolkit==1.3.2  # via -c requirements/edunext/../edx/base.txt, eox-core
+django-oauth2-provider==0.2.6.1  # via eox-core
 django-waffle==0.18.0     # via -c requirements/edunext/../edx/base.txt, edx-django-utils, edx-drf-extensions, edx-proctoring, eox-core
 django-webpack-loader==0.7.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
-django==2.2.16            # via -c requirements/edunext/../edx/base.txt, django-crum, django-filter, django-model-utils, django-oauth-toolkit, drf-jwt, edx-django-utils, edx-drf-extensions, edx-opaque-keys, edx-proctoring, edx-when, eox-hooks, event-tracking, jsonfield2, rest-condition, xblock-free-text-response
-djangorestframework==3.9.4  # via -c requirements/edunext/../edx/base.txt, drf-jwt, edx-drf-extensions, edx-proctoring, eox-core, eox-hooks, rest-condition
+django==2.2.16            # via -c requirements/edunext/../edx/base.txt, django-crum, django-filter, django-model-utils, django-oauth-toolkit, drf-jwt, drf-yasg, edx-api-doc-tools, edx-django-utils, edx-drf-extensions, edx-opaque-keys, edx-proctoring, edx-when, eox-hooks, event-tracking, jsonfield2, rest-condition, xblock-free-text-response
+djangorestframework==3.9.4  # via -c requirements/edunext/../edx/base.txt, drf-jwt, drf-yasg, edx-api-doc-tools, edx-drf-extensions, edx-proctoring, eox-core, eox-hooks, rest-condition
 drf-jwt==1.14.0           # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
+drf-yasg==1.17.0          # via -c requirements/edunext/../edx/base.txt, edx-api-doc-tools
 ecdsa==0.14.1             # via python-jose
+edx-api-doc-tools==1.4.0  # via -c requirements/edunext/../edx/base.txt, eox-core
 edx-django-utils==3.2.2   # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions, edx-rest-api-client, edx-when
 edx-drf-extensions==6.0.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring, edx-when
 edx-opaque-keys[django]==2.1.0  # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions, edx-proctoring, edx-when, eox-core, flow-control-xblock
 edx-proctoring==2.4.0     # via -c requirements/edunext/../edx/base.txt, eox-core
 edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
-eox-core[sentry,tpa]==3.4.0  # via -r requirements/edunext/base.in, eox-tagging
+eox-core[sentry,tpa]==4.0.0  # via -r requirements/edunext/base.in, eox-tagging
 eox-hooks==0.3.0          # via -r requirements/edunext/base.in
 eox-tagging==1.1.0        # via -r requirements/edunext/base.in
 eox-tenant==3.3.7         # via -r requirements/edunext/base.in
@@ -45,16 +50,19 @@ flow-control-xblock==1.0.1  # via -r requirements/edunext/base.in
 fs==2.0.18                # via -c requirements/edunext/../edx/base.txt, xblock
 future==0.18.2            # via -c requirements/edunext/../edx/base.txt, pyjwkest
 idna==2.9                 # via -c requirements/edunext/../edx/base.txt, requests
+inflection==0.4.0         # via -c requirements/edunext/../edx/base.txt, drf-yasg
+itypes==1.2.0             # via -c requirements/edunext/../edx/base.txt, coreapi
+jinja2==2.11.2            # via -c requirements/edunext/../edx/base.txt, coreschema
 jsonfield2==3.0.3         # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 kombu==3.0.37             # via -c requirements/edunext/../edx/base.txt, celery
 git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=lti_consumer-xblock==v1.2.6.1  # via -r requirements/edunext/github.in
 lxml==4.5.0               # via -c requirements/edunext/../edx/base.txt, lti-consumer-xblock, parsel, xblock
 mako==1.0.2               # via -c requirements/edunext/../edx/base.txt, lti-consumer-xblock, schoolyourself-xblock, xblock-utils
-markupsafe==1.1.1         # via -c requirements/edunext/../edx/base.txt, mako, xblock
+markupsafe==1.1.1         # via -c requirements/edunext/../edx/base.txt, jinja2, mako, xblock
 newrelic==5.12.1.141      # via -c requirements/edunext/../edx/base.txt, edx-django-utils
 oauthlib==3.0.1           # via -c requirements/edunext/../edx/base.txt, django-oauth-toolkit, lti-consumer-xblock, requests-oauthlib, social-auth-core
 git+https://github.com/oppia/xblock.git@3b5c17c5832b4f8ef132c6bbf48da8a86df43b3d#egg=oppia-xblock  # via -r requirements/edunext/github.in
-packaging==20.3           # via -c requirements/edunext/../edx/base.txt, bleach
+packaging==20.3           # via -c requirements/edunext/../edx/base.txt, bleach, drf-yasg
 parsel==1.6.0             # via xblock-image-explorer
 pbr==5.4.5                # via -c requirements/edunext/../edx/base.txt, stevedore
 psutil==1.2.1             # via -c requirements/edunext/../edx/base.txt, edx-django-utils
@@ -71,21 +79,25 @@ python3-openid==3.1.0 ; python_version >= "3"  # via -c requirements/edunext/../
 pytz==2020.1              # via -c requirements/edunext/../edx/base.txt, celery, django, edx-proctoring, event-tracking, fs, xblock
 pyyaml==5.3.1             # via -c requirements/edunext/../edx/base.txt, xblock
 requests-oauthlib==1.3.0  # via -c requirements/edunext/../edx/base.txt, social-auth-core
-requests==2.23.0          # via -c requirements/edunext/../edx/base.txt, django-oauth-toolkit, edx-drf-extensions, edx-rest-api-client, pyjwkest, requests-oauthlib, slumber, social-auth-core
+requests==2.23.0          # via -c requirements/edunext/../edx/base.txt, coreapi, django-oauth-toolkit, edx-drf-extensions, edx-rest-api-client, pyjwkest, requests-oauthlib, slumber, social-auth-core
 rest-condition==1.0.3     # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
-rsa==4.6                  # via python-jose
+rsa==4.7                  # via python-jose
+ruamel.yaml.clib==0.2.0   # via -c requirements/edunext/../edx/base.txt, ruamel.yaml
+ruamel.yaml==0.16.10      # via -c requirements/edunext/../edx/base.txt, drf-yasg
 rules==2.2                # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 git+https://github.com/schoolyourself/schoolyourself-xblock.git@2093048720cfb36cc05b3143cd6f2585c7c64d85#egg=schoolyourself-xblock  # via -r requirements/edunext/github.in
 git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1.0.1  # via -r requirements/edunext/github.in
 semantic-version==2.8.5   # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
 sentry-sdk==0.14.3        # via eox-core
+shortuuid==1.0.1          # via django-oauth2-provider
 simplejson==3.17.0        # via -c requirements/edunext/../edx/base.txt, xblock-utils
-six==1.14.0               # via -c requirements/edunext/../edx/base.txt, bleach, cryptography, ecdsa, edx-drf-extensions, edx-opaque-keys, event-tracking, fs, packaging, parsel, pyjwkest, python-dateutil, python-jose, social-auth-core, stevedore, w3lib, xblock, xblock-free-text-response
+six==1.14.0               # via -c requirements/edunext/../edx/base.txt, bleach, cryptography, drf-yasg, ecdsa, edx-drf-extensions, edx-opaque-keys, event-tracking, fs, packaging, parsel, pyjwkest, python-dateutil, python-jose, social-auth-core, stevedore, w3lib, xblock, xblock-free-text-response
 slumber==0.7.1            # via -c requirements/edunext/../edx/base.txt, edx-rest-api-client
 social-auth-core==3.3.3   # via -c requirements/edunext/../edx/base.txt, eox-core
 sqlparse==0.3.1           # via -c requirements/edunext/../edx/base.txt, django
 stevedore==1.32.0         # via -c requirements/edunext/../edx/base.txt, edx-opaque-keys
 ubcpi-xblock==1.0.0       # via -r requirements/edunext/base.in
+uritemplate==3.0.1        # via -c requirements/edunext/../edx/base.txt, coreapi, drf-yasg
 urllib3==1.25.9           # via -c requirements/edunext/../edx/base.txt, requests, sentry-sdk
 git+https://github.com/open-craft/xblock-vectordraw.git@v0.3.2#egg=vectordraw-xblock==0.3.2  # via -r requirements/edunext/github.in
 w3lib==1.22.0             # via parsel
