@@ -68,6 +68,9 @@ git+https://github.com/schoolyourself/schoolyourself-xblock.git@2093048720cfb36c
 # Vector drawing xblock
 git+https://github.com/open-craft/xblock-vectordraw.git@v0.3.2#egg=vectordraw-xblock==0.3.2
 
+# Survey monkey xblock
+git+https://github.com/Pearson-Advance/openedx-surveymonkey-xblock@v2.0.1#egg=surveymonkey-xblock==2.0.1
+
 # Stanford xblocks
 git+https://github.com/edx/xblock-free-text-response@release/v1.1.1#egg=xblock-free-text-response==1.1.1
 
