@@ -3,6 +3,8 @@
 import logging
 
 import django.utils.timezone
+from crum import get_current_request
+from django.conf import settings
 from oauth2_provider import models as dot_models
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.authentication import BaseAuthentication, get_authorization_header
@@ -20,7 +22,7 @@ OAUTH2_USER_DISABLED_ERROR = 'user_is_disabled'
 logger = logging.getLogger(__name__)
 
 
-class BearerAuthentication(BaseAuthentication):
+class OriginalBearerAuthentication(BaseAuthentication):
     """
     BearerAuthentication backend using either `django-oauth2-provider` or 'django-oauth-toolkit'
     """
@@ -125,6 +127,39 @@ class BearerAuthentication(BaseAuthentication):
         header in a `401 Unauthenticated` response
         """
         return 'Bearer realm="%s"' % self.www_authenticate_realm
+
+
+class BearerAuthentication(OriginalBearerAuthentication):
+    """This new implementation just overrides some OriginalBearerAuthentication functionalities
+    in order to include eduNEXT authentication requirements.
+    """
+
+    def get_access_token(self, access_token):
+        """This override is required since the tokens should just be valid in the application's site,
+        hence the token is restricted to the current url and the application redirect uris.
+
+        Since some exception are required the 'ALLOWED_AUTH_APPLICATIONS' setting has been added, the
+        applications, which are in the list, won't be restricted to the site.
+        """
+        token = super().get_access_token(access_token)
+        current_url = get_current_request().build_absolute_uri('/')
+        allowed_applications = getattr(settings, 'ALLOWED_AUTH_APPLICATIONS', [])
+
+        if not token:
+            return None
+
+        application_name = token.application.name
+
+        if token.application.redirect_uri_allowed(current_url) or application_name in allowed_applications:
+            return token
+
+        logger.warning(
+            'The application <%s> has not been configured with the url <%s>',
+            application_name,
+            current_url,
+        )
+
+        return None
 
 
 class BearerAuthenticationAllowInactiveUser(BearerAuthentication):
