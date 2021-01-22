@@ -72,7 +72,7 @@ class OAuth2AllowInActiveUsersTests(TestCase):  # lint-amnesty, pylint: disable=
             name='example',
             user=self.user,
             client_id='dot-client-id',
-            redirect_uri='https://example.edx/redirect',
+            redirect_uri='https://example.edx/redirect http://testserver/',
         )
         self.dot_access_token = dot_models.AccessToken.objects.create(
             user=self.user,
@@ -226,6 +226,29 @@ class BearerAuthenticationTests(OAuth2AllowInActiveUsersTests):  # lint-amnesty,
         # Since this is testing back to previous version, user should be set to true
         self.user.is_active = True
         self.user.save()
+
+    def test_post_invalid_site_token(self):
+        """This tests when the token belongs to an application with allowed uris different from the current url."""
+        dot_oauth2_client = self.dot_adapter.create_public_client(
+            name='client-example',
+            user=self.user,
+            client_id='client-dot-client-id',
+            redirect_uri='https://client.com/',
+        )
+        token = dot_models.AccessToken.objects.create(
+            user=self.user,
+            token='client-dot-access-token',
+            application=dot_oauth2_client,
+            expires=now() + timedelta(days=30),
+        )
+
+        response = self.post_with_bearer_token(self.OAUTH2_BASE_TESTING_URL, token=token)
+
+        self.check_error_codes(
+            response,
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            error_code=authentication.OAUTH2_TOKEN_ERROR_NONEXISTENT
+        )
 
 
 class OAuthDenyDisabledUsers(OAuth2AllowInActiveUsersTests):  # pylint: disable=test-inherits-tests
