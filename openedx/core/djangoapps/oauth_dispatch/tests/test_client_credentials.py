@@ -30,7 +30,7 @@ class ClientCredentialsTest(mixins.AccessTokenMixin, TestCase):
             name='test dot application',
             user=self.user,
             authorization_grant_type=Application.GRANT_CLIENT_CREDENTIALS,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri=f'{DUMMY_REDIRECT_URL} http://testserver/',
             client_id='dot-app-client-id',
         )
         scopes = ['read', 'write', 'email']

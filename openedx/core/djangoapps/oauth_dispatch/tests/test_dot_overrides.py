@@ -99,7 +99,7 @@ class CustomAuthorizationViewTestCase(TestCase):
         restricted_app = self.dot_adapter.create_confidential_client(
             name='test restricted dot application',
             user=self.user,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri=f'{DUMMY_REDIRECT_URL} http://testserver/',
             client_id='dot-restricted-app-client-id',
         )
         models.RestrictedApplication.objects.create(application=restricted_app)
