@@ -184,10 +184,16 @@ def _attach_profile_claim(payload, user):
         # Some users (e.g., service users) may not have user profiles.
         profile = UserProfile.objects.get(user=user)
         name = profile.name
-        fields = configuration_helpers.get_value('extended_profile_fields', [])
 
-        if fields and configuration_helpers.get_value('JWT_EXTENDED_PROFILE', False):
-            extended_profile_fields = {key: value for key, value in json.loads(profile.meta).items() if key in fields}
+        if profile.meta and configuration_helpers.get_value('JWT_EXTENDED_PROFILE', False):
+            try:
+                extended_profile_fields = {
+                    key: value
+                    for key, value in json.loads(profile.meta).items()
+                    if key in configuration_helpers.get_value('extended_profile_fields', [])
+                }
+            except ValueError:
+                pass
 
     except UserProfile.DoesNotExist:
         name = None
