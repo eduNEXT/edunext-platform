@@ -84,7 +84,7 @@ class CcxRestApiTest(CcxTestCase, APITestCase):
             user=user,
             client_type='confidential',
             authorization_grant_type='authorization-code',
-            redirect_uris='http://localhost:8079/complete/edxorg/'
+            redirect_uris='http://localhost:8079/complete/edxorg/ http://testserver/'
         )
         # create an authorization code
         auth_oauth2_provider = dot_models.AccessToken.objects.create(

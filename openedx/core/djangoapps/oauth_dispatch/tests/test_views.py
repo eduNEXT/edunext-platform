@@ -89,7 +89,7 @@ class _DispatchingViewTestCase(TestCase):
         self.dot_app = self.dot_adapter.create_public_client(
             name='test dot application',
             user=self.user,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri=f'{DUMMY_REDIRECT_URL} http://testserver/',
             client_id='dot-app-client-id',
         )
 
@@ -103,7 +103,7 @@ class _DispatchingViewTestCase(TestCase):
         self.restricted_dot_app = self.dot_adapter.create_public_client(
             name='test restricted dot application',
             user=self.user,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri=f'{DUMMY_REDIRECT_URL} http://testserver/',
             client_id='dot-restricted-app-client-id',
         )
         models.RestrictedApplication.objects.create(application=self.restricted_dot_app)
@@ -319,7 +319,7 @@ class TestAccessTokenView(AccessTokenLoginMixin, mixins.AccessTokenMixin, _Dispa
         dot_app = self.dot_adapter.create_public_client(
             name='test dot application',
             user=self.user,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri=f'{DUMMY_REDIRECT_URL} http://testserver/',
             client_id=f'dot-app-client-id-{grant_type}',
             grant_type=grant_type,
         )
@@ -449,7 +449,7 @@ class TestAuthorizationView(_DispatchingViewTestCase):
         self.dot_app = self.dot_adapter.create_confidential_client(
             name='test dot application',
             user=self.user,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri=f'{DUMMY_REDIRECT_URL} http://testserver/',
             client_id='confidential-dot-app-client-id',
         )
         models.ApplicationAccess.objects.create(
