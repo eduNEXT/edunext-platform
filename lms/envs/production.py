@@ -970,6 +970,9 @@ DASHBOARD_COURSE_LIMIT = ENV_TOKENS.get('DASHBOARD_COURSE_LIMIT', None)
 ######################## Setting for content libraries ########################
 MAX_BLOCKS_PER_CONTENT_LIBRARY = ENV_TOKENS.get('MAX_BLOCKS_PER_CONTENT_LIBRARY', MAX_BLOCKS_PER_CONTENT_LIBRARY)
 
+####################### ALLOWED APPLICATIONS####################
+#The applications in this list won't be restricted by site.
+ALLOWED_AUTH_APPLICATIONS = ENV_TOKENS.get('ALLOWED_AUTH_APPLICATIONS', [])
 ########################## Derive Any Derived Settings  #######################
 
 derive_settings(__name__)
