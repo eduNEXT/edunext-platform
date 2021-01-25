@@ -3,6 +3,7 @@
 import logging
 
 import django.utils.timezone
+from crum import get_current_request
 from oauth2_provider import models as dot_models
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.authentication import BaseAuthentication, get_authorization_header
@@ -19,7 +20,7 @@ OAUTH2_USER_NOT_ACTIVE_ERROR = 'user_not_active'
 logger = logging.getLogger(__name__)
 
 
-class BearerAuthentication(BaseAuthentication):
+class OriginalBearerAuthentication(BaseAuthentication):
     """
     BearerAuthentication backend using either `django-oauth2-provider` or 'django-oauth-toolkit'
     """
@@ -117,6 +118,23 @@ class BearerAuthentication(BaseAuthentication):
         header in a `401 Unauthenticated` response
         """
         return 'Bearer realm="%s"' % self.www_authenticate_realm
+
+
+class BearerAuthentication(OriginalBearerAuthentication):
+    """This new implementation just overrides some OriginalBearerAuthentication functionalities
+    in order to include eduNEXT authentication requirements.
+    """
+
+    def get_access_token(self, access_token):
+        """This override is required since the tokens should just be valid in the application's site,
+        hence the token is restricted to the current url and the application redirect uris.
+        """
+        token = super().get_access_token(access_token)
+
+        if token and token.application.redirect_uri_allowed(get_current_request().build_absolute_uri('/')):
+            return token
+
+        return None
 
 
 class BearerAuthenticationAllowInactiveUser(BearerAuthentication):
