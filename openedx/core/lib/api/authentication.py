@@ -130,9 +130,16 @@ class BearerAuthentication(OriginalBearerAuthentication):
         hence the token is restricted to the current url and the application redirect uris.
         """
         token = super().get_access_token(access_token)
+        current_url = get_current_request().build_absolute_uri('/')
 
-        if token and token.application.redirect_uri_allowed(get_current_request().build_absolute_uri('/')):
+        if token and token.application.redirect_uri_allowed(current_url):
             return token
+        elif token:
+            logger.warning(
+                'The application <%s> has not been configured with the url <%s>',
+                token.application.name,
+                current_url,
+            )
 
         return None
 
