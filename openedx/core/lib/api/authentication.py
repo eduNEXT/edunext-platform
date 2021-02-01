@@ -4,10 +4,11 @@ import logging
 
 import django.utils.timezone
 from crum import get_current_request
-from oauth2_provider import models as dot_models
-from rest_framework.exceptions import AuthenticationFailed
-from rest_framework.authentication import BaseAuthentication, get_authorization_header
+from django.conf import settings
 from edx_django_utils.monitoring import set_custom_metric
+from oauth2_provider import models as dot_models
+from rest_framework.authentication import BaseAuthentication, get_authorization_header
+from rest_framework.exceptions import AuthenticationFailed
 
 OAUTH2_TOKEN_ERROR = 'token_error'
 OAUTH2_TOKEN_ERROR_EXPIRED = 'token_expired'
@@ -128,18 +129,27 @@ class BearerAuthentication(OriginalBearerAuthentication):
     def get_access_token(self, access_token):
         """This override is required since the tokens should just be valid in the application's site,
         hence the token is restricted to the current url and the application redirect uris.
+
+        Since some exception are required the 'ALLOWED_AUTH_APPLICATIONS' setting has been added, the
+        applications, which are in the list, won't be restricted to the site.
         """
         token = super().get_access_token(access_token)
         current_url = get_current_request().build_absolute_uri('/')
+        allowed_applications = getattr(settings, 'ALLOWED_AUTH_APPLICATIONS', [])
 
-        if token and token.application.redirect_uri_allowed(current_url):
+        if not token:
+            return None
+
+        application_name = token.application.name
+
+        if token.application.redirect_uri_allowed(current_url) or application_name in allowed_applications:
             return token
-        elif token:
-            logger.warning(
-                'The application <%s> has not been configured with the url <%s>',
-                token.application.name,
-                current_url,
-            )
+
+        logger.warning(
+            'The application <%s> has not been configured with the url <%s>',
+            application_name,
+            current_url,
+        )
 
         return None
 
