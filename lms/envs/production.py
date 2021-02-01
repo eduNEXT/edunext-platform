@@ -934,6 +934,10 @@ MAINTENANCE_BANNER_TEXT = ENV_TOKENS.get('MAINTENANCE_BANNER_TEXT', None)
 ########################## limiting dashboard courses ######################
 DASHBOARD_COURSE_LIMIT = ENV_TOKENS.get('DASHBOARD_COURSE_LIMIT', None)
 
+####################### ALLOWED APPLICATIONS####################
+#The applications in this list won't be restricted by site.
+ALLOWED_AUTH_APPLICATIONS = ENV_TOKENS.get('ALLOWED_AUTH_APPLICATIONS', [])
+
 ############################### Plugin Settings ###############################
 
 # This is at the bottom because it is going to load more settings after base settings are loaded
