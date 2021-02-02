@@ -103,7 +103,7 @@ class _DispatchingViewTestCase(TestCase):
         self.restricted_dot_app = self.dot_adapter.create_public_client(
             name='test restricted dot application',
             user=self.user,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri='{} {}'.format(DUMMY_REDIRECT_URL, 'http://testserver/'),
             client_id='dot-restricted-app-client-id',
         )
         models.RestrictedApplication.objects.create(application=self.restricted_dot_app)
@@ -297,6 +297,22 @@ class TestAccessTokenView(AccessTokenLoginMixin, mixins.AccessTokenMixin, _Dispa
         # and assert that it fails
         self._assert_access_token_invalidated(data['access_token'])
 
+    def test_restricted_access_token_by_url(self):
+        """
+        Verify that the token can not be generated if the application
+        redirect_uris don't contain the current url.
+        """
+        invalid_dot_app = self.dot_adapter.create_public_client(
+            name='test invalid dot application',
+            user=self.user,
+            redirect_uri=DUMMY_REDIRECT_URL,
+            client_id='invalid-dot-app-client-id',
+        )
+
+        response = self._post_request(self.user, invalid_dot_app)
+
+        self.assertEqual(response.status_code, 401)
+
     def test_dot_access_token_provides_refresh_token(self):
         response = self._post_request(self.user, self.dot_app)
         self.assertEqual(response.status_code, 200)
@@ -311,7 +327,7 @@ class TestAccessTokenView(AccessTokenLoginMixin, mixins.AccessTokenMixin, _Dispa
         dot_app = self.dot_adapter.create_public_client(
             name='test dot application',
             user=self.user,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri='{} {}'.format(DUMMY_REDIRECT_URL, 'http://testserver/'),
             client_id='dot-app-client-id-{grant_type}'.format(grant_type=grant_type),
             grant_type=grant_type,
         )
@@ -375,7 +391,7 @@ class TestAuthorizationView(_DispatchingViewTestCase):
         self.dot_app = self.dot_adapter.create_confidential_client(
             name='test dot application',
             user=self.user,
-            redirect_uri=DUMMY_REDIRECT_URL,
+            redirect_uri='{} {}'.format(DUMMY_REDIRECT_URL, 'http://testserver/'),
             client_id='confidential-dot-app-client-id',
         )
         models.ApplicationAccess.objects.create(
