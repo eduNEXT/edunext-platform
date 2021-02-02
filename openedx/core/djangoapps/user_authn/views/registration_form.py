@@ -690,7 +690,10 @@ class RegistrationFormFactory(object):
         # Check to convert options:
         field_options = custom_field_dict.get("options")
         if field_options:
-            field_options = [(six.text_type(option.lower()), option) for option in field_options]
+            try:
+                field_options = [(six.text_type(value.lower()), name) for value, name in field_options.items()]
+            except AttributeError:
+                field_options = [(six.text_type(value.lower()), value) for value in field_options]
 
         # Set default option if applies:
         default_option = custom_field_dict.get("default")
