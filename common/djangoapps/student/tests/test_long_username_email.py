@@ -25,10 +25,10 @@ class TestLongUsernameEmail(TestCase):
 
     def test_long_username(self):
         """
-        Test username cannot be more than 30 characters long.
+        Test username cannot be more than 150 characters long.
         """
 
-        self.url_params['username'] = 'username' * 4
+        self.url_params['username'] = 'username' * 20
         response = self.client.post(self.url, self.url_params)
 
         # Status code should be 400.

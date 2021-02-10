@@ -566,8 +566,10 @@ class RegistrationViewTest(ThirdPartyAuthTestMixin, UserAPITestCase):
         ('pk', 'PK', 'Bob123', 'Bob123'),
         ('Pk', 'PK', None, ''),
         ('pK', 'PK', 'Bob123@edx.org', 'Bob123_edx_org'),
-        ('PK', 'PK', 'Bob123123123123123123123123123123123123', 'Bob123123123123123123123123123'),
-        ('us', 'US', 'Bob-1231231&23123+1231(2312312312@3123123123', 'Bob-1231231_23123_1231_2312312'),
+        ('PK', 'PK', 'Bob123123123123123123123123123123123123' * 4,
+            ('Bob123123123123123123123123123123123123' * 4)[:150]),
+        ('us', 'US', 'Bob-1231231&23123+1231(2312312312@3123123123' * 4,
+            ('Bob-1231231_23123_1231_2312312312_3123123123' * 4)[:150]),
     )
     @ddt.unpack
     def test_register_form_third_party_auth_running_google(

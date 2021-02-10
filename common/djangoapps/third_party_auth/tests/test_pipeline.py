@@ -77,8 +77,10 @@ class PipelineOverridesTest(SamlIntegrationTestUtilities, IntegrationTestMixin, 
         ('S.K', 'S_K', False),
         ('S.K.', 'S_K_', False),
         ('S.K.', 'S_K_9fe2', True),
-        ('usernamewithcharacterlengthofmorethan30chars', 'usernamewithcharacterlengthofm', False),
-        ('usernamewithcharacterlengthofmorethan30chars', 'usernamewithcharacterlengt9fe2', True),
+        ('usernamewithcharacterlenghtmorethan150chars' * 4,
+            ('usernamewithcharacterlenghtmorethan150chars' * 4)[:150], False),
+        ('usernamewithcharacterlenghtmorethan150chars' * 4,
+            ('usernamewithcharacterlenghtmorethan150chars' * 4)[:146] + '9fe2', True),
     )
     @ddt.unpack
     @mock.patch('third_party_auth.pipeline.user_exists')
