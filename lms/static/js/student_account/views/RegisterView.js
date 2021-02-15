@@ -242,7 +242,9 @@
                         };
 
                     FormView.prototype.postRender.call(this);
-                    $('.optional-fields').addClass('hidden');
+                    
+                    // NAU always show optional fields
+                    /*$('.optional-fields').addClass('hidden');*/
                     $('#toggle_optional_fields').change(function() {
                         window.analytics.track('edx.bi.user.register.optional_fields_selected');
                         $('.optional-fields').toggleClass('hidden');
@@ -253,9 +255,11 @@
                     // improvement so that we don't have to show all the optional fields.
                     // xss-lint: disable=javascript-jquery-insert-into-target
                     $('.checkbox-optional_fields_toggle').insertAfter('.required-fields');
-                    if (!this.hasOptionalFields) {
+                    
+                    // NAU always hide checkbox to show/hide optional fields
+                    /*if (!this.hasOptionalFields) {*/
                         $('.checkbox-optional_fields_toggle').addClass('hidden');
-                    }
+                    /*}*/
                     // xss-lint: disable=javascript-jquery-insert-into-target
                     $('.checkbox-honor_code').insertAfter('.optional-fields');
                     // xss-lint: disable=javascript-jquery-insert-into-target
