@@ -76,6 +76,7 @@ from lms.djangoapps.instructor_task.models import InstructorTask
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.signals.signals import COURSE_CERT_AWARDED, COURSE_CERT_CHANGED, COURSE_CERT_REVOKED
 from openedx.core.djangoapps.xmodule_django.models import NoneToEmptyManager
+from openedx.core.lib.triggers.v1 import post_certificate_creation
 from util.milestones_helpers import fulfill_course_milestone, is_prerequisite_courses_enabled
 
 LOGGER = logging.getLogger(__name__)
@@ -421,6 +422,11 @@ class GeneratedCertificate(models.Model):
                 course_key=self.course_id,
                 mode=self.mode,
                 status=self.status,
+            )
+
+            post_certificate_creation.send_robust(
+                sender=None,
+                certificate=self,
             )
 
 
