@@ -155,7 +155,8 @@ class TestShibIntegrationTest(SamlIntegrationTestUtilities, IntegrationTestMixin
         'id': 'id_value',
         'firstName': 'firstName_value',
         'idp_name': 'testshib',
-        'attributes': {u'urn:oid:0.9.2342.19200300.100.1.1': [u'myself']}
+        'attributes': {u'urn:oid:0.9.2342.19200300.100.1.1': [u'myself'], u'name_id': u'nameId_value'},
+        'session_index': 'sessionIndex_value',
     }
 
     @patch('openedx.features.enterprise_support.api.enterprise_customer_for_request')
