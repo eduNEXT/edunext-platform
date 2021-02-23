@@ -94,7 +94,7 @@ shortuuid==1.0.1          # via django-oauth2-provider
 simplejson==3.17.0        # via -c requirements/edunext/../edx/base.txt, xblock-utils
 six==1.14.0               # via -c requirements/edunext/../edx/base.txt, bleach, cryptography, drf-yasg, ecdsa, edx-drf-extensions, edx-opaque-keys, event-tracking, fs, packaging, parsel, pyjwkest, python-dateutil, python-jose, social-auth-core, stevedore, w3lib, xblock, xblock-free-text-response
 slumber==0.7.1            # via -c requirements/edunext/../edx/base.txt, edx-rest-api-client
-social-auth-core==3.3.3   # via -c requirements/edunext/../edx/base.txt, eox-core
+social-auth-core==4.0.2   # via -c requirements/edunext/../edx/base.txt, eox-core
 sqlparse==0.3.1           # via -c requirements/edunext/../edx/base.txt, django
 stevedore==1.32.0         # via -c requirements/edunext/../edx/base.txt, edx-opaque-keys
 git+https://github.com/Pearson-Advance/openedx-surveymonkey-xblock@v2.0.1#egg=surveymonkey-xblock==2.0.1  # via -r requirements/edunext/github.in
