@@ -531,6 +531,38 @@ RETIREMENT_SERVICE_WORKER_USERNAME = ENV_TOKENS.get(
 ############### Settings for edx-rbac  ###############
 SYSTEM_WIDE_ROLE_CLASSES = ENV_TOKENS.get('SYSTEM_WIDE_ROLE_CLASSES') or SYSTEM_WIDE_ROLE_CLASSES
 
+######################### TUTOR SETTINGS #######################################
+
+# Change syslog-based loggers which don't work inside docker containers
+LOGGING["handlers"]["local"] = {
+    "class": "logging.handlers.WatchedFileHandler",
+    "filename": os.path.join(LOG_DIR, "all.log"),
+    "formatter": "standard",
+}
+LOGGING["handlers"]["tracking"] = {
+    "level": "DEBUG",
+    "class": "logging.handlers.WatchedFileHandler",
+    "filename": os.path.join(LOG_DIR, "tracking.log"),
+    "formatter": "standard",
+}
+LOGGING["loggers"]["tracking"]["handlers"] = ["console", "local", "tracking"]
+# Disable django/drf deprecation warnings
+import logging
+import warnings
+from django.utils.deprecation import RemovedInDjango30Warning, RemovedInDjango31Warning
+from rest_framework import RemovedInDRF310Warning, RemovedInDRF311Warning
+warnings.simplefilter('ignore', RemovedInDjango30Warning)
+warnings.simplefilter('ignore', RemovedInDjango31Warning)
+warnings.simplefilter('ignore', RemovedInDRF310Warning)
+warnings.simplefilter('ignore', RemovedInDRF311Warning)
+
+# Create folders if necessary
+for folder in [DATA_DIR, LOG_DIR, MEDIA_ROOT, STATIC_ROOT_BASE]:
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
+MIDDLEWARE.insert(0, "whitenoise.middleware.WhiteNoiseMiddleware")
+
 ####################### Plugin Settings ##########################
 
 # This is at the bottom because it is going to load more settings after base settings are loaded
