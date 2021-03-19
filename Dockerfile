@@ -89,34 +89,12 @@ WORKDIR /openedx/edx-platform
 # the requirements cache.
 COPY . .
 
+# RUN mkdir -p /edx/etc/
+# ENV PATH /edx/app/edxapp/edx-platform/bin:${PATH}
+# ENV CONFIG_ROOT /edx/etc/
+# ENV SETTINGS production
 
-RUN mkdir -p /edx/etc/
-ENV PATH /edx/app/edxapp/edx-platform/bin:${PATH}
-ENV CONFIG_ROOT /edx/etc/
-ENV SETTINGS production
-
-ENV LMS_CFG /edx/etc/lms.yml
-ENV STUDIO_CFG /edx/etc/studio.yml
-#COPY lms/devstack.yml /edx/etc/lms.yml
-#COPY cms/devstack.yml /edx/etc/studio.yml
-
-
-FROM edxapp-base as lms
-ENV SERVICE_VARIANT lms
-ENV DJANGO_SETTINGS_MODULE lms.envs.production
-EXPOSE 8000
-CMD gunicorn -c /edx/app/edxapp/edx-platform/lms/docker_lms_gunicorn.py --name lms --bind=0.0.0.0:8000 --max-requests=1000 --access-logfile - lms.wsgi:application
-
-FROM edxapp-lms as lms-newrelic
-RUN pip install newrelic
-CMD newrelic-admin run-program gunicorn -c /edx/app/edxapp/edx-platform/lms/docker_lms_gunicorn.py --name lms --bind=0.0.0.0:8000 --max-requests=1000 --access-logfile - lms.wsgi:application
-
-FROM edxapp-base as studio
-ENV SERVICE_VARIANT cms
-ENV DJANGO_SETTINGS_MODULE cms.envs.production
-EXPOSE 8010
-CMD gunicorn -c /edx/app/edxapp/edx-platform/cms/docker_cms_gunicorn.py --name cms --bind=0.0.0.0:8010 --max-requests=1000 --access-logfile - cms.wsgi:application
-
-FROM edxapp-studio as studio-newrelic
-RUN pip install newrelic
-CMD newrelic-admin run-program gunicorn -c /edx/app/edxapp/edx-platform/cms/docker_cms_gunicorn.py --name cms --bind=0.0.0.0:8010 --max-requests=1000 --access-logfile - cms.wsgi:application
+# ENV LMS_CFG /edx/etc/lms.yml
+# ENV STUDIO_CFG /edx/etc/studio.yml
+# COPY lms/devstack.yml /edx/etc/lms.yml
+# COPY cms/devstack.yml /edx/etc/studio.yml
