@@ -6,6 +6,10 @@ pipeline {
     }
     environment {
         TUTOR_ROOT = "/home/robonext/tutor"
+        TUTOR_PLUGINS_ROOT = "/home/robonext/tutor-plugins"
+    }
+    options { 
+        skipDefaultCheckout() 
     }
     stages {
         stage("Build"){
