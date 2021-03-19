@@ -20,7 +20,9 @@ pipeline {
                     dir("/home/robonext/tutor-plugins") {
                         git credentialsId: 'a29e1386-41b4-413f-a6f2-42e53fe9bf44', url: 'git@bitbucket.org:edunext/ednx_tutor_plugins.git', branch: 'eric/mvp'
                     }
+                    sh 'tutor plugins enable ednx_secrets ednx_general ednx_edxapp ednx_hosts ednx_docker ednx_databases ednx_forum ednx_k8s'
                     sh 'tutor plugins list'
+                    sh 'tutor config save'
                 }
 
                 // steps {withCredentials([usernamePassword(credentialsId: 'YOUR_ID_DEFINED', passwordVariable: 'YOUR_PW_DEFINED', usernameVariable: 'YOUR_ACCOUNT_DEFINED')]) {
