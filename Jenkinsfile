@@ -9,8 +9,9 @@ pipeline {
                 withPythonEnv('/usr/local/bin/python3.8'){
                     sh 'pip install -e git+https://github.com/eduNEXT/tutor.git@e4fa7f553bb665c4a6c2c01f48fe448b2ac5a427#egg=tutor-openedx'
                     sh 'tutor config printroot'
-                    git credentialsId: 'a29e1386-41b4-413f-a6f2-42e53fe9bf44', url: 'git@bitbucket.org:edunext/ednx_tutor_plugins.git', branch: 'eric/mvp'
-                    sh 'ln -s ednx_tutor_plugins /home/robonext/.local/share/tutor-plugins'
+                    dir('/home/robonext/.local/share/tutor-plugins') {
+                        git credentialsId: 'a29e1386-41b4-413f-a6f2-42e53fe9bf44', url: 'git@bitbucket.org:edunext/ednx_tutor_plugins.git', branch: 'eric/mvp'
+                    }
                     sh 'tutor plugins list'
                 }
 
