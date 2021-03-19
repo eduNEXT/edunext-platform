@@ -5,15 +5,21 @@ pipeline {
     stages {
         stage("Build"){
             steps {
+
+                withPythonEnv('/usr/local/bin/python3.8'){
+                    sh 'pip install -e git+https://github.com/eduNEXT/tutor.git@e4fa7f553bb665c4a6c2c01f48fe448b2ac5a427#egg=tutor-openedx'
+                    sh 'tutor config printroot'
+                }
+
                 // steps {withCredentials([usernamePassword(credentialsId: 'YOUR_ID_DEFINED', passwordVariable: 'YOUR_PW_DEFINED', usernameVariable: 'YOUR_ACCOUNT_DEFINED')]) {
                 //             sh """
                 //             docker login ${REGISTRY_URI} -u ${YOUR_ACCOUNT_DEFINED} -p ${YOUR_PW_DEFINED}
                 //             """
                 //         }
-                echo "Docker Build"
-                sh """
-                    docker build . -f Dockerfile --target edxapp-base -t ednxops/edxapp-base
-                """
+                // echo "Docker Build"
+                // sh """
+                //     docker build . -f Dockerfile --target edxapp-base -t ednxops/edxapp-base
+                // """
 
                 // echo "Docker Tag"
                 // sh """
