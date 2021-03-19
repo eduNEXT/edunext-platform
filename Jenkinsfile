@@ -1,15 +1,26 @@
 pipeline {
     agent {
-        label "V13.saas.stage.cnc"
+        node {
+            label "V13.saas.stage.cnc"
+            customWorkspace "/home/robonext/ci_workspace/${JOB_NAME}_${BUILD_NUMBER}"
+        }
+    }
+    environment {
+        TUTOR_ROOT = "${env.WORKSPACE}/tutor"
     }
     stages {
         stage("Build"){
             steps {
+                dir("${env.WORKSPACE}/edx-platform") {
+                    checkout scm
+                }
+                
+                sh "rm -rf ${env.WORKSPACE}/tutor"
 
                 withPythonEnv('/usr/local/bin/python3.8'){
                     sh 'pip install -e git+https://github.com/eduNEXT/tutor.git@e4fa7f553bb665c4a6c2c01f48fe448b2ac5a427#egg=tutor-openedx'
                     sh 'tutor config printroot'
-                    dir('/home/robonext/.local/share/tutor-plugins') {
+                    dir("${env.WORKSPACE}/tutor-plugins") {
                         git credentialsId: 'a29e1386-41b4-413f-a6f2-42e53fe9bf44', url: 'git@bitbucket.org:edunext/ednx_tutor_plugins.git', branch: 'eric/mvp'
                     }
                     sh 'tutor plugins list'
