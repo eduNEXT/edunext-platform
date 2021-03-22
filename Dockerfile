@@ -23,6 +23,8 @@ RUN $PYENV_ROOT/versions/$PYTHON_VERSION/bin/pyvenv /openedx/venv
 ###### Install python requirements in virtualenv
 FROM python as python-requirements
 
+RUN apt update && apt install -y software-properties-common libmysqlclient-dev libxmlsec1-dev
+
 WORKDIR /openedx/edx-platform
 
 ENV PATH /openedx/venv/bin:${PATH}
@@ -34,10 +36,12 @@ COPY common common
 COPY openedx openedx
 COPY lms lms
 COPY cms cms
-COPY requirements/pip.txt requirements/pip.txt
 COPY requirements/edx/base.txt requirements/edx/base.txt
-RUN pip install -r requirements/pip.txt
+COPY requirements/edunext/base.txt requirements/edunext/base.txt
+# Install the right version of pip/setuptools
+RUN pip install setuptools==44.1.0 pip==20.0.2 wheel==0.34.2
 RUN pip install -r requirements/edx/base.txt
+RUN pip install -r requirements/edunext/base.txt
 
 # Install private requirements
 ARG SSH_PRIVATE_KEY
@@ -61,14 +65,18 @@ RUN pip install "whitenoise==5.1.0"
 ###### Install nodejs with nodeenv in /openedx/nodeenv
 FROM python-requirements as nodejs-requirements
 
-ENV PATH /openedx/nodeenv/bin:${PATH}
-ENV PATH ./node_modules/.bin:${PATH}
+ENV PATH /openedx/nodeenv/bin:/openedx/venv/bin:${PATH}
 
-# Copy just JS requirements and install them.
+# Install nodeenv with the version provided by edx-platform
+RUN pip install nodeenv==1.4.0
+RUN nodeenv /openedx/nodeenv --node=12.13.0 --prebuilt
+
+# Install nodejs requirements
+ARG NPM_REGISTRY=https://registry.npmjs.org/
 COPY package.json package.json
 COPY package-lock.json package-lock.json
-RUN nodeenv /edx/app/edxapp/nodeenv --node=12.11.1 --prebuilt
-RUN npm set progress=false && npm install
+WORKDIR /openedx/edx-platform
+RUN npm install --verbose --registry=$NPM_REGISTRY
 
 ####### edxapp base image ######
 FROM minimal as edxapp-base
