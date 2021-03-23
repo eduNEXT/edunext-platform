@@ -1,3 +1,6 @@
+# This github action workflow is used only 
+# for testing purposes
+
 name: Linting
 
 on: [push]
