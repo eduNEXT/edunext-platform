@@ -62,7 +62,7 @@ class ProductionStorage(ProductionMixin, StaticFilesStorage):
 
 
 class ProductionS3Storage(ProductionMixin, S3Boto3Storage):  # pylint: disable=abstract-method
-    pass
+    location = 'static'
 
 
 class DevelopmentStorage(
