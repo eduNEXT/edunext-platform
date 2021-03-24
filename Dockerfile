@@ -43,6 +43,7 @@ RUN pip install setuptools==44.1.0 pip==20.0.2 wheel==0.34.2
 RUN pip install -r requirements/edx/base.txt
 RUN pip install -r requirements/edunext/base.txt
 
+
 # Install private requirements
 ARG SSH_PRIVATE_KEY
 RUN mkdir /root/.ssh/
@@ -91,11 +92,16 @@ COPY --from=python-requirements /openedx/venv /openedx/venv
 COPY --from=nodejs-requirements /openedx/nodeenv /openedx/nodeenv
 COPY --from=nodejs-requirements /openedx/edx-platform/node_modules /openedx/edx-platform/node_modules
 
+ENV PATH /openedx/venv/bin:./node_modules/.bin:/openedx/nodeenv/bin:${PATH}
+ENV VIRTUAL_ENV /openedx/venv/
 WORKDIR /openedx/edx-platform
 # Copy over remaining code.
 # We do this as late as possible so that small changes to the repo don't bust
 # the requirements cache.
 COPY . .
+
+# Re-install local requirements, otherwise egg-info folders are missing
+RUN pip install -r requirements/edx/local.in
 
 # RUN mkdir -p /edx/etc/
 # ENV PATH /edx/app/edxapp/edx-platform/bin:${PATH}
