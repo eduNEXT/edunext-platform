@@ -102,13 +102,3 @@ COPY . .
 
 # Re-install local requirements, otherwise egg-info folders are missing
 RUN pip install -r requirements/edx/local.in
-
-# RUN mkdir -p /edx/etc/
-# ENV PATH /edx/app/edxapp/edx-platform/bin:${PATH}
-# ENV CONFIG_ROOT /edx/etc/
-# ENV SETTINGS production
-
-# ENV LMS_CFG /edx/etc/lms.yml
-# ENV STUDIO_CFG /edx/etc/studio.yml
-# COPY lms/devstack.yml /edx/etc/lms.yml
-# COPY cms/devstack.yml /edx/etc/studio.yml

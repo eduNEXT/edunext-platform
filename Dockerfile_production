@@ -1,0 +1,66 @@
+ARG EDXAPP_BASE_VERSION=lastest
+
+####### Add themes #######
+FROM alpine/git:latest as themes
+
+# Install private requirements
+ARG SSH_PRIVATE_KEY
+RUN mkdir /root/.ssh/
+RUN echo "${SSH_PRIVATE_KEY}" > /root/.ssh/id_rsa
+RUN chmod 600 /root/.ssh/id_rsa
+
+# make sure your domain is accepted
+RUN touch /root/.ssh/known_hosts
+RUN ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
+
+RUN mkdir -p /openedx/themes/
+WORKDIR /openedx/themes/
+
+RUN git clone git@bitbucket.org:edunext/ednx-saas-themes.git
+
+
+###### Build AWS image ########
+
+FROM ednxops/edxapp-base:$EDXAPP_BASE_VERSION as edxapp-production
+MAINTAINER edunext.co <contact@edunext.co>
+
+# Copy scripts
+RUN chmod a+x /openedx/edx-platform/scripts/tutor/*
+ENV PATH /openedx/edx-platform/scripts/tutor:${PATH}
+
+
+ENV NO_PYTHON_UNINSTALL 1
+ENV NO_PREREQ_INSTALL 1
+# We need to rely on a separate openedx-assets command to accelerate asset processing.
+RUN openedx-assets xmodule \
+   && openedx-assets npm \
+   && openedx-assets webpack --env=prod \
+   && openedx-assets common
+
+COPY --from=themes /openedx/themes/ /openedx/themes/
+
+
+# Create folder that will store lms/cms.env.json files, as well as
+# the tutor-specific settings files.
+RUN mkdir -p /edx/etc/
+ENV PATH /edx/app/edxapp/edx-platform/bin:${PATH}
+ENV CONFIG_ROOT /edx/etc/
+RUN mkdir -p /openedx/config ./lms/envs/tutor ./cms/envs/tutor
+ENV LMS_CFG /openedx/config/lms.env.json
+ENV STUDIO_CFG /openedx/config/cms.env.json
+ENV REVISION_CFG /openedx/config/revisions.yml
+
+# Create a data directory, which might be used (or not)
+RUN mkdir /openedx/data
+
+# service variant is "lms" or "cms"
+ENV SERVICE_VARIANT lms
+ENV SETTINGS tutor.production
+
+# Entrypoint will set right environment variables
+ENTRYPOINT ["/openedx/edx-platform/scripts/tutor/docker-entrypoint.sh"]
+
+# Run server
+EXPOSE 8000
+CMD gunicorn -c /openedx/edx-platform/tutor-gunicorn_conf.py --name ${SERVICE_VARIANT} --bind=0.0.0.0:8000 --max-requests=1000 --max-requests-jitter=100 --timeout=120 --access-logfile - ${SERVICE_VARIANT}.wsgi:application
+
