@@ -37,8 +37,6 @@ RUN openedx-assets xmodule \
    && openedx-assets webpack --env=prod \
    && openedx-assets common
 
-COPY --from=themes /openedx/themes/ /openedx/themes/
-
 
 # Create folder that will store lms/cms.env.json files, as well as
 # the tutor-specific settings files.
@@ -56,6 +54,17 @@ RUN mkdir /openedx/data
 # service variant is "lms" or "cms"
 ENV SERVICE_VARIANT lms
 ENV SETTINGS tutor.production
+
+COPY --from=themes /openedx/themes/ /openedx/themes/
+
+ARG LOCAL_STATICFILES=False
+ARG THEME_DIRS='/openedx/themes/ednx-saas-themes/edx-platform'
+ARG THEMES='bragi'
+RUN if [ ${LOCAL_STATICFILES} = "True" ]; then \
+        openedx-assets themes --theme-dirs ${THEME_DIRS} --themes ${THEMES} && openedx-assets collect --settings=tutor.assets; \
+    else \
+        echo "Skip static assets collection since they will live in S3"; \
+    fi
 
 # Entrypoint will set right environment variables
 ENTRYPOINT ["/openedx/edx-platform/scripts/tutor/docker-entrypoint.sh"]
