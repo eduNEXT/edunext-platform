@@ -22,9 +22,18 @@ jobs:
           command: |
             mkdir -p /tmp/tutor_build
             cd /tmp/tutor_build
-            echo -e "TUTOR_ROOT=/tmp/tutor_build/tutor_root/tutor\nexport TUTOR_PLUGINS_ROOT=/tmp/tutor_build/tutor_root/tutor-plugins"
+            echo -e "export TUTOR_ROOT=/tmp/tutor_build/tutor_root/tutor\nexport TUTOR_PLUGINS_ROOT=/tmp/tutor_build/tutor_root/tutor-plugins" >> tutor_env
             git clone -b Jhony/namespace_nginx https://github.com/eduNEXT/tutor.git
             virtualenv -p python3.8 /tmp/tutor_build/venv
             source venv/bin/activate
             cd tutor && pip install -e . && cd ..
             GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone -b Jhony/tutor_namespace git@bitbucket.org:edunext/ednx_tutor_plugins.git tutor_plugins
+            ln -s /tmp/tutor_build/tutor_plugins /tmp/tutor_build/tutor_root/tutor-plugins
+
+      - run:
+          name: Enable tutor plugins
+          working_directory: /tmp/tutor_build
+          command: |
+            source tutor_env
+            source venv/bin/activate
+            tutor plugins list
