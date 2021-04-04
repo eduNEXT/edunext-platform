@@ -36,4 +36,21 @@ jobs:
           command: |
             source tutor_env
             source venv/bin/activate
+            tutor plugins enable ednx_hosts
+            tutor plugins enable ednx_secrets
+            tutor plugins enable ednx_databases
+            tutor plugins enable ednx_forum
+            tutor plugins enable ednx_k8s
+            tutor plugins enable ednx_docker
+            tutor plugins enable ednx_edxapp
+            tutor plugins enable ednx_general
+
+      - run:
+          name: Creating tutor config
+          working_directory: /tmp/tutor_build
+          command: |
+            source tutor_env
+            source venv/bin/activate
             tutor plugins list
+            tutor config save
+            cat /tmp/tutor_build/tutor_root/tutor/config.yml
