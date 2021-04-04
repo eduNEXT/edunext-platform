@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Prepare tutor environment
           command: |
-            mkdir -p /tmp/tutor_build
+            mkdir -p /tmp/tutor_build /tmp/tutor_build/tutor_root/tutor
             cd /tmp/tutor_build
             echo -e "export TUTOR_ROOT=/tmp/tutor_build/tutor_root/tutor\nexport TUTOR_PLUGINS_ROOT=/tmp/tutor_build/tutor_root/tutor-plugins" >> tutor_env
             git clone -b Jhony/namespace_nginx https://github.com/eduNEXT/tutor.git
