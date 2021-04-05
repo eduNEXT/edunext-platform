@@ -83,3 +83,12 @@ jobs:
             main_repo_url="<< pipeline.project.git_url >>.git"
             main_repo_branch="<< pipeline.git.branch >>"
             tutor images build openedx --build-arg EDX_PLATFORM_REPOSITORY=$main_repo_url --build-arg EDX_PLATFORM_VERSION=$main_repo_branch --build-arg edx_platofrm_patches_enabled=False --build-arg SSH_PRIVATE_KEY="$priv_repos_key"
+
+      - run:
+          name: Pushing openedx image to Docker Registry with tutor
+          working_directory: /tmp/tutor_build
+          command: |
+            source tutor_env
+            source venv/bin/activate
+            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+            tutor images push openedx
