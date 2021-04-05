@@ -1,7 +1,6 @@
-version: 2
+version: 2.1
 
 workflows:
-  version: 2
   build:
     jobs:
       - build_edxapp_image:
@@ -60,6 +59,15 @@ jobs:
           command: |
             GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone -b master git@bitbucket.org:edunext/ednx-saas-themes.git
             cd ednx-saas-themes/edx-platform && cp -R bragi /tmp/tutor_build/tutor_root/tutor/env/build/openedx/themes && cd ../..
+
+      - run:
+          name: Installing Docker CLI
+          command: |
+            apt update
+            apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+            add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+            apt install docker-ce-cli=5:19.03.13~3-0~ubuntu-focal -y
 
       - setup_remote_docker:
           version: 19.03.13
