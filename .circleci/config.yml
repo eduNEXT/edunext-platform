@@ -53,4 +53,25 @@ jobs:
             source venv/bin/activate
             tutor plugins list
             tutor config save
-            cat /tmp/tutor_build/tutor_root/tutor/config.yml
+
+      - run:
+          name: Setup Bragi theme in tutor
+          working_directory: /tmp/tutor_build
+          command: |
+            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone -b master git@bitbucket.org:edunext/ednx-saas-themes.git
+            cd ednx-saas-themes/edx-platform && cp -R bragi /tmp/tutor_build/tutor_root/tutor/env/build/openedx/themes && cd ../..
+
+      - setup_remote_docker:
+          version: 19.03.13
+          docker_layer_caching: true
+
+      - run:
+          name: Building openedx image with tutor
+          working_directory: /tmp/tutor_build
+          command: |
+            source tutor_env
+            source venv/bin/activate
+            priv_repos_key=$(echo -e $SSH_PRIV_REPOS_KEY)
+            main_repo_url="<< pipeline.project.git_url >>.git"
+            main_repo_branch="<< pipeline.git.branch >>"
+            tutor images build openedx --build-arg EDX_PLATFORM_REPOSITORY=$main_repo_url --build-arg EDX_PLATFORM_VERSION=$main_repo_branch --build-arg edx_platofrm_patches_enabled=False --build-arg SSH_PRIVATE_KEY="$priv_repos_key"
