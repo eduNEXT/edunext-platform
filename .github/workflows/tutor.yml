@@ -1,5 +1,8 @@
 name: Build Tutor Image
-on: [push]
+on:
+  push:
+    branches:
+      - "Gonzalo/githubactions_test"
 jobs:
   deploy:
     name: Build and Push tutor image
