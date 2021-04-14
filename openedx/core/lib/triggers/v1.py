@@ -22,3 +22,6 @@ pre_enrollment = django.dispatch.Signal(providing_args=[
 post_certificate_creation = django.dispatch.Signal(providing_args=[
     "certificate",
 ])
+
+# This signal fires after a user is registered on the platform
+post_register = django.dispatch.Signal(providing_args=["user"])
