@@ -1,3 +1,4 @@
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 # #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 # eduNEXT helper translation file.
 # Copyright (C) 2020 eduNEXT
@@ -10,19 +11,81 @@
 # #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
 # edunext helper translation file for Portuguese.
 # Copyright (C) 2019 eduNEXT
+# #-#-#-#-#  edx_proctoring-js.po (edx-proctoring)  #-#-#-#-#
+# #-#-#-#-#  django.po (edx-proctoring)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2018 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2018.
+#
+# Translators:
+# CptOrange <saraluis12@hotmail.com>, 2016
+# Teresa Guerreiro <t.guerreiro@sapo.pt>, 2016
+# David Azevedo <davidc.azevedo@gmail.com>, 2016
+# Carlos <carlos.c.saraiva@gmail.com>, 2016
+# Developer QUEO <developer@queo.pt>, 2017
+# Manuela Silva <manuelarodsilva@gmail.com>, 2018
+# Rui Ribeiro <rui.ribeiro@fccn.pt>, 2019
+# Cátia Lopes <catia.lopes@bridgelk.com>, 2019
+# Luis Manuel Moreno <luis.moreno@edunext.co>, 2019
+#
+# #-#-#-#-#  openassessment-js.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs.po (edx-ora2)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2018 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+#
+# Translators:
+# Beatriz Magalhães <mbeatrizmagalhaes@gmail.com>, 2016
+# Beatriz Sousa <beatriz.sousa@bridgelk.com>, 2018
+# Cátia Lopes <catia.lopes@bridgelk.com>, 2018
+# Filipe Boleto <fboleto@gmail.com>, 2015
+# Manuela Silva <manuelarodsilva@gmail.com>, 2018
+# Manuela Silva <manuelarodsilva@gmail.com>, 2016
+# MS, 2016,2018
+# Nlaranjo <numicola@gmail.com>, 2014
+# Nlaranjo <numicola@gmail.com>, 2014
+# Rui Ribeiro <rui.ribeiro@fccn.pt>, 2019
+# Teresa Guerreiro <t.guerreiro@sapo.pt>, 2014
+# #-#-#-#-#  poll-js.po  #-#-#-#-#
+# Translators:
+# Carlos <carlos.c.saraiva@gmail.com>, 2018
+# Waldo Luís Ribeiro, 2018
+# Developer QUEO <developer@queo.pt>, 2018
+# Manuela Silva <manuelarodsilva@gmail.com>, 2018
+# Rui Ribeiro <rui.ribeiro@fccn.pt>, 2019
+#
+# #-#-#-#-#  problem_builder-js.po (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  underscore.po (PROJECT VERSION)  #-#-#-#-#
+# Translations template for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+# #-#-#-#-#  djangojs-partial.po (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Developer QUEO <developer@queo.pt>, 2019
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: edx-platform\n"
-"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-24 16:30+0000\n"
-"PO-Revision-Date: 2019-08-09 20:42+0000\n"
-"Last-Translator: Babel <techical@edunext.co>\n"
-"Language-Team: Portuguese (Portugal) (http://www.transifex.com/open-edx/edx-platform/language/pt_PT/) and eduNEXT\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-31 14:04+0300\n"
+"PO-Revision-Date: 2019-07-27 14:08+0000\n"
+"Last-Translator: Developer QUEO <developer@queo.pt>, 2019\n"
+"Language-Team: Portuguese (Portugal) (https://www.transifex.com/open-edx/teams/6205/pt_PT/)\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.7.0\n"
+"#-#-#-#-#  djangojs-partial.po (PACKAGE VERSION)  #-#-#-#-#\n"
 
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js common/static/bundles/commons.js
@@ -90,6 +153,7 @@ msgstr "Este link irá abrir numa janela modal/secundária"
 #: cms/templates/js/video-transcripts.underscore
 #: cms/templates/js/xblock-outline.underscore
 #: common/static/common/templates/discussion/templates.underscore
+#: poll/public/handlebars/poll_studio.handlebars
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -301,6 +365,7 @@ msgstr "Esta unidade tem problemas de validação."
 msgid "This component has validation issues."
 msgstr "Esta componente tem problemas de validação."
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -313,6 +378,7 @@ msgstr "Esta componente tem problemas de validação."
 #: common/static/common/templates/discussion/templates.underscore
 #: common/static/common/templates/image-modal.underscore
 #: openedx/features/learner_profile/static/learner_profile/templates/share_modal.underscore
+#: templates/proctored_exam/instructions.html
 msgid "Close"
 msgstr "Fechar"
 
@@ -975,6 +1041,7 @@ msgstr "Configurações"
 msgid "New {component_type}"
 msgstr "Nova {component_type}"
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. Translators: This message will be added to the front of messages of type
 #. warning,
 #. e.g. "Warning: this component has not been configured yet".
@@ -984,6 +1051,7 @@ msgstr "Nova {component_type}"
 msgid "Warning"
 msgstr "Aviso"
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. Translators: This message will be added to the front of messages of type
 #. error,
 #. e.g. "Error: required field is missing".
@@ -997,7 +1065,7 @@ msgstr "Aviso"
 #: lms/static/js/student_account/views/FinishAuthView.js
 #: lms/static/js/verify_student/views/payment_confirmation_step_view.js
 #: lms/static/js/verify_student/views/step_view.js
-#: lms/static/js/views/fields.js
+#: lms/static/js/views/fields.js admin.py
 msgid "Error"
 msgstr "Erro"
 
@@ -1116,18 +1184,21 @@ msgstr[0] "{earned}/{possible} ponto (não classificado)"
 msgstr[1] "{earned}/{possible} pontos (não classificado)"
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "The grading process is still running. Refresh the page to see updates."
 msgstr ""
 "O processo de classificação ainda está em execução. Atualize a página."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "Could not grade your answer. The submission was aborted."
 msgstr ""
 "Não foi possível classificar a sua resposta. A submissão foi cancelada."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid ""
 "Submission aborted! Sorry, your browser does not support file uploads. If "
@@ -1138,11 +1209,13 @@ msgstr ""
 "dos ficheiros. Por favor, utilize o Chrome ou o Safari."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "You submitted {filename}; only {allowedFiles} are allowed."
 msgstr "Submeteu {filename}; apenas {allowedFiles} são permitidos. "
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "Your file {filename} is too large (max size: {maxSize}MB)."
 msgstr ""
@@ -1150,11 +1223,13 @@ msgstr ""
 "{maxSize}MB)."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "You did not submit the required files: {requiredFiles}."
 msgstr "Não submeteu os ficheiros necessários: {requiredFiles}."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "You did not select any files to submit."
 msgstr "Não selecionou nenhum ficheiro para submissão."
@@ -1162,16 +1237,19 @@ msgstr "Não selecionou nenhum ficheiro para submissão."
 #. Translators: This is only translated to allow for reordering of label and
 #. associated status.;
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "{label}: {status}"
 msgstr "{label}: {status}"
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "This problem has been reset."
 msgstr "Este problema foi reiniciado."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: common/static/bundles/CapaModule.js
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "unsubmitted"
 msgstr "Não submetido"
@@ -1182,6 +1260,7 @@ msgid ""
 "{paragraph}=p;{preformatted}=pre;{heading3}=h3;{heading4}=h4;{heading5}=h5;{heading6}=h6"
 msgstr ""
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
@@ -1194,6 +1273,7 @@ msgstr "Parágrafo"
 msgid "Preformatted"
 msgstr "Pré-formatado"
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
@@ -1201,6 +1281,7 @@ msgstr "Pré-formatado"
 msgid "Heading 3"
 msgstr "Título 3"
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
@@ -1208,6 +1289,7 @@ msgstr "Título 3"
 msgid "Heading 4"
 msgstr "Título 4"
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
@@ -1215,6 +1297,7 @@ msgstr "Título 4"
 msgid "Heading 5"
 msgstr "Título 5"
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
@@ -1790,6 +1873,7 @@ msgstr "Célula de cabeçalho"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
+#: common/static/bundles/CapaDescriptor.js
 #: common/static/bundles/ProblemBlockStudio.js
 #: common/static/bundles/commons.js
 msgid "Header"
@@ -2650,26 +2734,31 @@ msgstr ""
 "Clique em Cancelar para regressar a esta página sem enviar as suas informações."
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
+#: common/static/bundles/CapaDescriptor.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "incorrect"
 msgstr "incorreto"
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
+#: common/static/bundles/CapaDescriptor.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "correct"
 msgstr "correto"
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
+#: common/static/bundles/CapaDescriptor.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "answer"
 msgstr "resposta"
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
+#: common/static/bundles/CapaDescriptor.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "Short explanation"
 msgstr "Curta explicação"
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
+#: common/static/bundles/CapaDescriptor.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid ""
 "If you use the Advanced Editor, this problem will be converted to XML and you will not be able to return to the Simple Editor Interface.\n"
@@ -2681,6 +2770,7 @@ msgstr ""
 "Prosseguir para o Editor Avançado e converter esse problema em XML?"
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
+#: common/static/bundles/CapaDescriptor.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "Explanation"
 msgstr "Explicação"
@@ -2705,139 +2795,164 @@ msgstr "Marcado como favorito"
 #: common/lib/xmodule/xmodule/js/src/video/09_play_pause_control.js
 #: common/lib/xmodule/xmodule/js/src/video/09_play_skip_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Play"
 msgstr "Reproduzir"
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/09_play_pause_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Pause"
 msgstr "Pausa"
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Mute"
 msgstr "Silenciar"
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Unmute"
 msgstr "Restabelecer som"
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/04_video_full_screen.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Exit full browser"
 msgstr "Sair do navegador com ecrán cheio "
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/04_video_full_screen.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Fill browser"
 msgstr "Preencher navegador"
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Speed"
 msgstr "Velocidade"
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/08_video_auto_advance_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Auto-advance"
 msgstr "Avançar Automático"
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Volume"
 msgstr "Volume"
 
 #. Translators: Volume level equals 0%.
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Muted"
 msgstr "Silenciado"
 
 #. Translators: Volume level in range ]0,20]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Very low"
 msgstr "muito baixo"
 
 #. Translators: Volume level in range ]20,40]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Low"
 msgstr "baixo"
 
 #. Translators: Volume level in range ]40,60]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Average"
 msgstr "média"
 
 #. Translators: Volume level in range ]60,80]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Loud"
 msgstr "alto"
 
 #. Translators: Volume level in range ]80,99]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Very loud"
 msgstr "muito alto"
 
 #. Translators: Volume level equals 100%.
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Maximum"
 msgstr "máximo"
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "This browser cannot play .mp4, .ogg, or .webm files."
 msgstr "Este browser não consegue reproduzir ficheiros .mp4, .ogg, ou .webm."
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Try using a different browser, such as Google Chrome."
 msgstr "Tente usar um browser diferente, como o Google Chrome."
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "High Definition"
 msgstr "Alta definição"
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "off"
 msgstr "desligado"
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "on"
 msgstr "ligado"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Video position. Press space to toggle playback"
 msgstr "Posição do vídeo. Pressione espaço para alternar a reprodução"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Video ended"
 msgstr "Vídeo terminou"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Video position"
 msgstr "posição vídeo"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "%(value)s hour"
 msgid_plural "%(value)s hours"
 msgstr[0] "%(value)s hora"
@@ -2845,6 +2960,7 @@ msgstr[1] "%(value)s horas"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "%(value)s minute"
 msgid_plural "%(value)s minutes"
 msgstr[0] "%(value)s minuto"
@@ -2852,6 +2968,7 @@ msgstr[1] "%(value)s minutos"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "%(value)s second"
 msgid_plural "%(value)s seconds"
 msgstr[0] "%(value)s segundo"
@@ -2859,6 +2976,7 @@ msgstr[1] "%(value)s segundos"
 
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid ""
 "Click on this button to mute or unmute this video or press UP or DOWN "
 "buttons to increase or decrease volume level."
@@ -2869,11 +2987,13 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Adjust video volume"
 msgstr "Ajustar nível de volume"
 
 #: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid ""
 "Press UP to enter the speed menu then use the UP and DOWN arrow keys to "
 "navigate the different speeds, then press ENTER to change to the selected "
@@ -2885,41 +3005,49 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Adjust video speed"
 msgstr "Ajustar velocidade do vídeo"
 
 #: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Video speed: "
 msgstr "Velocidade do vídeo:"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_play_skip_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Skip"
 msgstr "Saltar"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_poster.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Play video"
 msgstr "Reproduzir vídeo"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_skip_control.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Do not show again"
 msgstr "Não mostrar novamente"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Open language menu"
 msgstr "Abrir o menu de idiomas"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Transcript will be displayed when you start playing the video."
 msgstr "A transcrição será exibida quando começar a reproduzir o vídeo."
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid ""
 "Activating a link in this group will skip to the corresponding point in the "
 "video."
@@ -2929,21 +3057,25 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Video transcript"
 msgstr "Transcrição do vídeo"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Start of transcript. Skip to the end."
 msgstr "Início de transcrição. Saltar para o fim."
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "End of transcript. Skip to the start."
 msgstr "Fim de transcrição. Saltar para o início."
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid ""
 "Press the UP arrow key to enter the language menu then use UP and DOWN arrow"
 " keys to navigate language options. Press ENTER to change to the selected "
@@ -2955,28 +3087,88 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Hide closed captions"
 msgstr "Ocultar legendas"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "(Caption will be displayed when you start playing the video.)"
 msgstr "(As legendas serão exibidas quando iniciar a reprodução do vídeo.)"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Turn on closed captioning"
 msgstr "Ativar legendas"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Turn on transcripts"
 msgstr "Ativar transcrições"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
+#: common/static/bundles/VideoModule.js
 msgid "Turn off transcripts"
 msgstr "Desativar transcrições"
+
+#. Translators: %(num_points)s is the number of points possible (examples: 1,
+#. 3, 10).;
+#: common/static/bundles/CapaModule.js
+msgid "%(num_points)s point possible (graded, results hidden)"
+msgid_plural "%(num_points)s points possible (graded, results hidden)"
+msgstr[0] "%(num_points)s ponto possível (classificado, resultado oculto)"
+msgstr[1] ""
+"%(num_points)s pontos possíveis (classificados, resultados ocultos)"
+
+#. Translators: %(num_points)s is the number of points possible (examples: 1,
+#. 3, 10).;
+#: common/static/bundles/CapaModule.js
+msgid "%(num_points)s point possible (ungraded, results hidden)"
+msgid_plural "%(num_points)s points possible (ungraded, results hidden)"
+msgstr[0] ""
+"%(num_points)s ponto possível (não classificado, resultado escondido)"
+msgstr[1] ""
+"%(num_points)s pontos possíveis (não classificados, resultados escondidos)"
+
+#. Translators: %(num_points)s is the number of points possible (examples: 1,
+#. 3, 10).;
+#: common/static/bundles/CapaModule.js
+msgid "%(num_points)s point possible (graded)"
+msgid_plural "%(num_points)s points possible (graded)"
+msgstr[0] "%(num_points)s ponto possível (classificados)"
+msgstr[1] "%(num_points)s pontos possíveis (classificados)"
+
+#. Translators: %(num_points)s is the number of points possible (examples: 1,
+#. 3, 10).;
+#: common/static/bundles/CapaModule.js
+msgid "%(num_points)s point possible (ungraded)"
+msgid_plural "%(num_points)s points possible (ungraded)"
+msgstr[0] "%(num_points)s ponto possível (não classificado) "
+msgstr[1] "%(num_points)s pontos possíveis (não classificados) "
+
+#. Translators: %(earned)s is the number of points earned. %(possible)s is the
+#. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
+#. points will always be at least 1. We pluralize based on the total number of
+#. points (example: 0/1 point; 1/2 points);
+#: common/static/bundles/CapaModule.js
+msgid "%(earned)s/%(possible)s point (graded)"
+msgid_plural "%(earned)s/%(possible)s points (graded)"
+msgstr[0] "%(earned)s/%(possible)s ponto (classificado) "
+msgstr[1] "%(earned)s/%(possible)s pontos (classificado) "
+
+#. Translators: %(earned)s is the number of points earned. %(possible)s is the
+#. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
+#. points will always be at least 1. We pluralize based on the total number of
+#. points (example: 0/1 point; 1/2 points);
+#: common/static/bundles/CapaModule.js
+msgid "%(earned)s/%(possible)s point (ungraded)"
+msgid_plural "%(earned)s/%(possible)s points (ungraded)"
+msgstr[0] "%(earned)s/%(possible)s ponto (não classificado)"
+msgstr[1] "%(earned)s/%(possible)s pontos (não classificados)"
 
 #: common/static/bundles/CourseGoals.js
 #: openedx/features/course_experience/static/course_experience/js/CourseGoals.js
@@ -3442,21 +3634,6 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-msgid ""
-"You may also lose access to verified certificates and other program "
-"credentials like MicroMasters certificates. If you want to make a copy of "
-"these for your records before proceeding with deletion, follow the "
-"instructions for {htmlStart}printing or downloading a certificate{htmlEnd}."
-msgstr ""
-"Poderá também perder acesso a certificados verificados e a outros programas "
-"de certificação como os MicroMasters. Se pretender fazer uma cópia destes "
-"registos antes de apagar a sua conta, siga as instruções para "
-"{htmlStart}imprimir ou transferir um certificado{htmlEnd}."
-
-#: common/static/bundles/StudentAccountDeletion.js
-#: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
 "Before proceeding, please {htmlStart}unlink all social media "
 "accounts{htmlEnd}."
@@ -3469,15 +3646,6 @@ msgstr ""
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid "Before proceeding, please {htmlStart}activate your account{htmlEnd}."
 msgstr "Antes de avançar, por favor {htmlStart}active a sua conta{htmlEnd}."
-
-#: common/static/bundles/StudentAccountDeletion.js
-#: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
-msgid ""
-"{htmlStart}Want to change your email, name, or password instead?{htmlEnd}"
-msgstr ""
-"{htmlStart}Alternativamente, pretende alterar o seu email, nome ou palavra-"
-"passe?{htmlEnd}"
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
@@ -5893,9 +6061,10 @@ msgstr "Identificação da tarefa"
 msgid "Requester"
 msgstr "Requerente"
 
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. Translators: A timestamp of when a task (eg, sending email) was submitted
 #. appears after this
-#: lms/static/js/instructor_dashboard/util.js
+#: lms/static/js/instructor_dashboard/util.js admin.py
 msgid "Submitted"
 msgstr "Submetido"
 
@@ -7649,6 +7818,7 @@ msgstr "Ações"
 
 #: cms/templates/js/course-outline.underscore
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+#: api.py
 msgid "Timed Exam"
 msgstr "Exame Cronometrado"
 
@@ -7728,6 +7898,8 @@ msgstr "Adicionar uma resposta:"
 
 #: common/static/common/templates/discussion/templates.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: poll/public/handlebars/poll_results.handlebars
+#: poll/public/handlebars/survey_results.handlebars
 msgid "Submit"
 msgstr "Submeter"
 
@@ -7970,6 +8142,7 @@ msgstr ""
 "partilham ideias e iniciam conversas. (Obrigatório)"
 
 #: common/static/common/templates/discussion/templates.underscore
+#: poll/public/handlebars/poll_studio.handlebars
 msgid "Question"
 msgstr "Questão"
 
@@ -10058,6 +10231,7 @@ msgid "Allowance Type"
 msgstr ""
 
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+#: models.py
 msgid "Additional Time (minutes)"
 msgstr "Tempo adicional (minutos)"
 
@@ -11971,3 +12145,1381 @@ msgstr ""
 #: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
 msgid "Use Current Transcript"
 msgstr "Utilizar a Transcrição Atual"
+
+#: admin.py
+msgid "internally reviewed"
+msgstr "revisto internamente"
+
+#: admin.py
+msgid "All Unreviewed"
+msgstr "Todos Por Rever"
+
+#: admin.py
+msgid "All Unreviewed Failures"
+msgstr "Todas as Falhas não Revistas"
+
+#: admin.py
+msgid "active proctored exams"
+msgstr "exames supervisionados ativos"
+
+#: admin.py
+msgid "courses with active proctored exams"
+msgstr "cursos com exames supervisionados ativos"
+
+#: admin.py
+msgid "Course Id"
+msgstr "ID do curso"
+
+#: admin.py
+msgid "Created"
+msgstr "Criado"
+
+#: admin.py
+msgid "Download Software Clicked"
+msgstr "Transferir Software"
+
+#: admin.py
+msgid "Ready To Start"
+msgstr "Pronto Para Começar"
+
+#: admin.py
+msgid "Started"
+msgstr "Iniciado"
+
+#: admin.py
+msgid "Ready To Submit"
+msgstr "Pronto Para Submeter"
+
+#: admin.py
+msgid "Declined"
+msgstr "Recusado"
+
+#: admin.py
+msgid "Timed Out"
+msgstr "Expirado"
+
+#: admin.py
+msgid "Second Review Required"
+msgstr "Segunda Revisão Obrigatória"
+
+#: admin.py
+msgid "Verified"
+msgstr "Validado"
+
+#: admin.py
+msgid "Rejected"
+msgstr "Não aprovado"
+
+#: api.py
+msgid "your course"
+msgstr "o seu curso"
+
+#: api.py
+#, python-brace-format
+msgid "Proctoring Session Results Update for {course_name} {exam_name}"
+msgstr ""
+"Atualização dos resultados da sessão supervisionada:  {course_name} "
+"{exam_name}"
+
+#: api.py
+msgid "Taking As Proctored Exam"
+msgstr "Tomando como exame Proctored"
+
+#: api.py
+msgid "Proctored Option Available"
+msgstr "Opção de Supervisão Disponível"
+
+#: api.py
+msgid "Taking As Open Exam"
+msgstr "Tomando como o exame aberto"
+
+#: api.py
+msgid "Pending Session Review"
+msgstr "Revisão de sessão pendente"
+
+#: api.py
+msgid "Passed Proctoring"
+msgstr "Proctoring passado"
+
+#: api.py
+msgid "Failed Proctoring"
+msgstr "Proctoring falhou"
+
+#: api.py
+msgid "Proctored Option No Longer Available"
+msgstr "Opção Proctored não está mais disponível"
+
+#: api.py
+msgid "Ungraded Practice Exam"
+msgstr "Exame de prática não graduada"
+
+#: api.py
+msgid "Practice Exam Completed"
+msgstr "Exame de prática concluído"
+
+#: api.py
+msgid "Practice Exam Failed"
+msgstr "Exame de prática falhou"
+
+#: models.py
+msgid "pending"
+msgstr "pendente"
+
+#: models.py
+msgid "satisfactory"
+msgstr "satisfatório"
+
+#: models.py
+msgid "unsatisfactory"
+msgstr "não satisfatório"
+
+#: models.py
+msgid "Taking as Proctored"
+msgstr "Ministrado como Supervisionado"
+
+#: models.py
+msgid "Is Sample Attempt"
+msgstr "É a tentativa de demonstração"
+
+#: models.py
+msgid "Review Policy Exception"
+msgstr "Rever a exceção de política"
+
+#: templates/emails/proctoring_attempt_status_email.html
+#, python-format
+msgid ""
+"\n"
+"\n"
+"This email is to let you know that the status of your proctoring session review for %(exam_name)s in\n"
+"<a href=\"%(course_url)s\">%(course_name)s </a> is %(status)s. If you have any questions about proctoring,\n"
+"contact %(platform)s support at %(contact_email)s.\n"
+"\n"
+msgstr ""
+"\n"
+"Este email é para que você saiba que o status de sua revisão de sessão supervisionar para %(exam_name)s em <a href=\"%(course_url)s\">%(course_name)s</a> é %(status)s. Se você tiver alguma dúvida sobre proctoring, contate o %(platform)s Suporte em %(contact_email)s.\n"
+"\n"
+
+#: templates/practice_exam/entrance.html
+msgid ""
+"\n"
+"      Try a proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"Experimente um exame supervisionado\n"
+" "
+
+#: templates/practice_exam/entrance.html
+msgid ""
+"\n"
+"      Get familiar with proctoring for real exams later in the course. This practice exam has no impact\n"
+"      on your grade in the course.\n"
+"    "
+msgstr ""
+"\n"
+"Familiarize-se para exames supervisionados reais mais tarde durante o curso. Este exame de teste não tem impacto na sua nota no curso.\n"
+"  "
+
+#: templates/practice_exam/entrance.html
+msgid "Continue to my practice exam"
+msgstr "Continue para o meu exame de prática"
+
+#: templates/practice_exam/entrance.html
+msgid ""
+"\n"
+"        You will be guided through steps to set up online proctoring software and to perform various checks.\n"
+"      "
+msgstr ""
+"\n"
+"        Será guiado através das etapas para instalar o software de supervisão online e para executar as verificações.\n"
+"      "
+
+#: templates/practice_exam/error.html
+msgid ""
+"\n"
+"      There was a problem with your practice proctoring session\n"
+"    "
+msgstr ""
+"\n"
+"      Houve um problema com a sua sessão prática\n"
+"    "
+
+#: templates/practice_exam/error.html
+msgid ""
+"\n"
+"      Your practice proctoring results: <b class=\"failure\"> Unsatisfactory </b>\n"
+"    "
+msgstr ""
+"\n"
+"      Resultado da sessão de supervisão: <b class=\"failure\"> Não Satisfatório </b>\n"
+"    "
+
+#: templates/practice_exam/error.html
+msgid ""
+"\n"
+"      Your proctoring session ended before you completed this practice exam.\n"
+"      You can retry this practice exam if you had problems setting up the online proctoring software.\n"
+"    "
+msgstr ""
+"\n"
+"      A sua sessão terminou antes de concluir este exame prático.\n"
+"      Se teve problemas a configurar o software de supervisão pode repetir este exame.\n"
+" "
+
+#: templates/practice_exam/error.html
+msgid "Try this practice exam again"
+msgstr "Tente novamente este exame prático"
+
+#: templates/practice_exam/submitted.html
+msgid ""
+"\n"
+"      You have submitted this practice proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"      Submeteu este exame prático\n"
+"    "
+
+#: templates/practice_exam/submitted.html
+msgid ""
+"\n"
+"      Practice exams do not affect your grade or your credit eligibility.\n"
+"      You have completed this practice exam and can continue with your course work.\n"
+"    "
+msgstr ""
+"\n"
+"Os exames práticos não afetam sua classe ou sua elegibilidade de crédito.\n"
+"      Você concluiu este exame de prática e pode continuar com o seu trabalho de curso."
+
+#: templates/practice_exam/submitted.html
+msgid "You can also retry this practice exam"
+msgstr "Também pode repetir este exame prático"
+
+#: templates/proctored_exam/confirm-decline.html
+msgid ""
+"\n"
+"        Are you sure you want to take this exam without proctoring?\n"
+"      "
+msgstr ""
+"\n"
+"        Tem certeza que quer fazer este exame sem supervisão?\n"
+"      "
+
+#: templates/proctored_exam/confirm-decline.html
+msgid ""
+"\n"
+"        If you take this exam without proctoring, you will <strong> no longer be eligible for academic credit. </strong>\n"
+"      "
+msgstr ""
+"\n"
+"Se você fizer este exame sem proctoring, você <strong> já não pode ser elegível para o crédito académico. </strong>"
+
+#: templates/proctored_exam/confirm-decline.html
+msgid "Continue Exam Without Proctoring"
+msgstr "Continuar o exame sem Proctoring"
+
+#: templates/proctored_exam/confirm-decline.html
+msgid "Go Back"
+msgstr "Voltar atrás"
+
+#: templates/proctored_exam/entrance.html
+#: templates/proctored_exam/failed-prerequisites.html
+#: templates/proctored_exam/pending-prerequisites.html
+msgid ""
+"\n"
+"      This exam is proctored\n"
+"    "
+msgstr ""
+"\n"
+"Este exame é supervisionado"
+
+#: templates/proctored_exam/entrance.html
+msgid ""
+"\n"
+"      To be eligible for course credit or for a MicroMasters credential, you must pass the proctoring review for this exam.\n"
+"    "
+msgstr ""
+"\n"
+"Para ser elegível para o crédito do curso ou para uma credencial de Micromasters, você deve passar a revisão supervisionar para este exame."
+
+#: templates/proctored_exam/entrance.html
+msgid "Continue to my proctored exam. I want to be eligible for credit."
+msgstr ""
+"Continue para o meu exame supervisionado. Eu quero ser elegível para o "
+"crédito."
+
+#: templates/proctored_exam/entrance.html
+msgid ""
+"\n"
+"        You will be guided through steps to set up online proctoring software and to perform various checks.</br>\n"
+"      "
+msgstr ""
+"\n"
+"Você será guiado através das etapas para setup o software supervisionar em linha e para executar várias verificações. </br>"
+
+#: templates/proctored_exam/error.html
+msgid ""
+"\n"
+"      Error with proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"Erro com o exame supervisionado"
+
+#: templates/proctored_exam/error.html
+#, python-format
+msgid ""
+"\n"
+"      A technical error has occurred with your proctored exam. To resolve this problem, contact\n"
+"      <a href=\"mailto:%(tech_support_email)s\">technical support</a>. All exam data, including answers\n"
+"      for completed problems, has been lost. When the problem is resolved you will need to restart\n"
+"      the exam and complete all problems again.\n"
+"    "
+msgstr ""
+"\n"
+"Ocorreu um erro técnico com o seu exame supervisionado. Para resolver esse problema, contate o <a href=\"mailto:%(tech_support_email)s\">suporte técnico</a>. Todos os dados do exame, incluindo respostas para problemas concluídos, foram perdidos. Quando o problema for resolvido, você precisará reiniciar o exame e concluir todos os problemas novamente."
+
+#: templates/proctored_exam/error.html templates/proctored_exam/expired.html
+#: templates/proctored_exam/rejected.html
+#: templates/proctored_exam/submitted.html
+#: templates/proctored_exam/verified.html
+#, python-format
+msgid ""
+"\n"
+"      View your credit eligibility status on your <a href=\"%(progress_page_url)s\">Progress</a> page.\n"
+"    "
+msgstr ""
+"\n"
+"Exiba seu status de elegibilidade de crédito na sua <a href=\"%(progress_page_url)s\"> página de progresso </a>."
+
+#: templates/proctored_exam/error.html templates/proctored_exam/rejected.html
+msgid ""
+"\n"
+"      If you have concerns about your proctoring session results, contact your course team.\n"
+"    "
+msgstr ""
+"\n"
+"Se você tiver dúvidas sobre os resultados da sessão de supervisionar, entre em contato com sua equipe de cursos."
+
+#: templates/proctored_exam/expired.html templates/timed_exam/expired.html
+msgid ""
+"\n"
+"      The due date for this exam has passed\n"
+"    "
+msgstr ""
+"\n"
+"A data de vencimento para este exame passou"
+
+#: templates/proctored_exam/expired.html templates/timed_exam/expired.html
+msgid ""
+"\n"
+"      Because the due date has passed, you are no longer able to take this exam.\n"
+"    "
+msgstr ""
+"\n"
+"Porque a data de vencimento já passou, você não é mais capaz de fazer este exame."
+
+#: templates/proctored_exam/failed-prerequisites.html
+#, python-format
+msgid ""
+"\n"
+"    You did not satisfy the requirements for taking this exam with proctoring, and are not eligible for credit. See your <a href=\"%(progress_page_url)s\">Progress</a> page for a list of requirements and your status for each.\n"
+"    "
+msgstr ""
+"\n"
+"Você não satisfez os requisitos para fazer este exame com proctoring, e não são elegíveis para crédito. Consulte a <a href=\"%(progress_page_url)s\">Página de Progresso </a> para obter uma lista de requisitos e seu status para cada um deles."
+
+#: templates/proctored_exam/failed-prerequisites.html
+msgid ""
+"\n"
+"    You did not satisfy the following prerequisites:\n"
+"    "
+msgstr ""
+"\n"
+"    Não reúne os seguintes pré-requisitos:\n"
+"    "
+
+#: templates/proctored_exam/failed-prerequisites.html
+msgid ""
+"\n"
+"        Due to unsatisfied prerequisites, you can only take this exam without proctoring.\n"
+"      "
+msgstr ""
+"\n"
+"        Por não reunir os pré-requisitos necessários, apenas pode realizar este exame sem supervisão.\n"
+"      "
+
+#: templates/proctored_exam/failed-prerequisites.html
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your requirements for course credit, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"Se você tiver dúvidas sobre o status de seus requisitos para o crédito do curso, contate o suporte %(platform_name)s."
+
+#: templates/proctored_exam/footer.html
+msgid ""
+"\n"
+"        About Proctored Exams\n"
+"        "
+msgstr ""
+"\n"
+"Sobre os exames Proctored"
+
+#: templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                Complete your verification before starting the proctored exam.\n"
+"            "
+msgstr ""
+"\n"
+"Complete a sua verificação antes de iniciar o exame supervisionado."
+
+#: templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                You must successfully complete identity verification before you can start the proctored exam.\n"
+"            "
+msgstr ""
+"\n"
+"Você deve concluir com êxito a verificação de identidade antes de poder iniciar o exame supervisionado."
+
+#: templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                    Your verification is pending. Results should be available 2-3 days after you\n"
+"                    submit your verification.\n"
+"                "
+msgstr ""
+"\n"
+"Sua verificação está pendente. Os resultados devem estar disponíveis 2-3 dias depois de submeter a sua verificação."
+
+#: templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                    Your verification attempt failed. Please read our guidelines to make\n"
+"                    sure you understand the requirements for successfully completing verification,\n"
+"                    then try again.\n"
+"                "
+msgstr ""
+"\n"
+"Sua tentativa de verificação falhou. Por favor, leia as nossas orientações para se certificar de que compreende os requisitos para concluir a verificação com êxito e tente novamente."
+
+#: templates/proctored_exam/id_verification.html
+msgid "Retry Verification"
+msgstr "Repita a verificação"
+
+#: templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                    Your verification has expired. You must successfully complete a new identity verification\n"
+"                    before you can start the proctored exam.\n"
+"                "
+msgstr ""
+"\n"
+"Sua verificação expirou. Você deve concluir com êxito uma nova verificação de identidade antes de iniciar o exame supervisionado."
+
+#: templates/proctored_exam/id_verification.html
+msgid "Continue to Verification"
+msgstr "Continuar a verificação"
+
+#: templates/proctored_exam/id_verification.html
+msgid ""
+"\n"
+"                    Make sure you are on a computer with a webcam, and that you have valid photo identification\n"
+"                    such as a driver's license or passport, before you continue.\n"
+"                "
+msgstr ""
+"\n"
+"Certifique-se de que você está em um computador com uma webcam, e que você tem identificação de foto válida, como uma carteira de motorista ou passaporte, antes de continuar."
+
+#: templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"      Follow these steps to set up and start your proctored exam.\n"
+"    "
+msgstr ""
+"\n"
+"Siga estas etapas para configurar e iniciar o exame supervisionado."
+
+#: templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        1. Copy this unique exam code. You will be prompted to paste this code later before you start the exam.\n"
+"      "
+msgstr ""
+"\n"
+"         1. Copie este código de exame exclusivo. Mais tarde, ser-lhe-á solicitado que cole este código antes de iniciar o exame.\n"
+"      "
+
+#: templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        Select the exam code, then copy it using Command+C (Mac) or Control+C (Windows).\n"
+"      "
+msgstr ""
+"\n"
+"Selecione o código do exame e copie-o usando Command + C (Mac) ou Control + C (Windows)."
+
+#: templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        2. Follow the link below to set up proctoring.\n"
+"      "
+msgstr ""
+"\n"
+"2. Siga o link abaixo para configurar o proctoring."
+
+#: templates/proctored_exam/instructions.html
+msgid "Start System Check"
+msgstr "Iniciar verificação do sistema"
+
+#: templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        A new window will open. You will run a system check before downloading the proctoring application.\n"
+"      "
+msgstr ""
+"\n"
+"UMA nova janela será aberta. Você executará uma verificação do sistema antes de baixar o aplicativo de supervisionar."
+
+#: templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"        You will be asked to verify your identity as part of the proctoring exam set up.\n"
+"        Make sure you are on a computer with a webcam, and that you have valid photo identification\n"
+"        such as a driver's license or passport, before you continue.\n"
+"      "
+msgstr ""
+"\n"
+"Você será solicitado a verificar sua identidade como parte do exame de supervisionar configurado.\n"
+"        Certifique-se de que você está em um computador com uma webcam, e que você tem identificação de foto válida, como uma carteira de motorista ou passaporte, antes de continuar."
+
+#: templates/proctored_exam/instructions.html
+msgid ""
+"\n"
+"          3. When you have finished setting up proctoring, start the exam.\n"
+"        "
+msgstr ""
+"\n"
+"3. quando terminar de configurar o proctoring, inicie o exame."
+
+#: templates/proctored_exam/instructions.html
+msgid "Start Proctored Exam"
+msgstr "Iniciar exame Proctored"
+
+#: templates/proctored_exam/instructions.html
+msgid "Cannot Start Proctored Exam"
+msgstr "Não é possível iniciar o exame Proctored"
+
+#: templates/proctored_exam/instructions.html
+#: templates/proctored_exam/proctoring_opt_out_button.html
+msgid "Take this exam without proctoring."
+msgstr "Faça este exame sem proctoring."
+
+#: templates/proctored_exam/instructions.html
+msgid "Doing so means that you are no longer eligible for academic credit."
+msgstr "Isso significa que você não é mais elegível para o crédito acadêmico."
+
+#: templates/proctored_exam/pending-prerequisites.html
+#, python-format
+msgid ""
+"\n"
+"    You have not completed the prerequisites for this exam. All requirements must be satisfied before you can take this proctored exam and be eligible for credit. See your <a href=\"%(progress_page_url)s\">Progress</a> page for a list of requirements in the order that they must be completed.\n"
+"    "
+msgstr ""
+"\n"
+"    Não reúne os pré-requisitos para este exame. Todos os requisitos devem ser cumpridos para realizar este exame supervisionado e ser elegível para o crédito. Consulte a sua página de <a href=\"%(progress_page_url)s\">Progresso</a> para obter a lista de requisitos.\n"
+"    "
+
+#: templates/proctored_exam/pending-prerequisites.html
+msgid ""
+"\n"
+"    The following prerequisites are in a <strong>pending</strong> state and must be successfully completed before you can proceed:\n"
+"    "
+msgstr ""
+"\n"
+"Os seguintes pré-requisitos estão num estado <strong>pendente</strong> e devem ser concluídos com sucesso antes de prosseguir:\n"
+"  "
+
+#: templates/proctored_exam/pending-prerequisites.html
+#, python-format
+msgid ""
+"\n"
+"    You can take this exam with proctoring only when all prerequisites have been successfully completed. Check your <a href=\"%(progress_page_url)s\">Progress</a>  page to see if prerequisite results have been updated. You can also take this exam now without proctoring, but you will not be eligible for credit.\n"
+"    "
+msgstr ""
+"\n"
+"    Apenas pode realizar este exame supervisionado quando cumprir os requisitos necessários. Consulte a sua página de<a href=\"%(progress_page_url)s\">Progresso</a>  para verificar se os resultados dos pré-requisitos já foram atualizados. Pode realizar o exame sem supervisão, mas não será elegível para o crédito.\n"
+"    "
+
+#: templates/proctored_exam/proctoring_launch_callback.html
+msgid " Your Proctoring Session Has Started "
+msgstr "Sua sessão de Proctoring foi iniciada"
+
+#: templates/proctored_exam/proctoring_launch_callback.html
+#, python-format
+msgid ""
+" From this point in time, you must follow the <a "
+"href=\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">online "
+"proctoring rules</a> to pass the proctoring review for your exam. "
+msgstr ""
+" A partir deste momento, você deve seguir o <a "
+"href=\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">regras de "
+"supervisionamento online</a> para passar a revisão supervisionar para o seu "
+"exame.  "
+
+#: templates/proctored_exam/proctoring_launch_callback.html
+msgid ""
+"\n"
+"            Do not close this window before you finish your exam. if you close this window, your proctoring session ends, and you will not successfully complete the proctored exam.\n"
+"          "
+msgstr ""
+"\n"
+"Não feche esta janela antes de terminar o exame. Se você fechar esta janela, sua sessão de supervisionar termina, e você não concluirá com êxito o exame supervisionado."
+
+#: templates/proctored_exam/proctoring_launch_callback.html
+#, python-format
+msgid ""
+"\n"
+"            Return to the %(platform_name)s course window to start your exam. When you have finished your exam and\n"
+"            have marked it as complete, you can close this window to end the proctoring session\n"
+"            and upload your proctoring session data for review.\n"
+"          "
+msgstr ""
+"\n"
+"Retorne à janela do curso %(platform_name)s para iniciar o exame. Quando terminar o exame e marcá-lo como completo, você pode fechar esta janela para encerrar a sessão de supervisionar e carregar seus dados de sessão de supervisionar para revisão."
+
+#: templates/proctored_exam/proctoring_opt_out_button.html
+msgid ""
+"\n"
+"        I am not interested in academic credit.\n"
+"      "
+msgstr ""
+"\n"
+"Não estou interessado em crédito académico."
+
+#: templates/proctored_exam/ready_to_start.html
+msgid ""
+"\n"
+"      Follow these instructions\n"
+"    "
+msgstr ""
+"\n"
+"Siga estas instruções"
+
+#: templates/proctored_exam/ready_to_start.html
+#, python-format
+msgid ""
+"\n"
+"        &#8226; When you start your exam you will have %(total_time)s to complete it. </br>\n"
+"        &#8226; You cannot stop the timer once you start. </br>\n"
+"        &#8226; If time expires before you finish your exam, your completed answers will be\n"
+"                submitted for review. </br>\n"
+"      "
+msgstr ""
+"\n"
+"        &#8226; Quando começar o seu exame terá %(total_time)s para o completar. </br>\n"
+"        &#8226; A partir do momento que começar o exame não poderá parar o cronómetro. </br>\n"
+"        &#8226; Se o tempo expirar antes de ter terminado o exame, as respostas completas serão\n"
+"                submetidas para revisão. </br>\n"
+"      "
+
+#: templates/proctored_exam/ready_to_start.html
+msgid ""
+"\n"
+"          Start my exam\n"
+"        "
+msgstr ""
+"\n"
+"Começar o meu exame"
+
+#: templates/proctored_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Are you sure you want to end your proctored exam?\n"
+"    "
+msgstr ""
+"\n"
+"Tem certeza que quer terminar o seu exame supervisionado?"
+
+#: templates/proctored_exam/ready_to_submit.html
+#: templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Make sure that you have selected \"Submit\" for each problem before you submit your exam.\n"
+"    "
+msgstr ""
+"\n"
+"Certifique-se de que seleccionou \"submeter\" para cada problema antes de submeter o exame."
+
+#: templates/proctored_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      After you submit your exam, your responses are graded and your proctoring session is reviewed.\n"
+"      You might be eligible to earn academic credit for this course if you complete all required exams\n"
+"      as well as achieve a final grade that meets credit requirements for the course.\n"
+"    "
+msgstr ""
+"\n"
+"Depois de submeter o seu exame, as suas respostas são classificadas e a sua sessão de supervisionar é revista.\n"
+"      Você pode ser elegível para ganhar crédito acadêmico para este curso se você completar todos os exames necessários, bem como obter uma nota final que atenda aos requisitos de crédito para o curso."
+
+#: templates/proctored_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Yes, end my proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"Sim, terminar o meu exame supervisionado"
+
+#: templates/proctored_exam/ready_to_submit.html
+msgid ""
+"\n"
+"        No, I'd like to continue working\n"
+"      "
+msgstr ""
+"\n"
+"Não, eu gostaria de continuar trabalhando."
+
+#: templates/proctored_exam/rejected.html
+msgid ""
+"\n"
+"      Your proctoring session was reviewed and did not pass requirements\n"
+"    "
+msgstr ""
+"\n"
+"Sua sessão de supervisionada foi revista e não passou requisitos"
+
+#: templates/proctored_exam/rejected.html
+#, python-format
+msgid ""
+"\n"
+"      You are no longer eligible for academic credit for this course, regardless of your final grade.\n"
+"      If you have questions about the status of your proctored exam results, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"Você não é mais elegível para o crédito acadêmico para este curso, independentemente da sua nota final.\n"
+"      Se você tiver dúvidas sobre o status dos resultados do exame supervisionado, entre em contato com o suporte %(platform_name)s."
+
+#: templates/proctored_exam/submitted.html
+msgid ""
+"\n"
+"      You have submitted this proctored exam for review\n"
+"    "
+msgstr ""
+"\n"
+"Você submeteu este exame supervisionado para revisão"
+
+#: templates/proctored_exam/submitted.html
+msgid ""
+"\n"
+"      If the proctoring software window is still open, you can close it now. Confirm that you want to quit the application when you are prompted.\n"
+"    "
+msgstr ""
+"\n"
+"      Se a janela de supervisão de avaliação ainda estiver aberta, pode fechá-la agora. Confirme que pretende sair da aplicação quando lhe for pedido.\n"
+"    "
+
+#: templates/proctored_exam/submitted.html
+msgid ""
+"\n"
+"      &#8226; After you quit the proctoring session, the recorded data is uploaded for review. </br>\n"
+"      &#8226; Proctoring results are usually available within 5 business days after you submit your exam.\n"
+"    "
+msgstr ""
+"\n"
+"&#8226; depois de encerrar a sessão de supervisionar, os dados gravados são carregados para revisão. </br> \n"
+"&#8226; os resultados de Proctoring estão geralmente disponíveis dentro de 5 dias úteis depois que você submete seu exame."
+
+#: templates/proctored_exam/submitted.html
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your proctored exam results, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"Se você tiver dúvidas sobre o status dos resultados do exame supervisionado, entre em contato com o suporte %(platform_name)s."
+
+#: templates/proctored_exam/verified.html
+msgid ""
+"\n"
+"      Your proctoring session was reviewed and passed all requirements\n"
+"    "
+msgstr ""
+"\n"
+"Sua sessão supervisionada foi revista e passou todos os requisitos"
+
+#: templates/proctored_exam/verified.html
+msgid ""
+"\n"
+"      You are eligible to purchase academic credit for this course if you complete all required exams\n"
+"      and also achieve a final grade that meets the credit requirements for the course.\n"
+"    "
+msgstr ""
+"\n"
+"Você é elegível para comprar crédito acadêmico para este curso se você completar todos os exames necessários e também conseguir uma nota final que atenda aos requisitos de crédito para o curso."
+
+#: templates/proctored_exam/visit_exam_content.html
+msgid ""
+"\n"
+"      To view your exam questions and responses, select <strong>View my exam</strong>. The exam's review status is shown in the left navigation pane.\n"
+"    "
+msgstr ""
+"\n"
+"Para ver suas perguntas e respostas do exame, selecione <strong>ver meu</strong> de exame. O status de revisão do exame é mostrado no painel de navegação esquerdo."
+
+#: templates/proctored_exam/visit_exam_content.html
+msgid "View my exam"
+msgstr "Ver o meu exame"
+
+#: templates/proctored_exam/visit_exam_content.html
+msgid ""
+"\n"
+"      After the due date for this exam has passed, you will be able to review your answers on this page.\n"
+"    "
+msgstr ""
+"\n"
+"Após a data de vencimento para este exame passou, você será capaz de rever as suas respostas nesta página."
+
+#: templates/timed_exam/entrance.html
+#, python-format
+msgid ""
+"\n"
+"    %(exam_name)s is a Timed Exam (%(total_time)s)\n"
+"    "
+msgstr ""
+"\n"
+"    %(exam_name)s é um exame cronometrado (%(total_time)s)\n"
+"    "
+
+#: templates/timed_exam/entrance.html
+msgid "This exam has a time limit associated with it."
+msgstr "Este exame tem um limite de tempo associado a ele."
+
+#: templates/timed_exam/entrance.html
+msgid "To pass this exam, you must complete the problems in the time allowed."
+msgstr ""
+"Para passar neste exame, você deve completar os problemas no tempo "
+"permitido."
+
+#: templates/timed_exam/entrance.html
+msgid "After you select "
+msgstr "Depois de selecionar"
+
+#: templates/timed_exam/entrance.html
+msgid "I am ready to start this timed exam,"
+msgstr "Estou pronto para começar este exame cronometrado,"
+
+#: templates/timed_exam/entrance.html
+msgid "you will have "
+msgstr "dispõe apenas de"
+
+#: templates/timed_exam/entrance.html
+msgid " to complete and submit the exam."
+msgstr "para completar e submeter o exame."
+
+#: templates/timed_exam/entrance.html
+msgid ""
+"\n"
+"        I am ready to start this timed exam.\n"
+"      "
+msgstr ""
+"\n"
+"       Estou pronto para começar este exame cronometrado..\n"
+"      "
+
+#: templates/timed_exam/footer.html
+msgid "Can I request additional time to complete my exam?"
+msgstr "Posso pedir mais tempo para completar o meu exame?"
+
+#: templates/timed_exam/footer.html
+msgid ""
+"\n"
+"      If you have disabilities,\n"
+"      you might be eligible for an additional time allowance on timed exams.\n"
+"      Ask your course team for information about additional time allowances.\n"
+"    "
+msgstr ""
+"\n"
+"      Se tiver alguma incapacidade,\n"
+"      poderá ser elegível para uma extensão do tempo de realização de um exame cronometrado.\n"
+"      Questione a sua equipa do curso para mais informação acerca das permissões para obter tempo extra.\n"
+"  "
+
+#: templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Are you sure that you want to submit your timed exam?\n"
+"    "
+msgstr ""
+"\n"
+"      Tem a certeza de que deseja submeter o seu exame cronometrado?\n"
+"    "
+
+#: templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      After you submit your exam, your exam will be graded.\n"
+"    "
+msgstr ""
+"\n"
+"Depois de submeter seu exame, seu exame será classificado."
+
+#: templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"      Yes, submit my timed exam.\n"
+"    "
+msgstr ""
+"\n"
+"      Sim, submeter o meu exame cronometrado.\n"
+"    "
+
+#: templates/timed_exam/ready_to_submit.html
+msgid ""
+"\n"
+"        No, I want to continue working.\n"
+"      "
+msgstr ""
+"\n"
+"Não, pretendo quero continuar a trabalhar."
+
+#: templates/timed_exam/submitted.html
+msgid ""
+"\n"
+"        The time allotted for this exam has expired. Your exam has been submitted and any work you completed will be graded.\n"
+"      "
+msgstr ""
+"\n"
+"O tempo alocado para este exame expirou. Seu exame foi submetido e qualquer trabalho que você completou será classificado."
+
+#: templates/timed_exam/submitted.html
+msgid ""
+"\n"
+"        You have submitted your timed exam.\n"
+"      "
+msgstr ""
+"\n"
+"        Submeteu o seu exame cronometrado.\n"
+"      "
+
+#: templates/timed_exam/submitted.html
+#, python-format
+msgid ""
+"\n"
+"      Your grade for this timed exam will be immediately available on the <a href=\"%(progress_page_url)s\">Progress</a> page.\n"
+"    "
+msgstr ""
+"\n"
+"      A sua classificação para este exame cronometrado estará imediatamente disponível na página <a href=\"%(progress_page_url)s\">Progresso</a>.\n"
+"    "
+
+#: templates/timed_exam/submitted.html
+msgid ""
+"\n"
+"        After the due date has passed, you can review the exam, but you cannot change your answers.\n"
+"      "
+msgstr ""
+"\n"
+"Depois que a data de entrega, você poderá revisar o exame, mas não poderá alterar suas respostas.\n"
+"      "
+
+#: utils.py
+#, python-brace-format
+msgid "{num_of_hours} hour"
+msgstr "{num_of_hours} hora"
+
+#: utils.py
+#, python-brace-format
+msgid "{num_of_hours} hours"
+msgstr "{num_of_hours} horas"
+
+#: utils.py
+#, python-brace-format
+msgid "{num_of_minutes} minutes"
+msgstr "{num_of_minutes} minutos"
+
+#: utils.py
+#, python-brace-format
+msgid " and {num_of_minutes} minute"
+msgstr "e {num_of_minutes} minute"
+
+#: utils.py
+#, python-brace-format
+msgid "{num_of_minutes} minute"
+msgstr "{num_of_minutes} minuto"
+
+#: utils.py
+#, python-brace-format
+msgid " and {num_of_minutes} minutes"
+msgstr "e {num_of_minutes} minutos"
+
+#: views.py
+msgid "could not determine the course_id"
+msgstr "Não foi possível determinar o course_id"
+
+#: views.py
+msgid "Must be a Staff User to Perform this request."
+msgstr ""
+"Deve ser um usuário da equipe de funcionários para executar esta "
+"solicitação."
+
+#: views.py
+#, python-brace-format
+msgid "you have {remaining_time} remaining"
+msgstr "Você tem {remaining_time} restante"
+
+#: views.py
+msgid "you have less than a minute remaining"
+msgstr "Você tem menos de um minuto restantes"
+
+#: views.py
+msgid "timed"
+msgstr "cronometrado"
+
+#: views.py
+msgid "practice"
+msgstr "Prática supervisionado Exam"
+
+#: views.py
+msgid "proctored"
+msgstr "Supervisionado"
+
+msgid "This section could not be loaded."
+msgstr "Não foi possível carregar esta secção."
+
+msgid "The staff assessment form could not be loaded."
+msgstr "Não foi possível carregar o formulário de avaliação da Equipa."
+
+msgid "The display of ungraded and checked out responses could not be loaded."
+msgstr ""
+"Não foi possível carregar a exibição de respostas entregues não "
+"classificadas."
+
+msgid "This response could not be submitted."
+msgstr "Não foi possível submeter esta resposta."
+
+msgid "This response could not be saved."
+msgstr "Não foi possível guardar esta resposta."
+
+msgid "This feedback could not be submitted."
+msgstr "Não foi possível submeter este comentário."
+
+msgid "This assessment could not be submitted."
+msgstr "Não foi possível submeter esta avaliação."
+
+msgid "One or more rescheduling tasks failed."
+msgstr "Ocorreu erro no reagendamento de uma ou mais tarefas."
+
+msgid "This problem could not be saved."
+msgstr "Não foi possível gravar este problema."
+
+msgid "The server could not be contacted."
+msgstr "Não foi possível contactar o servidor."
+
+msgid "Could not retrieve upload url."
+msgstr "Não foi possível recuperar o url de envio."
+
+msgid "Server error."
+msgstr "Erro de servidor."
+
+msgid "Could not retrieve download url."
+msgstr "Não foi possível obter os dados a partir do URL definido."
+
+msgid "The submission could not be removed from the grading pool."
+msgstr "Não foi possível remover a submissão da pool de classificação."
+
+msgid "Unable to load"
+msgstr "Não foi possível carregar"
+
+msgid "Unit Name"
+msgstr "Título da Unidade"
+
+msgid "Assessment"
+msgstr "Avaliação"
+
+msgid "Assessments"
+msgstr "Avaliações"
+
+msgid "Total Responses"
+msgstr "Total de Respostas"
+
+msgid "Training"
+msgstr "Formação"
+
+msgid "Peer"
+msgstr "Par"
+
+msgid "Self"
+msgstr "Auto"
+
+msgid "Waiting"
+msgstr "A aguardar"
+
+msgid "Final Grade Received"
+msgstr "Nota Final Recebida"
+
+msgid "List of Open Assessments is unavailable"
+msgstr "Lista de Avaliações Abertas não está disponível"
+
+msgid "Please wait"
+msgstr "Aguarde, por favor"
+
+msgid "Block view is unavailable"
+msgstr "A visualização em grelha não está disponível"
+
+msgid "Back to Full List"
+msgstr "Voltar à lista completa"
+
+msgid ""
+"If you leave this page without submitting your peer assessment, you will "
+"lose any work you have done."
+msgstr ""
+"Caso saia desta página sem submeter o seu teste, irá perder todo o trabalho "
+"até aqui realizado."
+
+msgid ""
+"After you upload new files all your previously uploaded files will be "
+"overwritten. Continue?"
+msgstr ""
+"Ao carregar os novos ficheiros, todos os ficheiros anteriormente carregados "
+"serão substituídos. Deseja continuar?"
+
+msgid "Your file "
+msgstr "O seu ficheiro "
+
+msgid "Status of Your Response"
+msgstr "Estado da sua Resposta"
+
+msgid "This response has not been saved."
+msgstr "Esta resposta não foi guardada."
+
+msgid ""
+"If you leave this page without saving or submitting your response, you will "
+"lose any work you have done on the response."
+msgstr ""
+"Caso saia desta página sem gravar ou submeter a sua resposta, irá perder "
+"todo o trabalho até aqui realizado."
+
+msgid "Saving..."
+msgstr "A guardar..."
+
+msgid "This response has been saved but not submitted."
+msgstr "Esta resposta foi guardada mas não foi submetida."
+
+msgid "Do you want to upload your file before submitting?"
+msgstr "Deseja carregar o seu ficheiro antes de submeter?"
+
+msgid ""
+"You're about to submit your response for this assignment. After you submit "
+"this response, you can't change it or submit a new response."
+msgstr ""
+"Está prestes a submeter a sua resposta para esta tarefa. Depois de a "
+"submeter, não é possível alterá-la ou submeter uma nova resposta."
+
+msgid "File size must be {max_files_mb}MB or less."
+msgstr ""
+
+msgid "You can upload files with these file types: "
+msgstr "Pode fazer o carregamento de ficheiros dos seguintes tipos: "
+
+msgid "File type is not allowed."
+msgstr "O tipo de ficheiro não é permitido."
+
+msgid "Describe "
+msgstr "Descreva"
+
+msgid "(required):"
+msgstr "(obrigatório):"
+
+msgid "Thumbnail view of "
+msgstr "Visualização em miniatura de "
+
+msgid ""
+"If you leave this page without submitting your self assessment, you will "
+"lose any work you have done."
+msgstr ""
+"Caso saia desta página sem submeter a sua auto-avaliação, irá perder todo o "
+"trabalho até aqui realizado."
+
+msgid "Unexpected server error."
+msgstr "Erro do servidor."
+
+msgid "You must provide a learner name."
+msgstr "Deve indicar o nome de um estudante."
+
+msgid "Error getting the number of ungraded responses"
+msgstr "Erro ao obter o número de respostas sem classificação"
+
+msgid ""
+"If you leave this page without submitting your staff assessment, you will "
+"lose any work you have done."
+msgstr ""
+"Caso saia desta página sem submeter a sua avaliação individual, irá perder "
+"todo o trabalho até aqui realizado."
+
+msgid "Feedback available for selection."
+msgstr "Comentário disponível para a seleção."
+
+msgid "Unnamed Option"
+msgstr "Opção sem título"
+
+msgid "Not Selected"
+msgstr "Não Selecionado"
+
+msgid "Couldn't Save This Assignment"
+msgstr "Não é possível guardar esta tarefa"
+
+msgid "Please correct the outlined fields."
+msgstr "Por favor, corrija os campos indicados."
+
+msgid ""
+"This problem has already been released. Any changes will apply only to "
+"future assessments."
+msgstr ""
+"Este problema já foi desbloqueado. Quaisquer alterações efetuadas "
+"posteriormente aplicam-se apenas a avaliações futuras."
+
+msgid "Criterion Added"
+msgstr "Critério Adicionado"
+
+msgid ""
+"You have added a criterion. You will need to select an option for the "
+"criterion in the Learner Training step. To do this, click the Settings tab."
+msgstr ""
+"Adicionou um novo critério. Necessitará de selecionar uma opção para o "
+"critério, na etapa de Formação do Estudante. Para tal, clique no separador "
+"Configurações."
+
+msgid "Option Deleted"
+msgstr "Opção eliminada"
+
+msgid ""
+"You have deleted an option. That option has been removed from its criterion "
+"in the sample responses in the Learner Training step. You might have to "
+"select a new option for the criterion."
+msgstr ""
+"Eliminou uma opção. Esta opção foi removida do seu critério nos exemplos de "
+"respostas da etapa Formação do Estudante. Deve selecionar uma nova opção "
+"para esse critério."
+
+msgid ""
+"You have deleted all the options for this criterion. The criterion has been "
+"removed from the sample responses in the Learner Training step."
+msgstr ""
+"Eliminou todas as opções para este critério. O critério foi removido dos "
+"exemplos de resposta da etapa de Formação do Estudante."
+
+msgid "Criterion Deleted"
+msgstr "Critério eliminado"
+
+msgid ""
+"You have deleted a criterion. The criterion has been removed from the "
+"example responses in the Learner Training step."
+msgstr ""
+"Eliminou um critério. O critério foi removido dos exemplos de resposta da "
+"etapa de Formação do Estudante."
+
+msgid ""
+"Changes to steps that are not selected as part of the assignment will not be"
+" saved."
+msgstr ""
+"As alterações às etapas que não estão selecionados como parte da tarefa, não"
+" serão guardadas."
+
+msgid "File types can not be empty."
+msgstr "Indique o tipo de ficheiro. "
+
+msgid "The following file types are not allowed: "
+msgstr "Os seguintes tipos de ficheiro não são permitidos: "
+
+msgid "File size must be 5MB or less."
+msgstr "O tamanho total deve ser 5MB ou menos."
+
+#: poll/public/handlebars/poll_results.handlebars
+#: poll/public/handlebars/survey_results.handlebars
+msgid "Results"
+msgstr "Resultados"
+
+#: poll/public/handlebars/poll_results.handlebars
+#: poll/public/handlebars/survey_results.handlebars
+msgid "Results gathered from {total} respondent."
+msgid_plural "Results gathered from {total} respondents."
+msgstr[0] "Resultados recolhidos de {total} respondente."
+msgstr[1] "Resultados recolhidos de {total} respondentes."
+
+#: poll/public/handlebars/poll_results.handlebars
+#: poll/public/handlebars/survey_results.handlebars
+msgid "Feedback"
+msgstr "Comentário"
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "move poll up"
+msgstr "mover sondagem para cima"
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "move poll down"
+msgstr "mover sondagem para baixo"
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "Answer"
+msgstr "Resposta"
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "Image URL"
+msgstr "URL da Imagem"
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid "Image alternative text"
+msgstr "Texto alternativo da imagem"
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid ""
+"You can make limited use of Markdown in answer texts, preferably only bold "
+"and italics."
+msgstr ""
+"Pode usar uso da Sintaxe de Markdown de forma limitada nos textos de "
+"resposta, de preferencia apenas para indicar negrito e itálico."
+
+#: poll/public/handlebars/poll_studio.handlebars
+msgid ""
+"This must have an image URL or text, and can have both.  If you add an "
+"image, you must also provide an alternative text that describes the image in"
+" a way that would allow someone to answer the poll if the image did not "
+"load."
+msgstr ""
+"Este campo tem de ter um URL de imagem ou texto, ou pode ter ambos. Se "
+"adicionou uma imagem, terá também de adicionar um texto alternativo que "
+"descree a imagem de forma a permitir que alguém possa responder à sondagem "
+"mesmo se a imagem não tiver sido carregada."
+
+#: templates/html/mentoring_attempts.underscore
+msgid "You have used {num_used} of 1 submission."
+msgid_plural "You have used {num_used} of {max_attempts} submissions."
+msgstr[0] ""
+msgstr[1] ""
+
+#: public/js/instructor_tool.js
+msgid "All"
+msgstr "Todos"
+
+#: public/js/instructor_tool.js
+msgid "Data export failed. Reason: <%= error %>"
+msgstr ""
+
+#: public/js/instructor_tool.js
+msgid "Results retrieved on <%= creation_time %> (<%= seconds %> second)."
+msgid_plural ""
+"Results retrieved on <%= creation_time %> (<%= seconds %> seconds)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: public/js/instructor_tool.js
+msgid "The report is currently being generated…"
+msgstr ""
