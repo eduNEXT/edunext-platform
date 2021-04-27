@@ -227,7 +227,7 @@ git+https://github.com/jazzband/sorl-thumbnail.git@13bedfb7d2970809eda597e3ef793
 sortedcontainers==2.1.0   # via -r requirements/edx/base.in, pdfminer.six
 soupsieve==2.0.1          # via beautifulsoup4
 sqlparse==0.3.1           # via -r requirements/edx/base.in, django
-staff-graded-xblock==0.8  # via -r requirements/edx/base.in
+staff-graded-xblock==1.1  # via -r requirements/edx/base.in
 stevedore==1.32.0         # via -r requirements/edx/base.in, -r requirements/edx/paver.txt, code-annotations, edx-ace, edx-enterprise, edx-opaque-keys
 super-csv==0.9.8          # via -r requirements/edx/base.in, edx-bulk-grades
 sympy==1.5.1              # via symmath
