@@ -404,6 +404,19 @@ FEATURES = {
     # .. toggle_tickets: https://openedx.atlassian.net/browse/DEPR-58
     # .. toggle_status: supported
     'DEPRECATE_OLD_COURSE_KEYS_IN_STUDIO': True,
+
+    # .. toggle_name: ENABLE_COURSE_MODE_CREATION
+    # .. toggle_implementation: DjangoSetting
+    # .. toggle_default: False
+    # .. toggle_description: Set to True to enable course mode creation through studio.
+    # .. toggle_category: n/a
+    # .. toggle_use_cases: open_edx
+    # .. toggle_creation_date: 2021-06-21
+    # .. toggle_expiration_date: None
+    # .. toggle_warnings: None
+    # .. toggle_tickets: https://github.com/eduNEXT/edunext-platform/pull/524
+    # .. toggle_status: supported
+    'ENABLE_COURSE_MODE_CREATION': False,
 }
 
 ENABLE_JASMINE = False
