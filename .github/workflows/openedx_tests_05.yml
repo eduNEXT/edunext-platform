@@ -1,0 +1,47 @@
+name: Openedx 5th batch
+
+on: push
+
+jobs:
+  run-tests:
+    continue-on-error: true
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        python-version: ['3.8']
+        django-version: ["2.2"]
+        mongodb-version: ['4.0']
+        test_module: [
+          "openedx/core/djangoapps/site_configuration/ openedx/core/djangoapps/system_wide_roles/ openedx/core/djangoapps/theming/ openedx/core/djangoapps/user_api/ 
+          openedx/core/djangoapps/user_authn/ openedx/core/djangoapps/util/ openedx/core/djangoapps/verified_track_content/ openedx/core/djangoapps/video_config/ 
+          openedx/core/djangoapps/video_pipeline/ openedx/core/djangoapps/waffle_utils/ openedx/core/djangoapps/xblock/ openedx/core/djangoapps/xmodule_django/ openedx/core/djangoapps/zendesk_proxy/ 
+          openedx/core/djangolib/ openedx/core/lib/ openedx/core/tests/ openedx/core/tests/ openedx/features/ openedx/testing/ openedx/tests/"
+        ]
+        
+
+    name: ${{ matrix.test_module }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Required System Packages
+        run: sudo apt-get update && sudo apt-get install libxmlsec1-dev
+
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.6.0
+        with:
+          mongodb-version: ${{ matrix.mongodb-version }}
+
+      - name: Install requirements
+        run: |
+          sudo pip install --ignore-installed -r requirements/pip.txt
+          sudo pip install --ignore-installed -r requirements/edx/testing.txt
+          sudo pip install "django~=${{ matrix.django-version }}.24"
+      
+      - name: Run tests
+        run: |
+          pytest ${{ matrix.test_module }}
