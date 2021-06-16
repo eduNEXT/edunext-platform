@@ -477,7 +477,16 @@ def get_course_date_blocks(course, user, request=None, include_access=False,
         VerificationDeadlineDate,
         VerifiedUpgradeDeadlineDate,
     ]
+    if not course.self_paced and certs_api.get_active_web_certificate(course):
+        default_block_classes.insert(0, CertificateAvailableDate)
+
     blocks.extend([cls(course, user) for cls in default_block_classes])
+    if RELATIVE_DATES_FLAG.is_enabled(course.id) and user and user.is_authenticated:
+        blocks.append(CourseExpiredDate(course, user))
+        blocks.extend(get_course_assignment_date_blocks(
+            course, user, request, num_return=num_assignments,
+            include_access=include_access, include_past_dates=include_past_dates,
+        ))
 
     blocks = filter(lambda b: b.is_allowed and b.date and (include_past_dates or b.is_enabled), blocks)
     return sorted(blocks, key=date_block_key_fn)

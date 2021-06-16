@@ -120,9 +120,6 @@ class CourseHomeFragmentView(EdxFragmentView):
         course_key = CourseKey.from_string(course_id)
         course = get_course_with_access(request.user, 'load', course_key)
 
-        # Render the course dates as a fragment
-        dates_fragment = CourseDatesFragmentView().render_to_fragment(request, course_id=course_id, **kwargs)
-
         # Render the full content to enrolled users, as well as to course and global staff.
         # Unenrolled users who are not course or global staff are given only a subset.
         enrollment = CourseEnrollment.get_enrollment(request.user, course_key)
@@ -145,6 +142,7 @@ class CourseHomeFragmentView(EdxFragmentView):
         has_visited_course = None
         resume_course_url = None
         handouts_html = None
+        dates_fragment = None
 
         course_overview = CourseOverview.get_from_id(course.id)
         if user_access['is_enrolled'] or user_access['is_staff']:
@@ -172,6 +170,13 @@ class CourseHomeFragmentView(EdxFragmentView):
                 request.user,
                 course_overview
             )
+
+            next_up_banner_fragment = NextUpBannerFragmentView().render_to_fragment(
+                assignment_title=resume_course_title, resume_course_url=resume_course_url, assignment_duration='10 min'
+            )
+
+            dates_fragment = CourseDatesFragmentView().render_to_fragment(request, course_id=course_id, **kwargs)
+
         elif allow_public_outline or allow_public:
             outline_fragment = CourseOutlineFragmentView().render_to_fragment(
                 request, course_id=course_id, user_is_enrolled=False, **kwargs

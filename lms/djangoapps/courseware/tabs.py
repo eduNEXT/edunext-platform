@@ -342,6 +342,11 @@ class DatesTab(EnrolledTab):
         tab_dict['link_func'] = link_func
         super().__init__(tab_dict)
 
+    @classmethod
+    def is_enabled(cls, course, user=None):
+        """Returns true if this tab is enabled."""
+        return RELATIVE_DATES_FLAG.is_enabled(course.id) and super(DatesTab, cls).is_enabled(course, user=user)
+
 
 def get_course_tab_list(user, course):
     """
