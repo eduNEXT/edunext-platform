@@ -501,6 +501,18 @@ FEATURES = {
     # .. toggle_warnings: For consistency in user-experience, keep the value in sync with the setting of the same name
     #   in the LMS and CMS.
     'MARK_LIBRARY_CONTENT_BLOCK_COMPLETE_ON_VIEW': False,
+    # .. toggle_name: ENABLE_COURSE_MODE_CREATION
+    # .. toggle_implementation: DjangoSetting
+    # .. toggle_default: False
+    # .. toggle_description: Set to True to enable course mode creation through studio.
+    # .. toggle_category: n/a
+    # .. toggle_use_cases: open_edx
+    # .. toggle_creation_date: 2021-06-21
+    # .. toggle_expiration_date: None
+    # .. toggle_warnings: None
+    # .. toggle_tickets: https://github.com/eduNEXT/edunext-platform/pull/524
+    # .. toggle_status: supported
+    'ENABLE_COURSE_MODE_CREATION': False,
 }
 
 # .. toggle_name: ENABLE_COPPA_COMPLIANCE
