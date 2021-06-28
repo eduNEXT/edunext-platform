@@ -10,3 +10,6 @@
 
 # version 51.0.0 drops support for python 3.5
 setuptools==50.3.0
+
+# version 3.3.0 does not work with juniper release
+python-jose==3.2.0
