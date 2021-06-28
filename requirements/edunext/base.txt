@@ -41,7 +41,7 @@ edx-proctoring==2.4.0     # via -c requirements/edunext/../edx/base.txt, eox-cor
 edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-audit-model==0.4.0    # via eox-core, eox-tagging
-eox-core[eox-audit,sentry,tpa]==4.10.2  # via -r requirements/edunext/base.in, eox-tagging
+eox-core[eox-audit,sentry,tpa]==4.11.0  # via -r requirements/edunext/base.in, eox-tagging
 eox-hooks==0.5.0          # via -r requirements/edunext/base.in
 eox-tagging==2.2.0        # via -r requirements/edunext/base.in
 eox-tenant==4.0.0         # via -r requirements/edunext/base.in
@@ -75,7 +75,7 @@ pyjwt==1.7.1              # via -c requirements/edunext/../edx/base.txt, drf-jwt
 pymongo==3.9.0            # via -c requirements/edunext/../edx/base.txt, edx-opaque-keys, event-tracking
 pyparsing==2.4.7          # via -c requirements/edunext/../edx/base.txt, packaging
 python-dateutil==2.4.0    # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions, edx-proctoring, xblock
-python-jose==3.2.0        # via social-auth-core
+python-jose==3.2.0        # via -c requirements/edunext/constraints.txt, social-auth-core
 python3-openid==3.1.0 ; python_version >= "3"  # via -c requirements/edunext/../edx/base.txt, social-auth-core
 pytz==2020.1              # via -c requirements/edunext/../edx/base.txt, celery, django, edx-proctoring, event-tracking, fs, xblock
 pyyaml==5.3.1             # via -c requirements/edunext/../edx/base.txt, xblock
