@@ -17,6 +17,7 @@ from openedx.core.djangoapps.enrollments.errors import (
     CourseEnrollmentClosedError,
     CourseEnrollmentExistsError,
     CourseEnrollmentFullError,
+    CourseEnrollmentNotAllowedError,
     InvalidEnrollmentAttribute,
     UserNotFoundError
 )
@@ -28,7 +29,8 @@ from common.djangoapps.student.models import (
     CourseEnrollmentAttribute,
     CourseFullError,
     EnrollmentClosedError,
-    NonExistentCourseError
+    NonExistentCourseError,
+    EnrollmentNotAllowed
 )
 from common.djangoapps.student.roles import RoleCache
 
@@ -162,6 +164,8 @@ def create_course_enrollment(username, course_id, mode, is_active):
     except AlreadyEnrolledError as err:
         enrollment = get_course_enrollment(username, course_id)
         raise CourseEnrollmentExistsError(str(err), enrollment)  # lint-amnesty, pylint: disable=raise-missing-from
+    except EnrollmentNotAllowed as err:
+        raise CourseEnrollmentNotAllowedError(str(err))  # lint-amnesty, pylint: disable=raise-missing-from
 
 
 def update_course_enrollment(username, course_id, mode=None, is_active=None):
