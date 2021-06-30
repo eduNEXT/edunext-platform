@@ -4,4 +4,14 @@
 #
 #    make edunext-upgrade
 #
+attrs==20.3.0             # via -c requirements/edunext/../edx/base.txt, openedx-events
+django==2.2.20            # via -c requirements/edunext/../edx/base.txt, edx-opaque-keys, openedx-events
+edx-opaque-keys[django]==2.2.0  # via -c requirements/edunext/../edx/base.txt, openedx-events
 eox-tenant==5.0.1         # via -r requirements/edunext/base.in
+openedx-events==0.6.0     # via -r requirements/edunext/base.in
+pbr==5.5.1                # via -c requirements/edunext/../edx/base.txt, stevedore
+pymongo==3.10.1           # via -c requirements/edunext/../edx/base.txt, edx-opaque-keys
+pytz==2021.1              # via -c requirements/edunext/../edx/base.txt, django
+six==1.15.0               # via -c requirements/edunext/../edx/base.txt, stevedore
+sqlparse==0.4.1           # via -c requirements/edunext/../edx/base.txt, django
+stevedore==1.32.0         # via -c requirements/edunext/../edx/base.txt, edx-opaque-keys

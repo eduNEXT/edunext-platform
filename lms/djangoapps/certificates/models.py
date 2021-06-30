@@ -33,6 +33,9 @@ from openedx.core.djangoapps.content.course_overviews.models import CourseOvervi
 from openedx.core.djangoapps.signals.signals import COURSE_CERT_AWARDED, COURSE_CERT_CHANGED, COURSE_CERT_REVOKED
 from openedx.core.djangoapps.xmodule_django.models import NoneToEmptyManager
 
+from openedx_events.learning.data import CourseData, UserData, UserPersonalData, CertificateData
+from openedx_events.learning.signals import CERTIFICATE_CHANGED, CERTIFICATE_CREATED, CERTIFICATE_REVOKED
+
 log = logging.getLogger(__name__)
 User = get_user_model()
 
@@ -361,6 +364,28 @@ class GeneratedCertificate(models.Model):
             status=self.status,
         )
 
+        CERTIFICATE_REVOKED.send_event(
+            certificate=CertificateData(
+                user=UserData(
+                    pii=UserPersonalData(
+                        username=self.user.username,
+                        email=self.user.email,
+                        name=self.user.profile.name,
+                    ),
+                    id=self.user.id,
+                    is_active=self.user.is_active,
+                ),
+                course=CourseData(
+                    course_key=self.course_id,
+                ),
+                mode=self.mode,
+                grade=self.grade,
+                current_status=self.status,
+                download_url=self.download_url,
+                name=self.name,
+            )
+        )
+
     def mark_notpassing(self, grade):
         """
         Invalidates a Generated Certificate by marking it as notpassing
@@ -383,6 +408,28 @@ class GeneratedCertificate(models.Model):
             status=self.status,
         )
 
+        CERTIFICATE_REVOKED.send_event(
+            certificate=CertificateData(
+                user=UserData(
+                    pii=UserPersonalData(
+                        username=self.user.username,
+                        email=self.user.email,
+                        name=self.user.profile.name,
+                    ),
+                    id=self.user.id,
+                    is_active=self.user.is_active,
+                ),
+                course=CourseData(
+                    course_key=self.course_id,
+                ),
+                mode=self.mode,
+                grade=self.grade,
+                current_status=self.status,
+                download_url=self.download_url,
+                name=self.name,
+            )
+        )
+
     def is_valid(self):
         """
         Return True if certificate is valid else return False.
@@ -403,6 +450,29 @@ class GeneratedCertificate(models.Model):
             mode=self.mode,
             status=self.status,
         )
+
+        CERTIFICATE_CHANGED.send_event(
+            certificate=CertificateData(
+                user=UserData(
+                    pii=UserPersonalData(
+                        username=self.user.username,
+                        email=self.user.email,
+                        name=self.user.profile.name,
+                    ),
+                    id=self.user.id,
+                    is_active=self.user.is_active,
+                ),
+                course=CourseData(
+                    course_key=self.course_id,
+                ),
+                mode=self.mode,
+                grade=self.grade,
+                current_status=self.status,
+                download_url=self.download_url,
+                name=self.name,
+            )
+        )
+
         if CertificateStatuses.is_passing_status(self.status):
             COURSE_CERT_AWARDED.send_robust(
                 sender=self.__class__,
@@ -410,6 +480,28 @@ class GeneratedCertificate(models.Model):
                 course_key=self.course_id,
                 mode=self.mode,
                 status=self.status,
+            )
+
+            CERTIFICATE_CREATED.send_event(
+                certificate=CertificateData(
+                    user=UserData(
+                        pii=UserPersonalData(
+                            username=self.user.username,
+                            email=self.user.email,
+                            name=self.user.profile.name,
+                        ),
+                        id=self.user.id,
+                        is_active=self.user.is_active,
+                    ),
+                    course=CourseData(
+                        course_key=self.course_id,
+                    ),
+                    mode=self.mode,
+                    grade=self.grade,
+                    current_status=self.status,
+                    download_url=self.download_url,
+                    name=self.name,
+                )
             )
 
 
