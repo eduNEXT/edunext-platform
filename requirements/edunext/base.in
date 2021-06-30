@@ -29,6 +29,11 @@
 ###################
 eox-tenant                          # Edunext multi-tenant plugin, allows a multi-tenant instance.
 
+###################
+#   Libraries     #
+###################
+openedx-events                      # Open edX Events from Hooks Extension Framework (OEP-50)
+
 #####################
 # eduNEXT Xblocks #
 #####################
