@@ -40,7 +40,7 @@ edx-opaque-keys[django]==2.1.0  # via -c requirements/edunext/../edx/base.txt, e
 edx-proctoring==2.4.0     # via -c requirements/edunext/../edx/base.txt, eox-core
 edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
-eox-audit-model==0.5.0    # via eox-core, eox-tagging
+eox-audit-model==0.5.1    # via eox-core, eox-tagging
 eox-core[eox-audit,sentry,tpa]==4.13.1  # via -r requirements/edunext/base.in, eox-tagging
 eox-hooks==0.5.0          # via -r requirements/edunext/base.in
 eox-tagging==2.2.0        # via -r requirements/edunext/base.in
