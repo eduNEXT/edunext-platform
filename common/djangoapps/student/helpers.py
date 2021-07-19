@@ -36,6 +36,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangoapps.theming import helpers as theming_helpers
 from openedx.core.djangoapps.theming.helpers import get_themes
 from openedx.core.djangoapps.user_authn.utils import is_safe_login_or_logout_redirect
+from openedx.core.lib.triggers.v1 import post_register
 from student.models import (
     CourseEnrollment,
     LinkedInAddToProfileConfiguration,
@@ -661,6 +662,9 @@ def do_create_account(form, custom_form=None):
     except Exception:
         log.exception("UserProfile creation failed for user {id}.".format(id=user.id))
         raise
+
+    # This signal allows plugins to process the registration information after the account creation process
+    post_register.send_robust(sender=None, user=user)
 
     return user, profile, registration
 

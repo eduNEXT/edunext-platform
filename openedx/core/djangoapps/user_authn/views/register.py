@@ -57,7 +57,6 @@ from openedx.core.djangoapps.user_authn.views.registration_form import (
     RegistrationFormFactory
 )
 from openedx.core.djangoapps.waffle_utils import WaffleFlag, WaffleFlagNamespace
-from openedx.core.lib.triggers.v1 import post_register
 from student.helpers import (
     authenticate_new_user,
     create_or_set_user_attribute_created_on_site,
@@ -235,9 +234,6 @@ def create_account_with_params(request, params):
 
     # Announce registration
     REGISTER_USER.send(sender=None, user=user, registration=registration)
-
-    # This signal allows plugins to process the registration information after the account creation process
-    post_register.send_robust(sender=None, user=user)
 
     create_comments_service_user(user)
 
