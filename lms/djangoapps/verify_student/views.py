@@ -865,7 +865,7 @@ class SubmitPhotosView(View):
         return super(SubmitPhotosView, self).dispatch(request, *args, **kwargs)
 
     @method_decorator(login_required)
-    @method_decorator(outer_atomic(read_committed=True))
+    @method_decorator(outer_atomic())
     def post(self, request):
         """
         Submit photos for verification.
