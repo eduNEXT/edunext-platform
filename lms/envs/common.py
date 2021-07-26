@@ -2590,7 +2590,9 @@ DEBUG_TOOLBAR_PATCH_SETTINGS = False
 CELERY_IMPORTS = (
     # Since xblock-poll is not a Django app, and XBlocks don't get auto-imported
     # by celery workers, its tasks will not get auto-discovered:
+    'openedx.core.djangoapps.programs.tasks.v1.tasks',
     'poll.tasks',
+    'webhook_xblock.tasks',
 )
 
 # Celery beat configuration
