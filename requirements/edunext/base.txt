@@ -105,11 +105,12 @@ git+https://github.com/open-craft/xblock-vectordraw.git@v0.3.2#egg=vectordraw-xb
 w3lib==1.22.0             # via parsel
 web-fragments==0.3.2      # via -c requirements/edunext/../edx/base.txt, xblock, xblock-utils
 webencodings==0.5.1       # via -c requirements/edunext/../edx/base.txt, bleach
+git+https://github.com/eduNEXT/webhook-xblock@30d86f3878b513f8425eecde3252b6141803641f#egg=webhook-xblock==0.1.0  # via -r requirements/edunext/github.in
 webob==1.8.6              # via -c requirements/edunext/../edx/base.txt, xblock
 git+https://github.com/edx/xblock-free-text-response@release/v1.1.1#egg=xblock-free-text-response==1.1.1  # via -r requirements/edunext/github.in
 git+https://github.com/edx-solutions/xblock-image-explorer.git@9a4ea322507f0f196aaf1283ce62aa017ed69e40#egg=xblock-image-explorer  # via -r requirements/edunext/github.in
-xblock-utils==2.1.1       # via -c requirements/edunext/../edx/base.txt, activetable-xblock, flow-control-xblock, lti-consumer-xblock, vectordraw-xblock, xblock-free-text-response, xblock-problem-builder
-xblock==1.3.1             # via -c requirements/edunext/../edx/base.txt, activetable-xblock, edx-when, flow-control-xblock, lti-consumer-xblock, oppia-xblock, schoolyourself-xblock, scormxblock-xblock, surveymonkey-xblock, ubcpi-xblock, vectordraw-xblock, xblock-free-text-response, xblock-image-explorer, xblock-problem-builder, xblock-utils
+xblock-utils==2.1.1       # via -c requirements/edunext/../edx/base.txt, activetable-xblock, flow-control-xblock, lti-consumer-xblock, vectordraw-xblock, webhook-xblock, xblock-free-text-response, xblock-problem-builder
+xblock==1.3.1             # via -c requirements/edunext/../edx/base.txt, activetable-xblock, edx-when, flow-control-xblock, lti-consumer-xblock, oppia-xblock, schoolyourself-xblock, scormxblock-xblock, surveymonkey-xblock, ubcpi-xblock, vectordraw-xblock, webhook-xblock, xblock-free-text-response, xblock-image-explorer, xblock-problem-builder, xblock-utils
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
