@@ -2576,6 +2576,12 @@ DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
 ################################# CELERY ######################################
 
+# Celery's task autodiscovery won't find tasks nested in a tasks package.
+# Tasks are only registered when the module they are defined in is imported.
+CELERY_IMPORTS = (
+    'webhook_xblock.tasks',
+)
+
 # Message configuration
 
 CELERY_TASK_SERIALIZER = 'json'
