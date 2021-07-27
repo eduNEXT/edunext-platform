@@ -79,3 +79,6 @@ git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1
 
 # Patched version that includes the fullname
 git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=lti_consumer-xblock==v1.2.6.1
+
+# Webhook-xblock
+git+https://github.com/eduNEXT/webhook-xblock@30d86f3878b513f8425eecde3252b6141803641f#egg=webhook-xblock==0.1.0
