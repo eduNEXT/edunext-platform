@@ -77,7 +77,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangoapps.xmodule_django.models import NoneToEmptyManager
 from openedx.core.djangolib.model_mixins import DeletableByUserValue
 from student.signals import ENROLL_STATUS_CHANGE, ENROLLMENT_TRACK_UPDATED, UNENROLL_DONE
-from openedx.core.lib.triggers.v1 import pre_enrollment, TriggerException
+from openedx.core.lib.triggers.v1 import pre_enrollment, post_enrollment, TriggerException
 from track import contexts, segment
 from util.milestones_helpers import is_entrance_exams_enabled
 from util.model_utils import emit_field_changed_events, get_changed_fields_dict
@@ -1502,6 +1502,14 @@ class CourseEnrollment(models.Model):
         enrollment = cls.get_or_create_enrollment(user, course_key)
         enrollment.update_enrollment(is_active=True, mode=mode)
         enrollment.send_signal(EnrollStatusChange.enroll)
+
+        # Announce user's enrollment
+        post_enrollment.send_robust(
+            sender=None,
+            user=user,
+            course_key=course_key,
+            mode=mode,
+        )
 
         return enrollment
 
