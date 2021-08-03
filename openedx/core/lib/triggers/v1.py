@@ -18,6 +18,13 @@ pre_enrollment = django.dispatch.Signal(providing_args=[
     "mode",
 ])
 
+# Signal that fires after the user's enrollment
+post_enrollment = django.dispatch.Signal(providing_args=[
+    "user",
+    "course_key",
+    "mode",
+])
+
 # Signal that fires after a user's certificate is created
 post_certificate_creation = django.dispatch.Signal(providing_args=[
     "certificate",
