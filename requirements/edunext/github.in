@@ -84,4 +84,4 @@ git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=lti_consumer
 git+https://github.com/eduNEXT/webhook-xblock@30d86f3878b513f8425eecde3252b6141803641f#egg=webhook-xblock==0.1.0
 
 # xblock-pdf
-git+https://github.com/raccoongang/xblock-pdf.git@sgab-v.1.0.1#egg=xblock-pdf
+git+https://github.com/appsembler/pdfXBlock.git@v0.3.1#egg=xblock-pdf
