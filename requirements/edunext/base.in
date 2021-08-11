@@ -30,7 +30,7 @@
 eox-core[sentry,tpa,eox-audit]                # Edunext core modifications. This plugin is necessary since this contains the most of edunext custom changes and the edunext logic businesses[required by saas].
 eox-tenant                          # Edunext multi-tenant plugin, allows a multi-tenant instance.
 eox-tagging                         # Edunext tagging plugin, allows to tag platform objects.
-git+https://github.com/eduNEXT/eox-hooks.git@d84c788874159e2f6ee428eef8bcaae4b78a7ea1#egg=eox-hooks==0.6.0_heta                       # Edunext hooks plugin, allows to execute custom actions inside the platform.
+git+https://github.com/eduNEXT/eox-hooks.git@158208967115815edc891bfb0b33837de8491e25#egg=eox-hooks==0.6.0_heta                       # Edunext hooks plugin, allows to execute custom actions inside the platform.
 eox-theming                         # Edunext theming plugin. This plugin allows to extend and adapt theming functionalities to what is needed by edunext.
 
 #####################
