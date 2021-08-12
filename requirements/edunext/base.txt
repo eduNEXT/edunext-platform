@@ -41,7 +41,7 @@ edx-proctoring==2.4.0     # via -c requirements/edunext/../edx/base.txt, eox-cor
 edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-audit-model==0.5.1    # via eox-core, eox-tagging
-eox-core[eox-audit,sentry,tpa]==4.15.0  # via -r requirements/edunext/base.in, eox-hooks, eox-tagging
+git+https://github.com/eduNEXT/eox-core.git@a2dd31543ed85f8b62daa63cc82471432ae8a074#egg=eox-core[eox-audit,sentry,tpa]==4.16.0_a  # via -r requirements/edunext/base.in
 git+https://github.com/eduNEXT/eox-hooks.git@77aa71ed098b943db13b75031583768006195ff9#egg=eox-hooks==0.6.0_xi  # via -r requirements/edunext/base.in
 eox-tagging==2.2.0        # via -r requirements/edunext/base.in
 eox-tenant==4.0.0         # via -r requirements/edunext/base.in
