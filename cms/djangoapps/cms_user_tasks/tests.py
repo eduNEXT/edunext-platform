@@ -8,13 +8,14 @@ from uuid import uuid4
 
 from boto.exception import NoAuthHandlerFound
 from django.conf import settings
-from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imported-auth-user
 from django.core import mail
 from django.test import override_settings
 from django.urls import reverse
 from rest_framework.test import APITestCase
 from user_tasks.models import UserTaskArtifact, UserTaskStatus
 from user_tasks.serializers import ArtifactSerializer, StatusSerializer
+
+from common.djangoapps.student.tests.factories import UserFactory
 
 from .signals import user_task_stopped
 
@@ -72,7 +73,7 @@ class TestUserTasks(APITestCase):
 
     @classmethod
     def setUpTestData(cls):  # lint-amnesty, pylint: disable=super-method-not-called
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = UserFactory.create(username='test_user', email='test@example.com', password='password')
         cls.status = UserTaskStatus.objects.create(
             user=cls.user, task_id=str(uuid4()), task_class='test_rest_api.sample_task', name='SampleTask 2',
             total_steps=5)
@@ -145,7 +146,7 @@ class TestUserTaskStopped(APITestCase):
 
     @classmethod
     def setUpTestData(cls):  # lint-amnesty, pylint: disable=super-method-not-called
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = UserFactory.create(username='test_user', email='test@example.com', password='password')
         cls.status = UserTaskStatus.objects.create(
             user=cls.user, task_id=str(uuid4()), task_class='test_rest_api.sample_task', name='SampleTask 2',
             total_steps=5)

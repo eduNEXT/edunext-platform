@@ -9,7 +9,7 @@ from unittest.mock import patch
 import pytest
 import attr
 from django.conf import settings
-from django.contrib.auth.models import AnonymousUser, User  # lint-amnesty, pylint: disable=imported-auth-user
+from django.contrib.auth.models import AnonymousUser
 from edx_proctoring.exceptions import ProctoredExamNotFoundException
 from edx_when.api import set_dates_for_course
 from mock import patch
@@ -21,6 +21,7 @@ from openedx.core.djangolib.testing.utils import CacheIsolationTestCase
 from openedx.features.course_experience import COURSE_ENABLE_UNENROLLED_ACCESS_FLAG
 from common.djangoapps.student.auth import user_has_role
 from common.djangoapps.student.roles import CourseBetaTesterRole
+from common.djangoapps.student.tests.factories import UserFactory
 
 from ...data import (
     ContentErrorData,
@@ -151,11 +152,11 @@ class UserCourseOutlineTestCase(CacheIsolationTestCase):
     def setUpTestData(cls):  # lint-amnesty, pylint: disable=super-method-not-called
         course_key = CourseKey.from_string("course-v1:OpenEdX+Outline+T1")
         # Users...
-        cls.global_staff = User.objects.create_user(
-            'global_staff', email='gstaff@example.com', is_staff=True
+        cls.global_staff = UserFactory.create(
+            username='global_staff', email='gstaff@example.com', is_staff=True
         )
-        cls.student = User.objects.create_user(
-            'student', email='student@example.com', is_staff=False
+        cls.student = UserFactory.create(
+            username='student', email='student@example.com', is_staff=False
         )
         cls.beta_tester = BetaTesterFactory(course_key=course_key)
         cls.anonymous_user = AnonymousUser()
@@ -218,11 +219,11 @@ class OutlineProcessorTestCase(CacheIsolationTestCase):  # lint-amnesty, pylint:
         cls.course_key = CourseKey.from_string("course-v1:OpenEdX+Outline+T1")
 
         # Users...
-        cls.global_staff = User.objects.create_user(
-            'global_staff', email='gstaff@example.com', is_staff=True
+        cls.global_staff = UserFactory.create(
+            username='global_staff', email='gstaff@example.com', is_staff=True
         )
-        cls.student = User.objects.create_user(
-            'student', email='student@example.com', is_staff=False
+        cls.student = UserFactory.create(
+            username='student', email='student@example.com', is_staff=False
         )
         cls.beta_tester = BetaTesterFactory(course_key=cls.course_key)
         cls.anonymous_user = AnonymousUser()
@@ -1174,9 +1175,11 @@ class SequentialVisibilityTestCase(CacheIsolationTestCase):
     def setUpTestData(cls):
         super().setUpTestData()
 
-        cls.global_staff = User.objects.create_user('global_staff', email='gstaff@example.com', is_staff=True)
-        cls.student = User.objects.create_user('student', email='student@example.com', is_staff=False)
-        cls.unenrolled_student = User.objects.create_user('unenrolled', email='unenrolled@example.com', is_staff=False)
+        cls.global_staff = UserFactory.create(username='global_staff', email='gstaff@example.com', is_staff=True)
+        cls.student = UserFactory.create(username='student', email='student@example.com', is_staff=False)
+        cls.unenrolled_student = UserFactory.create(
+            username='unenrolled', email='unenrolled@example.com', is_staff=False,
+        )
         cls.anonymous_user = AnonymousUser()
 
         # Handy variable as we almost always need to test with all types of users
