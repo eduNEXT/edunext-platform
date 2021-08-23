@@ -78,7 +78,7 @@ class TestPopulateExpiryationDate(MockS3BotoMixin, TestCase):
             verification = self.create_and_submit(user)
             verification.status = 'approved'
             verification.expiry_date = now() + timedelta(days=3)
-            verification.expiration_date = '2021-11-12T16:33:15.691Z'
+            verification.expiration_date = now() + timedelta(days=350)
             verification.save()
 
         call_command('update_expiration_date', batch_size=3, sleep_time=1)

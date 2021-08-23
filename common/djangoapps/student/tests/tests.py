@@ -611,7 +611,7 @@ class EnrollInCourseTest(EnrollmentEventTestMixin, CacheIsolationTestCase):
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
     def test_enrollment(self):
-        user = User.objects.create_user("joe", "joe@joe.com", "password")
+        user = UserFactory.create(username="joe", email="joe@joe.com", password="password")
         course_id = CourseKey.from_string("edX/Test101/2013")
         course_id_partial = CourseKey.from_string("edX/Test101/")
 
@@ -658,7 +658,7 @@ class EnrollInCourseTest(EnrollmentEventTestMixin, CacheIsolationTestCase):
 
     def test_enrollment_non_existent_user(self):
         # Testing enrollment of newly unsaved user (i.e. no database entry)
-        user = User(username="rusty", email="rusty@fake.edx.org")
+        user = UserFactory(username="rusty", email="rusty@fake.edx.org")
         course_id = CourseLocator("edX", "Test101", "2013")
 
         assert not CourseEnrollment.is_enrolled(user, course_id)
@@ -675,7 +675,7 @@ class EnrollInCourseTest(EnrollmentEventTestMixin, CacheIsolationTestCase):
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
     def test_enrollment_by_email(self):
-        user = User.objects.create(username="jack", email="jack@fake.edx.org")
+        user = UserFactory.create(username="jack", email="jack@fake.edx.org")
         course_id = CourseLocator("edX", "Test101", "2013")
 
         CourseEnrollment.enroll_by_email("jack@fake.edx.org", course_id)
@@ -711,7 +711,7 @@ class EnrollInCourseTest(EnrollmentEventTestMixin, CacheIsolationTestCase):
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
     def test_enrollment_multiple_classes(self):
-        user = User(username="rusty", email="rusty@fake.edx.org")
+        user = UserFactory(username="rusty", email="rusty@fake.edx.org")
         course_id1 = CourseLocator("edX", "Test101", "2013")
         course_id2 = CourseLocator("MITx", "6.003z", "2012")
 
@@ -734,7 +734,7 @@ class EnrollInCourseTest(EnrollmentEventTestMixin, CacheIsolationTestCase):
 
     @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
     def test_activation(self):
-        user = User.objects.create(username="jack", email="jack@fake.edx.org")
+        user = UserFactory.create(username="jack", email="jack@fake.edx.org")
         course_id = CourseLocator("edX", "Test101", "2013")
         assert not CourseEnrollment.is_enrolled(user, course_id)
 
@@ -771,7 +771,7 @@ class EnrollInCourseTest(EnrollmentEventTestMixin, CacheIsolationTestCase):
         self.assert_enrollment_event_was_emitted(user, course_id)
 
     def test_change_enrollment_modes(self):
-        user = User.objects.create(username="justin", email="jh@fake.edx.org")
+        user = UserFactory.create(username="justin", email="jh@fake.edx.org")
         course_id = CourseLocator("edX", "Test101", "2013")
 
         CourseEnrollment.enroll(user, course_id, "audit")

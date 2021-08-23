@@ -2246,7 +2246,7 @@ class RegistrationValidationViewTests(test_utils.ApiTestCase):
         Test if username '{0}' and email '{1}' have conflicts with
         username 'user' and email 'user@email.com'.
         """
-        user = User.objects.create_user(username='user', email='user@email.com')
+        user = UserFactory.create(username='user', email='user@email.com')
         self.assertValidationDecision(
             {
                 'username': username,
