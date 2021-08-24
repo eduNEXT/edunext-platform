@@ -66,7 +66,7 @@ git+https://github.com/oppia/xblock.git@3b5c17c5832b4f8ef132c6bbf48da8a86df43b3d
 packaging==20.3           # via -c requirements/edunext/../edx/base.txt, bleach, drf-yasg
 parsel==1.6.0             # via xblock-image-explorer
 pbr==5.4.5                # via -c requirements/edunext/../edx/base.txt, stevedore
-git+https://github.com/appsembler/pdfXBlock.git@v0.3.1#egg=xblock-pdf-appsembler  # via -r requirements/edunext/github.in
+git+https://github.com/appsembler/pdfXBlock.git@v0.3.1#egg=pdf-xblock==0.3.1  # via -r requirements/edunext/github.in
 psutil==1.2.1             # via -c requirements/edunext/../edx/base.txt, edx-django-utils
 pyasn1==0.4.8             # via python-jose, rsa
 pycparser==2.20           # via -c requirements/edunext/../edx/base.txt, cffi
