@@ -20,6 +20,8 @@ def heartbeat(request):
     of service id: status or message. If the status for any service is anything other than True,
     it returns HTTP code 503 (Service Unavailable); otherwise, it returns 200.
     """
+    from newrelic.agent import ignore_transaction
+    ignore_transaction(flag=True)
     check_results = {}
     try:
         check_results = runchecks('extended' in request.GET)
