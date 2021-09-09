@@ -276,7 +276,7 @@ class AccountCreationForm(forms.Form):
                 # This email is not on the whitelist of allowed emails. Check if
                 # they may have been manually invited by an instructor and if not,
                 # reject the registration.
-                if not CourseEnrollmentAllowed.objects.filter(email=email).exists() and not 'social_auth_provider' in self.data:
+                if not 'social_auth_provider' in self.data:
                     raise ValidationError(_(
                         u"Unauthorized email, If you are a Técnico user (student, professor or staff) please register via Técnico-ID"
                     ))
