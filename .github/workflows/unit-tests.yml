@@ -35,20 +35,17 @@ jobs:
       - name: Install Required System Packages
         run: sudo apt-get update && sudo apt-get install libxmlsec1-dev
 
-      # - name: Setup Python
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: 3.8
-      #     django-version: 2.2
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.6.0
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
+
       - name: install requirements
         run: |
           sudo pip install --ignore-installed -r requirements/pip.txt
           sudo pip install --ignore-installed -r requirements/edx/testing.txt
-          sudo pip install "django~=${{ matrix.django-version }}.0"
+          sudo pip install "django~=${{ matrix.django-version }}.24"
+  
       - name: Run tests
         run: |
           pytest ${{ matrix.test_module }}
