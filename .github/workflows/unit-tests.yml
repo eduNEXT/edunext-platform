@@ -29,7 +29,6 @@ jobs:
 
     name: Python ${{ matrix.python-version }}, Django ${{ matrix.django-version }} ${{ matrix.test_module }}
     steps:
-      # - run: sudo su
       - uses: actions/checkout@v2
 
       - name: Install Required System Packages
