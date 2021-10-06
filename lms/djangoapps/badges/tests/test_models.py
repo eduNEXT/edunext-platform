@@ -35,14 +35,14 @@ def get_image(name):
     return ImageFile(open(f'{TEST_DATA_DIR}/badges/{name}.png', mode='rb'))  # lint-amnesty, pylint: disable=bad-option-value, open-builtin
 
 
-@override_settings(MEDIA_ROOT=TEST_DATA_ROOT)
+@override_settings(MEDIA_ROOT=TEST_DATA_DIR)
 class BadgeImageConfigurationTest(TestCase):
     """
     Test the validation features of BadgeImageConfiguration.
     """
 
     def tearDown(self):  # lint-amnesty, pylint: disable=super-method-not-called
-        tmp_path = Path(TEST_DATA_ROOT / 'course_complete_badges')
+        tmp_path = Path(TEST_DATA_DIR / 'course_complete_badges')
         Path.rmtree_p(tmp_path)
 
     def test_no_double_default(self):
@@ -68,7 +68,7 @@ class DummyBackend:
     award = Mock()
 
 
-@override_settings(MEDIA_ROOT=TEST_DATA_ROOT)
+@override_settings(MEDIA_ROOT=TEST_DATA_DIR)
 class BadgeClassTest(ModuleStoreTestCase):
     """
     Test BadgeClass functionality
