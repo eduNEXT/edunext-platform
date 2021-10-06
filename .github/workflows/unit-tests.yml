@@ -1,10 +1,6 @@
 name: CI
 
-on:
-  pull_request:
-  push:
-    branches:
-      - Gonzalo/githubactions_unit_tests
+on: push
 
 jobs:
   run-tests:
@@ -14,6 +10,7 @@ jobs:
       matrix:
         python-version: ['3.8']
         django-version: ["2.2","3.1"]
+        mongodb-version: ['4.0']
         test_module: [
             "lms/djangoapps/badges/ lms/djangoapps/branding/ lms/djangoapps/bulk_email/ lms/djangoapps/bulk_enroll/ lms/djangoapps/bulk_user_retirement/ lms/djangoapps/ccx/ lms/djangoapps/certificates/ lms/djangoapps/commerce/",
             "lms/djangoapps/course_api/ lms/djangoapps/course_blocks/ lms/djangoapps/course_home_api/ lms/djangoapps/course_wiki/ lms/djangoapps/coursewarehistoryextended/ lms/djangoapps/dashboard/ lms/djangoapps/debug/",
@@ -34,9 +31,10 @@ jobs:
     steps:
       # - run: sudo su
       - uses: actions/checkout@v2
-      - name: start mongodb service
-        run: |
-          sudo /etc/init.d/mongodb start
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.6.0
+        with:
+          mongodb-version: ${{ matrix.mongodb-version }}
       - name: install requirements
         run: |
           sudo pip install -r requirements/pip.txt
