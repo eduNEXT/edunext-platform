@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         # python-version: ['3.8']
-        django-version: ["2.2","3.1"]
+        # django-version: ["2.2","3.1"]
         mongodb-version: ['4.0']
         test_module: [
             "lms/djangoapps/badges/ lms/djangoapps/branding/ lms/djangoapps/bulk_email/ lms/djangoapps/bulk_enroll/ lms/djangoapps/bulk_user_retirement/ lms/djangoapps/ccx/ lms/djangoapps/certificates/ lms/djangoapps/commerce/",
@@ -27,7 +27,7 @@ jobs:
         ]
 
 
-    name: Python Django ${{ matrix.django-version }} ${{ matrix.test_module }}
+    name: Python ${{ matrix.test_module }}
     steps:
       # - run: sudo su
       - uses: actions/checkout@v2
@@ -48,7 +48,7 @@ jobs:
         run: |
           sudo pip install -r requirements/pip.txt
           sudo pip install -r requirements/edx/testing.txt
-          sudo pip install "django~=${{ matrix.django-version }}.0"
+      #    sudo pip install "django~=${{ matrix.django-version }}.0"
       - name: run tests
         run: |
           pytest ${{ matrix.test_module }}
