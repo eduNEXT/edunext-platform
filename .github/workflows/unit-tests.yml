@@ -4,8 +4,8 @@ on: push
 
 jobs:
   run-tests:
-    continue-on-error: true
-    runs-on: ubuntu-20.04
+    # continue-on-error: true
+    runs-on: [self-hosted]
     strategy:
       matrix:
         # python-version: ['3.8']
