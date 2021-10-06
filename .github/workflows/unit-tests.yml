@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      
+          django-version: 2.2
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.6.0
         with:
@@ -49,6 +49,6 @@ jobs:
           sudo pip install -r requirements/pip.txt
           sudo pip install -r requirements/edx/testing.txt
       #    sudo pip install "django~=${{ matrix.django-version }}.0"
-      - name: run tests
+      - name: Run tests
         run: |
           pytest ${{ matrix.test_module }}
