@@ -8,9 +8,10 @@ from django.test import TestCase
 from opaque_keys.edx.keys import CourseKey
 
 from xmodule.modulestore.django import SignalHandler, modulestore
+from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 
 
-class CCXConSignalTestCase(TestCase):
+class CCXConSignalTestCase(ModuleStoreTestCase):
     """
     The only tests currently implemented are for verifying that
     the call for the ccxcon update are performed correctly by the
