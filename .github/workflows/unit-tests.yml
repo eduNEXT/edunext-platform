@@ -44,7 +44,7 @@ jobs:
           sudo pip install --ignore-installed -r requirements/pip.txt
           sudo pip install --ignore-installed -r requirements/edx/testing.txt
           sudo pip install "django~=${{ matrix.django-version }}.0"
-  
+
       - name: Run tests
         run: |
           pytest ${{ matrix.test_module }}
