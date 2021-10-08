@@ -68,6 +68,7 @@ class CourseModeViewTest(CatalogIntegrationMixin, UrlResetMixin, ModuleStoreTest
         (False, 'audit', False, False),
         (False, None, False, False),
     )
+    @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
     @ddt.unpack
     def test_redirect_to_dashboard(self, is_active, enrollment_mode, redirect, has_started):
         # Configure whether course has started
