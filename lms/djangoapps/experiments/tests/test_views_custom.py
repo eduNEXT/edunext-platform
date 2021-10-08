@@ -2,10 +2,11 @@
 Tests for experimentation views
 """
 
-import pytest
 
 from datetime import timedelta
 from uuid import uuid4
+
+import pytest
 
 from django.urls import reverse
 from django.utils.timezone import now
