@@ -10,7 +10,6 @@ from django.test import TestCase
 from opaque_keys.edx.keys import CourseKey
 
 from xmodule.modulestore.django import SignalHandler, modulestore
-from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 
 
 class CCXConSignalTestCase(TestCase):
