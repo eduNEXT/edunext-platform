@@ -551,7 +551,7 @@ class TestGetCourseUserPartitions(PartitionServiceBaseClass):
         Enable or disable the feature flag for the enrollment track user partition.
         """
         FEATURES['ENABLE_ENROLLMENT_TRACK_USER_PARTITION'] = enable
-        
+
     @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_enrollment_track_partition_added(self):
         """

@@ -30,6 +30,7 @@ class XDomainProxyTest(TestCase):
             self.skipTest('xdomain_proxy URL is not configured')
 
         cache.clear()
+
     @unittest.skip(reason="fails due to unknown reasons (LI)")
     def test_xdomain_proxy_disabled(self):
         self._configure(False)
