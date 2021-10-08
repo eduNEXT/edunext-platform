@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 
 import ddt
+import pytest
 from django.conf import settings
 from django.contrib.sites.models import Site
 from django.core.management import call_command
