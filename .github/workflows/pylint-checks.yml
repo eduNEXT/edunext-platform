@@ -51,10 +51,11 @@ jobs:
 
     - name: Run Quality Tests
       run: |
-        paver run_pylint -l ${{ matrix.UPPER_PYLINT_THRESHOLD }} -s ${{ matrix.module-name }} || { EXIT=1; }
+        paver run_pylint -l ${{ matrix.UPPER_PYLINT_THRESHOLD }} -s ${{ matrix.module-name }}
 
     - name: Save Job Artifacts
       uses: actions/upload-artifact@v2
+      if: ${{ failure() }}
       with:
         name: Build-Artifacts
         path: |
