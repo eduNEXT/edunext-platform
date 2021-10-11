@@ -25,7 +25,7 @@ jobs:
             "common/djangoapps/",
             "common/lib/",
         ]
-
+        
 
     name: Python ${{ matrix.python-version }}, Django ${{ matrix.django-version }} ${{ matrix.test_module }}
     steps:
@@ -33,6 +33,11 @@ jobs:
 
       - name: Install Required System Packages
         run: sudo apt-get update && sudo apt-get install libxmlsec1-dev
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
 
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.6.0
