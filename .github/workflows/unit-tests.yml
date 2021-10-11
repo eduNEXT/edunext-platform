@@ -31,13 +31,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install Required System Packages
-        run: sudo apt-get update && sudo apt-get install libxmlsec1-dev
-
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
+
+      - name: Install Required System Packages
+        run: sudo apt-get update && sudo apt-get install libxmlsec1-dev
 
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.6.0
