@@ -2,10 +2,10 @@
 Tests for account linking Python API.
 """
 
-import pytest
-
 from unittest.mock import patch
 from uuid import uuid4
+
+import pytest
 
 from django.test import TestCase
 from edx_django_utils.cache import RequestCache

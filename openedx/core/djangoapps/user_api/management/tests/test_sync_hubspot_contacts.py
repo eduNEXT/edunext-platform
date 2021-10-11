@@ -2,12 +2,12 @@
 Test the sync_hubspot_contacts management command
 """
 
-import pytest
-
 import json
 from datetime import timedelta
 from io import StringIO
 from unittest.mock import patch
+
+import pytest
 
 from django.core.management import call_command
 from django.test import TestCase
