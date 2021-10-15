@@ -15,7 +15,6 @@ jobs:
             "cms/djangoapps/api/ cms/djangoapps/cms_user_tasks/ cms/djangoapps/course_creators/ cms/djangoapps/export_course_metadata/ cms/djangoapps/maintenance/ cms/djangoapps/models/ cms/djangoapps/pipeline_js/ cms/djangoapps/xblock_config/ cms/envs/ cms/lib/",
             "cms/djangoapps/contentstore/",
         ]
-        
 
     name: ${{ matrix.test_module }}
     steps:
@@ -39,7 +38,15 @@ jobs:
           sudo pip install --ignore-installed -r requirements/pip.txt
           sudo pip install --ignore-installed -r requirements/edx/testing.txt
           sudo pip install "django~=${{ matrix.django-version }}.24"
-      
+
       - name: Run tests
         run: |
           pytest ${{ matrix.test_module }}
+
+      - name: Retry job
+        uses: nick-invision/retry@v2
+        with:
+          timeout_seconds: 15
+          max_attempts: 3
+          retry_on: error
+          command: pytest ${{ matrix.test_module }}

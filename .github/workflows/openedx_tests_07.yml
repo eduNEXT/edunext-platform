@@ -45,3 +45,11 @@ jobs:
       - name: Run tests
         run: |
           pytest ${{ matrix.test_module }}
+
+      - name: Retry job
+        uses: nick-invision/retry@v2
+        with:
+          timeout_seconds: 15
+          max_attempts: 3
+          retry_on: error
+          command: pytest ${{ matrix.test_module }}
