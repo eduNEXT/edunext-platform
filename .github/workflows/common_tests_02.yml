@@ -1,4 +1,4 @@
-name: Common 1.1
+name: Common 1.2
 
 on: push
 
@@ -12,7 +12,7 @@ jobs:
         django-version: ["2.2"]
         mongodb-version: ['4.0']
         test_module: [
-            "common/djangoapps/"
+            "common/lib/"
         ]
         
 
