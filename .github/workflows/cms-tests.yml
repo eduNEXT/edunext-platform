@@ -39,7 +39,7 @@ jobs:
           sudo pip install --ignore-installed -r requirements/edx/testing.txt
           sudo pip install "django~=${{ matrix.django-version }}.24"
 
-      - name: Retry job
+      - name: Run tests
         uses: nick-invision/retry@v2
         with:
           timeout_minutes: 20
