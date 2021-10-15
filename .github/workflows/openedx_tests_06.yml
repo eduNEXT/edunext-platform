@@ -1,4 +1,4 @@
-name: Openedx 1.2st batch
+name: Openedx 6th batch
 
 on: push
 
@@ -12,8 +12,10 @@ jobs:
         django-version: ["2.2"]
         mongodb-version: ['4.0']
         test_module: [
-            "openedx/core/djangoapps/commerce/ openedx/core/djangoapps/common_initialization/ openedx/core/djangoapps/common_views/ openedx/core/djangoapps/config_model_utils/ 
-             openedx/core/djangoapps/content/ openedx/core/djangoapps/content_libraries/ openedx/core/djangoapps/contentserver/ openedx/core/djangoapps/cors_csrf/ openedx/core/djangoapps/course_date_signals/"
+          "openedx/core/djangoapps/site_configuration/ openedx/core/djangoapps/system_wide_roles/ openedx/core/djangoapps/theming/ openedx/core/djangoapps/user_api/ 
+          openedx/core/djangoapps/user_authn/ openedx/core/djangoapps/util/ openedx/core/djangoapps/verified_track_content/ openedx/core/djangoapps/video_config/ 
+          openedx/core/djangoapps/video_pipeline/ openedx/core/djangoapps/waffle_utils/ openedx/core/djangoapps/xblock/ openedx/core/djangoapps/xmodule_django/ openedx/core/djangoapps/zendesk_proxy/ 
+          openedx/core/djangolib/ openedx/core/lib/ openedx/core/tests/ openedx/core/tests/ openedx/features/ openedx/testing/ openedx/tests/"
         ]
         
 
