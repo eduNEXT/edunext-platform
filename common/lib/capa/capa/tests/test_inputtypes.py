@@ -640,7 +640,6 @@ class MatlabTest(unittest.TestCase):
 
         assert context == expected
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_plot_data(self):
         data = {'submission': 'x = 1234;'}
         response = self.the_input.handle_ajax("plot", data)

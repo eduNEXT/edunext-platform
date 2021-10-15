@@ -7,7 +7,6 @@ from unittest import mock
 
 import ddt
 import httpretty
-import pytest
 from django.conf import settings
 from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imported-auth-user
 from django.core import mail
@@ -1370,7 +1369,6 @@ class RegistrationViewTestV1(ThirdPartyAuthTestMixin, UserAPITestCase):
         response = self.client.get(reverse("dashboard"))
         self.assertHttpOK(response)
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_activation_email(self):
         # Register, which should trigger an activation email
         response = self.client.post(self.url, {

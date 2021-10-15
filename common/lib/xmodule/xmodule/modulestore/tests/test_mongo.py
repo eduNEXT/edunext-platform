@@ -566,7 +566,6 @@ class TestMongoModuleStore(TestMongoModuleStoreBase):
         assert path(root_dir / 'test_export/static/images/course_image.jpg').isfile()
         assert path(root_dir / 'test_export/static/images_course_image.jpg').isfile()
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     @patch('xmodule.video_module.video_module.edxval_api', None)
     @patch('xmodule.tabs.CourseTab.from_json', side_effect=mock_tab_from_json)
     def test_export_course_image_nondefault(self, _from_json):

@@ -9,7 +9,6 @@ from copy import deepcopy
 from unittest import mock
 
 import ddt
-import pytest
 from edx_toggles.toggles.testutils import override_waffle_switch
 import httpretty
 from django.conf import settings
@@ -557,7 +556,6 @@ class TestProgramProgressMeter(TestCase):
         )
         assert list(meter.completed_programs_with_available_dates.keys()) == [program_uuid]
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_nonverified_course_run_completion(self, mock_get_programs):
         """
         Course runs aren't necessarily of type verified. Verify that a program can
@@ -659,7 +657,6 @@ class TestProgramProgressMeter(TestCase):
             ]
         )
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_program_completion_with_no_id_professional(self, mock_get_programs):
         """
         Verify that 'no-id-professional' certificates are treated as if they were

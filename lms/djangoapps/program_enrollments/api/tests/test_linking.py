@@ -2,10 +2,9 @@
 Tests for account linking Python API.
 """
 
+
 from unittest.mock import patch
 from uuid import uuid4
-
-import pytest
 
 from django.test import TestCase
 from edx_django_utils.cache import RequestCache
@@ -417,7 +416,6 @@ class TestLinkProgramEnrollmentsErrors(TestLinkProgramEnrollmentsMixin, TestCase
         self._assert_program_enrollment(self.user_1, self.program, '0001')
         self._assert_program_enrollment(self.user_2, self.program, '0002')
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_error_enrolling_in_course(self):
         nonexistant_course = CourseKey.from_string('course-v1:edX+Zilch+Bupkis')
 

@@ -2,10 +2,8 @@
 Test for contentstore signals receiver
 """
 
+
 from unittest import mock
-
-import pytest
-
 from django.test import TestCase
 from opaque_keys.edx.keys import CourseKey
 
@@ -19,7 +17,6 @@ class CCXConSignalTestCase(TestCase):
     course_published signal handler
     """
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     @mock.patch('openedx.core.djangoapps.ccxcon.tasks.update_ccxcon.delay')
     def test_course_published_ccxcon_call(self, mock_upc):
         """

@@ -552,7 +552,6 @@ class TestGetCourseUserPartitions(PartitionServiceBaseClass):
         """
         FEATURES['ENABLE_ENROLLMENT_TRACK_USER_PARTITION'] = enable
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_enrollment_track_partition_added(self):
         """
         Test that the dynamic enrollment track scheme is added if there is no conflict with the user partition ID.
@@ -591,7 +590,6 @@ class TestGetCourseUserPartitions(PartitionServiceBaseClass):
         assert 1 == len(all_partitions)
         assert self.TEST_SCHEME_NAME == all_partitions[0].scheme.name
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_filter_inactive_user_partitions(self):
         """
         Tests supplying the `active_only` parameter.

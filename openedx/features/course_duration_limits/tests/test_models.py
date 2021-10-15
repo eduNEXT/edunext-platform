@@ -175,7 +175,6 @@ class TestCourseDurationLimitConfig(CacheIsolationTestCase):
         assert expected_org_setting == CourseDurationLimitConfig.current(org=test_course.org).enabled
         assert expected_course_setting == CourseDurationLimitConfig.current(course_key=test_course.id).enabled
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_all_current_course_configs(self):
         # Set up test objects
         for global_setting in (True, False, None):

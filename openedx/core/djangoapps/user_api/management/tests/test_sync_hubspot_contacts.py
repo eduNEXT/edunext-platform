@@ -2,12 +2,11 @@
 Test the sync_hubspot_contacts management command
 """
 
+
 import json
 from datetime import timedelta
 from io import StringIO
 from unittest.mock import patch
-
-import pytest
 
 from django.core.management import call_command
 from django.test import TestCase
@@ -89,7 +88,6 @@ class TestHubspotSyncCommand(TestCase):
         # 4 requests of batch (2, 2, 2, 1), total 7 contacts
         sync_with_hubspot.stop()
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_command_without_initial_sync_days(self):
         """
         Test sync last day

@@ -9,7 +9,6 @@ from datetime import datetime, timedelta
 from unittest.mock import patch
 
 import ddt
-import pytest
 import freezegun
 import httpretty
 import pytz
@@ -69,7 +68,6 @@ class CourseModeViewTest(CatalogIntegrationMixin, UrlResetMixin, ModuleStoreTest
         (False, 'audit', False, False),
         (False, None, False, False),
     )
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     @ddt.unpack
     def test_redirect_to_dashboard(self, is_active, enrollment_mode, redirect, has_started):
         # Configure whether course has started
@@ -149,7 +147,6 @@ class CourseModeViewTest(CatalogIntegrationMixin, UrlResetMixin, ModuleStoreTest
         '1, ,2',
         '1, 2, 3'
     )
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_suggested_prices(self, price_list):
 
         # Create the course modes
@@ -210,7 +207,6 @@ class CourseModeViewTest(CatalogIntegrationMixin, UrlResetMixin, ModuleStoreTest
         (0.0, True),
         (None, False),
     )
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     @ddt.unpack
     def test_display_after_discounted_price(
         self,
@@ -235,7 +231,6 @@ class CourseModeViewTest(CatalogIntegrationMixin, UrlResetMixin, ModuleStoreTest
             self.assertContains(response, discounted_price)
         self.assertContains(response, verified_mode.min_price)
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     @httpretty.activate
     @ddt.data(True, False)
     def test_congrats_on_enrollment_message(self, create_enrollment):

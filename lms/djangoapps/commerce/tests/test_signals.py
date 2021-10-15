@@ -288,7 +288,6 @@ class TestRefundSignal(TestCase):
             assert not success
             assert mock_post.called
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     @httpretty.activate
     def test_create_zendesk_ticket(self):
         """ Verify the Zendesk API is called. """

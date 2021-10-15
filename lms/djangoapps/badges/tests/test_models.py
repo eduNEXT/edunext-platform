@@ -45,7 +45,6 @@ class BadgeImageConfigurationTest(TestCase):
         tmp_path = Path(TEST_DATA_ROOT / 'course_complete_badges')
         Path.rmtree_p(tmp_path)
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_no_double_default(self):
         """
         Verify that creating two configurations as default is not permitted.
@@ -114,7 +113,6 @@ class BadgeClassTest(ModuleStoreTestCase):
         # File name won't always be the same.
         assert badge_class.image.path == premade_badge_class.image.path
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_unique_for_course(self):
         """
         Verify that the course_id is used in fetching existing badges or creating new ones.
@@ -146,7 +144,6 @@ class BadgeClassTest(ModuleStoreTestCase):
                 course_id=course_key,
             )
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_get_badge_class_create(self):
         """
         Verify fetching a badge creates it if it doesn't yet exist.
@@ -181,7 +178,6 @@ class BadgeClassTest(ModuleStoreTestCase):
         )
         assert badge_class is None
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_get_badge_class_image_validate(self):
         """
         Verify handing a broken image to get_badge_class raises a validation error upon creation.
@@ -195,7 +191,6 @@ class BadgeClassTest(ModuleStoreTestCase):
             image_file_handle=get_image('unbalanced')
         )
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_get_badge_class_data_validate(self):
         """
         Verify handing incomplete data for required fields when making a badge class raises an Integrity error.

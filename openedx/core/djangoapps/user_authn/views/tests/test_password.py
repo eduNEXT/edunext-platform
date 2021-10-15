@@ -43,7 +43,6 @@ class TestRequestPasswordChange(CreateAccountMixin, TestCase):
 
     IS_SECURE = False
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     @skip_unless_lms
     def test_request_password_change(self):
         # Create and activate an account
@@ -75,7 +74,6 @@ class TestRequestPasswordChange(CreateAccountMixin, TestCase):
         # Verify that no email messages have been sent
         assert len(mail.outbox) == 0
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     @skip_unless_lms
     def test_request_password_change_inactive_user(self):
         # Create an account, but do not activate it

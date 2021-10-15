@@ -9,7 +9,6 @@ from unittest import mock
 from uuid import UUID, uuid4
 
 import ddt
-import pytest
 from django.conf import settings
 from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imported-auth-user
 from django.core.cache import cache
@@ -800,7 +799,6 @@ class ProgramCourseEnrollmentsMixin(EnrollmentsDataMixin):
         response = self.request(self.default_url, request_data)
         assert 413 == response.status_code
 
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_404_not_found(self):
         nonexistant_course_key = CourseKey.from_string("course-v1:fake+fake+fake")
         paths = [

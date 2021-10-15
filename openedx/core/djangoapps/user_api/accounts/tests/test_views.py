@@ -10,7 +10,6 @@ from copy import deepcopy
 from unittest import mock
 
 import ddt
-import pytest
 import pytz
 from django.conf import settings
 from django.test.testcases import TransactionTestCase
@@ -733,7 +732,6 @@ class TestAccountsAPI(CacheIsolationTestCase, UserAPITestCase):
         {'full': 50, 'medium': 30, 'small': 10},
         clear=True
     )
-    @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
     def test_patch_email(self):
         """
         Test that the user can request an email change through the accounts API.
