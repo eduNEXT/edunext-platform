@@ -1,4 +1,4 @@
-name: Openedx 5th batch
+name: Openedx 7th batch
 
 on: push
 
@@ -12,8 +12,10 @@ jobs:
         django-version: ["2.2"]
         mongodb-version: ['4.0']
         test_module: [
-          "openedx/core/djangoapps/password_policy/ openedx/core/djangoapps/plugin_api/ openedx/core/djangoapps/plugins/ openedx/core/djangoapps/profile_images/ 
-          openedx/core/djangoapps/programs/ openedx/core/djangoapps/safe_sessions/"
+          "openedx/core/djangoapps/site_configuration/ openedx/core/djangoapps/system_wide_roles/ openedx/core/djangoapps/theming/ openedx/core/djangoapps/user_api/ 
+          openedx/core/djangoapps/user_authn/ openedx/core/djangoapps/util/ openedx/core/djangoapps/verified_track_content/ openedx/core/djangoapps/video_config/ 
+          openedx/core/djangoapps/video_pipeline/ openedx/core/djangoapps/waffle_utils/ openedx/core/djangoapps/xblock/ openedx/core/djangoapps/xmodule_django/ openedx/core/djangoapps/zendesk_proxy/ 
+          openedx/core/djangolib/ openedx/core/lib/ openedx/core/tests/ openedx/core/tests/ openedx/features/ openedx/testing/ openedx/tests/"
         ]
         
 
@@ -39,7 +41,7 @@ jobs:
           sudo pip install --ignore-installed -r requirements/pip.txt
           sudo pip install --ignore-installed -r requirements/edx/testing.txt
           sudo pip install "django~=${{ matrix.django-version }}.24"
-
+      
       - name: Run tests
         run: |
           pytest ${{ matrix.test_module }}
