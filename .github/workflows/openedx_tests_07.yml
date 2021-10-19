@@ -45,7 +45,7 @@ jobs:
       - name: Run tests
         uses: nick-invision/retry@v2
         with:
-          timeout_minutes: 20
+          timeout_minutes: 45
           max_attempts: 3
           retry_on: error
           command: pytest ${{ matrix.test_module }}
