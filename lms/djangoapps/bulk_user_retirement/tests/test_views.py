@@ -77,13 +77,14 @@ class BulkUserRetirementViewTests(APITestCase):
     def test_retirement_for_multiple_users(self):
         user_retirement_url = reverse('bulk_retirement_api')
         expected_response = {
-            'successful_user_retirements': [self.user3.username, self.user4.username],
+            'successful_user_retirements': {self.user3.username, self.user4.username},
             'failed_user_retirements': []
         }
         with self.settings(RETIREMENT_SERVICE_WORKER_USERNAME=self.user1.username):
             response = self.client.post(user_retirement_url, {
                 "usernames": '{user1},{user2}'.format(user1=self.user3.username, user2=self.user4.username)
             })
+            response.data['successful_user_retirements'] = set(response.data['successful_user_retirements'])
             assert response.status_code == 200
             assert response.data == expected_response
 
@@ -96,7 +97,7 @@ class BulkUserRetirementViewTests(APITestCase):
     def test_retirement_for_multiple_users_with_some_nonexisting_users(self):
         user_retirement_url = reverse('bulk_retirement_api')
         expected_response = {
-            'successful_user_retirements': [self.user3.username, self.user4.username],
+            'successful_user_retirements': {self.user3.username, self.user4.username},
             'failed_user_retirements': ['non_existing_user']
         }
         with self.settings(RETIREMENT_SERVICE_WORKER_USERNAME=self.user1.username):
@@ -106,6 +107,7 @@ class BulkUserRetirementViewTests(APITestCase):
                     user2=self.user4.username
                 )
             })
+            response.data['successful_user_retirements'] = set(response.data['successful_user_retirements'])
             assert response.status_code == 200
             assert response.data == expected_response
 

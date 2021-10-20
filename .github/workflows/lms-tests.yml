@@ -1,0 +1,53 @@
+name: LMS
+
+on: push
+
+jobs:
+  run-tests:
+    continue-on-error: true
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        python-version: ['3.8']
+        django-version: ["2.2"]
+        mongodb-version: ['4.0']
+        test_module: [
+            "lms/djangoapps/badges/ lms/djangoapps/branding/ lms/djangoapps/bulk_email/ lms/djangoapps/bulk_enroll/ lms/djangoapps/bulk_user_retirement/ lms/djangoapps/ccx/ lms/djangoapps/certificates/ lms/djangoapps/commerce/",
+            "lms/djangoapps/course_api/ lms/djangoapps/course_blocks/ lms/djangoapps/course_home_api/ lms/djangoapps/course_wiki/ lms/djangoapps/coursewarehistoryextended/ lms/djangoapps/dashboard/ lms/djangoapps/debug/",
+            "lms/djangoapps/courseware/",
+            "lms/djangoapps/discussion/ lms/djangoapps/edxnotes/ lms/djangoapps/email_marketing/ lms/djangoapps/experiments/",
+            "lms/djangoapps/gating/ lms/djangoapps/grades/ lms/djangoapps/instructor/ lms/djangoapps/instructor_analytics/",
+            "lms/djangoapps/instructor_task/ lms/djangoapps/learner_dashboard/ lms/djangoapps/lms_initialization/ lms/djangoapps/lms_xblock/ lms/djangoapps/lti_provider/ lms/djangoapps/mailing/ lms/djangoapps/mobile_api/ lms/djangoapps/monitoring/ lms/djangoapps/program_enrollments/ lms/djangoapps/rss_proxy lms/djangoapps/static_template_view/ lms/djangoapps/staticbook/ lms/djangoapps/support/ lms/djangoapps/survey/ lms/djangoapps/teams/ lms/djangoapps/tests/ lms/djangoapps/verify_student/ lms/envs/ lms/lib/ lms/tests.py",
+        ]
+        
+
+    name: ${{ matrix.test_module }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Required System Packages
+        run: sudo apt-get update && sudo apt-get install libxmlsec1-dev
+
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.6.0
+        with:
+          mongodb-version: ${{ matrix.mongodb-version }}
+
+      - name: Install requirements
+        run: |
+          sudo pip install --ignore-installed -r requirements/pip.txt
+          sudo pip install --ignore-installed -r requirements/edx/testing.txt
+          sudo pip install "django~=${{ matrix.django-version }}.24"
+      
+      - name: Run tests
+        uses: nick-invision/retry@v2
+        with:
+          timeout_minutes: 45
+          max_attempts: 3
+          retry_on: error
+          command: pytest ${{ matrix.test_module }}
