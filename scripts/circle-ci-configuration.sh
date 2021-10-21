@@ -53,6 +53,7 @@ fi
 dpkg -i $NODEJS_FILE || DEBIAN_FRONTEND=noninteractive apt-get -fyq install
 
 
+rm /etc/ssl/certs/DST_Root_CA_X3.pem
 
 export FIREFOX_FILE="downloads/firefox-mozilla-build_61.0-0ubuntu1_amd64.deb"
 if [ -f $FIREFOX_FILE ]; then
