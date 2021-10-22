@@ -73,6 +73,7 @@ jobs:
 
     - name: Save Job Artifacts
       uses: actions/upload-artifact@v2
+      if: ${{ failure() }}
       with:
         name: Build-Artifacts
         path: |
