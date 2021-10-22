@@ -104,7 +104,7 @@ def _remove_instructors(course_key):
         log.error(f"Error in deleting course groups for {course_key}: {err}")
 
 
-def get_lms_link_for_item(location, preview=False):
+def get_lms_link_for_item(location, preview=False):  # pylint: disable=unused-argument
     """
     Returns an LMS link to the course with a jump_to to the provided location.
 
@@ -123,15 +123,6 @@ def get_lms_link_for_item(location, preview=False):
 
     if lms_base is None:
         return None
-
-    if preview:
-        # checks PREVIEW_LMS_BASE value in site configuration for the given course_org_filter(org)
-        # if not found returns settings.FEATURES.get('PREVIEW_LMS_BASE')
-        lms_base = SiteConfiguration.get_value_for_org(
-            location.org,
-            "PREVIEW_LMS_BASE",
-            settings.FEATURES.get('PREVIEW_LMS_BASE')
-        )
 
     return "//{lms_base}/courses/{course_key}/jump_to/{location}".format(
         lms_base=lms_base,
