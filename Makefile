@@ -132,3 +132,8 @@ docker_push: docker_tag docker_auth ## push to docker hub
 	docker push "openedx/edx-platform:${GITHUB_SHA}-newrelic"
 	docker push 'openedx/edx-platform:latest-devstack'
 	docker push "openedx/edx-platform:${GITHUB_SHA}-devstack"
+
+edunext-upgrade: export CUSTOM_COMPILE_COMMAND=make edunext-upgrade
+edunext-upgrade: #Update edunext dependencies.
+	pip install -qr requirements/edx/pip-tools.txt
+	pip-compile -v --no-emit-trusted-host --no-index --upgrade -o requirements/edunext/base.txt requirements/edunext/base.in || exit 1;
