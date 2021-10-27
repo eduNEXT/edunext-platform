@@ -1,0 +1,53 @@
+# Forks and other dependencies not yet on PyPI, for running edunext-platform (LMS or Studio)
+#
+# DON'T JUST ADD NEW DEPENDENCIES!!!
+#
+# If you open a pull request that adds a new dependency, you should:
+#   * verify that the dependency has a license compatible with AGPLv3
+#   * confirm that it has no system requirements beyond what we already install
+#   * run "make edunext-upgrade" to update the detailed requirements files
+#
+# Do *NOT* install Python packages from GitHub unless it's absolutely necessary!
+#
+# A correct GitHub reference looks like this:
+#
+#   git+https://github.com/OWNER/REPO-NAME.git@TAG-OR-SHA#egg=DIST-NAME==VERSION
+#
+# For example:
+#
+#   git+https://github.com/edx/edx-lint.git@v0.3.2#egg=edx_lint==0.3.2
+#
+# where:
+#
+#   OWNER = edx
+#   REPO-NAME = edx-lint
+#   TAG-OR-SHA = v0.3.2
+#   DIST-NAME = edx_lint
+#   VERSION = 0.3.2
+#
+#
+# Rules to follow (even though many URLs here don't follow them!):
+#
+#   * Don't leave out any of these pieces.
+#
+#   * TAG-OR-SHA is the specific commit to install.  It must be a git tag,
+#     or a git SHA commit hash.  Don't use branch names here.  If OWNER is
+#     not an edX organization, then it must be a SHA.  If you use a SHA,
+#     please make sure there is a tag associated with it, so the commit can't
+#     be lost during rebase.
+#
+#   * DIST-NAME is the distribution name, the same name you'd use in a
+#     "pip install" command.  It might be different than REPO-NAME. It must
+#     be the same as the `name="DIST-NAME"` value in the repo's setup.py.
+#
+#   * VERSION might not be the same as TAG-OR-SHA, but if the tag names the
+#     version, please make it match the VERSION, but with a "v" prefix.
+#     VERSION must be the same as the `version="VERSION"` value in the repo's
+#     setup.py.  An alternative is to use 0.0 as VERSION: this forces pip to
+#     re-install the package each time, and can be useful when working with two
+#     repos before picking a version number. Don't use 0.0 on master, only for
+#     tight-loop work in progress.
+
+#####################
+# Community Xblocks #
+#####################
