@@ -1,0 +1,38 @@
+# Core dependencies for running edunext-platform (LMS or Studio)
+#
+# DON'T JUST ADD NEW DEPENDENCIES!!!
+#
+# If you open a pull request that adds a new dependency, you should:
+#   * verify that the dependency has a license compatible with AGPLv3
+#   * confirm that it has no system requirements beyond what we already install
+#   * run "make upgrade" to update the detailed requirements files
+#
+
+-c ../edx/base.txt
+-c constraints.txt
+
+-r github.in              # Forks and other dependencies not yet on PyPI
+
+# Please follow these guidelines whenever you change this file:
+#
+# 1. When adding a new dependency, add a comment to the end of the line
+#    explaining why it is needed.
+# 2. Do not pin exact versions unless absolutely necessary.  When upgrading
+#    an already-pinned package to its latest release, remove the version pin.
+# 3. Do not add indirect dependencies unless a version constraint is needed to
+#    avoid versions which have known problems.
+# 4. If the package is not needed in production, add it to another file such
+#    as development.in or testing.in instead.
+
+###################
+# eduNEXT plugins #
+###################
+eox-tenant                          # Edunext multi-tenant plugin, allows a multi-tenant instance.
+
+#####################
+# eduNEXT Xblocks #
+#####################
+
+#####################
+# Community Xblocks #
+#####################
