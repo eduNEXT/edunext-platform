@@ -4,4 +4,4 @@
 #
 #    make edunext-upgrade
 #
-eox-tenant==4.1.0         # via -r requirements/edunext/base.in
+eox-tenant==5.0.1         # via -r requirements/edunext/base.in
