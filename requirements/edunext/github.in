@@ -81,7 +81,7 @@ git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1
 git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=lti_consumer-xblock==v1.2.6.1
 
 # Webhook-xblock
-git+https://github.com/eduNEXT/webhook-xblock@30d86f3878b513f8425eecde3252b6141803641f#egg=webhook-xblock==0.1.0
+git+https://github.com/eduNEXT/webhook-xblock@a734c6de47cb61cba20bec4a4f3362ce625d47d1#egg=webhook-xblock==0.2.0_1
 
 # xblock-pdf
 git+https://github.com/appsembler/pdfXBlock.git@v0.3.1#egg=pdf-xblock==0.3.1
