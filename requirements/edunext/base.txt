@@ -106,7 +106,7 @@ git+https://github.com/open-craft/xblock-vectordraw.git@v0.3.2#egg=vectordraw-xb
 w3lib==1.22.0             # via parsel
 web-fragments==0.3.2      # via -c requirements/edunext/../edx/base.txt, xblock, xblock-utils
 webencodings==0.5.1       # via -c requirements/edunext/../edx/base.txt, bleach
-git+https://github.com/eduNEXT/webhook-xblock@30d86f3878b513f8425eecde3252b6141803641f#egg=webhook-xblock==0.1.0  # via -r requirements/edunext/github.in
+git+https://github.com/eduNEXT/webhook-xblock@a734c6de47cb61cba20bec4a4f3362ce625d47d1#egg=webhook-xblock==0.2.0_1  # via -r requirements/edunext/github.in
 webob==1.8.6              # via -c requirements/edunext/../edx/base.txt, xblock
 git+https://github.com/edx/xblock-free-text-response@release/v1.1.1#egg=xblock-free-text-response==1.1.1  # via -r requirements/edunext/github.in
 git+https://github.com/edx-solutions/xblock-image-explorer.git@9a4ea322507f0f196aaf1283ce62aa017ed69e40#egg=xblock-image-explorer  # via -r requirements/edunext/github.in
