@@ -593,7 +593,12 @@ def _get_asset_json(display_name, content_type, date, location, thumbnail_locati
     Helper method for formatting the asset information to send to client.
     '''
     asset_url = StaticContent.serialize_asset_key_with_slash(location)
-    external_url = urljoin(configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL), asset_url)
+    lms_root = configuration_helpers.get_value_for_org(
+        location.org,
+        'LMS_ROOT_URL',
+        settings.LMS_ROOT_URL
+    )
+    external_url = urljoin(lms_root, asset_url)
     return {
         'display_name': display_name,
         'content_type': content_type,
