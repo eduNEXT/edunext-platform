@@ -40,6 +40,7 @@ jobs:
         run: |
           sudo pip install --ignore-installed -r requirements/pip.txt
           sudo pip install --ignore-installed -r requirements/edx/testing.txt
+          sudo pip install --exists-action w -r requirements/edunext/base.txt
           sudo pip install "django~=${{ matrix.django-version }}.24"
       
       - name: Run tests
