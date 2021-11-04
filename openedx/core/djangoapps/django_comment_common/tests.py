@@ -12,7 +12,8 @@ from openedx.core.djangoapps.django_comment_common.utils import (
     get_course_discussion_settings,
     set_course_discussion_settings
 )
-from common.djangoapps.student.models import CourseEnrollment, User
+from common.djangoapps.student.models import CourseEnrollment
+from common.djangoapps.student.tests.factories import UserFactory
 from xmodule.modulestore import ModuleStoreEnum
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
@@ -30,15 +31,15 @@ class RoleAssignmentTest(TestCase):
     def setUp(self):
         super().setUp()
         # Check a staff account because those used to get the Moderator role
-        self.staff_user = User.objects.create_user(
-            "patty",
-            "patty@fake.edx.org",
+        self.staff_user = UserFactory.create(
+            username="patty",
+            email="patty@fake.edx.org",
         )
         self.staff_user.is_staff = True
 
-        self.student_user = User.objects.create_user(
-            "hacky",
-            "hacky@fake.edx.org"
+        self.student_user = UserFactory.create(
+            username="hacky",
+            email="hacky@fake.edx.org",
         )
         self.course_key = CourseLocator("edX", "Fake101", "2012")
         CourseEnrollment.enroll(self.staff_user, self.course_key)
