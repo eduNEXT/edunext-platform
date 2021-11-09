@@ -37,7 +37,7 @@ edx-proctoring==3.8.5     # via -c requirements/edunext/../edx/base.txt, eox-cor
 edx-rest-api-client==5.3.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==2.0.0           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-audit-model==0.6.0    # via eox-core
-eox-core[eox-audit,sentry,tpa]==5.0.2  # via -r requirements/edunext/base.in
+eox-core[eox-audit,sentry,tpa]==5.0.3  # via -r requirements/edunext/base.in
 eox-tenant==5.0.1         # via -r requirements/edunext/base.in
 event-tracking==1.0.4     # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 fs==2.0.18                # via -c requirements/edunext/../edx/base.txt, xblock
