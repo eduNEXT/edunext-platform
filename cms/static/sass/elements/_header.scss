@@ -15,6 +15,15 @@
 
 }
 
+@supports (-moz-appearance: none) {
+ .wrapper.wrapper-l {
+   width: 74% !important;
+ }
+ .wrapper.wrapper-r {
+   width: 26% !important;
+ }
+}
+
 .wrapper-header {
   @extend %ui-depth3;
 
