@@ -1,5 +1,19 @@
 // studio - elements - global header
 // ====================
+/*
+ * This style only works on firefox, because currently the lang selector
+ * is producing an overlapping into the header
+ */
+@supports (-moz-appearance: none) {
+  .wrapper.wrapper-l {
+    width: 74% !important;
+  }
+
+  .wrapper.wrapper-r {
+    width: 26% !important;
+  }
+
+}
 
 .wrapper-header {
   @extend %ui-depth3;
