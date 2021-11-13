@@ -1680,7 +1680,8 @@ class CourseEnrollment(models.Model):
                 mode=enrollment.mode,
                 is_active=enrollment.is_active,
                 creation_date=enrollment.created,
-            )
+            ),
+            other={"extra_info": []},
         )
 
         return enrollment

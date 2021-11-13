@@ -52,7 +52,7 @@ lxml==4.5.0               # via -c requirements/edunext/../edx/base.txt, xblock
 markupsafe==1.1.1         # via -c requirements/edunext/../edx/base.txt, jinja2, xblock
 newrelic==6.2.0.156       # via -c requirements/edunext/../edx/base.txt, edx-django-utils
 oauthlib==3.0.1           # via -c requirements/edunext/../edx/base.txt, django-oauth-toolkit, requests-oauthlib, social-auth-core
-git+https://github.com/eduNEXT/openedx-events.git@MJG/majostests#egg=openedx_events==1.1.1_alpha # via -r requirements/edunext/base.in
+openedx-events==0.6.0     # via -r requirements/edunext/base.in
 packaging==20.9           # via -c requirements/edunext/../edx/base.txt, drf-yasg
 pbr==5.5.1                # via -c requirements/edunext/../edx/base.txt, stevedore
 psutil==5.8.0             # via -c requirements/edunext/../edx/base.txt, edx-django-utils
