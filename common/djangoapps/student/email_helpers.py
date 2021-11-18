@@ -57,8 +57,7 @@ def generate_proctoring_requirements_email_context(user, course_id):
         'course_name': course_module.display_name,
         'proctoring_provider': capwords(course_module.proctoring_provider.replace('_', ' ')),
         'proctoring_requirements_url': settings.PROCTORING_SETTINGS.get('LINK_URLS', {}).get('faq', ''),
-        'idv_required': not settings.FEATURES.get('ENABLE_INTEGRITY_SIGNATURE'),
-        'id_verification_url': IDVerificationService.get_verify_location(),
+        'id_verification_url': IDVerificationService.get_verify_location('verify_student_verify_now', course_id),
     }
 
 

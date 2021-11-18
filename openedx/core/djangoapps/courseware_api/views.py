@@ -237,9 +237,9 @@ class CoursewareMeta:
         if self.enrollment_object and self.enrollment_object.mode in CourseMode.VERIFIED_MODES:
             verification_status = IDVerificationService.user_status(self.effective_user)['status']
             if verification_status == 'must_reverify':
-                return IDVerificationService.get_verify_location()
+                return IDVerificationService.get_verify_location('verify_student_reverify')
             else:
-                return IDVerificationService.get_verify_location(self.course_key)
+                return IDVerificationService.get_verify_location('verify_student_verify_now', self.course_key)
 
     @property
     def verification_status(self):

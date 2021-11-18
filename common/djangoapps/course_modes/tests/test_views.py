@@ -129,7 +129,9 @@ class CourseModeViewTest(CatalogIntegrationMixin, UrlResetMixin, ModuleStoreTest
         url = reverse('course_modes_choose', args=[str(self.course.id)])
         response = self.client.get(url)
 
-        start_flow_url = IDVerificationService.get_verify_location(course_id=self.course.id)
+        start_flow_url = IDVerificationService.get_verify_location('verify_student_start_flow',
+                                                                   course_id=self.course.id)
+        start_flow_url += "?purchase_workflow=single"
         # Check whether we were correctly redirected
         self.assertRedirects(response, start_flow_url, fetch_redirect_response=False)
 
@@ -277,7 +279,9 @@ class CourseModeViewTest(CatalogIntegrationMixin, UrlResetMixin, ModuleStoreTest
 
         # Since the only available track is professional ed, expect that
         # we're redirected immediately to the start of the payment flow.
-        start_flow_url = IDVerificationService.get_verify_location(course_id=self.course.id)
+        start_flow_url = IDVerificationService.get_verify_location('verify_student_start_flow',
+                                                                   course_id=self.course.id)
+        start_flow_url += "?purchase_workflow=single"
         self.assertRedirects(response, start_flow_url, fetch_redirect_response=False)
 
         # Now enroll in the course
@@ -321,7 +325,8 @@ class CourseModeViewTest(CatalogIntegrationMixin, UrlResetMixin, ModuleStoreTest
         if expected_redirect == 'dashboard':
             redirect_url = reverse('dashboard')
         elif expected_redirect == 'start-flow':
-            redirect_url = IDVerificationService.get_verify_location(course_id=self.course.id)
+            redirect_url = IDVerificationService.get_verify_location('verify_student_start_flow',
+                                                                     course_id=self.course.id)
         else:
             self.fail("Must provide a valid redirect URL name")
 

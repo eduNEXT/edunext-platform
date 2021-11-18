@@ -33,6 +33,7 @@ from openedx.core.djangoapps.ace_common.tests.mixins import EmailTemplateTagMixi
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.theming.tests.test_util import with_comprehensive_theme
 from openedx.core.djangolib.testing.utils import CacheIsolationMixin, CacheIsolationTestCase
+from lms.djangoapps.verify_student.services import IDVerificationService
 from xmodule.modulestore.django import modulestore  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.modulestore.tests.factories import CourseFactory  # lint-amnesty, pylint: disable=wrong-import-order
@@ -268,13 +269,14 @@ class ProctoringRequirementsEmailTests(EmailTemplateTagMixin, ModuleStoreTestCas
         """
         course_module = modulestore().get_course(self.course.id)
         proctoring_provider = capwords(course_module.proctoring_provider.replace('_', ' '))
+        id_verification_url = IDVerificationService.get_verify_location('verify_student_verify_now', self.course.id)
         fragments = [
             (
                 "You are enrolled in {} at {}. This course contains proctored exams.".format(
                     self.course.display_name,
                     settings.PLATFORM_NAME
                 )
-            ),
+            ),``
             (
                 "Proctored exams are timed exams that you take while proctoring software monitors "
                 "your computer's desktop, webcam video, and audio."
@@ -285,6 +287,8 @@ class ProctoringRequirementsEmailTests(EmailTemplateTagMixin, ModuleStoreTestCas
                 "exam in order to ensure that you are prepared."
             ),
             settings.PROCTORING_SETTINGS.get('LINK_URLS', {}).get('faq', ''),
+            ("Before taking a graded proctored exam, you must have approved ID verification photos."),
+            id_verification_url
         ]
         return fragments
 

@@ -10,7 +10,9 @@ from urllib.parse import quote
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.timezone import now
-from django.utils.translation import gettext as _
+from django.utils.translation import ugettext as _
+
+from django.urls import reverse
 
 from common.djangoapps.course_modes.models import CourseMode
 from common.djangoapps.student.models import User
@@ -49,7 +51,7 @@ class XBlockVerificationService:
         """
         Returns the URL for a user to verify themselves.
         """
-        return IDVerificationService.get_verify_location()
+        return IDVerificationService.get_verify_location('verify_student_reverify')
 
 
 class IDVerificationService:
@@ -227,32 +229,39 @@ class IDVerificationService:
             return 'ID Verified'
 
     @classmethod
-    def get_verify_location(cls, course_id=None):
+    def get_verify_location(cls, url_name, course_id=None):
         """
+        url_name is one of:
+            'verify_student_verify_now'
+            'verify_student_reverify'
+
         Returns a string:
-            Returns URL for IDV on Account Microfrontend
+            eduNEXT:
+            If `ENABLE_ACCOUNT_MFE` setting is true, returns URL for
+            IDV microfrontend.
+            Else, returns URL for corresponding view.
         """
-        location = f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
-        if course_id:
-            location += f'?course_id={quote(str(course_id))}'
+        location = ''
+        if getattr(settings, 'ENABLE_ACCOUNT_MFE', False):
+            location = f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
+            if course_id:
+                location += f'?course_id={quote(str(course_id))}'
+        else:
+            if course_id:
+                location = reverse(url_name, args=[str(course_id)])
+            else:
+                location = reverse(url_name)
         return location
 
     @classmethod
-    def get_verification_details_by_id(cls, attempt_id):
+    def email_reverify_url(cls):
         """
-        Returns a verification attempt object by attempt_id
-        If the verification object cannot be found, returns None
+        Return a URL string for reverification emails:
+            eduNEXT:
+            If `ENABLE_ACCOUNT_MFE` setting is true, returns URL for IDV microfrontend.
+            Else, returns URL for reverify view.
         """
-        verification = None
-        verification_models = [
-            SoftwareSecurePhotoVerification,
-            SSOVerification,
-            ManualVerification,
-        ]
-        for ver_model in verification_models:
-            if not verification:
-                try:
-                    verification = ver_model.objects.get(id=attempt_id)
-                except ObjectDoesNotExist:
-                    pass
-        return verification
+        if getattr(settings, 'ENABLE_ACCOUNT_MFE', False):
+            return f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
+        else:
+            return f'{settings.LMS_ROOT_URL}{reverse("verify_student_reverify")}'

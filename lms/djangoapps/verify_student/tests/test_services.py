@@ -117,31 +117,6 @@ class TestIDVerificationService(ModuleStoreTestCase):
 
         assert expected_user_ids == verified_user_ids
 
-    def test_get_verify_location_no_course_key(self):
-        """
-        Test for the path to the IDV flow with no course key given
-        """
-        path = IDVerificationService.get_verify_location()
-        expected_path = f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
-        assert path == expected_path
-
-    def test_get_verify_location_from_course_id(self):
-        """
-        Test for the path to the IDV flow with a course ID
-        """
-        course = CourseFactory.create(org='Robot', number='999', display_name='Test Course')
-        path = IDVerificationService.get_verify_location(course.id)
-        expected_path = f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
-        assert path == (expected_path + '?course_id=course-v1%3ARobot%2B999%2BTest_Course')
-
-    def test_get_verify_location_from_string(self):
-        """
-        Test for the path to the IDV flow with a course key string
-        """
-        path = IDVerificationService.get_verify_location('course-v1:edX+DemoX+Demo_Course')
-        expected_path = f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
-        assert path == (expected_path + '?course_id=course-v1%3AedX%2BDemoX%2BDemo_Course')
-
     def test_get_expiration_datetime(self):
         """
         Test that the latest expiration datetime is returned if there are multiple records

@@ -147,10 +147,20 @@ class CourseApiTestViews(BaseCoursewareTests, MasqueradeMixin):
 
             response = self.client.get(self.url)
             assert response.status_code == 200
-
-            enrollment = response.data['enrollment']
-            assert enrollment_mode == enrollment['mode']
-            assert enrollment['is_active']
+            assert not response.data['user_has_passing_grade']
+            if enrollment_mode == 'audit':
+                assert response.data['verify_identity_url'] is None
+                assert response.data['verification_status'] == 'none'  # lint-amnesty, pylint: disable=literal-comparison
+                assert response.data['linkedin_add_to_profile_url'] is None
+            else:
+                assert response.data['certificate_data']['cert_status'] == 'earned_but_not_available'
+                expected_verify_identity_url = IDVerificationService.get_verify_location(
+                    'verify_student_verify_now',
+                    course_id=self.course.id
+                )
+                # The response contains an absolute URL so this is only checking the path of the final
+                assert expected_verify_identity_url in response.data['verify_identity_url']
+                assert response.data['verification_status'] == 'none'  # lint-amnesty, pylint: disable=literal-comparison
 
             assert not response.data['user_has_passing_grade']
             assert response.data['celebrations']['first_section']
