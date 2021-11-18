@@ -182,6 +182,7 @@ class CourseApiTestViews(BaseCoursewareTests, MasqueradeMixin):
                 else:
                     assert response.data['certificate_data']['cert_status'] == 'earned_but_not_available'
                     expected_verify_identity_url = IDVerificationService.get_verify_location(
+                        'verify_student_verify_now',
                         course_id=self.course.id
                     )
                     # The response contains an absolute URL so this is only checking the path of the final

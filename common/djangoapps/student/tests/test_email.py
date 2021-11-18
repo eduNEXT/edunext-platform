@@ -256,7 +256,7 @@ class ProctoringRequirementsEmailTests(EmailTemplateTagMixin, ModuleStoreTestCas
     def _get_fragments(self):
         course_module = modulestore().get_course(self.course.id)
         proctoring_provider = capwords(course_module.proctoring_provider.replace('_', ' '))
-        id_verification_url = IDVerificationService.get_verify_location()
+        id_verification_url = IDVerificationService.get_verify_location('verify_student_verify_now', self.course.id)
         return [
             (
                 "You are enrolled in {} at {}. This course contains proctored exams.".format(

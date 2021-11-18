@@ -670,7 +670,7 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
             assert block.description ==\
                    'You must successfully complete verification before this date to qualify for a Verified Certificate.'
             assert block.link_text == 'Verify My Identity'
-            assert block.link == IDVerificationService.get_verify_location(course.id)
+            assert block.link == IDVerificationService.get_verify_location('verify_student_verify_now', course.id)
 
     def test_verification_deadline_date_retry(self):
         with freeze_time('2015-01-02'):
@@ -685,7 +685,7 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
             assert block.description ==\
                    'You must successfully complete verification before this date to qualify for a Verified Certificate.'
             assert block.link_text == 'Retry Verification'
-            assert block.link == IDVerificationService.get_verify_location()
+            assert block.link == IDVerificationService.get_verify_location('verify_student_reverify')
 
     def test_verification_deadline_date_denied(self):
         with freeze_time('2015-01-02'):
