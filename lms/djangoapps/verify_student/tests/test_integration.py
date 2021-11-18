@@ -39,8 +39,9 @@ class TestProfEdVerification(ModuleStoreTestCase):
                 'course_modes_choose',
                 args=[str(self.course_key)]
             ),
-
-            'verify_student_start_flow': IDVerificationService.get_verify_location(self.course_key),
+            "verify_student_start_flow": IDVerificationService.get_verify_location(
+                "verify_student_start_flow", self.course_key,
+            ) + "?purchase_workflow=single",
         }
 
     def test_start_flow(self):
