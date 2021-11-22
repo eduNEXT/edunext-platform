@@ -699,11 +699,11 @@ class RegistrationFormFactory:
 
         # Check to convert options:
         field_options = custom_field_dict.get("options")
-        if field_options:
-            if instance(field_options, dict):
-                field_options = [(str(value.lower()), name) for value, name in field_options.items()]
-            elif isinstance(field_options, list):
-                field_options = [(str(value.lower()), value) for value in field_options]
+
+        if isinstance(field_options, dict):
+            field_options = [(str(value.lower()), name) for value, name in field_options.items()]
+        elif isinstance(field_options, list):
+            field_options = [(str(value.lower()), value) for value in field_options]
 
         # Set default option if applies:
         default_option = custom_field_dict.get("default")
