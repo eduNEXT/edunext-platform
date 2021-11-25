@@ -51,3 +51,37 @@
 #####################
 # Community Xblocks #
 #####################
+
+
+# Oppia XBlock
+git+https://github.com/oppia/xblock.git@3b5c17c5832b4f8ef132c6bbf48da8a86df43b3d#egg=oppia-xblock
+
+# Active table xblock
+git+https://github.com/open-craft/xblock-activetable.git@v0.3#egg=activetable-xblock==0.3
+
+# Image explorer xblock
+git+https://github.com/eduNEXT/xblock-image-explorer.git@update-lilac-import#egg=xblock-image-explorer==2.0
+
+# Problem builder xblock.
+git+https://github.com/open-craft/problem-builder.git@v5.0.0#egg=xblock-problem-builder==5.0.0
+
+# School yourself xblock
+git+https://github.com/schoolyourself/schoolyourself-xblock.git@2093048720cfb36cc05b3143cd6f2585c7c64d85#egg=schoolyourself-xblock
+
+# Vector drawing xblock
+git+https://github.com/open-craft/xblock-vectordraw.git@v0.4#egg=vectordraw-xblock==0.4
+
+# Survey monkey xblock
+git+https://github.com/Pearson-Advance/openedx-surveymonkey-xblock@v2.0.2#egg=surveymonkey-xblock==2.0.2
+
+# Stanford xblocks
+git+https://github.com/edx/xblock-free-text-response@release/v1.1.1#egg=xblock-free-text-response==1.1.1
+
+# eduNEXT supported xblocks
+git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1.0.1
+
+# Webhook-xblock
+git+https://github.com/eduNEXT/webhook-xblock@a734c6de47cb61cba20bec4a4f3362ce625d47d1#egg=webhook-xblock==0.2.0_1
+
+# xblock-pdf
+git+https://github.com/appsembler/pdfXBlock.git@v0.3.1#egg=pdf-xblock==0.3.1
