@@ -18,7 +18,7 @@ from django.contrib.auth.models import AnonymousUser, User  # lint-amnesty, pyli
 from django.core.exceptions import PermissionDenied
 from django.db import transaction
 from django.db.models import Q, prefetch_related_objects
-from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
+from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseRedirect
 from django.shortcuts import redirect
 from django.template.context_processors import csrf
 from django.urls import reverse
@@ -38,6 +38,8 @@ from markupsafe import escape
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey, UsageKey
 from openedx_filters.learning.filters import CourseAboutRenderStarted
+from openedx_filters.exceptions import OpenEdxFilterException
+from openedx_filters.tooling import OpenEdxPublicFilter
 from pytz import UTC
 from requests.exceptions import ConnectionError, Timeout  # pylint: disable=redefined-builtin
 from rest_framework import status
@@ -268,6 +270,79 @@ def user_groups(user):
     return group_names
 
 
+class CatalogRenderStarted(OpenEdxPublicFilter):
+    """
+    Custom class used to create catalog render filters and its custom methods.
+    """
+
+    filter_type = "org.openedx.learning.catalog.render.started.v1"
+
+    class RedirectToPage(OpenEdxFilterException):
+        """
+        Custom class used to stop the catalog rendering process.
+        """
+
+        def __init__(self, message, redirect_to=""):
+            """
+            Override init that defines specific arguments used in the catalog render process.
+
+            Arguments:
+                message: error message for the exception.
+                redirect_to: URL to redirect to.
+            """
+            super().__init__(message, redirect_to=redirect_to)
+
+    class RenderInvalidCatalog(OpenEdxFilterException):
+        """
+        Custom class used to stop the catalog render process.
+        """
+
+        def __init__(self, message, courses_template="", template_context=None):
+            """
+            Override init that defines specific arguments used in the index render process.
+
+            Arguments:
+                message: error message for the exception.
+                courses_template: template path rendered instead.
+                template_context: context used to the new courses_template.
+            """
+            super().__init__(
+                message,
+                courses_template=courses_template,
+                template_context=template_context,
+            )
+
+    class RenderCustomResponse(OpenEdxFilterException):
+        """
+        Custom class used to stop the catalog rendering process.
+        """
+
+        def __init__(self, message, response=None):
+            """
+            Override init that defines specific arguments used in the catalog render process.
+
+            Arguments:
+                message: error message for the exception.
+                response: custom response which will be returned by the catalog view.
+            """
+            super().__init__(
+                message,
+                response=response,
+            )
+
+    @classmethod
+    def run_filter(cls, context, template_name):
+        """
+        Execute a filter with the signature specified.
+
+        Arguments:
+            context (dict): context dictionary for catalog template.
+            template_name (str): template name to be rendered by the catalog.
+        """
+        data = super().run_pipeline(context=context, template_name=template_name)
+        return data.get("context"), data.get("template_name")
+
+
 @ensure_csrf_cookie
 @cache_if_anonymous()
 def courses(request):
@@ -288,14 +363,28 @@ def courses(request):
     # Add marketable programs to the context.
     programs_list = get_programs_with_type(request.site, include_hidden=False)
 
-    return render_to_response(
-        "courseware/courses.html",
-        {
-            'courses': courses_list,
-            'course_discovery_meanings': course_discovery_meanings,
-            'programs_list': programs_list,
-        }
-    )
+    courses_template = "courseware/courses.html"
+    context = {
+        'courses': courses_list,
+        'course_discovery_meanings': course_discovery_meanings,
+        'programs_list': programs_list,
+    }
+    try:
+        # .. filter_implemented_name: CatalogRenderStarted
+        # .. filter_type: org.openedx.learning.catalog.render.started.v1
+        context, courses_template = CatalogRenderStarted.run_filter(
+            context=context, template_name=courses_template,
+        )
+    except CatalogRenderStarted.RenderInvalidCatalog as exc:
+        response = render_to_response(exc.courses_template, exc.template_context)  # pylint: disable=no-member
+    except CatalogRenderStarted.RedirectToPage as exc:
+        response = HttpResponseRedirect(exc.redirect_to or reverse('account_settings'))
+    except CatalogRenderStarted.RenderCustomResponse as exc:
+        response = exc.response  # pylint: disable=no-member
+    else:
+        response = render_to_response(courses_template, context)
+
+    return response
 
 
 class PerUserVideoMetadataThrottle(UserRateThrottle):
