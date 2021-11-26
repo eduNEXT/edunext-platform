@@ -30,6 +30,7 @@ from rest_framework.views import APIView
 
 from openedx_events.learning.data import UserData, UserPersonalData
 from openedx_events.learning.signals import SESSION_LOGIN_COMPLETED
+from openedx_filters.learning.auth import PreLoginFilter
 
 from common.djangoapps import third_party_auth
 from common.djangoapps.edxmako.shortcuts import render_to_response
@@ -553,6 +554,11 @@ def login_user(request, api_version='v1'):
         _check_excessive_login_attempts(user)
 
         possibly_authenticated_user = user
+
+        try:
+            possibly_authenticated_user = PreLoginFilter.run(user=possibly_authenticated_user)
+        except PreLoginFilter.PreventLogin as exc:
+            raise AuthFailedError(str(exc)) from exc
 
         if not is_user_third_party_authenticated:
             possibly_authenticated_user = _authenticate_first_party(request, user, third_party_auth_requested)
