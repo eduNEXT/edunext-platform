@@ -100,7 +100,7 @@ class RegistrationFiltersTest(UserAPITestCase):
         registration process.
 
         Expected result:
-            - PreLoginFilter is triggered and executes TestLoginPipelineStep.
+            - PreRegisterFilter is triggered and executes TestRegisterPipelineStep.
             - The user's username is updated.
         """
         self.client.post(self.url, self.user_info)
@@ -123,7 +123,7 @@ class RegistrationFiltersTest(UserAPITestCase):
         Test prevent the user's registration through a pipeline step.
 
         Expected result:
-            - PreLoginFilter is triggered and executes TestStopLoginPipelineStep.
+            - PreRegisterFilter is triggered and executes TestStopRegisterPipelineStep.
             - The user's registration stops.
         """
         response = self.client.post(self.url, self.user_info)
