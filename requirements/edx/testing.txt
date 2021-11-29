@@ -293,6 +293,7 @@ distlib==0.3.3
     #   jsonfield
     #   lti-consumer-xblock
     #   openedx-events
+    #   openedx-filters
     #   ora2
     #   super-csv
     #   xss-utils
@@ -880,6 +881,8 @@ oauthlib==3.0.1
 openedx-calc==2.0.1
     # via -r requirements/edx/base.txt
 openedx-events==0.6.0
+    # via -r requirements/edx/base.txt
+openedx-filters @ git+https://github.com/eduNEXT/openedx-filters.git@MJG/1st_filters_batch
     # via -r requirements/edx/base.txt
 ora2==3.7.6
     # via -r requirements/edx/base.txt
