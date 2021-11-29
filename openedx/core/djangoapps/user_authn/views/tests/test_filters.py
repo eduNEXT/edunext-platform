@@ -8,7 +8,7 @@ from openedx_filters import PipelineStep
 from openedx_filters.learning.auth import PreLoginFilter, PreRegisterFilter
 from rest_framework import status
 
-from common.djangoapps.student.tests.factories import RegistrationFactory, UserFactory, UserProfileFactory
+from common.djangoapps.student.tests.factories import UserFactory, UserProfileFactory
 from openedx.core.djangoapps.user_api.tests.test_views import UserAPITestCase
 from openedx.core.djangolib.testing.utils import skip_unless_lms
 
@@ -18,7 +18,7 @@ class TestRegisterPipelineStep(PipelineStep):
     Utility function used when getting steps for pipeline.
     """
 
-    def run(self, form_data):
+    def run(self, form_data):  # pylint: disable=arguments-differ
         """Pipeline steps that changes the user's username."""
         username = f"{form_data.get('username')}-OpenEdx"
         form_data["username"] = username
@@ -32,7 +32,7 @@ class TestStopRegisterPipelineStep(PipelineStep):
     Utility function used when getting steps for pipeline.
     """
 
-    def run(self, form_data):
+    def run(self, form_data):  # pylint: disable=arguments-differ
         """Pipeline steps that changes the user's username."""
         raise PreRegisterFilter.PreventRegister("You can't register on this site.", status_code=403)
 
