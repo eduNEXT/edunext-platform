@@ -1,8 +1,8 @@
 """
 Test that various filters are fired for the vies in the user_authn app.
 """
-from django.contrib.auth.models import User
-from django.test import TestCase, override_settings
+from django.contrib.auth import get_user_model
+from django.test import override_settings
 from django.urls import reverse
 from openedx_filters import PipelineStep
 from openedx_filters.learning.auth import PreLoginFilter, PreRegisterFilter
@@ -11,6 +11,8 @@ from rest_framework import status
 from common.djangoapps.student.tests.factories import UserFactory, UserProfileFactory
 from openedx.core.djangoapps.user_api.tests.test_views import UserAPITestCase
 from openedx.core.djangolib.testing.utils import skip_unless_lms
+
+User = get_user_model()
 
 
 class TestRegisterPipelineStep(PipelineStep):
@@ -42,7 +44,7 @@ class TestLoginPipelineStep(PipelineStep):
     Utility function used when getting steps for pipeline.
     """
 
-    def run(self, user):
+    def run(self, user):  # pylint: disable=arguments-differ
         """Pipeline steps that changes the user's username."""
         user.profile.set_meta({"logged_in": True})
         user.profile.save()
@@ -56,7 +58,7 @@ class TestStopLoginPipelineStep(PipelineStep):
     Utility function used when getting steps for pipeline.
     """
 
-    def run(self, user):
+    def run(self, user):  # pylint: disable=arguments-differ
         """Pipeline steps that changes the user's username."""
         raise PreLoginFilter.PreventLogin("You can't login on this site.")
 

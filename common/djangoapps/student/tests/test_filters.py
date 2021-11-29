@@ -5,7 +5,7 @@ from common.djangoapps.student.models import CourseEnrollment, EnrollmentNotAllo
 from common.djangoapps.student.tests.factories import UserFactory, UserProfileFactory
 
 from openedx.core.djangolib.testing.utils import skip_unless_lms
-from django.test import TestCase, override_settings
+from django.test import override_settings
 from openedx_filters.learning.enrollment import PreEnrollmentFilter
 
 
