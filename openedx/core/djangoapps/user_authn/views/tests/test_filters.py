@@ -35,7 +35,7 @@ class TestStopRegisterPipelineStep(PipelineStep):
     """
 
     def run(self, form_data):  # pylint: disable=arguments-differ
-        """Pipeline steps that changes the user's username."""
+        """Pipeline steps that stops the user's registration process."""
         raise PreRegisterFilter.PreventRegister("You can't register on this site.", status_code=403)
 
 
@@ -45,7 +45,7 @@ class TestLoginPipelineStep(PipelineStep):
     """
 
     def run(self, user):  # pylint: disable=arguments-differ
-        """Pipeline steps that changes the user's username."""
+        """Pipeline steps that adds a field to the user's profile."""
         user.profile.set_meta({"logged_in": True})
         user.profile.save()
         return {
@@ -59,18 +59,18 @@ class TestStopLoginPipelineStep(PipelineStep):
     """
 
     def run(self, user):  # pylint: disable=arguments-differ
-        """Pipeline steps that changes the user's username."""
+        """Pipeline steps that stops the user's login."""
         raise PreLoginFilter.PreventLogin("You can't login on this site.")
 
 
 @skip_unless_lms
 class RegistrationFiltersTest(UserAPITestCase):
     """
-    Tests for the Open edX Filters associated with the user login process.
+    Tests for the Open edX Filters associated with the user registration process.
 
-    This class guarantees that the following filters are triggered during the user's login:
+    This class guarantees that the following filters are triggered during the user's registration:
 
-    - PreLoginFilter
+    - PreRegisterFilter
     """
 
     def setUp(self):  # pylint: disable=arguments-differ
@@ -96,13 +96,12 @@ class RegistrationFiltersTest(UserAPITestCase):
     )
     def test_register_filter_executed(self):
         """
-        Test whether the student enrollment filter is triggered before the user's
-        enrollment process.
+        Test whether the student register filter is triggered before the user's
+        registration process.
 
         Expected result:
             - PreLoginFilter is triggered and executes TestLoginPipelineStep.
-            - The arguments that the receiver gets are the arguments used by the filter
-            with the enrollment mode changed.
+            - The user's username is updated.
         """
         self.client.post(self.url, self.user_info)
 
@@ -121,11 +120,11 @@ class RegistrationFiltersTest(UserAPITestCase):
     )
     def test_register_filter_prevent_registration(self):
         """
-        Test prevent the user's enrollment through a pipeline step.
+        Test prevent the user's registration through a pipeline step.
 
         Expected result:
             - PreLoginFilter is triggered and executes TestStopLoginPipelineStep.
-            - The user can't enroll.
+            - The user's registration stops.
         """
         response = self.client.post(self.url, self.user_info)
 
@@ -164,13 +163,12 @@ class LoginFiltersTest(UserAPITestCase):
     )
     def test_login_filter_executed(self):
         """
-        Test whether the student enrollment filter is triggered before the user's
-        enrollment process.
+        Test whether the student login filter is triggered before the user's
+        login process.
 
         Expected result:
             - PreLoginFilter is triggered and executes TestLoginPipelineStep.
-            - The arguments that the receiver gets are the arguments used by the filter
-            with the enrollment mode changed.
+            - The user's profile is updated.
         """
         data = {
             "email": "test@example.com",
@@ -194,11 +192,11 @@ class LoginFiltersTest(UserAPITestCase):
     )
     def test_login_filter_prevent_login(self):
         """
-        Test prevent the user's enrollment through a pipeline step.
+        Test prevent the user's login through a pipeline step.
 
         Expected result:
             - PreLoginFilter is triggered and executes TestStopLoginPipelineStep.
-            - The user can't enroll.
+            - Test prevent the user's login through a pipeline step.
         """
         data = {
             "email": "test@example.com",
