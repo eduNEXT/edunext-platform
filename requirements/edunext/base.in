@@ -42,7 +42,10 @@ openedx-filters                     # Open edX Filters from Hooks Extension Fram
 #####################
 # eduNEXT Xblocks #
 #####################
+flow-control-xblock
 
 #####################
 # Community Xblocks #
 #####################
+ubcpi-xblock
+openedx-scorm-xblock                #new overhangio openedx
