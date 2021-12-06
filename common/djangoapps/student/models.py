@@ -1451,7 +1451,7 @@ class CourseEnrollment(models.Model):
         try:
             hook_result = pre_enrollment.send(sender=None, user=user, course_key=course_key, mode=mode)
         except Exception as error:
-            raise TriggerException(error.message)  # pylint: disable=no-member
+            raise TriggerException(str(error))
 
         for receiver_func, func_response in hook_result:
             log.info(
