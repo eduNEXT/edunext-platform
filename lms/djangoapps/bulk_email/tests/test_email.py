@@ -177,7 +177,7 @@ class LocalizedFromAddressPlatformLangTestCase(SendEmailWithMockedUgettextMixin,
     Tests to ensure that the bulk email has the "From" address localized according to LANGUAGE_CODE.
     """
     @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
-    @override_settings(LANGUAGE_CODE='en')
+    @override_settings(LANGUAGE_CODE='en', EMAIL_USE_COURSE_ID_FROM_FOR_BULK=True)
     def test_english_platform(self):
         """
         Ensures that the source-code language (English) works well.
@@ -188,7 +188,7 @@ class LocalizedFromAddressPlatformLangTestCase(SendEmailWithMockedUgettextMixin,
         self.assertRegex(message.from_email, '.*Course Staff.*')
 
     @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
-    @override_settings(LANGUAGE_CODE='eo')
+    @override_settings(LANGUAGE_CODE='eo', EMAIL_USE_COURSE_ID_FROM_FOR_BULK=True)
     def test_esperanto_platform(self):
         """
         Tests the fake Esperanto language to ensure proper gettext calls.
@@ -223,7 +223,7 @@ class LocalizedFromAddressCourseLangTestCase(SendEmailWithMockedUgettextMixin, E
         )
 
     @pytest.mark.skip(reason="fails due to unknown reasons (LI)")
-    @override_settings(LANGUAGE_CODE='eo')
+    @override_settings(LANGUAGE_CODE='eo', EMAIL_USE_COURSE_ID_FROM_FOR_BULK=True)
     def test_esperanto_platform_arabic_course(self):
         """
         The course language should override the platform's.
@@ -252,6 +252,7 @@ class TestEmailSendFromDashboardMockedHtmlToText(EmailSendFromDashboardTestCase)
         # We should get back a HttpResponseForbidden (status code 403)
         self.assertContains(response, "Email is not enabled for this course.", status_code=403)
 
+    @override_settings(EMAIL_USE_COURSE_ID_FROM_FOR_BULK=True)
     @patch('lms.djangoapps.bulk_email.models.html_to_text', Mock(return_value='Mocking CourseEmail.text_message', autospec=True))  # lint-amnesty, pylint: disable=line-too-long
     def test_send_to_self(self):
         """
@@ -291,7 +292,7 @@ class TestEmailSendFromDashboardMockedHtmlToText(EmailSendFromDashboardTestCase)
         assert len(mail.outbox) == (1 + len(self.staff))
         assert len([e.to[0] for e in mail.outbox]) == len([self.instructor.email] + [s.email for s in self.staff])
 
-    @override_settings(DEFAULT_FROM_EMAIL='test@example.com', EMAIL_USE_DEFAULT_FROM_FOR_BULK=True)
+    @override_settings(DEFAULT_FROM_EMAIL='test@example.com', BULK_EMAIL_DEFAULT_FROM_EMAIL=None, EMAIL_USE_COURSE_ID_FROM_FOR_BULK=False)  # lint-amnesty, pylint: disable=line-too-long
     def test_email_from_address(self):
         """
         Make sure the from_address should be the DEFAULT_FROM_EMAIL when corresponding flag is enabled.
@@ -501,7 +502,7 @@ class TestEmailSendFromDashboardMockedHtmlToText(EmailSendFromDashboardTestCase)
         assert len([e.to[0] for e in mail.outbox]) ==\
                len([self.instructor.email] + [s.email for s in self.staff] + [s.email for s in self.students])
 
-    @override_settings(BULK_EMAIL_DEFAULT_FROM_EMAIL="no-reply@courseupdates.edx.org")
+    @override_settings(BULK_EMAIL_DEFAULT_FROM_EMAIL="no-reply@courseupdates.edx.org", EMAIL_USE_COURSE_ID_FROM_FOR_BULK=True)  # lint-amnesty, pylint: disable=line-too-long
     def test_long_course_display_name(self):
         """
         This test tests that courses with exorbitantly large display names
