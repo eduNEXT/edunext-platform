@@ -42,7 +42,7 @@ eox-audit-model==0.6.0    # via eox-core, eox-tagging
 eox-core[eox-audit,sentry,tpa]==5.0.3  # via -r requirements/edunext/base.in, eox-tagging
 eox-hooks==2.0.0          # via -r requirements/edunext/base.in
 eox-tagging==3.0.0        # via -r requirements/edunext/base.in
-eox-tenant==5.1.2         # via -r requirements/edunext/base.in
+git+https://github.com/eduNEXT/eox-tenant.git@mfmz/test-without-set-oauth2_validator#egg=eox-tenant
 eox-theming==2.0.0        # via -r requirements/edunext/base.in
 event-tracking==1.0.4     # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 flow-control-xblock==1.0.1  # via -r requirements/edunext/base.in
