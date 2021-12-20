@@ -18,8 +18,6 @@ jobs:
       with:
         fetch-depth: 2
 
-    - name: Remove pip cache
-      run: rm $(pip cache dir)
 
     - name: Fetch master for comparison
       run: git fetch --depth=1 origin open-release/lilac.master
@@ -31,6 +29,8 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Remove pip cache
+      run: rm -r ~/.cache/pip
 
     - name: Setup Node
       uses: actions/setup-node@v2
