@@ -19,7 +19,7 @@ jobs:
         fetch-depth: 2
 
     - name: Remove pip cache
-      run: rm -r /opt/hostedtoolcache/
+      run: rm $(pip cache dir)
 
     - name: Fetch master for comparison
       run: git fetch --depth=1 origin open-release/lilac.master
