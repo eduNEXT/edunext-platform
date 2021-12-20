@@ -32,7 +32,7 @@ jobs:
       with:
         python-version: 3.8
     - name: Remove pip cache
-      run: rm -r ~/.cache/pip
+      run: pip cache purge
 
     - name: Get pip cache dir
       id: pip-cache-dir
