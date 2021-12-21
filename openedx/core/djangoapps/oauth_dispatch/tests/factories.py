@@ -23,6 +23,7 @@ class ApplicationFactory(DjangoModelFactory):
     client_type = 'confidential'
     authorization_grant_type = Application.CLIENT_CONFIDENTIAL
     name = FuzzyText(prefix='name', length=8)
+    redirect_uris = 'http://testserver/'
 
 
 class ApplicationAccessFactory(DjangoModelFactory):
