@@ -35,10 +35,10 @@ jobs:
 
       - name: Install requirements
         run: |
-          sudo pip install --ignore-installed -r requirements/pip.txt
-          sudo pip install --ignore-installed -r requirements/edx/testing.txt
-          sudo pip install --exists-action w -r requirements/edunext/base.txt
-          sudo pip install "django~=${{ matrix.django-version }}.24"
+          pip install --upgrade --force-reinstall -r requirements/pip.txt
+          pip install --upgrade --force-reinstall -r requirements/edx/testing.txt
+          pip install --exists-action w -r requirements/edunext/base.txt
+          pip install "django~=${{ matrix.django-version }}.24"
       
       - name: Run tests
         uses: nick-invision/retry@v2
