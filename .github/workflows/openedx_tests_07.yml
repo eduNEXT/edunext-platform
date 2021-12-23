@@ -1,4 +1,4 @@
-name: LMS
+name: Openedx 7th batch
 
 on: push
 
@@ -12,12 +12,10 @@ jobs:
         django-version: ["2.2"]
         mongodb-version: ['4.0']
         test_module: [
-            "lms/djangoapps/badges/ lms/djangoapps/branding/ lms/djangoapps/bulk_email/ lms/djangoapps/bulk_enroll/ lms/djangoapps/bulk_user_retirement/ lms/djangoapps/ccx/ lms/djangoapps/certificates/ lms/djangoapps/commerce/",
-            "lms/djangoapps/course_api/ lms/djangoapps/course_blocks/ lms/djangoapps/course_home_api/ lms/djangoapps/course_wiki/ lms/djangoapps/coursewarehistoryextended/ lms/djangoapps/dashboard/ lms/djangoapps/debug/",
-            "lms/djangoapps/courseware/",
-            "lms/djangoapps/discussion/ lms/djangoapps/edxnotes/ lms/djangoapps/email_marketing/ lms/djangoapps/experiments/",
-            "lms/djangoapps/gating/ lms/djangoapps/grades/ lms/djangoapps/instructor/ lms/djangoapps/instructor_analytics/",
-            "lms/djangoapps/instructor_task/ lms/djangoapps/learner_dashboard/ lms/djangoapps/lms_initialization/ lms/djangoapps/lms_xblock/ lms/djangoapps/lti_provider/ lms/djangoapps/mailing/ lms/djangoapps/mobile_api/ lms/djangoapps/monitoring/ lms/djangoapps/program_enrollments/ lms/djangoapps/rss_proxy lms/djangoapps/static_template_view/ lms/djangoapps/staticbook/ lms/djangoapps/support/ lms/djangoapps/survey/ lms/djangoapps/teams/ lms/djangoapps/tests/ lms/djangoapps/verify_student/ lms/envs/ lms/lib/ lms/tests.py",
+          "openedx/core/djangoapps/site_configuration/ openedx/core/djangoapps/system_wide_roles/ openedx/core/djangoapps/theming/ openedx/core/djangoapps/user_api/ 
+          openedx/core/djangoapps/user_authn/ openedx/core/djangoapps/util/ openedx/core/djangoapps/verified_track_content/ openedx/core/djangoapps/video_config/ 
+          openedx/core/djangoapps/video_pipeline/ openedx/core/djangoapps/waffle_utils/ openedx/core/djangoapps/xblock/ openedx/core/djangoapps/xmodule_django/ openedx/core/djangoapps/zendesk_proxy/ 
+          openedx/core/djangolib/ openedx/core/lib/ openedx/core/tests/ openedx/core/tests/ openedx/features/ openedx/testing/ openedx/tests/"
         ]
         
 

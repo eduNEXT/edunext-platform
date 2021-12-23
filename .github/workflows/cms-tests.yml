@@ -1,4 +1,4 @@
-name: LMS
+name: CMS
 
 on: push
 
@@ -12,12 +12,8 @@ jobs:
         django-version: ["2.2"]
         mongodb-version: ['4.0']
         test_module: [
-            "lms/djangoapps/badges/ lms/djangoapps/branding/ lms/djangoapps/bulk_email/ lms/djangoapps/bulk_enroll/ lms/djangoapps/bulk_user_retirement/ lms/djangoapps/ccx/ lms/djangoapps/certificates/ lms/djangoapps/commerce/",
-            "lms/djangoapps/course_api/ lms/djangoapps/course_blocks/ lms/djangoapps/course_home_api/ lms/djangoapps/course_wiki/ lms/djangoapps/coursewarehistoryextended/ lms/djangoapps/dashboard/ lms/djangoapps/debug/",
-            "lms/djangoapps/courseware/",
-            "lms/djangoapps/discussion/ lms/djangoapps/edxnotes/ lms/djangoapps/email_marketing/ lms/djangoapps/experiments/",
-            "lms/djangoapps/gating/ lms/djangoapps/grades/ lms/djangoapps/instructor/ lms/djangoapps/instructor_analytics/",
-            "lms/djangoapps/instructor_task/ lms/djangoapps/learner_dashboard/ lms/djangoapps/lms_initialization/ lms/djangoapps/lms_xblock/ lms/djangoapps/lti_provider/ lms/djangoapps/mailing/ lms/djangoapps/mobile_api/ lms/djangoapps/monitoring/ lms/djangoapps/program_enrollments/ lms/djangoapps/rss_proxy lms/djangoapps/static_template_view/ lms/djangoapps/staticbook/ lms/djangoapps/support/ lms/djangoapps/survey/ lms/djangoapps/teams/ lms/djangoapps/tests/ lms/djangoapps/verify_student/ lms/envs/ lms/lib/ lms/tests.py",
+            "cms/djangoapps/api/ cms/djangoapps/cms_user_tasks/ cms/djangoapps/course_creators/ cms/djangoapps/export_course_metadata/ cms/djangoapps/maintenance/ cms/djangoapps/models/ cms/djangoapps/pipeline_js/ cms/djangoapps/xblock_config/ cms/envs/ cms/lib/",
+            "cms/djangoapps/contentstore/",
         ]
         
 
