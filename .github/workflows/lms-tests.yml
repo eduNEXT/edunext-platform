@@ -33,10 +33,10 @@ jobs:
       - name: Install Required System Packages
         run: sudo apt-get update && sudo apt-get install libxmlsec1-dev
 
-      - name: Start MongoDB
-        uses: supercharge/mongodb-github-action@1.6.0
-        with:
-          mongodb-version: ${{ matrix.mongodb-version }}
+      # - name: Start MongoDB
+      #   uses: supercharge/mongodb-github-action@1.6.0
+      #   with:
+      #     mongodb-version: ${{ matrix.mongodb-version }}
 
       - name: Install requirements
         run: |
@@ -45,10 +45,16 @@ jobs:
           sudo pip install --exists-action w -r requirements/edunext/base.txt
           sudo pip install "django~=${{ matrix.django-version }}.24"
       
-      - name: Run tests
-        uses: nick-invision/retry@v2
-        with:
-          timeout_minutes: 45
-          max_attempts: 3
-          retry_on: error
-          command: pytest ${{ matrix.test_module }}
+      - name: Show installed packages
+        run: sudo pip list
+
+      - name: Show installed packages no sudo
+        run: pip list
+
+      # - name: Run tests
+      #   uses: nick-invision/retry@v2
+      #   with:
+      #     timeout_minutes: 45
+      #     max_attempts: 3
+      #     retry_on: error
+      #     command: pytest ${{ matrix.test_module }}
