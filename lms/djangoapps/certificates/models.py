@@ -23,6 +23,8 @@ from model_utils.fields import AutoCreatedField
 from model_utils.models import TimeStampedModel
 from opaque_keys.edx.django.models import CourseKeyField
 from simple_history.models import HistoricalRecords
+from openedx_events.learning.data import CourseData, UserData, UserPersonalData, CertificateData
+from openedx_events.learning.signals import CERTIFICATE_CHANGED, CERTIFICATE_CREATED, CERTIFICATE_REVOKED
 
 from common.djangoapps.course_modes.models import CourseMode
 from common.djangoapps.util.milestones_helpers import fulfill_course_milestone, is_prerequisite_courses_enabled
@@ -33,8 +35,6 @@ from openedx.core.djangoapps.content.course_overviews.models import CourseOvervi
 from openedx.core.djangoapps.signals.signals import COURSE_CERT_AWARDED, COURSE_CERT_CHANGED, COURSE_CERT_REVOKED
 from openedx.core.djangoapps.xmodule_django.models import NoneToEmptyManager
 
-from openedx_events.learning.data import CourseData, UserData, UserPersonalData, CertificateData
-from openedx_events.learning.signals import CERTIFICATE_CHANGED, CERTIFICATE_CREATED, CERTIFICATE_REVOKED
 
 log = logging.getLogger(__name__)
 User = get_user_model()

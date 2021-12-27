@@ -10,10 +10,6 @@ from django.db.utils import IntegrityError
 from django.test import TestCase
 from django_countries.fields import Country
 
-from common.djangoapps.student.models import CourseEnrollmentAllowed, CourseEnrollment
-from common.djangoapps.student.tests.factories import CourseEnrollmentAllowedFactory, UserFactory, UserProfileFactory
-from common.djangoapps.student.tests.tests import UserSettingsEventTestMixin
-
 from openedx_events.learning.data import (
     CourseData,
     CourseEnrollmentData,
@@ -26,8 +22,11 @@ from openedx_events.learning.signals import (
     COURSE_UNENROLLMENT_COMPLETED,
 )
 from openedx_events.tests.utils import OpenEdxEventsTestMixin
-from openedx.core.djangolib.testing.utils import skip_unless_lms
 
+from common.djangoapps.student.models import CourseEnrollmentAllowed, CourseEnrollment
+from common.djangoapps.student.tests.factories import CourseEnrollmentAllowedFactory, UserFactory, UserProfileFactory
+from common.djangoapps.student.tests.tests import UserSettingsEventTestMixin
+from openedx.core.djangolib.testing.utils import skip_unless_lms
 from xmodule.modulestore.tests.django_utils import SharedModuleStoreTestCase
 from xmodule.modulestore.tests.factories import CourseFactory
 

@@ -1451,7 +1451,7 @@ class CourseEnrollment(models.Model):
                         pii=UserPersonalData(
                             username=self.user.username,
                             email=self.user.email,
-                            name=self.user.profile.name,
+                            name=self.user.profile.name,  # pylint: disable=no-member
                         ),
                         id=self.user.id,
                         is_active=self.user.is_active,
@@ -1477,7 +1477,7 @@ class CourseEnrollment(models.Model):
                             pii=UserPersonalData(
                                 username=self.user.username,
                                 email=self.user.email,
-                                name=self.user.profile.name,
+                                name=self.user.profile.name,  # pylint: disable=no-member
                             ),
                             id=self.user.id,
                             is_active=self.user.is_active,
@@ -1683,7 +1683,7 @@ class CourseEnrollment(models.Model):
                     pii=UserPersonalData(
                         username=user.username,
                         email=user.email,
-                        name=user.profile.name,
+                        name=user.profile.name,  # pylint: disable=no-member
                     ),
                     id=user.id,
                     is_active=user.is_active,
