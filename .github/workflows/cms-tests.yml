@@ -36,8 +36,8 @@ jobs:
 
       - name: Install requirements
         run: |
-          pip install --upgrade --force-reinstall -r requirements/pip.txt
-          pip install --upgrade --force-reinstall -r requirements/edx/testing.txt
+          pip install --exists-action w -r requirements/edx/django.txt
+          pip install --exists-action w -r requirements/edx/testing.txt
           pip install --exists-action w -r requirements/edunext/base.txt
           pip install "django~=${{ matrix.django-version }}.24"
       
