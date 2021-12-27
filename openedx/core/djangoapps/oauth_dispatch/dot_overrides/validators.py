@@ -87,7 +87,7 @@ class EdxOAuth2Validator(OAuth2Validator):
             #       Without this modification the BearerToken class will set this to 3600
             request.expires_in = getattr(settings, 'CLIENT_CREDENTIALS_ACCESS_TOKEN_EXPIRE_SECONDS', 31557600)
 
-        super(EdxOAuth2Validator, self).save_bearer_token(token, request, *args, **kwargs)
+        super().save_bearer_token(token, request, *args, **kwargs)
 
         is_restricted_client = self._update_token_expiry_if_restricted_client(token, request.client)
         if not is_restricted_client:

@@ -1,18 +1,17 @@
 """
 Test that various filters are fired for models in the student app.
 """
+from django.test import override_settings
+from openedx_filters.learning.enrollment import PreEnrollmentFilter
+from openedx_filters import PipelineStep
+
 from common.djangoapps.student.models import CourseEnrollment, EnrollmentNotAllowed
 from common.djangoapps.student.tests.factories import UserFactory, UserProfileFactory
 
 from openedx.core.djangolib.testing.utils import skip_unless_lms
-from django.test import TestCase, override_settings
-from openedx_filters.learning.enrollment import PreEnrollmentFilter
-
 
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 from xmodule.modulestore.tests.factories import CourseFactory
-
-from openedx_filters import PipelineStep
 
 
 class TestEnrollmentPipelineStep(PipelineStep):
@@ -20,7 +19,7 @@ class TestEnrollmentPipelineStep(PipelineStep):
     Utility function used when getting steps for pipeline.
     """
 
-    def run(self, user, course_key, mode):
+    def run(self, user, course_key, mode):  # pylint: disable=unused-argument, arguments-differ
         """Pipeline steps that changes mode to honor."""
         if mode == "no-id-professional":
             raise PreEnrollmentFilter.PreventEnrollment()

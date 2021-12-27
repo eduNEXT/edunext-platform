@@ -5,7 +5,6 @@ Unit tests for course_goals.api methods.
 
 from unittest import mock
 
-from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imported-auth-user
 from django.test.utils import override_settings
 from django.urls import reverse
 from rest_framework.test import APIClient
