@@ -13,11 +13,11 @@ from django.db.models.signals import pre_delete
 from django.dispatch import receiver
 from django.utils.encoding import python_2_unicode_compatible
 from opaque_keys.edx.django.models import CourseKeyField
+from openedx_events.learning.data import CohortData, CourseData, UserData, UserPersonalData
+from openedx_events.learning.signals import COHORT_MEMBERSHIP_CHANGED
 
 from openedx.core.djangolib.model_mixins import DeletableByUserValue
 
-from openedx_events.learning.data import CohortData, CourseData, UserData, UserPersonalData
-from openedx_events.learning.signals import COHORT_MEMBERSHIP_CHANGED
 
 log = logging.getLogger(__name__)
 
@@ -139,7 +139,7 @@ class CohortMembership(models.Model):
                     pii=UserPersonalData(
                         username=self.user.username,
                         email=self.user.email,
-                        name=self.user.profile.name,
+                        name=self.user.profile.name,  # pylint: disable=no-member
                     ),
                     id=self.user.id,
                     is_active=self.user.is_active,

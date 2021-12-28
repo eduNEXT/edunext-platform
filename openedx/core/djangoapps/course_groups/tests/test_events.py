@@ -4,19 +4,16 @@ Test classes for the events sent in the cohort assignment process.
 Classes:
     CohortEventTest: Test event sent after cohort membership changes.
 """
-from openedx.core.djangoapps.course_groups.models import CohortMembership
 from unittest.mock import Mock
-
 from openedx_events.learning.data import CohortData, CourseData, UserData, UserPersonalData
 from openedx_events.learning.signals import COHORT_MEMBERSHIP_CHANGED
 from openedx_events.tests.utils import OpenEdxEventsTestMixin
 
+from openedx.core.djangoapps.course_groups.models import CohortMembership
 from common.djangoapps.student.tests.factories import UserFactory
 from openedx.core.djangoapps.content.course_overviews.tests.factories import CourseOverviewFactory
 from openedx.core.djangolib.testing.utils import skip_unless_lms
-
 from openedx.core.djangoapps.course_groups.tests.helpers import CohortFactory
-
 from xmodule.modulestore.tests.django_utils import SharedModuleStoreTestCase
 
 
