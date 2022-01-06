@@ -2591,6 +2591,7 @@ CELERY_IMPORTS = (
     # Since xblock-poll is not a Django app, and XBlocks don't get auto-imported
     # by celery workers, its tasks will not get auto-discovered:
     'poll.tasks',
+    'webhook_xblock.tasks',
 )
 
 # Celery beat configuration
