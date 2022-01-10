@@ -103,16 +103,11 @@ except Exception:  # pylint: disable=broad-except
 # Do NOT calculate this dynamically at startup with git because it's *slow*.
 EDX_PLATFORM_REVISION = REVISION_CONFIG.get('EDX_PLATFORM_REVISION', EDX_PLATFORM_REVISION)
 
-# SERVICE_VARIANT specifies name of the variant used, which decides what JSON
-# configuration files are read during startup.
-SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
-
-# CONFIG_PREFIX specifies the prefix of the JSON configuration files,
-# based on the service variant. If no variant is use, don't use a
-# prefix.
-CONFIG_PREFIX = SERVICE_VARIANT + "." if SERVICE_VARIANT else ""
-
 ###################################### CELERY  ################################
+
+# Celery beat configuration
+
+CELERYBEAT_SCHEDULER = ENV_TOKENS.get('CELERYBEAT_SCHEDULER', CELERYBEAT_SCHEDULER)
 
 # Don't use a connection pool, since connections are dropped by ELB.
 BROKER_POOL_LIMIT = 0
@@ -128,28 +123,6 @@ BROKER_HEARTBEAT_CHECKRATE = ENV_TOKENS.get('BROKER_HEARTBEAT_CHECKRATE', 2)
 
 # Each worker should only fetch one message at a time
 CELERYD_PREFETCH_MULTIPLIER = 1
-
-# Rename the exchange and queues for each variant
-
-QUEUE_VARIANT = CONFIG_PREFIX.lower()
-
-CELERY_DEFAULT_EXCHANGE = f'edx.{QUEUE_VARIANT}core'
-
-HIGH_PRIORITY_QUEUE = f'edx.{QUEUE_VARIANT}core.high'
-DEFAULT_PRIORITY_QUEUE = f'edx.{QUEUE_VARIANT}core.default'
-HIGH_MEM_QUEUE = f'edx.{QUEUE_VARIANT}core.high_mem'
-
-CELERY_DEFAULT_QUEUE = DEFAULT_PRIORITY_QUEUE
-CELERY_DEFAULT_ROUTING_KEY = DEFAULT_PRIORITY_QUEUE
-
-CELERY_QUEUES = {
-    HIGH_PRIORITY_QUEUE: {},
-    DEFAULT_PRIORITY_QUEUE: {},
-    HIGH_MEM_QUEUE: {},
-}
-
-CELERY_ROUTES = "openedx.core.lib.celery.routers.route_task"
-CELERYBEAT_SCHEDULE = {}  # For scheduling tasks, entries can be added to this dict
 
 # STATIC_ROOT specifies the directory where static files are
 # collected
@@ -537,10 +510,14 @@ BROKER_URL = "{}://{}:{}@{}/{}".format(CELERY_BROKER_TRANSPORT,
                                        CELERY_BROKER_VHOST)
 BROKER_USE_SSL = ENV_TOKENS.get('CELERY_BROKER_USE_SSL', False)
 
-BROKER_TRANSPORT_OPTIONS = {
-    'fanout_patterns': True,
-    'fanout_prefix': True,
-}
+try:
+    BROKER_TRANSPORT_OPTIONS = {
+        'fanout_patterns': True,
+        'fanout_prefix': True,
+        **ENV_TOKENS.get('CELERY_BROKER_TRANSPORT_OPTIONS', {})
+    }
+except TypeError as exc:
+    raise ImproperlyConfigured('CELERY_BROKER_TRANSPORT_OPTIONS must be a dict') from exc
 
 # Block Structures
 
@@ -1052,3 +1029,9 @@ LOGO_IMAGE_EXTRA_TEXT = ENV_TOKENS.get('LOGO_IMAGE_EXTRA_TEXT', '')
 
 ############## XBlock extra mixins ############################
 XBLOCK_MIXINS += tuple(XBLOCK_EXTRA_MIXINS)
+
+################# Settings for Chrome-specific origin trials ########
+# Token for "Disable Different Origin Subframe Dialog Suppression" Chrome Origin Trial, which must be origin-specific.
+CHROME_DISABLE_SUBFRAME_DIALOG_SUPPRESSION_TOKEN = ENV_TOKENS.get(
+    'CHROME_DISABLE_SUBFRAME_DIALOG_SUPPRESSION_TOKEN', CHROME_DISABLE_SUBFRAME_DIALOG_SUPPRESSION_TOKEN
+)

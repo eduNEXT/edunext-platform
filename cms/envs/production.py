@@ -93,15 +93,6 @@ except Exception:  # pylint: disable=broad-except
 # Do NOT calculate this dynamically at startup with git because it's *slow*.
 EDX_PLATFORM_REVISION = REVISION_CONFIG.get('EDX_PLATFORM_REVISION', EDX_PLATFORM_REVISION)
 
-# SERVICE_VARIANT specifies name of the variant used, which decides what JSON
-# configuration files are read during startup.
-SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
-
-# CONFIG_PREFIX specifies the prefix of the JSON configuration files,
-# based on the service variant. If no variant is use, don't use a
-# prefix.
-CONFIG_PREFIX = SERVICE_VARIANT + "." if SERVICE_VARIANT else ""
-
 ###################################### CELERY  ################################
 
 # Don't use a connection pool, since connections are dropped by ELB.
@@ -118,23 +109,6 @@ BROKER_HEARTBEAT_CHECKRATE = ENV_TOKENS.get('BROKER_HEARTBEAT_CHECKRATE', 2)
 
 # Each worker should only fetch one message at a time
 CELERYD_PREFETCH_MULTIPLIER = 1
-
-# Rename the exchange and queues for each variant
-
-QUEUE_VARIANT = CONFIG_PREFIX.lower()
-
-CELERY_DEFAULT_EXCHANGE = f'edx.{QUEUE_VARIANT}core'
-
-HIGH_PRIORITY_QUEUE = f'edx.{QUEUE_VARIANT}core.high'
-DEFAULT_PRIORITY_QUEUE = f'edx.{QUEUE_VARIANT}core.default'
-
-CELERY_DEFAULT_QUEUE = DEFAULT_PRIORITY_QUEUE
-CELERY_DEFAULT_ROUTING_KEY = DEFAULT_PRIORITY_QUEUE
-
-CELERY_QUEUES = {
-    HIGH_PRIORITY_QUEUE: {},
-    DEFAULT_PRIORITY_QUEUE: {}
-}
 
 CELERY_ROUTES = "openedx.core.lib.celery.routers.route_task"
 
@@ -417,10 +391,14 @@ BROKER_URL = "{}://{}:{}@{}/{}".format(CELERY_BROKER_TRANSPORT,
                                        CELERY_BROKER_VHOST)
 BROKER_USE_SSL = ENV_TOKENS.get('CELERY_BROKER_USE_SSL', False)
 
-BROKER_TRANSPORT_OPTIONS = {
-    'fanout_patterns': True,
-    'fanout_prefix': True,
-}
+try:
+    BROKER_TRANSPORT_OPTIONS = {
+        'fanout_patterns': True,
+        'fanout_prefix': True,
+        **ENV_TOKENS.get('CELERY_BROKER_TRANSPORT_OPTIONS', {})
+    }
+except TypeError as exc:
+    raise ImproperlyConfigured('CELERY_BROKER_TRANSPORT_OPTIONS must be a dict') from exc
 
 # Message expiry time in seconds
 CELERY_EVENT_QUEUE_TTL = ENV_TOKENS.get('CELERY_EVENT_QUEUE_TTL', None)
@@ -584,6 +562,10 @@ LOGO_TRADEMARK_URL = ENV_TOKENS.get('LOGO_TRADEMARK_URL', LOGO_TRADEMARK_URL)
 FAVICON_URL = ENV_TOKENS.get('FAVICON_URL', FAVICON_URL)
 
 ######################## CELERY ROTUING ########################
+
+# Celery beat configuration
+
+CELERYBEAT_SCHEDULER = ENV_TOKENS.get('CELERYBEAT_SCHEDULER', CELERYBEAT_SCHEDULER)
 
 # Defines alternate environment tasks, as a dict of form { task_name: alternate_queue }
 ALTERNATE_ENV_TASKS = {
