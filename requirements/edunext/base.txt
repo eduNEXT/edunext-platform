@@ -26,7 +26,7 @@ django-oauth-toolkit==1.3.2  # via -c requirements/edunext/../edx/base.txt, eox-
 django-oauth2-provider==0.2.6.1  # via eox-core
 django-waffle==2.1.0      # via -c requirements/edunext/../edx/base.txt, edx-django-utils, edx-drf-extensions, edx-proctoring, eox-core
 django-webpack-loader==0.7.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
-django==2.2.20            # via -c requirements/edunext/../edx/base.txt, django-crum, django-filter, django-model-utils, django-oauth-toolkit, djangorestframework, drf-jwt, drf-yasg, edx-api-doc-tools, edx-django-utils, edx-drf-extensions, edx-opaque-keys, edx-proctoring, edx-when, eox-audit-model, eox-hooks, event-tracking, jsonfield2, openedx-events, openedx-filters, rest-condition, xblock-free-text-response
+django==2.2.25            # via -c requirements/edunext/../edx/base.txt, django-crum, django-filter, django-model-utils, django-oauth-toolkit, djangorestframework, drf-jwt, drf-yasg, edx-api-doc-tools, edx-django-utils, edx-drf-extensions, edx-opaque-keys, edx-proctoring, edx-when, eox-audit-model, eox-hooks, event-tracking, jsonfield2, openedx-events, openedx-filters, rest-condition, xblock-free-text-response
 djangorestframework==3.12.4  # via -c requirements/edunext/../edx/base.txt, drf-jwt, drf-yasg, edx-api-doc-tools, edx-drf-extensions, edx-proctoring, eox-core, eox-hooks, rest-condition
 drf-jwt==1.19.0           # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
 drf-yasg==1.20.0          # via -c requirements/edunext/../edx/base.txt, edx-api-doc-tools
