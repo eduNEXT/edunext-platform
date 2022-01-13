@@ -39,7 +39,7 @@ edx-proctoring==3.8.5     # via -c requirements/edunext/../edx/base.txt, eox-cor
 edx-rest-api-client==5.3.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==2.0.0           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-audit-model==0.6.0    # via eox-core, eox-tagging
-eox-core[eox-audit,sentry,tpa]==5.0.4  # via -r requirements/edunext/base.in, eox-tagging
+git+https://github.com/eduNEXT/eox-core.git@mgs/remove-course-management-app#egg=eox_core[eox-audit,sentry,tpa]==6.0.0_1  # via -r requirements/edunext/base.in, eox-tagging
 eox-hooks==2.0.0          # via -r requirements/edunext/base.in
 eox-tagging==3.0.0        # via -r requirements/edunext/base.in
 eox-tenant==5.1.2         # via -r requirements/edunext/base.in
