@@ -4158,7 +4158,7 @@ msgid ""
 "Are you sure you want to unenroll from {courseName} ({courseNumber})? You "
 "will be refunded the amount you paid."
 msgstr ""
-"本当に {coursename} ({courseNumber}) の受講取り消しをしますか？ 払い戻しをう"
+"本当に {courseName} ({courseNumber}) の受講取り消しをしますか？ 払い戻しをう"
 "けることになります。"
 
 #: common/static/bundles/PasswordResetConfirmation.js
