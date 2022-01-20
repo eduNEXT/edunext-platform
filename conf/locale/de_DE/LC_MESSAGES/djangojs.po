@@ -6009,14 +6009,14 @@ msgstr ""
 
 #: lms/static/js/certificates/views/certificate_whitelist_editor.js
 msgid "<%- user %> already in exception list."
-msgstr "<%= user %> ist bereits auf der Ausnahmeliste."
+msgstr "<%- user %> ist bereits auf der Ausnahmeliste."
 
 #: lms/static/js/certificates/views/certificate_whitelist_editor.js
 msgid ""
 "<%- user %> has been successfully added to the exception list. Click "
 "Generate Exception Certificate below to send the certificate."
 msgstr ""
-"<%= user %> wurde erfolgreich in die Ausnahmeliste aufgenommen. Klicken Sie "
+"<%- user %> wurde erfolgreich in die Ausnahmeliste aufgenommen. Klicken Sie "
 "unten auf Ausnahmezertifikat generieren, um das Zertifikat zu senden."
 
 #: lms/static/js/course_survey.js
@@ -6920,7 +6920,7 @@ msgid ""
 "complete and correct."
 msgstr ""
 "Es ist ein Fehler beim Zurücksetzen von Problemversuchen für das Problem '<"
-"%= problem_id %>' und Teilnehmer <%- student_id %>' aufgetreten. Stellen Sie "
+"%- problem_id %>' und Teilnehmer <%- student_id %>' aufgetreten. Stellen Sie "
 "sicher, dass die Problem- und Teilnehmercodes vollständig und korrekt sind."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
@@ -8254,7 +8254,7 @@ msgstr "Bitte geben Sie einen nicht negativen Integer-Wert ein."
 #: cms/static/js/models/settings/course_grader.js
 msgid "Cannot drop more <%- types %> assignments than are assigned."
 msgstr ""
-"Es können nicht mehr <%= types %> Aufgaben bearbeitet werden als zugeordnet "
+"Es können nicht mehr <%- types %> Aufgaben bearbeitet werden als zugeordnet "
 "sind."
 
 #: cms/static/js/models/settings/course_grading_policy.js

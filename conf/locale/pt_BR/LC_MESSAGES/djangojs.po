@@ -1027,7 +1027,7 @@ msgstr "Removendo"
 #: cms/static/js/views/show_textbook.js
 #: common/static/bundles/js/factories/textbooks.js
 msgid "Delete “<%- name %>”?"
-msgstr "Excluir “<%= name %>”?"
+msgstr "Excluir “<%- name %>”?"
 
 #: cms/static/js/views/show_textbook.js
 #: common/static/bundles/js/factories/textbooks.js
@@ -8010,7 +8010,7 @@ msgstr "Você ainda não criou um certificado."
 
 #: cms/static/js/certificates/views/signatory_editor.js
 msgid "Delete \"<%- signatoryName %>\" from the list of signatories?"
-msgstr "Apagar \"<%= signatoryName %>\" da lista de emissores?"
+msgstr "Apagar \"<%- signatoryName %>\" da lista de emissores?"
 
 #: cms/static/js/certificates/views/signatory_editor.js
 #: cms/static/js/views/course_info_update.js
@@ -9810,7 +9810,7 @@ msgid ""
 "The following information is already a part of your {platform} profile. "
 "We've included it here for your application."
 msgstr ""
-"As informações a seguir já fazem parte do seu perfil {plataforma}. Nós o "
+"As informações a seguir já fazem parte do seu perfil {platform}. Nós o "
 "incluímos aqui para o seu aplicativo."
 
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
@@ -10692,7 +10692,7 @@ msgid ""
 "When your face is in position, use the Take Photo button {icon} below to "
 "take your photo."
 msgstr ""
-"Quando seu rosto estiver em posição, use o botão Tirar foto {icone} abaixo "
+"Quando seu rosto estiver em posição, use o botão Tirar foto {icon} abaixo "
 "para tirar foto."
 
 #: lms/templates/verify_student/face_photo_step.underscore
@@ -10712,7 +10712,7 @@ msgid ""
 "To take the photo of your face, click on the camera button {icon}. If you "
 "need to try again, click 'Retake Photo'."
 msgstr ""
-"Para tirar foto do seu rosto, clique no botão câmera {icone}, se precisar "
+"Para tirar foto do seu rosto, clique no botão câmera {icon}, se precisar "
 "tentar novamente, clique 'Tire a foto novamente'. "
 
 #: lms/templates/verify_student/face_photo_step.underscore
@@ -10848,7 +10848,7 @@ msgstr "Certifique-se que o documento esteja bem iluminado"
 #: lms/templates/verify_student/id_photo_step.underscore
 msgid "Once in position, use the Take Photo button {icon} to capture your ID"
 msgstr ""
-"Uma vez posicionado, use o Botão Tirar foto {icone} para capturar sua "
+"Uma vez posicionado, use o Botão Tirar foto {icon} para capturar sua "
 "identidade"
 
 #: lms/templates/verify_student/id_photo_step.underscore

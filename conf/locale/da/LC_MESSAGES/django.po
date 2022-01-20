@@ -1610,7 +1610,7 @@ msgstr "Vælg en mulighed"
 #: common/lib/capa/capa/inputtypes.py
 #, python-brace-format
 msgid "ChoiceGroup: unexpected tag {tag_name}"
-msgstr "ChoiceGroup: uventet tag {tag_nem}"
+msgstr "ChoiceGroup: uventet tag {tag_name}"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "Answer received."
@@ -18956,7 +18956,7 @@ msgid ""
 "request, please contact us at"
 msgstr ""
 "Dette er for at bekræfte, at du har ændret den e-mail, som er tilknyttet "
-"{platform_name} fra {gammel_email} til {ny_email}. "
+"{platform_name} fra {old_email} til {new_email}. "
 
 #: themes/stanford-style/lms/templates/emails/email_change.txt
 msgid ""

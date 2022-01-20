@@ -21150,7 +21150,7 @@ msgstr "La página que usted está buscando no se encontró."
 
 #: cms/templates/404.html
 msgid "Go back to the {homepage}."
-msgstr "Devolverse a la página de {inicio}."
+msgstr "Devolverse a la página de {homepage}."
 
 #: cms/templates/500.html
 msgid "{studio_name} Server Error"
@@ -24595,7 +24595,7 @@ msgstr "El soporte será removido en la proxímo edición."
 
 #: cms/templates/widgets/deprecated-course-key-warning.html
 msgid "Support will be removed on {expiration_date}."
-msgstr "El soporte será removido en {fecha_de_expiración}."
+msgstr "El soporte será removido en {expiration_date}."
 
 #: cms/templates/widgets/deprecated-course-key-warning.html
 msgid "This course uses a legacy storage format."

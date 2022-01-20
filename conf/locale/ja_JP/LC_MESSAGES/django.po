@@ -10792,7 +10792,7 @@ msgstr "入力されたaccess_tokenは有効ではありません。"
 
 #: openedx/core/djangoapps/user_authn/views/registration_form.py
 msgid "Full Name cannot contain the following characters: < >"
-msgstr "氏名には次の文字を含めることができません：<>"
+msgstr "氏名には次の文字を含めることができません：< >"
 
 #: openedx/core/djangoapps/user_authn/views/registration_form.py
 msgid "A properly formatted e-mail is required"
@@ -15602,7 +15602,7 @@ msgid ""
 "successfully completing your {platform_name} course! {link_start}Purchase "
 "credit now.{link_end}"
 msgstr ""
-"おめでとうございます！　講座を履修するための {providers} からの履修単位が届き"
+"おめでとうございます！　講座を履修するための {platform_name} からの履修単位が届き"
 "ました。{link_start} 履修単位を取得しましょう {link_end} "
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
