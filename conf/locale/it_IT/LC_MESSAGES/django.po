@@ -16936,7 +16936,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your certificate will be available on or before {date}"
-msgstr "Il tuo certificato sarà disponibile a partire dal {data}"
+msgstr "Il tuo certificato sarà disponibile a partire dal {date}"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your final grade:"

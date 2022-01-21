@@ -12120,10 +12120,10 @@ msgid ""
 "{screen_reader_start}for your {enterprise_customer_name} "
 "dashboard,{screen_reader_end}{link_end} to continue in that experience."
 msgstr ""
-"A sua organização {bold_início}{empresa_cliente_nome}{bold_fim} usa um "
-"painel de bordo personalizado para aprender. {ligação_início}clique aqui "
-"{ecrã_leitor_início}para o seu {empresa_cliente_nome} painel de "
-"controlo,{ecrã_leitor_fim}{ligação_fim} para continuar nesta experiência."
+"A sua organização {bold_start}{enterprise_customer_name}{bold_end} usa um "
+"painel de bordo personalizado para aprender. {link_start}clique aqui "
+"{screen_reader_start}para o seu {enterprise_customer_name} painel de "
+"controlo,{screen_reader_end}{link_end} para continuar nesta experiência."
 
 #: openedx/features/enterprise_support/api.py
 #, python-brace-format
@@ -17794,7 +17794,7 @@ msgid ""
 "{expiration_datetime}"
 msgstr ""
 "A sua verificação é eficaz durante dois anos. Expirará em "
-"{tempo_de_vencimento}."
+"{expiration_datetime}."
 
 #: lms/templates/emails/photo_submission_confirmation.txt
 msgid "Hi {full_name},"

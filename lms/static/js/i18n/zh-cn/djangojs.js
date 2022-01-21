@@ -566,7 +566,7 @@
     "Delete this team?": "\u5220\u9664\u6b64\u56e2\u961f?",
     "Delete this {xblock_type} (and prerequisite)?": "\u786e\u8ba4\u5220\u9664\u6b64 {xblock_type}\uff08\u4ee5\u53ca\u5148\u4fee\u5185\u5bb9\uff09\uff1f",
     "Delete this {xblock_type}?": "\u786e\u8ba4\u5220\u9664{xblock_type}\uff1f",
-    "Delete \u201c<%- name %>\u201d?": "\u5220\u9664\u201c<%= name %>\u201d\uff1f",
+    "Delete \u201c<%- name %>\u201d?": "\u5220\u9664\u201c<%- name %>\u201d\uff1f",
     "Deleted Content Group": "\u5220\u9664\u5185\u5bb9\u7ec4",
     "Deleted Group": "\u5df2\u5220\u9664\u7ec4",
     "Deleting": "\u6b63\u5728\u5220\u9664",

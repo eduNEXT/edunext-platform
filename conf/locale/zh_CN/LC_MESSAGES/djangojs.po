@@ -982,7 +982,7 @@ msgstr "移除中"
 #: cms/static/js/views/show_textbook.js
 #: common/static/bundles/js/factories/textbooks.js
 msgid "Delete “<%- name %>”?"
-msgstr "删除“<%= name %>”？"
+msgstr "删除“<%- name %>”？"
 
 #: cms/static/js/views/show_textbook.js
 #: common/static/bundles/js/factories/textbooks.js

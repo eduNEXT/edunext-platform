@@ -11427,7 +11427,7 @@ msgstr "Password reset success"
 #: openedx/core/djangoapps/user_authn/templates/user_authn/edx_ace/passwordresetsuccess/email/body.html
 #, python-format
 msgid "Hello %(name)s,"
-msgstr "Bonjour %(full_name)s,"
+msgstr "Bonjour %(name)s,"
 
 #: openedx/core/djangoapps/user_authn/templates/user_authn/edx_ace/passwordresetsuccess/email/body.html
 #: openedx/core/djangoapps/user_authn/templates/user_authn/edx_ace/passwordresetsuccess/email/body.txt
@@ -11442,7 +11442,7 @@ msgstr ""
 #: openedx/core/djangoapps/user_authn/templates/user_authn/edx_ace/passwordresetsuccess/email/body.txt
 #, python-format
 msgid "Hello %(name)s, "
-msgstr "Bonjour %(full_name)s,"
+msgstr "Bonjour %(name)s,"
 
 #: openedx/core/djangoapps/user_authn/templates/user_authn/edx_ace/passwordresetsuccess/email/subject.txt
 #, python-format
@@ -13452,7 +13452,7 @@ msgstr "Adresse email: {email}"
 
 #: common/templates/emails/contact_us_feedback_email_body.txt
 msgid "Full Name: {realname}"
-msgstr "Nom complet : {votre nom}"
+msgstr "Nom complet : {realname}"
 
 #: common/templates/emails/contact_us_feedback_email_body.txt
 msgid "Inquiry Type: {inquiry_type}"
