@@ -367,10 +367,8 @@ class RegistrationFormFactory:
         property allows us to add custom fields to the registration form using extended_profile_fields and
         REGISTRATION_EXTRA_FIELDS.
         """
-        extended_profile_fields = [field.lower() for field in getattr(settings, 'extended_profile_fields', [])]
-        extra_fields = [
-            field.lower() for field in configuration_helpers.get_value('REGISTRATION_EXTRA_FIELDS', {}).keys()
-        ]
+        extended_profile_fields = getattr(settings, 'extended_profile_fields', [])
+        extra_fields = list(configuration_helpers.get_value('REGISTRATION_EXTRA_FIELDS', {}))
 
         # Removing duplicates while mantaining order, important when running tests.
         return list(OrderedDict.fromkeys(self.EXTRA_FIELDS_BASE + extended_profile_fields + extra_fields))
@@ -661,7 +659,7 @@ class RegistrationFormFactory:
         """
         custom_fields = getattr(settings, "EDNX_CUSTOM_REGISTRATION_FIELDS", [])
         for field in custom_fields:
-            if field.get("name").lower() == field_name:
+            if field.get("name") == field_name:
                 return field
         return {}
 
