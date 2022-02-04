@@ -35,8 +35,7 @@ from common.djangoapps.student.models import (
     create_comments_service_user
 )
 from common.djangoapps.util.json_request import JsonResponse
-
-from edx_django_utils.user import generate_password
+from openedx.core.djangoapps.user_authn.utils import generate_password
 
 
 def auto_auth(request):  # pylint: disable=too-many-statements
