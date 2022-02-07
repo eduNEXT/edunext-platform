@@ -2554,8 +2554,8 @@ msgstr[1] ""
 #, python-brace-format
 msgid "Partially correct ({progress} point)"
 msgid_plural "Partially correct ({progress} points)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Parcialmente correta ({progress} ponto)"
+msgstr[1] "Parcialmente correta ({progress} pontos)"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Partially Correct"
@@ -13826,8 +13826,8 @@ msgstr "Exibir Resposta"
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} attempt"
 msgid_plural "You have used {num_used} of {num_total} attempts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Você utilizou {num_used} de {num_total} tentativa"
+msgstr[1] "Você utilizou {num_used} de {num_total} tentativas"
 
 #: lms/templates/problem.html
 msgid ""
