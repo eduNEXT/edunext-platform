@@ -384,6 +384,9 @@ from common.djangoapps.student.roles import OrgRerunCreatorRole, UserBasedRole
             'allowReruns': allow_course_reruns and rerun_creator_status and course_creator_status=='granted'
           }
         )}
+        % if pagination_context:
+          <%include file="course_pagination.html"/>
+        % endif
       </div>
 
       %else:
