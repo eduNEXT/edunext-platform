@@ -588,13 +588,15 @@ def course_listing(request):
         'allow_unicode_course_id': settings.FEATURES.get('ALLOW_UNICODE_COURSE_ID', False),
         'allow_course_reruns': settings.FEATURES.get('ALLOW_COURSE_RERUNS', True),
         'optimization_enabled': optimization_enabled,
+        'org': org,
         'active_tab': 'courses',
         'pagination_context': pagination_context,
     })
 
+
 def _generate_courses_pagination_configuration(request):
     """
-    Returns pagination configuration for the courses list page.
+    Returns pagination configuration from the current request for the course listing page.
     """
     return {
         'page_number': request.GET.get('page', 1),
