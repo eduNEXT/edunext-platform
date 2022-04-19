@@ -24,4 +24,4 @@ jobs:
         uses: tvdias/github-tagger@v0.0.2
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          tag: vL.N${{ steps.date.outputs.NOW }}${{steps.last-commit-of-day.outputs.COMMITHASH}}
+          tag: nightly/vL.N${{ steps.date.outputs.NOW }}${{steps.last-commit-of-day.outputs.COMMITHASH}}
