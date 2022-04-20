@@ -3,14 +3,14 @@
 
 import hashlib
 
+import six
+from six import text_type
 from codejail.safe_exec import SafeExecException, json_safe
 from codejail.safe_exec import not_safe_exec as codejail_not_safe_exec
 from codejail.safe_exec import safe_exec as codejail_safe_exec
-import six
-from six import text_type
 
 from . import lazymod
-from .remote_exec import is_codejail_rest_service_enabled, get_remote_exec
+from .remote_exec import get_remote_exec, is_codejail_rest_service_enabled
 
 # Establish the Python environment for Capa.
 # Capa assumes float-friendly division always.
