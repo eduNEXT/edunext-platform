@@ -33,6 +33,7 @@ log = logging.getLogger(__name__)
 
 STUDENT_FEATURES = ('id', 'username', 'first_name', 'last_name', 'is_staff', 'email',
                     'date_joined', 'last_login')
+STUDENT_FEATURES_WITH_CUSTOM = STUDENT_FEATURES
 PROFILE_FEATURES = ('name', 'language', 'location', 'year_of_birth', 'gender',
                     'level_of_education', 'mailing_address', 'goals', 'meta',
                     'city', 'country')
@@ -112,6 +113,9 @@ def enrolled_students_features(course_key, features):
     if include_team_column:
         students = students.prefetch_related('teams')
 
+    # pylint: disable=line-too-long
+    STUDENT_FEATURES_WITH_CUSTOM += tuple(configuration_helpers.get_value_for_org(course_key.org, 'student_profile_download_fields_custom_student_attributes', getattr(settings, "STUDENT_PROFILE_DOWNLOAD_FIELDS_CUSTOM_STUDENT_ATTRIBUTES", ())))
+
     if include_program_enrollments and len(students) > 0:
         program_enrollments = fetch_program_enrollments_by_students(users=students, realized_only=True)
         for program_enrollment in program_enrollments:
@@ -128,7 +132,7 @@ def enrolled_students_features(course_key, features):
 
     def extract_student(student, features):
         """ convert student to dictionary """
-        student_features = [x for x in STUDENT_FEATURES if x in features]
+        student_features = [x for x in STUDENT_FEATURES_WITH_CUSTOM if x in features]
         profile_features = [x for x in PROFILE_FEATURES if x in features]
 
         # For data extractions on the 'meta' field
