@@ -78,7 +78,7 @@ COURSE_ENABLE_UNENROLLED_ACCESS_FLAG = CourseWaffleFlag(
 # .. toggle_warnings: To set a relative due date for self-paced courses, the weeks_to_complete field for a course run
 #   needs to be set. Currently it can be set through the publisher app.
 # .. toggle_tickets: https://openedx.atlassian.net/browse/AA-27
-RELATIVE_DATES_FLAG = ExperimentWaffleFlag(WAFFLE_FLAG_NAMESPACE, 'relative_dates', __name__, experiment_id=17)
+RELATIVE_DATES_FLAG = CourseWaffleFlag(WAFFLE_FLAG_NAMESPACE, 'relative_dates')
 
 # .. toggle_name: course_experience.calendar_sync
 # .. toggle_implementation: CourseWaffleFlag
