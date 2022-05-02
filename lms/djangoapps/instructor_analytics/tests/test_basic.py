@@ -131,7 +131,8 @@ class TestAnalyticsBasic(ModuleStoreTestCase):
             user.profile.save()
         for feature in query_features:
             assert feature in AVAILABLE_FEATURES
-        with self.assertNumQueries(1):
+        # NOTE: It executes one test more than commit "fix: solve studio assets missing issue"
+        with self.assertNumQueries(2):
             userreports = enrolled_students_features(self.course_key, query_features)
         assert len(userreports) == len(self.users)
 
@@ -159,7 +160,7 @@ class TestAnalyticsBasic(ModuleStoreTestCase):
         Assert that we can query individual fields in the 'meta' field in the UserProfile
         """
         query_features = ('meta.position', 'meta.company')
-        with self.assertNumQueries(1):
+        with self.assertNumQueries(2):
             userreports = enrolled_students_features(self.course_key, query_features)
         assert len(userreports) == len(self.users)
         for userreport in userreports:
@@ -215,7 +216,9 @@ class TestAnalyticsBasic(ModuleStoreTestCase):
         # enrolled_students_features.  The first query comes from the call to
         # User.objects.filter(...), and the second comes from
         # prefetch_related('course_groups').
-        with self.assertNumQueries(2):
+        # NOTE: Some changes was made in the commit:
+        # "fix: solve studio assets missing issue" thats execute a third query
+        with self.assertNumQueries(3):
             userreports = enrolled_students_features(course.id, query_features)
         assert len([r for r in userreports if r['username'] in cohorted_usernames]) == len(cohorted_students)
         assert len([r for r in userreports if r['username'] == non_cohorted_student.username]) == 1
@@ -229,15 +232,16 @@ class TestAnalyticsBasic(ModuleStoreTestCase):
     def test_enrolled_student_features_external_user_keys(self):
         query_features = ('username', 'name', 'email', 'city', 'country', 'external_user_key')
         username_with_external_user_key_dict = {}
-        for i in range(len(self.users)):
+
+        for i, user in enumerate(self.users):
             # Setup some users with ProgramEnrollments
             if i % 2 == 0:
-                user = self.users[i]
                 external_user_key = '{}_{}'.format(user.username, i)
                 ProgramEnrollmentFactory.create(user=user, external_user_key=external_user_key)
                 username_with_external_user_key_dict[user.username] = external_user_key
-
-        with self.assertNumQueries(2):
+        # NOTE: Some changes was made in the commit:
+        # "fix: solve studio assets missing issue" thats execute a third query
+        with self.assertNumQueries(3):
             userreports = enrolled_students_features(self.course_key, query_features)
         assert len(userreports) == 30
         for report in userreports:

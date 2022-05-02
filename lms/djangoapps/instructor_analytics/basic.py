@@ -114,7 +114,8 @@ def enrolled_students_features(course_key, features):
         students = students.prefetch_related('teams')
 
     # pylint: disable=line-too-long
-    STUDENT_FEATURES_WITH_CUSTOM += tuple(configuration_helpers.get_value_for_org(course_key.org, 'student_profile_download_fields_custom_student_attributes', getattr(settings, "STUDENT_PROFILE_DOWNLOAD_FIELDS_CUSTOM_STUDENT_ATTRIBUTES", ())))
+    global STUDENT_FEATURES_WITH_CUSTOM
+    STUDENT_FEATURES_WITH_CUSTOM  = STUDENT_FEATURES_WITH_CUSTOM + tuple(configuration_helpers.get_value_for_org(course_key.org, 'student_profile_download_fields_custom_student_attributes', getattr(settings, "STUDENT_PROFILE_DOWNLOAD_FIELDS_CUSTOM_STUDENT_ATTRIBUTES", ())))
 
     if include_program_enrollments and len(students) > 0:
         program_enrollments = fetch_program_enrollments_by_students(users=students, realized_only=True)
@@ -385,7 +386,7 @@ def get_response_state(response):
         username = response.student.username
         err_msg = (
             'Error occurred while attempting to load learner state '
-            '{username} for state {state}.'.format(
+            f'{username} for state {state}.'.format(
                 username=username,
                 state=problem_state
             )
