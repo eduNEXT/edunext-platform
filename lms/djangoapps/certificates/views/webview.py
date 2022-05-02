@@ -46,6 +46,7 @@ from lms.djangoapps.courseware.courses import get_course_by_id
 from openedx.core.djangoapps.catalog.utils import get_course_run_details
 from openedx.core.djangoapps.certificates.api import certificates_viewable_for_course, display_date_for_certificate
 from openedx.core.djangoapps.lang_pref.api import get_closest_released_language
+from openedx.core.djangoapps.plugins.plugin_extension_points import run_extension_point
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.lib.courses import course_image_url
 
@@ -594,6 +595,18 @@ def render_html_view(request, course_id, certificate=None):
         # Add certificate header/footer data to current context
         context.update(get_certificate_header_context(is_secure=request.is_secure()))
         context.update(get_certificate_footer_context())
+
+        # Append/Override the existing view context values with plugin defined values
+        run_extension_point(
+            'NAU_CERTIFICATE_CONTEXT_EXTENSION',
+            context=context,
+            request=request,
+            course=course,
+            user=user,
+            user_certificate=user_certificate,
+            configuration=configuration,
+            certificate_language=certificate_language,
+        )
 
         # Append/Override the existing view context values with any course-specific static values from Advanced Settings
         context.update(course.cert_html_view_overrides)
