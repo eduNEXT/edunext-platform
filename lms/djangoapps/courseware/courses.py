@@ -18,6 +18,7 @@ from edx_django_utils.monitoring import function_trace
 from fs.errors import ResourceNotFound
 from opaque_keys.edx.keys import UsageKey
 from path import Path as path
+from lms.djangoapps.certificates import api as certs_api
 
 from openedx.core.lib.cache_utils import request_cached
 

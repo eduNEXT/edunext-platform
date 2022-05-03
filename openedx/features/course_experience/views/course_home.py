@@ -14,6 +14,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from opaque_keys.edx.keys import CourseKey
 from web_fragments.fragment import Fragment
 
+
 from lms.djangoapps.course_home_api.toggles import course_home_mfe_outline_tab_is_active
 from lms.djangoapps.courseware.access import has_access
 from lms.djangoapps.courseware.courses import can_self_enroll_in_course, get_course_info_section, get_course_with_access
@@ -39,6 +40,7 @@ from common.djangoapps.student.models import CourseEnrollment
 from common.djangoapps.util.views import ensure_valid_course_key
 from xmodule.course_module import COURSE_VISIBILITY_PUBLIC, COURSE_VISIBILITY_PUBLIC_OUTLINE
 
+from .next_up_banner import NextUpBannerFragmentView
 from .. import (
     COURSE_ENABLE_UNENROLLED_ACCESS_FLAG,
     LATEST_UPDATE_FLAG,
@@ -87,10 +89,11 @@ class CourseHomeFragmentView(EdxFragmentView):
         """
         Returns information relevant to resume course functionality.
 
-        Returns a tuple: (has_visited_course, resume_course_url)
+        Returns a tuple: (has_visited_course, resume_course_url, resume_course_title)
             has_visited_course: True if the user has ever completed a block, False otherwise.
             resume_course_url: The URL of the 'resume course' block if the user has completed a block,
                 otherwise the URL of the first block to start the course.
+            resume_course_title: The display_name of the resume course block, otherwise the display_name of course root
 
         """
         course_outline_root_block = get_course_outline_block_tree(request, course_id, request.user)
@@ -98,11 +101,13 @@ class CourseHomeFragmentView(EdxFragmentView):
         has_visited_course = bool(resume_block)
         if resume_block:
             resume_course_url = resume_block['lms_web_url']
+            resume_course_title = resume_block['display_name']
         else:
             start_block = get_start_block(course_outline_root_block) if course_outline_root_block else None
             resume_course_url = start_block['lms_web_url'] if start_block else None
+            resume_course_title = course_outline_root_block['display_name'] if course_outline_root_block else None
 
-        return has_visited_course, resume_course_url
+        return has_visited_course, resume_course_url, resume_course_title
 
     def _get_course_handouts(self, request, course):
         """
@@ -138,6 +143,7 @@ class CourseHomeFragmentView(EdxFragmentView):
         update_message_fragment = None
         course_sock_fragment = None
         offer_banner_fragment = None
+        next_up_banner_fragment = None
         course_expiration_fragment = None
         has_visited_course = None
         resume_course_url = None
@@ -160,7 +166,7 @@ class CourseHomeFragmentView(EdxFragmentView):
             course_sock_fragment = CourseSockFragmentView().render_to_fragment(
                 request, course=course, **kwargs
             )
-            has_visited_course, resume_course_url = self._get_resume_course_info(request, course_id)
+            has_visited_course, resume_course_url, resume_course_title = self._get_resume_course_info(request, course_id) # pylint: disable=line-too-long
             handouts_html = self._get_course_handouts(request, course)
             offer_banner_fragment = get_first_purchase_offer_banner_fragment(
                 request.user,
@@ -237,6 +243,7 @@ class CourseHomeFragmentView(EdxFragmentView):
             'course_home_message_fragment': course_home_message_fragment,
             'offer_banner_fragment': offer_banner_fragment,
             'course_expiration_fragment': course_expiration_fragment,
+            'next_up_banner_fragment': next_up_banner_fragment,
             'has_visited_course': has_visited_course,
             'resume_course_url': resume_course_url,
             'course_tools': course_tools,
