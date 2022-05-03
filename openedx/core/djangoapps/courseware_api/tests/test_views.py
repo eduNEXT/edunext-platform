@@ -36,9 +36,7 @@ from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.tests.django_utils import TEST_DATA_SPLIT_MODULESTORE, SharedModuleStoreTestCase
 from xmodule.modulestore.tests.factories import ItemFactory, ToyCourseFactory
 
-
 User = get_user_model()
-
 
 @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
 class BaseCoursewareTests(SharedModuleStoreTestCase):
@@ -138,7 +136,7 @@ class CourseApiTestViews(BaseCoursewareTests, MasqueradeMixin):
                 enrollment = response.data['enrollment']
                 assert enrollment_mode == enrollment['mode']
                 assert enrollment['is_active']
-                assert len(response.data['tabs']) == 6
+                assert len(response.data['tabs']) == 5
                 found = False
                 for tab in response.data['tabs']:
                     if tab['type'] == 'external_link':
