@@ -52,14 +52,14 @@ def password_complexity():
     """
     password_validators = settings.AUTH_PASSWORD_VALIDATORS
     known_validators = {
-        "util.password_policy_validators.MinimumLengthValidator": "min_length",
-        "util.password_policy_validators.MaximumLengthValidator": "max_length",
-        "util.password_policy_validators.AlphabeticValidator": "min_alphabetic",
-        "util.password_policy_validators.UppercaseValidator": "min_upper",
-        "util.password_policy_validators.LowerValidator": "min_lower",
-        "util.password_policy_validators.NumericValidator": "min_numeric",
-        "util.password_policy_validators.PunctuationValidator": "min_punctuation",
-        "util.password_policy_validators.SymbolValidator": "min_symbol",
+        "common.djangoapps.util.password_policy_validators.MinimumLengthValidator": "min_length",
+        "common.djangoapps.util.password_policy_validators.MaximumLengthValidator": "max_length",
+        "common.djangoapps.util.password_policy_validators.AlphabeticValidator": "min_alphabetic",
+        "common.djangoapps.util.password_policy_validators.UppercaseValidator": "min_upper",
+        "common.djangoapps.util.password_policy_validators.LowerValidator": "min_lower",
+        "common.djangoapps.util.password_policy_validators.NumericValidator": "min_numeric",
+        "common.djangoapps.util.password_policy_validators.PunctuationValidator": "min_punctuation",
+        "common.djangoapps.util.password_policy_validators.SymbolValidator": "min_symbol",
     }
     complexity = {}
 
