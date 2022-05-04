@@ -38,6 +38,7 @@ from xmodule.modulestore.tests.factories import ItemFactory, ToyCourseFactory
 
 User = get_user_model()
 
+
 @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
 class BaseCoursewareTests(SharedModuleStoreTestCase):
     """
