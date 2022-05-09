@@ -113,7 +113,7 @@ from lms.envs.common import (
 
     # Methods to derive settings
     _make_mako_template_dirs,
-    _make_locale_paths_prepend,
+    _make_locale_paths,
 )
 from path import Path as path
 from django.urls import reverse_lazy
@@ -1102,7 +1102,7 @@ USE_L10N = True
 STATICI18N_FILENAME_FUNCTION = 'statici18n.utils.legacy_filename'
 STATICI18N_ROOT = PROJECT_ROOT / "static"
 
-LOCALE_PATHS = _make_locale_paths_prepend
+LOCALE_PATHS = _make_locale_paths
 derived('LOCALE_PATHS')
 
 # Messages
