@@ -1827,7 +1827,7 @@ def _make_locale_paths_prepend(settings):   # pylint: disable=missing-function-d
         # Add locale paths to settings for comprehensive theming.
         for locale_path in settings.COMPREHENSIVE_THEME_LOCALE_PATHS:
             locale_paths = (path(locale_path), ) + locale_paths
-    return locale_paths
+    return list(locale_paths)
 
 LOCALE_PATHS = _make_locale_paths_prepend
 derived('LOCALE_PATHS')
