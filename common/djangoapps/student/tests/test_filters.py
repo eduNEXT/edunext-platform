@@ -9,7 +9,11 @@ from openedx_filters import PipelineStep
 
 from common.djangoapps.student.models import CourseEnrollment, EnrollmentNotAllowed
 from common.djangoapps.student.tests.factories import UserFactory, UserProfileFactory
+
 from openedx.core.djangolib.testing.utils import skip_unless_lms
+
+from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
+from xmodule.modulestore.tests.factories import CourseFactory
 
 
 class TestEnrollmentPipelineStep(PipelineStep):
