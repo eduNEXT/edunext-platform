@@ -166,7 +166,7 @@ class CourseHomeFragmentView(EdxFragmentView):
             course_sock_fragment = CourseSockFragmentView().render_to_fragment(
                 request, course=course, **kwargs
             )
-            has_visited_course, resume_course_url, resume_course_title = self._get_resume_course_info(request, course_id) #pylint: disable=line-too-long
+            has_visited_course, resume_course_url, resume_course_title = self._get_resume_course_info(request, course_id)  # pylint: disable=line-too-long
             handouts_html = self._get_course_handouts(request, course)
             offer_banner_fragment = get_first_purchase_offer_banner_fragment(
                 request.user,
