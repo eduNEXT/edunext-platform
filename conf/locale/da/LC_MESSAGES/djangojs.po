@@ -1,33 +1,33 @@
 # #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
-# edX translation file.
+# edX community translations have been downloaded from Danish (https://www.transifex.com/open-edx/teams/6205/da/).
 # Copyright (C) 2021 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2021.
-# 
+#
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
-# edX translation file.
+# edX community translations have been downloaded from Danish (https://www.transifex.com/open-edx/teams/6205/da/).
 # Copyright (C) 2021 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2021.
-# 
+#
 # #-#-#-#-#  djangojs-account-settings-view.po (0.1a)  #-#-#-#-#
-# edX translation file.
+# edX community translations have been downloaded from Danish (https://www.transifex.com/open-edx/teams/6205/da/).
 # Copyright (C) 2021 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2021.
-# 
+#
 # #-#-#-#-#  underscore.po (0.1a)  #-#-#-#-#
-# edX translation file
+# edX community translations have been downloaded from Danish (https://www.transifex.com/open-edx/teams/6205/da/)
 # Copyright (C) 2021 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2021.
-# 
+#
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
-# edX translation file
+# edX community translations have been downloaded from Danish (https://www.transifex.com/open-edx/teams/6205/da/)
 # Copyright (C) 2021 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2021.
-# 
+#
 # Translators:
 # Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2021
 # Attila Vural <att.vural@gmail.com>, 2021
@@ -36,7 +36,7 @@
 # Birgitte Ploeger <bipl@seges.dk>, 2021
 # Henrik Mondrup <hmondrup@gmail.com>, 2021
 # inger sølle <inger@soellingvraa.dk>, 2021
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
@@ -45,12 +45,12 @@ msgstr ""
 "PO-Revision-Date: 2021-06-08 17:58+0000\n"
 "Last-Translator: inger sølle <inger@soellingvraa.dk>, 2021\n"
 "Language-Team: Danish (https://www.transifex.com/open-edx/teams/6205/da/)\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
-"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js
@@ -97,7 +97,7 @@ msgstr ""
 #: common/static/bundles/js/factories/textbooks.js
 #: lms/static/js/ccx/schedule.js lms/static/js/views/fields.js
 msgid "Saving"
-msgstr "Gemmer"
+msgstr ""
 
 #: cms/static/js/base.js common/static/bundles/js/factories/container.js
 #: common/static/bundles/js/factories/edit_tabs.js
@@ -136,7 +136,7 @@ msgstr ""
 #: cms/templates/js/xblock-outline.underscore
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Delete"
-msgstr "Slet"
+msgstr ""
 
 #: cms/static/js/certificates/views/signatory_editor.js
 #: cms/static/js/views/course_info_update.js cms/static/js/views/list_item.js
@@ -191,7 +191,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 #: lms/templates/learner_dashboard/verification_popover.underscore
 msgid "Cancel"
-msgstr "Annuller"
+msgstr ""
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
@@ -252,12 +252,12 @@ msgstr ""
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Organization:"
-msgstr "Organisation"
+msgstr ""
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Number:"
-msgstr "Kursus nummer:"
+msgstr ""
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
@@ -284,7 +284,7 @@ msgstr ""
 #: cms/static/js/models/active_video_upload.js cms/static/js/views/assets.js
 #: cms/static/js/views/video_thumbnail.js lms/static/js/views/image_field.js
 msgid "Uploading"
-msgstr "Uploader"
+msgstr ""
 
 #: cms/static/js/models/chapter.js
 #: common/static/bundles/js/factories/textbooks.js
@@ -344,7 +344,7 @@ msgstr ""
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
 msgid "or"
-msgstr "eller"
+msgstr ""
 
 #: cms/static/js/models/xblock_validation.js
 #: common/static/bundles/js/factories/xblock_validation.js
@@ -379,7 +379,7 @@ msgstr ""
 #: common/static/common/templates/image-modal.underscore
 #: openedx/features/learner_profile/static/learner_profile/templates/share_modal.underscore
 msgid "Close"
-msgstr "Luk"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -396,12 +396,12 @@ msgstr "Luk"
 #: cms/templates/js/signatory-details.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Name"
-msgstr "Navn"
+msgstr ""
 
 #: cms/static/js/views/assets.js lms/static/js/Markdown.Editor.js
 #: cms/templates/js/asset-upload-modal.underscore
 msgid "Choose File"
-msgstr "Vælg fil"
+msgstr ""
 
 #: cms/static/js/views/components/add_xblock.js
 #: cms/static/js/views/utils/xblock_utils.js
@@ -431,7 +431,7 @@ msgstr ""
 #: common/static/common/templates/discussion/templates.underscore
 #: lms/templates/learner_dashboard/verification_popover.underscore
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -444,7 +444,7 @@ msgstr "OK"
 #: common/static/bundles/StaticTabBlockStudio.js
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid "None"
-msgstr "Ingen"
+msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
 #: cms/static/js/views/metadata.js
@@ -458,7 +458,7 @@ msgstr "Ingen"
 #: cms/templates/js/video/metadata-translations-item.underscore
 #: lms/djangoapps/teams/static/teams/templates/edit-team-member.underscore
 msgid "Remove"
-msgstr "Fjern"
+msgstr ""
 
 #: cms/static/js/views/edit_chapter.js
 #: common/static/bundles/js/factories/textbooks.js
@@ -476,7 +476,7 @@ msgstr ""
 #: common/static/bundles/js/factories/library.js
 #: cms/templates/js/license-selector.underscore
 msgid "All Rights Reserved"
-msgstr "All Rights Reserved"
+msgstr ""
 
 #: cms/static/js/views/license.js
 #: common/static/bundles/js/factories/container.js
@@ -511,7 +511,7 @@ msgstr ""
 #: common/static/bundles/js/factories/edit_tabs.js
 #: common/static/bundles/js/factories/library.js
 msgid "Attribution"
-msgstr "Anerkendelse"
+msgstr ""
 
 #: cms/static/js/views/license.js
 #: common/static/bundles/js/factories/container.js
@@ -528,7 +528,7 @@ msgstr ""
 #: common/static/bundles/js/factories/edit_tabs.js
 #: common/static/bundles/js/factories/library.js
 msgid "Noncommercial"
-msgstr "Ikke kommercielt"
+msgstr ""
 
 #: cms/static/js/views/license.js
 #: common/static/bundles/js/factories/container.js
@@ -544,7 +544,7 @@ msgstr ""
 #: common/static/bundles/js/factories/edit_tabs.js
 #: common/static/bundles/js/factories/library.js
 msgid "No Derivatives"
-msgstr "Ingen derivater"
+msgstr ""
 
 #: cms/static/js/views/license.js
 #: common/static/bundles/js/factories/container.js
@@ -561,7 +561,7 @@ msgstr ""
 #: common/static/bundles/js/factories/edit_tabs.js
 #: common/static/bundles/js/factories/library.js
 msgid "Share Alike"
-msgstr "Del Lignende"
+msgstr ""
 
 #: cms/static/js/views/license.js
 #: common/static/bundles/js/factories/container.js
@@ -582,19 +582,19 @@ msgstr ""
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 #: cms/static/js/views/manage_users_and_roles.js
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Unknown"
-msgstr "Ukendt"
+msgstr ""
 
 #: cms/static/js/views/manage_users_and_roles.js
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Are you sure?"
-msgstr "Er du sikker?"
+msgstr ""
 
 #: cms/static/js/views/metadata.js
 #: common/static/bundles/js/factories/container.js
@@ -602,7 +602,7 @@ msgstr "Er du sikker?"
 #: common/static/bundles/js/factories/library.js
 #: lms/static/js/views/file_uploader.js
 msgid "Upload File"
-msgstr "Upload fil"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -631,7 +631,7 @@ msgstr "Upload fil"
 #: lms/templates/instructor/instructor_dashboard_2/divided-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/divided-discussions-inline.underscore
 msgid "Save"
-msgstr "Gem"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -644,7 +644,7 @@ msgstr "Gem"
 #: common/static/bundles/StaticTabBlockStudio.js
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Advanced"
-msgstr "Videregående"
+msgstr ""
 
 #. Translators: "title" is the name of the current component being edited.
 #: cms/static/js/views/modals/edit_xblock.js
@@ -667,7 +667,7 @@ msgstr ""
 #: common/static/bundles/js/factories/library.js
 #: lms/templates/ccx/schedule.underscore
 msgid "Unit"
-msgstr "Enhed"
+msgstr ""
 
 #: cms/static/js/views/modals/edit_xblock.js
 #: common/static/bundles/js/factories/container.js
@@ -883,7 +883,7 @@ msgstr ""
 #: common/static/bundles/js/factories/library.js
 #: lms/static/js/views/image_field.js
 msgid "Removing"
-msgstr "Fjerner"
+msgstr ""
 
 #: cms/static/js/views/show_textbook.js
 #: common/static/bundles/js/factories/textbooks.js
@@ -1035,7 +1035,7 @@ msgstr ""
 #: lms/static/js/discussions_management/views/divided_discussions_inline.js
 #: lms/static/js/views/fields.js
 msgid "Your changes have been saved."
-msgstr "Dine ændringer er gemt."
+msgstr ""
 
 #: cms/static/js/views/video/transcripts/file_uploader.js
 #: common/static/bundles/js/factories/container.js
@@ -1145,7 +1145,7 @@ msgstr ""
 #: common/static/bundles/js/factories/edit_tabs.js
 #: common/static/bundles/js/factories/library.js
 msgid "Editor"
-msgstr "Editor"
+msgstr ""
 
 #: cms/static/js/views/xblock_editor.js
 #: common/static/bundles/js/factories/container.js
@@ -1153,7 +1153,7 @@ msgstr "Editor"
 #: common/static/bundles/js/factories/library.js
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Settings"
-msgstr "Indstillinger"
+msgstr ""
 
 #: cms/static/js/views/xblock_outline.js
 #: common/static/bundles/js/factories/container.js
@@ -1186,12 +1186,12 @@ msgstr ""
 #: lms/static/js/verify_student/views/step_view.js
 #: lms/static/js/views/fields.js
 msgid "Error"
-msgstr "Fejl"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/assets/library_content/public/js/library_content_edit.js
 #: common/lib/xmodule/xmodule/js/public/js/library_content_edit.js
 msgid "Updating with latest library content"
-msgstr "Opdaterer med det seneste biblioteksindhold"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/assets/library_source_block/LibrarySourcedBlockPicker.jsx
 #: common/static/bundles/LibrarySourcedBlockPicker.js
@@ -1210,7 +1210,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/assets/split_test/public/js/split_test_author_view.js
 #: common/lib/xmodule/xmodule/js/public/js/split_test_author_view.js
 msgid "Creating missing groups"
-msgstr "Opretter manglende grupper"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/assets/word_cloud/src/js/word_cloud_main.js
 msgid "{start_strong}{total}{end_strong} words submitted in total."
@@ -1232,37 +1232,37 @@ msgstr ""
 #: common/static/bundles/AnnotatableBlockPreview.js
 #: common/static/bundles/AnnotatableModule.js
 msgid "Show Annotations"
-msgstr "Vis bemærkninger"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
 #: common/static/bundles/AnnotatableBlockPreview.js
 #: common/static/bundles/AnnotatableModule.js
 msgid "Hide Annotations"
-msgstr "Skjul bemærkninger"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
 #: common/static/bundles/AnnotatableBlockPreview.js
 #: common/static/bundles/AnnotatableModule.js
 msgid "Expand Instructions"
-msgstr "Udvid instrukser"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
 #: common/static/bundles/AnnotatableBlockPreview.js
 #: common/static/bundles/AnnotatableModule.js
 msgid "Collapse Instructions"
-msgstr "Skjul instrukser"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
 #: common/static/bundles/AnnotatableBlockPreview.js
 #: common/static/bundles/AnnotatableModule.js
 msgid "Commentary"
-msgstr "Kommentar"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
 #: common/static/bundles/AnnotatableBlockPreview.js
 #: common/static/bundles/AnnotatableModule.js
 msgid "Reply to Annotation"
-msgstr "Svar på note"
+msgstr ""
 
 #. Translators: {num_points} is the number of points possible (examples: 1, 3,
 #. 10).;
@@ -1326,7 +1326,6 @@ msgstr[1] ""
 #: common/static/bundles/ProblemBlockPreview.js
 msgid "The grading process is still running. Refresh the page to see updates."
 msgstr ""
-"Bedømmelsesprocessen er stadig i gang. Opdater siden for at se opdateringer."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 #: common/static/bundles/ProblemBlockPreview.js
@@ -1395,7 +1394,7 @@ msgstr ""
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Paragraph"
-msgstr "Afsnit"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/static/bundles/AboutBlockStudio.js
@@ -1403,7 +1402,7 @@ msgstr "Afsnit"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Preformatted"
-msgstr "Forudformateret"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1413,7 +1412,7 @@ msgstr "Forudformateret"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Heading 3"
-msgstr "Overskrift 3"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1423,7 +1422,7 @@ msgstr "Overskrift 3"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Heading 4"
-msgstr "Overskrift 4"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1433,7 +1432,7 @@ msgstr "Overskrift 4"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Heading 5"
-msgstr "Overskrift 5"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1443,7 +1442,7 @@ msgstr "Overskrift 5"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Heading 6"
-msgstr "Overskrift 6"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1453,7 +1452,7 @@ msgstr "Overskrift 6"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Add to Dictionary"
-msgstr "Tilføj til ordbog"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1463,7 +1462,7 @@ msgstr "Tilføj til ordbog"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Align center"
-msgstr "Centrer"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1473,7 +1472,7 @@ msgstr "Centrer"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Align left"
-msgstr "Juster venstre"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1483,7 +1482,7 @@ msgstr "Juster venstre"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Align right"
-msgstr "Juster højre"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1493,7 +1492,7 @@ msgstr "Juster højre"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Alignment"
-msgstr "Justering"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1503,7 +1502,7 @@ msgstr "Justering"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Alternative source"
-msgstr "Alternativ kilde"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1513,7 +1512,7 @@ msgstr "Alternativ kilde"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Anchor"
-msgstr "Anker"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1523,7 +1522,7 @@ msgstr "Anker"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Anchors"
-msgstr "Ankre"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1533,7 +1532,7 @@ msgstr "Ankre"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Author"
-msgstr "Forfatter"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1543,7 +1542,7 @@ msgstr "Forfatter"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Background color"
-msgstr "Baggrundsfarve"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1554,7 +1553,7 @@ msgstr "Baggrundsfarve"
 #: common/static/bundles/StaticTabBlockStudio.js
 #: lms/static/js/Markdown.Editor.js
 msgid "Blockquote"
-msgstr "Blokcitat"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1564,7 +1563,7 @@ msgstr "Blokcitat"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Blocks"
-msgstr "Blokke"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1574,7 +1573,7 @@ msgstr "Blokke"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Body"
-msgstr "Krop"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1584,7 +1583,7 @@ msgstr "Krop"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Bold"
-msgstr "Fed"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1594,7 +1593,7 @@ msgstr "Fed"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Border color"
-msgstr "Kantfarve"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1604,7 +1603,7 @@ msgstr "Kantfarve"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Border"
-msgstr "Kant"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1614,7 +1613,7 @@ msgstr "Kant"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Bottom"
-msgstr "Bund"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1624,7 +1623,7 @@ msgstr "Bund"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Bullet list"
-msgstr "Punktopstilling"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1634,7 +1633,7 @@ msgstr "Punktopstilling"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Caption"
-msgstr "Overskrift"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1644,7 +1643,7 @@ msgstr "Overskrift"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Cell padding"
-msgstr "Cellefyld"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1654,7 +1653,7 @@ msgstr "Cellefyld"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Cell properties"
-msgstr "Celleegenskaber"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1664,7 +1663,7 @@ msgstr "Celleegenskaber"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Cell spacing"
-msgstr "Celleafstand"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1674,7 +1673,7 @@ msgstr "Celleafstand"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Cell type"
-msgstr "Celletype"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1684,7 +1683,7 @@ msgstr "Celletype"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Cell"
-msgstr "Celle"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1694,7 +1693,7 @@ msgstr "Celle"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Center"
-msgstr "Centrum"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1704,7 +1703,7 @@ msgstr "Centrum"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Circle"
-msgstr "Cirkel"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1714,7 +1713,7 @@ msgstr "Cirkel"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Clear formatting"
-msgstr "Klar formatering"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1742,7 +1741,7 @@ msgstr "Klar formatering"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Code block"
-msgstr "Kodeblok"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -1754,7 +1753,7 @@ msgstr "Kodeblok"
 #: common/static/bundles/StaticTabBlockStudio.js
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Code"
-msgstr "Kode"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1764,7 +1763,7 @@ msgstr "Kode"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Color"
-msgstr "Farve"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1774,7 +1773,7 @@ msgstr "Farve"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Cols"
-msgstr "Kolonner"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1784,7 +1783,7 @@ msgstr "Kolonner"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Column group"
-msgstr "Kolonnegruppe"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1794,7 +1793,7 @@ msgstr "Kolonnegruppe"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Column"
-msgstr "Kolonne"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1804,7 +1803,7 @@ msgstr "Kolonne"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Constrain proportions"
-msgstr "Tvinge proportioner"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1814,7 +1813,7 @@ msgstr "Tvinge proportioner"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Copy row"
-msgstr "Kopier række"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1824,7 +1823,7 @@ msgstr "Kopier række"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Copy"
-msgstr "Kopier"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1834,7 +1833,7 @@ msgstr "Kopier"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Could not find the specified string."
-msgstr "Kunne ikke finde den angivne streng."
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1844,7 +1843,7 @@ msgstr "Kunne ikke finde den angivne streng."
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Custom color"
-msgstr "Tilpasset farve"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1854,7 +1853,7 @@ msgstr "Tilpasset farve"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Custom..."
-msgstr "Tilpasse..."
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1864,7 +1863,7 @@ msgstr "Tilpasse..."
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Cut row"
-msgstr "Klip række"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1874,7 +1873,7 @@ msgstr "Klip række"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Cut"
-msgstr "Klip"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1884,7 +1883,7 @@ msgstr "Klip"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Decrease indent"
-msgstr "Formindske indrykning"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1894,7 +1893,7 @@ msgstr "Formindske indrykning"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Default"
-msgstr "Default"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1904,7 +1903,7 @@ msgstr "Default"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Delete column"
-msgstr "Slet kolonne"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1914,7 +1913,7 @@ msgstr "Slet kolonne"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Delete row"
-msgstr "Slet række"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1924,7 +1923,7 @@ msgstr "Slet række"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Delete table"
-msgstr "Slet tabel"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -1937,7 +1936,7 @@ msgstr "Slet tabel"
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Description"
-msgstr "Beskrivelse"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1947,7 +1946,7 @@ msgstr "Beskrivelse"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Dimensions"
-msgstr "Dimensioner"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1957,7 +1956,7 @@ msgstr "Dimensioner"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Disc"
-msgstr "Disk"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1967,7 +1966,7 @@ msgstr "Disk"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Div"
-msgstr "Div"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1977,7 +1976,7 @@ msgstr "Div"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Document properties"
-msgstr "Dokumentegenskaber"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1987,7 +1986,7 @@ msgstr "Dokumentegenskaber"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Edit HTML"
-msgstr "Rediger HTML"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -2007,7 +2006,7 @@ msgstr "Rediger HTML"
 #: cms/templates/js/xblock-string-field-editor.underscore
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Edit"
-msgstr "Rediger"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2017,7 +2016,7 @@ msgstr "Rediger"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Embed"
-msgstr "Indlejre"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2027,7 +2026,7 @@ msgstr "Indlejre"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Emoticons"
-msgstr "Smileys"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2037,7 +2036,7 @@ msgstr "Smileys"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Encoding"
-msgstr "Kode"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2047,7 +2046,7 @@ msgstr "Kode"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "File"
-msgstr "Fil"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2057,7 +2056,7 @@ msgstr "Fil"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Find and replace"
-msgstr "Søg og erstat"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2067,7 +2066,7 @@ msgstr "Søg og erstat"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Find next"
-msgstr "Søg næste"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2077,7 +2076,7 @@ msgstr "Søg næste"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Find previous"
-msgstr "Søg forrige"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2087,7 +2086,7 @@ msgstr "Søg forrige"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Find"
-msgstr "Søg"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2097,7 +2096,7 @@ msgstr "Søg"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Finish"
-msgstr "Afslut"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2107,7 +2106,7 @@ msgstr "Afslut"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Font Family"
-msgstr "Fontfamilie"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2117,7 +2116,7 @@ msgstr "Fontfamilie"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Font Sizes"
-msgstr "Fontstørrelser"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2127,7 +2126,7 @@ msgstr "Fontstørrelser"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Footer"
-msgstr "Sidefod"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2137,7 +2136,7 @@ msgstr "Sidefod"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Format"
-msgstr "Formater"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2147,7 +2146,7 @@ msgstr "Formater"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Formats"
-msgstr "Formatter"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -2159,7 +2158,7 @@ msgstr "Formatter"
 #: common/static/bundles/StaticTabBlockStudio.js
 #: common/static/common/templates/image-modal.underscore
 msgid "Fullscreen"
-msgstr "Fuldskærm"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2169,7 +2168,7 @@ msgstr "Fuldskærm"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "General"
-msgstr "Generelt"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2179,7 +2178,7 @@ msgstr "Generelt"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "H Align"
-msgstr "H-juster"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2189,7 +2188,7 @@ msgstr "H-juster"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Header 1"
-msgstr "Header 1"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2199,7 +2198,7 @@ msgstr "Header 1"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Header 2"
-msgstr "Header 2"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2209,7 +2208,7 @@ msgstr "Header 2"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Header 3"
-msgstr "Header 3"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2219,7 +2218,7 @@ msgstr "Header 3"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Header 4"
-msgstr "Header 4"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2229,7 +2228,7 @@ msgstr "Header 4"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Header 5"
-msgstr "Header 5"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2239,7 +2238,7 @@ msgstr "Header 5"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Header 6"
-msgstr "Header 6"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2249,7 +2248,7 @@ msgstr "Header 6"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Header cell"
-msgstr "Header-celle"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2261,7 +2260,7 @@ msgstr "Header-celle"
 #: common/static/bundles/ProblemBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Header"
-msgstr "Header"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2271,7 +2270,7 @@ msgstr "Header"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Headers"
-msgstr "Headere"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2281,7 +2280,7 @@ msgstr "Headere"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Heading 1"
-msgstr "Overskrift 1"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2291,7 +2290,7 @@ msgstr "Overskrift 1"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Heading 2"
-msgstr "Overskrift 2"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2301,7 +2300,7 @@ msgstr "Overskrift 2"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Headings"
-msgstr "Overskrifter"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2311,7 +2310,7 @@ msgstr "Overskrifter"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Height"
-msgstr "Højde"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2321,7 +2320,7 @@ msgstr "Højde"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Horizontal line"
-msgstr "Vandret linje"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2331,7 +2330,7 @@ msgstr "Vandret linje"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Horizontal space"
-msgstr "Vandret plads"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2341,7 +2340,7 @@ msgstr "Vandret plads"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "HTML source code"
-msgstr "HTML-kildekode"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2351,7 +2350,7 @@ msgstr "HTML-kildekode"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Ignore all"
-msgstr "Ignorer alt"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2361,7 +2360,7 @@ msgstr "Ignorer alt"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Ignore"
-msgstr "Ignorer"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2371,7 +2370,7 @@ msgstr "Ignorer"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Image description"
-msgstr "Billedbeskrivelse"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2381,7 +2380,7 @@ msgstr "Billedbeskrivelse"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Increase indent"
-msgstr "Forøge indrykning"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2391,7 +2390,7 @@ msgstr "Forøge indrykning"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Inline"
-msgstr "Inline"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2401,7 +2400,7 @@ msgstr "Inline"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert column after"
-msgstr "Indsæt kolonne efter"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2411,7 +2410,7 @@ msgstr "Indsæt kolonne efter"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert column before"
-msgstr "Indsæt kolonne før"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2421,7 +2420,7 @@ msgstr "Indsæt kolonne før"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert date/time"
-msgstr "Indsæt dato/tid"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2431,7 +2430,7 @@ msgstr "Indsæt dato/tid"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert image"
-msgstr "Indsæt billede"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2441,7 +2440,7 @@ msgstr "Indsæt billede"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert link"
-msgstr "Indsæt link"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2451,7 +2450,7 @@ msgstr "Indsæt link"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert row after"
-msgstr "Indsæt række efter"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2461,7 +2460,7 @@ msgstr "Indsæt række efter"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert row before"
-msgstr "Indsæt række før"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2471,7 +2470,7 @@ msgstr "Indsæt række før"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert table"
-msgstr "Indsæt tabel"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2481,7 +2480,7 @@ msgstr "Indsæt tabel"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert template"
-msgstr "Indsæt skabelon"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2491,7 +2490,7 @@ msgstr "Indsæt skabelon"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert video"
-msgstr "Indsæt video"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2501,7 +2500,7 @@ msgstr "Indsæt video"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert"
-msgstr "Indsæt"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2511,7 +2510,7 @@ msgstr "Indsæt"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert/edit image"
-msgstr "Indsæt/rediger billede"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2521,7 +2520,7 @@ msgstr "Indsæt/rediger billede"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert/edit link"
-msgstr "Indsæt/rediger link"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2531,7 +2530,7 @@ msgstr "Indsæt/rediger link"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Insert/edit video"
-msgstr "Indsæt/rediger video"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2541,7 +2540,7 @@ msgstr "Indsæt/rediger video"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Italic"
-msgstr "Kursiv"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2551,7 +2550,7 @@ msgstr "Kursiv"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Justify"
-msgstr "Justere"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2561,7 +2560,7 @@ msgstr "Justere"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Keywords"
-msgstr "Søgeord"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2571,7 +2570,7 @@ msgstr "Søgeord"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Left to right"
-msgstr "Venstre til højre"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2581,7 +2580,7 @@ msgstr "Venstre til højre"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Left"
-msgstr "Venstre"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2591,7 +2590,7 @@ msgstr "Venstre"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Lower Alpha"
-msgstr "Sænket Alpha"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2601,7 +2600,7 @@ msgstr "Sænket Alpha"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Lower Greek"
-msgstr "Sænket Greek"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2611,7 +2610,7 @@ msgstr "Sænket Greek"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Lower Roman"
-msgstr "Sænket Roman"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2621,7 +2620,7 @@ msgstr "Sænket Roman"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Match case"
-msgstr "Fuldstændig match"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2631,7 +2630,7 @@ msgstr "Fuldstændig match"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Merge cells"
-msgstr "Flet celler"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2641,7 +2640,7 @@ msgstr "Flet celler"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Middle"
-msgstr "Middel"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2651,7 +2650,7 @@ msgstr "Middel"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "New document"
-msgstr "Nyt dokument"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2661,7 +2660,7 @@ msgstr "Nyt dokument"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "New window"
-msgstr "Nyt vindue"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -2678,7 +2677,7 @@ msgstr "Nyt vindue"
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Next"
-msgstr "Næste"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2688,7 +2687,7 @@ msgstr "Næste"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "No color"
-msgstr "Ingen farve"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2698,7 +2697,7 @@ msgstr "Ingen farve"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Nonbreaking space"
-msgstr "Fast mellemrum"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2708,7 +2707,7 @@ msgstr "Fast mellemrum"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Numbered list"
-msgstr "Nummereret liste"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2718,7 +2717,7 @@ msgstr "Nummereret liste"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Page break"
-msgstr "Sideskift"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2728,7 +2727,7 @@ msgstr "Sideskift"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Paste as text"
-msgstr "Kopier som tekst"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2741,8 +2740,6 @@ msgid ""
 "Paste is now in plain text mode. Contents will now be pasted as plain text "
 "until you toggle this option off."
 msgstr ""
-"Indsæt står nu med klar tekst-status. Indholdet vil blive indsat i klar "
-"tekst, indtil du slår denne facilitet fra."
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2752,7 +2749,7 @@ msgstr ""
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Paste row after"
-msgstr "Indsæt række efter"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2762,7 +2759,7 @@ msgstr "Indsæt række efter"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Paste row before"
-msgstr "Indsæt række før"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2772,7 +2769,7 @@ msgstr "Indsæt række før"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Paste your embed code below:"
-msgstr "Indsæt din indlejrede kode nedenfor:"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2782,7 +2779,7 @@ msgstr "Indsæt din indlejrede kode nedenfor:"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Paste"
-msgstr "Indsæt"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2792,7 +2789,7 @@ msgstr "Indsæt"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Poster"
-msgstr "Plakat"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2802,7 +2799,7 @@ msgstr "Plakat"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Pre"
-msgstr "Præ"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2812,7 +2809,7 @@ msgstr "Præ"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Prev"
-msgstr "Tidl"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -2824,7 +2821,7 @@ msgstr "Tidl"
 #: common/static/bundles/StaticTabBlockStudio.js lms/static/js/customwmd.js
 #: cms/templates/js/asset-library.underscore
 msgid "Preview"
-msgstr "Forhåndsvisning"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2834,7 +2831,7 @@ msgstr "Forhåndsvisning"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Print"
-msgstr "Udskriv"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2844,7 +2841,7 @@ msgstr "Udskriv"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Redo"
-msgstr "Fortryd"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2854,7 +2851,7 @@ msgstr "Fortryd"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Remove link"
-msgstr "Fjern link"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2864,7 +2861,7 @@ msgstr "Fjern link"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Replace all"
-msgstr "Erstat alt"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2874,7 +2871,7 @@ msgstr "Erstat alt"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Replace with"
-msgstr "Erstat med"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -2888,7 +2885,7 @@ msgstr "Erstat med"
 #: cms/templates/js/video-transcripts.underscore
 #: cms/templates/js/video/metadata-translations-item.underscore
 msgid "Replace"
-msgstr "Erstat"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2898,7 +2895,7 @@ msgstr "Erstat"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Restore last draft"
-msgstr "Gendan seneste udkast"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2911,8 +2908,6 @@ msgid ""
 "Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press "
 "ALT-0 for help"
 msgstr ""
-"Rich Text Area. Tryk ALT-F9 for menu. Tryk ALT-F10 for værktøjslinje. Tryk "
-"ALT-0 for hjælp"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2922,7 +2917,7 @@ msgstr ""
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Right to left"
-msgstr "Højre til venstre"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2932,7 +2927,7 @@ msgstr "Højre til venstre"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Right"
-msgstr "Højre"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2942,7 +2937,7 @@ msgstr "Højre"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Robots"
-msgstr "Robotter"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2952,7 +2947,7 @@ msgstr "Robotter"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Row group"
-msgstr "Rækkegruppe"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2962,7 +2957,7 @@ msgstr "Rækkegruppe"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Row properties"
-msgstr "Rækkeegenskaber"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2972,7 +2967,7 @@ msgstr "Rækkeegenskaber"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Row type"
-msgstr "Rækketype"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2982,7 +2977,7 @@ msgstr "Rækketype"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Row"
-msgstr "Række"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2992,7 +2987,7 @@ msgstr "Række"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Rows"
-msgstr "Rækker"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3002,7 +2997,7 @@ msgstr "Rækker"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Scope"
-msgstr "Omgang"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3012,7 +3007,7 @@ msgstr "Omgang"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Select all"
-msgstr "Vælg alt"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3022,7 +3017,7 @@ msgstr "Vælg alt"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Show blocks"
-msgstr "Vis blokke"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3032,7 +3027,7 @@ msgstr "Vis blokke"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Show invisible characters"
-msgstr "Vis usynlige tegn"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3042,7 +3037,7 @@ msgstr "Vis usynlige tegn"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Source code"
-msgstr "Kildekode"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3052,7 +3047,7 @@ msgstr "Kildekode"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Source"
-msgstr "Kilde"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3062,7 +3057,7 @@ msgstr "Kilde"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Special character"
-msgstr "Specialtegn"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3072,7 +3067,7 @@ msgstr "Specialtegn"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Spellcheck"
-msgstr "Stavekontrol"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3082,7 +3077,7 @@ msgstr "Stavekontrol"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Split cell"
-msgstr "Del celle"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3092,7 +3087,7 @@ msgstr "Del celle"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Square"
-msgstr "Kvadrat"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3102,7 +3097,7 @@ msgstr "Kvadrat"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Start search"
-msgstr "Start søgning"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3112,7 +3107,7 @@ msgstr "Start søgning"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Strikethrough"
-msgstr "Gennemstregning"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3122,7 +3117,7 @@ msgstr "Gennemstregning"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Style"
-msgstr "Stil"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3132,7 +3127,7 @@ msgstr "Stil"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Subscript"
-msgstr "Sænket"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3142,7 +3137,7 @@ msgstr "Sænket"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Superscript"
-msgstr "Hævet"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3152,7 +3147,7 @@ msgstr "Hævet"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Table properties"
-msgstr "Tabelegenskaber"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3162,7 +3157,7 @@ msgstr "Tabelegenskaber"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Table"
-msgstr "Tabel"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3172,7 +3167,7 @@ msgstr "Tabel"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Target"
-msgstr "Mål"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3182,7 +3177,7 @@ msgstr "Mål"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Templates"
-msgstr "Skabeloner"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3192,7 +3187,7 @@ msgstr "Skabeloner"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Text color"
-msgstr "Tekstfarve"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3202,7 +3197,7 @@ msgstr "Tekstfarve"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Text to display"
-msgstr "Tekst til visning"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3215,8 +3210,6 @@ msgid ""
 "The URL you entered seems to be an email address. Do you want to add the "
 "required mailto: prefix?"
 msgstr ""
-"Den URL, du har angivet, ser ud til at være en e-mailadresse. Ønsker du at "
-"tilføje den krævede adressat: præfix?"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3229,8 +3222,6 @@ msgid ""
 "The URL you entered seems to be an external link. Do you want to add the "
 "required http:// prefix?"
 msgstr ""
-"Den URL, du har angivet, ser ud til at være et eksternt link. Ønsker du at "
-"tilføje det krævede http:// præfix?"
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -3244,7 +3235,7 @@ msgstr ""
 #: cms/templates/js/signatory-details.underscore
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Title"
-msgstr "Titel"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3254,7 +3245,7 @@ msgstr "Titel"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Tools"
-msgstr "Værktøjer"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3264,7 +3255,7 @@ msgstr "Værktøjer"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Top"
-msgstr "Top"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3274,7 +3265,7 @@ msgstr "Top"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Underline"
-msgstr "Understrege"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3284,7 +3275,7 @@ msgstr "Understrege"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Undo"
-msgstr "Fortryde"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3294,7 +3285,7 @@ msgstr "Fortryde"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Upper Alpha"
-msgstr "Hævet Alpha"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3304,7 +3295,7 @@ msgstr "Hævet Alpha"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Upper Roman"
-msgstr "Hævet Roman"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3314,7 +3305,7 @@ msgstr "Hævet Roman"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Url"
-msgstr "Url"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3324,7 +3315,7 @@ msgstr "Url"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "V Align"
-msgstr "V-justere"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3334,7 +3325,7 @@ msgstr "V-justere"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Vertical space"
-msgstr "Lodret plads"
+msgstr ""
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -3347,7 +3338,7 @@ msgstr "Lodret plads"
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 #: openedx/features/course_search/static/course_search/templates/dashboard_search_item.underscore
 msgid "View"
-msgstr "Vis"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3357,7 +3348,7 @@ msgstr "Vis"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Visual aids"
-msgstr "Visuelle hjælpemidler"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3367,7 +3358,7 @@ msgstr "Visuelle hjælpemidler"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Whole words"
-msgstr "Hele ord"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3377,7 +3368,7 @@ msgstr "Hele ord"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Width"
-msgstr "Bredde"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3387,7 +3378,7 @@ msgstr "Bredde"
 #: common/static/bundles/HtmlBlockStudio.js
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "Words: {0}"
-msgstr "Ord: {0}"
+msgstr ""
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3398,7 +3389,6 @@ msgstr "Ord: {0}"
 #: common/static/bundles/StaticTabBlockStudio.js
 msgid "You have unsaved changes are you sure you want to navigate away?"
 msgstr ""
-"Du har ikke-gemte ændringer. Er du sikker på, at du ønsker at navigere væk?"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3411,8 +3401,6 @@ msgid ""
 "Your browser doesn't support direct access to the clipboard. Please use the "
 "Ctrl+X/C/V keyboard shortcuts instead."
 msgstr ""
-"Din browser understøtter ikke direkte adgang til udklipsholderen. Brug i "
-"stedet tastaturgenvejen Ctrl+X/C/V."
 
 #. Translators: this is a toolbar button tooltip from the raw HTML editor
 #. displayed in the browser when a user needs to edit HTML
@@ -3431,8 +3419,6 @@ msgid ""
 "\n"
 "Click Cancel to return to this page without sending your information."
 msgstr ""
-"Klik OK for at få sendt dit brugernavn og e-mailadresse til en 3.-partsapplikation.\n"
-"Klik Annuller for at vende tilbage til denne side uden at sende dine oplysninger."
 
 #: common/lib/xmodule/xmodule/js/src/lti/lti.js
 #: common/static/bundles/LTIBlockPreview.js common/static/bundles/LTIModule.js
@@ -3441,8 +3427,6 @@ msgid ""
 "\n"
 "Click Cancel to return to this page without sending your information."
 msgstr ""
-"Klik OK for at få sendt dit brugernavn til en 3.-partsapplikation.\n"
-"Klik Annuller for at vende tilbage til denne side uden at sende dine oplysninger."
 
 #: common/lib/xmodule/xmodule/js/src/lti/lti.js
 #: common/static/bundles/LTIBlockPreview.js common/static/bundles/LTIModule.js
@@ -3451,28 +3435,26 @@ msgid ""
 "\n"
 "Click Cancel to return to this page without sending your information."
 msgstr ""
-"Klik OK for at få sendt din e-mailadresse til en 3.-partsapplikation.\n"
-"Klik Annuller for at vende tilbage til denne side uden at sende dine oplysninger."
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "incorrect"
-msgstr "Forkert"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "correct"
-msgstr "rigtigt"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "answer"
-msgstr "svar"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "Short explanation"
-msgstr "Kort forklaring"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 #: common/static/bundles/ProblemBlockStudio.js
@@ -3481,13 +3463,11 @@ msgid ""
 "\n"
 "Proceed to the Advanced Editor and convert this problem to XML?"
 msgstr ""
-"Hvis du bruger Advanced Editor, vil problemet blive konverteret til XML, og du vil ikke kunne returnere til Simple Editor Interface.\n"
-"Fortsæt til Advanced Editor og konverter dette problem til XML?"
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 #: common/static/bundles/ProblemBlockStudio.js
 msgid "Explanation"
-msgstr "Forklaring"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/sequence/display.js
 #: common/static/bundles/SequenceBlockPreview.js
@@ -3495,56 +3475,54 @@ msgid ""
 "Sequence error! Cannot navigate to %(tab_name)s in the current "
 "SequenceModule. Please contact the course staff."
 msgstr ""
-"Sekvensfejl! Kan ikke navigere til %(tab_name)s i det aktuelle sekvensmodul."
-" Kontakt venligst kursusadministrationen."
 
 #: common/lib/xmodule/xmodule/js/src/sequence/display.js
 #: common/static/bundles/SequenceBlockPreview.js
 #: common/static/bundles/VerticalStudentView.js
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
 msgid "Bookmarked"
-msgstr "Bogmærke"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/09_play_pause_control.js
 #: common/lib/xmodule/xmodule/js/src/video/09_play_skip_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Play"
-msgstr "Play"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/09_play_pause_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Pause"
-msgstr "Pause"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Mute"
-msgstr "Lydløs"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Unmute"
-msgstr "Ikke-lydløs"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/04_video_full_screen.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Exit full browser"
-msgstr "Forlad fuld browser"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/04_video_full_screen.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Fill browser"
-msgstr "Fyld browseren"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Speed"
-msgstr "Hastighed"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/08_video_auto_advance_control.js
@@ -3556,74 +3534,74 @@ msgstr ""
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Volume"
-msgstr "Volumen"
+msgstr ""
 
 #. Translators: Volume level equals 0%.
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Muted"
-msgstr "Dæmpet"
+msgstr ""
 
 #. Translators: Volume level in range ]0,20]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Very low"
-msgstr "Meget lav"
+msgstr ""
 
 #. Translators: Volume level in range ]20,40]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Low"
-msgstr "Lav"
+msgstr ""
 
 #. Translators: Volume level in range ]40,60]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Average"
-msgstr "Gennemsnit"
+msgstr ""
 
 #. Translators: Volume level in range ]60,80]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Loud"
-msgstr "Høj"
+msgstr ""
 
 #. Translators: Volume level in range ]80,99]%
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Very loud"
-msgstr "Meget høj"
+msgstr ""
 
 #. Translators: Volume level equals 100%.
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Maximum"
-msgstr "Maksimum"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "This browser cannot play .mp4, .ogg, or .webm files."
-msgstr "Denne browser kan ikke afspille .mp4, .ogg og .webm files."
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Try using a different browser, such as Google Chrome."
-msgstr "Prøv at bruge en anden browser som f.eks. Google Chrome."
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "High Definition"
-msgstr "High Definition"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "off"
-msgstr "off"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "on"
-msgstr "on"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
@@ -3633,12 +3611,12 @@ msgstr ""
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Video ended"
-msgstr "Video slut"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Video position"
-msgstr "Videoposition"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoBlockPreview.js
@@ -3694,22 +3672,22 @@ msgstr ""
 #: common/lib/xmodule/xmodule/js/src/video/09_play_skip_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Skip"
-msgstr "Hop"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_poster.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Play video"
-msgstr "Afspil video"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_skip_control.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Do not show again"
-msgstr "Vis ikke igen"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Open language menu"
-msgstr "Åben sprogmenuen"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
@@ -3749,27 +3727,27 @@ msgstr ""
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Hide closed captions"
-msgstr "Skjul undertekster"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "(Caption will be displayed when you start playing the video.)"
-msgstr "(Undertekst vil blive vist, når du starter afspilningen af videoen.)"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Turn on closed captioning"
-msgstr "Slå undertekster til"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Turn on transcripts"
-msgstr "Slå udskrift til"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoBlockPreview.js
 msgid "Turn off transcripts"
-msgstr "Slå udskrift fra"
+msgstr ""
 
 #: common/static/bundles/CourseGoals.js
 #: openedx/features/course_experience/static/course_experience/js/CourseGoals.js
@@ -3991,7 +3969,7 @@ msgstr ""
 #: common/static/bundles/DemographicsCollectionModal.js
 #: lms/static/js/demographics_collection/Wizard.jsx
 msgid "next page"
-msgstr "næste side"
+msgstr ""
 
 #: common/static/bundles/EntitlementFactory.js
 #: common/static/bundles/ProgramDetailsFactory.js
@@ -4127,7 +4105,7 @@ msgstr ""
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Reset My Password"
-msgstr "Nulstil Min Adgangskode"
+msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
@@ -4229,7 +4207,7 @@ msgstr ""
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Course Name"
-msgstr "Kursus navn"
+msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
@@ -4247,7 +4225,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Subject"
-msgstr "Emne"
+msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
@@ -4258,7 +4236,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: lms/templates/student_account/account_settings.underscore
 msgid "Account Settings"
-msgstr "Kontoinstillinger"
+msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
@@ -4268,7 +4246,7 @@ msgstr ""
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Certificates"
-msgstr "Diplomer"
+msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
@@ -4304,7 +4282,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: cms/templates/js/asset-library.underscore
 msgid "Other"
-msgstr "Andet"
+msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
@@ -4323,7 +4301,7 @@ msgstr ""
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Details"
-msgstr "Detaljer"
+msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
@@ -4349,7 +4327,7 @@ msgstr ""
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/login.underscore
 msgid "Sign in"
-msgstr "Log ind"
+msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/templates/student_account/institution_register.underscore
@@ -4591,7 +4569,7 @@ msgstr ""
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmarks_list.js
 msgid "An error has occurred. Please try again."
-msgstr "Der opstod en fejl. Prøv venligst igen."
+msgstr ""
 
 #: common/static/bundles/VerticalStudentView.js
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
@@ -4605,7 +4583,7 @@ msgstr ""
 #: common/static/bundles/js/factories/xblock_validation.js
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Required field."
-msgstr "Nødvendigt felt."
+msgstr ""
 
 #: common/static/bundles/js/factories/container.js
 #: common/static/bundles/js/factories/edit_tabs.js
@@ -4614,7 +4592,7 @@ msgstr "Nødvendigt felt."
 #: common/static/bundles/js/factories/xblock_validation.js
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Please do not use any spaces in this field."
-msgstr "Brug venligst ikke mellemrum i dette felt."
+msgstr ""
 
 #: common/static/bundles/js/factories/container.js
 #: common/static/bundles/js/factories/edit_tabs.js
@@ -4623,7 +4601,7 @@ msgstr "Brug venligst ikke mellemrum i dette felt."
 #: common/static/bundles/js/factories/xblock_validation.js
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Please do not use any spaces or special characters in this field."
-msgstr "Brug venligst ikke mellemrum eller specialtegn i dette felt."
+msgstr ""
 
 #: common/static/bundles/js/factories/library.js
 #: common/static/common/js/components/views/paginated_view.js
@@ -4647,7 +4625,7 @@ msgstr ""
 
 #: common/static/common/js/discussion/utils.js
 msgid "Loading content"
-msgstr "Indlæser indhold"
+msgstr ""
 
 #: common/static/common/js/discussion/utils.js
 msgid "Your request could not be processed. Refresh the page and try again."
@@ -4656,7 +4634,7 @@ msgstr ""
 #: common/static/common/js/discussion/utils.js
 #: common/static/common/templates/discussion/templates.underscore
 msgid "…"
-msgstr "..."
+msgstr ""
 
 #: common/static/common/js/discussion/utils.js
 msgid "Some images in this post have been omitted"
@@ -4743,11 +4721,11 @@ msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_inline_view.js
 msgid "Show Discussion"
-msgstr "Vis diskussion"
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_inline_view.js
 msgid "Hide Discussion"
-msgstr "Skjul diskussion"
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_inline_view.js
 msgid "This discussion could not be loaded. Refresh the page and try again."
@@ -4759,7 +4737,7 @@ msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid "Loading more threads"
-msgstr "Indlæser flere tråde"
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid "Additional posts could not be loaded. Refresh the page and try again."
@@ -4767,7 +4745,7 @@ msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid "Current conversation"
-msgstr "Aktuel konversation"
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid "Loading posts list"
@@ -4814,7 +4792,7 @@ msgstr[1] ""
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Showing all responses"
-msgstr "Viser alle responser"
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Showing first response"
@@ -4824,7 +4802,7 @@ msgstr[1] ""
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Load all responses"
-msgstr "Indlæs alle responser."
+msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Load next {numResponses} responses"
@@ -4832,20 +4810,20 @@ msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Are you sure you want to delete this post?"
-msgstr "Er du sikker på, at du ønsker at slette denne post?"
+msgstr ""
 
 #: common/static/common/js/discussion/views/new_post_view.js
 msgid "Your post will be discarded."
-msgstr "Din post vil blive kasseret."
+msgstr ""
 
 #: common/static/common/js/discussion/views/response_comment_show_view.js
 #: common/static/common/templates/discussion/templates.underscore
 msgid "anonymous"
-msgstr "anonym"
+msgstr ""
 
 #: common/static/common/js/discussion/views/response_comment_view.js
 msgid "Are you sure you want to delete this comment?"
-msgstr "Er du sikker på, at du ønsker at slette denne kommentar?"
+msgstr ""
 
 #: common/static/common/js/discussion/views/response_comment_view.js
 msgid "This comment could not be deleted. Refresh the page and try again."
@@ -4853,63 +4831,63 @@ msgstr ""
 
 #: common/static/common/js/discussion/views/thread_response_view.js
 msgid "Are you sure you want to delete this response?"
-msgstr "Er du sikker på, at du ønsker at slette denne respons?"
+msgstr ""
 
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "The email address you've provided isn't formatted correctly."
-msgstr "Den e-mailadresse, du har angivet, er ikke korrekt formateret."
+msgstr ""
 
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "%(field)s must have at least %(count)d characters."
-msgstr "%(field)s skal have mindst %(count)d tegn."
+msgstr ""
 
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "%(field)s can only contain up to %(count)d characters."
-msgstr "%(field)s kan kun indeholde op til %(count)d tegn."
+msgstr ""
 
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "Please enter your %(field)s."
-msgstr "Skriv venligst din %(field)s."
+msgstr ""
 
 #: common/static/js/capa/drag_and_drop/base_image.js
 msgid "Drop target image"
-msgstr "Udelad målbillede"
+msgstr ""
 
 #: common/static/js/capa/drag_and_drop/draggable_events.js
 msgid "dragging out of slider"
-msgstr "trækker ud af skyder"
+msgstr ""
 
 #: common/static/js/capa/drag_and_drop/draggable_events.js
 msgid "dragging"
-msgstr "trækker"
+msgstr ""
 
 #: common/static/js/capa/drag_and_drop/draggable_events.js
 msgid "dropped in slider"
-msgstr "ramte skyder"
+msgstr ""
 
 #: common/static/js/capa/drag_and_drop/draggable_events.js
 msgid "dropped on target"
-msgstr "ramte målet"
+msgstr ""
 
 #. Translators: %s will be a time quantity, such as "4 minutes" or "1 day"
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
 msgid "%s ago"
-msgstr "For %s siden"
+msgstr ""
 
 #. Translators: %s will be a time quantity, such as "4 minutes" or "1 day"
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
 msgid "%s from now"
-msgstr "%s fra nu"
+msgstr ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "less than a minute"
-msgstr "mindre end et minut"
+msgstr ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about a minute"
-msgstr "omkring et minut"
+msgstr ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
@@ -4920,7 +4898,7 @@ msgstr[1] ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about an hour"
-msgstr "omkring en time"
+msgstr ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
@@ -4931,7 +4909,7 @@ msgstr[1] ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "a day"
-msgstr "en dag"
+msgstr ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
@@ -4942,7 +4920,7 @@ msgstr[1] ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about a month"
-msgstr "omkring en måned"
+msgstr ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
@@ -4953,7 +4931,7 @@ msgstr[1] ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about a year"
-msgstr "omkring et år"
+msgstr ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
@@ -4964,7 +4942,7 @@ msgstr[1] ""
 
 #: lms/djangoapps/support/static/support/js/views/certificates.js
 msgid "An unexpected error occurred.  Please try again."
-msgstr "Der er opstået en uventet fejl. Prøv venligst igen"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/js/views/enrollment.js
 msgid "Financial Assistance"
@@ -5002,7 +4980,7 @@ msgstr ""
 
 #: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "(Optional)"
-msgstr "(Frivillig)"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Remove file"
@@ -5014,131 +4992,126 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/collections/team.js
 msgid "last activity"
-msgstr "sidste aktivitet"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/collections/team.js
 msgid "open slots"
-msgstr "åbne tidsintervaller"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/collections/topic.js
 msgid "name"
-msgstr "navn"
+msgstr ""
 
 #. Translators: This refers to the number of teams (a count of how many teams
 #. there are)
 #: lms/djangoapps/teams/static/teams/js/collections/topic.js
 msgid "team count"
-msgstr "holdantal"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/teams_tab_factory.js
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Teams"
-msgstr "Hold"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/content-group-editor.underscore
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Create"
-msgstr "Opret"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "Update"
-msgstr "Opdater"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "Team Name (Required) *"
-msgstr "Holdnavn (påkrævet)*"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "A name that identifies your team (maximum 255 characters)."
-msgstr "Et navn, der identificerer dit hold (maximum 255 tegn)."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "Team Description (Required) *"
-msgstr "Holdnavn (påkrævet)*"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid ""
 "A short description of the team to help other learners understand the goals "
 "or direction of the team (maximum 300 characters)."
 msgstr ""
-"En kort beskrivelse af holdet for at hjælpe andre kursister med at forstå "
-"holdets mål eller retning (maksimum 300 tegn)."
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Language"
-msgstr "Sprog"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
 msgid ""
 "The language that team members primarily use to communicate with each other."
 msgstr ""
-"Det sprog, som holdmedlemmerne primært bruger til at kommunikere med "
-"hinanden."
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Country"
-msgstr "Land"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
 msgid "The country that team members primarily identify with."
-msgstr "Det land, som holdmedlemmerne primært identificerer sig med."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: lms/static/js/views/fields.js
 msgid "An error occurred. Please try again."
-msgstr "Der opstod en fejl. Prøv venligst igen."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "Check the highlighted fields below and try again."
-msgstr "Kontroller de fremhævede felter nedenfor og prøv igen."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "Enter team name."
-msgstr "Skriv holdnavn"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "Team name cannot have more than 255 characters."
-msgstr "Holdnavnet må ikke bestå af mere end 255 tegn."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "Enter team description."
-msgstr "Angiv holdbeskrivelse."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 msgid "Team description cannot have more than 300 characters."
-msgstr "Holdbeskrivelsen må ikke bestå af mere end 300 tegn."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid "An error occurred while removing the member from the team. Try again."
 msgstr ""
-"Der opstod en fejl under fjernelse af medlemmer fra holdet. Prøv igen."
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid "This team does not have any members."
-msgstr "Dette hold har ingen medlemmer."
+msgstr ""
 
 #. Translators: 'date' is a placeholder for a fuzzy,
 #. * relative timestamp (see: https://github.com/rmm5t/jquery-timeago)
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid "Joined %(date)s"
-msgstr "Tilmeldt %(date)s"
+msgstr ""
 
 #. Translators: 'date' is a placeholder for a fuzzy,
 #. * relative timestamp (see: https://github.com/rmm5t/jquery-timeago)
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid "Last Activity %(date)s"
-msgstr "Sidste aktivitet %(date)s"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid "Remove this team member?"
-msgstr "Skal dette holdmedlem fjernes?"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid ""
@@ -5148,7 +5121,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/instructor_tools.js
 msgid "Delete this team?"
-msgstr "Slet dette hold?"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/instructor_tools.js
 msgid ""
@@ -5167,13 +5140,13 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/my_teams.js
 msgid "You are not currently a member of any team."
-msgstr "Du er i øjeblikket ikke på noget hold."
+msgstr ""
 
 #. Translators: "and others" refers to fact that additional
 #. * members of a team exist that are not displayed.
 #: lms/djangoapps/teams/static/teams/js/views/team_card.js
 msgid "and others"
-msgstr "og andre"
+msgstr ""
 
 #. Translators: 'date' is a placeholder for a fuzzy,
 #. * relative timestamp (see: http://momentjs.com/)
@@ -5188,7 +5161,7 @@ msgstr ""
 #: lms/djangoapps/teams/static/teams/js/views/team_profile.js
 #: lms/djangoapps/teams/static/teams/js/views/team_profile_header_actions.js
 msgid "An error occurred. Try again."
-msgstr "Der opstod en fejl. Prøv igen."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/team_profile.js
 msgid "No assignments for team"
@@ -5196,7 +5169,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/team_profile.js
 msgid "Leave this team?"
-msgstr "Forlade dette hold?"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/team_profile.js
 msgid ""
@@ -5208,7 +5181,7 @@ msgstr ""
 #: lms/static/js/verify_student/views/reverify_view.js
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Confirm"
-msgstr "Bekræft"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/team_profile_header_actions.js
 msgid "You already belong to another team in this team set."
@@ -5216,7 +5189,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/team_profile_header_actions.js
 msgid "This team is full."
-msgstr "Dette hold er overtegnet."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/team_profile_header_actions.js
 msgid "Cannot join instructor managed team"
@@ -5230,7 +5203,7 @@ msgstr[1] ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams.js
 msgid "All teams"
-msgstr "Alle hold"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams.js
 msgid "Teams Pagination"
@@ -5238,7 +5211,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Topics"
-msgstr "Emner"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "My Teams"
@@ -5251,7 +5224,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Your request could not be completed. Reload the page and try again."
-msgstr "Din anmodning kunne ikke gennemføres. Genindlæs siden og prøv igen."
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
@@ -5259,50 +5232,41 @@ msgid ""
 " and try again. If the issue persists, click the Help tab to report the "
 "problem."
 msgstr ""
-"Din anmodning kunne ikke gennemføres pga. en serverfejl. Genindlæs siden og "
-"prøv igen. Hvis problemet fortsætter, klik på Hjælp for at indrapportere "
-"det."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Team Search"
-msgstr "Søg hold"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Create a New Team"
-msgstr "Opret et nyt hold"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
 "Create a new team if you can't find an existing team to join, or if you "
 "would like to learn with friends you know."
 msgstr ""
-"Opret et nyt hold, hvis du ikke kan finde et eksisterende hold, eller hvis "
-"du gerne vil lære sammen med venner, du kender."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 #: lms/djangoapps/teams/static/teams/templates/team-profile-header-actions.underscore
 msgid "Edit Team"
-msgstr "Rediger hold"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
 "If you make significant changes, make sure you notify members of the team "
 "before making these changes."
 msgstr ""
-"Hvis du laver signifikante ændringer, skal du sikre dig, at du informerer "
-"medlemmerne på holdet, inden du laver ændringerne."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Membership"
-msgstr "Medlemskab"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
 "You can remove members from this team, especially if they have not "
 "participated in the team's activity."
 msgstr ""
-"Du kan fjerne medlemmer fra dette hold, især hvis de ikke har deltaget i "
-"holdets aktiviteter."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Showing results for \"{searchString}\""
@@ -5310,7 +5274,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Search teams"
-msgstr "Søg hold"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
@@ -5332,7 +5296,7 @@ msgstr ""
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 #: lms/djangoapps/discussion/static/discussion/templates/fake-breadcrumbs.underscore
 msgid "All Topics"
-msgstr "Alle emner"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "The page \"{route}\" could not be found."
@@ -5354,7 +5318,7 @@ msgstr[1] ""
 
 #: lms/djangoapps/teams/static/teams/js/views/topic_card.js
 msgid "Topic"
-msgstr "Emne"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/topic_card.js
 msgid "View Teams in the {topic_name} Topic"
@@ -5367,10 +5331,6 @@ msgid ""
 "find a team to join, {create_span_start}create a new team in this "
 "topic{span_end}."
 msgstr ""
-"{browse_span_start}Se hold med andre emner{span_end} eller "
-"{search_span_start}søg hold{span_end} med dette emne. Hvis du stadig ikke "
-"har fundet et hold at tilmelde dig, {create_span_start}så opret et nyt hold "
-"med dette emne{span_end}."
 
 #: lms/djangoapps/teams/static/teams/js/views/topic_teams.js
 msgid ""
@@ -5379,11 +5339,11 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/topics.js
 msgid "All topics"
-msgstr "Alle emner"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Insert Hyperlink"
-msgstr "Indsæt hyperlink"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "e.g. 'http://google.com'"
@@ -5395,35 +5355,31 @@ msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "e.g. 'google'"
-msgstr "fx. 'google'"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Please provide a description of the link destination."
-msgstr "Venligst angiv en beskrivelse af link destinationen"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Insert Image (upload file or type URL)"
-msgstr "Indsæt billede (upload fil eller angiv URL)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid ""
 "Type in a URL or use the \"Choose File\" button to upload a file from your "
 "machine. (e.g. 'http://example.com/img/clouds.jpg')"
 msgstr ""
-"Angiv i en URL eller anvende \"Vælg fil\" knappen til at uploade en fil fra "
-"din computer. (Fx. 'http://example.com/img/clouds.jpg')"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Image Description"
-msgstr "Billedbeskrivelse"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid ""
 "Please describe this image or agree that it has no contextual value by "
 "checking the checkbox."
 msgstr ""
-"Venligst lav en beskrivelse af dette billede eller godkend at det ikke har "
-"en sammenhængende værdi. Dette gøres ved at tjekke checkbox'en. "
 
 #: lms/static/js/Markdown.Editor.js
 msgid ""
@@ -5443,7 +5399,7 @@ msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Markdown Editing Help"
-msgstr "Markdown-redigeringshjælp"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js cms/templates/js/asset-library.underscore
 msgid "URL"
@@ -5462,79 +5418,79 @@ msgstr[1] ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Bold (Ctrl+B)"
-msgstr "Fed (Ctrl+B)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Italic (Ctrl+I)"
-msgstr "Kursiv (Ctrl+I)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Hyperlink (Ctrl+L)"
-msgstr "Hyperlink (Ctrl+L)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Blockquote (Ctrl+Q)"
-msgstr "Blokcitat (Ctrl+Q)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Code Sample (Ctrl+K)"
-msgstr "Kodeprøve (Ctrl+K)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Image (Ctrl+G)"
-msgstr "Billede (Ctrl+G)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Numbered List (Ctrl+O)"
-msgstr "Nummereret liste (Ctrl+O)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Bulleted List (Ctrl+U)"
-msgstr "Punktopstilling (Ctrl+U)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Heading (Ctrl+H)"
-msgstr "Overskrift (Ctrl+H)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Horizontal Rule (Ctrl+R)"
-msgstr "Vandret skillelinje (Ctrl+R)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Undo (Ctrl+Z)"
-msgstr "Fortryd (Ctrl+Z)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Redo (Ctrl+Y)"
-msgstr "Gendan (Ctrl+Y)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Redo (Ctrl+Shift+Z)"
-msgstr "Gendan (Ctrl+Shift+Z)"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "strong text"
-msgstr "vigtig tekst"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "emphasized text"
-msgstr "fremhævet tekst"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "enter link description here"
-msgstr "indsæt beskrivelse af link her"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "enter code here"
-msgstr "indsæt kode her"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "List item"
-msgstr "List punkt"
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Heading"
-msgstr "Overskrift"
+msgstr ""
 
 #: lms/static/js/ajax-error.js
 msgid ""
@@ -5549,56 +5505,53 @@ msgstr ""
 
 #: lms/static/js/calculator.js
 msgid "Open Calculator"
-msgstr "Åbn lommeregner"
+msgstr ""
 
 #: lms/static/js/calculator.js
 msgid "Close Calculator"
-msgstr "Luk lommeregner"
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js
 msgid "All subsections"
-msgstr "Alle undersektioner"
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js
 msgid "All units"
-msgstr "Alle enheder"
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js lms/templates/ccx/schedule.underscore
 msgid "Click to change"
-msgstr "Klik for at ændre"
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js
 msgid "Select a chapter"
-msgstr "Vælg et kapitel"
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js
 msgid "Save changes"
-msgstr "Gem ændringer"
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js
 msgid "Please enter valid start date and time."
-msgstr "Angiv gyldig startdato og -tidspunkt."
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js
 msgid "Due date cannot be before start date."
-msgstr "Forfaldsdato kan ikke ligge før startdato."
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js
 msgid "Enter Due Date and Time"
-msgstr "Angiv forfaldsdato og -tidspunkt"
+msgstr ""
 
 #: lms/static/js/ccx/schedule.js
 msgid "Enter Start Date and Time"
-msgstr "Angiv startdato og -tidspunkt"
+msgstr ""
 
 #: lms/static/js/certificates/models/certificate_exception.js
 msgid ""
 "Student username/email field is required and can not be empty. Kindly fill "
 "in username/email and then press \"Add to Exception List\" button."
 msgstr ""
-"Brugernavn/email felt er påkrævet, og kan ikke være tomt. Udfyld "
-"brugernavn/email og tryk derefter på \"Tilføj til "
-"undtagelsesliste\"-knappen."
 
 #: lms/static/js/certificates/models/certificate_invalidation.js
 msgid ""
@@ -5608,11 +5561,11 @@ msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learners are successfully added to exception list"
-msgstr "kursister er blevet tilføjet på undtagelsesliste"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learner is successfully added to the exception list"
-msgstr "kursist er tilføjet til undtagelseslisten"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " records are not in correct format and not added to the exception list"
@@ -5628,7 +5581,7 @@ msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learner does not exist in LMS and not added to the exception list"
-msgstr "kursist findes ikke i LMS og ikke tilføjet til undtagelseslisten"
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learners are already white listed and not added to the exception list"
@@ -5665,7 +5618,7 @@ msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid "Uploaded file issues. Click on \"+\" to view."
-msgstr "Uploadede filemner. Klik på \"+\" for at se dem."
+msgstr ""
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
 msgid ""
@@ -5717,20 +5670,20 @@ msgstr ""
 
 #: lms/static/js/course_survey.js
 msgid "There has been an error processing your survey."
-msgstr "Der opstod en fejl med at udarbejde din oversigt."
+msgstr ""
 
 #: lms/static/js/courseware/credit_progress.js
 #: common/static/common/templates/discussion/templates.underscore
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
 msgid "More"
-msgstr "Flere"
+msgstr ""
 
 #: lms/static/js/courseware/credit_progress.js
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Less"
-msgstr "Mindre"
+msgstr ""
 
 #: lms/static/js/customwmd.js
 msgid "HTML preview of post"
@@ -5743,19 +5696,19 @@ msgstr ""
 
 #: lms/static/js/dashboard/donation.js
 msgid "Please enter a valid donation amount."
-msgstr "Angiv venligst et gyldigt donationsbeløb."
+msgstr ""
 
 #: lms/static/js/dashboard/donation.js
 msgid "Your donation could not be submitted."
-msgstr "Din donation kunne ikke sendes."
+msgstr ""
 
 #: lms/static/js/dashboard/legacy.js
 msgid "You will be refunded the amount you paid."
-msgstr "Du vil få refunderet det beløb, du har betalt."
+msgstr ""
 
 #: lms/static/js/dashboard/legacy.js
 msgid "You will not be refunded the amount you paid."
-msgstr "Du vil ikke få refunderet det beløb, du har betalt."
+msgstr ""
 
 #: lms/static/js/dashboard/legacy.js
 msgid ""
@@ -5784,8 +5737,6 @@ msgid ""
 "The refund deadline for this course has passed, so you will not receive a "
 "refund."
 msgstr ""
-"Fristen for refusion for dette kursus er overskredet, så du vil ikke modtage"
-" nogen refusion."
 
 #: lms/static/js/discovery/views/search_form.js
 #, javascript-format
@@ -5797,12 +5748,12 @@ msgstr[1] ""
 #: lms/static/js/discovery/views/search_form.js
 #, javascript-format
 msgid "We couldn't find any results for \"%s\"."
-msgstr "Der er ikke noget resultat for \"%s\"."
+msgstr ""
 
 #: lms/static/js/discovery/views/search_form.js
 #: openedx/features/course_search/static/course_search/templates/search_error.underscore
 msgid "There was an error, try searching again."
-msgstr "Der opstod en fejl. Prøv at søge igen."
+msgstr ""
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid "Not divided"
@@ -5828,7 +5779,7 @@ msgstr ""
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid "Cohorts"
-msgstr "Grupper"
+msgstr ""
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid ""
@@ -5863,7 +5814,7 @@ msgstr ""
 #: lms/static/js/groups/views/cohort_form.js
 #: lms/static/js/groups/views/cohorts.js
 msgid "We've encountered an error. Refresh your browser and then try again."
-msgstr "Der er opstået en fejl. Opdater din browser og prøv igen."
+msgstr ""
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 #: lms/static/js/edxnotes/views/search_box.js
@@ -5871,24 +5822,22 @@ msgid ""
 "An error has occurred. Make sure that you are connected to the Internet, and"
 " then try refreshing the page."
 msgstr ""
-"Der opstod en fejl. Tjek, at du har forbindelse til internettet og prøv så "
-"at opdatere siden."
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 msgid "Hide notes"
-msgstr "Skjul noter"
+msgstr ""
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 msgid "Notes visible"
-msgstr "Synlige noter"
+msgstr ""
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 msgid "Show notes"
-msgstr "Vis noter"
+msgstr ""
 
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 msgid "Notes hidden"
-msgstr "Noter skjult"
+msgstr ""
 
 #: lms/static/js/edxnotes/views/search_box.js
 msgid "Please enter a term in the {anchorStart} search field{anchorEnd}."
@@ -5896,15 +5845,15 @@ msgstr ""
 
 #: lms/static/js/edxnotes/views/tab_item.js
 msgid "Current tab"
-msgstr "Aktuel tab"
+msgstr ""
 
 #: lms/static/js/edxnotes/views/tabs/course_structure.js
 msgid "Location in Course"
-msgstr "Placering på kursus"
+msgstr ""
 
 #: lms/static/js/edxnotes/views/tabs/recent_activity.js
 msgid "Recent Activity"
-msgstr "Seneste aktivitet"
+msgstr ""
 
 #: lms/static/js/edxnotes/views/tabs/search_results.js
 msgid "No results found for \"{query_string}\". Please try searching again."
@@ -5913,7 +5862,7 @@ msgstr ""
 #: lms/static/js/edxnotes/views/tabs/search_results.js
 #: openedx/features/course_search/static/course_search/templates/dashboard_search_results.underscore
 msgid "Search Results"
-msgstr "Søgeresultater"
+msgstr ""
 
 #. Translators: this is a title shown before all Notes that have no associated
 #. tags. It is put within
@@ -5921,7 +5870,7 @@ msgstr "Søgeresultater"
 #. translated.
 #: lms/static/js/edxnotes/views/tabs/tags.js
 msgid "[no tags]"
-msgstr "[ingen mærker]"
+msgstr ""
 
 #. Translators: 'Tags' is the name of the view (noun) within the Student Notes
 #. page that shows all
@@ -5932,7 +5881,7 @@ msgstr "[ingen mærker]"
 #. in order to group similar notes together and help with search.
 #: lms/static/js/edxnotes/views/tabs/tags.js
 msgid "Tags"
-msgstr "Mærker"
+msgstr ""
 
 #: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
 msgid "Unable to submit application"
@@ -5941,20 +5890,20 @@ msgstr ""
 #: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
 #: lms/static/js/student_account/views/LoginView.js
 msgid "An error has occurred. Check your Internet connection and try again."
-msgstr "Der opstod en fejl. Tjek din internetforbindelse og prøv igen."
+msgstr ""
 
 #: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
 msgid "Choose one"
-msgstr "Vælg en"
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_editor.js
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Selected tab"
-msgstr "Valgt tab"
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Saved cohort"
-msgstr "Gemt studiegruppe"
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Error adding learners."
@@ -5962,7 +5911,7 @@ msgstr ""
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Enter a username or email."
-msgstr "Angiv brugernavn eller e-mailadresse."
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numUsersAdded} learner has been added to this cohort. "
@@ -6012,75 +5961,71 @@ msgstr[1] ""
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "View all errors"
-msgstr "Se alle fejl"
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_form.js
 msgid "You must specify a name for the cohort"
-msgstr "Du skal angive et navn på studiegruppen"
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_form.js
 msgid "You did not select a content group"
-msgstr "Du har ikke valgt en emnegruppe"
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_form.js
 msgid "The selected content group does not exist"
-msgstr "Den valgte emnegruppe findes ikke"
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_form.js
 msgid "The cohort cannot be saved"
-msgstr "Studiegruppen kan ikke gemmes"
+msgstr ""
 
 #: lms/static/js/groups/views/cohort_form.js
 msgid "The cohort cannot be added"
-msgstr "Studiegruppen kan ikke tilføjes"
+msgstr ""
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "You currently have no cohorts configured"
-msgstr "Du har i øjeblikket ikke konfigureret nogen studiegruppe"
+msgstr ""
 
 #: lms/static/js/groups/views/cohorts.js
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Add Cohort"
-msgstr "Tilføj studiegruppe"
+msgstr ""
 
 #: lms/static/js/groups/views/cohorts.js
 msgid ""
 "The {cohortGroupName} cohort has been created. You can manually add students"
 " to this cohort below."
 msgstr ""
-"Studiegruppen {cohortGroupName} er blevet oprettet. Du kan manuelt tilføje "
-"kursister til denne studiegruppe nedenfor."
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Assign students to cohorts by uploading a CSV file."
-msgstr "Tilknyt kursister til studiegrupper ved at uploade en csv-fil."
+msgstr ""
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Choose a .csv file"
-msgstr "Vælg en .csv-fil"
+msgstr ""
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Only properly formatted .csv files will be accepted."
-msgstr "Kun korrekt formaterede .csv-filer accepteres. "
+msgstr ""
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Upload File and Assign Students"
-msgstr "Upload fil og tilknyt kursister"
+msgstr ""
 
 #: lms/static/js/groups/views/cohorts.js
 msgid ""
 "Your file '{file}' has been uploaded. Allow a few minutes for processing."
 msgstr ""
-"Din fil '{file}' er blevet uploadet. Det tager et par minutter at "
-"gennemføre."
 
 #: lms/static/js/groups/views/course_cohort_settings_notification.js
 msgid "Cohorts Enabled"
-msgstr "Aktiverede studiegrupper"
+msgstr ""
 
 #: lms/static/js/groups/views/course_cohort_settings_notification.js
 msgid "Cohorts Disabled"
-msgstr "De-aktiverede studiegrupper"
+msgstr ""
 
 #: lms/static/js/groups/views/verified_track_settings_notification.js
 msgid ""
@@ -6105,38 +6050,37 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Allow students to generate certificates for this course?"
-msgstr "Tillad kursister at generere diplomer til dette kursus?"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Prevent students from generating certificates in this course?"
-msgstr "Forhindre kursister i at generere diplomer på dette kursus?"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Start generating certificates for all students in this course?"
-msgstr "Starte med at generere diplomer til alle kursister på dette kursus?"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Error while generating certificates. Please try again."
-msgstr "Der opstod en fejl under generering af diplomer. Prøv venligst igen."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Start regenerating certificates for students in this course?"
-msgstr "Starte på at regenerere diplomer til kursister på dette kursus?"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Error while regenerating certificates. Please try again."
 msgstr ""
-"Der opstod en fejl under regenerering af diplomer. Prøv venligst igen."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: lms/static/js/instructor_dashboard/data_download_2.js
 msgid "Loading data..."
-msgstr "Indlæser data..."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: lms/static/js/instructor_dashboard/data_download_2.js
 msgid "Error getting issued certificates list."
-msgstr "Der er opstået en fejl med at udgive liste over diplomer. "
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating anonymous IDs. Please try again."
@@ -6146,57 +6090,46 @@ msgstr ""
 #: lms/static/js/instructor_dashboard/data_download_2.js
 msgid "Error generating proctored exam results. Please try again."
 msgstr ""
-"Der er opstået en fejl med at generere eksamensresultater. Prøv venligst "
-"igen."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: lms/static/js/instructor_dashboard/data_download_2.js
 msgid "Error generating survey results. Please try again."
 msgstr ""
-"Der er opstået en fejl med at generere undersøgelsesresultater. Prøv "
-"venligst igen."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: lms/static/js/instructor_dashboard/data_download_2.js
 msgid "Error generating student profile information. Please try again."
 msgstr ""
-"Der er opstået en fejl med at generere profilinformationer om kursister. "
-"Prøv venligst igen."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmarks_list.js
 #: cms/templates/js/move-xblock-modal.underscore
 #: openedx/features/course_search/static/course_search/templates/search_loading.underscore
 msgid "Loading"
-msgstr "Indlæser"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error getting student list."
-msgstr "Der er opstået en fejl med at få liste over kursister."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: lms/static/js/instructor_dashboard/data_download_2.js
 msgid "Error generating list of students who may enroll. Please try again."
 msgstr ""
-"Der er opstået en fejl med at generere en liste over kursister, som måske "
-"vil tilmelde sig. Prøv venligst igen."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error retrieving grading configuration."
-msgstr "Der er opstået en fejl med at finde bedømmelseskonfiguration."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: lms/static/js/instructor_dashboard/data_download_2.js
 msgid "Error generating grades. Please try again."
 msgstr ""
-"Der er opstået en fejl med at generere karakterer. Prøv venligst igen."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: lms/static/js/instructor_dashboard/data_download_2.js
 msgid "Error generating problem grade report. Please try again."
 msgstr ""
-"Der er opstået en fejl med at generere en rapport over problematiske "
-"karakterer. Prøv venligst igen."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: lms/static/js/instructor_dashboard/data_download_2.js
@@ -6208,24 +6141,22 @@ msgid ""
 "There was a problem creating the report. Select \"Create Executive Summary\""
 " to try again."
 msgstr ""
-"Der opstod et problem med at lave rapporten. Vælg \"Lav overordnet resumé\" "
-"for at prøve igen."
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Enter the enrollment code."
-msgstr "Angiv tilmeldingskode."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Cancel enrollment code"
-msgstr "Annuller tilmeldingskode"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Restore enrollment code"
-msgstr "Gendan tilmeldingskode"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Mark enrollment code as unused"
-msgstr "Markér tilmeldingskode som ubrugt"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/static/js/student_account/views/account_settings_factory.js
@@ -6236,17 +6167,17 @@ msgstr "Markér tilmeldingskode som ubrugt"
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Username"
-msgstr "Brugernavn"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
 msgid "Email"
-msgstr "Mail"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Revoke access"
-msgstr "Ophæv adgang"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Group"
@@ -6254,11 +6185,11 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Enter username or email"
-msgstr "Skriv brugernavn eller email"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Please enter a username or email."
-msgstr "Skriv brugernavn eller e-mail"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "This role requires a divided discussions scheme."
@@ -6266,7 +6197,7 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Error changing user's permissions."
-msgstr "Der er opstået en fejl med at ændre en brugers tilladelser."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid ""
@@ -6281,42 +6212,41 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Error: You cannot remove yourself from the Instructor group!"
-msgstr "Fejl: Du kan ikke fjerne dig selv fra instruktørgruppen!"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Errors"
-msgstr "Fejl"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "The following errors were generated:"
-msgstr "Der opstod følgende fejl:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Warnings"
-msgstr "Advarsler"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "The following warnings were generated:"
-msgstr "Der blev genereret følgende advarsler:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/static/js/views/fields.js
 msgid "Success"
-msgstr "Succes"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "All accounts were created successfully."
-msgstr "Alle konti er blevet oprettet."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Error adding/removing users as beta testers."
 msgstr ""
-"Der er opstået en fejl med at tilføje/fjerne brugere som beta-testere."
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "These users were successfully added as beta testers:"
-msgstr "Disse brugere blev oprettet som beta-testere:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid ""
@@ -6327,50 +6257,48 @@ msgstr ""
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "These users were successfully removed as beta testers:"
-msgstr "Disse brugere blev fjernet som beta-testere:"
+msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "These users were not added as beta testers:"
-msgstr "Disse brugere blev ikke tilføjet som beta-testere:"
+msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "These users were not removed as beta testers:"
-msgstr "Disse brugere blev ikke fjernet som beta-testere:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "Users must create and activate their account before they can be promoted to "
 "beta tester."
 msgstr ""
-"Brugere skal oprette og aktivere deres konto, før de kan blive forfremmet "
-"til beta-tester."
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Could not find users associated with the following identifiers:"
-msgstr "Kunne ikke finde brugere, der er knyttet til følgende id-koder:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Reason field should not be left blank."
-msgstr "Årsagsfelt må ikke være tomt."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Error enrolling/unenrolling users."
-msgstr "Der opstod en fejl med at tilmelde/afmelde brugere."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "The following email addresses and/or usernames are invalid:"
-msgstr "Følgende e-mailadresser og/eller brugernavne er ugyldige:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Successfully enrolled and sent email to the following users:"
-msgstr "Tilmeldt og mail sendt til følgende brugere:"
+msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Successfully enrolled the following users:"
-msgstr "Følgende brugere er tilmeldt:"
+msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
@@ -6378,15 +6306,11 @@ msgid ""
 "Successfully sent enrollment emails to the following users. They will be "
 "allowed to enroll once they register:"
 msgstr ""
-"Tilmeldelsesmails er sendt til følgende brugere. De vil få lov til at "
-"tilmelde sig, så snart de har registreret sig:"
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "These users will be allowed to enroll once they register:"
 msgstr ""
-"Disse brugere vil få lov til at tilmelde sig, så snart de har registreret "
-"sig."
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
@@ -6394,40 +6318,36 @@ msgid ""
 "Successfully sent enrollment emails to the following users. They will be "
 "enrolled once they register:"
 msgstr ""
-"Tilmeldelsesmails er sendt til følgende brugere: De vil blive tilmeldt, så "
-"snart de har registreret sig."
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "These users will be enrolled once they register:"
-msgstr "Disse brugere vil blive tilmeldt, så snart de har registreret sig."
+msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "Emails successfully sent. The following users are no longer enrolled in the "
 "course:"
-msgstr "Mails er sendt. Følgende brugere er ikke længere tilmeldt kurset:"
+msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "The following users are no longer enrolled in the course:"
-msgstr "Følgende brugere er ikke længere tilmeldt kurset:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "These users were not affiliated with the course so could not be unenrolled:"
 msgstr ""
-"Disse brugere var ikke tilknyttet kurset og kunne derfor ikke blive "
-"frameldt:"
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "Your message must have a subject."
-msgstr "Din besked skal have et emne."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "Your message cannot be blank."
-msgstr "Din besked må ikke være tom."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "Your message must have at least one target."
@@ -6478,29 +6398,27 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "Error sending email."
-msgstr "Der opstod en fejl med at sende mail."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "There is no email history for this course."
-msgstr "Der er ingen mailhistorik for dette kursus."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "There was an error obtaining email task history for this course."
 msgstr ""
-"Der opstod en fejl med at få en historik over mailopgaver for dette kursus."
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "There was an error obtaining email content history for this course."
 msgstr ""
-"Der opstod en fejl med at få en historik over mailindhold for dette kursus."
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "Send to:"
-msgstr "Send til:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Please enter a student email address or username."
-msgstr "Skriv kursistens e-mailadresse eller brugernavn."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -6520,7 +6438,7 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Please enter a problem location."
-msgstr "Angiv problemets placering."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -6549,7 +6467,7 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Module state successfully deleted."
-msgstr "Modulstatus er slettet."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -6560,55 +6478,45 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Entrance exam attempts is being reset for student '{student_id}'."
-msgstr "Forsøg med adgangseksamen nulstilles for kursist '{student_id}'."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error resetting entrance exam attempts for student '{student_id}'. Make sure"
 " student identifier is correct."
 msgstr ""
-"Der opstod en fejl med at nulstille forsøg med adgangseksamen for kursist "
-"'{student_id}'. Tjek, at kursist-id er korrekt."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Enter a student's username or email address."
-msgstr "Skriv kursistens brugernavn og e-mailadresse."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Do you want to allow this student ('{student_id}') to skip the entrance "
 "exam?"
 msgstr ""
-"Ønsker du at give denne kursist ('{student_id}') lov til at springe over "
-"adgangseksamen?"
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "An error occurred. Make sure that the student's username or email address is"
 " correct and try again."
 msgstr ""
-"Der opstod en fejl. Tjek, at kursistens brugernavn og e-mailadresse er "
-"korrekt og prøv igen."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Entrance exam state is being deleted for student '{student_id}'."
-msgstr "Status for adgangseksamen slettes for kursist '{student_id}'. "
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error deleting entrance exam state for student '{student_id}'. Make sure "
 "student identifier is correct."
 msgstr ""
-"Der opstod en fejl med at slette status på adgangseksamen for kursist "
-"'{student_id}'. Tjek, at kursist-id er korrekt."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error getting entrance exam task history for student '{student_id}'. Make "
 "sure student identifier is correct."
 msgstr ""
-"Der opstod en fejl med få en opgavehistorik for adgangseksamen for kursist "
-"'{student_id}'. Tjek, at kursist-id er korrekt."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Reset attempts for all students on problem '<%- problem_id %>'?"
@@ -6630,8 +6538,6 @@ msgstr ""
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Error listing task history for this student and problem."
 msgstr ""
-"Der opstod en fejl med at udarbejde en liste over opgavehistorik for denne "
-"kursist og dette problem."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -6677,9 +6583,6 @@ msgid ""
 "Make sure that entrance exam has problems in it and student identifier is "
 "correct."
 msgstr ""
-"Der opstod en fejl med at starte en opgave med at bedømme adgangseksamen for"
-" kursist '{student_id}'. Tjek, at der er problemer med adgangseksamen, og at"
-" kursist-id er korrekt."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Rescore problem '<%- problem_id %>' for all students?"
@@ -6701,67 +6604,65 @@ msgstr ""
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Task Type"
-msgstr "Opgavetype"
+msgstr ""
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Task inputs"
-msgstr "Opgaveinput"
+msgstr ""
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Task ID"
-msgstr "Opgave-id"
+msgstr ""
 
 #. Translators: a "Requester" is a username that requested a task such as
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Requester"
-msgstr "Forespørger"
+msgstr ""
 
 #. Translators: A timestamp of when a task (eg, sending email) was submitted
 #. appears after this
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Submitted"
-msgstr "Sendt"
+msgstr ""
 
 #. Translators: The length of a task (eg, sending email) in seconds appears
 #. this
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Duration (sec)"
-msgstr "Varighed (sek)"
+msgstr ""
 
 #. Translators: The state (eg, "In progress") of a task (eg, sending email)
 #. appears after this.
 #: lms/static/js/instructor_dashboard/util.js
 msgid "State"
-msgstr "Tilstand"
+msgstr ""
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Task Status"
-msgstr "Opgavestatus"
+msgstr ""
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Task Progress"
-msgstr "Opgaveforløb"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid ""
 "An error occurred retrieving your email. Please try again later, and contact"
 " technical support if the problem persists."
 msgstr ""
-"Der opstod en fejl med at genfinde din mail. Prøv venligst igen senere, og "
-"kontakt teknisk support, hvis problemet fortsætter."
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Sent By"
-msgstr "Fra"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Sent To"
@@ -6769,55 +6670,53 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Time Sent"
-msgstr "Afsendelsestidspunkt"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Number Sent"
-msgstr "Antal sendt"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Copy Email To Editor"
-msgstr "Kopier mail til redaktør"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Subject:"
-msgstr "Emne:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Sent By:"
-msgstr "Fra:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Time Sent:"
-msgstr "Afsendelsestidspunkt:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Sent To:"
-msgstr "Til:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Message:"
-msgstr "Besked:"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "No tasks currently running."
-msgstr "Der er ingen opgaver i gang."
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "File Name"
-msgstr "Filbavn"
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid ""
 "Links are generated on demand and expire within 5 minutes due to the "
 "sensitive nature of student information."
 msgstr ""
-"Links genereres, når de efterspørges, og udløber i løbet af 5 minutter pga. "
-"kursistinformationernes følsomme natur."
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Successfully reset the attempts for user {user}"
-msgstr "Nulstil forsøgene for bruger {user}"
+msgstr ""
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Failed to reset attempts for user."
@@ -6825,7 +6724,7 @@ msgstr ""
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Successfully deleted student state for user {user}"
-msgstr "Kursiststatus er slettet for bruger {user}"
+msgstr ""
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Failed to delete student state for user."
@@ -6833,7 +6732,7 @@ msgstr ""
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Successfully rescored problem for user {user}"
-msgstr "Det lykkedes at bedømme problem for bruger {user}"
+msgstr ""
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Failed to rescore problem for user."
@@ -6857,23 +6756,23 @@ msgstr ""
 
 #: lms/static/js/student_account/tos_modal.js
 msgid "Terms of Service and Honor Code"
-msgstr "Servicebetingelser & Æreskodeks"
+msgstr ""
 
 #: lms/static/js/student_account/views/FinishAuthView.js
 msgid "Saving your email preference"
-msgstr "Gemmer din e-mailpræference"
+msgstr ""
 
 #: lms/static/js/student_account/views/FinishAuthView.js
 msgid "Enrolling you in the selected course"
-msgstr "Tilmelder dig det valgte kursus"
+msgstr ""
 
 #: lms/static/js/student_account/views/FinishAuthView.js
 msgid "Adding the selected course to your cart"
-msgstr "Tilføjer det valgte kursus til din indkøbskurv"
+msgstr ""
 
 #: lms/static/js/student_account/views/FinishAuthView.js
 msgid "Loading your courses"
-msgstr "Indlæser dine kurser"
+msgstr ""
 
 #: lms/static/js/student_account/views/FormView.js
 #: lms/static/js/student_account/views/RegisterView.js
@@ -6917,8 +6816,6 @@ msgid ""
 "An error has occurred. Try refreshing the page, or check your Internet "
 "connection."
 msgstr ""
-"Der opstod en fejl. Prøv at opdatere siden eller tjek din "
-"internetforbindelse."
 
 #: lms/static/js/student_account/views/LoginView.js
 msgid ""
@@ -6991,7 +6888,7 @@ msgstr ""
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Full Name"
-msgstr "Fulde navn"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
@@ -7024,7 +6921,7 @@ msgstr ""
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/templates/student_account/account.underscore
 msgid "Password"
-msgstr "Adgangskode"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Check your email account for instructions to reset your password."
@@ -7062,20 +6959,20 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Education Completed"
-msgstr "Uddannelsen er gennemført"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Gender"
-msgstr "Køn"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Year of Birth"
-msgstr "Fødselsår"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Preferred Language"
-msgstr "Foretrukket sprog"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
@@ -7145,13 +7042,11 @@ msgid ""
 "We've sent a confirmation message to {new_email_address}. Click the link in "
 "the message to update your email address."
 msgstr ""
-"Vi har sendt en bekræftelsesbesked til {new_email_address}. Klik på linket i"
-" besked for at opdatere din e-mailadresse."
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
 "You must sign out and sign back in before your language changes take effect."
-msgstr "Du skal logge af og logge på igen, før dit nye sprogvalg virker."
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
@@ -7190,57 +7085,57 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Unlinking"
-msgstr "Sletter link"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Linking"
-msgstr "Linker"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Successfully unlinked."
-msgstr "Link er slettet."
+msgstr ""
 
 #: lms/static/js/verify_student/views/image_input_view.js
 msgid "Image Upload Error"
-msgstr "Fejl ved upload af billede"
+msgstr ""
 
 #: lms/static/js/verify_student/views/image_input_view.js
 msgid "Please verify that you have uploaded a valid image (PNG and JPEG)."
-msgstr "Kontroller, at du har uploadet et gyldigt billede (PNG og JPEG)."
+msgstr ""
 
 #: lms/static/js/verify_student/views/incourse_reverify_view.js
 #: lms/static/js/verify_student/views/review_photos_step_view.js
 msgid "An error has occurred. Please try again later."
-msgstr "Der opstod en fejl. Prøv venligst igen senere."
+msgstr ""
 
 #: lms/static/js/verify_student/views/incourse_reverify_view.js
 #: lms/static/js/verify_student/views/review_photos_step_view.js
 msgid "Could not submit photos"
-msgstr "Kunne ikke sende billeder"
+msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Professional Education Verified Certificate"
-msgstr "Verificeret diplom for faglig uddannelse "
+msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Professional Education"
-msgstr "Faglig uddannelse"
+msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Verified Certificate upgrade"
-msgstr "Opgradering af verificeret diplom"
+msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Verified Certificate"
-msgstr "Verificeret diplom"
+msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Checkout"
-msgstr "Checkout"
+msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Checkout with PayPal"
-msgstr "Checkout med PayPal"
+msgstr ""
 
 #. Translators: 'processor' is the name of a third-party payment processing
 #. vendor (example: "PayPal")
@@ -7250,158 +7145,146 @@ msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "All payment options are currently unavailable."
-msgstr "Alle betalingsmuligheder er i øjeblikket ikke tilgængelige."
+msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Try the transaction again in a few minutes."
-msgstr "Prøv at gennemføre transaktionen igen om nogle minutter."
+msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Could not submit order"
-msgstr "Kunne ikke sende ordre"
+msgstr ""
 
 #: lms/static/js/verify_student/views/reverify_view.js
 msgid "Take a photo of your ID"
-msgstr "Tag et billede af dit id"
+msgstr ""
 
 #: lms/static/js/verify_student/views/reverify_view.js
 msgid "Review your info"
-msgstr "Tjek dine oplysninger"
+msgstr ""
 
 #: lms/static/js/verify_student/views/step_view.js
 msgid "An error has occurred. Please try reloading the page."
-msgstr "Der opstod en fejl. Prøv venligst at genindlæse siden."
+msgstr ""
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid "Video Capture Error"
-msgstr "Fejl på videooptager"
+msgstr ""
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid ""
 "Please verify that your webcam is connected and that you have allowed your "
 "browser to access it."
 msgstr ""
-"Verificer, at din webcam er tilsluttet, og at du har givet din browser "
-"adgang til den."
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid "No Webcam Detected"
-msgstr "Webcam ikke fundet"
+msgstr ""
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid "You don't seem to have a webcam connected."
-msgstr "Det ser ikke ud til, at du har forbindelse til en webcam"
+msgstr ""
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid "Double-check that your webcam is connected and working to continue."
 msgstr ""
-"Dobbelttjek, at der er forbindelse til din webcam, og at den virker for at "
-"fortsætte."
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid "Photo Captured successfully."
-msgstr "Billede er taget."
+msgstr ""
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid "No Flash Detected"
-msgstr "Der er ikke nogen blitz"
+msgstr ""
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid ""
 "You don't seem to have Flash installed. Get Flash to continue your "
 "verification."
 msgstr ""
-"Det ser ikke ud til, at du har installeret blitz. Installer blitz for at "
-"fortsætte din verficering."
 
 #: lms/static/js/views/fields.js
 msgid "Editable"
-msgstr "Redigerbar"
+msgstr ""
 
 #: lms/static/js/views/fields.js
 msgid "Validation Error"
-msgstr "Valideringsfejl"
+msgstr ""
 
 #: lms/static/js/views/fields.js
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "In Progress"
-msgstr "Behandles"
+msgstr ""
 
 #: lms/static/js/views/fields.js
 msgid "Placeholder"
-msgstr "Pladsholder"
+msgstr ""
 
 #: lms/static/js/views/file_uploader.js
 msgid "Your upload of '{file}' succeeded."
-msgstr "Din upload af '{file}' lykkedes."
+msgstr ""
 
 #: lms/static/js/views/file_uploader.js
 msgid "Your upload of '{file}' failed."
-msgstr "Din upload af '{file}' mislykkedes."
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid "Upload an image"
-msgstr "Indlæs et billede"
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid "Change image"
-msgstr "Skift billede"
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid "Image"
-msgstr "Billede"
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid "An error has occurred. Refresh the page, and then try again."
-msgstr "Der opstod en fejl. Opdater siden og prøv så igen."
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid "The file must be at least {size} in size."
-msgstr "Filens størrelse skal være mindst {size}. "
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid "The file must be smaller than {size} in size."
-msgstr "Filens størrelse skal være mindre end {size}. "
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid ""
 "Upload is in progress. To avoid errors, stay on this page until the process "
 "is complete."
 msgstr ""
-"Upload er i gang. For at undgå fejl skal du blive på denne side, indtil "
-"processen er færdig."
 
 #: lms/static/js/views/image_field.js
 msgid ""
 "Removal is in progress. To avoid errors, stay on this page until the process"
 " is complete."
 msgstr ""
-"Er i gang med at fjerne. For at undgå fejl skal du blive på denne side, "
-"indtil processen er færdig."
 
 #: lms/static/js/views/image_field.js
 msgid "bytes"
-msgstr "bytes"
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid "KB"
-msgstr "KB"
+msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid "MB"
-msgstr "MB"
+msgstr ""
 
 #: lms/static/lms/js/preview/preview_factory.js
 msgid "Course is not yet visible to students."
-msgstr "Kurset er endnu ikke synligt for kursister."
+msgstr ""
 
 #: lms/static/lms/js/preview/preview_factory.js
 msgid ""
 "You cannot view the course as a student or beta tester before the course "
 "release date."
 msgstr ""
-"Du kan ikke se kurset som kursist eller beta-tester, før kursets "
-"udgivelsesdato."
 
 #: lms/templates/courseware/progress_graph.js
 msgid "Overall Score"
@@ -7429,11 +7312,11 @@ msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Limited Profile"
-msgstr "Begrænset profil"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Full Profile"
-msgstr "Fuld profil"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Joined"
@@ -7445,27 +7328,25 @@ msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Location"
-msgstr "Lokalitet"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Add Country"
-msgstr "Tilføj land"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Add language"
-msgstr "Tilføj sprog"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "About me"
-msgstr "Om mig"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid ""
 "Tell other learners a little about yourself: where you live, what your "
 "interests are, why you're taking courses, or what you hope to learn."
 msgstr ""
-"Fortæl de andre kursister lidt om dig selv: Hvor du bor, hvilke interesser "
-"du har, hvorfor du tager dette kursus, eller hvad du forventer at lære."
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/badge_list_container.js
 msgid "Accomplishments Pagination"
@@ -7473,31 +7354,27 @@ msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_fields.js
 msgid "Account Settings page."
-msgstr "Side med kontoindstillinger"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_fields.js
 msgid ""
 "You must specify your birth year before you can share your full profile. To "
 "specify your birth year, go to the {account_settings_page_link}"
 msgstr ""
-"Du skal angive dit fødselsår, før du kan dele din fulde profil. For at "
-"angive fødselsår skal du gå til {account_settings_page_link}"
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_fields.js
 msgid ""
 "You must be over 13 to share a full profile. If you are over 13, make sure "
 "that you have specified a birth year on the {account_settings_page_link}"
 msgstr ""
-"Du skal være over 13 for at dele en fuld profil. Hvis du er over 13, skal du"
-" sikre dig, at du har angivet fødselsår på {account_settings_page_link}"
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_fields.js
 msgid "Profile Image"
-msgstr "Profilbillede"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_fields.js
 msgid "Profile image for {username}"
-msgstr "Profilbillede for {username}"
+msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_view.js
 msgid "About Me"
@@ -7509,7 +7386,7 @@ msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_view.js
 msgid "Profile"
-msgstr "Profil"
+msgstr ""
 
 #: cms/static/js/certificates/models/certificate.js
 msgid "Certificate name is required."
@@ -7601,12 +7478,12 @@ msgstr ""
 #: cms/static/js/factories/manage_users_lib.js
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Staff"
-msgstr "Personale"
+msgstr ""
 
 #: cms/static/js/factories/manage_users.js
 #: cms/static/js/factories/manage_users_lib.js
 msgid "Admin"
-msgstr "Admin"
+msgstr ""
 
 #: cms/static/js/factories/manage_users_lib.js
 msgid "Already a library team member"
@@ -7825,7 +7702,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Type"
-msgstr "Skriv"
+msgstr ""
 
 #: cms/static/js/views/assets.js
 msgid "File {filename} exceeds maximum size of {maxFileSizeInMBs} MB"
@@ -7893,7 +7770,7 @@ msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Required"
-msgstr "Nødvendig"
+msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Automatic transcripts are disabled."
@@ -8091,7 +7968,7 @@ msgstr ""
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Basic"
-msgstr "Grundlæggende"
+msgstr ""
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Visibility"
@@ -8302,7 +8179,7 @@ msgstr ""
 #. `13 minutes and 45 seconds`
 #: cms/static/js/views/video_thumbnail.js
 msgid " and "
-msgstr "og"
+msgstr ""
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "Video image upload started"
@@ -8375,7 +8252,7 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_view.js
 msgid "Order History"
-msgstr "Bestillings historik"
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_view.js
 msgid ""
@@ -8395,7 +8272,7 @@ msgstr ""
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Actions"
-msgstr "Handlinger"
+msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
@@ -8412,7 +8289,7 @@ msgstr ""
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Previous"
-msgstr "Tidligere"
+msgstr ""
 
 #: cms/templates/js/previous-video-upload-list.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
@@ -8448,7 +8325,7 @@ msgstr ""
 
 #: common/static/common/templates/components/search-field.underscore
 msgid "Clear search"
-msgstr "Nulstil søgning"
+msgstr ""
 
 #: common/static/common/templates/components/search-field.underscore
 #: lms/djangoapps/discussion/static/discussion/templates/search.underscore
@@ -8456,7 +8333,7 @@ msgstr "Nulstil søgning"
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 msgid "Search"
-msgstr "Søg"
+msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Add a Response"
@@ -8473,7 +8350,7 @@ msgstr ""
 #: common/static/common/templates/discussion/templates.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Submit"
-msgstr "Send"
+msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 #, python-format
@@ -8495,7 +8372,7 @@ msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Closed"
-msgstr "Lukket"
+msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 #, python-format
@@ -8594,7 +8471,7 @@ msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Following"
-msgstr "Følgende"
+msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Community TA"
@@ -8690,7 +8567,7 @@ msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Load more"
-msgstr "Indlæs mere"
+msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Post type"
@@ -8708,7 +8585,7 @@ msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Discussion"
-msgstr "Diskussion"
+msgstr ""
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Endorse"
@@ -8782,7 +8659,7 @@ msgstr ""
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 #: lms/djangoapps/discussion/static/discussion/templates/search.underscore
 msgid "Search all posts"
-msgstr "Søg alle opslag"
+msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 msgid "Filter and sort topics"
@@ -8839,7 +8716,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Download URL"
@@ -8847,7 +8724,7 @@ msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Grade"
-msgstr "Karakter"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Last Updated"
@@ -8908,7 +8785,7 @@ msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Course ID"
-msgstr "Kursus ID"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Course Start"
@@ -8916,19 +8793,19 @@ msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Course End"
-msgstr "Kurset slutter"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Upgrade Deadline"
-msgstr "Opgrader deadline"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Verification Deadline"
-msgstr "Deadline for verifikation"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Enrollment Date"
-msgstr "Tilmeldingsdato"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Enrollment Mode"
@@ -8940,7 +8817,7 @@ msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Reason"
-msgstr "Årsag"
+msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Last modified by"
@@ -9079,7 +8956,7 @@ msgstr ""
 #: lms/static/js/fixtures/donation.underscore
 #: lms/templates/dashboard/donation.underscore
 msgid "Donate"
-msgstr "Donér"
+msgstr ""
 
 #: lms/templates/api_admin/catalog-error.underscore
 msgid ""
@@ -9093,11 +8970,11 @@ msgstr ""
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Start Date"
-msgstr "Start dato"
+msgstr ""
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Due Date"
-msgstr "Forfaldsdato"
+msgstr ""
 
 #: lms/templates/ccx/schedule.underscore
 msgid "remove all"
@@ -9110,7 +8987,7 @@ msgstr ""
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Section"
-msgstr "Afsnit"
+msgstr ""
 
 #: lms/templates/ccx/schedule.underscore
 #, python-format
@@ -9128,7 +9005,7 @@ msgstr ""
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Subsection"
-msgstr "Undersektion"
+msgstr ""
 
 #: lms/templates/ccx/schedule.underscore
 #, python-format
@@ -9176,7 +9053,7 @@ msgstr ""
 
 #: lms/templates/discovery/course_card.underscore
 msgid "LEARN MORE"
-msgstr "LÆR MERE"
+msgstr ""
 
 #: lms/templates/discovery/course_card.underscore
 #, python-format
@@ -9185,7 +9062,7 @@ msgstr ""
 
 #: lms/templates/discovery/course_card.underscore
 msgid "Starts"
-msgstr "Start"
+msgstr ""
 
 #: lms/templates/discovery/filter_bar.underscore
 msgid "Clear All"
@@ -9213,7 +9090,7 @@ msgstr ""
 
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Tags:"
-msgstr "Mærker:"
+msgstr ""
 
 #: lms/templates/edxnotes/tab-item.underscore
 msgid "Clear search results"
@@ -9227,7 +9104,7 @@ msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
 msgid "Order Number"
-msgstr "Ordrenummer"
+msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
 msgid "Date Placed"
@@ -9338,7 +9215,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Student"
-msgstr "Kursist"
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Invalidated By"
@@ -9351,7 +9228,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Notes"
-msgstr "Noter"
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Remove from Invalidation Table"
@@ -9474,7 +9351,6 @@ msgstr ""
 msgid ""
 "There must be one cohort to which students can automatically be assigned."
 msgstr ""
-"Der skal være en gruppe, som kursisterne automatisk kan blive tilknyttet."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Associated Content Group"
@@ -9606,7 +9482,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Used"
-msgstr "Brugt"
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Valid"
@@ -9639,11 +9515,11 @@ msgstr ""
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "View Archived Course"
-msgstr "Se Arkiveret Kursus"
+msgstr ""
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "View Course"
-msgstr "Se Kursus"
+msgstr ""
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Select a session:"
@@ -9651,11 +9527,11 @@ msgstr ""
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Enroll Now"
-msgstr "Tilmeld"
+msgstr ""
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Coming Soon"
-msgstr "Kommer Snart"
+msgstr ""
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Enrollment Opens on"
@@ -9724,7 +9600,7 @@ msgstr[1] ""
 
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "Completed"
-msgstr "Fuldført"
+msgstr ""
 
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "Remaining"
@@ -9766,7 +9642,7 @@ msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_sidebar.underscore
 msgid "Learn More"
-msgstr "Lær mere"
+msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_sidebar.underscore
 msgid "Additional Professional Opportunities"
@@ -9829,7 +9705,7 @@ msgstr ""
 
 #: lms/templates/learner_dashboard/upgrade_message.underscore
 msgid "Upgrade to Verified"
-msgstr "Opgrader til Bekræftet"
+msgstr ""
 
 #: lms/templates/student_account/account.underscore
 msgid "New Address"
@@ -9841,7 +9717,7 @@ msgstr ""
 
 #: lms/templates/student_account/account.underscore
 msgid "Reset Password"
-msgstr "Nulstil password"
+msgstr ""
 
 #: lms/templates/student_account/account_settings.underscore
 msgid "Switch Language Back"
@@ -10053,7 +9929,7 @@ msgstr ""
 
 #: lms/templates/verify_student/error.underscore
 msgid "Error:"
-msgstr "Fejl:"
+msgstr ""
 
 #: lms/templates/verify_student/face_photo_step.underscore
 msgid "What You Need for Verification"
@@ -10389,7 +10265,7 @@ msgstr ""
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "You have already verified your ID!"
-msgstr "Du har allerede bekræftet dit ID!"
+msgstr ""
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "Your verification status is good until {verificationGoodUntil}."
@@ -10418,7 +10294,7 @@ msgstr ""
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid "Total"
-msgstr "I alt"
+msgstr ""
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid "Professional Certificate for {courseName}"
@@ -10467,7 +10343,7 @@ msgstr ""
 
 #: lms/templates/verify_student/reverify_success_step.underscore
 msgid "Return to Your Dashboard"
-msgstr "Tilbage til dit skrivebord"
+msgstr ""
 
 #: lms/templates/verify_student/review_photos_step.underscore
 msgid "Review Your Photos"
@@ -10574,7 +10450,7 @@ msgstr ""
 
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
 msgid "Value"
-msgstr "Værdi"
+msgstr ""
 
 #: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
 msgid "Username or Email"
@@ -10872,7 +10748,7 @@ msgstr ""
 
 #: cms/templates/js/certificate-details.underscore
 msgid "Course Number"
-msgstr "Kursus nr."
+msgstr ""
 
 #: cms/templates/js/certificate-details.underscore
 msgid "Course Number Override"
@@ -11042,7 +10918,7 @@ msgstr ""
 
 #: cms/templates/js/course-highlights-enable.underscore
 msgid "Enabled"
-msgstr "Aktiveret"
+msgstr ""
 
 #: cms/templates/js/course-highlights-enable.underscore
 msgid "Enable Now"
@@ -11067,11 +10943,11 @@ msgstr ""
 #: cms/templates/js/course-instructor-details.underscore
 #: cms/templates/js/signatory-details.underscore
 msgid "Organization"
-msgstr "Organisation"
+msgstr ""
 
 #: cms/templates/js/course-instructor-details.underscore
 msgid "Organization Name"
-msgstr "Organisationens navn"
+msgstr ""
 
 #: cms/templates/js/course-instructor-details.underscore
 msgid "Please add the institute where the instructor is associated"
@@ -11166,7 +11042,7 @@ msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 msgid "Display Name"
-msgstr "Visningsnavn"
+msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 msgid "Proctoring Settings"
@@ -11210,7 +11086,7 @@ msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 msgid "Due:"
-msgstr "Forventes:"
+msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 msgid "Subsection is hidden after course end date"
@@ -11282,7 +11158,7 @@ msgstr ""
 
 #: cms/templates/js/course-video-transcript-preferences.underscore
 msgid "Transcript Languages"
-msgstr "Udskrift sprog"
+msgstr ""
 
 #: cms/templates/js/course-video-transcript-preferences.underscore
 #: cms/templates/js/metadata-dict-entry.underscore
@@ -11305,7 +11181,7 @@ msgstr ""
 
 #: cms/templates/js/course-video-transcript-provider-selected.underscore
 msgid "Change"
-msgstr "Ændring"
+msgstr ""
 
 #: cms/templates/js/course-video-transcript-provider-selected.underscore
 msgid "Press change to change selected transcript provider."
@@ -11363,7 +11239,7 @@ msgstr ""
 
 #: cms/templates/js/course_info_handouts.underscore
 msgid "Course Handouts"
-msgstr "Kursus Materiale"
+msgstr ""
 
 #: cms/templates/js/course_info_handouts.underscore
 msgid "You have no handouts defined"
@@ -11377,7 +11253,7 @@ msgstr ""
 
 #: cms/templates/js/course_info_update.underscore
 msgid "Date"
-msgstr "Dato"
+msgstr ""
 
 #: cms/templates/js/course_info_update.underscore
 msgid "Post"
@@ -11578,11 +11454,11 @@ msgstr ""
 
 #: cms/templates/js/license-selector.underscore
 msgid "Creative Commons licensed content, with terms as follow:"
-msgstr "Creative Commons licenseret indhold under disse betingelser:"
+msgstr ""
 
 #: cms/templates/js/license-selector.underscore
 msgid "Some Rights Reserved"
-msgstr "Visse rettigheder forbeholdes"
+msgstr ""
 
 #: cms/templates/js/list.underscore
 #, python-format
@@ -11601,7 +11477,7 @@ msgstr ""
 #: cms/templates/js/metadata-option-entry.underscore
 #: cms/templates/js/metadata-string-entry.underscore
 msgid "Clear"
-msgstr "Klar"
+msgstr ""
 
 #: cms/templates/js/metadata-dict-entry.underscore
 #: cms/templates/js/metadata-file-uploader-entry.underscore
@@ -11662,7 +11538,7 @@ msgstr ""
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Video ID"
-msgstr "Video ID"
+msgstr ""
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Transcripts"
@@ -12066,7 +11942,7 @@ msgstr ""
 
 #: cms/templates/js/transcript-organization-credentials.underscore
 msgid "Account"
-msgstr "Konto"
+msgstr ""
 
 #: cms/templates/js/transcript-organization-credentials.underscore
 msgid ""
@@ -12193,7 +12069,7 @@ msgstr ""
 
 #: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
 msgid "Default Timed Transcript"
-msgstr "Standardindstilling for udskrift"
+msgstr ""
 
 #: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
