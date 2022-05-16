@@ -258,7 +258,7 @@
                     
                     // NAU always hide checkbox to show/hide optional fields
                     /*if (!this.hasOptionalFields) {*/
-                        $('.checkbox-optional_fields_toggle').addClass('hidden');
+                    $('.checkbox-optional_fields_toggle').addClass('hidden');
                     /*}*/
                     // xss-lint: disable=javascript-jquery-insert-into-target
                     $('.checkbox-honor_code').insertAfter('.optional-fields');

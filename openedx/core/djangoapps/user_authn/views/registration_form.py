@@ -353,7 +353,7 @@ class RegistrationFormFactory:
 
         custom_form = get_registration_extension_form()
         if custom_form:
-            custom_form_field_names = [ field_name for field_name, field in custom_form.fields.items()]
+            custom_form_field_names = [field_name for field_name, field in custom_form.fields.items()]
             valid_fields.extend(custom_form_field_names)
 
         field_order = configuration_helpers.get_value('REGISTRATION_FIELD_ORDER')
@@ -399,7 +399,10 @@ class RegistrationFormFactory:
 
         # Custom form fields can be added via the form set in settings.REGISTRATION_EXTENSION_FORM
         custom_form = get_registration_extension_form()
-        custom_form_field_names = [ field_name for field_name, field in custom_form.fields.items()] if custom_form else []
+        if custom_form:
+            custom_form_field_names = [field_name for field_name, field in custom_form.fields.items()]
+        else:
+            custom_form_field_names = []
 
         # Go through the fields in the fields order and add them if they are required or visible
         for field_name in self.field_order:
@@ -421,7 +424,8 @@ class RegistrationFormFactory:
                         field_options = getattr(
                             getattr(custom_form, 'Meta', None), 'serialization_options', {}
                         ).get(field_name, {})
-                        field_type = field_options.get('field_type', FormDescription.FIELD_TYPE_MAP.get(field.__class__))
+                        field_type = field_options.get('field_type',
+                                                       FormDescription.FIELD_TYPE_MAP.get(field.__class__))
                         if not field_type:
                             raise ImproperlyConfigured(
                                 u"Field type '{}' not recognized for registration extension field '{}'.".format(
@@ -433,8 +437,11 @@ class RegistrationFormFactory:
                             form_desc.add_field(
                                 field_name, label=field.label,
                                 default=field_options.get('default'),
-                                field_type=field_options.get('field_type', FormDescription.FIELD_TYPE_MAP.get(field.__class__)),
-                                placeholder=field.initial, instructions=field.help_text, required=(self._is_field_required(field_name) or field.required),
+                                field_type=field_options.get('field_type',
+                                                             FormDescription.FIELD_TYPE_MAP.get(field.__class__)),
+                                placeholder=field.initial,
+                                instructions=field.help_text,
+                                required=(self._is_field_required(field_name) or field.required),
                                 restrictions=restrictions,
                                 options=getattr(field, 'choices', None), error_messages=field.error_messages,
                                 include_default_option=field_options.get('include_default_option'),
