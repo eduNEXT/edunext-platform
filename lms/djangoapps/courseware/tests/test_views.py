@@ -57,7 +57,6 @@ from lms.djangoapps.courseware.toggles import (
     courseware_mfe_is_advertised,
 )
 from lms.djangoapps.courseware.user_state_client import DjangoXBlockUserStateClient
-from lms.djangoapps.experiments.testutils import override_experiment_waffle_flag
 from lms.djangoapps.grades.config.waffle import ASSUME_ZERO_GRADE_IF_ABSENT
 from lms.djangoapps.grades.config.waffle import waffle_switch as grades_waffle_switch
 from lms.djangoapps.verify_student.models import VerificationDeadline
@@ -3261,7 +3260,7 @@ class DatesTabTestCase(ModuleStoreTestCase):
         response = self._get_response(self.course)
         assert response.status_code == 200
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     @patch('edx_django_utils.monitoring.set_custom_attribute')
     def test_defaults(self, mock_set_custom_attribute):
         enrollment = CourseEnrollmentFactory(course_id=self.course.id, user=self.user, mode=CourseMode.VERIFIED)
@@ -3322,7 +3321,7 @@ class DatesTabTestCase(ModuleStoreTestCase):
             # Make sure the assignment type is rendered
             self.assertContains(response, 'Homework:')
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     def test_reset_deadlines_banner_displays(self):
         CourseEnrollmentFactory(course_id=self.course.id, user=self.user, mode=CourseMode.VERIFIED)
         now = datetime.now(utc)

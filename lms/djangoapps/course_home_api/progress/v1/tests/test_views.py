@@ -18,7 +18,7 @@ from openedx.core.djangoapps.user_api.preferences.api import set_user_preference
 CREDIT_SUPPORT_URL = 'https://support.edx.org/hc/en-us/sections/115004154688-Purchasing-Academic-Credit'
 
 
-@override_waffle_flag(COURSE_HOME_MICROFRONTEND, active=True)
+@override_experiment_waffle_flag(COURSE_HOME_MICROFRONTEND, active=True)
 @ddt.ddt
 class ProgressTabTestViews(BaseCourseHomeTests):
     """
