@@ -502,12 +502,14 @@
                     expect(view.$submitButton).toHaveAttr('disabled');
                 });
 
-                it('hides optional fields by default', function() {
+                // These tests behave contrary to the use case of nau
+                xit('hides optional fields by default', function() {
                     createRegisterView(this);
                     expect(view.$('.optional-fields')).toHaveClass('hidden');
                 });
 
-                it('displays optional fields when checkbox is selected', function() {
+                // These tests behave contrary to the use case of nau
+                xit('displays optional fields when checkbox is selected', function() {
                     createRegisterView(this);
                     $('#toggle_optional_fields').click();
                     expect(view.$('.optional-fields')).not.toHaveClass('hidden');
