@@ -15,12 +15,3 @@ def override_experiment_waffle_flag(flag, active=True, bucket=1):
     with override_waffle_flag(flag, active):
         with patch.object(flag, "get_bucket", return_value=bucket):
             yield
-
-
-@contextmanager
-def override__coursewaffleflag_flag(flag, active=True):
-    """
-    Override the base waffle flag
-    """
-    with override_waffle_flag(flag, active):
-        yield

@@ -27,6 +27,7 @@ from opaque_keys.edx.keys import CourseKey
 from opaque_keys.edx.locator import UsageKey
 from pytz import UTC
 from testfixtures import LogCapture
+from edx_toggles.toggles.testutils import override_waffle_flag
 
 from common.djangoapps.course_modes.models import CourseMode
 from common.djangoapps.course_modes.tests.factories import CourseModeFactory
@@ -66,7 +67,6 @@ from lms.djangoapps.courseware.tests.factories import (
     StaffFactory,
 )
 from lms.djangoapps.courseware.tests.helpers import LoginEnrollmentTestCase
-from edx_toggles.toggles.testutils import override_waffle_flag
 from lms.djangoapps.instructor.tests.utils import FakeContentTask, FakeEmail, FakeEmailInfo
 from lms.djangoapps.instructor.views.api import (
     _get_certificate_for_user,
