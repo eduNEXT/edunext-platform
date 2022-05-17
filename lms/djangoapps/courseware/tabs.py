@@ -14,6 +14,7 @@ from lms.djangoapps.course_home_api.toggles import course_home_mfe_dates_tab_is_
 from openedx.core.lib.course_tabs import CourseTabPluginManager
 from openedx.features.course_experience import DISABLE_UNIFIED_COURSE_TAB_FLAG, default_course_url_name
 from openedx.features.course_experience.url_helpers import get_learning_mfe_home_url
+from openedx.features.course_experience import RELATIVE_DATES_FLAG
 from common.djangoapps.student.models import CourseEnrollment
 from xmodule.tabs import CourseTab, CourseTabList, course_reverse_func_from_name_func, key_checker
 
@@ -341,6 +342,11 @@ class DatesTab(EnrolledTab):
 
         tab_dict['link_func'] = link_func
         super().__init__(tab_dict)
+
+    @classmethod
+    def is_enabled(cls, course, user=None):
+        """Returns true if this tab is enabled."""
+        return RELATIVE_DATES_FLAG.is_enabled(course.id) and super(DatesTab, cls).is_enabled(course, user=user)
 
 
 def get_course_tab_list(user, course):

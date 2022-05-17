@@ -35,10 +35,10 @@ from lms.djangoapps.courseware.models import (
     DynamicUpgradeDeadlineConfiguration,
     OrgDynamicUpgradeDeadlineConfiguration
 )
-from lms.djangoapps.experiments.testutils import override_experiment_waffle_flag
 from lms.djangoapps.verify_student.models import VerificationDeadline
 from lms.djangoapps.verify_student.services import IDVerificationService
 from lms.djangoapps.verify_student.tests.factories import SoftwareSecurePhotoVerificationFactory
+from lms.djangoapps.experiments.testutils import override_experiment_waffle_flag
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.self_paced.models import SelfPacedConfiguration
 from openedx.core.djangoapps.site_configuration.tests.factories import SiteFactory  # pylint: disable=unused-import
@@ -150,7 +150,7 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
         CourseEnrollmentFactory(course_id=course.id, user=user, mode=CourseMode.VERIFIED)
         self.assert_block_types(course, user, expected_blocks)
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     def test_enabled_block_types_with_assignments(self):  # pylint: disable=too-many-statements
         """
         Creates a course with multiple subsections to test all of the different
@@ -172,7 +172,6 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
                 start=now - timedelta(days=1),
                 due=now + timedelta(days=6),
                 graded=True,
-                format='Homework',
             )
             ItemFactory.create(
                 category='sequential',
@@ -181,7 +180,6 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
                 start=now + timedelta(days=1),
                 due=now + timedelta(days=7),
                 graded=True,
-                format='Homework',
             )
             ItemFactory.create(
                 category='sequential',
@@ -190,7 +188,6 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
                 start=now + timedelta(days=1),
                 due=now + timedelta(days=8),
                 graded=True,
-                format='Exam',
             )
             ItemFactory.create(
                 category='sequential',
@@ -199,7 +196,6 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
                 start=now - timedelta(days=14),
                 due=now - timedelta(days=7),
                 graded=True,
-                format='Exam',
             )
             ItemFactory.create(
                 category='sequential',
@@ -216,7 +212,6 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
                 start=None,
                 due=now + timedelta(days=9),
                 graded=True,
-                format='Speech',
             )
             ItemFactory.create(
                 category='sequential',
@@ -226,7 +221,6 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
                 start=now - timedelta(days=14),
                 due=now + timedelta(days=10),
                 graded=True,
-                format=None,
             )
             dummy_subsection = ItemFactory.create(category='sequential', graded=True, due=now + timedelta(days=11))
 
@@ -275,41 +269,34 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
             assignment_title = str(assignment.title_html) or str(assignment.title)
             assert assignment_title != 'Not returned since we do not get non-graded subsections'
 
-            assignment_type = str(assignment.assignment_type)
             # checking if it is _in_ the title instead of being the title since released assignments
             # are actually links. Unreleased assignments are just the string of the title.
             # also checking that the assignment type is returned for graded subsections
             if 'Released' in assignment_title:
-                assert assignment_type == 'Homework'
                 for html_tag in assignment_title_html:
                     assert html_tag in assignment_title
             elif assignment_title == 'Not released':
-                assert assignment_type == 'Homework'
                 for html_tag in assignment_title_html:
                     assert html_tag not in assignment_title
             elif assignment_title == 'Third nearest assignment':
-                assert assignment_type == 'Exam'
                 # It's still not released
                 for html_tag in assignment_title_html:
                     assert html_tag not in assignment_title
             elif 'Past due date' in assignment_title:
                 assert now > assignment.date
-                assert assignment_type == 'Exam'
                 for html_tag in assignment_title_html:
                     assert html_tag in assignment_title
             elif 'No start date' == assignment_title:
-                assert assignment_type == 'Speech'
                 # Can't determine if it is released so it does not get a link
                 for html_tag in assignment_title_html:
                     assert html_tag not in assignment_title
             # This is the item with no display name where we set one ourselves.
             elif 'Assignment' in assignment_title:
-                assert assignment_type is None
                 # Can't determine if it is released so it does not get a link
                 for html_tag in assignment_title_html:
                     assert html_tag in assignment_title
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     @ddt.data(
         ([], 3),
         ([{
@@ -375,7 +362,7 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
         blocks = get_course_date_blocks(course, user, request, include_past_dates=True)
         assert len(blocks) == date_block_count
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     def test_enabled_block_types_with_expired_course(self):
         course = create_course_run(days_till_start=-100)
         user = create_user()
@@ -544,7 +531,7 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
         {'weeks_to_complete': 7},  # Weeks to complete > time til end (end date shown)
         {'weeks_to_complete': 4},  # Weeks to complete < time til end (end date not shown)
     )
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     def test_course_end_date_self_paced(self, cr_details):
         """
         In self-paced courses, the end date will now only show up if the learner
@@ -636,10 +623,7 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
         CourseEnrollmentFactory(course_id=course.id, user=verified_user, mode=CourseMode.VERIFIED)
         course.certificate_available_date = datetime.now(utc) + timedelta(days=7)
         enable_course_certificates(course)
-        expected_blocks = [
-            CourseEndDate, CourseStartDate, TodaysDate, VerificationDeadlineDate, CertificateAvailableDate
-        ]
-        self.assert_block_types(course, verified_user, expected_blocks)
+        CertificateAvailableDate(course, audit_user)
         for block in (CertificateAvailableDate(course, audit_user), CertificateAvailableDate(course, verified_user)):
             assert course.certificate_available_date is not None
             assert block.date == course.certificate_available_date
@@ -727,7 +711,7 @@ class CourseDateSummaryTest(SharedModuleStoreTestCase):
     )
     @ddt.unpack
     @override_waffle_flag(DISABLE_UNIFIED_COURSE_TAB_FLAG, active=False)
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     def test_dates_tab_link_render(self, url_name, mfe_active):
         """ The dates tab link should only show for enrolled or staff users """
         course = create_course_run()

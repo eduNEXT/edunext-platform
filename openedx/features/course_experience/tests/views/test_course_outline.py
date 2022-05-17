@@ -29,8 +29,8 @@ from common.djangoapps.course_modes.tests.factories import CourseModeFactory
 from lms.djangoapps.course_api.blocks.transformers.milestones import MilestonesAndSpecialExamsTransformer
 from lms.djangoapps.gating import api as lms_gating_api
 from lms.djangoapps.courseware.tests.factories import StaffFactory
+from edx_toggles.toggles.testutils import override_waffle_flag
 from lms.djangoapps.courseware.tests.helpers import MasqueradeMixin
-from lms.djangoapps.experiments.testutils import override_experiment_waffle_flag
 from lms.urls import RESET_COURSE_DEADLINES_NAME
 from openedx.core.djangoapps.course_date_signals.models import SelfPacedRelativeDatesConfig
 from openedx.core.djangoapps.schedules.models import Schedule
@@ -138,7 +138,7 @@ class TestCourseOutlinePage(SharedModuleStoreTestCase, MasqueradeMixin):
         super(TestCourseOutlinePage, self).setUp()  # lint-amnesty, pylint: disable=super-with-arguments
         self.client.login(username=self.user.username, password=TEST_PASSWORD)
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     def test_outline_details(self):
         for course in self.courses:
 
@@ -193,7 +193,7 @@ class TestCourseOutlinePage(SharedModuleStoreTestCase, MasqueradeMixin):
         self.assertRegex(content, sequential2.display_name + r'\s*\(1 Question\)\s*</h4>')
         self.assertRegex(content, sequential3.display_name + r'\s*\(2 Questions\)\s*</h4>')
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     @ddt.data(
         ([CourseMode.AUDIT, CourseMode.VERIFIED], CourseMode.AUDIT, False, True),
         ([CourseMode.AUDIT, CourseMode.VERIFIED], CourseMode.VERIFIED, False, True),
@@ -232,7 +232,7 @@ class TestCourseOutlinePage(SharedModuleStoreTestCase, MasqueradeMixin):
         else:
             self.assertNotContains(response, '<div class="banner-cta-text"')
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     def test_reset_course_deadlines(self):
         course = self.courses[0]
 
@@ -252,7 +252,7 @@ class TestCourseOutlinePage(SharedModuleStoreTestCase, MasqueradeMixin):
         updated_staff_schedule = Schedule.objects.get(enrollment__user=staff, enrollment__course_id=course.id)
         assert updated_staff_schedule.start_date == start_date
 
-    @override_experiment_waffle_flag(RELATIVE_DATES_FLAG, active=True)
+    @override_waffle_flag(RELATIVE_DATES_FLAG, active=True)
     def test_reset_course_deadlines_masquerade_generic_student(self):
         course = self.courses[0]
 

@@ -18,6 +18,7 @@ from edx_django_utils.monitoring import function_trace
 from fs.errors import ResourceNotFound
 from opaque_keys.edx.keys import UsageKey
 from path import Path as path
+from lms.djangoapps.certificates import api as certs_api
 
 from openedx.core.lib.cache_utils import request_cached
 
@@ -459,13 +460,6 @@ def get_course_date_blocks(course, user, request=None, include_access=False,
     Return the list of blocks to display on the course info page,
     sorted by date.
     """
-    blocks = []
-    if RELATIVE_DATES_FLAG.is_enabled(course.id):
-        blocks.extend(get_course_assignment_date_blocks(
-            course, user, request, num_return=num_assignments,
-            include_access=include_access, include_past_dates=include_past_dates,
-        ))
-
     # Adding these in after the assignment blocks so in the case multiple blocks have the same date,
     # these blocks will be sorted to come after the assignments. See https://openedx.atlassian.net/browse/AA-158
     default_block_classes = [
@@ -477,7 +471,16 @@ def get_course_date_blocks(course, user, request=None, include_access=False,
         VerificationDeadlineDate,
         VerifiedUpgradeDeadlineDate,
     ]
-    blocks.extend([cls(course, user) for cls in default_block_classes])
+    if not course.self_paced and certs_api.get_active_web_certificate(course):
+        default_block_classes.insert(0, CertificateAvailableDate)
+
+    blocks = [cls(course, user) for cls in default_block_classes]
+    if RELATIVE_DATES_FLAG.is_enabled(course.id) and user and user.is_authenticated:
+        blocks.append(CourseExpiredDate(course, user))
+        blocks.extend(get_course_assignment_date_blocks(
+            course, user, request, num_return=num_assignments,
+            include_access=include_access, include_past_dates=include_past_dates,
+        ))
 
     blocks = filter(lambda b: b.is_allowed and b.date and (include_past_dates or b.is_enabled), blocks)
     return sorted(blocks, key=date_block_key_fn)
