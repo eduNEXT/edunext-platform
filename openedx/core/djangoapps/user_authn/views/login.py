@@ -521,7 +521,10 @@ def login_user(request):
             possibly_authenticated_user = StudentLoginRequested.run_filter(user=possibly_authenticated_user)
         except StudentLoginRequested.PreventLogin as exc:
             raise AuthFailedError(
-                str(exc), redirect_url=exc.redirect_to, error_code=exc.error_code, context=exc.context,
+                str(exc),
+                redirect_url=exc.redirect_to,  # pylint: disable=no-member
+                error_code=exc.error_code,  # pylint: disable=no-member
+                context=exc.context,  # pylint: disable=no-member
             ) from exc
 
         if not is_user_third_party_authenticated:
