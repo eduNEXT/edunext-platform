@@ -73,6 +73,8 @@ COPY requirements/edx/base.txt requirements/edx/base.txt
 RUN pip install -r requirements/pip.txt
 RUN pip install -r requirements/edx/base.txt
 
+RUN npm install -g npm@8.5.x
+
 # Copy just JS requirements and install them.
 COPY package.json package.json
 COPY package-lock.json package-lock.json
