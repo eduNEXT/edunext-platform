@@ -85,3 +85,6 @@ git+https://github.com/eduNEXT/webhook-xblock@a734c6de47cb61cba20bec4a4f3362ce62
 
 # xblock-pdf
 git+https://github.com/appsembler/pdfXBlock.git@v0.3.1#egg=pdf-xblock==0.3.1
+
+# Scorm proxy
+git+https://github.com/eduNEXT/eox-scorm-proxy.git@poc#egg=eox-scorm-xblock==0.1.0
