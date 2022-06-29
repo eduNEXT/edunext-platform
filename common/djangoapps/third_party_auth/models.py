@@ -29,7 +29,7 @@ from openedx.core.lib.hash_utils import create_hash256
 
 from .lti import LTI_PARAMS_KEY, LTIAuthBackend
 from .saml import STANDARD_SAML_PROVIDER_KEY, get_saml_idp_choices, get_saml_idp_class
-
+from openedx_cas.backends import CASAuth
 log = logging.getLogger(__name__)
 
 REGISTRATION_FORM_FIELD_BLACKLIST = [
@@ -51,6 +51,7 @@ _PSA_BACKENDS = {backend_class.name: backend_class for backend_class in _load_ba
 _PSA_OAUTH2_BACKENDS = [backend_class.name for backend_class in _load_backend_classes(OAuthAuth)]
 _PSA_SAML_BACKENDS = [backend_class.name for backend_class in _load_backend_classes(SAMLAuth)]
 _LTI_BACKENDS = [backend_class.name for backend_class in _load_backend_classes(LTIAuthBackend)]
+_CAS_BACKENDS = [backend_class.name for backend_class in _load_backend_classes(CASAuth)]
 
 
 def clean_json(value, of_type):
@@ -553,6 +554,14 @@ class SAMLConfiguration(ConfigurationModel):
         other_config.update(json.loads(self.other_config_str))
         return other_config[name]  # SECURITY_CONFIG, SP_EXTRA, or similar extra settings
 
+
+class CASProviderConfig(ProviderConfig):
+    KEY_FIELDS = ('slug',)
+    prefix = 'cas'
+    class Meta:
+        app_label = "third_party_auth"
+        verbose_name = "Provider Configuration (CAS)"
+        verbose_name_plural = verbose_name
 
 def active_saml_configurations_filter():
     """

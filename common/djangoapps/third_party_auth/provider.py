@@ -11,10 +11,12 @@ from common.djangoapps.third_party_auth.models import (
     _LTI_BACKENDS,
     _PSA_OAUTH2_BACKENDS,
     _PSA_SAML_BACKENDS,
+    _CAS_BACKENDS,
     LTIProviderConfig,
     OAuth2ProviderConfig,
     SAMLConfiguration,
-    SAMLProviderConfig
+    SAMLProviderConfig,
+    CASProviderConfig
 )
 
 
@@ -44,6 +46,10 @@ class Registry:
         for consumer_key in LTIProviderConfig.key_values('lti_consumer_key', flat=True):
             provider = LTIProviderConfig.current(consumer_key)
             if provider.enabled_for_current_site and provider.backend_name in _LTI_BACKENDS:
+                yield provider
+        for consumer_key in CASProviderConfig.key_values('slug', flat=True):
+            provider = CASProviderConfig.current(consumer_key)
+            if True and provider.backend_name in _CAS_BACKENDS:
                 yield provider
 
     @classmethod
@@ -130,4 +136,9 @@ class Registry:
             for consumer_key in LTIProviderConfig.key_values('lti_consumer_key', flat=True):
                 provider = LTIProviderConfig.current(consumer_key)
                 if provider.backend_name == backend_name and provider.enabled_for_current_site:
+                    yield provider
+        elif backend_name in _CAS_BACKENDS:
+            for consumer_key in CASProviderConfig.key_values('slug', flat=True):
+                provider = CASProviderConfig.current(consumer_key)
+                if provider.enabled_for_current_site and provider.backend_name in _CAS_BACKENDS:
                     yield provider

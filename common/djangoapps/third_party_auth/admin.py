@@ -18,7 +18,8 @@ from .models import (
     OAuth2ProviderConfig,
     SAMLConfiguration,
     SAMLProviderConfig,
-    SAMLProviderData
+    SAMLProviderData,
+    CASProviderConfig
 )
 from .tasks import fetch_saml_metadata
 
@@ -26,6 +27,11 @@ from .tasks import fetch_saml_metadata
 class OAuth2ProviderConfigForm(forms.ModelForm):
     """ Django Admin form class for OAuth2ProviderConfig """
     backend_name = forms.ChoiceField(choices=((name, name) for name in _PSA_OAUTH2_BACKENDS))
+
+
+class CASProviderConfigForm(forms.ModelForm):
+    """ Django Admin form class for OAuth2ProviderConfig """
+    backend_name = forms.ChoiceField(choices=((name, name) for name in ["CAS"]))
 
 
 class OAuth2ProviderConfigAdmin(KeyedConfigurationModelAdmin):
@@ -39,8 +45,12 @@ class OAuth2ProviderConfigAdmin(KeyedConfigurationModelAdmin):
             'skip_email_verification', 'change_date', 'changed_by', 'edit_link',
         )
 
-admin.site.register(OAuth2ProviderConfig, OAuth2ProviderConfigAdmin)
+class CASProviderConfigAdmin(KeyedConfigurationModelAdmin):
+    """ Django Admin class for OAuth2ProviderConfig """
+    form = CASProviderConfigForm
 
+admin.site.register(OAuth2ProviderConfig, OAuth2ProviderConfigAdmin)
+admin.site.register(CASProviderConfig, CASProviderConfigAdmin)
 
 class SAMLProviderConfigForm(forms.ModelForm):
     """ Django Admin form class for SAMLProviderConfig """
