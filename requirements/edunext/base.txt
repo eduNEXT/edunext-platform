@@ -61,7 +61,7 @@ newrelic==6.2.0.156       # via -c requirements/edunext/../edx/base.txt, edx-dja
 oauthlib==3.0.1           # via -c requirements/edunext/../edx/base.txt, django-oauth-toolkit, requests-oauthlib, social-auth-core
 openedx-events==0.6.0     # via -r requirements/edunext/base.in, eox-hooks
 openedx-filters==0.4.3    # via -r requirements/edunext/base.in
-openedx-scorm-xblock==12.0.0  # via -r requirements/edunext/base.in
+openedx-scorm-xblock==11.1.1  # via -r requirements/edunext/base.in
 git+https://github.com/oppia/xblock.git@3b5c17c5832b4f8ef132c6bbf48da8a86df43b3d#egg=oppia-xblock  # via -r requirements/edunext/github.in
 packaging==20.9           # via -c requirements/edunext/../edx/base.txt, drf-yasg
 parsel==1.6.0             # via xblock-image-explorer
