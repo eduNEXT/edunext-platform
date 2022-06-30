@@ -47,9 +47,9 @@ class Registry:
             provider = LTIProviderConfig.current(consumer_key)
             if provider.enabled_for_current_site and provider.backend_name in _LTI_BACKENDS:
                 yield provider
-        for consumer_key in CASProviderConfig.key_values('slug', flat=True):
-            provider = CASProviderConfig.current(consumer_key)
-            if True and provider.backend_name in _CAS_BACKENDS:
+        for provider_key in CASProviderConfig.key_values('slug', flat=True):
+            provider = CASProviderConfig.current(provider_key)
+            if provider.enabled_for_current_site and provider.backend_name in _CAS_BACKENDS:
                 yield provider
 
     @classmethod
@@ -138,7 +138,7 @@ class Registry:
                 if provider.backend_name == backend_name and provider.enabled_for_current_site:
                     yield provider
         elif backend_name in _CAS_BACKENDS:
-            for consumer_key in CASProviderConfig.key_values('slug', flat=True):
-                provider = CASProviderConfig.current(consumer_key)
+            for provider_key in CASProviderConfig.key_values('slug', flat=True):
+                provider = CASProviderConfig.current(provider_key)
                 if provider.enabled_for_current_site and provider.backend_name in _CAS_BACKENDS:
                     yield provider

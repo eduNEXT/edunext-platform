@@ -558,6 +558,7 @@ class SAMLConfiguration(ConfigurationModel):
 class CASProviderConfig(ProviderConfig):
     KEY_FIELDS = ('slug',)
     prefix = 'cas'
+    backend_name = 'centralized-auth-service'
     class Meta:
         app_label = "third_party_auth"
         verbose_name = "Provider Configuration (CAS)"
