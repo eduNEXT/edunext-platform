@@ -36,7 +36,7 @@ class TestCertificatePipelineStep(PipelineStep):
     Utility function used when getting steps for pipeline.
     """
 
-    def run_filter(self, user, course_key, mode, status, grade, generation_mode):  # pylint: disable=arguments-differ
+    def run_filter(self, user, course_key, mode, status, grade, generation_mode):  # pylint: disable=arguments-differ, unused-argument
         """Pipeline steps that changes certificate mode from honor to no-id-professional."""
         if mode == 'honor':
             return {
@@ -50,7 +50,7 @@ class TestStopCertificateGenerationStep(PipelineStep):
     Utility function used when getting steps for pipeline.
     """
 
-    def run_filter(self, user, course_key, mode, status, grade, generation_mode):  # pylint: disable=arguments-differ
+    def run_filter(self, user, course_key, mode, status, grade, generation_mode):  # pylint: disable=arguments-differ, unused-argument
         """Pipeline step that stops the certificate generation process."""
         raise CertificateCreationRequested.PreventCertificateCreation(
             "You can't generate a certificate from this site."

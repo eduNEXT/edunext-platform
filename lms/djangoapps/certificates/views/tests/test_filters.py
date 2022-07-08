@@ -49,7 +49,7 @@ class TestRenderCustomResponse(PipelineStep):
     Utility class used when getting steps for pipeline.
     """
 
-    def run_filter(self, context, custom_template):  # pylint: disable=arguments-differ
+    def run_filter(self, context, custom_template):  # pylint: disable=arguments-differ, unused-argument
         """Pipeline step that returns a custom response when rendering the certificate."""
         response = HttpResponse("Here's the text of the web page.")
         raise CertificateRenderStarted.RenderCustomResponse(
@@ -63,7 +63,7 @@ class TestCertificateRenderPipelineStep(PipelineStep):
     Utility class used when getting steps for pipeline.
     """
 
-    def run_filter(self, context, custom_template):  # pylint: disable=arguments-differ
+    def run_filter(self, context, custom_template):  # pylint: disable=arguments-differ, unused-argument
         """
         Pipeline step that gets or creates a new custom template to render instead
         of the original.

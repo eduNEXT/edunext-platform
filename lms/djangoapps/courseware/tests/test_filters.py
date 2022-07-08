@@ -37,7 +37,7 @@ class TestRedirectToPage(PipelineStep):
     Utility class used when getting steps for pipeline.
     """
 
-    def run_filter(self, context, template_name):  # pylint: disable=arguments-differ
+    def run_filter(self, context, template_name):  # pylint: disable=arguments-differ, unused-argument
         """
         Pipeline step that redirects to the course survey.
 
@@ -56,14 +56,14 @@ class TestRedirectToDefaultPage(PipelineStep):
     Utility class used when getting steps for pipeline.
     """
 
-    def run_filter(self, context, template_name):  # pylint: disable=arguments-differ
+    def run_filter(self, context, template_name):  # pylint: disable=arguments-differ, unused-argument
         """
         Pipeline step that redirects to the default page when redirect_to is not specified.
 
         When raising RedirectToPage, this filter uses a redirect_to field handled by
         the course about view that redirects to that URL.
         """
-        course_key = str(context.get("course").id)
+        _course_key = str(context.get("course").id)
         raise CourseAboutRenderStarted.RedirectToPage(
             "You can't access this courses about page, redirecting to the correct location.",
         )
@@ -74,7 +74,7 @@ class TestRenderCustomResponse(PipelineStep):
     Utility class used when getting steps for pipeline.
     """
 
-    def run_filter(self, context, template_name):  # pylint: disable=arguments-differ
+    def run_filter(self, context, template_name):  # pylint: disable=arguments-differ, unused-argument
         """
         Pipeline step that redirects to the course survey.
 

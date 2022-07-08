@@ -20,7 +20,7 @@ class TestEnrollmentPipelineStep(PipelineStep):
     Utility function used when getting steps for pipeline.
     """
 
-    def run_filter(self, user, course_key, mode):  # pylint: disable=arguments-differ
+    def run_filter(self, user, course_key, mode):  # pylint: disable=arguments-differ, unused-argument
         """Pipeline steps that changes mode to honor."""
         if mode == "no-id-professional":
             raise CourseEnrollmentStarted.PreventEnrollment()
@@ -101,7 +101,7 @@ class TestRenderCustomResponse(PipelineStep):
     Utility class used when getting steps for pipeline.
     """
 
-    def run_filter(self, context, template_name):  # pylint: disable=arguments-differ
+    def run_filter(self, context, template_name):  # pylint: disable=arguments-differ, unused-argument
         """Pipeline step that changes dashboard view response before the dashboard is rendered."""
         response = HttpResponse("This is a custom response.")
         raise DashboardRenderStarted.RenderCustomResponse(

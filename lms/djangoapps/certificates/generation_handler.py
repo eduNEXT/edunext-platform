@@ -7,7 +7,6 @@ cannot be generated, a message is logged and no further action is taken.
 """
 
 import logging
-from django.conf import settings
 from openedx_filters.learning.filters import CertificateCreationRequested
 
 from common.djangoapps.course_modes import api as modes_api
@@ -38,7 +37,7 @@ class CertificateGenerationNotAllowed(GeneratedCertificateException):
     pass
 
 
-def generate_certificate_task(user, course_key, generation_mode=None, delay_seconds=CERTIFICATE_DELAY_SECONDS):
+def generate_certificate_task(user, course_key, generation_mode=None, _delay_seconds=CERTIFICATE_DELAY_SECONDS):
     """
     Create a task to generate a certificate for this user in this course run, if the user is eligible and a certificate
     can be generated.
@@ -65,7 +64,7 @@ def generate_allowlist_certificate_task(user, course_key, generation_mode=None):
         try:
             return _generate_certificate_task(
                 user=user, course_key=course_key, enrollment_mode=enrollment_mode, course_grade=course_grade,
-                generation_mode=generation_mode, delay_seconds=delay_seconds,
+                generation_mode=generation_mode,
             )
         except CertificateGenerationNotAllowed:
             # Catch exception to contain error message in console.

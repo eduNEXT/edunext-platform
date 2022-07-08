@@ -505,7 +505,7 @@ def render_cert_by_uuid(request, certificate_uuid):
     template_path="certificates/server-error.html",
     test_func=lambda request: request.GET.get('preview', None)
 )
-@pluggable_override('OVERRIDE_RENDER_CERTIFICATE_VIEW')
+@pluggable_override('OVERRIDE_RENDER_CERTIFICATE_VIEW')  # pylint: disable=too-many-statements
 def render_html_view(request, course_id, certificate=None):  # pylint: disable=too-many-statements
     """
     This public view generates an HTML representation of the specified user and course

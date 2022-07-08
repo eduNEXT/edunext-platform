@@ -82,7 +82,7 @@ def listen_for_passing_grade(sender, user, course_id, **kwargs):  # pylint: disa
              f'was received.')
     try:
         return generate_certificate_task(user, course_id)
-    except CertificateGenerationNotAllowed as e:
+    except CertificateGenerationNotAllowed:
         log.exception(
             "Certificate generation not allowed for user %s in course %s",
             str(user),
@@ -128,7 +128,7 @@ def _listen_for_id_verification_status_changed(sender, user, **kwargs):  # pylin
                  f'verification status is {expected_verification_status}')
         try:
             generate_certificate_task(user, enrollment.course_id)
-        except CertificateGenerationNotAllowed as e:
+        except CertificateGenerationNotAllowed:
             log.exception(
                 "Certificate generation not allowed for user %s in course %s",
                 str(user),
@@ -149,7 +149,7 @@ def _listen_for_enrollment_mode_change(sender, user, course_key, mode, **kwargs)
                  f'enrollment mode is now {mode}.')
         try:
             return generate_certificate_task(user, course_key)
-        except CertificateGenerationNotAllowed as e:
+        except CertificateGenerationNotAllowed:
             log.exception(
                 "Certificate generation not allowed for user %s in course %s",
                 str(user),
