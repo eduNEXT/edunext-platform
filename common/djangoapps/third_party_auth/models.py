@@ -556,9 +556,16 @@ class SAMLConfiguration(ConfigurationModel):
 
 
 class CASProviderConfig(ProviderConfig):
-    KEY_FIELDS = ('slug',)
-    prefix = 'cas'
-    backend_name = 'centralized-auth-service'
+    """
+    General configuration required for this Open edX instance to act as a CAS
+    Service Provider and allow users to authenticate via third party CAS
+    Identity Providers.
+    """
+
+    KEY_FIELDS = ("slug",)
+    prefix = "cas"
+    backend_name = "centralized-auth-service"
+
     class Meta:
         app_label = "third_party_auth"
         verbose_name = "Provider Configuration (CAS)"
