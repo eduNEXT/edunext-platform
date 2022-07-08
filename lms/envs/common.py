@@ -3228,6 +3228,9 @@ INSTALLED_APPS = [
 
     # Blockstore
     'blockstore.apps.bundles',
+
+    # MFE API
+    'lms.djangoapps.mfe_config_api',
 ]
 
 ######################### CSRF #########################################
@@ -5091,3 +5094,41 @@ DISCUSSION_MODERATION_CLOSE_REASON_CODES = {
     "duplicate": _("Post is a duplicate"),
     "off-topic": _("Post is off-topic"),
 }
+
+
+# .. toggle_name: ENABLE_MFE_CONFIG_API
+# .. toggle_implementation: DjangoSetting
+# .. toggle_default: False
+# .. toggle_description: Set to True to enable MFE Config API. This is disabled by
+#   default.
+# .. toggle_use_cases: open_edx
+# .. toggle_creation_date: 2022-05-20
+# .. toggle_target_removal_date: None
+# .. toggle_warnings: None
+# .. toggle_tickets: None
+ENABLE_MFE_CONFIG_API = False
+
+# .. setting_name: MFE_CONFIG
+# .. setting_implementation: DjangoSetting
+# .. setting_default: {}
+# .. setting_description: Is a configuration that will be exposed by the MFE Config API to be consumed by the mfes
+#     Example: {
+#     "BASE_URL": "https://name_of_mfe.example.com",
+#     "LANGUAGE_PREFERENCE_COOKIE_NAME": "example-language-preference",
+#     "CREDENTIALS_BASE_URL": "https://credentials.example.com",
+#     "DISCOVERY_API_BASE_URL": "https://discovery.example.com",
+#     "LMS_BASE_URL": "https://courses.example.com",
+#     "LOGIN_URL": "https://courses.example.com/login",
+#     "LOGOUT_URL": "https://courses.example.com/logout",
+#     "STUDIO_BASE_URL": "https://studio.example.com",
+#     "LOGO_URL": "https://courses.example.com/logo.png"
+# }
+# .. setting_use_cases: open_edx
+# .. setting_creation_date: 2022-07-08
+MFE_CONFIG = {}
+
+# .. setting_name: MFE_CONFIG_API_CACHE_TIMEOUT
+# .. setting_default: 60*5
+# .. setting_description: The MFE Config API response will be cached during the
+#   specified time
+MFE_CONFIG_API_CACHE_TIMEOUT = 60 * 5
