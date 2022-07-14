@@ -301,6 +301,7 @@ django==3.2.13
     #   jsonfield
     #   lti-consumer-xblock
     #   openedx-events
+    #   openedx-filters
     #   ora2
     #   super-csv
     #   xss-utils
@@ -918,7 +919,9 @@ openedx-calc==2.0.1
     # via -r requirements/edx/testing.txt
 openedx-events==0.6.0
     # via -r requirements/edx/testing.txt
-ora2==3.7.2
+openedx-filters==0.7.0
+    # via -r requirements/edx/testing.txt
+ora2==3.7.8
     # via -r requirements/edx/testing.txt
 packaging==21.0
     # via
