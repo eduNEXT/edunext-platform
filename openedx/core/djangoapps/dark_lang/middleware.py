@@ -108,7 +108,7 @@ class DarkLangMiddleware(MiddlewareMixin):
         Apply language specified in site configuration.
         """
         language = get_value('LANGUAGE_CODE', None)
-        if language:
+        if language and not request.COOKIES.get(settings.LANGUAGE_COOKIE, None):
             request.session[LANGUAGE_SESSION_KEY] = language
             set_language_cookie(request, response, language)
 
