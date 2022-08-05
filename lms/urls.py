@@ -1018,5 +1018,5 @@ if getattr(settings, 'PROVIDER_STATES_URL', None):
 
 # MFE API urls
 urlpatterns += [
-    path('api/v1/mfe_config', include(('lms.djangoapps.mfe_config_api.urls', 'lms.djangoapps.mfe_config_api'), namespace='mfe_config_api'))
+    path('api/mfe_config/v1', include(('lms.djangoapps.mfe_config_api.urls', 'lms.djangoapps.mfe_config_api'), namespace='mfe_config_api'))
 ]
