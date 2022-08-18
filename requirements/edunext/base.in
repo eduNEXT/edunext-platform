@@ -42,3 +42,4 @@ flow-control-xblock                 # XBlock Flow Control.
 # Community Xblocks #
 #####################
 ubcpi-xblock                        # UBC Peer Instruction Tool for edX. This is used by some clients.
+openedx-scorm-xblock

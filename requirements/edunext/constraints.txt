@@ -10,3 +10,4 @@
 
 # version 51.0.0 drops support for python 3.5
 setuptools==50.3.0
+openedx-scorm-xblock==10.1.1
