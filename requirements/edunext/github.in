@@ -79,3 +79,6 @@ git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1
 
 # Patched version that includes the fullname
 git+https://github.com/eduNEXT/xblock-lti-consumer.git@v1.2.6.1#egg=lti_consumer-xblock==v1.2.6.1
+
+# PDF Xblock
+git+https://github.com/appsembler/pdfXBlock.git@v0.3.1#egg=pdf-xblock==0.3.1

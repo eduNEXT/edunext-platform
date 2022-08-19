@@ -948,3 +948,29 @@ plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_c
 ########################## Derive Any Derived Settings  #######################
 
 derive_settings(__name__)
+
+# TODO: This is intended to be replaced by eox-scorm-proxy after EU migration. This function 
+# replaces the storage backend for openedx-scorm-xblock
+def scorm_xblock_storage(xblock):
+    from django.conf import settings as tenant_settings
+    from storages.backends.s3boto import S3BotoStorage
+
+    if SERVICE_VARIANT == "lms":
+        domain = tenant_settings.LMS_BASE
+    else:
+        domain = tenant_settings.CMS_BASE
+
+    bucket_host = "s3.eu-central-1.amazonaws.com"
+
+    return S3BotoStorage(
+        bucket=getattr(settings, 'EOX_SCORM_PROXY_AWS_STORAGE_BUCKET_NAME', settings.AWS_STORAGE_BUCKET_NAME),
+        access_key=getattr(settings, 'EOX_SCORM_PROXY_QUERYSTRING_EXPIRE', settings.AWS_ACCESS_KEY_ID),
+        secret_key=getattr(settings, 'EOX_SCORM_PROXY_QUERYSTRING_EXPIRE', settings.AWS_SECRET_ACCESS_KEY),
+        host=getattr(settings, 'EOX_SCORM_PROXY_HOST', bucket_host),
+        querystring_expire=getattr(settings, 'EOX_SCORM_PROXY_QUERYSTRING_EXPIRE', 86400),
+        custom_domain="{domain}/scorm-proxy".format(domain)
+    )
+
+XBLOCK_SETTINGS["ScormXBlock"] = {
+    "STORAGE_FUNC": scorm_xblock_storage,
+}
