@@ -78,8 +78,9 @@ def is_theme_dir(_dir):
     Returns:
         Returns true if given dir is a theme directory.
     """
-    theme_sub_directories = {'lms', 'cms'}
-    return bool(os.path.isdir(_dir) and theme_sub_directories.intersection(os.listdir(_dir)))
+    return False
+    # theme_sub_directories = {'lms', 'cms'}
+    # return bool(os.path.isdir(_dir) and theme_sub_directories.intersection(os.listdir(_dir)))
 
 
 def get_project_root_name_from_settings(project_root):
