@@ -18,6 +18,8 @@ from hashlib import sha1
 from django.apps import apps
 from django.db import models, IntegrityError, transaction
 from django.utils.encoding import python_2_unicode_compatible
+from django.contrib.auth import get_user_model
+
 from django.utils.timezone import now
 from lazy import lazy
 from model_utils.models import TimeStampedModel
@@ -28,9 +30,15 @@ from simple_history.models import HistoricalRecords
 from lms.djangoapps.courseware.fields import UnsignedBigIntAutoField
 from lms.djangoapps.grades import events  # lint-amnesty, pylint: disable=unused-import
 from openedx.core.lib.cache_utils import get_cache
+from lms.djangoapps.grades.signals.signals import (
+    COURSE_GRADE_PASSED_FIRST_TIME,
+    COURSE_GRADE_PASSED_UPDATE_IN_LEARNER_PATHWAY
+)
+from openedx_events.learning.data import GradeData, CourseData, UserData, UserPersonalData # lint-amnesty, pylint: disable=wrong-import-order
+from openedx_events.learning.signals import PERSISTENT_GRADE_UPDATED # lint-amnesty, pylint: disable=wrong-import-order
 
 log = logging.getLogger(__name__)
-
+User = get_user_model()
 
 BLOCK_RECORD_LIST_VERSION = 1
 
@@ -653,6 +661,32 @@ class PersistentCourseGrade(TimeStampedModel):
 
         cls._emit_grade_calculated_event(grade)
         cls._update_cache(course_id, user_id, grade)
+
+        user = User.objects.get(pk=user_id)
+
+         # .. event_implemented_name: PERSISTENT_GRADE_UPDATED
+        PERSISTENT_GRADE_UPDATED.send_event(
+            grade=GradeData(
+                user=UserData(
+                    pii=UserPersonalData(
+                        username=user.username,
+                        email=user.email,
+                        name=user.profile.name,
+                    ),
+                    id=user.id,
+                    is_active=user.is_active,
+                ),
+                course=CourseData(
+                    course_key=course_id,
+                ),
+                course_edited_timestamp=grade.course_edited_timestamp,
+                course_version=grade.course_version,
+                grading_policy_hash=grade.grading_policy_hash,
+                percent_grade=grade.percent_grade,
+                letter_grade=grade.letter_grade,
+                passed_timestamp=grade.passed_timestamp,
+            )
+        )
         return grade
 
     @classmethod
