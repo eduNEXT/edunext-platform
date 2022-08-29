@@ -34,11 +34,8 @@ from lms.djangoapps.grades.signals.signals import (
     COURSE_GRADE_PASSED_FIRST_TIME,
     COURSE_GRADE_PASSED_UPDATE_IN_LEARNER_PATHWAY
 )
-from openedx_events.learning.data import GradeData, CourseData, UserData, UserPersonalData # lint-amnesty, pylint: disable=wrong-import-order
-from openedx_events.learning.signals import PERSISTENT_GRADE_UPDATED # lint-amnesty, pylint: disable=wrong-import-order
 
 log = logging.getLogger(__name__)
-User = get_user_model()
 
 BLOCK_RECORD_LIST_VERSION = 1
 
@@ -661,32 +658,7 @@ class PersistentCourseGrade(TimeStampedModel):
 
         cls._emit_grade_calculated_event(grade)
         cls._update_cache(course_id, user_id, grade)
-
-        user = User.objects.get(pk=user_id)
-
-         # .. event_implemented_name: PERSISTENT_GRADE_UPDATED
-        PERSISTENT_GRADE_UPDATED.send_event(
-            grade=GradeData(
-                user=UserData(
-                    pii=UserPersonalData(
-                        username=user.username,
-                        email=user.email,
-                        name=user.profile.name,
-                    ),
-                    id=user.id,
-                    is_active=user.is_active,
-                ),
-                course=CourseData(
-                    course_key=course_id,
-                ),
-                course_edited_timestamp=grade.course_edited_timestamp,
-                course_version=grade.course_version,
-                grading_policy_hash=grade.grading_policy_hash,
-                percent_grade=grade.percent_grade,
-                letter_grade=grade.letter_grade,
-                passed_timestamp=grade.passed_timestamp,
-            )
-        )
+        cls._emit_persistent_grade_summary_event(course_id, user_id, grade)
         return grade
 
     @classmethod
@@ -703,6 +675,9 @@ class PersistentCourseGrade(TimeStampedModel):
     def _emit_grade_calculated_event(grade):
         events.course_grade_calculated(grade)
 
+    @staticmethod
+    def _emit_persistent_grade_summary_event(course_id, user_id, grade):
+        events.persistent_grade_summary(course_id, user_id, grade)
 
 @python_2_unicode_compatible
 class PersistentSubsectionGradeOverride(models.Model):

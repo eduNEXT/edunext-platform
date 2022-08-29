@@ -3,12 +3,12 @@ Test that various events are fired for models in the grades app.
 """
 
 from unittest import mock
-from datetime import datetime
+from django.utils.timezone import now
 
 from lms.djangoapps.grades.models import PersistentCourseGrade
 
-from openedx_events.learning.data import GradeData, CourseData, UserData, UserPersonalData # lint-amnesty, pylint: disable=wrong-import-order
-from openedx_events.learning.signals import PERSISTENT_GRADE_UPDATED # lint-amnesty, pylint: disable=wrong-import-order
+from openedx_events.learning.data import GradeData, CourseData # lint-amnesty, pylint: disable=wrong-import-order
+from openedx_events.learning.signals import PERSISTENT_GRADE_SUMMARY # lint-amnesty, pylint: disable=wrong-import-order
 from openedx_events.tests.utils import OpenEdxEventsTestMixin
 
 from xmodule.modulestore.tests.django_utils import SharedModuleStoreTestCase
@@ -22,10 +22,10 @@ class PersistedGradeEventsTest(SharedModuleStoreTestCase, OpenEdxEventsTestMixin
     This class guarantees that the following events are sent during the user updates their grade, with
     the exact Data Attributes as the event definition stated:
 
-        - PERSISTENT_GRADE_UPDATED: sent after the user updates the grade.
+        - PERSISTENT_GRADE_SUMMARY: sent after the user updates or creates the grade.
     """
     ENABLED_OPENEDX_EVENTS = [
-        "org.openedx.learning.course.persistent_grade.updated.v1"
+        "org.openedx.learning.course.persistent_grade.summary.v1"
     ]
 
     @classmethod
@@ -46,7 +46,7 @@ class PersistedGradeEventsTest(SharedModuleStoreTestCase, OpenEdxEventsTestMixin
             "user_id": self.user.id,
             "course_id": self.course.id,
             "course_version": self.course.number,
-            "course_edited_timestamp": datetime.now(),
+            "course_edited_timestamp": now(),
             "percent_grade": 77.7,
             "letter_grade": "Great job",
             "passed": True,
@@ -61,32 +61,24 @@ class PersistedGradeEventsTest(SharedModuleStoreTestCase, OpenEdxEventsTestMixin
     
     def test_persistent_grade_event_emitted(self):
         """
-        Test whether the persistent grade updated event is sent after the user updates their grade.
+        Test whether the persistent grade updated event is sent after the user updates creates or updates their grade.
 
         Expected result:
-            - PERSISTENT_GRADE_UPDATED is sent and received by the mocked receiver.
+            - PERSISTENT_GRADE_SUMMARY is sent and received by the mocked receiver.
             - The arguments that the receiver gets are the arguments sent by the event
             except the metadata generated on the fly.
         """
         event_receiver = mock.Mock(side_effect=self._event_receiver_side_effect)
         
-        PERSISTENT_GRADE_UPDATED.connect(event_receiver)
+        PERSISTENT_GRADE_SUMMARY.connect(event_receiver)
         grade = PersistentCourseGrade.update_or_create(**self.params)
         self.assertTrue(self.receiver_called)
         self.assertDictContainsSubset(
             {
-                "signal": PERSISTENT_GRADE_UPDATED,
+                "signal": PERSISTENT_GRADE_SUMMARY,
                 "sender": None,
                 "grade": GradeData(
-                    user=UserData(
-                        pii=UserPersonalData(
-                            username=self.user.username,
-                            email=self.user.email,
-                            name=self.user.profile.name,
-                        ),
-                        id=self.params["user_id"],
-                        is_active=self.user.is_active,
-                    ),
+                    user_id=self.params["user_id"],
                     course=CourseData(
                         course_key=self.params["course_id"],
                     ),
