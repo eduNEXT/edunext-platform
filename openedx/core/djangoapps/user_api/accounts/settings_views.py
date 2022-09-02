@@ -25,7 +25,8 @@ from openedx.core.djangoapps.programs.models import ProgramsApiConfig
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.user_api.accounts.toggles import (
     should_redirect_to_account_microfrontend,
-    should_redirect_to_order_history_microfrontend
+    should_redirect_to_order_history_microfrontend,
+    should_show_linked_accounts_tab
 )
 from openedx.core.djangoapps.user_api.preferences.api import get_user_preferences
 from openedx.core.lib.edx_api_utils import get_edx_api_data
@@ -139,6 +140,7 @@ def account_settings_context(request):
         'show_dashboard_tabs': True,
         'order_history': user_orders,
         'disable_order_history_tab': should_redirect_to_order_history_microfrontend(),
+        'show_linked_accounts_tab': should_show_linked_accounts_tab(),
         'enable_account_deletion': configuration_helpers.get_value(
             'ENABLE_ACCOUNT_DELETION', settings.FEATURES.get('ENABLE_ACCOUNT_DELETION', False)
         ),
