@@ -4,6 +4,8 @@ Emits course grade events.
 from crum import get_current_user
 from eventtracking import tracker
 
+from logging import getLogger
+
 from common.djangoapps.track import contexts
 from common.djangoapps.track.event_transaction_utils import (
     create_new_event_transaction_id,
@@ -12,9 +14,9 @@ from common.djangoapps.track.event_transaction_utils import (
     set_event_transaction_type
 )
 
-from lms.djangoapps.grades.signals.signals import SCHEDULE_FOLLOW_UP_SEGMENT_EVENT_FOR_COURSE_PASSED_FIRST_TIME
+# from lms.djangoapps.grades.signals.signals import SCHEDULE_FOLLOW_UP_SEGMENT_EVENT_FOR_COURSE_PASSED_FIRST_TIME
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
-from openedx.features.enterprise_support.context import get_enterprise_event_context
+# from openedx.features.enterprise_support.context import get_enterprise_event_context
 
 from openedx_events.learning.data import GradeData, CourseData # lint-amnesty, pylint: disable=wrong-import-order
 from openedx_events.learning.signals import PERSISTENT_GRADE_SUMMARY # lint-amnesty, pylint: disable=wrong-import-order
@@ -145,26 +147,26 @@ def course_grade_calculated(course_grade):
             }
         )
 
-def course_grade_passed_first_time(user_id, course_id):
-    """
-    Emits an event edx.course.grade.passed.first_time
-    with data from the passed course_grade.
-    """
-    event_name = COURSE_GRADE_PASSED_FIRST_TIME_EVENT_TYPE
-    context = contexts.course_context_from_course_id(course_id)
-    context_enterprise = get_enterprise_event_context(user_id, course_id)
-    context.update(context_enterprise)
-    # TODO (AN-6134): remove this context manager
-    with tracker.get_tracker().context(event_name, context):
-        tracker.emit(
-            event_name,
-            {
-                'user_id': str(user_id),
-                'course_id': str(course_id),
-                'event_transaction_id': str(get_event_transaction_id()),
-                'event_transaction_type': str(get_event_transaction_type())
-            }
-        )
+# def course_grade_passed_first_time(user_id, course_id):
+#     """
+#     Emits an event edx.course.grade.passed.first_time
+#     with data from the passed course_grade.
+#     """
+#     event_name = COURSE_GRADE_PASSED_FIRST_TIME_EVENT_TYPE
+#     context = contexts.course_context_from_course_id(course_id)
+#     context_enterprise = get_enterprise_event_context(user_id, course_id)
+#     context.update(context_enterprise)
+#     # TODO (AN-6134): remove this context manager
+#     with tracker.get_tracker().context(event_name, context):
+#         tracker.emit(
+#             event_name,
+#             {
+#                 'user_id': str(user_id),
+#                 'course_id': str(course_id),
+#                 'event_transaction_id': str(get_event_transaction_id()),
+#                 'event_transaction_type': str(get_event_transaction_type())
+#             }
+#         )
 
 
 def course_grade_now_passed(user, course_id):

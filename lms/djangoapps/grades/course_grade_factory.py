@@ -182,6 +182,7 @@ class CourseGradeFactory:
 
         should_persist = should_persist and course_grade.attempted
         if should_persist:
+            log.info("\nmsg2\n")
             course_grade._subsection_grade_factory.bulk_create_unsaved()  # lint-amnesty, pylint: disable=protected-access
             PersistentCourseGrade.update_or_create(
                 user_id=user.id,

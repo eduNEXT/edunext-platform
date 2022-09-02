@@ -30,10 +30,10 @@ from simple_history.models import HistoricalRecords
 from lms.djangoapps.courseware.fields import UnsignedBigIntAutoField
 from lms.djangoapps.grades import events  # lint-amnesty, pylint: disable=unused-import
 from openedx.core.lib.cache_utils import get_cache
-from lms.djangoapps.grades.signals.signals import (
-    COURSE_GRADE_PASSED_FIRST_TIME,
-    COURSE_GRADE_PASSED_UPDATE_IN_LEARNER_PATHWAY
-)
+# from lms.djangoapps.grades.signals.signals import (
+#     COURSE_GRADE_PASSED_FIRST_TIME,
+#     COURSE_GRADE_PASSED_UPDATE_IN_LEARNER_PATHWAY
+# )
 
 log = logging.getLogger(__name__)
 
