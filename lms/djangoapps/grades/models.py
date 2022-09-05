@@ -658,7 +658,7 @@ class PersistentCourseGrade(TimeStampedModel):
 
         cls._emit_grade_calculated_event(grade)
         cls._update_cache(course_id, user_id, grade)
-        cls._emit_persistent_grade_summary_event(course_id, user_id, grade)
+        cls._emit_persistent_grade_summary_changed_event(course_id, user_id, grade)
         return grade
 
     @classmethod
@@ -676,8 +676,8 @@ class PersistentCourseGrade(TimeStampedModel):
         events.course_grade_calculated(grade)
 
     @staticmethod
-    def _emit_persistent_grade_summary_event(course_id, user_id, grade):
-        events.persistent_grade_summary(course_id, user_id, grade)
+    def _emit_persistent_grade_summary_changed_event(course_id, user_id, grade):
+        events.persistent_grade_summary_changed(course_id, user_id, grade)
 
 @python_2_unicode_compatible
 class PersistentSubsectionGradeOverride(models.Model):

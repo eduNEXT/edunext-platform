@@ -19,7 +19,7 @@ from openedx.core.djangoapps.content.course_overviews.models import CourseOvervi
 # from openedx.features.enterprise_support.context import get_enterprise_event_context
 
 from openedx_events.learning.data import GradeData, CourseData # lint-amnesty, pylint: disable=wrong-import-order
-from openedx_events.learning.signals import PERSISTENT_GRADE_SUMMARY # lint-amnesty, pylint: disable=wrong-import-order
+from openedx_events.learning.signals import PERSISTENT_GRADE_SUMMARY_CHANGED # lint-amnesty, pylint: disable=wrong-import-order
 
 log = getLogger(__name__)
 
@@ -257,9 +257,9 @@ def fire_segment_event_on_course_grade_passed_first_time(user_id, course_locator
     log.info("Segment event fired for passed learners. Event: [{}], Data: [{}]".format(event_name, event_properties))
 
 
-def persistent_grade_summary(course_id, user_id, grade):
-     # .. event_implemented_name: PERSISTENT_GRADE_SUMMARY
-        PERSISTENT_GRADE_SUMMARY.send_event(
+def persistent_grade_summary_changed(course_id, user_id, grade):
+     # .. event_implemented_name: PERSISTENT_GRADE_SUMMARY_CHANGED
+        PERSISTENT_GRADE_SUMMARY_CHANGED.send_event(
             grade=GradeData(
                 user_id=user_id,
                 course=CourseData(

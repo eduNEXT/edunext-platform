@@ -8,7 +8,7 @@ from django.utils.timezone import now
 from lms.djangoapps.grades.models import PersistentCourseGrade
 
 from openedx_events.learning.data import GradeData, CourseData # lint-amnesty, pylint: disable=wrong-import-order
-from openedx_events.learning.signals import PERSISTENT_GRADE_SUMMARY # lint-amnesty, pylint: disable=wrong-import-order
+from openedx_events.learning.signals import PERSISTENT_GRADE_SUMMARY_CHANGED # lint-amnesty, pylint: disable=wrong-import-order
 from openedx_events.tests.utils import OpenEdxEventsTestMixin
 
 from xmodule.modulestore.tests.django_utils import SharedModuleStoreTestCase
@@ -22,7 +22,7 @@ class PersistedGradeEventsTest(SharedModuleStoreTestCase, OpenEdxEventsTestMixin
     This class guarantees that the following events are sent during the user updates their grade, with
     the exact Data Attributes as the event definition stated:
 
-        - PERSISTENT_GRADE_SUMMARY: sent after the user updates or creates the grade.
+        - PERSISTENT_GRADE_SUMMARY_CHANGED: sent after the user updates or creates the grade.
     """
     ENABLED_OPENEDX_EVENTS = [
         "org.openedx.learning.course.persistent_grade.summary.v1"
@@ -64,18 +64,18 @@ class PersistedGradeEventsTest(SharedModuleStoreTestCase, OpenEdxEventsTestMixin
         Test whether the persistent grade updated event is sent after the user updates creates or updates their grade.
 
         Expected result:
-            - PERSISTENT_GRADE_SUMMARY is sent and received by the mocked receiver.
+            - PERSISTENT_GRADE_SUMMARY_CHANGED is sent and received by the mocked receiver.
             - The arguments that the receiver gets are the arguments sent by the event
             except the metadata generated on the fly.
         """
         event_receiver = mock.Mock(side_effect=self._event_receiver_side_effect)
         
-        PERSISTENT_GRADE_SUMMARY.connect(event_receiver)
+        PERSISTENT_GRADE_SUMMARY_CHANGED.connect(event_receiver)
         grade = PersistentCourseGrade.update_or_create(**self.params)
         self.assertTrue(self.receiver_called)
         self.assertDictContainsSubset(
             {
-                "signal": PERSISTENT_GRADE_SUMMARY,
+                "signal": PERSISTENT_GRADE_SUMMARY_CHANGED,
                 "sender": None,
                 "grade": GradeData(
                     user_id=self.params["user_id"],
