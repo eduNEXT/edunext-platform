@@ -7,7 +7,7 @@ from django.utils.timezone import now
 
 from lms.djangoapps.grades.models import PersistentCourseGrade
 
-from openedx_events.learning.data import GradeData, CourseData # lint-amnesty, pylint: disable=wrong-import-order
+from openedx_events.learning.data import PersistentCourseGradeData, CourseData # lint-amnesty, pylint: disable=wrong-import-order
 from openedx_events.learning.signals import PERSISTENT_GRADE_SUMMARY_CHANGED # lint-amnesty, pylint: disable=wrong-import-order
 from openedx_events.tests.utils import OpenEdxEventsTestMixin
 
@@ -77,7 +77,7 @@ class PersistedGradeEventsTest(SharedModuleStoreTestCase, OpenEdxEventsTestMixin
             {
                 "signal": PERSISTENT_GRADE_SUMMARY_CHANGED,
                 "sender": None,
-                "grade": GradeData(
+                "grade": PersistentCourseGradeData(
                     user_id=self.params["user_id"],
                     course=CourseData(
                         course_key=self.params["course_id"],
