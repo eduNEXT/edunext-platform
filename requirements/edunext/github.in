@@ -48,6 +48,8 @@
 #     repos before picking a version number. Don't use 0.0 on master, only for
 #     tight-loop work in progress.
 
+git+https://github.com/eduNEXT/eox-hooks.git@dmh/persistent-grade-event#egg=eox-hooks==3.0.0
+git+https://github.com/eduNEXT/openedx-events.git@dmh/persistent-grade-event#egg=openedx-events==0.12.0
 #####################
 # Community Xblocks #
 #####################
