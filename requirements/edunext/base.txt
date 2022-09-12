@@ -196,8 +196,6 @@ git+https://github.com/eduNEXT/eox-scorm-proxy.git@poc#egg=eox-scorm-xblock==0.1
     # via -r requirements/edunext/github.in
 eox-tagging==4.0.0
     # via -r requirements/edunext/base.in
-eox-tenant==6.0.0
-    # via -r requirements/edunext/base.in
 eox-theming==3.0.0
     # via -r requirements/edunext/base.in
 event-tracking==1.0.4
@@ -504,6 +502,7 @@ xblock-utils==2.1.2
     #   webhook-xblock
     #   xblock-free-text-response
     #   xblock-problem-builder
+git+https://github.com/eduNEXT/eox-tenant.git@mjh/test-changes-in-tenant-api#egg=eox-tenant==6.1.0_beta
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
