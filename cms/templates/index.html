@@ -21,6 +21,19 @@ from openedx.core.djangolib.js_utils import (
   });
 </%block>
 
+<%
+    orgs = []
+    all_orgs = False
+    general_course_creation_permissions = request.user.is_staff or request.user.is_superuser
+    course_creator = CourseCreator.objects.filter(user=request.user).first()
+
+    if course_creator:
+      if course_creator.state == CourseCreator.GRANTED:
+        orgs = course_creator.organizations.all().values_list('short_name', flat=True)
+        all_orgs = course_creator.all_organizations
+        general_course_creation_permissions = all_orgs or general_course_creation_permissions
+%>
+
 <%block name="content">
 <div class="wrapper-mast wrapper">
   <header class="mast has-actions">
@@ -81,7 +94,14 @@ from openedx.core.djangolib.js_utils import (
                   <label for="new-course-org">${_("Organization")}</label>
                   ## Translators: This is an example for the name of the organization sponsoring a course, seen when filling out the form to create a new course. The organization name cannot contain spaces.
                   ## Translators: "e.g. UniversityX or OrganizationX" is a placeholder displayed when user put no data into this field.
-                  <input class="new-course-org" id="new-course-org" type="text" name="new-course-org" required placeholder="${_('e.g. UniversityX or OrganizationX')}" aria-describedby="tip-new-course-org tip-error-new-course-org" />
+                  % if general_course_creation_permissions:
+                    <input class="new-course-org" id="new-course-org" type="text" name="new-course-org" required placeholder="${_('e.g. UniversityX or OrganizationX')}" aria-describedby="tip-new-course-org tip-error-new-course-org" />
+                  % else:
+                    <select class="new-course-org" id="new-course-org" name="new-course-org" required aria-describedby="tip-new-course-org tip-error-new-course-org">
+                        % for org in orgs:
+                        <option class="new-course-org" name="new-course-org" required aria-describedby="tip-new-course-org tip-error-new-course-org" value="${ org }">${ org }</option>
+                        % endfor
+                    </select>
                   <span class="tip" id="tip-new-course-org">${Text(_("The name of the organization sponsoring the course. {strong_start}Note: The organization name is part of the course URL.{strong_end} This cannot be changed, but you can set a different display name in Advanced Settings later.")).format(
                       strong_start=HTML('<strong>'),
                       strong_end=HTML('</strong>'),
