@@ -208,6 +208,7 @@ EARNED_BUT_NOT_AVAILABLE_CERT_DATA = CertData(
     cert_web_view_url=None
 )
 
+
 def _unverified_cert_data():
     """
         platform_name is dynamically updated in multi-tenant installations
