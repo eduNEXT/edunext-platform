@@ -1547,7 +1547,8 @@ class TeamsPermissionsTestCase(ForumsEnableMixin, UrlResetMixin, SharedModuleSto
             user, mock_request,  # user is the person making the request.
             {
                 "user_id": str(thread_author.id),
-                "closed": False, "commentable_id": commentable_id,
+                "closed": False,
+                "commentable_id": commentable_id,
                 "context": "standalone",
                 "username": thread_author.username,
                 "course_id": str(self.course.id)
