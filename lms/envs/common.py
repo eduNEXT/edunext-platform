@@ -4430,6 +4430,12 @@ FINANCIAL_ASSISTANCE_MAX_LENGTH = 2500
 
 REGISTRATION_EXTENSION_FORM = None
 
+# .. setting_name: REGISTRATION_EXTENSION_FORM_FIELDS_TPA_OVERRIDES
+# .. setting_default: []
+# .. setting_description: List of custom fields included in the registriation
+#      form extension to be prefilled with third party auth data.
+REGISTRATION_EXTENSION_FORM_FIELDS_TPA_OVERRIDES = []
+
 # Identifier included in the User Agent from open edX mobile apps.
 MOBILE_APP_USER_AGENT_REGEXES = [
     r'edX/org.edx.mobile',

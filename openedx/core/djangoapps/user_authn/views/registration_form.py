@@ -1131,8 +1131,13 @@ class RegistrationFormFactory:
                             current_provider.skip_registration_form and enterprise_customer_for_request(request)
                         ) or current_provider.sync_learner_profile_data
                     )
+                    registration_fields = (
+                        self.DEFAULT_FIELDS
+                        + self.EXTRA_FIELDS
+                        + settings.REGISTRATION_EXTENSION_FORM_FIELDS_TPA_OVERRIDES
+                    )
 
-                    for field_name in self.DEFAULT_FIELDS + self.EXTRA_FIELDS:
+                    for field_name in registration_fields:
                         if field_name in field_overrides:
                             form_desc.override_field_properties(
                                 field_name, default=field_overrides[field_name]
