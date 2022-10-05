@@ -26,12 +26,10 @@ def should_redirect_to_order_history_microfrontend():
 
 
 def should_show_linked_accounts_tab():
-    '''Check if the the var `SHOW_LINKED_ACCOUNTS`
+    """Check if the the var `SHOW_LINKED_ACCOUNTS`
         is defined in configuration helpers.
-    '''
-    return (
-        configuration_helpers.get_value('SHOW_LINKED_ACCOUNTS', True)
-    )
+    """
+    return configuration_helpers.get_value('SHOW_LINKED_ACCOUNTS', True)
 
 
 # .. toggle_name: account.redirect_to_microfrontend
