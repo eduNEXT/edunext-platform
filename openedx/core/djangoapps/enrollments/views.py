@@ -32,7 +32,10 @@ from openedx.core.djangoapps.enrollments.serializers import CourseEnrollmentsApi
 from openedx.core.djangoapps.user_api.accounts.permissions import CanRetireUser
 from openedx.core.djangoapps.user_api.models import UserRetirementStatus
 from openedx.core.djangoapps.user_api.preferences.api import update_email_opt_in
-from openedx.core.lib.api.authentication import BearerAuthenticationAllowInactiveUser, OAuth2AuthenticationAllowInactiveUser
+from openedx.core.lib.api.authentication import (
+    BearerAuthenticationAllowInactiveUser,
+    OAuth2AuthenticationAllowInactiveUser,
+)
 from openedx.core.lib.api.permissions import ApiKeyHeaderPermission, ApiKeyHeaderPermissionIsAuthenticated
 from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin
 from openedx.core.lib.exceptions import CourseNotFoundError
