@@ -13,6 +13,7 @@
         return function(
             fieldsData,
             disableOrderHistoryTab,
+            showLinkedAccountsTab,
             ordersHistoryData,
             authData,
             passwordResetSupportUrl,
@@ -426,6 +427,7 @@
                 },
                 userPreferencesModel: userPreferencesModel,
                 disableOrderHistoryTab: disableOrderHistoryTab,
+                showLinkedAccountsTab: showLinkedAccountsTab,
                 betaLanguage: betaLanguage
             });
 
