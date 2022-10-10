@@ -34,7 +34,9 @@ from organizations.api import add_organization_course, ensure_organization
 from organizations.exceptions import InvalidOrganizationException
 from rest_framework.exceptions import ValidationError
 
+from organizations.models import Organization
 from cms.djangoapps.course_creators.views import add_user_with_status_unrequested, get_course_creator_status
+from cms.djangoapps.course_creators.models import CourseCreator
 from cms.djangoapps.models.settings.course_grading import CourseGradingModel
 from cms.djangoapps.models.settings.course_metadata import CourseMetadata
 from cms.djangoapps.models.settings.encoder import CourseSettingsEncoder
@@ -570,7 +572,9 @@ def course_listing(request):
         'allow_unicode_course_id': settings.FEATURES.get('ALLOW_UNICODE_COURSE_ID', False),
         'allow_course_reruns': settings.FEATURES.get('ALLOW_COURSE_RERUNS', True),
         'optimization_enabled': optimization_enabled,
-        'active_tab': 'courses'
+        'active_tab': 'courses',
+        'allowed_organizations': get_allowed_organizations(user),
+        'can_create_organizations': user_can_create_organizations(user),
     })
 
 
@@ -1885,3 +1889,36 @@ def _get_course_creator_status(user):
         course_creator_status = 'granted'
 
     return course_creator_status
+
+
+def get_allowed_organizations(user):
+    """
+    Helper method for returning the list of organizations for which the user is allowed to create courses.
+    """
+    if settings.FEATURES.get('ENABLE_CREATOR_GROUP', False):
+        return get_organizations(user)
+    else:
+        return []
+
+
+def user_can_create_organizations(user):
+    """
+    Returns True if the user can create organizations.
+    """
+    return user.is_staff or not settings.FEATURES.get('ENABLE_CREATOR_GROUP', False)
+
+
+def get_organizations(user):
+    """
+    Returns the list of organizations for which the user is allowed to create courses.
+    """
+    course_creator = CourseCreator.objects.filter(user=user)
+    if not course_creator:
+        return []
+    elif course_creator[0].all_organizations:
+        organizations = Organization.objects.all().values_list('short_name', flat=True)
+    else:
+        # User is defined to be unique, can assume a single entry.
+        organizations = course_creator[0].organizations.all().values_list('short_name', flat=True)
+
+    return organizations
