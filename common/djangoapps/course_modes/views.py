@@ -125,7 +125,8 @@ class ChooseModeView(View):
         has_enrolled_professional = (CourseMode.is_professional_slug(enrollment_mode) and is_active)
         if CourseMode.has_professional_mode(modes) and not has_enrolled_professional:
             purchase_workflow = request.GET.get("purchase_workflow", "single")
-            redirect_url = IDVerificationService.get_verify_location(course_id=course_key)
+            verify_url = IDVerificationService.get_verify_location('verify_student_start_flow', course_id=course_key)
+            redirect_url = f"{verify_url}?purchase_workflow={purchase_workflow}"
             if ecommerce_service.is_enabled(request.user):
                 professional_mode = modes.get(CourseMode.NO_ID_PROFESSIONAL_MODE) or modes.get(CourseMode.PROFESSIONAL)
                 if purchase_workflow == "single" and professional_mode.sku:
@@ -340,7 +341,7 @@ class ChooseModeView(View):
             donation_for_course[str(course_key)] = amount_value
             request.session["donation_for_course"] = donation_for_course
 
-            verify_url = IDVerificationService.get_verify_location(course_id=course_key)
+            verify_url = IDVerificationService.get_verify_location('verify_student_start_flow', course_id=course_key)
             return redirect(verify_url)
 
     def _get_requested_mode(self, request_dict):

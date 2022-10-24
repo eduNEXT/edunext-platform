@@ -11,6 +11,8 @@ from django.conf import settings
 from django.utils.timezone import now
 from django.utils.translation import gettext as _
 
+from django.urls import reverse
+
 from common.djangoapps.course_modes.models import CourseMode
 from common.djangoapps.student.models import User
 from lms.djangoapps.verify_student.utils import is_verification_expiring_soon
@@ -48,7 +50,7 @@ class XBlockVerificationService:
         """
         Returns the URL for a user to verify themselves.
         """
-        return IDVerificationService.get_verify_location()
+        return IDVerificationService.get_verify_location('verify_student_reverify')
 
 
 class IDVerificationService:
@@ -231,12 +233,39 @@ class IDVerificationService:
             return 'ID Verified'
 
     @classmethod
-    def get_verify_location(cls, course_id=None):
+    def get_verify_location(cls, url_name, course_id=None):
         """
+        url_name is one of:
+            'verify_student_verify_now'
+            'verify_student_reverify'
+
         Returns a string:
-            Returns URL for IDV on Account Microfrontend
+            eduNEXT:
+            If `ENABLE_ACCOUNT_MFE` setting is true, returns URL for
+            IDV microfrontend.
+            Else, returns URL for corresponding view.
         """
-        location = f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
-        if course_id:
-            location += f'?course_id={quote(str(course_id))}'
+        location = ''
+        if getattr(settings, 'ENABLE_ACCOUNT_MFE', False):
+            location = f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
+            if course_id:
+                location += f'?course_id={quote(str(course_id))}'
+        else:
+            if course_id:
+                location = reverse(url_name, args=[str(course_id)])
+            else:
+                location = reverse(url_name)
         return location
+
+    @classmethod
+    def email_reverify_url(cls):
+        """
+        Return a URL string for reverification emails:
+            eduNEXT:
+            If `ENABLE_ACCOUNT_MFE` setting is true, returns URL for IDV microfrontend.
+            Else, returns URL for reverify view.
+        """
+        if getattr(settings, 'ENABLE_ACCOUNT_MFE', False):
+            return f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
+        else:
+            return f'{settings.LMS_ROOT_URL}{reverse("verify_student_reverify")}'

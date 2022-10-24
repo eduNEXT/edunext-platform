@@ -497,7 +497,7 @@ class PayAndVerifyView(View):
             if is_enrolled:
                 if already_paid:
                     # If the student has paid, but not verified, redirect to the verification flow.
-                    url = IDVerificationService.get_verify_location(str(course_key))
+                    url = IDVerificationService.get_verify_location('verify_student_verify_now', str(course_key))
             else:
                 url = reverse('verify_student_start_flow', kwargs=course_kwargs)
 
@@ -1177,7 +1177,7 @@ def results_callback(request):  # lint-amnesty, pylint: disable=too-many-stateme
     elif result == "FAIL":
         log.debug("Denying verification for %s", receipt_id)
         attempt.deny(json.dumps(reason), error_code=error_code)
-        reverify_url = f'{settings.ACCOUNT_MICROFRONTEND_URL}/id-verification'
+        reverify_url = IDVerificationService.email_reverify_url()
         verification_status_email_vars['reasons'] = reason
         verification_status_email_vars['reverify_url'] = reverify_url
         verification_status_email_vars['faq_url'] = settings.ID_VERIFICATION_SUPPORT_LINK
@@ -1270,8 +1270,22 @@ class ReverifyView(View):
         Most of the work is done client-side by composing the same
         Backbone views used in the initial verification flow.
         """
-        IDV_workflow = IDVerificationService.get_verify_location()
-        return redirect(IDV_workflow)
+        verification_status = IDVerificationService.user_status(request.user)
+        expiration_datetime = IDVerificationService.get_expiration_datetime(request.user, ['approved'])
+        if can_verify_now(verification_status, expiration_datetime):
+            if getattr(settings, 'ENABLE_ACCOUNT_MFE', False):
+                return redirect(IDVerificationService.get_verify_location('verify_student_reverify'))
+            context = {
+                "user_full_name": request.user.profile.name,
+                "platform_name": configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
+                "capture_sound": staticfiles_storage.url("audio/camera_capture.wav"),
+            }
+            return render_to_response("verify_student/reverify.html", context)
+        else:
+            context = {
+                "status": verification_status['status']
+            }
+            return render_to_response("verify_student/reverify_not_allowed.html", context)
 
 
 class PhotoUrlsView(APIView):
