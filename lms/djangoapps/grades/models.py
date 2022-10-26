@@ -16,13 +16,15 @@ from collections import defaultdict, namedtuple
 from hashlib import sha1
 
 from django.apps import apps
-from django.db import models, IntegrityError, transaction
+from django.db import IntegrityError, models, transaction
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.timezone import now
 from lazy import lazy
 from model_utils.models import TimeStampedModel
 from opaque_keys.edx.django.models import CourseKeyField, UsageKeyField
 from opaque_keys.edx.keys import CourseKey, UsageKey
+from openedx_events.learning.data import CourseData, PersistentCourseGradeData
+from openedx_events.learning.signals import PERSISTENT_GRADE_SUMMARY_CHANGED
 from simple_history.models import HistoricalRecords
 
 from lms.djangoapps.courseware.fields import UnsignedBigIntAutoField
@@ -653,6 +655,7 @@ class PersistentCourseGrade(TimeStampedModel):
 
         cls._emit_grade_calculated_event(grade)
         cls._update_cache(course_id, user_id, grade)
+        cls._emit_openedx_persistent_grade_summary_changed_event(course_id, user_id, grade)
         return grade
 
     @classmethod
@@ -668,6 +671,27 @@ class PersistentCourseGrade(TimeStampedModel):
     @staticmethod
     def _emit_grade_calculated_event(grade):
         events.course_grade_calculated(grade)
+
+    @staticmethod
+    def _emit_openedx_persistent_grade_summary_changed_event(course_id, user_id, grade):
+        """
+        When called emits an event when a persistent grade is created or updated.
+        """
+        # .. event_implemented_name: PERSISTENT_GRADE_SUMMARY_CHANGED
+        PERSISTENT_GRADE_SUMMARY_CHANGED.send_event(
+            grade=PersistentCourseGradeData(
+                user_id=user_id,
+                course=CourseData(
+                    course_key=course_id,
+                ),
+                course_edited_timestamp=grade.course_edited_timestamp,
+                course_version=grade.course_version,
+                grading_policy_hash=grade.grading_policy_hash,
+                percent_grade=grade.percent_grade,
+                letter_grade=grade.letter_grade,
+                passed_timestamp=grade.passed_timestamp,
+            )
+        )
 
 
 @python_2_unicode_compatible
