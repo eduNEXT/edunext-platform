@@ -9,4 +9,4 @@
 # linking to it here is good.
 
 openedx-filters==0.4.3      # Pin working openedx-filters release until libraries are stable
-openedx-events==0.6.0       # Pin working openedx-events release until libraries are stable
+openedx-events==0.13.0       # Pin working openedx-events release until libraries are stable

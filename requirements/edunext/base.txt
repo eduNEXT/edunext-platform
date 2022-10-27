@@ -40,7 +40,7 @@ edx-rest-api-client==5.3.0  # via -c requirements/edunext/../edx/base.txt, edx-p
 edx-when==2.0.0           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-audit-model==0.6.0    # via eox-core, eox-tagging
 eox-core[eox-audit,sentry,tpa]==6.1.1  # via -r requirements/edunext/base.in, eox-tagging
-eox-hooks==2.0.0          # via -r requirements/edunext/base.in
+git+https://github.com/eduNEXT/eox-hooks.git@dmh/persistent-grade-event#egg=eox-hooks==2.0.1  # via -r requirements/edunext/github.in
 eox-tagging==3.0.0        # via -r requirements/edunext/base.in
 eox-tenant==6.2.0         # via -r requirements/edunext/base.in
 eox-theming==2.0.0        # via -r requirements/edunext/base.in
@@ -59,7 +59,7 @@ mako==1.1.4               # via -c requirements/edunext/../edx/base.txt, schooly
 markupsafe==1.1.1         # via -c requirements/edunext/../edx/base.txt, jinja2, mako, xblock
 newrelic==6.2.0.156       # via -c requirements/edunext/../edx/base.txt, edx-django-utils
 oauthlib==3.0.1           # via -c requirements/edunext/../edx/base.txt, django-oauth-toolkit, requests-oauthlib, social-auth-core
-openedx-events==0.6.0     # via -r requirements/edunext/base.in, eox-hooks
+openedx-events==0.13.0     # via -r requirements/edunext/base.in, eox-hooks
 openedx-filters==0.4.3    # via -r requirements/edunext/base.in
 openedx-scorm-xblock==11.1.1  # via -r requirements/edunext/base.in
 git+https://github.com/oppia/xblock.git@3b5c17c5832b4f8ef132c6bbf48da8a86df43b3d#egg=oppia-xblock  # via -r requirements/edunext/github.in
