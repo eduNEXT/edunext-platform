@@ -10,6 +10,7 @@ import os
 import re
 from logging import getLogger
 
+from functools import lru_cache
 import crum
 from django.conf import settings
 
@@ -23,7 +24,6 @@ from openedx.core.djangoapps.theming.helpers_dirs import (
     get_themes_unchecked
 )
 from openedx.core.lib.cache_utils import request_cached
-from functools import lru_cache
 
 logger = getLogger(__name__)  # pylint: disable=invalid-name
 
