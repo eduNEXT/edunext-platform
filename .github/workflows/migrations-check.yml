@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - master
+      - 'ednx-release/**'
 
 jobs:
   check_migrations:
