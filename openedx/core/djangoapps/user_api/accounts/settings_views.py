@@ -8,6 +8,7 @@ from datetime import datetime
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ImproperlyConfigured
 from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils.translation import gettext as _
@@ -215,6 +216,35 @@ def get_user_orders(user):
     return user_orders
 
 
+def _get_custom_context(field_labels_map):
+    """eduNEXT: Used to retrieve labels and options of custom fields defined in
+    EDNX_CUSTOM_REGISTRATION_FIELDS.
+    Returns:
+        A tuple with custom labels and options.
+    """
+    field_labels = {}
+    field_options = {}
+    custom_fields = getattr(settings, "EDNX_CUSTOM_REGISTRATION_FIELDS", [])
+
+    for field in custom_fields:
+        field_name = field.get("name")
+
+        if not field_name:  # Required to identify the field.
+            msg = "Custom fields must have a `name` defined in their configuration."
+            raise ImproperlyConfigured(msg)
+
+        field_label = field.get("label")
+        if field_name not in field_labels_map and field_label:
+            field_labels[field_name] = _(field_label)  # pylint: disable=translation-of-non-string
+
+        options = field.get("options")
+
+        if options:
+            field_options[field_name] = options
+
+    return field_labels, field_options
+
+
 def _get_extended_profile_fields():
     """Retrieve the extended profile fields from site configuration to be shown on the
        Account Settings page
@@ -247,12 +277,15 @@ def _get_extended_profile_fields():
         "specialty": _("Specialty")
     }
 
+    custom_labels, custom_options = _get_custom_context(field_labels_map)
+    field_labels_map.update(custom_labels)
+
     extended_profile_field_names = configuration_helpers.get_value('extended_profile_fields', [])
     for field_to_exclude in fields_already_showing:
         if field_to_exclude in extended_profile_field_names:
             extended_profile_field_names.remove(field_to_exclude)
 
-    extended_profile_field_options = configuration_helpers.get_value('EXTRA_FIELD_OPTIONS', [])
+    extended_profile_field_options = configuration_helpers.get_value('EXTRA_FIELD_OPTIONS', custom_options)
     extended_profile_field_option_tuples = {}
     for field in extended_profile_field_options.keys():
         field_options = extended_profile_field_options[field]

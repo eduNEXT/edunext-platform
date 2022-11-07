@@ -3,7 +3,9 @@ Objects and utilities used to construct registration forms.
 """
 
 import copy
+from collections import OrderedDict
 from importlib import import_module
+import logging
 import re
 
 from django import forms
@@ -34,6 +36,8 @@ from common.djangoapps.util.password_policy_validators import (
     password_validators_restrictions,
     validate_password,
 )
+
+log = logging.getLogger(__name__)
 
 
 class TrueCheckbox(widgets.CheckboxInput):
@@ -315,7 +319,7 @@ class RegistrationFormFactory:
 
     DEFAULT_FIELDS = ["email", "name", "username", "password"]
 
-    EXTRA_FIELDS = [
+    EXTRA_FIELDS_BASE = [
         "confirm_email",
         "first_name",
         "last_name",
@@ -374,7 +378,7 @@ class RegistrationFormFactory:
         self.field_handlers = {}
         valid_fields = self.DEFAULT_FIELDS + self.EXTRA_FIELDS
         for field_name in valid_fields:
-            handler = getattr(self, f"_add_{field_name}_field")
+            handler = getattr(self, f"_add_{field_name}_field", self._add_custom_field)
             self.field_handlers[field_name] = handler
 
         custom_form = get_registration_extension_form()
@@ -393,6 +397,22 @@ class RegistrationFormFactory:
             field_order.extend(sorted(difference))
 
         self.field_order = field_order
+
+
+    @property
+    def EXTRA_FIELDS(self):
+        """eduNEXT: Property that returns extra fields list plus extended profile fields. This
+        property allows us to add custom fields to the registration form using extended_profile_fields and
+        REGISTRATION_EXTRA_FIELDS.
+        """
+        extended_profile_fields = [field.lower() for field in getattr(settings, 'extended_profile_fields', [])]
+        extra_fields = [
+            field.lower() for field in configuration_helpers.get_value('REGISTRATION_EXTRA_FIELDS', {}).keys()
+        ]
+
+        # Removing duplicates while mantaining order, important when running tests.
+        return list(OrderedDict.fromkeys(self.EXTRA_FIELDS_BASE + extended_profile_fields + extra_fields))
+
 
     def get_registration_form(self, request):
         """Return a description of the registration form.
@@ -424,9 +444,12 @@ class RegistrationFormFactory:
             if field_name in self.DEFAULT_FIELDS:
                 self.field_handlers[field_name](form_desc, required=True)
             elif self._is_field_visible(field_name) and self.field_handlers.get(field_name):
-                self.field_handlers[field_name](
+                field_handler = self.field_handlers[field_name]
+                extra_field = {"field_name": field_name} if field_handler.__name__ == "_add_custom_field" else {}
+                field_handler(
                     form_desc,
-                    required=self._is_field_required(field_name)
+                    required=self._is_field_required(field_name),
+                    **extra_field
                 )
             elif field_name in custom_form_field_names:
                 for custom_field_name, field in custom_form.fields.items():
@@ -674,6 +697,80 @@ class RegistrationFormFactory:
             required=required
         )
 
+    def _get_custom_field_dict(self, field_name):
+        """Given a field name searches for its definition dictionary.
+        Arguments:
+            field_name (str): the name of the field to search for.
+        """
+        custom_fields = getattr(settings, "EDNX_CUSTOM_REGISTRATION_FIELDS", [])
+        for field in custom_fields:
+            if field.get("name").lower() == field_name:
+                return field
+        return {}
+
+    def _get_custom_html_override(self, text_field, html_piece=None):
+        """Overrides field with html piece.
+        Arguments:
+            text_field: field to override. It must have the following format:
+                "Here {} goes the HTML piece." In `{}` will be inserted the HTML piece.
+        Keyword Arguments:
+            html_piece: string containing HTML components to be inserted.
+        """
+        if html_piece:
+            html_piece = HTML(html_piece) if isinstance(html_piece, str) else ""
+            return Text(_(text_field)).format(html_piece)  # pylint: disable=translation-of-non-string
+        return text_field
+
+    def _add_custom_field(self, form_desc, required=True, **kwargs):
+        """Adds custom fields to a form description.
+        Arguments:
+            form_desc: A form description
+        Keyword Arguments:
+            required (bool): Whether this field is required; defaults to False
+            field_name (str): Name used to get field information when creating it.
+        """
+        field_name = kwargs.pop("field_name")
+        if field_name in getattr(settings, "EDNX_IGNORE_REGISTER_FIELDS", []):
+            return
+
+        custom_field_dict = self._get_custom_field_dict(field_name)
+        if not custom_field_dict:
+            log.error("Field with name {} must have a definition dictionary.".format(field_name))
+            return
+
+        # Check to convert options:
+        field_options = custom_field_dict.get("options")
+        if isinstance(field_options, dict):
+            field_options = [(str(value.lower()), name) for value, name in field_options.items()]
+        elif isinstance(field_options, list):
+            field_options = [(str(value.lower()), value) for value in field_options]
+
+        # Set default option if applies:
+        default_option = custom_field_dict.get("default")
+        if default_option:
+            form_desc.override_field_properties(
+                field_name,
+                default=default_option
+            )
+
+        field_type = custom_field_dict.get("type")
+
+        form_desc.add_field(
+            field_name,
+            label=self._get_custom_html_override(
+                custom_field_dict.get("label"),
+                custom_field_dict.get("html_override"),
+            ),
+            field_type=field_type,
+            options=field_options,
+            instructions=custom_field_dict.get("instructions"),
+            placeholder=custom_field_dict.get("placeholder"),
+            restrictions=custom_field_dict.get("restrictions"),
+            include_default_option=bool(default_option) or field_type == "select",
+            required=required,
+            error_messages=custom_field_dict.get("errorMessages")
+        )
+
     def _add_marketing_emails_opt_in_field(self, form_desc, required=False):
         """Add a marketing email checkbox to form description.
         Arguments:
@@ -710,8 +807,9 @@ class RegistrationFormFactory:
 
         """
 
-        extra_field_options = configuration_helpers.get_value('EXTRA_FIELD_OPTIONS')
-        if extra_field_options is None or extra_field_options.get(field_name) is None:
+        custom_options = self._get_custom_field_dict(field_name).get("options")
+        extra_field_options = configuration_helpers.get_value('EXTRA_FIELD_OPTIONS', {})
+        if extra_field_options.get(field_name) is None and custom_options is None:
             field_type = "text"
             include_default_option = False
             options = None
@@ -720,7 +818,7 @@ class RegistrationFormFactory:
         else:
             field_type = "select"
             include_default_option = True
-            field_options = extra_field_options.get(field_name)
+            field_options = extra_field_options.get(field_name, custom_options)
             options = [(str(option.lower()), option) for option in field_options]
             error_msg = ''
             error_msg = getattr(accounts, f'REQUIRED_FIELD_{field_name.upper()}_SELECT_MSG')
