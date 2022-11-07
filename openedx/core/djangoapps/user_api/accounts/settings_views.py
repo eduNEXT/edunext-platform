@@ -9,6 +9,7 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.core.exceptions import ImproperlyConfigured
 from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils.translation import gettext as _
@@ -16,6 +17,9 @@ from django.views.decorators.http import require_http_methods
 from django_countries import countries
 
 from openedx_filters.learning.filters import AccountSettingsRenderStarted
+from openedx_filters import PipelineStep
+from openedx_filters.tooling import OpenEdxPublicFilter
+from openedx_filters.exceptions import OpenEdxFilterException
 from common.djangoapps import third_party_auth
 from common.djangoapps.edxmako.shortcuts import render_to_response
 from common.djangoapps.student.models import UserProfile
@@ -39,6 +43,100 @@ from openedx.features.enterprise_support.api import enterprise_customer_for_requ
 from openedx.features.enterprise_support.utils import update_account_settings_context_for_enterprise
 
 log = logging.getLogger(__name__)
+
+
+class AddCustomOptionsOnAccountSettings(PipelineStep):
+    """ Pipeline used to add custom option fields in account settings.
+
+        Example usage:
+
+        Add the following configurations to your configuration file:
+                "OPEN_EDX_FILTERS_CONFIG": {
+                    "org.openedx.learning.student.settings.render.started.v1": {
+                        "fail_silently": false,
+                        "pipeline": [
+                            "eox_tenant.samples.pipeline.AddCustomOptionsOnAccountSettings"
+                        ]
+                    }
+                }
+    """
+
+    def run_filter(self, context):  # pylint: disable=arguments-differ
+        """ Run the pipeline filter. """
+        extended_profile_fields = context.get("extended_profile_fields", [])
+
+        custom_options, field_labels_map = self._get_custom_context(extended_profile_fields)  # pylint: disable=line-too-long
+
+        extended_profile_field_options = configuration_helpers.get_value('EXTRA_FIELD_OPTIONS', custom_options)  # pylint: disable=line-too-long
+        extended_profile_field_option_tuples = {}
+        for field in extended_profile_field_options.keys():
+            field_options = extended_profile_field_options[field]
+            extended_profile_field_option_tuples[field] = [(option.lower(), option) for option in field_options]  # pylint: disable=line-too-long
+
+        for field in custom_options:
+            field_dict = {
+                "field_name": field,
+                "field_label": field_labels_map.get(field, field),
+            }
+
+            field_options = extended_profile_field_option_tuples.get(field)
+            if field_options:
+                field_dict["field_type"] = "ListField"
+                field_dict["field_options"] = field_options
+            else:
+                field_dict["field_type"] = "TextField"
+
+            field_index = next((index for (index, d) in enumerate(extended_profile_fields) if d["field_name"] == field_dict["field_name"]), None)  # pylint: disable=line-too-long
+            if field_index is not None:
+                context["extended_profile_fields"][field_index] = field_dict
+        return context
+
+    def _get_custom_context(self, extended_profile_fields):
+        """ Get custom context for the field. """
+        field_labels = {}
+        field_options = {}
+        custom_fields = getattr(settings, "EDNX_CUSTOM_REGISTRATION_FIELDS", [])
+
+        for field in custom_fields:
+            field_name = field.get("name")
+
+            if not field_name:  # Required to identify the field.
+                msg = "Custom fields must have a `name` defined in their configuration."
+                raise ImproperlyConfigured(msg)
+
+            field_label = field.get("label")
+            if not any(extended_field['field_name'] == field_name for extended_field in extended_profile_fields) and field_label:  # pylint: disable=line-too-long
+                field_labels[field_name] = _(field_label)  # pylint: disable=translation-of-non-string
+
+            options = field.get("options")
+
+            if options:
+                field_options[field_name] = options
+
+            return field_options, field_labels
+
+
+class AccountSettingsRenderStarted(OpenEdxPublicFilter):
+    """ Custom class used to create Account settings filters. """
+
+    filter_type = "org.openedx.learning.student.settings.render.started.v1"
+
+    class ErrorFilteringContext(OpenEdxFilterException):
+        """
+        Custom class used catch exceptions when filtering the context.
+        """
+
+    @classmethod
+    def run_filter(cls, context):
+        """
+        Execute a filter with the signature specified.
+
+        Arguments:
+            context (dict): context for the account settings page.
+        """
+        data = super().run_pipeline(context=context)
+        context = data.get("context")
+        return context
 
 
 @login_required
@@ -89,6 +187,8 @@ def account_settings(request):
         response = HttpResponseRedirect(exc.redirect_to or reverse('dashboard'))
     except AccountSettingsRenderStarted.RenderCustomResponse as exc:
         response = exc.response
+    except AccountSettingsRenderStarted.ErrorFilteringContext as exc:
+        raise ImproperlyConfigured(f'Pipeline configuration error: {exc}') from exc
     else:
         response = render_to_response(account_settings_template, context)
 
