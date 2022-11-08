@@ -4,9 +4,11 @@ on:
   pull_request:
     branches:
       - master
+      - 'ednx-release/**'
   push:
     branches:
       - master
+      - 'ednx-release/**'
 
 jobs:
   run_tests:

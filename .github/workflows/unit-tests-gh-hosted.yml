@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-      - open-release/lilac.master
+      - 'ednx-release/**'
 
 jobs:
   run-test:
