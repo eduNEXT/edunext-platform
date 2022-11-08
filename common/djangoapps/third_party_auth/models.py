@@ -358,7 +358,7 @@ class OAuth2ProviderConfig(ProviderConfig):
     # example:
     # class SecondOpenIDProvider(OpenIDAuth):
     #   name = "second-openId-provider"
-    KEY_FIELDS = ('backend_name',)
+    KEY_FIELDS = ('site_id', 'backend_name',)
     prefix = 'oa2'
     backend_name = models.CharField(
         max_length=50, blank=False, db_index=True,
@@ -386,6 +386,24 @@ class OAuth2ProviderConfig(ProviderConfig):
         app_label = "third_party_auth"
         verbose_name = "Provider Configuration (OAuth)"
         verbose_name_plural = verbose_name
+
+    @classmethod
+    def current(cls, *args):
+        """
+        Get the current config model for the provider according to the given backend and the current
+        site.
+        """
+        site_id = Site.objects.get_current(get_current_request()).id
+        return super(OAuth2ProviderConfig, cls).current(site_id, *args)
+
+    @property
+    def provider_id(self):
+        """
+        Unique string key identifying this provider. Must be URL and css class friendly.
+        eduNEXT: override method to cast site_id field.
+        """
+        assert self.prefix is not None
+        return "-".join((self.prefix, ) + tuple(str(getattr(self, field)) for field in self.KEY_FIELDS))
 
     def clean(self):
         """ Standardize and validate fields """
