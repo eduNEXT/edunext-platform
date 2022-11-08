@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - 'ednx-release/**'
 
 jobs:
   collect-and-verify:
