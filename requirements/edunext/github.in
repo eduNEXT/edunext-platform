@@ -78,7 +78,7 @@ git+https://github.com/Pearson-Advance/openedx-surveymonkey-xblock@v2.0.2#egg=su
 git+https://github.com/edx/xblock-free-text-response@release/v1.1.1#egg=xblock-free-text-response==1.1.1
 
 # eduNEXT supported xblocks
-git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1.0.1
+git+https://github.com/eduNEXT/edx_xblock_scorm@v2.0.0#egg=scormxblock-xblock==2.0.0
 
 # Webhook-xblock
 git+https://github.com/eduNEXT/webhook-xblock@a734c6de47cb61cba20bec4a4f3362ce625d47d1#egg=webhook-xblock==0.2.0_1
