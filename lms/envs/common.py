@@ -3235,6 +3235,9 @@ INSTALLED_APPS = [
     # Agreements
     'openedx.core.djangoapps.agreements',
 
+    # Survey reports
+    'openedx.features.survey_report',
+
     # User and group management via edx-django-utils
     'edx_django_utils.user',
 
