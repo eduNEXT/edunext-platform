@@ -276,7 +276,7 @@ class ProctoringRequirementsEmailTests(EmailTemplateTagMixin, ModuleStoreTestCas
                     self.course.display_name,
                     settings.PLATFORM_NAME
                 )
-            ),``
+            ),
             (
                 "Proctored exams are timed exams that you take while proctoring software monitors "
                 "your computer's desktop, webcam video, and audio."
