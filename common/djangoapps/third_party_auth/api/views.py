@@ -334,6 +334,8 @@ class UserMappingView(ListAPIView):
             * username: The edx username
 
             * remote_id: The Id from third party auth provider
+
+            * email: The edx email
     """
     authentication_classes = (JwtAuthentication, BearerAuthentication, )
     permission_classes = (TPA_PERMISSIONS, )
