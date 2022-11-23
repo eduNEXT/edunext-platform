@@ -13,6 +13,7 @@ from django.utils import dateparse
 from django.utils.decorators import method_decorator
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import UsageKey
+from openedx_filters.learning.filters import CourseEnrollmentQuerysetRequested
 from rest_framework import generics, views
 from rest_framework.decorators import api_view
 from rest_framework.permissions import SAFE_METHODS
@@ -341,6 +342,13 @@ class UserCourseEnrollmentsList(generics.ListAPIView):
         ).order_by('created').reverse()
         org = self.request.query_params.get('org', None)
 
+        try:
+            ## .. filter_implemented_name: CourseEnrollmentQuerysetRequested
+            ## .. filter_type: org.openedx.learning.course_enrollment_queryset.requested.v1
+            enrollments = CourseEnrollmentQuerysetRequested.run_filter(enrollments=enrollments)
+        except CourseEnrollmentQuerysetRequested.PreventEnrollmentQuerysetRequest as exc:
+            raise EnrollmentRequestNotAllowed(str(exc)) from exc
+
         same_org = (
             enrollment for enrollment in enrollments
             if enrollment.course_overview and self.is_org(org, enrollment.course_overview.org)
@@ -373,6 +381,14 @@ class UserCourseEnrollmentsList(generics.ListAPIView):
             return Response(enrollment_data)
 
         return response
+
+
+class EnrollmentRequestException(Exception):
+    pass
+
+
+class EnrollmentRequestNotAllowed(EnrollmentRequestException):
+    pass
 
 
 @api_view(["GET"])
