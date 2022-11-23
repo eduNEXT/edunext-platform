@@ -9,6 +9,7 @@ import logging
 from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imported-auth-user
 from django.db import transaction
 from opaque_keys.edx.keys import CourseKey
+from openedx_filters.learning.filters import CourseEnrollmentQuerysetRequested
 
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.enrollments.errors import (
@@ -54,6 +55,13 @@ def get_course_enrollments(username, include_inactive=False):
     if not include_inactive:
         qset = qset.filter(is_active=True)
 
+    try:
+        ## .. filter_implemented_name: CourseEnrollmentQuerysetRequested
+        ## .. filter_type: org.openedx.learning.course_enrollment_queryset.requested.v1
+        qset = CourseEnrollmentQuerysetRequested.run_filter(enrollments=qset)
+    except CourseEnrollmentQuerysetRequested.PreventEnrollmentQuerysetRequest as exc:
+        raise EnrollmentRequestNotAllowed(str(exc)) from exc
+
     enrollments = CourseEnrollmentSerializer(qset, many=True).data
 
     # Find deleted courses and filter them out of the results
@@ -74,6 +82,14 @@ def get_course_enrollments(username, include_inactive=False):
         )
 
     return valid
+
+
+class EnrollmentRequestException(Exception):
+    pass
+
+
+class EnrollmentRequestNotAllowed(EnrollmentRequestException):
+    pass
 
 
 def get_course_enrollment(username, course_id):
