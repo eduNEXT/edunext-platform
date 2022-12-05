@@ -149,9 +149,7 @@ cryptography==35.0.0
 cssutils==2.3.0
     # via pynliner
 ddt==1.4.4
-    # via
-    #   xblock-drag-and-drop-v2
-    #   xblock-poll
+    # via xblock-poll
 defusedxml==0.7.1
     # via
     #   -r requirements/edx/base.in
@@ -165,6 +163,7 @@ deprecated==1.2.13
     # via jwcrypto
 django==3.2.13
     # via
+    #   -c requirements/edx/../common_constraints.txt
     #   -c requirements/edx/../constraints.txt
     #   -r requirements/edx/base.in
     #   django-appconf
@@ -327,6 +326,7 @@ django-ses==2.3.0
     # via -r requirements/edx/base.in
 django-simple-history==3.0.0
     # via
+    #   -c requirements/edx/../common_constraints.txt
     #   -r requirements/edx/base.in
     #   edx-enterprise
     #   edx-organizations
@@ -641,7 +641,6 @@ maxminddb==2.2.0
 mock==4.0.3
     # via
     #   -r requirements/edx/paver.txt
-    #   xblock-drag-and-drop-v2
     #   xblock-poll
 mongodbproxy @ git+https://github.com/edx/MongoDBProxy.git@d92bafe9888d2940f647a7b2b2383b29c752f35a
     # via -r requirements/edx/github.in
@@ -1056,7 +1055,7 @@ xblock==1.5.1
     #   xblock-google-drive
     #   xblock-poll
     #   xblock-utils
-xblock-drag-and-drop-v2 @ git+https://github.com/edx-solutions/xblock-drag-and-drop-v2@v2.3.5
+xblock-drag-and-drop-v2 @ git+https://github.com/edx-solutions/xblock-drag-and-drop-v2@v3.0.0
     # via -r requirements/edx/github.in
 xblock-poll @ git+https://github.com/open-craft/xblock-poll@922cd36fb1c3cfe00b4ce03b19a13185d136447d
     # via -r requirements/edx/github.in
