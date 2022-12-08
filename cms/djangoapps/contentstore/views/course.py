@@ -42,8 +42,10 @@ from common.djangoapps.course_action_state.managers import CourseActionStateItem
 from common.djangoapps.course_action_state.models import CourseRerunState, CourseRerunUIStateManager
 from common.djangoapps.course_modes.models import CourseMode
 from common.djangoapps.edxmako.shortcuts import render_to_response
+from common.djangoapps.student import auth
 from common.djangoapps.student.auth import has_course_author_access, has_studio_read_access, has_studio_write_access
 from common.djangoapps.student.roles import (
+    CourseCreatorRole,
     CourseInstructorRole,
     CourseStaffRole,
     GlobalStaff,
@@ -873,6 +875,8 @@ def _create_or_rerun_course(request):
     try:
         org = request.json.get('org')
 
+        course = request.json.get('number', request.json.get('course'))
+
         rerun_permission = (
             OrgRerunCreatorRole(org).has_user(request.user)
             or OrgCourseCreatorRole(org).has_user(request.user)
@@ -881,7 +885,6 @@ def _create_or_rerun_course(request):
         if not auth.user_has_role(request.user, CourseCreatorRole()) and not rerun_permission:
             raise PermissionDenied()
 
-        course = request.json.get('number', request.json.get('course'))
         display_name = request.json.get('display_name')
         # force the start date for reruns and allow us to override start via the client
         start = request.json.get('start', CourseFields.start.default)
