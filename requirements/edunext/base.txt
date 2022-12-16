@@ -39,7 +39,6 @@ edx-proctoring==3.8.5     # via -c requirements/edunext/../edx/base.txt, eox-cor
 edx-rest-api-client==5.3.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==2.0.0           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-audit-model==0.6.0    # via eox-core, eox-tagging
-eox-core[eox-audit,sentry,tpa]==6.1.1  # via -r requirements/edunext/base.in, eox-tagging
 git+https://github.com/eduNEXT/eox-hooks.git@dmh/persistent-grade-event#egg=eox-hooks==2.0.1  # via -r requirements/edunext/github.in
 eox-tagging==3.0.0        # via -r requirements/edunext/base.in
 eox-tenant==6.2.0         # via -r requirements/edunext/base.in
@@ -115,6 +114,7 @@ xblock-utils==2.1.2       # via -c requirements/edunext/../edx/base.txt, activet
 xblock==1.4.0             # via -c requirements/edunext/../edx/base.txt, activetable-xblock, edx-when, flow-control-xblock, openedx-scorm-xblock, oppia-xblock, pdf-xblock, schoolyourself-xblock, scormxblock-xblock, surveymonkey-xblock, ubcpi-xblock, vectordraw-xblock, webhook-xblock, xblock-free-text-response, xblock-image-explorer, xblock-problem-builder, xblock-utils
 git+https://github.com/eduNEXT/eox-scorm-proxy.git@poc#egg=eox-scorm-xblock==0.1.0  # via -r requirements/edunext/github.in
 git+https://github.com/Annoto/xblock-in-video-collaboration.git#egg=xblock_annoto # via -r requirements/edunext/github.in
+git+https://github.com/eduNEXT/eox-core.git@mjh/backport-oauth-app-endpoint-for-lilac#egg=eox_core==6.1.2_omega
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
