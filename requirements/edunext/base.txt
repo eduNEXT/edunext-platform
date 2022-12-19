@@ -39,7 +39,7 @@ edx-proctoring==3.8.5     # via -c requirements/edunext/../edx/base.txt, eox-cor
 edx-rest-api-client==5.3.0  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==2.0.0           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 eox-audit-model==0.6.0    # via eox-core, eox-tagging
-eox-core[eox-audit,sentry,tpa]==6.1.1  # via -r requirements/edunext/base.in, eox-tagging
+eox-core[eox-audit,sentry,tpa]==6.2.1  # via -r requirements/edunext/base.in, eox-tagging
 git+https://github.com/eduNEXT/eox-hooks.git@dmh/persistent-grade-event#egg=eox-hooks==2.0.1  # via -r requirements/edunext/github.in
 eox-tagging==3.0.0        # via -r requirements/edunext/base.in
 eox-tenant==6.2.0         # via -r requirements/edunext/base.in
