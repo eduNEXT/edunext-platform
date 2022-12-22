@@ -1295,11 +1295,14 @@ def _certificate_message(student, course, enrollment_mode):  # lint-amnesty, pyl
     if cert_downloadable_status['is_generating']:
         return GENERATING_CERT_DATA
 
-    if cert_downloadable_status['is_unverified'] or _missing_required_verification(student, enrollment_mode):
+    if cert_downloadable_status['is_unverified']:
         return _unverified_cert_data()
 
     if cert_downloadable_status['is_downloadable']:
         return _downloadable_certificate_message(course, cert_downloadable_status)
+
+    if _missing_required_verification(student, enrollment_mode):
+        return _unverified_cert_data()
 
     return REQUESTING_CERT_DATA
 
