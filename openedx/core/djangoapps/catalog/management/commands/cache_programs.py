@@ -26,6 +26,8 @@ from openedx.core.djangoapps.catalog.utils import (
     course_run_keys_for_program,
     course_uuids_for_program,
     create_catalog_api_client,
+    get_lms_config_and_catalog_url_by_eox_tenant,
+    is_installed_eox_tenant,
     normalize_program_type
 )
 
@@ -66,9 +68,17 @@ class Command(BaseCommand):
         programs_by_type = {}
         programs_by_type_slug = {}
         organizations = {}
+        if is_installed_eox_tenant():
+            from eox_tenant.models import Route
+            Site = Route
         for site in Site.objects.all():
-            site_config = getattr(site, 'configuration', None)
-            if site_config is None or not site_config.get_value('COURSE_CATALOG_API_URL'):
+            if is_installed_eox_tenant():
+                site_config, course_catalog_url = get_lms_config_and_catalog_url_by_eox_tenant(site)
+            else:
+                site_config = getattr(site, 'configuration', None)
+                course_catalog_url = site_config.get_value('COURSE_CATALOG_API_URL')
+
+            if site_config is None or not course_catalog_url:
                 logger.info(f'Skipping site {site.domain}. No configuration.')
                 cache.set(SITE_PROGRAM_UUIDS_CACHE_KEY_TPL.format(domain=site.domain), [], None)
                 cache.set(SITE_PATHWAY_IDS_CACHE_KEY_TPL.format(domain=site.domain), [], None)
@@ -133,7 +143,6 @@ class Command(BaseCommand):
 
         if failure:
             sys.exit(1)
-
     def get_site_program_uuids(self, client, site):  # lint-amnesty, pylint: disable=missing-function-docstring
         failure = False
         uuids = []

@@ -9,6 +9,7 @@ import uuid
 import pycountry
 from django.core.cache import cache
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.sites.models import Site
 from edx_rest_api_client.client import EdxRestApiClient
 from opaque_keys.edx.keys import CourseKey
 from pytz import UTC
@@ -39,10 +40,13 @@ def create_catalog_api_client(user, site=None):
     """Returns an API client which can be used to make Catalog API requests."""
     jwt = create_jwt_for_user(user)
 
-    if site:
+    if site and isinstance(site, Site):
         url = site.configuration.get_value('COURSE_CATALOG_API_URL')
     else:
         url = CatalogIntegration.current().get_internal_api_url()
+    if is_installed_eox_tenant():
+        eox_tenant_catalog_url = get_catalog_url_by_eox_tenant(site)
+        url =  eox_tenant_catalog_url if eox_tenant_catalog_url else url
 
     return EdxRestApiClient(url, jwt=jwt)
 
@@ -128,6 +132,10 @@ def get_programs(site=None, uuid=None, uuids=None, course=None, catalog_course_u
     elif site:
         site_config = getattr(site, 'configuration', None)
         catalog_url = site_config.get_value('COURSE_CATALOG_API_URL') if site_config else None
+        if is_installed_eox_tenant():
+            from eox_tenant.models import TenantConfig
+            site_config, eox_tenant_catalog_url = get_lms_config_and_catalog_url_by_eox_tenant(site)
+            catalog_url =  eox_tenant_catalog_url if eox_tenant_catalog_url else catalog_url
         if site_config and catalog_url:
             uuids = cache.get(SITE_PROGRAM_UUIDS_CACHE_KEY_TPL.format(domain=site.domain), [])
             if not uuids:
@@ -720,3 +728,22 @@ def get_programs_for_organization(organization):
     Retrieve list of program uuids authored by a given organization
     """
     return cache.get(PROGRAMS_BY_ORGANIZATION_CACHE_KEY_TPL.format(org_key=organization))
+
+
+def is_installed_eox_tenant():
+    import importlib.util
+    eox_tenant_installed = importlib.util.find_spec('eox_tenant')
+    return bool(eox_tenant_installed)
+
+
+def get_lms_config_and_catalog_url_by_eox_tenant(route):
+    from eox_tenant.models import TenantConfig
+    tenant_configs = TenantConfig.get_configs_for_domain(route.domain)
+    lms_config = tenant_configs[0]
+    catalog_url = lms_config.get('COURSE_CATALOG_API_URL', None)
+    return lms_config, catalog_url
+
+
+def get_catalog_url_by_eox_tenant(route):
+    lms_config, catalog_url = get_lms_config_and_catalog_url_by_eox_tenant(route)
+    return catalog_url
