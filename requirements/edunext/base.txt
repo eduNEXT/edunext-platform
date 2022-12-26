@@ -88,7 +88,7 @@ ruamel.yaml.clib==0.2.2   # via -c requirements/edunext/../edx/base.txt, ruamel.
 ruamel.yaml==0.17.4       # via -c requirements/edunext/../edx/base.txt, drf-yasg
 rules==2.2                # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 git+https://github.com/schoolyourself/schoolyourself-xblock.git@2093048720cfb36cc05b3143cd6f2585c7c64d85#egg=schoolyourself-xblock  # via -r requirements/edunext/github.in
-git+https://github.com/eduNEXT/edx_xblock_scorm@v1.0.1#egg=scormxblock-xblock==1.0.1  # via -r requirements/edunext/github.in
+git+https://github.com/eduNEXT/edx_xblock_scorm@v2.0.0#egg=scormxblock-xblock==2.0.0  # via -r requirements/edunext/github.in
 semantic-version==2.8.5   # via -c requirements/edunext/../edx/base.txt, edx-drf-extensions
 sentry-sdk==1.5.1         # via eox-core
 shortuuid==1.0.8          # via django-oauth2-provider
