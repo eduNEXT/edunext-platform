@@ -111,7 +111,7 @@ class AddCustomOptionsOnAccountSettings(PipelineStep):
             if options:
                 field_options[field_name] = options
 
-            return field_options, field_labels
+        return field_options, field_labels
 
 
 class AccountSettingsRenderStarted(OpenEdxPublicFilter):
