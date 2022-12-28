@@ -1460,7 +1460,7 @@ stevedore==3.5.0
     #   edx-django-utils
     #   edx-enterprise
     #   edx-opaque-keys
-super-csv==3.0.0
+super-csv==3.0.1
     # via
     #   -r requirements/edx/testing.txt
     #   edx-bulk-grades
