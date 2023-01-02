@@ -75,6 +75,7 @@ export class CourseOutline {  // eslint-disable-line import/prefer-default-expor
     const toggleAllButton = document.querySelector('#expand-collapse-outline-all-button');
     const toggleAllSpan = document.querySelector('#expand-collapse-outline-all-span');
     const extraPaddingClass = 'expand-collapse-outline-all-extra-padding';
+    toggleAllSpan.innerText = gettext('Expand All');
     toggleAllButton.addEventListener('click', (event) => {
       const toggleAllExpanded = toggleAllButton.getAttribute('aria-expanded') === 'true';
       let sectionAction;
