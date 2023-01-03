@@ -34,17 +34,25 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2022.
 #
+# Translators:
+# harshit jain <hnj323@gmail.com>, 2022
+# Mike Yeakle <ridgleydavon@gmail.com>, 2022
+# Anil Meel <anilmeel26@gmail.com>, 2022
+# Roaa Nader <roaanader002005@gmail.com>, 2022
+# Miriam Aron, 2022
+# Mehdi Aliakbar, 2022
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2022-12-09 19:15+0000\n"
-"PO-Revision-Date: 2022-12-09 19:16:00.333762\n"
-"Last-Translator: \n"
-"Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
+"POT-Creation-Date: 2022-09-01 17:56+0000\n"
+"PO-Revision-Date: 2022-06-09 21:02+0000\n"
+"Last-Translator: Mehdi Aliakbar, 2022\n"
+"Language-Team: English (https://www.transifex.com/open-edx/teams/6205/en/)\n"
 "Language: rtl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
@@ -925,7 +933,7 @@ msgstr "Ᵽlǝɐsǝ ʍɐᴉʇ"
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "LONG_DATE_FORMAT"
-msgstr ""
+msgstr "LONG_DATE_FORMAT"
 
 #. Translators: the translation for "DATE_TIME_FORMAT" must be a format
 #. string for formatting dates with times.  For example, the American
@@ -933,7 +941,7 @@ msgstr ""
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "DATE_TIME_FORMAT"
-msgstr ""
+msgstr "DATE_TIME_FORMAT"
 
 #. Translators: the translation for "SHORT_DATE_FORMAT" must be a
 #. format string for formatting dates in a brief form.  For example,
@@ -941,14 +949,14 @@ msgstr ""
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "SHORT_DATE_FORMAT"
-msgstr ""
+msgstr "SHORT_DATE_FORMAT"
 
 #. Translators: the translation for "TIME_FORMAT" must be a format
 #. string for formatting times.  For example, the American English
 #. form is "%H:%M:%S". See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "TIME_FORMAT"
-msgstr ""
+msgstr "TIME_FORMAT"
 
 #. Translators: This is an AM/PM indicator for displaying times.  It is
 #. used for the %p directive in date-time formats. See http://strftime.org
@@ -21659,6 +21667,11 @@ msgstr ""
 msgid "Organization"
 msgstr "Øɹƃɐnᴉzɐʇᴉøn"
 
+#. Translators: This is an example for the name of the organization sponsoring
+#. a course, seen when filling out the form to create a new course. The
+#. organization name cannot contain spaces.
+#. Translators: "e.g. UniversityX or OrganizationX" is a placeholder displayed
+#. when user put no data into this field.
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 msgid "e.g. UniversityX or OrganizationX"
 msgstr "ǝ.ƃ. ɄnᴉʌǝɹsᴉʇʎX øɹ ØɹƃɐnᴉzɐʇᴉønX"
