@@ -1,0 +1,27 @@
+name: Distro nigthly tag
+
+on:
+  schedule:
+    - cron: '00 04 * * *'
+
+jobs:
+  nightly-tag:
+    runs-on: ubuntu-20.04
+    name: Create nightly tag
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ matrix.branch }}
+      - name: get the last commit of day
+        id: last-commit-of-day
+        run: |
+          hash=$(git --no-pager log -1 --format="%h" --since=23.hours)
+          echo "::set-output name=COMMITHASH::${hash}"
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=NOW::$(date +'%Y%m%d')"
+      - name: Tag commit
+        uses: tvdias/github-tagger@v0.0.2
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          tag: nightly/vL.N${{ steps.date.outputs.NOW }}${{steps.last-commit-of-day.outputs.COMMITHASH}}
