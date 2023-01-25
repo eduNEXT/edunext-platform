@@ -3203,6 +3203,9 @@ INSTALLED_APPS = [
 
     # Content Library LTI 1.3 Support.
     'pylti1p3.contrib.django.lti1p3_tool_config',
+
+    # MFE API
+    'lms.djangoapps.mfe_config_api',
 ]
 
 ######################### CSRF #########################################
@@ -4880,3 +4883,61 @@ TEAMS_HELP_URL = "https://edx.readthedocs.io/projects/open-edx-building-and-runn
 TEXTBOOKS_HELP_URL = "https://edx.readthedocs.io/projects/open-edx-building-and-running-a-course/en/latest/course_assets/textbooks.html"
 WIKI_HELP_URL = "https://edx.readthedocs.io/projects/open-edx-building-and-running-a-course/en/latest/course_assets/course_wiki.html"
 CUSTOM_PAGES_HELP_URL = "https://edx.readthedocs.io/projects/open-edx-building-and-running-a-course/en/latest/course_assets/pages.html#adding-custom-pages"
+
+# .. toggle_name: ENABLE_MFE_CONFIG_API
+# .. toggle_implementation: DjangoSetting
+# .. toggle_default: False
+# .. toggle_description: Set to True to enable MFE Config API. This is disabled by
+#   default.
+# .. toggle_use_cases: open_edx
+# .. toggle_creation_date: 2022-05-20
+# .. toggle_target_removal_date: None
+# .. toggle_warnings: None
+# .. toggle_tickets: None
+ENABLE_MFE_CONFIG_API = False
+
+# .. setting_name: MFE_CONFIG
+# .. setting_implementation: DjangoSetting
+# .. setting_default: {}
+# .. setting_description: Is a configuration that will be exposed by the MFE Config API to be consumed by the MFEs.
+#   Contains configuration common to all MFEs. When a specific MFE's configuration is requested, these values
+#   will be treated as a base and then overriden/supplemented by those in `MFE_CONFIG_OVERRIDES`.
+#   Example: {
+#     "BASE_URL": "https://name_of_mfe.example.com",
+#     "LANGUAGE_PREFERENCE_COOKIE_NAME": "example-language-preference",
+#     "CREDENTIALS_BASE_URL": "https://credentials.example.com",
+#     "DISCOVERY_API_BASE_URL": "https://discovery.example.com",
+#     "LMS_BASE_URL": "https://courses.example.com",
+#     "LOGIN_URL": "https://courses.example.com/login",
+#     "LOGOUT_URL": "https://courses.example.com/logout",
+#     "STUDIO_BASE_URL": "https://studio.example.com",
+#     "LOGO_URL": "https://courses.example.com/logo.png"
+#   }
+# .. setting_use_cases: open_edx
+# .. setting_creation_date: 2022-08-05
+MFE_CONFIG = {}
+
+# .. setting_name: MFE_CONFIG_OVERRIDES
+# .. setting_implementation: DjangoSetting
+# .. setting_default: {}
+# .. setting_description: Overrides or additions to `MFE_CONFIG` for when a specific MFE is requested
+#   by the MFE Config API. Top-level keys are APP_IDs, a.k.a. the name of the MFE (for example,
+#   for an MFE named "frontend-app-xyz", the top-level key would be "xyz").
+#   Example: {
+#     "gradebook": {
+#        "BASE_URL": "https://gradebook.example.com",
+#     },
+#     "profile": {
+#        "BASE_URL": "https://profile.example.com",
+#        "ENABLE_LEARNER_RECORD_MFE": "true",
+#     },
+#   }
+# .. setting_use_cases: open_edx
+# .. setting_creation_date: 2022-08-05
+MFE_CONFIG_OVERRIDES = {}
+
+# .. setting_name: MFE_CONFIG_API_CACHE_TIMEOUT
+# .. setting_default: 60*5
+# .. setting_description: The MFE Config API response will be cached during the
+#   specified time
+MFE_CONFIG_API_CACHE_TIMEOUT = 60 * 5

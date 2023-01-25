@@ -1015,3 +1015,8 @@ if getattr(settings, 'PROVIDER_STATES_URL', None):
             name='courseware_xblock_handler_provider_state',
         )
     ]
+
+# MFE API urls
+urlpatterns += [
+    path('api/mfe_config/v1', include(('lms.djangoapps.mfe_config_api.urls', 'lms.djangoapps.mfe_config_api'), namespace='mfe_config_api'))
+]
