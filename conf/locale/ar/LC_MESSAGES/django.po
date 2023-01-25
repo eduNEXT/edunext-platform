@@ -11740,6 +11740,10 @@ msgid ""
 "process your personal data in accordance                   with the "
 "{privacy_policy_link_start}Privacy Policy{privacy_policy_link_end}."
 msgstr ""
+"من خلال إنشاء حساب ، فإنك توافق على {terms_of_service_link_start} "
+"{terms_of_service} {terms_of_service_link_end} وتقر بأن {platform_name} وكل "
+"عضو يعالج بياناتك الشخصية وفقًا {privacy_policy_link_start} سياسة الخصوصية "
+"{privacy_policy_link_end}."
 
 #. Translators: "Terms of service" is a legal document users must agree to
 #. in order to register a new account.
