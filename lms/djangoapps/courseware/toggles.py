@@ -5,6 +5,7 @@ Toggles for courseware in-course experience.
 from edx_toggles.toggles import LegacyWaffleFlagNamespace, SettingToggle
 from opaque_keys.edx.keys import CourseKey
 
+from lms.lib.utils import use_learning_legacy_frontend
 from openedx.core.djangoapps.waffle_utils import CourseWaffleFlag
 
 # Namespace for courseware waffle flags.
@@ -140,7 +141,7 @@ def courseware_mfe_is_active(course_key: CourseKey) -> bool:
         return False
     # NO: MFE courseware can be disabled for users/courses/globally via this
     #     Waffle flag.
-    if COURSEWARE_USE_LEGACY_FRONTEND.is_enabled(course_key):
+    if use_learning_legacy_frontend() and COURSEWARE_USE_LEGACY_FRONTEND.is_enabled(course_key):
         return False
     # NO: Course preview doesn't work in the MFE
     if in_preview_mode():
