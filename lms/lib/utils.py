@@ -2,6 +2,8 @@
 Helper methods for the LMS.
 """
 
+from django.conf import settings
+
 
 def get_parent_unit(xblock):
     """
@@ -44,3 +46,15 @@ def is_unit(xblock):
     """
 
     return get_parent_unit(xblock) is None and xblock.get_parent()
+
+
+def use_learning_legacy_frontend() -> bool:
+    """
+    Checks in django settings if use the learning legacy
+    frontend instead the learning mfe.
+
+    Returns:
+        True if the legacy frontend setting is activated, by default
+        legacy would be activated.
+    """
+    return bool(getattr(settings, "USE_LEARNING_LEGACY_FRONTEND", True))
