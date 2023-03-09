@@ -14602,7 +14602,7 @@ msgstr " مثلًا، اسمك (كما سيظهر على الشهادات)"
 
 #: lms/templates/signup_modal.html
 msgid "{start_li}Welcome{end_li} {name}"
-msgstr "{بداية_li}مرحبا{نهاية_li}{اسم}"
+msgstr "{start_li}مرحبا{end_li}{name}"
 
 #: lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -15776,7 +15776,7 @@ msgstr "إلغاء الاشتراك"
 
 #: lms/templates/bulk_email/confirm_unsubscribe.html
 msgid "confirm unsubscribe from {org} {course} emails."
-msgstr "تأكيد إلغاء الاشتراك في رسائل البريد الإلكتروني ل {org}{دورة}."
+msgstr "تأكيد إلغاء الاشتراك في رسائل البريد الإلكتروني ل {org}{course}."
 
 #: lms/templates/bulk_email/confirm_unsubscribe.html
 msgid "Note:"
@@ -15791,11 +15791,11 @@ msgstr ""
 
 #: lms/templates/bulk_email/unsubscribe_success.html
 msgid "You have successfully unsubscribed from {org} {course} emails."
-msgstr "لقد تم إلغاء اشتراكك بنجاح في رسائل البريد الإلكتروني ل {org}{دورة}."
+msgstr "لقد تم إلغاء اشتراكك بنجاح في رسائل البريد الإلكتروني ل {org}{course}."
 
 #: lms/templates/bulk_email/unsubscribe_success.html
 msgid "You have not been unsubscribed from {org} {course} emails."
-msgstr "لم يتم إلغاء اشتراكك في رسائل البريد الإلكتروني ل {org}{دورة}."
+msgstr "لم يتم إلغاء اشتراكك في رسائل البريد الإلكتروني ل {org}{course}."
 
 #: lms/templates/bulk_email/unsubscribe_success.html
 msgid "{link_start}Return to {platform_name}{link_end}"
@@ -17040,7 +17040,7 @@ msgstr "استعراض عملية التقييم في Studio"
 
 #: lms/templates/courseware/progress.html
 msgid "Course Progress for '{username}' ({email})"
-msgstr "مستوى التقدم في المساق ل '{اسم المستخدم}' ({عنوان البريد الالكتروني})"
+msgstr "({email}) '{username}' مستوى التقدم في المساق ل "
 
 #: lms/templates/courseware/progress.html
 msgid "View Certificate"
@@ -18328,7 +18328,7 @@ msgstr "استكشف الجديد"
 
 #: lms/templates/header/navbar-logo-header.html
 msgid "{name} Dashboard"
-msgstr "{اسم} لوحة المعلومات"
+msgstr "{name} لوحة المعلومات"
 
 #: lms/templates/header/navbar-not-authenticated.html
 msgid "Supplemental Links"
@@ -21169,7 +21169,7 @@ msgstr "عذراً، لم توجد الصفحة التي كنت تبحث عنه�
 
 #: cms/templates/404.html
 msgid "Go back to the {homepage}."
-msgstr "العودة إلى {الصفحة الرئيسية}."
+msgstr "{homepage} العودة إلى."
 
 #: cms/templates/500.html
 msgid "{studio_name} Server Error"
@@ -24537,7 +24537,7 @@ msgstr "ستتم إزالة الدعم في الإصدار القادم."
 
 #: cms/templates/widgets/deprecated-course-key-warning.html
 msgid "Support will be removed on {expiration_date}."
-msgstr "ستتم إزالة الدعم في {تاريخ انتهاء الصلاحية}."
+msgstr "{expiration_date} ستتم إزالة الدعم في."
 
 #: cms/templates/widgets/deprecated-course-key-warning.html
 msgid "This course uses a legacy storage format."
