@@ -6489,8 +6489,8 @@ msgstr "Deaktiviert"
 #, python-brace-format
 msgid "({number} Question)"
 msgid_plural "({number} Questions)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "({number} Frage)"
+msgstr[1] "({number} Fragen)"
 
 #: lms/djangoapps/course_home_api/outline/views.py
 #, python-brace-format
