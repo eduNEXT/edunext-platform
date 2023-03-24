@@ -43,9 +43,23 @@ def create_account(request):
 class HelperMixin:
     """
     Contains helper methods for IntegrationTestMixin and IntegrationTest classes below.
+    Test Deprecar FFI-8 Running Test Suit
     """
 
     provider = None
+
+    def _check_registration_form_username(self, form_data, test_username, expected):
+        """
+        DRY method to check the username in the registration form.
+
+        Args:
+            form_data (dict): data to initialize form with.
+            test_username (str): username to check the form initialization with.
+            expected (str): expected cleaned username after the form initialization.
+        """
+        form_data['username'] = test_username
+        form_field_data = self.provider.get_register_form_data(form_data)
+        assert form_field_data['username'] == expected
 
     def assert_redirect_to_provider_looks_correct(self, response):
         """Asserts the redirect to the provider's site looks correct.
@@ -85,6 +99,25 @@ class HelperMixin:
         for prepopulated_form_data in form_field_data:
             if prepopulated_form_data in required_fields:
                 self.assertContains(response, form_field_data[prepopulated_form_data])
+
+    def assert_register_form_populates_unicode_username_correctly(self, request):  # lint-amnesty, pylint: disable=invalid-name
+        """
+        Check the registration form username field behaviour with unicode values.
+
+        The field could be empty or prefilled depending on whether ENABLE_UNICODE_USERNAME feature is disabled/enabled.
+        """
+        unicode_username = 'Червона_Калина'
+        ascii_substring = 'untouchable'
+        partial_unicode_username = unicode_username + ascii_substring
+        pipeline_kwargs = pipeline.get(request)['kwargs']
+
+        assert settings.FEATURES['ENABLE_UNICODE_USERNAME'] is False
+
+        self._check_registration_form_username(pipeline_kwargs, unicode_username, '')
+        self._check_registration_form_username(pipeline_kwargs, partial_unicode_username, ascii_substring)
+
+        with mock.patch.dict('django.conf.settings.FEATURES', {'ENABLE_UNICODE_USERNAME': True}):
+            self._check_registration_form_username(pipeline_kwargs, unicode_username, unicode_username)
 
     # pylint: disable=invalid-name
     def assert_account_settings_context_looks_correct(self, context, duplicate=False, linked=None):
@@ -149,7 +182,7 @@ class HelperMixin:
         assert 409 == response.status_code
         payload = json.loads(response.content.decode('utf-8'))
         assert not payload.get('success')
-        assert 'belongs to an existing account' in payload['username'][0]['user_message']
+        assert 'It looks like this username is already taken' == payload['username'][0]['user_message']
 
     def assert_json_success_response_looks_correct(self, response, verify_redirect_url):
         """Asserts the json response indicates success and redirection."""
@@ -448,7 +481,7 @@ class IntegrationTestMixin(testutil.TestCase, test.TestCase, HelperMixin):
         # Now the user enters their username and password.
         # The AJAX on the page will log them in:
         ajax_login_response = self.client.post(
-            reverse('user_api_login_session'),
+            reverse('user_api_login_session', kwargs={'api_version': 'v1'}),
             {'email': self.user.email, 'password': 'test'}
         )
         assert ajax_login_response.status_code == 200
@@ -789,11 +822,7 @@ class IntegrationTest(testutil.TestCase, test.TestCase, HelperMixin):
         post_request = self._get_login_post_request(strategy)
         self.assert_json_failure_response_is_missing_social_auth(login_user(post_request))
 
-    @django_utils.override_settings(ENABLE_REQUIRE_THIRD_PARTY_AUTH=True)
     def test_signin_associates_user_if_oauth_provider_and_tpa_is_required(self):
-        """
-        Tests associate user by email with oauth provider and `ENABLE_REQUIRE_THIRD_PARTY_AUTH` enabled
-        """
         username, email, password = self.get_username(), 'user@example.com', 'password'
 
         _, strategy = self.get_request_and_strategy(
@@ -864,6 +893,7 @@ class IntegrationTest(testutil.TestCase, test.TestCase, HelperMixin):
         # At this point we know the pipeline has resumed correctly. Next we
         # fire off the view that displays the registration form.
         with self._patch_edxmako_current_request(request):
+            self.assert_register_form_populates_unicode_username_correctly(request)
             self.assert_register_response_in_pipeline_looks_correct(
                 login_and_registration_form(strategy.request, initial_mode='register'),
                 pipeline.get(request)['kwargs'],
@@ -920,12 +950,12 @@ class IntegrationTest(testutil.TestCase, test.TestCase, HelperMixin):
         strategy.storage.user.create_user(username=self.get_username(), email='user@email.com', password='password')
         backend = strategy.request.backend
         backend.auth_complete = mock.MagicMock(return_value=self.fake_auth_complete(strategy))
-        # If learner already has an account then make sure login page is served instead of registration.
         # pylint: disable=protected-access
-        self.assert_redirect_to_login_looks_correct(actions.do_complete(backend, social_views._do_login,
-                                                                        request=request))
-        distinct_username = pipeline.get(request)['kwargs']['username']
-        assert original_username != distinct_username
+        response = actions.do_complete(backend, social_views._do_login, request=request)
+        assert response.status_code == 302
+
+        response = json.loads(create_account(strategy.request).content.decode('utf-8'))
+        assert response['username'] != original_username
 
     def test_new_account_registration_fails_if_email_exists(self):
         request, strategy = self.get_request_and_strategy(
