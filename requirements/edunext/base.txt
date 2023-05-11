@@ -35,11 +35,6 @@ edx-opaque-keys[django]==2.1.0  # via -c requirements/edunext/../edx/base.txt, e
 edx-proctoring==2.4.0     # via -c requirements/edunext/../edx/base.txt, eox-core
 edx-rest-api-client==5.2.1  # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 edx-when==1.2.3           # via -c requirements/edunext/../edx/base.txt, edx-proctoring
-eox-core[sentry,tpa]==3.4.0  # via -r requirements/edunext/base.in, eox-tagging
-eox-hooks==0.3.0          # via -r requirements/edunext/base.in
-eox-tagging==1.1.0        # via -r requirements/edunext/base.in
-eox-tenant==3.3.7         # via -r requirements/edunext/base.in
-eox-theming==1.1.0        # via -r requirements/edunext/base.in
 event-tracking==0.3.2     # via -c requirements/edunext/../edx/base.txt, edx-proctoring
 flow-control-xblock==1.0.1  # via -r requirements/edunext/base.in
 fs==2.0.18                # via -c requirements/edunext/../edx/base.txt, xblock
