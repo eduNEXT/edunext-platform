@@ -152,7 +152,7 @@ def score_published_handler(sender, block, user, raw_earned, raw_possible, only_
         if previous_score is not None:
             prev_raw_earned, prev_raw_possible = (previous_score.grade, previous_score.max_grade)
 
-            if not is_score_higher_or_equal(prev_raw_earned, prev_raw_possible, raw_earned, raw_possible):
+            if not is_score_higher_or_equal(prev_raw_earned, prev_raw_possible, raw_earned, raw_possible, True):
                 update_score = False
                 log.warning(
                     "Grades: Rescore is not higher than previous: "
