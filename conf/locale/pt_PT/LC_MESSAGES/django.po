@@ -8942,7 +8942,7 @@ msgstr "Pode aceder ao seu curso em: %(course_url)s."
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/subject.txt
 #, python-format
 msgid "You have been enrolled in %(course_name)s"
-msgstr "Foi inscrito em %(course_name)s"
+msgstr "Inscrição em %(course_name)s"
 
 #: lms/templates/instructor/edx_ace/addbetatester/email/body.html
 #, python-format
@@ -9211,7 +9211,7 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                    Foi inscrito em %(course_name)s\n"
+"                    Inscrição em %(course_name)s\n"
 "                "
 
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.html
@@ -9222,8 +9222,8 @@ msgid ""
 "the course staff. This course will now appear on your %(site_name)s "
 "dashboard."
 msgstr ""
-"Foi inscrito em %(course_name)s em %(site_name)s por um elemento da equipa "
-"do curso. Este curso aparecerá agora no seu painel de controlo "
+"Informamos que foi efetuada a sua inscrição em %(course_name)s em %(site_name)s por parte da equipa de administração"
+"Poderá aceder ao curso em "
 "%(site_name)s."
 
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.html
