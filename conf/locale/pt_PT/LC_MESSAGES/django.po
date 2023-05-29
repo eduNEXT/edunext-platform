@@ -9222,8 +9222,8 @@ msgid ""
 "the course staff. This course will now appear on your %(site_name)s "
 "dashboard."
 msgstr ""
-"Informamos que foi efetuada a sua inscrição em %(course_name)s em %(site_name)s por parte da equipa de administração"
-"Poderá aceder ao curso em "
+"Informamos que foi efetuada a sua inscrição em %(course_name)s em %(site_name)s "
+"por parte da equipa de administração. Poderá aceder ao curso em "
 "%(site_name)s."
 
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.html
