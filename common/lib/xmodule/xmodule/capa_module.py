@@ -65,7 +65,7 @@ log = logging.getLogger("edx.courseware")
 _ = lambda text: text
 
 # Generate this many different variants of problems with rerandomize=per_student
-NUM_RANDOMIZATION_BINS = 20
+NUM_RANDOMIZATION_BINS = 200
 # Never produce more than this many different seeds, no matter what.
 MAX_RANDOMIZATION_BINS = 1000
 
