@@ -257,7 +257,7 @@ class AccountCreationForm(forms.Form):
             # This Open edX instance has restrictions on what usernames are allowed.
             allowed_patterns = settings.REGISTRATION_USERNAME_PATTERNS_ALLOWED
         
-            if not any(re.match(pattern + "$", value) for pattern in allowed_patterns):
+            if not any(re.match(pattern + "$", username) for pattern in allowed_patterns):
                 if not 'social_auth_provider' in self.data:
                     raise ValidationError(_(
                         u"Unauthorized username, If you are a Técnico user (student, professor or staff) please register via Técnico-ID"
