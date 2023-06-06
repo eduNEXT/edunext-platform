@@ -9148,7 +9148,7 @@ msgstr "Foi convidado a inscrever-se em %(course_name)s"
 #: lms/templates/instructor/edx_ace/enrolledunenroll/email/subject.txt
 #, python-format
 msgid "You have been unenrolled from %(course_name)s"
-msgstr "A sua inscrição em %(course_name)sfoi cancelada"
+msgstr "A sua inscrição em %(course_name)s foi cancelada"
 
 #: lms/templates/instructor/edx_ace/allowedunenroll/email/body.html
 #: lms/templates/instructor/edx_ace/allowedunenroll/email/body.txt
@@ -9172,7 +9172,7 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                   A sua inscrição foi cancelada de%(course_name)s\n"
+"                   A sua inscrição em %(course_name)s foi cancelada\n"
 "                "
 
 #: lms/templates/instructor/edx_ace/enrolledunenroll/email/body.html
