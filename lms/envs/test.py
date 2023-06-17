@@ -636,3 +636,22 @@ SAVE_FOR_LATER_EMAIL_RATE_LIMIT = '5/m'
 #################### Network configuration ####################
 # Tests are not behind any proxies
 CLOSEST_CLIENT_IP_FROM_HEADERS = []
+
+################## MFE API ####################
+ENABLE_MFE_CONFIG_API = True
+MFE_CONFIG = {
+    "BASE_URL": "https://name_of_mfe.example.com",
+    "LANGUAGE_PREFERENCE_COOKIE_NAME": "example-language-preference",
+    "LOGO_URL": "https://courses.example.com/logo.png"
+}
+
+MFE_CONFIG_OVERRIDES = {
+    "mymfe": {
+        "LANGUAGE_PREFERENCE_COOKIE_NAME": "mymfe-language-preference",
+        "LOGO_URL": "https://courses.example.com/mymfe-logo.png",
+    },
+    "yourmfe": {
+        "LANGUAGE_PREFERENCE_COOKIE_NAME": "yourmfe-language-preference",
+        "LOGO_URL": "https://courses.example.com/yourmfe-logo.png",
+    },
+}
