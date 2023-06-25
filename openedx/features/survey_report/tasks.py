@@ -13,7 +13,7 @@ log = logging.getLogger('edx.celery.task')
 
 
 @shared_task(name='openedx.features.survey_report.tasks.generate_survey_report')
-@lock("generate_survey_report_lock", expire=60)
+@lock("generate_survey_report_lock")
 def generate_survey_report():
     """
     Tasks to generate a new survey report with non-sensitive data.
