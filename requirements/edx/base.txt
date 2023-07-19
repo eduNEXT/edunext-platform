@@ -764,7 +764,7 @@ openedx-events==0.13.0
     #   -c requirements/edx/../constraints.txt
     #   -r requirements/edx/base.in
     #   edx-event-bus-kafka
-openedx-filters==0.8.0
+openedx-filters==1.0.0
     # via
     #   -r requirements/edx/base.in
     #   lti-consumer-xblock
