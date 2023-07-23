@@ -866,7 +866,6 @@ class RegistrationViewTestV1(
                     {"value": "", "name": "--", "default": True},
                     {"value": "m", "name": "Male", "default": False},
                     {"value": "f", "name": "Female", "default": False},
-                    {"value": "o", "name": "Other/Prefer Not to Say", "default": False},
                 ],
             }
         )
@@ -886,7 +885,6 @@ class RegistrationViewTestV1(
                     {"value": "", "name": "--", "default": True},
                     {"value": "m", "name": "Male TRANSLATED", "default": False},
                     {"value": "f", "name": "Female TRANSLATED", "default": False},
-                    {"value": "o", "name": "Other/Prefer Not to Say TRANSLATED", "default": False},
                 ],
             }
         )

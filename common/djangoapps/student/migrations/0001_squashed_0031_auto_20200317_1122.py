@@ -228,7 +228,7 @@ class Migration(migrations.Migration):
                 ('language', models.CharField(blank=True, db_index=True, max_length=255)),
                 ('location', models.CharField(blank=True, db_index=True, max_length=255)),
                 ('year_of_birth', models.IntegerField(blank=True, db_index=True, null=True)),
-                ('gender', models.CharField(blank=True, choices=[('m', 'Male'), ('f', 'Female'), ('o', 'Other/Prefer Not to Say')], db_index=True, max_length=6, null=True)),
+                ('gender', models.CharField(blank=True, choices=[('m', 'Male'), ('f', 'Female')], db_index=True, max_length=6, null=True)),
                 ('level_of_education', models.CharField(blank=True, choices=[('p', 'Doctorate'), ('m', "Master's or professional degree"), ('b', "Bachelor's degree"), ('a', 'Associate degree'), ('hs', 'Secondary/high school'), ('jhs', 'Junior secondary/junior high/middle school'), ('el', 'Elementary/primary school'), ('none', 'No formal education'), ('other', 'Other education')], db_index=True, max_length=6, null=True)),
                 ('mailing_address', models.TextField(blank=True, null=True)),
                 ('city', models.TextField(blank=True, null=True)),

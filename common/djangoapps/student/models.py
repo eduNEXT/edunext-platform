@@ -531,8 +531,6 @@ class UserProfile(models.Model):
     GENDER_CHOICES = (
         ('m', gettext_noop('Male')),
         ('f', gettext_noop('Female')),
-        # Translators: 'Other' refers to the student's gender
-        ('o', gettext_noop('Other/Prefer Not to Say'))
     )
     gender = models.CharField(
         blank=True, null=True, max_length=6, db_index=True, choices=GENDER_CHOICES
