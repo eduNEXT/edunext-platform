@@ -3,6 +3,7 @@ Objects and utilities used to construct registration forms.
 """
 
 import copy
+from collections import OrderedDict
 from importlib import import_module
 import re
 
@@ -16,6 +17,9 @@ from django.urls import reverse
 from django.utils.translation import gettext as _
 from django_countries import countries
 
+from openedx_filters import PipelineStep
+from openedx_filters.tooling import OpenEdxPublicFilter
+from openedx_filters.exceptions import OpenEdxFilterException
 from common.djangoapps import third_party_auth
 from common.djangoapps.edxmako.shortcuts import marketing_link
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
@@ -34,6 +38,174 @@ from common.djangoapps.util.password_policy_validators import (
     password_validators_restrictions,
     validate_password,
 )
+
+
+class AddCustomFieldsBeforeRegistration(PipelineStep):
+    """ Pipeline used to add custom fields to the registration form.
+
+        Example usage:
+
+        Add the following configurations to your configuration file:
+                "OPEN_EDX_FILTERS_CONFIG": {
+                    "org.openedx.learning.student.registration.render.started.v1": {
+                        "fail_silently": false,
+                        "pipeline": [
+                            "eox_tenant.samples.pipeline.AddCustomFieldsBeforeRegistration"
+                        ]
+                    }
+                }
+    """
+
+    def run_filter(self, form_desc):  # pylint: disable=arguments-differ
+        """Run the pipeline filter."""
+
+        extra_fields = self._get_extra_fields()
+
+        for field_name in extra_fields:
+            extra_field = {"field_name": field_name}
+            self._add_custom_field(
+                form_desc,
+                required=self._is_field_required(field_name),
+                **extra_field
+            )
+        fields = form_desc.fields
+        fields = [field['name'] for field in fields]
+
+        field_order = configuration_helpers.get_value('REGISTRATION_FIELD_ORDER')
+        if not field_order:
+            field_order = settings.REGISTRATION_FIELD_ORDER or fields
+
+        if set(fields) != set(field_order):
+            difference = set(fields).difference(set(field_order))
+            field_order.extend(sorted(difference))
+
+        ordered_fields = []
+        for field in field_order:
+            for form_field in form_desc.fields:
+                if field == form_field['name']:
+                    ordered_fields.append(form_field)
+                    break
+
+        form_desc.fields = ordered_fields
+        return form_desc
+
+    def _get_extra_fields(self):
+        """Returns the list of extra fields to include in the registration form.
+        Returns:
+            list of strings
+        """
+        extended_profile_fields = [field.lower() for field in getattr(settings, 'extended_profile_fields', [])]  # lint-amnesty, pylint: disable=line-too-long
+
+        return list(OrderedDict.fromkeys(extended_profile_fields))
+
+    def _is_field_required(self, field_name):
+        """Check whether a field is required based on Django settings. """
+        _extra_fields_setting = copy.deepcopy(
+            configuration_helpers.get_value('REGISTRATION_EXTRA_FIELDS')
+        )
+        if not _extra_fields_setting:
+            _extra_fields_setting = copy.deepcopy(settings.REGISTRATION_EXTRA_FIELDS)
+
+        return _extra_fields_setting.get(field_name) == "required"
+
+    def _get_custom_field_dict(self, field_name):
+        """Given a field name searches for its definition dictionary.
+        Arguments:
+            field_name (str): the name of the field to search for.
+        """
+        custom_fields = getattr(settings, "EDNX_CUSTOM_REGISTRATION_FIELDS", [])
+        for field in custom_fields:
+            if field.get("name").lower() == field_name:
+                return field
+        return {}
+
+    def _get_custom_html_override(self, text_field, html_piece=None):
+        """Overrides field with html piece.
+        Arguments:
+            text_field: field to override. It must have the following format:
+                "Here {} goes the HTML piece." In `{}` will be inserted the HTML piece.
+        Keyword Arguments:
+            html_piece: string containing HTML components to be inserted.
+        """
+        if html_piece:
+            html_piece = HTML(html_piece) if isinstance(html_piece, str) else ""
+            return Text(_(text_field)).format(html_piece)  # pylint: disable=translation-of-non-string
+        return text_field
+
+    def _add_custom_field(self, form_desc, required=True, **kwargs):
+        """Adds custom fields to a form description.
+        Arguments:
+            form_desc: A form description
+        Keyword Arguments:
+            required (bool): Whether this field is required; defaults to False
+            field_name (str): Name used to get field information when creating it.
+        """
+        field_name = kwargs.pop("field_name")
+        if field_name in getattr(settings, "EDNX_IGNORE_REGISTER_FIELDS", []):
+            return
+
+        custom_field_dict = self._get_custom_field_dict(field_name)
+        if not custom_field_dict:
+            return
+
+        # Check to convert options:
+        field_options = custom_field_dict.get("options")
+        if isinstance(field_options, dict):
+            field_options = [(str(value.lower()), name) for value, name in field_options.items()]
+        elif isinstance(field_options, list):
+            field_options = [(str(value.lower()), value) for value in field_options]
+
+        # Set default option if applies:
+        default_option = custom_field_dict.get("default")
+        if default_option:
+            form_desc.override_field_properties(
+                field_name,
+                default=default_option
+            )
+
+        field_type = custom_field_dict.get("type")
+
+        form_desc.add_field(
+            field_name,
+            label=self._get_custom_html_override(
+                custom_field_dict.get("label"),
+                custom_field_dict.get("html_override"),
+            ),
+            field_type=field_type,
+            options=field_options,
+            instructions=custom_field_dict.get("instructions"),
+            placeholder=custom_field_dict.get("placeholder"),
+            restrictions=custom_field_dict.get("restrictions"),
+            include_default_option=bool(default_option) or field_type == "select",
+            required=required,
+            error_messages=custom_field_dict.get("errorMessages")
+        )
+
+
+class StudentRegistrationRenderStarted(OpenEdxPublicFilter):
+    """
+    Custom class used to add custom fields to the registration form.
+    """
+
+    filter_type = "org.openedx.learning.student.registration.render.started.v1"
+
+    class ErrorFilteringFormDescription(OpenEdxFilterException):
+        """
+        Custom class used catch exceptions when filtering form description.
+        """
+
+    @classmethod
+    def run_filter(cls, form_desc):
+        """
+        Execute a filter with the signature specified.
+
+        Arguments:
+            form_desc (dict): description form specifying the fields to be rendered
+            in the registration form.
+        """
+        data = super().run_pipeline(form_desc=form_desc)
+        form_data = data.get("form_desc")
+        return form_data
 
 
 class TrueCheckbox(widgets.CheckboxInput):
@@ -455,6 +627,12 @@ class RegistrationFormFactory:
                 if field['name'] == 'confirm_email':
                     del form_desc.fields[index]
                     break
+
+        try:
+            form_desc = StudentRegistrationRenderStarted().run_filter(form_desc)
+        except StudentRegistrationRenderStarted.ErrorFilteringFormDescription as exc:
+            raise ImproperlyConfigured(f'Pipeline configuration error: {exc}') from exc
+
         return form_desc
 
     def _get_registration_submit_url(self, request):
