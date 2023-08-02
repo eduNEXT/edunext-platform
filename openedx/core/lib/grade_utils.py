@@ -17,14 +17,14 @@ def compare_scores(earned1, possible1, earned2, possible2, treat_undefined_as_ze
     """
     try:
         percentage1 = float(earned1) / float(possible1)
-    except ZeroDivisionError:
+    except (ZeroDivisionError, TypeError):
         if not treat_undefined_as_zero:
             raise
         percentage1 = 0.0
 
     try:
         percentage2 = float(earned2) / float(possible2)
-    except ZeroDivisionError:
+    except (ZeroDivisionError, TypeError):
         if not treat_undefined_as_zero:
             raise
         percentage2 = 0.0
