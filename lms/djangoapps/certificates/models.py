@@ -2,7 +2,7 @@
 Course certificates are created for a student and an offering of a course (a course run).
 """
 
-
+from datetime import timezone
 import json
 import logging
 import os
@@ -396,6 +396,7 @@ class GeneratedCertificate(models.Model):
 
         # .. event_implemented_name: CERTIFICATE_REVOKED
         CERTIFICATE_REVOKED.send_event(
+            time=self.modified_date.astimezone(timezone.utc),
             certificate=CertificateData(
                 user=UserData(
                     pii=UserPersonalData(
@@ -465,6 +466,9 @@ class GeneratedCertificate(models.Model):
         Credentials IDA.
         """
         super().save(*args, **kwargs)
+
+        timestamp = self.modified_date.astimezone(timezone.utc)
+
         COURSE_CERT_CHANGED.send_robust(
             sender=self.__class__,
             user=self.user,
@@ -475,6 +479,7 @@ class GeneratedCertificate(models.Model):
 
         # .. event_implemented_name: CERTIFICATE_CHANGED
         CERTIFICATE_CHANGED.send_event(
+            time=timestamp,
             certificate=CertificateData(
                 user=UserData(
                     pii=UserPersonalData(
@@ -507,6 +512,7 @@ class GeneratedCertificate(models.Model):
 
             # .. event_implemented_name: CERTIFICATE_CREATED
             CERTIFICATE_CREATED.send_event(
+                time=timestamp,
                 certificate=CertificateData(
                     user=UserData(
                         pii=UserPersonalData(
