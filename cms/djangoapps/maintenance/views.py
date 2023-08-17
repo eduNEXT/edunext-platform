@@ -7,6 +7,7 @@ import logging
 
 from django.core.validators import ValidationError
 from django.db import transaction
+from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
@@ -16,6 +17,9 @@ from django.views.generic.list import ListView
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
 
+from openedx_filters import PipelineStep
+from openedx_filters.exceptions import OpenEdxFilterException
+from openedx_filters.tooling import OpenEdxPublicFilter
 from cms.djangoapps.contentstore.management.commands.utils import get_course_versions
 from common.djangoapps.edxmako.shortcuts import render_to_response
 from common.djangoapps.util.json_request import JsonResponse
@@ -74,6 +78,70 @@ class MaintenanceIndexView(View):
         })
 
 
+class ForcePublishCourseRenderStarted(OpenEdxPublicFilter):
+    """
+    Custom class used to force plublish course filters.
+    """
+
+    filter_type = "org.openedx.studio.manages.force_publish.render.started.v1"
+
+    class RedirectToPage(OpenEdxFilterException):
+        """
+        Custom class used to redirect before the force publish course rendering process.
+        """
+
+        def __init__(self, message, redirect_to=""):
+            """
+            Override init that defines specific arguments used in the force publish course render process.
+
+            Arguments:
+                message: error message for the exception.
+                redirect_to: URL to redirect to.
+            """
+            super().__init__(message, redirect_to=redirect_to)
+
+
+    @classmethod
+    def run_filter(cls, context, template_name):
+        """
+        Execute a filter with the signature specified.
+
+        Arguments:
+            context (dict): template context for the account settings page.
+            template_name (str): template path used to render the account settings page.
+        """
+        data = super().run_pipeline(context=context, template_name=template_name)
+        return data.get("context"), data.get("template_name")
+
+
+
+class StopForcePublishCourseRender(PipelineStep):
+    """
+    Stop account settings render process raising RedirectToPage exception.
+
+    Example usage:
+
+    Add the following configurations to your configuration file:
+
+        "OPEN_EDX_FILTERS_CONFIG": {
+            "org.openedx.studio.manages.force_publish.render.started.v1": {
+                "fail_silently": false,
+                "pipeline": [
+                    "cms.djangoapps.maintenance.views.StopForcePublishCourseRender"
+                ]
+            }
+        },
+    """
+    def run_filter(self, context, *args, **kwargs):  # pylint: disable=arguments-differ
+        """
+        Pipeline step that stop force publish course page.
+        """
+        raise ForcePublishCourseRenderStarted.RedirectToPage(
+            "You can't access to account settings.",
+            redirect_to="",
+        )
+
+
 class MaintenanceBaseView(View):
     """
     Base class for Maintenance views.
@@ -94,9 +162,21 @@ class MaintenanceBaseView(View):
         """
         A short method to render_to_response that renders response.
         """
-        if self.request.is_ajax():
-            return JsonResponse(self.context)
-        return render_to_response(self.template, self.context)
+        context = self.context
+        template_name = self.template
+
+        try:
+            context, template_name = ForcePublishCourseRenderStarted().run_filter(
+                context=context, template_name=template_name
+            )
+        except ForcePublishCourseRenderStarted.RedirectToPage as exc:
+            response = HttpResponseRedirect(exc.redirect_to or reverse('home'))
+        else:
+            if self.request.is_ajax():
+                response = JsonResponse(context)
+            response = render_to_response(template_name, context)
+
+        return response
 
     @method_decorator(require_global_staff)
     def get(self, request):
