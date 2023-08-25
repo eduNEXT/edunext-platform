@@ -15,7 +15,9 @@
                 country: '',
                 language: '',
                 membership: [],
-                last_activity_at: ''
+                last_activity_at: '',
+                professor: '',
+                content_group: '',
             },
 
             initialize: function(options) {
