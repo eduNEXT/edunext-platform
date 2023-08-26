@@ -320,6 +320,7 @@ def _update_context_with_user_info(context, user, user_certificate):
 
     context['username'] = user.username
     context['course_mode'] = user_certificate.mode
+    context['grade'] = user_certificate.grade
     context['accomplishment_user_id'] = user.id
     context['accomplishment_copy_name'] = user_fullname
     context['accomplishment_copy_username'] = user.username
@@ -341,6 +342,14 @@ def _update_context_with_user_info(context, user, user_certificate):
     context['accomplishment_copy_more_about'] = _("More about {fullname}'s accomplishment").format(
         fullname=user_fullname
     )
+
+    if settings.FEATURES.get('UTEC_CUSTOM_CERTS_GRADE', False) and user_certificate.grade:
+        for val in settings.FEATURES['UTEC_GRADE'].values():
+            if float(val['min']) <= float(user_certificate.grade) <= float(val['max']):
+                utec_grade = val['label']
+        context['utec_final_grade'] = _('La calificacion de aprobacion es %(grade)s' % {'grade': utec_grade})
+    else:
+        context['utec_final_grade'] = False
 
 
 def _get_user_certificate(request, user, course_key, course_overview, preview_mode=None):

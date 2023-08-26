@@ -209,6 +209,8 @@ def create_account_with_params(request, params):  # pylint: disable=too-many-sta
         registration_fields.get('honor_code') != 'hidden'
     )
 
+    tos_required = settings.FEATURES.get("UTEC_TOS_REQUIRED", tos_required)
+
     form = AccountCreationForm(
         data=params,
         extra_fields=extra_fields,

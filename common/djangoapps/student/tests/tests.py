@@ -104,13 +104,15 @@ class CourseEndingTest(ModuleStoreTestCase):
         with patch('lms.djangoapps.grades.course_grade_factory.CourseGradeFactory.read') as patch_persisted_grade:
             patch_persisted_grade.return_value = Mock(percent=1.0)
             assert _cert_info(user, enrollment, cert_status) == {'status': 'generating', 'show_survey_button': True,
-                                                                 'survey_url': survey_url, 'grade': '1.0',
+                                                                 'survey_url': survey_url, 'utec_grade': 'False',
+                                                                 'grade': '1.0',
                                                                  'mode': 'honor', 'linked_in_url': None,
                                                                  'can_unenroll': False}
 
         cert_status = {'status': 'generating', 'grade': '0.67', 'mode': 'honor', 'uuid': None}
         assert _cert_info(user, enrollment, cert_status) == {'status': 'generating', 'show_survey_button': True,
-                                                             'survey_url': survey_url, 'grade': '0.67', 'mode': 'honor',
+                                                             'survey_url': survey_url, 'utec_grade': 'False',
+                                                             'grade': '0.67', 'mode': 'honor',
                                                              'linked_in_url': None, 'can_unenroll': False}
 
         cert_status = {
@@ -123,6 +125,7 @@ class CourseEndingTest(ModuleStoreTestCase):
         assert _cert_info(user, enrollment, cert_status) == {'status': 'downloadable',
                                                              'download_url': cert.download_url,
                                                              'show_survey_button': True, 'survey_url': survey_url,
+                                                             'utec_grade': 'False',
                                                              'grade': '0.67', 'mode': 'honor', 'linked_in_url': None,
                                                              'can_unenroll': False}
 
@@ -133,7 +136,7 @@ class CourseEndingTest(ModuleStoreTestCase):
             'uuid': 'fakeuuidbutitsfine',
         }
         assert _cert_info(user, enrollment, cert_status) == {'status': 'notpassing', 'show_survey_button': True,
-                                                             'survey_url': survey_url, 'grade': '0.67', 'mode': 'honor',
+                                                             'survey_url': survey_url, 'utec_grade': 'False', 'grade': '0.67', 'mode': 'honor',
                                                              'linked_in_url': None, 'can_unenroll': True}
 
         # Test a course that doesn't have a survey specified
@@ -148,7 +151,7 @@ class CourseEndingTest(ModuleStoreTestCase):
             'download_url': cert.download_url, 'mode': 'honor', 'uuid': 'fakeuuidbutitsfine'
         }
         assert _cert_info(user, enrollment2, cert_status) == {'status': 'notpassing', 'show_survey_button': False,
-                                                              'grade': '0.67', 'mode': 'honor', 'linked_in_url': None,
+                                                              'grade': '0.67', 'utec_grade': 'False', 'mode': 'honor', 'linked_in_url': None,
                                                               'can_unenroll': True}
 
         course3 = CourseOverviewFactory.create(
@@ -198,6 +201,7 @@ class CourseEndingTest(ModuleStoreTestCase):
                 'download_url': cert.download_url,
                 'show_survey_button': False,
                 'grade': grade,
+                'utec_grade': 'False',
                 'mode': mode,
                 'linked_in_url': None,
                 'can_unenroll': False

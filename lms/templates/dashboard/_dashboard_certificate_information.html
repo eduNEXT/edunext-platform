@@ -63,12 +63,19 @@ else:
       <div class="message-copy">
         % if cert_status['status'] == CertificateStatuses.downloadable or cert_status['status'] == CertificateStatuses.requesting:
             ${_("Congratulations! Your certificate is ready.")}
-        % elif cert_status['status'] == 'notpassing':
-          % if enrollment.mode != 'audit':
-            ${_("Grade required for a {cert_name_short}:").format(cert_name_short=cert_name_short)}
+            % if cert_status['utec_grade']:
+              <span class="grade-value">${cert_status['utec_grade']}</span>
+            % else:
+              <span class="grade-value">${"{0:.0f}%".format(float(cert_status['grade'])*100)}</span>.
+            % endif
+        % elif ccert_status['status'] == 'notpassing' and enrollment.mode != 'audit':
+          ${_("Grade required for a {cert_name_short}:").format(cert_name_short=cert_name_short)}
+          % if cert_status['utec_grade']:
+            <span class="grade-value">${course_overview.utec_lowest_passing_grade}</span>
           % else:
-            ${_("Grade required to pass this course:")}
+            <span class="grade-value">${"{0:.0f}%".format(float(course_overview.lowest_passing_grade)*100)}</span>.
           % endif
+
           <span class="grade-value">${"{0:.0f}%".format(float(course_overview.lowest_passing_grade)*100)}</span>.
         % elif cert_status['status'] == 'restricted' and enrollment.mode == 'verified':
           <p class="message-copy">
