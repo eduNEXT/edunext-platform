@@ -2,23 +2,23 @@
 metadata:
     display_name: Dropdown
     markdown: |
-         You can use this template as a guide to the simple editor markdown and OLX markup to use for dropdown problems. Edit this component to replace this template with your own assessment.
-         >>Add the question text, or prompt, here. This text is required.||You can add an optional tip or note related to the prompt like this. <<
+         Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de dropdown. Edite este componente para reemplazar esta plantilla con su propia evaluación.
+         >>Agregue una pregunta o enunciado aquí. Este texto es requerido.||Puede agregar un tip o nota opcional al enunciado de esta manera.<<
          [[
-         an incorrect answer
-         (the correct answer)
-         an incorrect answer
+         una respuesta incorrecta
+         (la respuesta correcta)
+         una respuesta incorrecta
          ]]
 data:   |
         <problem>
             <optionresponse>
-                <p>You can use this template as a guide to the simple editor markdown and OLX markup to use for dropdown problems. Edit this component to replace this template with your own assessment.</p>
-                <label>Add the question text, or prompt, here. This text is required.</label>
-                <description>You can add an optional tip or note related to the prompt like this. </description>
+                <p>Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de dropdown. Edite este componente para reemplazar esta plantilla con su propia evaluación.</p>
+                <label>Agregue una pregunta o enunciado aquí. Este texto es requerido.</label>
+                <description>Puede agregar un tip o nota opcional al enunciado de esta manera.</description>
                 <optioninput>
-                    <option correct="False">an incorrect answer</option>
-                    <option correct="True">the correct answer</option>
-                    <option correct="False">an incorrect answer</option>
+                    <option correct="False">una respuesta incorrecta</option>
+                    <option correct="True">la respuesta correcta</option>
+                    <option correct="False">una respuesta incorrecta</option>
                 </optioninput>
             </optionresponse>
         </problem>

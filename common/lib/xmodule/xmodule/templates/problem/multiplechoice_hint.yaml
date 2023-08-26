@@ -1,40 +1,40 @@
 ---
 metadata:
-    display_name: Multiple Choice with Hints and Feedback
+    display_name: Opción múltiple con consejos y comentarios
     markdown: |
 
-        You can use this template as a guide to the simple editor markdown and OLX markup to use for multiple choice with hints and feedback problems. Edit this component to replace this template with your own assessment.
+        Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de opción múltiple con consejos y comentarios. Edite este componente para reemplazar esta plantilla con su propia evaluación.
 
-        >>Add the question text, or prompt, here. This text is required.||You can add an optional tip or note related to the prompt like this. <<
+        >>Agregue una pregunta o enunciado aquí. Este texto es requerido.||Puede agregar un tip o nota opcional al enunciado de esta manera.<<
 
-        ( ) an incorrect answer {{You can specify optional feedback like this, which appears after this answer is submitted.}}
-        (x) the correct answer
-        ( ) an incorrect answer {{You can specify optional feedback for none, a subset, or all of the answers.}}
+        ( ) una respuesta incorrecta {{Puede especificar comentarios opcionales de esta manera, los cuales aparecen después de que esta respuesta ha sido enviada.}}
+        (x) la respuesta correcta
+        ( ) una respuesta incorrecta {{Puede especificar comentarios opcionales para ninguna, un subgrupo, o todas las respuestas.}}
 
-        ||You can add an optional hint like this. Problems that have a hint include a hint button, and this text appears the first time learners select the button.||
-        ||If you add more than one hint, a different hint appears each time learners select the hint button.||
+        ||Puede agregar consejos opcionales de esta manera. Los problemas que tienen un consejo incluyen un botón de consejo. Este texto aparece la primera vez que los estudiantes seleccionan el botón.||
+        ||Si se agrega más de un consejo, un consejo diferente se mostrará cuando los estudiantes seleccionen el botón de consejo.||
 
 hinted: true
 data:   |
         <problem>
             <multiplechoiceresponse>
-                <p>You can use this template as a guide to the simple editor markdown and OLX markup to use for multiple choice with hints and feedback problems. Edit this component to replace this template with your own assessment.</p>
-                <label>Add the question text, or prompt, here. This text is required.</label>
-                <description>You can add an optional tip or note related to the prompt like this.</description>
+                <p>Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de opción múltiple con consejos y comentarios. Edite este componente para reemplazar esta plantilla con su propia evaluación.</p>
+                <label>Agregue una pregunta o enunciado aquí. Este texto es requerido.</label>
+                <description>Puede agregar un tip o nota opcional al enunciado de esta manera.</description>
                 <choicegroup>
-                    <choice correct="false">an incorrect answer
-                        <choicehint>You can specify optional feedback like this, which appears after this answer is submitted.</choicehint>
+                    <choice correct="false">una respuesta incorrecta
+                        <choicehint>Puede especificar comentarios opcionales de esta manera, los cuales aparecen después de que esta respuesta ha sido enviada.</choicehint>
                     </choice>
-                    <choice correct="true">the correct answer
+                    <choice correct="true">la respuesta correcta
                     </choice>
-                    <choice correct="false">an incorrect answer
-                        <choicehint>You can specify optional feedback for none, a subset, or all of the answers.</choicehint>
+                    <choice correct="false">una respuesta incorrecta
+                        <choicehint>Puede especificar comentarios opcionales para ninguna, un subgrupo, o todas las respuestas.</choicehint>
                     </choice>
                 </choicegroup>
             </multiplechoiceresponse>
 
             <demandhint>
-                <hint>You can add an optional hint like this. Problems that have a hint include a hint button, and this text appears the first time learners select the button.</hint>
-                <hint>If you add more than one hint, a different hint appears each time learners select the hint button.</hint>
+                <hint>Puede agregar consejos opcionales de esta manera. Los problemas que tienen un consejo incluyen un botón de consejo. Este texto aparece la primera vez que los estudiantes seleccionan el botón.</hint>
+                <hint>Si se agrega más de un consejo, un consejo diferente se mostrará cuando los estudiantes seleccionen el botón de consejo.</hint>
             </demandhint>
         </problem>

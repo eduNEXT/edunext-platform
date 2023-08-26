@@ -1,27 +1,27 @@
 ---
 metadata:
-    display_name: Multiple Choice
+    display_name: Opción múltiple
     markdown: |
 
-        You can use this template as a guide to the simple editor markdown and OLX markup to use for multiple choice problems. Edit this component to replace this template with your own assessment.
+        Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de opción múltiple. Edite este componente para reemplazar esta plantilla con su propia evaluación.
 
-        >>Add the question text, or prompt, here. This text is required.||You can add an optional tip or note related to the prompt like this. <<
+        >>Agregue una pregunta o enunciado aquí. Este texto es requerido.||Puede agregar un tip o nota opcional al enunciado de esta manera.<<
 
-        ( ) an incorrect answer
-        (x) the correct answer
-        ( ) an incorrect answer
+        ( ) Una respuesta incorrecta
+        (x) la respuesta correcta
+        ( ) Una respuesta incorrecta
 
 
 data:   |
         <problem>
             <multiplechoiceresponse>
-                <p>You can use this template as a guide to the simple editor markdown and OLX markup to use for multiple choice problems. Edit this component to replace this template with your own assessment.</p>
-                <label>Add the question text, or prompt, here. This text is required.</label>
-                <description>You can add an optional tip or note related to the prompt like this.</description>
+                <p>Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de opción múltiple. Edite este componente para reemplazar esta plantilla con su propia evaluación.</p>
+                <label>Agregue una pregunta o enunciado aquí. Este texto es requerido.</label>
+                <description>Puede agregar un tip o nota opcional al enunciado de esta manera.</description>
                 <choicegroup>
-                    <choice correct="false">an incorrect answer</choice>
-                    <choice correct="true">the correct answer</choice>
-                    <choice correct="false">an incorrect answer</choice>
+                    <choice correct="false">Una respuesta incorrecta</choice>
+                    <choice correct="true">la respuesta correcta</choice>
+                    <choice correct="false">Una respuesta incorrecta</choice>
                 </choicegroup>
             </multiplechoiceresponse>
         </problem>

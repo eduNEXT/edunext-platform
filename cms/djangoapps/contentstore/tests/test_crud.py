@@ -36,8 +36,8 @@ class TemplateTests(ModuleStoreTestCase):
         self.assertIsNotNone(dropdown)
         self.assertIn('markdown', dropdown['metadata'])
         self.assertIn('data', dropdown)
-        self.assertRegex(dropdown['metadata']['markdown'], r'.*dropdown problems.*')
-        self.assertRegex(dropdown['data'], r'<problem>\s*<optionresponse>\s*<p>.*dropdown problems.*')
+        self.assertRegex(dropdown['metadata']['markdown'], r'.*problemas de dropdown.*')
+        self.assertRegex(dropdown['data'], r'<problem>\s*<optionresponse>\s*<p>.*problemas de dropdown.*')
 
     def test_get_some_templates(self):
         self.assertEqual(len(SequenceBlock.templates()), 0)

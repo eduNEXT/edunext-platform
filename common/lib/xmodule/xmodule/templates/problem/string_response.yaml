@@ -1,21 +1,21 @@
 ---
 metadata:
-    display_name: Text Input
+    display_name: Entrada de texto
     markdown: |
-        You can use this template as a guide to the simple editor markdown and OLX markup to use for text input problems. Edit this component to replace this template with your own assessment.
+        Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de entrada de texto. Edite este componente para reemplazar esta plantilla con su propia evaluación.
 
-        >>Add the question text, or prompt, here. This text is required.||You can add an optional tip or note related to the prompt like this. <<
+        >>Agregue una pregunta o enunciado aquí. Este texto es requerido.||Puede agregar un tip o nota opcional al enunciado de esta manera.<<
 
-        = the correct answer
-        or= optional acceptable variant of the correct answer
+        = la respuesta correcta
+        or= variante aceptada de la respuesta correcta
 
 data:   |
         <problem>
-            <stringresponse answer="the correct answer" type="ci">
-                <p>You can use this template as a guide to the simple editor markdown and OLX markup to use for text input problems. Edit this component to replace this template with your own assessment.</p>
-                <label>Add the question text, or prompt, here. This text is required.</label>
-                <description>You can add an optional tip or note related to the prompt like this.</description>
-                <additional_answer answer="optional acceptable variant of the correct answer"/>
+            <stringresponse answer="la respuesta correcta" type="ci">
+                <p>Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de entrada de texto. Edite este componente para reemplazar esta plantilla con su propia evaluación.</p>
+                <label>Agregue una pregunta o enunciado aquí. Este texto es requerido.</label>
+                <description>Puede agregar un tip o nota opcional al enunciado de esta manera.</description>
+                <additional_answer answer="variante aceptada de la respuesta correcta"/>
                 <textline size="20"/>
             </stringresponse>
         </problem>

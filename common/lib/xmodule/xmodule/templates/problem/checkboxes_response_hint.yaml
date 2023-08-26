@@ -1,52 +1,52 @@
 ---
 metadata:
-    display_name: Checkboxes with Hints and Feedback
+    display_name: Casillas de Verificación con consejos y comentarios
     markdown: |
 
-      You can use this template as a guide to the simple editor markdown and OLX markup to use for checkboxes with hints and feedback problems. Edit this component to replace this template with your own assessment.
+      Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de verificación de casillas con consejos y comentarios. Edite este componente para reemplazar esta plantilla con su propia evaluación.
 
-      >>Add the question text, or prompt, here. This text is required.||You can add an optional tip or note related to the prompt like this.<<
+      >>Agregue una pregunta o enunciado aquí. Este texto es requerido.||Puede agregar un tip o nota opcional al enunciado de esta manera.<<
 
-      [x] a correct answer {{ selected: You can specify optional feedback that appears after the learner selects and submits this answer. }, { unselected: You can specify optional feedback that appears after the learner clears and submits this answer.}}
-      [ ] an incorrect answer
-      [ ] an incorrect answer {{ selected: You can specify optional feedback for none, all, or a subset of the answers. }, { unselected: You can specify optional feedback for selected answers, cleared answers, or both.}}
-      [x] a correct answer
+      [x] una respuesta correcta {{ selected: Puede especificar comentarios opcionales que aparecen después de que el estudiante selecciona y envía esta respuesta. }, { unselected: Puede especificar comentarios opcionales que aparecen después de que el estudiante deselecciona y envía esta respuesta.}}
+      [ ] una respuesta incorrecta
+      [ ] una respuesta incorrecta {{ selected: Puede especificar comentarios opcionales para ninguna, todas, o un subgrupo de respuestas. }, { unselected: Puede especificar comentarios opcionales para respuestas seleccionadas, deseleccionadas, o ambas.}}
+      [x] una respuesta correcta
 
 
-      {{ ((A B D)) You can specify optional feedback for a combination of answers which appears after the specified set of answers is submitted. }}
-      {{ ((A B C D)) You can specify optional feedback for one, several, or all answer combinations. }}
+      {{ ((A B D)) Puede especificar comentarios opcionales para una combinación de respuestas los cuales aparecen después de que el grupo de respuestas es enviado. }}
+      {{ ((A B C D)) Puede especificar comentarios opcionales para una, varias, o todas las combinaciones de respuestas. }}
 
-      ||You can add an optional hint like this. Problems that have a hint include a hint button, and this text appears the first time learners select the button.||
-      ||If you add more than one hint, a different hint appears each time learners select the hint button.||
+      ||Puede agregar consejos opcionales de esta manera. Los problemas que tienen un consejo incluyen un botón de consejo. Este texto aparece la primera vez que los estudiantes seleccionan el botón.||
+      ||Si se agrega más de un consejo, un consejo diferente se mostrará cuando los estudiantes seleccionen el botón de consejo.||
 
 
 hinted: true
 data:   |
         <problem>
             <choiceresponse>
-                <p>You can use this template as a guide to the simple editor markdown and OLX markup to use for checkboxes with hints and feedback problems. Edit this component to replace this template with your own assessment.</p>
-                <label>Add the question text, or prompt, here. This text is required.</label>
-                <description>You can add an optional tip or note related to the prompt like this.</description>
+                <p>Puede usar esta plantilla como una guía para el editor simple de markdown y el marcado OLX que se usan en problemas de verificación de casillas con consejos y comentarios. Edite este componente para reemplazar esta plantilla con su propia evaluación.</p>
+                <label>Agregue una pregunta o enunciado aquí. Este texto es requerido.</label>
+                <description>Puede agregar un tip o nota opcional al enunciado de esta manera.</description>
                 <checkboxgroup>
-                    <choice correct="true">a correct answer
-                        <choicehint selected="true">You can specify optional feedback that appears after the learner selects and submits this answer.</choicehint>
-                        <choicehint selected="false">You can specify optional feedback that appears after the learner clears and submits this answer.</choicehint>
+                    <choice correct="true">una respuesta correcta
+                        <choicehint selected="true">Puede especificar comentarios opcionales que aparecen después de que el estudiante selecciona y envía esta respuesta.</choicehint>
+                        <choicehint selected="false">Puede especificar comentarios opcionales que aparecen después de que el estudiante deselecciona y envía esta respuesta.</choicehint>
                     </choice>
-                    <choice correct="false">an incorrect answer
+                    <choice correct="false">una respuesta incorrecta
                     </choice>
-                    <choice correct="false">an incorrect answer
-                        <choicehint selected="true">You can specify optional feedback for none, all, or a subset of the answers.</choicehint>
-                        <choicehint selected="false">You can specify optional feedback for selected answers, cleared answers, or both.</choicehint>
+                    <choice correct="false">una respuesta incorrecta
+                        <choicehint selected="true">Puede especificar comentarios opcionales para ninguna, todas, o un subgrupo de respuestas.</choicehint>
+                        <choicehint selected="false">Puede especificar comentarios opcionales para respuestas seleccionadas, deseleccionadas, o ambas.</choicehint>
                     </choice>
-                    <choice correct="true">a correct answer
+                    <choice correct="true">una respuesta correcta
                     </choice>
-                    <compoundhint value="A B D">You can specify optional feedback for a combination of answers which appears after the specified set of answers is submitted.</compoundhint>
-                    <compoundhint value="A B C D">You can specify optional feedback for one, several, or all answer combinations.</compoundhint>
+                    <compoundhint value="A B D">Puede especificar comentarios opcionales para una combinación de respuestas los cuales aparecen después de que el grupo de respuestas es enviado.</compoundhint>
+                    <compoundhint value="A B C D">Puede especificar comentarios opcionales para una, varias, o todas las combinaciones de respuestas.</compoundhint>
                 </checkboxgroup>
             </choiceresponse>
 
             <demandhint>
-                <hint>You can add an optional hint like this. Problems that have a hint include a hint button, and this text appears the first time learners select the button.</hint>
-                <hint>If you add more than one hint, a different hint appears each time learners select the hint button.</hint>
+                <hint>Puede agregar consejos opcionales de esta manera. Los problemas que tienen un consejo incluyen un botón de consejo. Este texto aparece la primera vez que los estudiantes seleccionan el botón.</hint>
+                <hint>Si se agrega más de un consejo, un consejo diferente se mostrará cuando los estudiantes seleccionen el botón de consejo.</hint>
             </demandhint>
         </problem>

@@ -764,9 +764,9 @@ class TestDuplicateItem(ItemTest, DuplicateHelper):
             return usage_key
 
         # Display name comes from template.
-        dupe_usage_key = verify_name(self.problem_usage_key, self.vert_usage_key, "Duplicate of 'Multiple Choice'")
+        dupe_usage_key = verify_name(self.problem_usage_key, self.vert_usage_key, "Duplicate of 'Opción múltiple'")
         # Test dupe of dupe.
-        verify_name(dupe_usage_key, self.vert_usage_key, "Duplicate of 'Duplicate of 'Multiple Choice''")
+        verify_name(dupe_usage_key, self.vert_usage_key, "Duplicate of 'Duplicate of 'Opción múltiple''")
 
         # Uses default display_name of 'Text' from HTML component.
         verify_name(self.html_usage_key, self.vert_usage_key, "Duplicate of 'Text'")
