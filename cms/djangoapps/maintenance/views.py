@@ -17,7 +17,6 @@ from django.views.generic.list import ListView
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
 
-from openedx_filters import PipelineStep
 from openedx_filters.exceptions import OpenEdxFilterException
 from openedx_filters.tooling import OpenEdxPublicFilter
 from cms.djangoapps.contentstore.management.commands.utils import get_course_versions
@@ -100,7 +99,6 @@ class ForcePublishCourseRenderStarted(OpenEdxPublicFilter):
             """
             super().__init__(message, redirect_to=redirect_to)
 
-
     @classmethod
     def run_filter(cls, context, template_name):
         """
@@ -112,34 +110,6 @@ class ForcePublishCourseRenderStarted(OpenEdxPublicFilter):
         """
         data = super().run_pipeline(context=context, template_name=template_name)
         return data.get("context"), data.get("template_name")
-
-
-
-class StopForcePublishCourseRender(PipelineStep):
-    """
-    Stop account settings render process raising RedirectToPage exception.
-
-    Example usage:
-
-    Add the following configurations to your configuration file:
-
-        "OPEN_EDX_FILTERS_CONFIG": {
-            "org.openedx.studio.manages.force_publish.render.started.v1": {
-                "fail_silently": false,
-                "pipeline": [
-                    "cms.djangoapps.maintenance.views.StopForcePublishCourseRender"
-                ]
-            }
-        },
-    """
-    def run_filter(self, context, *args, **kwargs):  # pylint: disable=arguments-differ
-        """
-        Pipeline step that stop force publish course page.
-        """
-        raise ForcePublishCourseRenderStarted.RedirectToPage(
-            "You can't access to account settings.",
-            redirect_to="",
-        )
 
 
 class MaintenanceBaseView(View):
