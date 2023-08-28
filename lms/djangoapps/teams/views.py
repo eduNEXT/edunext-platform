@@ -629,7 +629,12 @@ class TeamsListView(ExpandableFieldViewMixin, GenericAPIView):
                 )
 
             data = CourseTeamSerializer(team, context={"request": request}).data
-            professor = User.objects.get(username='professor')
+            professor = request.data.get("professor")
+            if professor:
+                try:
+                    professor = User.objects.get(username=professor)
+                except User.DoesNotExist:
+                    pass
             group = add_group_to_course(
                 team.name,
                 course_key,
