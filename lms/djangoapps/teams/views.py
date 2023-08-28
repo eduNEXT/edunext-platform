@@ -635,7 +635,9 @@ class TeamsListView(ExpandableFieldViewMixin, GenericAPIView):
                 course_key,
                 professor=professor,
             )
-            link_group_to_partition_group(group, data["user_partition_id"], data["content_group"])
+            if request.data.get("user_partition_id") and request.data.get("content_group"):
+                link_group_to_partition_group(group, request.data["user_partition_id"], request.data["content_group"])
+
             return Response(data)
 
     def get_page(self):
