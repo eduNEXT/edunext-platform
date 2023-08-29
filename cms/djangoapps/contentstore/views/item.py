@@ -6,6 +6,8 @@ from datetime import datetime
 from functools import partial
 from uuid import uuid4
 
+from openedx_filters.tooling import OpenEdxPublicFilter
+from openedx_filters.exceptions import OpenEdxFilterException
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User  # lint-amnesty, pylint: disable=imported-auth-user
@@ -114,6 +116,30 @@ def _is_library_component_limit_reached(usage_key):
     return total_children + 1 > settings.MAX_BLOCKS_PER_CONTENT_LIBRARY
 
 
+class ModifyUsageKeyRequestStarted(OpenEdxPublicFilter):
+    """
+    Custom class used to request plublish course filters.
+    """
+
+    filter_type = "org.openedx.studio.contentstore.modify_usage_key_ request.started.v1"
+
+    class PreventModifyUsageKeyRequest(OpenEdxFilterException):
+        """
+        Custom class used to redirect before the request publish course rendering process.
+        """
+
+
+    @classmethod
+    def run_filter(cls, request, course_key):
+        """
+        Execute a filter with the signature specified.
+        Arguments:
+            request (WSGIRequest): request.
+        """
+        data = super().run_pipeline(request=request, course_key=course_key)
+        return data.get("request")
+
+
 @require_http_methods(("DELETE", "GET", "PUT", "POST", "PATCH"))
 @login_required
 @expect_json
@@ -168,6 +194,14 @@ def xblock_handler(request, usage_key_string=None):
                      if duplicate_source_locator is not present
               The locator (unicode representation of a UsageKey) for the created xblock (minus children) is returned.
     """
+    usage_key = usage_key_with_run(usage_key_string)
+    usage_key = usage_key.course_key
+
+    try:
+        request = ModifyUsageKeyRequestStarted().run_filter(request, usage_key)
+    except:
+        raise PermissionDenied()
+
     if usage_key_string:
         usage_key = usage_key_with_run(usage_key_string)
 
@@ -688,7 +722,7 @@ def _save_xblock(user, xblock, data=None, children_strings=None, metadata=None, 
 
         # Make public after updating the xblock, in case the caller asked for both an update and a publish.
         # Used by Bok Choy tests and by republishing of staff locks.
-        if publish == 'make_public' and getattr(settings, 'PUBLISH_COURSE', False):
+        if publish == 'make_public':
             modulestore().publish(xblock.location, user.id)
 
         # Note that children aren't being returned until we have a use case.
