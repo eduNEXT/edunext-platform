@@ -121,7 +121,7 @@ class ModifyUsageKeyRequestStarted(OpenEdxPublicFilter):
     Custom class used to request plublish course filters.
     """
 
-    filter_type = "org.openedx.studio.contentstore.modify_usage_key_ request.started.v1"
+    filter_type = "org.openedx.studio.contentstore.modify_usage_key_request.started.v1"
 
     class PreventModifyUsageKeyRequest(OpenEdxFilterException):
         """
