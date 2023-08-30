@@ -194,11 +194,15 @@ def xblock_handler(request, usage_key_string=None):
                      if duplicate_source_locator is not present
               The locator (unicode representation of a UsageKey) for the created xblock (minus children) is returned.
     """
-    usage_key = usage_key_with_run(usage_key_string)
-    usage_key = usage_key.course_key
+    filter_usage_key = usage_key_string
+    if not filter_usage_key:
+        filter_usage_key = request.json["parent_locator"]
+
+    course_key = usage_key_with_run(filter_usage_key)
+    course_key = course_key.course_key
 
     try:
-        request = ModifyUsageKeyRequestStarted().run_filter(request, usage_key)
+        request = ModifyUsageKeyRequestStarted().run_filter(request, course_key)
     except:
         raise PermissionDenied()
 
