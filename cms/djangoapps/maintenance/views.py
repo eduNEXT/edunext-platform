@@ -144,7 +144,8 @@ class MaintenanceBaseView(View):
         else:
             if self.request.is_ajax():
                 response = JsonResponse(context)
-            response = render_to_response(template_name, context)
+            else:
+                response = render_to_response(template_name, context)
 
         return response
 
