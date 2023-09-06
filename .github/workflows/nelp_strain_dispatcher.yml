@@ -1,0 +1,44 @@
+name: Strain Repo Dispatch 📜
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - closed
+#strain_property go in json_path format.
+jobs:
+  strain-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Manipulate strain property if necessary
+        run: |
+          echo "${BASH_VERSION}"
+          echo "STRAIN_PROPERTY=${STRAIN_PROPERTY}" >> $GITHUB_ENV # update GitHub ENV vars
+        env:
+          STRAIN_PROPERTY: EDX_PLATFORM_VERSION
+          BASE_REF: "${{ github.base_ref }}"
+      - name: Strain Repository Dispatch
+        if: |
+          github.event.action == 'opened' ||
+          github.event.action == 'synchronize' ||
+          (github.event.action == 'closed' &&  github.event.pull_request.merged)
+
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.ROBONEXT_PAT }}
+          repository: nelc/edx-platform-strains
+          event-type: strain-update-pr
+          client-payload: |
+            {
+              "repo": "${{ github.repository }}",
+              "sha": "${{ github.event.pull_request.head.sha }}",
+              "head_ref": "${{ github.head_ref }}",
+              "base_ref": "${{ github.base_ref }}",
+              "strain_property": "${{ env.STRAIN_PROPERTY }}",
+              "strain_property_value": "${{ env.PROPERTY_VALUE }}",
+              "strain_path": "mango/nelp/strain.yml",
+              "pr_number": "${{ github.event.number }}",
+              "pr_action": "${{ github.event.action }}"
+            }
+        env:
+          PROPERTY_VALUE: ${{ github.event.pull_request.merged && github.base_ref || github.head_ref }}
