@@ -12,7 +12,7 @@ from unittest.mock import patch
 import pytz
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
-from django.http import Http404, HttpResponseRedirect, HttpResponseServerError
+from django.http import Http404, HttpResponseRedirect, HttpResponseRedirect, HttpResponseServerError
 from django.urls import reverse
 from django.utils.html import escape
 from django.utils.translation import gettext as _
