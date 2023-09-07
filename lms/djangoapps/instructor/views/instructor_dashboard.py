@@ -12,7 +12,7 @@ from unittest.mock import patch
 import pytz
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
-from django.http import Http404, HttpResponseServerError
+from django.http import Http404, HttpResponseRedirect, HttpResponseServerError
 from django.urls import reverse
 from django.utils.html import escape
 from django.utils.translation import gettext as _
@@ -27,6 +27,7 @@ from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
 from xblock.field_data import DictFieldData
 from xblock.fields import ScopeIds
+from openedx_filters.learning.filters import InstructorDashboardRenderStarted
 
 from common.djangoapps.course_modes.models import CourseMode, CourseModesArchive
 from common.djangoapps.edxmako.shortcuts import render_to_response
@@ -268,7 +269,24 @@ def instructor_dashboard_2(request, course_id):  # lint-amnesty, pylint: disable
 
     context.update(context_from_plugins)
 
-    return render_to_response('instructor/instructor_dashboard_2/instructor_dashboard_2.html', context)
+    instructor_template = 'instructor/instructor_dashboard_2/instructor_dashboard_2.html'
+
+    try:
+        # .. filter_implemented_name: InstructorDashboardRenderStarted
+        # .. filter_type: org.openedx.learning.instructor.dashboard.render.started.v1
+        context, instructor_template = InstructorDashboardRenderStarted.run_filter(
+            context=context, template_name=instructor_template,
+        )
+    except InstructorDashboardRenderStarted.RenderInvalidDashboard as exc:
+        response = render_to_response(exc.instructor_template, exc.template_context)
+    except InstructorDashboardRenderStarted.RedirectToPage as exc:
+        response = HttpResponseRedirect(exc.redirect_to)
+    except InstructorDashboardRenderStarted.RenderCustomResponse as exc:
+        response = exc.response
+    else:
+        response = render_to_response(instructor_template, context)
+
+    return response
 
 
 ## Section functions starting with _section return a dictionary of section data.
