@@ -1333,13 +1333,9 @@ openedx-mongodbproxy==0.2.0
     #   -r requirements/edx/doc.txt
     #   -r requirements/edx/testing.txt
 optimizely-sdk==4.1.1
-    # via
-    #   -r requirements/edx/doc.txt
-    #   -r requirements/edx/testing.txt
-ora2==5.5.5
-    # via
-    #   -r requirements/edx/doc.txt
-    #   -r requirements/edx/testing.txt
+    # via -r requirements/edx/testing.txt
+    # ora2==5.0.0
+    # via -r requirements/edx/testing.txt
 oscrypto==1.3.0
     # via
     #   -r requirements/edx/doc.txt
