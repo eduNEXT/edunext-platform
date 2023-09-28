@@ -82,6 +82,7 @@ with codecs.open(CONFIG_FILE, encoding='utf-8') as f:
         'CELERY_QUEUES',
         'MKTG_URL_LINK_MAP',
         'MKTG_URL_OVERRIDES',
+        'REST_FRAMEWORK',
     ]
     for key in KEYS_WITH_MERGED_VALUES:
         if key in __config_copy__:
@@ -108,8 +109,8 @@ EDX_PLATFORM_REVISION = REVISION_CONFIG.get('EDX_PLATFORM_REVISION', EDX_PLATFOR
 BROKER_POOL_LIMIT = 0
 BROKER_CONNECTION_TIMEOUT = 1
 
-# For the Result Store, use the django cache named 'celery'
-CELERY_RESULT_BACKEND = 'django-cache'
+# Allow env to configure celery result backend with default set to django-cache
+CELERY_RESULT_BACKEND = ENV_TOKENS.get('CELERY_RESULT_BACKEND', 'django-cache')
 
 # When the broker is behind an ELB, use a heartbeat to refresh the
 # connection and to detect if it has been dropped.
@@ -729,6 +730,15 @@ if FEATURES.get('ENABLE_COURSEWARE_SEARCH') or \
     SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
     SEARCH_FILTER_GENERATOR = ENV_TOKENS.get('SEARCH_FILTER_GENERATOR', SEARCH_FILTER_GENERATOR)
 
+SEARCH_SKIP_INVITATION_ONLY_FILTERING = ENV_TOKENS.get(
+    'SEARCH_SKIP_INVITATION_ONLY_FILTERING',
+    SEARCH_SKIP_INVITATION_ONLY_FILTERING,
+)
+SEARCH_SKIP_SHOW_IN_CATALOG_FILTERING = ENV_TOKENS.get(
+    'SEARCH_SKIP_SHOW_IN_CATALOG_FILTERING',
+    SEARCH_SKIP_SHOW_IN_CATALOG_FILTERING,
+)
+
 # TODO: Once we have successfully upgraded to ES7, switch this back to ELASTIC_SEARCH_CONFIG.
 ELASTIC_SEARCH_CONFIG = ENV_TOKENS.get('ELASTIC_SEARCH_CONFIG_ES7', [{}])
 
@@ -1054,3 +1064,6 @@ SHOW_ACCOUNT_ACTIVATION_CTA = ENV_TOKENS.get('SHOW_ACCOUNT_ACTIVATION_CTA', SHOW
 CHROME_DISABLE_SUBFRAME_DIALOG_SUPPRESSION_TOKEN = ENV_TOKENS.get(
     'CHROME_DISABLE_SUBFRAME_DIALOG_SUPPRESSION_TOKEN', CHROME_DISABLE_SUBFRAME_DIALOG_SUPPRESSION_TOKEN
 )
+
+############## DRF overrides ##############
+REST_FRAMEWORK.update(ENV_TOKENS.get('REST_FRAMEWORK', {}))

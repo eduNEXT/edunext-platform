@@ -7,6 +7,7 @@ cannot be generated, a message is logged and no further action is taken.
 """
 
 import logging
+from openedx_filters.learning.filters import CertificateCreationRequested
 
 from common.djangoapps.course_modes import api as modes_api
 from common.djangoapps.course_modes.models import CourseMode
@@ -28,7 +29,15 @@ from openedx.core.djangoapps.content.course_overviews.api import get_course_over
 log = logging.getLogger(__name__)
 
 
-def generate_certificate_task(user, course_key, generation_mode=None):
+class GeneratedCertificateException(Exception):
+    pass
+
+
+class CertificateGenerationNotAllowed(GeneratedCertificateException):
+    pass
+
+
+def generate_certificate_task(user, course_key, generation_mode=None, _delay_seconds=CERTIFICATE_DELAY_SECONDS):
     """
     Create a task to generate a certificate for this user in this course run, if the user is eligible and a certificate
     can be generated.
@@ -52,8 +61,19 @@ def generate_allowlist_certificate_task(user, course_key, generation_mode=None):
     enrollment_mode = _get_enrollment_mode(user, course_key)
     course_grade = _get_course_grade(user, course_key)
     if _can_generate_allowlist_certificate(user, course_key, enrollment_mode):
-        return _generate_certificate_task(user=user, course_key=course_key, enrollment_mode=enrollment_mode,
-                                          course_grade=course_grade, generation_mode=generation_mode)
+        try:
+            return _generate_certificate_task(
+                user=user, course_key=course_key, enrollment_mode=enrollment_mode, course_grade=course_grade,
+                generation_mode=generation_mode,
+            )
+        except CertificateGenerationNotAllowed:
+            # Catch exception to contain error message in console.
+            log.error(
+                "Certificate generation not allowed for user %s in course %s",
+                user.id,
+                course_key,
+            )
+            return False
 
     status = _set_allowlist_cert_status(user, course_key, enrollment_mode, course_grade)
     if status is not None:
@@ -87,6 +107,20 @@ def _generate_certificate_task(user, course_key, enrollment_mode, course_grade, 
     log.info(f'About to create a regular certificate task for {user.id} : {course_key}')
 
     course_grade_val = _get_grade_value(course_grade)
+
+    try:
+        # .. filter_implemented_name: CertificateCreationRequested
+        # .. filter_type: org.openedx.learning.certificate.creation.requested.v1
+        user, course_key, enrollment_mode, status, course_grade, generation_mode = CertificateCreationRequested.run_filter(  # pylint: disable=line-too-long
+            user=user,
+            course_key=course_key,
+            mode=enrollment_mode,
+            status=status,
+            grade=course_grade,
+            generation_mode=generation_mode,
+        )
+    except CertificateCreationRequested.PreventCertificateCreation as exc:
+        raise CertificateGenerationNotAllowed(str(exc)) from exc
 
     kwargs = {
         'student': str(user.id),

@@ -74,6 +74,7 @@ with codecs.open(CONFIG_FILE, encoding='utf-8') as f:
         'CELERY_QUEUES',
         'MKTG_URL_LINK_MAP',
         'MKTG_URL_OVERRIDES',
+        'REST_FRAMEWORK',
     ]
     for key in KEYS_WITH_MERGED_VALUES:
         if key in __config_copy__:
@@ -100,8 +101,8 @@ EDX_PLATFORM_REVISION = REVISION_CONFIG.get('EDX_PLATFORM_REVISION', EDX_PLATFOR
 BROKER_POOL_LIMIT = 0
 BROKER_CONNECTION_TIMEOUT = 1
 
-# For the Result Store, use the django cache named 'celery'
-CELERY_RESULT_BACKEND = 'django-cache'
+# Allow env to configure celery result backend with default set to django-cache
+CELERY_RESULT_BACKEND = ENV_TOKENS.get('CELERY_RESULT_BACKEND', 'django-cache')
 
 # When the broker is behind an ELB, use a heartbeat to refresh the
 # connection and to detect if it has been dropped.
@@ -602,3 +603,6 @@ COURSE_OLX_VALIDATION_IGNORE_LIST = ENV_TOKENS.get(
 SHOW_ACCOUNT_ACTIVATION_CTA = ENV_TOKENS.get('SHOW_ACCOUNT_ACTIVATION_CTA', SHOW_ACCOUNT_ACTIVATION_CTA)
 
 LANGUAGE_COOKIE_NAME = ENV_TOKENS.get('LANGUAGE_COOKIE', None) or ENV_TOKENS.get('LANGUAGE_COOKIE_NAME')
+
+############## DRF overrides ##############
+REST_FRAMEWORK.update(ENV_TOKENS.get('REST_FRAMEWORK', {}))

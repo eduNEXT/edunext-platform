@@ -10,6 +10,7 @@ from collections import defaultdict
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils.translation import gettext as _
@@ -18,6 +19,7 @@ from edx_django_utils import monitoring as monitoring_utils
 from edx_django_utils.plugins import get_plugins_view_context
 from edx_toggles.toggles import LegacyWaffleFlag, LegacyWaffleFlagNamespace
 from opaque_keys.edx.keys import CourseKey
+from openedx_filters.learning.filters import DashboardRenderStarted
 from pytz import UTC
 
 from lms.djangoapps.bulk_email.api import is_bulk_email_feature_enabled
@@ -514,6 +516,10 @@ def student_dashboard(request):  # lint-amnesty, pylint: disable=too-many-statem
     empty_dashboard_message = configuration_helpers.get_value(
         'EMPTY_DASHBOARD_MESSAGE', None
     )
+    disable_unenrollment = configuration_helpers.get_value(
+        'DISABLE_UNENROLLMENT',
+        settings.FEATURES.get('DISABLE_UNENROLLMENT')
+    )
 
     disable_course_limit = request and 'course_limit' in request.GET
     course_limit = get_dashboard_course_limit() if not disable_course_limit else None
@@ -797,6 +803,7 @@ def student_dashboard(request):  # lint-amnesty, pylint: disable=too-many-statem
         # TODO START: clean up as part of REVEM-199 (START)
         'course_info': get_dashboard_course_info(user, course_enrollments),
         # TODO START: clean up as part of REVEM-199 (END)
+        'disable_unenrollment': disable_unenrollment,
     }
 
     # Include enterprise learner portal metadata and messaging
@@ -833,7 +840,22 @@ def student_dashboard(request):  # lint-amnesty, pylint: disable=too-many-statem
         'resume_button_urls': resume_button_urls
     })
 
-    response = render_to_response('dashboard.html', context)
+    dashboard_template = 'dashboard.html'
+    try:
+        # .. filter_implemented_name: DashboardRenderStarted
+        # .. filter_type: org.openedx.learning.dashboard.render.started.v1
+        context, dashboard_template = DashboardRenderStarted.run_filter(
+            context=context, template_name=dashboard_template,
+        )
+    except DashboardRenderStarted.RenderInvalidDashboard as exc:
+        response = render_to_response(exc.dashboard_template, exc.template_context)
+    except DashboardRenderStarted.RedirectToPage as exc:
+        response = HttpResponseRedirect(exc.redirect_to or reverse('account_settings'))
+    except DashboardRenderStarted.RenderCustomResponse as exc:
+        response = exc.response
+    else:
+        response = render_to_response(dashboard_template, context)
+
     if show_account_activation_popup:
         response.delete_cookie(
             settings.SHOW_ACTIVATE_CTA_POPUP_COOKIE_NAME,

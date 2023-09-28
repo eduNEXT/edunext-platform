@@ -9,11 +9,13 @@ on:
 
 jobs:
   run-tests:
-    runs-on: [ self-hosted ]
+    runs-on: [ edx-platform-runner ]
     strategy:
       matrix:
         python-version: ['3.8']
-        django-version: ["3.2"]
+        django-version:
+          - "pinned"
+          #- "4.0"
         shard_name: [
             "lms-1",
             "lms-2",
@@ -35,9 +37,11 @@ jobs:
       - name: sync directory owner
         run: sudo chown runner:runner -R .*
       - uses: actions/checkout@v2
-      - name: start mongodb service
+      - name: start mongod server for tests
         run: |
-          sudo /etc/init.d/mongodb start
+          sudo mkdir -p /data/db
+          sudo chmod -R a+rw /data/db
+          mongod &
 
       - name: set top-level module name
         run: |
@@ -55,7 +59,15 @@ jobs:
         run: |
           sudo pip install -r requirements/pip.txt
           sudo pip install -r requirements/edx/testing.txt
-          sudo pip install "django~=${{ matrix.django-version }}.0"
+          if [[ "${{ matrix.django-version }}" == "pinned" ]]; then
+            sudo pip install -r requirements/edx/django.txt
+          else
+            sudo pip install "django~=${{ matrix.django-version }}.0"
+          fi
+
+      - name: list installed package versions
+        run: |
+          sudo pip freeze
 
       - name: get unit tests for shard
         run: |

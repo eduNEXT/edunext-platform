@@ -53,6 +53,7 @@ networkx==2.2
     #   -r requirements/edx-sandbox/py35.in
 nltk==3.6.2
     # via
+    #   -c requirements/edx-sandbox/py35-constraints.txt
     #   -r requirements/edx-sandbox/py35.in
     #   chem
 numpy==1.16.5

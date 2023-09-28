@@ -18,7 +18,8 @@ from django.core.validators import ValidationError, validate_email
 from django.db import transaction
 from django.db.models.signals import post_save
 from django.dispatch import Signal, receiver  # lint-amnesty, pylint: disable=unused-import
-from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
+from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseRedirect
+
 from django.shortcuts import redirect
 from django.template.context_processors import csrf
 from django.urls import reverse
@@ -33,6 +34,8 @@ from ipware.ip import get_client_ip
 # Note that this lives in LMS, so this dependency should be refactored.
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
+from openedx_filters.exceptions import OpenEdxFilterException
+from openedx_filters.tooling import OpenEdxPublicFilter
 from pytz import UTC
 
 from common.djangoapps.track import views as track_views
@@ -64,6 +67,7 @@ from common.djangoapps.student.models import (  # lint-amnesty, pylint: disable=
     PendingSecondaryEmailChange,
     Registration,
     RegistrationCookieConfiguration,
+    UnenrollmentNotAllowed,
     UserAttribute,
     UserProfile,
     UserSignupSource,
@@ -106,6 +110,79 @@ def csrf_token(context):
         return ''
     return (HTML('<div style="display:none"><input type="hidden"'
                  ' name="csrfmiddlewaretoken" value="{}" /></div>').format(Text(token)))
+
+
+class HomepageRenderStarted(OpenEdxPublicFilter):
+    """
+    Custom class used to create homepage render filters and its custom methods.
+    """
+
+    filter_type = "org.openedx.learning.homepage.render.started.v1"
+
+    class RedirectToPage(OpenEdxFilterException):
+        """
+        Custom class used to stop the homepage rendering process.
+        """
+
+        def __init__(self, message, redirect_to=""):
+            """
+            Override init that defines specific arguments used in the homepage render process.
+
+            Arguments:
+                message: error message for the exception.
+                redirect_to: URL to redirect to.
+            """
+            super().__init__(message, redirect_to=redirect_to)
+
+    class RenderInvalidHomepage(OpenEdxFilterException):
+        """
+        Custom class used to stop the homepage render process.
+        """
+
+        def __init__(self, message, index_template="", template_context=None):
+            """
+            Override init that defines specific arguments used in the index render process.
+
+            Arguments:
+                message: error message for the exception.
+                index_template: template path rendered instead.
+                template_context: context used to the new index_template.
+            """
+            super().__init__(
+                message,
+                index_template=index_template,
+                template_context=template_context,
+            )
+
+    class RenderCustomResponse(OpenEdxFilterException):
+        """
+        Custom class used to stop the homepage rendering process.
+        """
+
+        def __init__(self, message, response=None):
+            """
+            Override init that defines specific arguments used in the homepage render process.
+
+            Arguments:
+                message: error message for the exception.
+                response: custom response which will be returned by the homepage view.
+            """
+            super().__init__(
+                message,
+                response=response,
+            )
+
+    @classmethod
+    def run_filter(cls, context, template_name):
+        """
+        Execute a filter with the signature specified.
+
+        Arguments:
+            context (dict): context dictionary for homepage template.
+            template_name (str): template name to be rendered by the homepage.
+        """
+        data = super().run_pipeline(context=context, template_name=template_name)
+        return data.get("context"), data.get("template_name")
 
 
 # NOTE: This view is not linked to directly--it is called from
@@ -162,7 +239,23 @@ def index(request, extra_context=None, user=AnonymousUser()):
     # Add marketable programs to the context.
     context['programs_list'] = get_programs_with_type(request.site, include_hidden=False)
 
-    return render_to_response('index.html', context)
+    index_template = 'index.html'
+    try:
+        # .. filter_implemented_name: HomepageRenderStarted
+        # .. filter_type: org.openedx.learning.homepage.render.started.v1
+        context, index_template = HomepageRenderStarted.run_filter(
+            context=context, template_name=index_template,
+        )
+    except HomepageRenderStarted.RenderInvalidHomepage as exc:
+        response = render_to_response(exc.index_template, exc.template_context)  # pylint: disable=no-member
+    except HomepageRenderStarted.RedirectToPage as exc:
+        response = HttpResponseRedirect(exc.redirect_to or reverse('account_settings'))
+    except HomepageRenderStarted.RenderCustomResponse as exc:
+        response = exc.response  # pylint: disable=no-member
+    else:
+        response = render_to_response(index_template, context)
+
+    return response
 
 
 def compose_activation_email(user, user_registration=None, route_enabled=False, profile_name='', redirect_url=None):
@@ -397,6 +490,12 @@ def change_enrollment(request, check_access=True):
         # Otherwise, there is only one mode available (the default)
         return HttpResponse()
     elif action == "unenroll":
+        if configuration_helpers.get_value(
+            "DISABLE_UNENROLLMENT",
+            settings.FEATURES.get("DISABLE_UNENROLLMENT")
+        ):
+            return HttpResponseBadRequest(_("Unenrollment is currently disabled"))
+
         enrollment = CourseEnrollment.get_enrollment(user, course_id)
         if not enrollment:
             return HttpResponseBadRequest(_("You are not enrolled in this course"))
@@ -405,7 +504,11 @@ def change_enrollment(request, check_access=True):
         if certificate_info.get('status') in DISABLE_UNENROLL_CERT_STATES:
             return HttpResponseBadRequest(_("Your certificate prevents you from unenrolling from this course"))
 
-        CourseEnrollment.unenroll(user, course_id)
+        try:
+            CourseEnrollment.unenroll(user, course_id)
+        except UnenrollmentNotAllowed as exc:
+            return HttpResponseBadRequest(str(exc))
+
         REFUND_ORDER.send(sender=None, course_enrollment=enrollment)
         return HttpResponse()
     else:
