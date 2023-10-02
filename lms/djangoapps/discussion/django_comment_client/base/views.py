@@ -60,11 +60,20 @@ from openedx.core.djangoapps.django_comment_common.signals import (
 from openedx.core.djangoapps.django_comment_common.utils import ThreadContext
 from openedx.core.lib.courses import get_course_by_id
 
+from openedx_events.learning.signals import FORUM_THREAD_CREATED, FORUM_THREAD_RESPONSE_CREATED, FORUM_RESPONSE_COMMENT_CREATED
+from openedx_events.learning.data import DiscussionThreadData
+
 log = logging.getLogger(__name__)
 
 TRACKING_MAX_FORUM_BODY = 2000
 TRACKING_MAX_FORUM_TITLE = 1000
 _EVENT_NAME_TEMPLATE = 'edx.forum.{obj_type}.{action_name}'
+
+TRACKING_LOG_TO_EVENT_MAPS = {
+    'edx.forum.thread.created': FORUM_THREAD_CREATED,
+    'edx.forum.response.created': FORUM_THREAD_RESPONSE_CREATED,
+    'edx.forum.comment.created': FORUM_RESPONSE_COMMENT_CREATED,
+}
 
 
 def track_forum_event(request, event_name, course, obj, data, id_map=None):
@@ -96,6 +105,33 @@ def track_forum_event(request, event_name, course, obj, data, id_map=None):
     context = contexts.course_context_from_course_id(course.id)
     with tracker.get_tracker().context(event_name, context):
         tracker.emit(event_name, data)
+
+    SIGNAL = TRACKING_LOG_TO_EVENT_MAPS.get(event_name, None)
+    if SIGNAL is not None:
+        SIGNAL.send_event(
+            thread=DiscussionThreadData(
+                anonymous=data.get('anonymous'),
+                anonymous_to_peers=data.get('anonymous_to_peers'),
+                body=data.get('body'),
+                category_id=data.get('category_id'),
+                category_name=data.get('category_name'),
+                commentable_id=data.get('commentable_id'),
+                group_id=data.get('group_id'),
+                id=data.get('id'),
+                team_id=data.get('team_id'),
+                thread_type=data.get('thread_type'),
+                title=data.get('title'),
+                title_truncated=data.get('title_truncated'),
+                truncated=data.get('truncated'),
+                url=data.get('url'),
+                discussion=data.get('discussion'),
+                user_course_roles=data.get('user_course_roles'),
+                user_forums_roles=data.get('user_forums_roles'),
+                user_id=user.id,
+                course_id=course.id,
+                options=data.get('options'),
+            )
+        )
 
 
 def track_created_event(request, event_name, course, obj, data):
