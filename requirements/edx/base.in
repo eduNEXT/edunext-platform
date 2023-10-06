@@ -176,3 +176,4 @@ xblock-utils                        # Provides utilities used by the Discussion 
 xss-utils                           # https://github.com/edx/edx-platform/pull/20633 Fix XSS via Translations
 enmerkar-underscore                 # Implements a underscore extractor for django-babel.
 xblock-drag-and-drop-v2             # Drag and Drop XBlock
+django-import-export                # Added by eduNEXT to import and export data to and from models.

@@ -1771,6 +1771,9 @@ INSTALLED_APPS = [
 
     # Blockstore
     'blockstore.apps.bundles',
+
+    # Import export
+    'import_export',
 ]
 
 
