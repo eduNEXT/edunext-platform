@@ -5,14 +5,19 @@ django admin page for the course creators table
 
 import logging
 from smtplib import SMTPException
+from import_export import fields, resources
+from import_export.admin import ImportExportModelAdmin
+from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 
 from django import forms
 from django.conf import settings
 from django.contrib import admin
+from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 from django.db.models.signals import m2m_changed
 from django.dispatch import receiver
+from organizations.models import Organization
 
 from cms.djangoapps.course_creators.models import (
     CourseCreator,
@@ -24,6 +29,7 @@ from cms.djangoapps.course_creators.views import update_course_creator_group, up
 from common.djangoapps.edxmako.shortcuts import render_to_string
 
 log = logging.getLogger("studio.coursecreatoradmin")
+User = get_user_model()
 
 
 def get_email(obj):
@@ -31,6 +37,33 @@ def get_email(obj):
     return obj.user.email
 
 get_email.short_description = 'email'
+
+
+class CourseCreatorResource(resources.ModelResource):
+    """
+    Resource class to be used in the admin to add the import and export options.
+    """
+    id = fields.Field(
+        column_name='id',
+        attribute='id'
+    )
+    user = fields.Field(
+        column_name='user',
+        attribute='user',
+        widget=ForeignKeyWidget(model=User, field='username')
+    )
+    organizations = fields.Field(
+        column_name='organizations',
+        attribute='organizations',
+        widget=ManyToManyWidget(model=Organization, field='name')
+    )
+
+    def before_save_instance(self, instance, using_transactions, dry_run):
+        instance.all_organizations = False
+
+    class Meta:
+        model = CourseCreator
+        fields = ('id', 'user', 'organizations')
 
 
 class CourseCreatorForm(forms.ModelForm):
@@ -64,10 +97,18 @@ class CourseCreatorForm(forms.ModelForm):
                 )
 
 
-class CourseCreatorAdmin(admin.ModelAdmin):
+@admin.action(description="Change the course creator state to granted")
+def make_granted(modeladmin, request, queryset):
+    queryset.update(state=CourseCreator.GRANTED)
+
+
+class CourseCreatorAdmin(ImportExportModelAdmin):
     """
     Admin for the course creator table.
     """
+
+    # Resource to add import/export options
+    resource_classes = [CourseCreatorResource]
 
     # Fields to display on the overview page.
     list_display = ['username', get_email, 'state', 'state_changed', 'note', 'all_organizations']
@@ -84,7 +125,7 @@ class CourseCreatorAdmin(admin.ModelAdmin):
     # Fields that search supports.
     search_fields = ['user__username', 'user__email', 'state', 'note']
     # Turn off the action bar (we have no bulk actions)
-    actions = None
+    actions = [make_granted]
     form = CourseCreatorForm
 
     def username(self, inst):
