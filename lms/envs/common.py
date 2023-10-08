@@ -3253,6 +3253,9 @@ INSTALLED_APPS = [
 
     # MFE API
     'lms.djangoapps.mfe_config_api',
+
+    # Import export
+    'import_export',
 ]
 
 ######################### CSRF #########################################

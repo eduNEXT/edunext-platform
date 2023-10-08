@@ -1580,6 +1580,7 @@ zipp==3.9.0
     #   -r requirements/edx/base.txt
     #   importlib-metadata
     #   importlib-resources
+django-import-export==3.3.1
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
