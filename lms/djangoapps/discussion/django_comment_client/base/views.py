@@ -16,12 +16,18 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 from django.views.decorators.http import require_GET, require_POST
 from eventtracking import tracker
 from opaque_keys.edx.keys import CourseKey
+from openedx_events.learning.data import DiscussionThreadData, UserData, UserPersonalData
+from openedx_events.learning.signals import (
+    FORUM_RESPONSE_COMMENT_CREATED,
+    FORUM_THREAD_CREATED,
+    FORUM_THREAD_RESPONSE_CREATED
+)
 
 import lms.djangoapps.discussion.django_comment_client.settings as cc_settings
 import openedx.core.djangoapps.django_comment_common.comment_client as cc
 from common.djangoapps.student.roles import GlobalStaff
-from common.djangoapps.util.file import store_uploaded_file
 from common.djangoapps.track import contexts
+from common.djangoapps.util.file import store_uploaded_file
 from lms.djangoapps.courseware.access import has_access
 from lms.djangoapps.courseware.courses import get_course_overview_with_access, get_course_with_access
 from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
@@ -42,7 +48,7 @@ from lms.djangoapps.discussion.django_comment_client.utils import (
     get_user_group_ids,
     is_comment_too_deep,
     prepare_content,
-    sanitize_body,
+    sanitize_body
 )
 from openedx.core.djangoapps.django_comment_common.signals import (
     comment_created,
@@ -59,9 +65,6 @@ from openedx.core.djangoapps.django_comment_common.signals import (
 )
 from openedx.core.djangoapps.django_comment_common.utils import ThreadContext
 from openedx.core.lib.courses import get_course_by_id
-
-from openedx_events.learning.signals import FORUM_THREAD_CREATED, FORUM_THREAD_RESPONSE_CREATED, FORUM_RESPONSE_COMMENT_CREATED
-from openedx_events.learning.data import DiscussionThreadData, UserData, UserPersonalData
 
 log = logging.getLogger(__name__)
 
