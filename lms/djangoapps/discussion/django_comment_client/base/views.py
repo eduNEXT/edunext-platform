@@ -109,9 +109,9 @@ def track_forum_event(request, event_name, course, obj, data, id_map=None):
     with tracker.get_tracker().context(event_name, context):
         tracker.emit(event_name, data)
 
-    SIGNAL = TRACKING_LOG_TO_EVENT_MAPS.get(event_name, None)
-    if SIGNAL is not None:
-        SIGNAL.send_event(
+    forum_event = TRACKING_LOG_TO_EVENT_MAPS.get(event_name, None)
+    if forum_event is not None:
+        forum_event.send_event(
             thread=DiscussionThreadData(
                 anonymous=data.get('anonymous'),
                 anonymous_to_peers=data.get('anonymous_to_peers'),
