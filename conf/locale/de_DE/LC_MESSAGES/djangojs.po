@@ -5839,7 +5839,7 @@ msgid ""
 msgstr ""
 "Erzählen Sie anderen Lernenden ein bisschen über sich selbst: Was "
 "interessiert Sie, warum nehmen Sie an den Kursen teil und was möchten Sie "
-"gerne lernen. "
+"gerne lernen? "
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/badge_list_container.js
 msgid "Accomplishments Pagination"
@@ -7607,7 +7607,7 @@ msgid ""
 "Add a clear and descriptive title to encourage participation. (Required)"
 msgstr ""
 "Um zur Teilnahme zu motivieren, fügen Sie bitte einen klaren und "
-"beschreibenden Titel hinzu (wird benötigt). "
+"beschreibenden Titel hinzu (erforderlich). "
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Edit your post below."
@@ -7792,8 +7792,7 @@ msgid ""
 "Questions raise issues that need answers. Discussions share ideas and start "
 "conversations. (Required)"
 msgstr ""
-"Fragen benötigen Antworten. Diskussionen lösen eine Konversation aus. "
-"(Erforderlich)"
+"Bitte wählen Sie aus, ob Sie eine direkte Frage haben oder einen Diskussionsbeitrag. "
 
 #: common/static/common/templates/discussion/templates.underscore
 msgid "Question"
@@ -9060,6 +9059,11 @@ msgstr "Neues Konto erstellen"
 #: lms/templates/student_account/login.underscore
 msgid "Sign in"
 msgstr "Anmelden"
+
+#: lms/templates/student_account/hinted_login.underscore
+#: lms/templates/student_account/login.underscore
+msgid "Register Now"
+msgstr "Jetzt Registrieren"
 
 #: lms/templates/student_account/hinted_login.underscore
 #, python-format
