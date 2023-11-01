@@ -155,7 +155,24 @@ class AssessmentFeedbackView(StaffGraderBaseView):
     GET data about Assessments by submission_uuid and ora_location
 
     Response: {
-        assessments
+        assessments (list of dict): [
+            {
+                "assessment_id: (string) assessment id
+                "scorer_name: (string) scorer name
+                "scorer_username: (string) scorer username
+                "scorer_email: (string) scorer email
+                "assessment_date: (string) assessment date
+                "assessment_scores (list of dict) [
+                    {
+                        "criterion_name: (string) criterion name
+                        "score_earned: (int) score earned
+                        "score_type: (string) score type
+                    }
+                ]
+                "problem_step (string) problem step (Self, Peer, or Staff)
+                "feedback: (string) feedback
+            }
+        ]
     }
 
     Errors:
@@ -166,12 +183,14 @@ class AssessmentFeedbackView(StaffGraderBaseView):
     """
 
     @require_params([PARAM_ORA_LOCATION, PARAM_SUBMISSION_ID, PARAM_ASSESSMENT_FILTER])
-    def get(self, request, ora_location, submission_uuid, assessment_filter=None, *args, **kwargs):
+    def get(self, request, ora_location, submission_uuid, assessment_filter, *args, **kwargs):
 
         try:
-            assessments_data = {}
-
-            assessments_data["assessments"] = get_assessments(request, ora_location, submission_uuid, assessment_filter)
+            assessments_data = {
+                "assessments": get_assessments(
+                    request, ora_location, submission_uuid, assessment_filter
+                )
+            }
 
             response_data = AssessmentFeedbackSerializer(assessments_data).data
             return Response(response_data)
