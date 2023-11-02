@@ -341,7 +341,7 @@ class LoncapaProblem(object):
             maxscore += responder.get_max_score()
         return maxscore
 
-    def calculate_score(self, correct_map=None):
+    def calculate_score(self, correct_map=None): # Function that calculates the score
         """
         Compute score for this problem.  The score is the number of points awarded.
         Returns a dictionary {'score': integer, from 0 to get_max_score(),
