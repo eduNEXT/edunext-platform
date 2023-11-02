@@ -23,7 +23,7 @@ from pkg_resources import resource_string
 from pytz import utc
 from web_fragments.fragment import Fragment
 from xblock.core import XBlock
-from xblock.fields import Boolean, Dict, Float, Integer, Scope, String, XMLString
+from xblock.fields import Boolean, Dict, Float, Integer, Scope, String, XMLString, List
 from xblock.scorable import ScorableXBlockMixin, Score
 
 from xmodule.capa import responsetypes
@@ -91,6 +91,15 @@ class SHOWANSWER:
     AFTER_ALL_ATTEMPTS = "after_all_attempts"
     AFTER_ALL_ATTEMPTS_OR_CORRECT = "after_all_attempts_or_correct"
     ATTEMPTED_NO_PAST_DUE = "attempted_no_past_due"
+
+
+class GradingStrategy:
+    """
+    Constants for grading strategy
+    """
+    LAST_ATTEMPT = "last_attempt"
+    HIGHEST_ATTEMPT = "highest_attempt"
+    AVERAGE_ATTEMPT = "average_attempt"
 
 
 class RANDOMIZATION:
@@ -217,6 +226,20 @@ class ProblemBlock(
                "If the value is not set, infinite attempts are allowed."),
         values={"min": 0}, scope=Scope.settings
     )
+    grading_strategy = String(
+        display_name=_("Grading Strategy"),
+        help=_(
+            "Define the grading strategy for this problem. By default the last attempt "
+            "made by the student is taken."
+        ),
+        scope=Scope.settings,
+        default=GradingStrategy.LAST_ATTEMPT,
+        values=[
+            {"display_name": _("Last Attempt"), "value": GradingStrategy.LAST_ATTEMPT},
+            {"display_name": _("Highest Attempt"), "value": GradingStrategy.HIGHEST_ATTEMPT},
+            {"display_name": _("Average Attempt"), "value": GradingStrategy.AVERAGE_ATTEMPT},
+        ],
+    )
     due = Date(help=_("Date that this problem is due by"), scope=Scope.settings)
     graceperiod = Timedelta(
         help=_("Amount of time after the due date that submissions will be accepted"),
@@ -304,6 +327,7 @@ class ProblemBlock(
 
     # enforce_type is set to False here because this field is saved as a dict in the database.
     score = ScoreField(help=_("Dictionary with the current student score"), scope=Scope.user_state, enforce_type=False)
+    score_history = List(help=_("List of scores for each attempt"), scope=Scope.user_state, default=[])
     has_saved_answers = Boolean(help=_("Whether or not the answers have been saved since last submit"),
                                 scope=Scope.user_state, default=False)
     done = Boolean(help=_("Whether the student has answered the problem"), scope=Scope.user_state, default=False)
@@ -929,6 +953,7 @@ class ProblemBlock(
         Return some html with data about the module
         """
         curr_score, total_possible = self.get_display_progress()
+        print(f'\n\nCurrent Score: {curr_score}, Total Posible: {total_possible}\n\n')
 
         return self.runtime.service(self, 'mako').render_template('problem_ajax.html', {
             'element_id': self.location.html_id(),
@@ -1498,6 +1523,7 @@ class ProblemBlock(
 
         No ajax return is needed. Return empty dict.
         """
+        print(f'\n\nIn Update Score\n\n')
         queuekey = data['queuekey']
         score_msg = data['xqueue_body']
         self.lcp.update_score(score_msg, queuekey)
@@ -1707,14 +1733,15 @@ class ProblemBlock(
           {'success' : 'correct' | 'incorrect' | AJAX alert msg string,
            'contents' : html}
         """
+        # Get event info
         event_info = {}
         event_info['state'] = self.lcp.get_state()
         event_info['problem_id'] = str(self.location)
 
         self.lcp.has_saved_answers = False
-        answers = self.make_dict_of_responses(data)
-        answers_without_files = convert_files_to_filenames(answers)
-        event_info['answers'] = answers_without_files
+        answers = self.make_dict_of_responses(data) # Converts data to a dictionary of answers
+        answers_without_files = convert_files_to_filenames(answers) # Converts files to file names
+        event_info['answers'] = answers_without_files # Save answers in the event
 
         metric_name = 'xmodule.capa.check_problem.{}'.format  # lint-amnesty, pylint: disable=unused-variable
         # Can override current time
@@ -1725,6 +1752,7 @@ class ProblemBlock(
         _ = self.runtime.service(self, "i18n").ugettext
 
         # Too late. Cannot submit
+        # If the number of attempts was exceeded or the closing date was exceeded
         if self.closed():
             log.error(
                 'ProblemClosedError: Problem %s, close date: %s, due:%s, is_past_due: %s, attempts: %s/%s,',
@@ -1775,13 +1803,46 @@ class ProblemBlock(
             # self.lcp.context['attempt'] refers to the attempt number (1-based)
             self.lcp.context['attempt'] = self.attempts + 1
             correct_map = self.lcp.grade_answers(answers)
+
+            # print(f'\n\nCurrent Correct Map: {self.lcp.correct_map.get_dict()}\n\n')
+            # print(f'\n\nNew Correct Map: {correct_map.get_dict()}\n\n')
+
             # self.attempts refers to the number of attempts that did not
             # raise an error (0-based)
             self.attempts = self.attempts + 1
             self.lcp.done = True
+
+            # Updates some fields of the xblock:
+            # self.correct_map, self.input_state, self.student_answers, self.has_saved_answers
             self.set_state_from_lcp()
-            self.set_score(self.score_from_lcp(self.lcp))
+
+            print(f'\n\nCurrent Score: {self.score}\n\n')
+            print(f'\n\nNew Score: {self.score_from_lcp(self.lcp)}\n\n')
+
+            # -------------------------------------------------------------
+
+            new_score = self.score_from_lcp(self.lcp)
+
+            self.score_history.append(new_score.raw_earned)
+            print(f'\n\nScore History: {self.score_history}\n\n')
+
+            if self.grading_strategy == GradingStrategy.HIGHEST_ATTEMPT:
+                if new_score.raw_earned > self.score.raw_earned:
+                    self.set_score(new_score)
+            elif self.grading_strategy == GradingStrategy.LAST_ATTEMPT:
+                self.set_score(new_score)
+            elif self.grading_strategy == GradingStrategy.AVERAGE_ATTEMPT:
+                average_score = round(sum(self.score_history) / len(self.score_history), 2)
+                new_score = Score(raw_earned=average_score, raw_possible=self.max_score())
+                self.set_score(new_score)
+
+            # Get the score and save it in the score field
+            # self.set_score(self.score_from_lcp(self.lcp))
+
+            # Updates the last submission date by putting the current time
             self.set_last_submission_time()
+
+            # ------------------------------------------------------------------
 
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:
             if self.debug:
