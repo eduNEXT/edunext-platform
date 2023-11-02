@@ -1261,10 +1261,15 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
     def _rescore_problem_error_helper(self, exception_class):
         """Helper to allow testing all errors that rescoring might return."""
         # Create the block
-        block = CapaFactory.create(attempts=1, done=True)
+        block = CapaFactory.create(attempts=0)
+        CapaFactory.answer_key()
+
+        # Check the problem
+        get_request_dict = {CapaFactory.input_key(): '1'}
+        block.submit_problem(get_request_dict)
 
         # Simulate answering a problem that raises the exception
-        with patch('xmodule.capa.capa_problem.LoncapaProblem.get_grade_from_current_answers') as mock_rescore:
+        with patch('xmodule.capa.capa_problem.LoncapaProblem.get_grade_from_answers') as mock_rescore:
             mock_rescore.side_effect = exception_class('test error \u03a9')
             with pytest.raises(exception_class):
                 block.rescore(only_if_higher=False)

@@ -1,6 +1,7 @@
 """
 Implements the Problem XBlock, which is built on top of the CAPA subsystem.
 """
+from __future__ import annotations
 
 import copy
 import datetime
@@ -23,7 +24,7 @@ from pkg_resources import resource_string
 from pytz import utc
 from web_fragments.fragment import Fragment
 from xblock.core import XBlock
-from xblock.fields import Boolean, Dict, Float, Integer, Scope, String, XMLString
+from xblock.fields import Boolean, Dict, Float, Integer, Scope, String, XMLString, List
 from xblock.scorable import ScorableXBlockMixin, Score
 
 from xmodule.capa import responsetypes
@@ -53,7 +54,7 @@ from common.djangoapps.xblock_django.constants import (
 )
 from openedx.core.djangolib.markup import HTML, Text
 
-from .fields import Date, ScoreField, Timedelta
+from .fields import Date, ListScoreField, ScoreField, Timedelta
 from .progress import Progress
 
 log = logging.getLogger("edx.courseware")
@@ -91,6 +92,16 @@ class SHOWANSWER:
     AFTER_ALL_ATTEMPTS = "after_all_attempts"
     AFTER_ALL_ATTEMPTS_OR_CORRECT = "after_all_attempts_or_correct"
     ATTEMPTED_NO_PAST_DUE = "attempted_no_past_due"
+
+
+class GRADING_STRATEGY:
+    """
+    Constants for grading strategy
+    """
+    LAST_ATTEMPT = "last_attempt"
+    FIRST_ATTEMPT = "first_attempt"
+    HIGHEST_ATTEMPT = "highest_attempt"
+    AVERAGE_ATTEMPT = "average_attempt"
 
 
 class RANDOMIZATION:
@@ -217,6 +228,21 @@ class ProblemBlock(
                "If the value is not set, infinite attempts are allowed."),
         values={"min": 0}, scope=Scope.settings
     )
+    grading_strategy = String(
+        display_name=_("Grading Strategy"),
+        help=_(
+            "Define the grading strategy for this problem. By default the last attempt "
+            "made by the student is taken."
+        ),
+        scope=Scope.settings,
+        default=GRADING_STRATEGY.LAST_ATTEMPT,
+        values=[
+            {"display_name": _("Last Attempt"), "value": GRADING_STRATEGY.LAST_ATTEMPT},
+            {"display_name": _("First Attempt"), "value": GRADING_STRATEGY.FIRST_ATTEMPT},
+            {"display_name": _("Highest Attempt"), "value": GRADING_STRATEGY.HIGHEST_ATTEMPT},
+            {"display_name": _("Average Attempt"), "value": GRADING_STRATEGY.AVERAGE_ATTEMPT},
+        ],
+    )
     due = Date(help=_("Date that this problem is due by"), scope=Scope.settings)
     graceperiod = Timedelta(
         help=_("Amount of time after the due date that submissions will be accepted"),
@@ -299,11 +325,20 @@ class ProblemBlock(
     )
     correct_map = Dict(help=_("Dictionary with the correctness of current student answers"),
                        scope=Scope.user_state, default={})
+    correct_map_history = List(
+        help=_("List of correctness maps for each attempt"), scope=Scope.user_state, default=[]
+    )
     input_state = Dict(help=_("Dictionary for maintaining the state of inputtypes"), scope=Scope.user_state)
     student_answers = Dict(help=_("Dictionary with the current student responses"), scope=Scope.user_state)
+    student_answers_history = List(
+        help=_("List of student answers for each attempt"), scope=Scope.user_state, default=[]
+    )
 
     # enforce_type is set to False here because this field is saved as a dict in the database.
     score = ScoreField(help=_("Dictionary with the current student score"), scope=Scope.user_state, enforce_type=False)
+    score_history = ListScoreField(
+        help=_("List of scores for each attempt"), scope=Scope.user_state, default=[], enforce_type=False
+    )
     has_saved_answers = Boolean(help=_("Whether or not the answers have been saved since last submit"),
                                 scope=Scope.user_state, default=False)
     done = Boolean(help=_("Whether the student has answered the problem"), scope=Scope.user_state, default=False)
@@ -872,6 +907,7 @@ class ProblemBlock(
         lcp_state = self.lcp.get_state()
         self.done = lcp_state['done']
         self.correct_map = lcp_state['correct_map']
+        self.correct_map_history = lcp_state['correct_map_history']
         self.input_state = lcp_state['input_state']
         self.student_answers = lcp_state['student_answers']
         self.has_saved_answers = lcp_state['has_saved_answers']
@@ -1268,6 +1304,7 @@ class ProblemBlock(
             'reset_button': self.should_show_reset_button(),
             'save_button': self.should_show_save_button(),
             'answer_available': self.answer_available(),
+            'grading_strategy': self.grading_strategy,
             'attempts_used': self.attempts,
             'attempts_allowed': self.max_attempts,
             'demand_hint_possible': demand_hint_possible,
@@ -1714,6 +1751,7 @@ class ProblemBlock(
         self.lcp.has_saved_answers = False
         answers = self.make_dict_of_responses(data)
         answers_without_files = convert_files_to_filenames(answers)
+        self.student_answers_history.append(answers_without_files)
         event_info['answers'] = answers_without_files
 
         metric_name = 'xmodule.capa.check_problem.{}'.format  # lint-amnesty, pylint: disable=unused-variable
@@ -1778,9 +1816,24 @@ class ProblemBlock(
             # self.attempts refers to the number of attempts that did not
             # raise an error (0-based)
             self.attempts = self.attempts + 1
+
             self.lcp.done = True
+
             self.set_state_from_lcp()
-            self.set_score(self.score_from_lcp(self.lcp))
+
+            self.correct_map_history.append(correct_map.get_dict())
+
+            new_score = self.score_from_lcp(self.lcp)
+            self.score_history.append(new_score)
+            grading_strategy_handler = GradingStrategyHandler(
+                self.score,
+                self.grading_strategy,
+                self.score_history,
+                self.max_score(),
+            )
+            score = grading_strategy_handler.get_score()
+            self.set_score(score)
+
             self.set_last_submission_time()
 
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:
@@ -2171,8 +2224,15 @@ class ProblemBlock(
         event_info['orig_score'] = orig_score.raw_earned
         event_info['orig_total'] = orig_score.raw_possible
         try:
-            self.update_correctness()
-            calculated_score = self.calculate_score()
+            self.update_correctness_list()
+            self.score_history = self.calculate_score_list()
+            grading_strategy_handler = GradingStrategyHandler(
+                self.score,
+                self.grading_strategy,
+                self.score_history,
+                self.max_score(),
+            )
+            calculated_score = grading_strategy_handler.get_score()
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:  # lint-amnesty, pylint: disable=unused-variable
             log.warning("Input error in capa_block:problem_rescore", exc_info=True)
             event_info['failure'] = 'input_error'
@@ -2233,12 +2293,39 @@ class ProblemBlock(
         new_correct_map = self.lcp.get_grade_from_current_answers(None)
         self.lcp.correct_map.update(new_correct_map)
 
+    def update_correctness_list(self):
+        """
+        Updates the correct map history of the LCP.
+
+        Similar to update_correctness, but operates on each one of the
+        correctness maps in the history of the LCP.
+        """
+        self.lcp.context['attempt'] = max(self.attempts, 1)
+        new_correct_map_list = []
+        for student_answers, correct_map in zip(self.student_answers_history, self.correct_map_history):
+            new_correct_map = self.lcp.get_grade_from_answers(student_answers, correct_map)
+            new_correct_map_list.append(new_correct_map)
+        self.lcp.correct_map_history = new_correct_map_list
+        if new_correct_map_list:
+            self.lcp.correct_map.update(new_correct_map_list[-1])
+
     def calculate_score(self):
         """
         Returns the score calculated from the current problem state.
         """
         new_score = self.lcp.calculate_score()
         return Score(raw_earned=new_score['score'], raw_possible=new_score['total'])
+
+    def calculate_score_list(self):
+        """
+        Returns the score calculated from the current problem state.
+        """
+        new_score_list = []
+
+        for correct_map in self.lcp.correct_map_history:
+            new_score = self.lcp.calculate_score(correct_map)
+            new_score_list.append(Score(raw_earned=new_score['score'], raw_possible=new_score['total']))
+        return new_score_list
 
     def score_from_lcp(self, lcp):
         """
@@ -2247,6 +2334,100 @@ class ProblemBlock(
         """
         lcp_score = lcp.calculate_score()
         return Score(raw_earned=lcp_score['score'], raw_possible=lcp_score['total'])
+
+
+class GradingStrategyHandler:
+    """
+    A class for handling grading strategies and calculating scores.
+
+    This class allows for flexible handling of grading strategies, including options
+    such as considering the last attempt, the first attempt, the highest attempt,
+    or the average attempt.
+
+    Attributes:
+    - grading_strategy (str): The chosen grading strategy.
+    - score_history (list[Score]): A list to store the history of scores.
+    - max_score (int): The maximum possible score.
+    - mapping_strategy (dict): A dictionary mapping the grading strategy to the corresponding handler.
+
+    Methods:
+    - get_score(): Retrieves the updated score based on the grading strategy.
+    - handle_last_attempt(): Handles the last attempt strategy.
+    - handle_first_attempt(): Handles the first attempt strategy.
+    - handle_highest_attempt(): Handles the highest attempt strategy.
+    - handle_average_attempt(): Handles the average attempt strategy.
+    """
+
+    def __init__(
+        self,
+        score: Score,
+        grading_strategy: str,
+        score_history: list[Score],
+        max_score: int,
+    ):
+        self.score = score
+        self.grading_strategy = grading_strategy
+        self.score_history = score_history
+        self.max_score = max_score
+        self.mapping_strategy = {
+            GRADING_STRATEGY.LAST_ATTEMPT: self.handle_last_attempt,
+            GRADING_STRATEGY.FIRST_ATTEMPT: self.handle_first_attempt,
+            GRADING_STRATEGY.HIGHEST_ATTEMPT: self.handle_highest_attempt,
+            GRADING_STRATEGY.AVERAGE_ATTEMPT: self.handle_average_attempt,
+        }
+
+    def get_score(self) -> Score:
+        """
+        Retrieves the updated score based on the grading strategy.
+
+        Returns:
+            - Score: The updated score based on the chosen grading strategy.
+        """
+        return self.mapping_strategy[self.grading_strategy]()
+
+    def handle_last_attempt(self) -> Score:
+        """
+        Retrieves the score based on the last attempt. The last attempt is
+        the last score in the score history.
+
+        Returns:
+            - Score: The score based on the last attempt.
+        """
+        return self.score_history[-1] if self.score_history else self.score
+
+    def handle_first_attempt(self) -> Score:
+        """
+        Retrieves the score based on the first attempt. The first attempt is
+        the first score in the score history.
+
+        Returns:
+            - Score: The score based on the first attempt.
+        """
+        return self.score_history[0] if self.score_history else self.score
+
+    def handle_highest_attempt(self) -> Score:
+        """
+        Retrieves the score based on the highest attempt. The highest attempt is
+        the highest score in the score history.
+
+        Returns:
+            - Score: The score based on the highest attempt.
+        """
+        return max(self.score_history) if self.score_history else self.score
+
+    def handle_average_attempt(self) -> Score:
+        """
+        Calculates the average score based on all attempts. The average score is
+        the sum of all scores divided by the number of scores.
+
+        Returns:
+            - Score: The average score based on all attempts.
+        """
+        if not self.score_history:
+            return self.score
+        total = sum(score.raw_earned for score in self.score_history)
+        average_score = round(total / len(self.score_history), 2)
+        return Score(raw_earned=average_score, raw_possible=self.max_score)
 
 
 class ComplexEncoder(json.JSONEncoder):
