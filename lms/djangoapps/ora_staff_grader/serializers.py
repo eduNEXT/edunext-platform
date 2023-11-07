@@ -210,6 +210,7 @@ class AssessmentSerializer(serializers.Serializer):
         ]
         read_only_fields = fields
 
+
 class InitializeSerializer(serializers.Serializer):
     """
     Serialize info for the initialize call. Packages ORA, course, submission, and rubric data.
@@ -236,6 +237,7 @@ class InitializeSerializer(serializers.Serializer):
         """
         return obj['isEnabled'] and not obj['oraMetadata'].teams_enabled
 
+
 class AssessmentFeedbackSerializer(serializers.Serializer):
     """
     Serialize info for every assessment for a table in Enhanced Staff Grader (ESG)
@@ -244,8 +246,9 @@ class AssessmentFeedbackSerializer(serializers.Serializer):
     assessments = serializers.ListField(child=AssessmentSerializer())
 
     class Meta:
-        fields = ["assessments",]
+        fields = ["assessments", ]
         read_only_fields = fields
+
 
 class UploadedFileSerializer(serializers.Serializer):
     """Serializer for a file uploaded as a part of a response"""
