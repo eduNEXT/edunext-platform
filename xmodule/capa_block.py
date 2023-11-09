@@ -2330,24 +2330,24 @@ class GradingStrategyHandler:
             GRADING_STRATEGY.AVERAGE_ATTEMPT: self.handle_average_attempt,
         }
 
-    def get_score(self, new_score) -> int | float:
+    def get_score(self, new_score) -> Score:
         """Handle new score based on grading strategy"""
         return self.mapping_strategy[self.grading_strategy](new_score)
 
-    def handle_last_attempt(self, new_score) -> int:
+    def handle_last_attempt(self, new_score) -> Score:
         return new_score
 
-    def handle_first_attempt(self, new_score) -> int:
+    def handle_first_attempt(self, new_score) -> Score:
         if self.attempts == 1:
             return new_score
         return self.current_score
 
-    def handle_highest_attempt(self, new_score) -> int:
+    def handle_highest_attempt(self, new_score) -> Score:
         if new_score.raw_earned > self.current_score.raw_earned:
             return new_score
         return self.current_score
 
-    def handle_average_attempt(self) -> float:
+    def handle_average_attempt(self, _) -> Score:
         average_score = round(sum(self.score_history) / len(self.score_history), 2)
         return Score(raw_earned=average_score, raw_possible=self.max_score)
 
