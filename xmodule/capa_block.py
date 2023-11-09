@@ -1,6 +1,7 @@
 """
 Implements the Problem XBlock, which is built on top of the CAPA subsystem.
 """
+from __future__ import annotations
 
 import copy
 import datetime
@@ -93,11 +94,12 @@ class SHOWANSWER:
     ATTEMPTED_NO_PAST_DUE = "attempted_no_past_due"
 
 
-class GradingStrategy:
+class GRADING_STRATEGY:
     """
     Constants for grading strategy
     """
     LAST_ATTEMPT = "last_attempt"
+    FIRST_ATTEMPT = "first_attempt"
     HIGHEST_ATTEMPT = "highest_attempt"
     AVERAGE_ATTEMPT = "average_attempt"
 
@@ -233,11 +235,12 @@ class ProblemBlock(
             "made by the student is taken."
         ),
         scope=Scope.settings,
-        default=GradingStrategy.LAST_ATTEMPT,
+        default=GRADING_STRATEGY.LAST_ATTEMPT,
         values=[
-            {"display_name": _("Last Attempt"), "value": GradingStrategy.LAST_ATTEMPT},
-            {"display_name": _("Highest Attempt"), "value": GradingStrategy.HIGHEST_ATTEMPT},
-            {"display_name": _("Average Attempt"), "value": GradingStrategy.AVERAGE_ATTEMPT},
+            {"display_name": _("Last Attempt"), "value": GRADING_STRATEGY.LAST_ATTEMPT},
+            {"display_name": _("First Attempt"), "value": GRADING_STRATEGY.FIRST_ATTEMPT},
+            {"display_name": _("Highest Attempt"), "value": GRADING_STRATEGY.HIGHEST_ATTEMPT},
+            {"display_name": _("Average Attempt"), "value": GRADING_STRATEGY.AVERAGE_ATTEMPT},
         ],
     )
     due = Date(help=_("Date that this problem is due by"), scope=Scope.settings)
@@ -1816,30 +1819,24 @@ class ProblemBlock(
             # self.correct_map, self.input_state, self.student_answers, self.has_saved_answers
             self.set_state_from_lcp()
 
-            print(f'\n\nCurrent Score: {self.score}\n\n')
-            print(f'\n\nNew Score: {self.score_from_lcp(self.lcp)}\n\n')
-
             # -------------------------------------------------------------
 
             new_score = self.score_from_lcp(self.lcp)
 
             self.score_history.append(new_score.raw_earned)
-            print(f'\n\nScore History: {self.score_history}\n\n')
 
-            if self.grading_strategy == GradingStrategy.HIGHEST_ATTEMPT:
-                if new_score.raw_earned > self.score.raw_earned:
-                    self.set_score(new_score)
-            elif self.grading_strategy == GradingStrategy.LAST_ATTEMPT:
-                self.set_score(new_score)
-            elif self.grading_strategy == GradingStrategy.AVERAGE_ATTEMPT:
-                average_score = round(sum(self.score_history) / len(self.score_history), 2)
-                new_score = Score(raw_earned=average_score, raw_possible=self.max_score())
-                self.set_score(new_score)
+            grading_strategy_handler = GradingStrategyHandler(
+                self.grading_strategy,
+                self.attempts,
+                self.score,
+                self.score_history,
+                self.max_score(),
+            )
 
-            # Get the score and save it in the score field
-            # self.set_score(self.score_from_lcp(self.lcp))
+            score = grading_strategy_handler.get_score(new_score)
 
-            # Updates the last submission date by putting the current time
+            self.set_score(score)
+
             self.set_last_submission_time()
 
             # ------------------------------------------------------------------
@@ -2308,6 +2305,46 @@ class ProblemBlock(
         """
         lcp_score = lcp.calculate_score()
         return Score(raw_earned=lcp_score['score'], raw_possible=lcp_score['total'])
+
+
+class GradingStrategyHandler:
+    """Grading strategy handler class"""
+
+    def __init__(
+        self, grading_strategy, attempts, current_score, score_history, max_score
+    ):
+        self.grading_strategy = grading_strategy
+        self.attempts = attempts
+        self.current_score = current_score
+        self.score_history = score_history
+        self.max_score = max_score
+        self.mapping_strategy = {
+            GRADING_STRATEGY.LAST_ATTEMPT: self.handle_last_attempt,
+            GRADING_STRATEGY.FIRST_ATTEMPT: self.handle_first_attempt,
+            GRADING_STRATEGY.HIGHEST_ATTEMPT: self.handle_highest_attempt,
+            GRADING_STRATEGY.AVERAGE_ATTEMPT: self.handle_average_attempt,
+        }
+
+    def get_score(self, new_score) -> int | float:
+        """Handle new score based on grading strategy"""
+        return self.mapping_strategy[self.grading_strategy](new_score)
+
+    def handle_last_attempt(self, new_score) -> int:
+        return new_score
+
+    def handle_first_attempt(self, new_score) -> int:
+        if self.attempts == 1:
+            return new_score
+        return self.current_score
+
+    def handle_highest_attempt(self, new_score) -> int:
+        if new_score.raw_earned > self.current_score.raw_earned:
+            return new_score
+        return self.current_score
+
+    def handle_average_attempt(self) -> float:
+        average_score = round(sum(self.score_history) / len(self.score_history), 2)
+        return Score(raw_earned=average_score, raw_possible=self.max_score)
 
 
 class ComplexEncoder(json.JSONEncoder):
