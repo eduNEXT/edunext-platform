@@ -1296,6 +1296,7 @@ class ProblemBlock(
             'reset_button': self.should_show_reset_button(),
             'save_button': self.should_show_save_button(),
             'answer_available': self.answer_available(),
+            'grading_strategy': self.grading_strategy,
             'attempts_used': self.attempts,
             'attempts_allowed': self.max_attempts,
             'demand_hint_possible': demand_hint_possible,
