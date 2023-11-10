@@ -27,6 +27,9 @@
                     this.topic = options.topic;
                     this.collection = options.collection;
                     this.action = options.action;
+                    this.contentGroupsNameMap = _.map(this.context.contentGroups, function(group) {
+                        return [group.id, group.name]
+                    });
 
                     if (this.action === 'create') {
                         this.teamModel = new TeamModel({});
@@ -44,6 +47,27 @@
                         title: gettext('Team Name (Required) *'),
                         valueAttribute: 'name',
                         helpMessage: gettext('A name that identifies your team (maximum 255 characters).')
+                    });
+
+                    this.teamProfessorField = new FieldViews.TextareaFieldView({
+                        model: this.teamModel,
+                        title: gettext('Professor in charge (Required) *'),
+                        valueAttribute: 'professor',
+                        editable: 'always',
+                        showMessages: false,
+                        helpMessage: gettext(
+                            'The name of the professor in charge of the team (maximum 300 characters).')
+                    });
+
+                    this.teamContentGroupsField = new FieldViews.DropdownFieldView({
+                        model: this.teamModel,
+                        title: gettext('Content Groups'),
+                        valueAttribute: 'content_group',
+                        required: false,
+                        showMessages: false,
+                        options: this.contentGroupsNameMap,
+                        helpMessage: gettext(
+                            'The content groups that the team is associated with.')
                     });
 
                     this.teamDescriptionField = new FieldViews.TextareaFieldView({
@@ -94,6 +118,8 @@
                     this.set(this.teamDescriptionField, '.team-required-fields');
                     this.set(this.teamLanguageField, '.team-optional-fields');
                     this.set(this.teamCountryField, '.team-optional-fields');
+                    this.set(this.teamProfessorField, '.team-required-fields');
+                    this.set(this.teamContentGroupsField, '.team-optional-fields');
                     return this;
                 },
 
@@ -111,11 +137,15 @@
                     var view = this, // eslint-disable-line vars-on-top
                         teamLanguage = this.teamLanguageField.fieldValue(),
                         teamCountry = this.teamCountryField.fieldValue(),
+                        teamContentGroup = this.teamContentGroupsField.fieldValue(),
                         data = {
                             name: this.teamNameField.fieldValue(),
                             description: this.teamDescriptionField.fieldValue(),
                             language: _.isNull(teamLanguage) ? '' : teamLanguage,
-                            country: _.isNull(teamCountry) ? '' : teamCountry
+                            country: _.isNull(teamCountry) ? '' : teamCountry,
+                            professor: this.teamProfessorField.fieldValue(),
+                            content_group: _.isNull(teamContentGroup) ? '' : teamContentGroup,
+                            user_partition_id: this.context.partitionID,
                         },
                         saveOptions = {
                             wait: true

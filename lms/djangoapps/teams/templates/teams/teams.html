@@ -26,6 +26,10 @@ from openedx.core.djangolib.js_utils import (
 
 <%include file="/courseware/course_navigation.html" args="active_page='teams'" />
 
+<%!
+from openedx.core.djangoapps.course_groups.partition_scheme import get_grouped_user_partition
+%>
+
 <div class="container">
     <div class="teams-wrapper">
         <main id="main" aria-label="Content" tabindex="-1">
@@ -40,6 +44,20 @@ from openedx.core.djangolib.js_utils import (
 <%include file="../discussion/_js_body_dependencies.html" />
 
 <%static:require_module module_name="teams/js/teams_tab_factory" class_name="TeamsTabFactory">
+    <%
+    grouped_user_partition = get_grouped_user_partition(course)
+    content_groups = grouped_user_partition.groups if grouped_user_partition else []
+    %>
+    var groupUserPartitionId = ${grouped_user_partition.id if grouped_user_partition else None | n, dump_js_escaped_json},
+        contentGroups = [
+            % for content_group in content_groups:
+            {
+                id: ${content_group.id | n, dump_js_escaped_json},
+                name: "${content_group.name | n, js_escaped_string}",
+                user_partition_id: groupUserPartitionId
+            },
+            % endfor
+        ];
     TeamsTabFactory({
         courseID: '${six.text_type(course.id) | n, js_escaped_string}',
         topics: ${topics | n, dump_js_escaped_json},
@@ -61,7 +79,9 @@ from openedx.core.djangolib.js_utils import (
         courseMaxTeamSize: ${course.teams_configuration.default_max_team_size | n, dump_js_escaped_json},
         languages: ${languages | n, dump_js_escaped_json},
         countries: ${countries | n, dump_js_escaped_json},
-        teamsBaseUrl: '${teams_base_url | n, js_escaped_string}'
+        teamsBaseUrl: '${teams_base_url | n, js_escaped_string}',
+        contentGroups: contentGroups,
+        partitionID: groupUserPartitionId,
     });
 </%static:require_module>
 </%block>
