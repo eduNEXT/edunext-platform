@@ -195,17 +195,14 @@ class AssessmentFeedbackView(StaffGraderBaseView):
             response_data = AssessmentFeedbackSerializer(assessments_data).data
             return Response(response_data)
 
-        # Catch bad ORA location
         except (InvalidKeyError, ItemNotFoundError):
             log.error(f"Bad ORA location provided: {ora_location}")
             return BadOraLocationResponse()
 
-        # Issues with the XBlock handlers
         except XBlockInternalError as ex:
             log.error(ex)
             return InternalErrorResponse(context=ex.context)
 
-        # Blanket exception handling in case something blows up
         except Exception as ex:
             log.exception(ex)
             return UnknownErrorResponse()
