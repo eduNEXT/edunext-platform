@@ -186,7 +186,9 @@ class AssessmentScoresSerializer(serializers.Serializer):
 
 class AssessmentSerializer(serializers.Serializer):
     """
-    Data for displaying Assessment objects in a table in Enhanced Staff Grader (ESG)
+    Data for displaying Assessment objects for the response from the assessment
+    feedback endpoint in Enhanced Staff Grader (ESG)
+    This serializer is included in the AssessmentFeedbackSerializer as a ListField
     """
     assessment_id = serializers.CharField()
     scorer_name = serializers.CharField(allow_null=True)
@@ -240,7 +242,8 @@ class InitializeSerializer(serializers.Serializer):
 
 class AssessmentFeedbackSerializer(serializers.Serializer):
     """
-    Serialize info for every assessment for a table in Enhanced Staff Grader (ESG)
+    Serialize info for every assessment for the response from the assessment
+    feedback endpoint in Enhanced Staff Grader (ESG)
     """
 
     assessments = serializers.ListField(child=AssessmentSerializer())
