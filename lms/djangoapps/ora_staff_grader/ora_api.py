@@ -34,12 +34,12 @@ def get_submissions(request, usage_id):
     return json.loads(response.content)
 
 
-def get_assessments(request, usage_id, submission_uuid, assessment_filter):
+def get_assessments(request, usage_id, submission_uuid, assessment_type):
     """
     Get a list of assessments from the ORA's 'list_assessments_grades' XBlock.json_handler
     """
     handler_name = "list_assessments"
-    body = {"item_id": usage_id, "submission_uuid": submission_uuid, "assessment_filter": assessment_filter}
+    body = {"item_id": usage_id, "submission_uuid": submission_uuid, "assessment_type": assessment_type}
 
     response = call_xblock_json_handler(request, usage_id, handler_name, body)
 

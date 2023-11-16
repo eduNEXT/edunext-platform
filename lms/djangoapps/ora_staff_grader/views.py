@@ -24,7 +24,7 @@ from xmodule.modulestore.exceptions import ItemNotFoundError
 from lms.djangoapps.ora_staff_grader.constants import (
     PARAM_ORA_LOCATION,
     PARAM_SUBMISSION_ID,
-    PARAM_ASSESSMENT_FILTER,
+    PARAM_ASSESSMENT_TYPE,
 )
 from lms.djangoapps.ora_staff_grader.errors import (
     BadOraLocationResponse,
@@ -182,13 +182,13 @@ class AssessmentFeedbackView(StaffGraderBaseView):
     - UnknownError (HTTP 500) for other errors
     """
 
-    @require_params([PARAM_ORA_LOCATION, PARAM_SUBMISSION_ID, PARAM_ASSESSMENT_FILTER])
-    def get(self, request, ora_location, submission_uuid, assessment_filter, *args, **kwargs):
+    @require_params([PARAM_ORA_LOCATION, PARAM_SUBMISSION_ID, PARAM_ASSESSMENT_TYPE])
+    def get(self, request, ora_location, submission_uuid, assessment_type, *args, **kwargs):
 
         try:
             assessments_data = {
                 "assessments": get_assessments(
-                    request, ora_location, submission_uuid, assessment_filter
+                    request, ora_location, submission_uuid, assessment_type
                 )
             }
 
