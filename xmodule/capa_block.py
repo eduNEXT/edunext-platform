@@ -956,7 +956,6 @@ class ProblemBlock(
         Return some html with data about the module
         """
         curr_score, total_possible = self.get_display_progress()
-        print(f'\n\nCurrent Score: {curr_score}, Total Posible: {total_possible}\n\n')
 
         return self.runtime.service(self, 'mako').render_template('problem_ajax.html', {
             'element_id': self.location.html_id(),
@@ -1527,7 +1526,6 @@ class ProblemBlock(
 
         No ajax return is needed. Return empty dict.
         """
-        print(f'\n\nIn Update Score\n\n')
         queuekey = data['queuekey']
         score_msg = data['xqueue_body']
         self.lcp.update_score(score_msg, queuekey)
@@ -1737,15 +1735,14 @@ class ProblemBlock(
           {'success' : 'correct' | 'incorrect' | AJAX alert msg string,
            'contents' : html}
         """
-        # Get event info
         event_info = {}
         event_info['state'] = self.lcp.get_state()
         event_info['problem_id'] = str(self.location)
 
         self.lcp.has_saved_answers = False
-        answers = self.make_dict_of_responses(data) # Converts data to a dictionary of answers
-        answers_without_files = convert_files_to_filenames(answers) # Converts files to file names
-        event_info['answers'] = answers_without_files # Save answers in the event
+        answers = self.make_dict_of_responses(data)
+        answers_without_files = convert_files_to_filenames(answers)
+        event_info['answers'] = answers_without_files
 
         metric_name = 'xmodule.capa.check_problem.{}'.format  # lint-amnesty, pylint: disable=unused-variable
         # Can override current time
@@ -1756,7 +1753,6 @@ class ProblemBlock(
         _ = self.runtime.service(self, "i18n").ugettext
 
         # Too late. Cannot submit
-        # If the number of attempts was exceeded or the closing date was exceeded
         if self.closed():
             log.error(
                 'ProblemClosedError: Problem %s, close date: %s, due:%s, is_past_due: %s, attempts: %s/%s,',
@@ -1808,9 +1804,6 @@ class ProblemBlock(
             self.lcp.context['attempt'] = self.attempts + 1
             correct_map = self.lcp.grade_answers(answers)
 
-            # print(f'\n\nCurrent Correct Map: {self.lcp.correct_map.get_dict()}\n\n')
-            # print(f'\n\nNew Correct Map: {correct_map.get_dict()}\n\n')
-
             # self.attempts refers to the number of attempts that did not
             # raise an error (0-based)
             self.attempts = self.attempts + 1
@@ -1820,11 +1813,7 @@ class ProblemBlock(
 
             self.lcp.done = True
 
-            # Updates some fields of the xblock:
-            # self.correct_map, self.input_state, self.student_answers, self.has_saved_answers
             self.set_state_from_lcp()
-
-            # -------------------------------------------------------------
 
             new_score = self.score_from_lcp(self.lcp)
 
@@ -1843,8 +1832,6 @@ class ProblemBlock(
             self.set_score(score)
 
             self.set_last_submission_time()
-
-            # ------------------------------------------------------------------
 
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:
             if self.debug:
