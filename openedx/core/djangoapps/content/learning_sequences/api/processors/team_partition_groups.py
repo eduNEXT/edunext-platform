@@ -47,6 +47,9 @@ class TeamPartitionGroupsOutlineProcessor(OutlineProcessor):
         )
         # TODO: fix type annotation: https://github.com/openedx/tcril-engineering/issues/313
         # self.user_group = self.team_groups.get(ENROLLMENT_TRACK_PARTITION_ID)  # type: ignore
+        self.user_groups = []
+        for _, group in self.team_groups.items():
+            self.user_groups.append(group.id)
 
     def _is_user_excluded_by_partition_group(self, user_partition_groups):
         """
@@ -55,16 +58,14 @@ class TeamPartitionGroupsOutlineProcessor(OutlineProcessor):
         if not user_partition_groups:
             return False
 
-        groups = user_partition_groups.get(ENROLLMENT_TRACK_PARTITION_ID)
-        if not groups:
+        if not self.user_groups:
             return False
 
-        if self.user_group and self.user_group.id not in groups:
-            # If the user's partition group, say Masters,
-            # does not belong to the partition of the block, say [verified],
-            # the block should be removed
-            return True
-        return False
+        partition_intersection = set(user_partition_groups.values()) & set(self.user_groups)
+        if not partition_intersection:
+            return False
+
+        return True
 
     def usage_keys_to_remove(self, full_course_outline):
         """

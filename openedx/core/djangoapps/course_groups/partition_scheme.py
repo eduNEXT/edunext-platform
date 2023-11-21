@@ -11,6 +11,7 @@ from lms.djangoapps.courseware.masquerade import (
     is_masquerading_as_specific_student
 )
 from lms.djangoapps.teams.api import get_teams_in_teamset
+from lms.djangoapps.teams.models import CourseTeamMembership
 from xmodule.partitions.partitions import NoSuchUserPartitionGroupError, UserPartition, Group  # lint-amnesty, pylint: disable=wrong-import-order
 from opaque_keys.edx.keys import CourseKey
 from xmodule.services import TeamsConfigurationService
@@ -159,9 +160,12 @@ class TeamPartitionScheme:
         #     return user_partition.get_group(team_id)
         # except NoSuchUserPartitionGroupError:
         #     return None
-        # queryset = CourseTeamMembership.get_memberships(user.username, [course_key], team_ids)
-        import pudb; pudb.set_trace()
-        return None
+        teams = get_teams_in_teamset(str(course_key), user_partition.parameters["team_set_id"])
+        team_ids = [team.team_id for team in teams]
+        user_team = CourseTeamMembership.get_memberships(user.username, [str(course_key)], team_ids).first()
+        if not user_team:
+            return None
+        return Group(user_team.team.id, str(user_team.team.name))
 
     @classmethod
     def create_user_partition(self, id, name, description, groups=None, parameters=None, active=True):
