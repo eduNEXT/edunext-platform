@@ -108,18 +108,6 @@ def get_cohorted_user_partition(course):
     return None
 
 
-def get_teamed_user_partition(course):
-    """
-    Returns the first user partition from the specified course which uses the CohortPartitionScheme,
-    or None if one is not found. Note that it is currently recommended that each course have only
-    one cohorted user partition.
-    """
-    for user_partition in course.user_partitions:
-        if user_partition.scheme == TeamPartitionScheme:
-            return user_partition
-
-    return None
-
 class TeamUserPartition(UserPartition):
     """
     Extends UserPartition to support dynamic groups pulled from the current course teams.
@@ -145,14 +133,6 @@ class TeamUserPartition(UserPartition):
 
 
 class TeamPartitionScheme:
-
-    @classmethod
-    def get_teamed_user_partition(cls, course):
-        for user_partition in course.user_partitions:
-            if user_partition.scheme == cls:
-                return user_partition
-
-        return None
 
     @classmethod
     def get_group_for_user(cls, course_key, user, user_partition):

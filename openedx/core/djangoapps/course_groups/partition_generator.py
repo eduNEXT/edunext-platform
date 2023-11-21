@@ -20,11 +20,13 @@ log = logging.getLogger(__name__)
 FEATURES = getattr(settings, 'FEATURES', {})
 
 
-def create_team_set_partition_with_course_id(course_id, team_sets):
+def create_team_set_partition_with_course_id(course_id, team_sets=None):
     """
     Create and return the dynamic enrollment track user partition based only on course_id.
     If it cannot be created, None is returned.
     """
+    if not team_sets:
+        team_sets = TeamsConfigurationService().get_teams_configuration(course_id).teamsets
 
     try:
         team_scheme = UserPartition.get_scheme("team")
@@ -35,9 +37,9 @@ def create_team_set_partition_with_course_id(course_id, team_sets):
     # Get team-sets from course and create user partitions for each team-set
     # Get teams from each team-set and create user groups for each team
     partitions = []
-    for team_set in team_sets:
+    for index, team_set in enumerate(team_sets):
         partition = team_scheme.create_user_partition(
-            id=hash(team_set.teamset_id),
+            id=51 + index,
             name=f"Team set {team_set.teamset_id} groups",
             description=_("Partition for segmenting users by team-set"),
             parameters={
