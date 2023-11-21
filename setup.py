@@ -181,7 +181,8 @@ setup(
         ],
         'openedx.dynamic_partition_generator': [
             'enrollment_track = xmodule.partitions.enrollment_track_partition_generator:create_enrollment_track_partition',  # lint-amnesty, pylint: disable=line-too-long
-            'content_type_gating = openedx.features.content_type_gating.partitions:create_content_gating_partition'
+            'content_type_gating = openedx.features.content_type_gating.partitions:create_content_gating_partition',
+            'team = openedx.core.djangoapps.course_groups.partition_generator:create_team_set_partition',
         ],
         'xblock.v1': XBLOCKS,
         'xblock_asides.v1': XBLOCKS_ASIDES,

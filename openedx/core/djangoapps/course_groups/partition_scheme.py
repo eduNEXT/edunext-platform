@@ -10,7 +10,10 @@ from lms.djangoapps.courseware.masquerade import (
     get_masquerading_user_group,
     is_masquerading_as_specific_student
 )
-from xmodule.partitions.partitions import NoSuchUserPartitionGroupError  # lint-amnesty, pylint: disable=wrong-import-order
+from lms.djangoapps.teams.api import get_teams_in_teamset
+from xmodule.partitions.partitions import NoSuchUserPartitionGroupError, UserPartition, Group  # lint-amnesty, pylint: disable=wrong-import-order
+from opaque_keys.edx.keys import CourseKey
+from xmodule.services import TeamsConfigurationService
 
 from .cohorts import get_cohort, get_group_info_for_cohort
 
@@ -103,3 +106,107 @@ def get_cohorted_user_partition(course):
             return user_partition
 
     return None
+
+
+def get_teamed_user_partition(course):
+    """
+    Returns the first user partition from the specified course which uses the CohortPartitionScheme,
+    or None if one is not found. Note that it is currently recommended that each course have only
+    one cohorted user partition.
+    """
+    for user_partition in course.user_partitions:
+        if user_partition.scheme == TeamPartitionScheme:
+            return user_partition
+
+    return None
+
+class TeamUserPartition(UserPartition):
+    """
+    Extends UserPartition to support dynamic groups pulled from the current course teams.
+    """
+
+    team_sets_mapping = {}
+
+    @property
+    def groups(self):
+        """
+        Return the groups (based on CourseModes) for the course associated with this
+        EnrollmentTrackUserPartition instance. Note that only groups based on selectable
+        CourseModes are returned (which means that Credit will never be returned).
+        """
+        course_key = CourseKey.from_string(self.parameters["course_id"])
+        team_sets = TeamsConfigurationService().get_teams_configuration(course_key).teamsets
+        team_set_id = self.team_sets_mapping[self.id]
+        team_set = next((team_set for team_set in team_sets if team_set.teamset_id == team_set_id), None)
+        teams = get_teams_in_teamset(str(course_key), team_set.teamset_id)
+        return [
+            Group(team.id, str(team.name)) for team in teams
+        ]
+
+
+class TeamPartitionScheme:
+
+    @classmethod
+    def get_teamed_user_partition(cls, course):
+        for user_partition in course.user_partitions:
+            if user_partition.scheme == cls:
+                return user_partition
+
+        return None
+
+    @classmethod
+    def get_group_for_user(cls, course_key, user, user_partition):
+        """
+        Returns the (Content) Group from the specified user partition to which the user
+        is assigned, via their group-type membership and any mappings from groups
+        to partitions / (content) groups that might exist.
+
+        If the user has no group-type mapping, or there is no (valid) group ->
+        partition group mapping found, the function returns None.
+        """
+        # team = get_team(user, course_key)
+        # if not team:
+        #     return None
+
+        # team_id, partition_id = get_group_info_for_team(team)
+        # if partition_id is None:
+        #     return None
+
+        # if partition_id != user_partition.id:
+        #     return None
+
+        # try:
+        #     return user_partition.get_group(team_id)
+        # except NoSuchUserPartitionGroupError:
+        #     return None
+        # queryset = CourseTeamMembership.get_memberships(user.username, [course_key], team_ids)
+        import pudb; pudb.set_trace()
+        return None
+
+    @classmethod
+    def create_user_partition(self, id, name, description, groups=None, parameters=None, active=True):
+        """
+        Create a custom UserPartition to support dynamic groups.
+
+        A Partition has an id, name, scheme, description, parameters, and a list
+        of groups. The id is intended to be unique within the context where these
+        are used. (e.g., for partitions of users within a course, the ids should
+        be unique per-course). The scheme is used to assign users into groups.
+        The parameters field is used to save extra parameters e.g., location of
+        the course ID for this partition scheme.
+
+        Partitions can be marked as inactive by setting the "active" flag to False.
+        Any group access rule referencing inactive partitions will be ignored
+        when performing access checks.
+        """
+        team_set_partition = TeamUserPartition(
+            id,
+            str(name),
+            str(description),
+            groups,
+            self,
+            parameters,
+            active=True,
+        )
+        TeamUserPartition.team_sets_mapping[id] = parameters["team_set_id"]
+        return team_set_partition
