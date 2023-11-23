@@ -54,7 +54,7 @@ from common.djangoapps.xblock_django.constants import (
 )
 from openedx.core.djangolib.markup import HTML, Text
 
-from .fields import Date, ScoreField, Timedelta
+from .fields import Date, ListScoreField, ScoreField, Timedelta
 from .progress import Progress
 
 log = logging.getLogger("edx.courseware")
@@ -330,7 +330,9 @@ class ProblemBlock(
 
     # enforce_type is set to False here because this field is saved as a dict in the database.
     score = ScoreField(help=_("Dictionary with the current student score"), scope=Scope.user_state, enforce_type=False)
-    score_history = List(help=_("List of scores for each attempt"), scope=Scope.user_state, default=[])
+    score_history = ListScoreField(
+        help=_("List of scores for each attempt"), scope=Scope.user_state, default=[], enforce_type=False
+    )
     has_saved_answers = Boolean(help=_("Whether or not the answers have been saved since last submit"),
                                 scope=Scope.user_state, default=False)
     done = Boolean(help=_("Whether the student has answered the problem"), scope=Scope.user_state, default=False)
@@ -1823,15 +1825,13 @@ class ProblemBlock(
             # -------------------------------------------------------------
 
             new_score = self.score_from_lcp(self.lcp)
-            self.score_history.append(new_score.raw_earned)
+            self.score_history.append(new_score)
             grading_strategy_handler = GradingStrategyHandler(
                 self.grading_strategy,
-                self.attempts,
-                self.score,
                 self.score_history,
                 self.max_score(),
             )
-            score = grading_strategy_handler.get_score(new_score)
+            score = grading_strategy_handler.get_score()
             self.set_score(score)
 
             self.set_last_submission_time()
@@ -2314,31 +2314,25 @@ class GradingStrategyHandler:
 
     Attributes:
     - grading_strategy (str): The chosen grading strategy.
-    - attempts (int): The total number of attempts made.
-    - current_score (Score): The current score based on the chosen strategy.
-    - score_history (list): A list to store the history of scores for average calculation.
+    - score_history (list[Score]): A list to store the history of scores.
     - max_score (int): The maximum possible score.
     - mapping_strategy (dict): A dictionary mapping the grading strategy to the corresponding handler.
 
     Methods:
-    - get_score(new_score): Retrieves the updated score based on the grading strategy.
-    - handle_last_attempt(new_score): Handles the last attempt strategy.
-    - handle_first_attempt(new_score): Handles the first attempt strategy.
-    - handle_highest_attempt(new_score): Handles the highest attempt strategy.
-    - handle_average_attempt(_): Handles the average attempt strategy.
+    - get_score(): Retrieves the updated score based on the grading strategy.
+    - handle_last_attempt(): Handles the last attempt strategy.
+    - handle_first_attempt(): Handles the first attempt strategy.
+    - handle_highest_attempt(): Handles the highest attempt strategy.
+    - handle_average_attempt(): Handles the average attempt strategy.
     """
 
     def __init__(
         self,
         grading_strategy: str,
-        attempts: int,
-        current_score: Score,
-        score_history: list,
+        score_history: list[Score],
         max_score: int,
     ):
         self.grading_strategy = grading_strategy
-        self.attempts = attempts
-        self.current_score = current_score
         self.score_history = score_history
         self.max_score = max_score
         self.mapping_strategy = {
@@ -2348,82 +2342,55 @@ class GradingStrategyHandler:
             GRADING_STRATEGY.AVERAGE_ATTEMPT: self.handle_average_attempt,
         }
 
-    def get_score(self, new_score: Score) -> Score:
+    def get_score(self) -> Score:
         """
         Retrieves the updated score based on the grading strategy.
 
-        Parameters:
-        - new_score (Score): The new score to be considered.
+        Returns:
+            - Score: The updated score based on the chosen grading strategy.
+        """
+        return self.mapping_strategy[self.grading_strategy]()
+
+    def handle_last_attempt(self) -> Score:
+        """
+        Retrieves the score based on the last attempt. The last attempt is
+        the last score in the score history.
 
         Returns:
-        - Score: The updated score based on the chosen grading strategy.
+            - Score: The score based on the last attempt.
         """
-        return self.mapping_strategy[self.grading_strategy](new_score)
+        return self.score_history[-1]
 
-    def handle_last_attempt(self, new_score: Score) -> Score:
+    def handle_first_attempt(self) -> Score:
         """
-        This method handles the last attempt grading strategy.
-
-        It takes the new score from the latest attempt and returns it as the updated
-        score. In this strategy, the most recent attempt determines the current score.
-
-        Parameters:
-        - new_score (Score): The new score from the latest attempt.
+        Retrieves the score based on the first attempt. The first attempt is
+        the first score in the score history.
 
         Returns:
-        - Score: The updated score based on the last attempt strategy.
+            - Score: The score based on the first attempt.
         """
-        return new_score
+        return self.score_history[0]
 
-    def handle_first_attempt(self, new_score: Score) -> Score:
+    def handle_highest_attempt(self) -> Score:
         """
-        This method handles the first attempt grading strategy.
-
-        It takes the new score from the latest attempt and returns either the new
-        score if it's the first attempt or the current score if there have been
-        multiple attempts. This strategy considers only the initial attempt for grading.
-
-        Parameters:
-        - new_score (Score): The new score from the latest attempt.
+        Retrieves the score based on the highest attempt. The highest attempt is
+        the highest score in the score history.
 
         Returns:
-        - Score: The updated score based on the first attempt strategy.
+            - Score: The score based on the highest attempt.
         """
-        if self.attempts == 1:
-            return new_score
-        return self.current_score
+        return max(self.score_history)
 
-    def handle_highest_attempt(self, new_score: Score) -> Score:
+    def handle_average_attempt(self) -> Score:
         """
-        This method handles the highest attempt grading strategy.
-
-        It takes the new score from the latest attempt and compares it with the
-        current score. If the new score is higher, it becomes the updated
-        score; otherwise, the current score remains unchanged. This strategy
-        selects the highest score achieved across all attempts.
-
-        Parameters:
-        - new_score (Score): The new score from the latest attempt.
+        Calculates the average score based on all attempts. The average score is
+        the sum of all scores divided by the number of scores.
 
         Returns:
-        - Score: The updated score based on the highest attempt strategy.
+            - Score: The average score based on all attempts.
         """
-        if new_score.raw_earned > self.current_score.raw_earned:
-            return new_score
-        return self.current_score
-
-    def handle_average_attempt(self, _) -> Score:
-        """
-        This method handles the average attempt grading strategy.
-
-        It calculates the average score based on the historical score data and
-        returns a new score object with the calculated average. This strategy
-        considers the average score across all attempts.
-
-        Returns:
-        - Score: The updated score based on the average attempt strategy.
-        """
-        average_score = round(sum(self.score_history) / len(self.score_history), 2)
+        total = sum(score.raw_earned for score in self.score_history)
+        average_score = round(total / len(self.score_history), 2)
         return Score(raw_earned=average_score, raw_possible=self.max_score)
 
 
