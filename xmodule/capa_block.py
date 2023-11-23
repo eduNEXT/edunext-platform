@@ -2227,7 +2227,12 @@ class ProblemBlock(
         event_info['orig_total'] = orig_score.raw_possible
         try:
             self.update_correctness()
-            calculated_score = self.calculate_score()
+            grading_strategy_handler = GradingStrategyHandler(
+                self.grading_strategy,
+                self.score_history,
+                self.max_score(),
+            )
+            calculated_score = grading_strategy_handler.get_score()
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:  # lint-amnesty, pylint: disable=unused-variable
             log.warning("Input error in capa_block:problem_rescore", exc_info=True)
             event_info['failure'] = 'input_error'
