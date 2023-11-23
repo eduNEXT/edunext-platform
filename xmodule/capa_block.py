@@ -1813,9 +1813,6 @@ class ProblemBlock(
             # raise an error (0-based)
             self.attempts = self.attempts + 1
 
-            if self.attempts == 1:
-                self.score_history = []
-
             self.lcp.done = True
 
             # Updates some fields of the xblock:

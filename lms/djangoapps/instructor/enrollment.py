@@ -361,6 +361,7 @@ def _reset_module_attempts(studentmodule):
     problem_state = json.loads(studentmodule.state)
     # old_number_of_attempts = problem_state["attempts"]
     problem_state["attempts"] = 0
+    problem_state["score_history"] = []
 
     # save
     studentmodule.state = json.dumps(problem_state)
