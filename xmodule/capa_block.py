@@ -325,8 +325,14 @@ class ProblemBlock(
     )
     correct_map = Dict(help=_("Dictionary with the correctness of current student answers"),
                        scope=Scope.user_state, default={})
+    correct_map_history = List(
+        help=_("List of correctness maps for each attempt"), scope=Scope.user_state, default=[]
+    )
     input_state = Dict(help=_("Dictionary for maintaining the state of inputtypes"), scope=Scope.user_state)
     student_answers = Dict(help=_("Dictionary with the current student responses"), scope=Scope.user_state)
+    student_answers_history = List(
+        help=_("List of student answers for each attempt"), scope=Scope.user_state, default=[]
+    )
 
     # enforce_type is set to False here because this field is saved as a dict in the database.
     score = ScoreField(help=_("Dictionary with the current student score"), scope=Scope.user_state, enforce_type=False)
@@ -1745,9 +1751,10 @@ class ProblemBlock(
         event_info['problem_id'] = str(self.location)
 
         self.lcp.has_saved_answers = False
-        answers = self.make_dict_of_responses(data) # Converts data to a dictionary of answers
-        answers_without_files = convert_files_to_filenames(answers) # Converts files to file names
-        event_info['answers'] = answers_without_files # Save answers in the event
+        answers = self.make_dict_of_responses(data)
+        answers_without_files = convert_files_to_filenames(answers)
+        self.student_answers_history.append(answers_without_files)
+        event_info['answers'] = answers_without_files
 
         metric_name = 'xmodule.capa.check_problem.{}'.format  # lint-amnesty, pylint: disable=unused-variable
         # Can override current time
@@ -1809,6 +1816,7 @@ class ProblemBlock(
             # self.lcp.context['attempt'] refers to the attempt number (1-based)
             self.lcp.context['attempt'] = self.attempts + 1
             correct_map = self.lcp.grade_answers(answers)
+            self.correct_map_history.append(correct_map.get_dict())
             # self.attempts refers to the number of attempts that did not
             # raise an error (0-based)
             self.attempts = self.attempts + 1
@@ -2223,7 +2231,8 @@ class ProblemBlock(
         event_info['orig_score'] = orig_score.raw_earned
         event_info['orig_total'] = orig_score.raw_possible
         try:
-            self.update_correctness()
+            self.update_correctness_list()
+            self.score_history = self.calculate_score_list()
             grading_strategy_handler = GradingStrategyHandler(
                 self.grading_strategy,
                 self.score_history,
@@ -2290,12 +2299,32 @@ class ProblemBlock(
         new_correct_map = self.lcp.get_grade_from_current_answers(None)
         self.lcp.correct_map.update(new_correct_map)
 
+    def update_correctness_list(self):
+        """Updates the correctness map list of the LCP."""
+        self.lcp.context['attempt'] = max(self.attempts, 1)
+        new_correct_map_list = []
+        for student_answers, correct_map in zip(self.student_answers_history, self.correct_map_history):
+            new_correct_map = self.lcp.get_grade_from_answers(student_answers, correct_map)
+            new_correct_map_list.append(new_correct_map)
+        self.lcp.correct_map_history = new_correct_map_list
+
     def calculate_score(self):
         """
         Returns the score calculated from the current problem state.
         """
         new_score = self.lcp.calculate_score()
         return Score(raw_earned=new_score['score'], raw_possible=new_score['total'])
+
+    def calculate_score_list(self):
+        """
+        Returns the score calculated from the current problem state.
+        """
+        new_score_list = []
+
+        for correct_map in self.lcp.correct_map_history:
+            new_score = self.lcp.calculate_score(correct_map)
+            new_score_list.append(Score(raw_earned=new_score['score'], raw_possible=new_score['total']))
+        return new_score_list
 
     def score_from_lcp(self, lcp):
         """
