@@ -907,6 +907,7 @@ class ProblemBlock(
         lcp_state = self.lcp.get_state()
         self.done = lcp_state['done']
         self.correct_map = lcp_state['correct_map']
+        self.correct_map_history = lcp_state['correct_map_history']
         self.input_state = lcp_state['input_state']
         self.student_answers = lcp_state['student_answers']
         self.has_saved_answers = lcp_state['has_saved_answers']
@@ -1816,7 +1817,6 @@ class ProblemBlock(
             # self.lcp.context['attempt'] refers to the attempt number (1-based)
             self.lcp.context['attempt'] = self.attempts + 1
             correct_map = self.lcp.grade_answers(answers)
-            self.correct_map_history.append(correct_map.get_dict())
             # self.attempts refers to the number of attempts that did not
             # raise an error (0-based)
             self.attempts = self.attempts + 1
@@ -1827,11 +1827,12 @@ class ProblemBlock(
             # self.correct_map, self.input_state, self.student_answers, self.has_saved_answers
             self.set_state_from_lcp()
 
-            # -------------------------------------------------------------
+            self.correct_map_history.append(correct_map.get_dict())
 
             new_score = self.score_from_lcp(self.lcp)
             self.score_history.append(new_score)
             grading_strategy_handler = GradingStrategyHandler(
+                self.score,
                 self.grading_strategy,
                 self.score_history,
                 self.max_score(),
@@ -2234,6 +2235,7 @@ class ProblemBlock(
             self.update_correctness_list()
             self.score_history = self.calculate_score_list()
             grading_strategy_handler = GradingStrategyHandler(
+                self.score,
                 self.grading_strategy,
                 self.score_history,
                 self.max_score(),
@@ -2307,6 +2309,8 @@ class ProblemBlock(
             new_correct_map = self.lcp.get_grade_from_answers(student_answers, correct_map)
             new_correct_map_list.append(new_correct_map)
         self.lcp.correct_map_history = new_correct_map_list
+        if new_correct_map_list:
+            self.lcp.correct_map.update(new_correct_map_list[-1])
 
     def calculate_score(self):
         """
@@ -2359,10 +2363,12 @@ class GradingStrategyHandler:
 
     def __init__(
         self,
+        score: Score,
         grading_strategy: str,
         score_history: list[Score],
         max_score: int,
     ):
+        self.score = score
         self.grading_strategy = grading_strategy
         self.score_history = score_history
         self.max_score = max_score
@@ -2390,7 +2396,7 @@ class GradingStrategyHandler:
         Returns:
             - Score: The score based on the last attempt.
         """
-        return self.score_history[-1]
+        return self.score_history[-1] if self.score_history else self.score
 
     def handle_first_attempt(self) -> Score:
         """
@@ -2400,7 +2406,7 @@ class GradingStrategyHandler:
         Returns:
             - Score: The score based on the first attempt.
         """
-        return self.score_history[0]
+        return self.score_history[0] if self.score_history else self.score
 
     def handle_highest_attempt(self) -> Score:
         """
@@ -2410,7 +2416,7 @@ class GradingStrategyHandler:
         Returns:
             - Score: The score based on the highest attempt.
         """
-        return max(self.score_history)
+        return max(self.score_history) if self.score_history else self.score
 
     def handle_average_attempt(self) -> Score:
         """
@@ -2420,6 +2426,8 @@ class GradingStrategyHandler:
         Returns:
             - Score: The average score based on all attempts.
         """
+        if not self.score_history:
+            return self.score
         total = sum(score.raw_earned for score in self.score_history)
         average_score = round(total / len(self.score_history), 2)
         return Score(raw_earned=average_score, raw_possible=self.max_score)

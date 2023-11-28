@@ -332,6 +332,7 @@ class LoncapaProblem(object):
                 'student_answers': self.student_answers,
                 'has_saved_answers': self.has_saved_answers,
                 'correct_map': self.correct_map.get_dict(),
+                'correct_map_history': [cmap.get_dict() for cmap in self.correct_map_history],
                 'input_state': self.input_state,
                 'done': self.done}
 
