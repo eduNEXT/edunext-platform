@@ -2302,7 +2302,12 @@ class ProblemBlock(
         self.lcp.correct_map.update(new_correct_map)
 
     def update_correctness_list(self):
-        """Updates the correctness map list of the LCP."""
+        """
+        Updates the correct map history of the LCP.
+
+        Similar to update_correctness, but operates on each one of the
+        correctness maps in the history of the LCP.
+        """
         self.lcp.context['attempt'] = max(self.attempts, 1)
         new_correct_map_list = []
         for student_answers, correct_map in zip(self.student_answers_history, self.correct_map_history):

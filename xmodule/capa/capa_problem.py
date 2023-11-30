@@ -530,12 +530,7 @@ class LoncapaProblem(object):
                 _ = self.capa_system.i18n.gettext
                 raise Exception(_("Cannot rescore problems with possible file submissions"))
 
-            # use 'student_answers' only if it is provided, and if it might contain a file
-            # submission that would not exist in the persisted "student_answers".
-            if 'filesubmission' in responder.allowed_inputfields and student_answers is not None:
-                results = responder.evaluate_answers(student_answers, oldcmap)
-            else:
-                results = responder.evaluate_answers(student_answers, oldcmap)
+            results = responder.evaluate_answers(student_answers, oldcmap)
             newcmap.update(results)
 
         return newcmap
