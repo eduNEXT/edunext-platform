@@ -125,7 +125,7 @@ openedx-filters                     # Open edX Filters from Hooks Extension Fram
 ora2
 piexif                              # Exif image metadata manipulation, used in the profile_images app
 Pillow                              # Image manipulation library; used for course assets, profile images, invoice PDFs, etc.
-py2neo                              # Driver for converting Python modulestore structures to Neo4j's schema (for Coursegraph).
+py2neo @ https://github.com/overhangio/py2neo/releases/download/2021.2.3/py2neo-2021.2.3.tar.gz
 pycountry
 pycryptodomex
 pygments                            # Used to support colors in paver command output
