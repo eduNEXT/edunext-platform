@@ -647,7 +647,7 @@ libsass==0.10.0
     #   ora2
 loremipsum==1.0.5
     # via ora2
-lti-consumer-xblock==3.4.7
+lti-consumer-xblock==7.3.0
     # via -r requirements/edx/base.in
 lxml==4.5.0
     # via
@@ -781,7 +781,7 @@ psutil==5.9.0
     # via
     #   -r requirements/edx/paver.txt
     #   edx-django-utils
-py2neo==2021.2.3
+py2neo @ https://github.com/overhangio/py2neo/releases/download/2021.2.3/py2neo-2021.2.3.tar.gz
     # via
     #   -c requirements/edx/../constraints.txt
     #   -r requirements/edx/base.in
