@@ -4,6 +4,7 @@ Toggles for course home experience.
 
 from edx_toggles.toggles import LegacyWaffleFlagNamespace
 
+from lms.lib.utils import use_learning_legacy_frontend
 from openedx.core.djangoapps.waffle_utils import CourseWaffleFlag
 
 WAFFLE_FLAG_NAMESPACE = LegacyWaffleFlagNamespace(name='course_home')
@@ -26,7 +27,10 @@ COURSE_HOME_USE_LEGACY_FRONTEND = CourseWaffleFlag(WAFFLE_FLAG_NAMESPACE, 'cours
 
 
 def course_home_legacy_is_active(course_key):
-    return COURSE_HOME_USE_LEGACY_FRONTEND.is_enabled(course_key) or course_key.deprecated
+    return (
+        use_learning_legacy_frontend() and
+        (COURSE_HOME_USE_LEGACY_FRONTEND.is_enabled(course_key) or course_key.deprecated)
+    )
 
 
 def course_home_mfe_progress_tab_is_active(course_key):
