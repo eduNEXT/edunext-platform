@@ -52,7 +52,7 @@ def use_learning_legacy_frontend() -> bool:
     """
     THIS WILL BE OBSOLETE FROM VERSIONS HIGHER THAN NUTMEG
     https://docs.openedx.org/en/latest/community/release_notes/olive.html#learning-mfe-is-now-required
-    
+
     Checks in django settings if use the learning legacy
     frontend instead the learning mfe.
 
