@@ -2,7 +2,7 @@
 Middleware for Language Preferences
 """
 
-
+from django.conf import settings
 from django.utils.deprecation import MiddlewareMixin
 from django.utils.translation import LANGUAGE_SESSION_KEY
 from django.utils.translation.trans_real import parse_accept_lang_header
@@ -29,7 +29,7 @@ class LanguagePreferenceMiddleware(MiddlewareMixin):
         If a user's UserPreference contains a language preference, use the user's preference.
         Save the current language preference cookie as the user's preferred language.
         """
-        cookie_lang = lang_pref_helpers.get_language_cookie(request)
+        cookie_lang = lang_pref_helpers.get_language_cookie(request, getattr(settings, "LANGUAGE_CODE", None))
         if cookie_lang:
             if request.user.is_authenticated:
                 # DarkLangMiddleware will take care of this so don't change anything
