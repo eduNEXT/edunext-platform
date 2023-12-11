@@ -894,6 +894,7 @@ class ProblemBlock(
         return {
             'done': self.done,
             'correct_map': self.correct_map,
+            'correct_map_history': self.correct_map_history,
             'student_answers': self.student_answers,
             'has_saved_answers': self.has_saved_answers,
             'input_state': self.input_state,
@@ -1820,8 +1821,6 @@ class ProblemBlock(
             self.lcp.done = True
 
             self.set_state_from_lcp()
-
-            self.correct_map_history.append(correct_map.get_dict())
 
             new_score = self.score_from_lcp(self.lcp)
             self.score_history.append(new_score)

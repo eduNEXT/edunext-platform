@@ -173,7 +173,10 @@ class LoncapaProblem(object):
         self.has_saved_answers = state.get('has_saved_answers', False)
         if 'correct_map' in state:
             self.correct_map.set_dict(state['correct_map'])
-            self.correct_map_history = state.get('correct_map_history', [])
+            self.correct_map_history = [
+                CorrectMap().set_dict(cmap) for cmap in state.get('correct_map_history', [])
+            ]
+
         self.done = state.get('done', False)
         self.input_state = state.get('input_state', {})
 
@@ -439,6 +442,7 @@ class LoncapaProblem(object):
         self.student_answers = convert_files_to_filenames(answers)
         new_cmap = self.get_grade_from_current_answers(answers)
         self.correct_map = new_cmap  # lint-amnesty, pylint: disable=attribute-defined-outside-init
+        self.correct_map_history.append(deepcopy(new_cmap))
         return self.correct_map
 
     def supports_rescoring(self):

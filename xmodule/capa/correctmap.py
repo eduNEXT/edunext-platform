@@ -105,6 +105,8 @@ class CorrectMap(object):
             for k in correct_map:
                 self.set(k, **correct_map[k])
 
+        return self
+
     def is_correct(self, answer_id):
         """
         Takes an answer_id
