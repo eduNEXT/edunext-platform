@@ -1822,16 +1822,7 @@ class ProblemBlock(
 
             self.set_state_from_lcp()
 
-            new_score = self.score_from_lcp(self.lcp)
-            self.score_history.append(new_score)
-            grading_strategy_handler = GradingStrategyHandler(
-                self.score,
-                self.grading_strategy,
-                self.score_history,
-                self.max_score(),
-            )
-            score = grading_strategy_handler.get_score()
-            self.set_score(score)
+            self._set_score()
 
             self.set_last_submission_time()
 
@@ -1905,6 +1896,27 @@ class ProblemBlock(
             'contents': html
         }
     # pylint: enable=too-many-statements
+
+    def _set_score(self) -> None:
+        """
+        Calculate and set the current score based on the grading strategy.
+
+        In this method:
+            - The current score is obtained from the LON-CAPA problem.
+            - The score history is updated adding the current score.
+            - The calculated score is obtained based on the grading strategy.
+            - The calculated score is set as the current score.
+        """
+        new_score = self.score_from_lcp(self.lcp)
+        self.score_history.append(new_score)
+        grading_strategy_handler = GradingStrategyHandler(
+            self.score,
+            self.grading_strategy,
+            self.score_history,
+            self.max_score(),
+        )
+        calculated_score = grading_strategy_handler.get_score()
+        self.set_score(calculated_score)
 
     def publish_unmasked(self, title, event_info):
         """
@@ -2223,15 +2235,7 @@ class ProblemBlock(
         event_info['orig_score'] = orig_score.raw_earned
         event_info['orig_total'] = orig_score.raw_possible
         try:
-            self.update_correctness_list()
-            self.score_history = self.calculate_score_list()
-            grading_strategy_handler = GradingStrategyHandler(
-                self.score,
-                self.grading_strategy,
-                self.score_history,
-                self.max_score(),
-            )
-            calculated_score = grading_strategy_handler.get_score()
+            calculated_score = self.get_rescore()
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:  # lint-amnesty, pylint: disable=unused-variable
             log.warning("Input error in capa_block:problem_rescore", exc_info=True)
             event_info['failure'] = 'input_error'
@@ -2263,6 +2267,28 @@ class ProblemBlock(
         event_info['success'] = success
         event_info['attempts'] = self.attempts
         self.publish_unmasked('problem_rescore', event_info)
+
+    def get_rescore(self) -> Score:
+        """
+        Calculate and return the rescored score based on the grading strategy.
+
+        In this method:
+            - The list with the correctness maps is updated.
+            - The list with the score history is updated based on the correctness maps.
+            - The final score is calculated based on the grading strategy.
+
+        Returns:
+            Score: The score calculated based on the grading strategy.
+        """
+        self.update_correctness_list()
+        self.score_history = self.calculate_score_list()
+        grading_strategy_handler = GradingStrategyHandler(
+            self.score,
+            self.grading_strategy,
+            self.score_history,
+            self.max_score(),
+        )
+        return grading_strategy_handler.get_score()
 
     def has_submitted_answer(self):
         return self.done
