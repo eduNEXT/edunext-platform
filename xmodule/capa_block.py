@@ -98,10 +98,10 @@ class GRADING_STRATEGY:
     """
     Constants for grading strategy
     """
-    LAST_ATTEMPT = "last_attempt"
-    FIRST_ATTEMPT = "first_attempt"
-    HIGHEST_ATTEMPT = "highest_attempt"
-    AVERAGE_ATTEMPT = "average_attempt"
+    LAST_SCORE = "last_score"
+    FIRST_SCORE = "first_score"
+    HIGHEST_SCORE = "highest_score"
+    AVERAGE_SCORE = "average_score"
 
 
 class RANDOMIZATION:
@@ -231,16 +231,16 @@ class ProblemBlock(
     grading_strategy = String(
         display_name=_("Grading Strategy"),
         help=_(
-            "Define the grading strategy for this problem. By default the last attempt "
+            "Define the grading strategy for this problem. By default the last score "
             "made by the student is taken."
         ),
         scope=Scope.settings,
-        default=GRADING_STRATEGY.LAST_ATTEMPT,
+        default=GRADING_STRATEGY.LAST_SCORE,
         values=[
-            {"display_name": _("Last Attempt"), "value": GRADING_STRATEGY.LAST_ATTEMPT},
-            {"display_name": _("First Attempt"), "value": GRADING_STRATEGY.FIRST_ATTEMPT},
-            {"display_name": _("Highest Attempt"), "value": GRADING_STRATEGY.HIGHEST_ATTEMPT},
-            {"display_name": _("Average Attempt"), "value": GRADING_STRATEGY.AVERAGE_ATTEMPT},
+            {"display_name": _("Last Score"), "value": GRADING_STRATEGY.LAST_SCORE},
+            {"display_name": _("First Score"), "value": GRADING_STRATEGY.FIRST_SCORE},
+            {"display_name": _("Highest Score"), "value": GRADING_STRATEGY.HIGHEST_SCORE},
+            {"display_name": _("Average Score"), "value": GRADING_STRATEGY.AVERAGE_SCORE},
         ],
     )
     due = Date(help=_("Date that this problem is due by"), scope=Scope.settings)
@@ -1294,7 +1294,6 @@ class ProblemBlock(
             save_message = _(
                 "Your answers were previously saved. Click '{button_name}' to grade them."
             ).format(button_name=self.submit_button_name())
-
         context = {
             'problem': content,
             'id': str(self.location),
@@ -1305,7 +1304,7 @@ class ProblemBlock(
             'reset_button': self.should_show_reset_button(),
             'save_button': self.should_show_save_button(),
             'answer_available': self.answer_available(),
-            'grading_strategy': self.grading_strategy,
+            'grading_strategy': " ".join(self.grading_strategy.split("_")).capitalize(),
             'attempts_used': self.attempts,
             'attempts_allowed': self.max_attempts,
             'demand_hint_possible': demand_hint_possible,
@@ -2366,21 +2365,22 @@ class GradingStrategyHandler:
     A class for handling grading strategies and calculating scores.
 
     This class allows for flexible handling of grading strategies, including options
-    such as considering the last attempt, the first attempt, the highest attempt,
-    or the average attempt.
+    such as considering the last score, the first score, the highest score,
+    or the average score.
 
     Attributes:
     - grading_strategy (str): The chosen grading strategy.
     - score_history (list[Score]): A list to store the history of scores.
     - max_score (int): The maximum possible score.
-    - mapping_strategy (dict): A dictionary mapping the grading strategy to the corresponding handler.
+    - mapping_strategy (dict): A dictionary mapping the grading
+        strategy to the corresponding handler.
 
     Methods:
     - get_score(): Retrieves the updated score based on the grading strategy.
-    - handle_last_attempt(): Handles the last attempt strategy.
-    - handle_first_attempt(): Handles the first attempt strategy.
-    - handle_highest_attempt(): Handles the highest attempt strategy.
-    - handle_average_attempt(): Handles the average attempt strategy.
+    - handle_last_score(): Handles the last score strategy.
+    - handle_first_score(): Handles the first score strategy.
+    - handle_highest_score(): Handles the highest score strategy.
+    - handle_average_score(): Handles the average score strategy.
     """
 
     def __init__(
@@ -2395,10 +2395,10 @@ class GradingStrategyHandler:
         self.score_history = score_history
         self.max_score = max_score
         self.mapping_strategy = {
-            GRADING_STRATEGY.LAST_ATTEMPT: self.handle_last_attempt,
-            GRADING_STRATEGY.FIRST_ATTEMPT: self.handle_first_attempt,
-            GRADING_STRATEGY.HIGHEST_ATTEMPT: self.handle_highest_attempt,
-            GRADING_STRATEGY.AVERAGE_ATTEMPT: self.handle_average_attempt,
+            GRADING_STRATEGY.LAST_SCORE: self.handle_last_score,
+            GRADING_STRATEGY.FIRST_SCORE: self.handle_first_score,
+            GRADING_STRATEGY.HIGHEST_SCORE: self.handle_highest_score,
+            GRADING_STRATEGY.AVERAGE_SCORE: self.handle_average_score,
         }
 
     def get_score(self) -> Score:
@@ -2410,37 +2410,37 @@ class GradingStrategyHandler:
         """
         return self.mapping_strategy[self.grading_strategy]()
 
-    def handle_last_attempt(self) -> Score:
+    def handle_last_score(self) -> Score:
         """
-        Retrieves the score based on the last attempt. The last attempt is
-        the last score in the score history.
+        Retrieves the score based on the last score.
+        Is the last score in the score history.
 
         Returns:
-            - Score: The score based on the last attempt.
+            - Score: The score based on the last score.
         """
         return self.score_history[-1] if self.score_history else self.score
 
-    def handle_first_attempt(self) -> Score:
+    def handle_first_score(self) -> Score:
         """
-        Retrieves the score based on the first attempt. The first attempt is
-        the first score in the score history.
+        Retrieves the score based on the first score.
+        Is the first score in the score history.
 
         Returns:
-            - Score: The score based on the first attempt.
+            - Score: The score based on the first score.
         """
         return self.score_history[0] if self.score_history else self.score
 
-    def handle_highest_attempt(self) -> Score:
+    def handle_highest_score(self) -> Score:
         """
-        Retrieves the score based on the highest attempt. The highest attempt is
-        the highest score in the score history.
+        Retrieves the score based on the highest score.
+        Is the highest score in the score history.
 
         Returns:
-            - Score: The score based on the highest attempt.
+            - Score: The score based on the highest score.
         """
         return max(self.score_history) if self.score_history else self.score
 
-    def handle_average_attempt(self) -> Score:
+    def handle_average_score(self) -> Score:
         """
         Calculates the average score based on all attempts. The average score is
         the sum of all scores divided by the number of scores.
