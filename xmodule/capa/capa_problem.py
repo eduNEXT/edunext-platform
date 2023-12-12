@@ -173,9 +173,11 @@ class LoncapaProblem(object):
         self.has_saved_answers = state.get('has_saved_answers', False)
         if 'correct_map' in state:
             self.correct_map.set_dict(state['correct_map'])
-            self.correct_map_history = [
-                CorrectMap().set_dict(cmap) for cmap in state.get('correct_map_history', [])
-            ]
+            self.correct_map_history = []
+            for cmap in state.get('correct_map_history', []):
+                correct_map = CorrectMap()
+                correct_map.set_dict(cmap)
+                self.correct_map_history.append(correct_map)
 
         self.done = state.get('done', False)
         self.input_state = state.get('input_state', {})
@@ -504,24 +506,14 @@ class LoncapaProblem(object):
 
         return newcmap
 
-    def get_grade_from_answers(self, student_answers, correct_map):
+    def get_grade_from_answers(
+        self, student_answers: dict, correct_map: dict
+    ) -> CorrectMap:
         """
-        Gets the grade for the currently-saved problem state, but does not save it
-        to the block.
-
-        For new student_answers being graded, `student_answers` is a dict of all the
-        entries from request.POST, but with the first part of each key removed
-        (the string before the first "_").  Thus, for example,
-        input_ID123 -> ID123, and input_fromjs_ID123 -> fromjs_ID123.
-
-        For rescoring, `student_answers` is None.
-
-        Calls the Response for each question in this problem, to do the actual grading.
+        This method is based on `get_grade_from_current_answers` method but it
+        takes `student_answers` and `correct_map` as arguments instead of using
+        the ones stored in the problem.
         """
-        # old CorrectMap
-        oldcmap = correct_map
-
-        # start new with empty CorrectMap
         newcmap = CorrectMap()
         # Call each responsetype instance to do actual grading
         for responder in self.responders.values():
@@ -534,7 +526,7 @@ class LoncapaProblem(object):
                 _ = self.capa_system.i18n.gettext
                 raise Exception(_("Cannot rescore problems with possible file submissions"))
 
-            results = responder.evaluate_answers(student_answers, oldcmap)
+            results = responder.evaluate_answers(student_answers, correct_map)
             newcmap.update(results)
 
         return newcmap

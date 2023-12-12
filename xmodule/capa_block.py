@@ -96,7 +96,7 @@ class SHOWANSWER:
 
 class GRADING_STRATEGY:
     """
-    Constants for grading strategy
+    Constants for grading strategy options.
     """
     LAST_SCORE = "last_score"
     FIRST_SCORE = "first_score"
@@ -231,8 +231,8 @@ class ProblemBlock(
     grading_strategy = String(
         display_name=_("Grading Strategy"),
         help=_(
-            "Define the grading strategy for this problem. By default the last score "
-            "made by the student is taken."
+            "Define the grading strategy for this problem. By default, "
+            "it's the score of the last submission made by the student."
         ),
         scope=Scope.settings,
         default=GRADING_STRATEGY.LAST_SCORE,
@@ -1816,13 +1816,9 @@ class ProblemBlock(
             # self.attempts refers to the number of attempts that did not
             # raise an error (0-based)
             self.attempts = self.attempts + 1
-
             self.lcp.done = True
-
             self.set_state_from_lcp()
-
             self._set_score()
-
             self.set_last_submission_time()
 
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:
@@ -2321,7 +2317,7 @@ class ProblemBlock(
         """
         Updates the correct map history of the LCP.
 
-        Similar to update_correctness, but operates on each one of the
+        Similar to `update_correctness` method, but operates on each one of the
         correctness maps in the history of the LCP.
         """
         self.lcp.context['attempt'] = max(self.attempts, 1)
@@ -2413,7 +2409,7 @@ class GradingStrategyHandler:
     def handle_last_score(self) -> Score:
         """
         Retrieves the score based on the last score.
-        Is the last score in the score history.
+        It is the last score in the score history.
 
         Returns:
             - Score: The score based on the last score.
@@ -2423,7 +2419,7 @@ class GradingStrategyHandler:
     def handle_first_score(self) -> Score:
         """
         Retrieves the score based on the first score.
-        Is the first score in the score history.
+        It is the first score in the score history.
 
         Returns:
             - Score: The score based on the first score.
@@ -2433,7 +2429,7 @@ class GradingStrategyHandler:
     def handle_highest_score(self) -> Score:
         """
         Retrieves the score based on the highest score.
-        Is the highest score in the score history.
+        It is the highest score in the score history.
 
         Returns:
             - Score: The score based on the highest score.
