@@ -51,7 +51,7 @@
   <% } %>
 </div>
 </div>
-<% if (enableHideFromTOC) { %>
+<% if (enableHideFromTOCUI) { %>
 <div class="modal-section-content hide-from-toc">
 <% if (!xblockInfo.isVertical()) { %>
   <label class="label">
