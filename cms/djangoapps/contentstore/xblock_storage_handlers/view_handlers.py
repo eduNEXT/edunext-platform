@@ -1095,8 +1095,12 @@ def create_xblock_info(  # lint-amnesty, pylint: disable=too-many-statements
                 "user_partitions": user_partitions,
                 "show_correctness": xblock.show_correctness,
                 "hide_from_toc": xblock.hide_from_toc,
+<<<<<<< HEAD
                 "enable_hide_from_toc_ui": settings.FEATURES.get("ENABLE_HIDE_FROM_TOC_UI", False),
                 "xblock_type": get_icon(xblock),
+=======
+                "enable_hide_from_toc": settings.FEATURES.get("ENABLE_HIDE_FROM_TOC", False),
+>>>>>>> bc9b53840f (refactor: hide new config option behind django settting flag)
             }
         )
 
