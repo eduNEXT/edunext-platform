@@ -16,7 +16,7 @@ from hashlib import sha1
 
 from django.apps import apps
 from django.db import IntegrityError, models, transaction
-from django.utils.encoding import python_2_unicode_compatible
+from django.utils.six import python_2_unicode_compatible
 from django.utils.timezone import now
 from lazy import lazy
 from model_utils.models import TimeStampedModel
