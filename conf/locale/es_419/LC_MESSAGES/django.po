@@ -10228,6 +10228,46 @@ msgstr ""
 "problema. Si el valor no es definido, se permitirán intentos infinitos."
 
 #: xmodule/capa_block.py
+msgid "Grading Strategy"
+msgstr "Estrategia de calificación"
+
+#: xmodule/capa_block.py
+msgid ""
+"Define the grading strategy for this problem. By default, it's the score of"
+" the last submission made by the student."
+msgstr ""
+"Defina la estrategia de calificación para este problema. Por defecto, es el "
+"puntaje del último envío realizado por el estudiante."
+
+#: xmodule/capa_block.py
+msgid "Last Score"
+msgstr "Último puntaje"
+
+#: xmodule/capa_block.py
+msgid "First Score"
+msgstr "Primer puntaje"
+
+#: xmodule/capa_block.py
+msgid "Highest Score"
+msgstr "Puntaje más alto"
+
+#: xmodule/capa_block.py
+msgid "Average Score"
+msgstr "Puntaje promedio"
+
+#: xmodule/capa_block.py
+msgid "List of correctness maps for each attempt"
+msgstr "Lista de mapas de corrección para cada intento"
+
+#: xmodule/capa_block.py
+msgid "List of student answers for each attempt"
+msgstr "Lista de respuestas de los estudiantes para cada intento"
+
+#: xmodule/capa_block.py
+msgid "List of scores for each attempt"
+msgstr "Lista de puntajes para cada intento"
+
+#: xmodule/capa_block.py
 msgid "Date that this problem is due by"
 msgstr "Fecha en que se debe entregar esta actividad"
 
@@ -15004,6 +15044,10 @@ msgid_plural "You have used {num_used} of {num_total} attempts"
 msgstr[0] "Ha realizado {num_used} de {num_total} intento"
 msgstr[1] "Ha realizado {num_used} de {num_total} intentos"
 msgstr[2] "Ha realizado {num_used} de {num_total} intentos"
+
+#: lms/templates/problem.html
+msgid "Grading strategy: {grading_strategy}"
+msgstr "Estrategia de calificación: {grading_strategy}"
 
 #: lms/templates/problem.html
 msgid ""
