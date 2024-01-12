@@ -2290,7 +2290,6 @@ describe('CourseOutlinePage', function() {
                         is_proctored_enabled: false,
                         default_time_limit_minutes: null,
                         is_onboarding_exam: false,
-                        enable_hide_from_toc_ui: false,
                     }
                 });
                 expect(requests[0].requestHeaders['X-HTTP-Method-Override']).toBe('PATCH');
