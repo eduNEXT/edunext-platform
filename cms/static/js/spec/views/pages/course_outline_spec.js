@@ -1189,8 +1189,7 @@ describe('CourseOutlinePage', function() {
                 is_time_limited: false,
                 is_proctored_enabled: false,
                 default_time_limit_minutes: null,
-                is_onboarding_exam: false,
-                enable_hide_from_toc_ui: false
+                is_onboarding_exam: false
             }
         };
 
@@ -1203,8 +1202,7 @@ describe('CourseOutlinePage', function() {
                 is_time_limited: false,
                 is_proctored_enabled: false,
                 default_time_limit_minutes: null,
-                is_onboarding_exam: false,
-                enable_hide_from_toc_ui: false
+                is_onboarding_exam: false
             }
         };
 
