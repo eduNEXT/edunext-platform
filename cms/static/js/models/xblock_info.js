@@ -180,7 +180,7 @@ define(
                /**
                 * True if the xblock is not visible to students only via links.
                 */
-               hide_from_toc: false,
+               hide_from_toc: null,
                /**
                 * True iff this xblock should display a "Contains staff only content" message.
                 */
