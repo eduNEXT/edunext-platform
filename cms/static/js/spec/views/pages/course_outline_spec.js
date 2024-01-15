@@ -1794,8 +1794,7 @@ describe('CourseOutlinePage', function() {
                         is_proctored_exam: true,
                         default_time_limit_minutes: 150,
                         supports_onboarding: true,
-                        is_onboarding_exam: true,
-                        enable_hide_from_toc_ui: false
+                        is_onboarding_exam: true
                     }, [
                     ])
                 ])
