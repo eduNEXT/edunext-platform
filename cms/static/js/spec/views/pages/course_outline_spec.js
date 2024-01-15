@@ -1413,7 +1413,6 @@ describe('CourseOutlinePage', function() {
                     hide_from_toc: null,
                 }
             });
-            console.log(requests);
             expect(requests[0].requestHeaders['X-HTTP-Method-Override']).toBe('PATCH');
             AjaxHelpers.respondWithJson(requests, {});
 
