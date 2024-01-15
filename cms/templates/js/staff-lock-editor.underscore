@@ -56,7 +56,9 @@
 <% if (!xblockInfo.isVertical()) { %>
   <label class="label">
       <input type="checkbox" id="hide_from_toc" name="hide_from_toc" class="input input-checkbox" />
-      <%- gettext('Hide in Course Outline, accessible via Link') %>
+      <p>
+        <%- gettext('Hide in Course Outline, accessible via Link') %>
+      </p>
       <p class="tip tip-inline">
         <%- gettext('It is intentionally hidden from standard navigation, ensuring that only individuals with the link can view its contents.') %>
       </p>
