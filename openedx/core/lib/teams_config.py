@@ -232,7 +232,6 @@ class TeamsetConfig:
             'description': self.description,
             'max_team_size': self.max_team_size,
             'type': self.teamset_type.value,
-            'dynamic_user_partition_id': self.dynamic_user_partition_id,
         }
         if CONTENT_GROUPS_FOR_TEAMS.is_enabled(self._data.get('course_id')):
             cleaned_data['dynamic_user_partition_id'] = self.dynamic_user_partition_id
