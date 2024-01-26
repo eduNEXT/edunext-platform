@@ -1041,6 +1041,15 @@ class CourseFields:  # lint-amnesty, pylint: disable=missing-class-docstring
         scope=Scope.settings
     )
 
+    course_type = String(
+        display_name=_("Course Type"),
+        help=_(
+            "Content type that helps the student to filter courses which are more interesting for them."
+        ),
+        default=None,
+        scope=Scope.settings,
+    )
+
 
 class CourseBlock(
     CourseFields,
