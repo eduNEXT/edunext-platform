@@ -40,6 +40,7 @@ from openedx.core.djangoapps.user_api.accounts.utils import is_secondary_email_f
         contactEmail = '${ static.get_contact_email_address() | n, js_escaped_string }',
         allowEmailChange = ${ bool(settings.FEATURES['ALLOW_EMAIL_ADDRESS_CHANGE']) | n, dump_js_escaped_json },
         socialPlatforms = ${ settings.SOCIAL_PLATFORMS | n, dump_js_escaped_json },
+        allowFullNameChange = ${ bool(settings.FEATURES.get('ALLOW_FULL_NAME_CHANGE')) | n, dump_js_escaped_json },
 
         syncLearnerProfileData = ${ bool(sync_learner_profile_data) | n, dump_js_escaped_json },
         enterpriseName = '${ enterprise_name | n, js_escaped_string }',
@@ -74,6 +75,7 @@ from openedx.core.djangoapps.user_api.accounts.utils import is_secondary_email_f
         displayAccountDeletion,
         isSecondaryEmailFeatureEnabled,
         ${ beta_language | n, dump_js_escaped_json },
+        allowFullNameChange,
     );
 </%static:require_module>
 
