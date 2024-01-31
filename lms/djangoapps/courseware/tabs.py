@@ -61,6 +61,7 @@ class SyllabusTab(EnrolledTab):
     """
     type = 'syllabus'
     title = gettext_noop('Syllabus')
+    priority = 80
     view_name = 'syllabus'
     allow_multiple = True
     is_default = False
@@ -78,6 +79,7 @@ class ProgressTab(EnrolledTab):
     """
     type = 'progress'
     title = gettext_noop('Progress')
+    priority = 20
     view_name = 'progress'
     is_hideable = True
     is_default = False
@@ -303,6 +305,7 @@ class DatesTab(EnrolledTab):
     type = "dates"
     # We don't have the user in this context, so we don't want to translate it at this level.
     title = gettext_noop("Dates")
+    priority = 30
     view_name = "dates"
 
     def __init__(self, tab_dict):
