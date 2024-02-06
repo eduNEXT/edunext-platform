@@ -144,10 +144,7 @@ def listen_for_course_publish(sender, course_key, **kwargs):  # pylint: disable=
 
     if key_supports_outlines(course_key):
         # Push the course outline to learning_sequences asynchronously.
-        update_outline_from_modulestore_task.apply_async(
-            args=[course_key_str],
-            countdown=settings.BLOCK_STRUCTURES_SETTINGS['COURSE_PUBLISH_TASK_DELAY'],
-        )
+        update_outline_from_modulestore_task.delay(course_key_str)
 
     if settings.COURSEGRAPH_DUMP_COURSE_ON_PUBLISH:
         # Push the course out to CourseGraph asynchronously.
