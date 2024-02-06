@@ -126,6 +126,7 @@
            */
           visual: false,
           plugins: "lists, link, image, codemirror",
+          contextmenu: "paste copy link",
           codemirror: {
             path: baseUrl + "js/vendor",
             disableFilesMerge: true,
