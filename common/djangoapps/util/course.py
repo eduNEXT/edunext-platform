@@ -54,8 +54,14 @@ def get_link_for_about_page(course):
     elif settings.FEATURES.get('ENABLE_MKTG_SITE') and getattr(course, 'marketing_url', None):
         course_about_url = course.marketing_url
     else:
+        about_base = configuration_helpers.get_value_for_org(
+            course.id.org,
+            'LMS_ROOT_URL',
+            settings.LMS_ROOT_URL
+        )
+
         course_about_url = '{about_base_url}/courses/{course_key}/about'.format(
-            about_base_url=configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL),
+            about_base_url=about_base,
             course_key=str(course.id),
         )
 
