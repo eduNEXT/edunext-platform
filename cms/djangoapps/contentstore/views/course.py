@@ -438,6 +438,7 @@ def _accessible_courses_summary_iter(request, org=None):
 
     return courses_summary, in_process_course_actions
 
+
 def get_query_params_if_present(request):
     """
     Returns the query params from request if present.
