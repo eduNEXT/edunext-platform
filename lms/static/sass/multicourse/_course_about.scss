@@ -7,6 +7,9 @@
       padding: $baseline;
     }
   }
+  .course-info__banner .course-title .main-cta {
+        display: none !important;
+        }
 
   .safari-wrapper {
     padding-bottom: 200px;
