@@ -17,6 +17,7 @@ from xmodule.course_block import CourseBlock  # lint-amnesty, pylint: disable=wr
 from xmodule.modulestore.django import modulestore  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.partitions.partitions import ENROLLMENT_TRACK_PARTITION_ID, Group  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.partitions.partitions_service import PartitionService  # lint-amnesty, pylint: disable=wrong-import-order
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 
 log = logging.getLogger(__name__)
 
@@ -191,3 +192,18 @@ def get_course_division_scheme(course_discussion_settings: CourseDiscussionSetti
     ):
         division_scheme = CourseDiscussionSettings.NONE
     return division_scheme
+
+
+def use_discussions_mfe(org) -> bool:
+    """
+    Checks with the org if the tenant enables the
+    Discussions MFE.
+    Returns:
+        True if the MFE setting is activated, by default
+        the MFE is deactivated
+    """
+    use_discussions_mfe = configuration_helpers.get_value_for_org(
+        org, "USE_DISCUSSIONS_MFE_FRONTEND", False
+    )
+
+    return bool(use_discussions_mfe)
