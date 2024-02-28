@@ -655,8 +655,9 @@ def user_profile(request, course_key, user_id):
                 'annotated_content_info': context['annotated_content_info'],
             })
         else:
+            course = get_course_with_access(request.user, 'load', course_key)
             discussions_mfe_enabled = ENABLE_DISCUSSIONS_MFE.is_enabled(course_key)
-            if discussions_mfe_enabled:
+            if discussions_mfe_enabled and use_discussions_mfe(course.org):
                 mfe_base_url = settings.DISCUSSIONS_MICROFRONTEND_URL
                 return redirect(f"{mfe_base_url}/{str(course_key)}/learners")
 
