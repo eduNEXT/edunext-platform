@@ -202,8 +202,8 @@ def use_discussions_mfe(org) -> bool:
         True if the MFE setting is activated, by default
         the MFE is deactivated
     """
-    use_discussions_mfe = configuration_helpers.get_value_for_org(
+    use_discussions = configuration_helpers.get_value_for_org(
         org, "USE_DISCUSSIONS_MFE_FRONTEND", False
     )
 
-    return bool(use_discussions_mfe)
+    return bool(use_discussions)

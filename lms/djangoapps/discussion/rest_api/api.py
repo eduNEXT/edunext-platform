@@ -1354,8 +1354,9 @@ def _handle_abuse_flagged_field(form_value, user, cc_content, request):
     if form_value:
         cc_content.flagAbuse(user, cc_content)
         track_discussion_reported_event(request, course, cc_content)
-        if ENABLE_DISCUSSIONS_MFE.is_enabled(course_key) and use_discussions_mfe(course.org) and reported_content_email_notification_enabled(
-                course_key):
+        if ENABLE_DISCUSSIONS_MFE.is_enabled(course_key) and use_discussions_mfe(
+                course.org) and reported_content_email_notification_enabled(
+                    course_key):
             if cc_content.type == 'thread':
                 thread_flagged.send(sender='flag_abuse_for_thread', user=user, post=cc_content)
             else:
