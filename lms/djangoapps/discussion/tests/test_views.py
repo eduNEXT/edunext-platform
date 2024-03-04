@@ -2287,7 +2287,7 @@ class ForumMFETestCase(ForumsEnableMixin, SharedModuleStoreTestCase):
         self.staff_user = AdminFactory.create()
         CourseEnrollmentFactory.create(user=self.user, course_id=self.course.id)
 
-    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", USE_DISCUSSIONS_MFE_FRONTEND="true")
+    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", USE_DISCUSSIONS_MFE_FRONTEND=True)
     def test_redirect_from_legacy_base_url_to_new_experience(self):
         """
         Verify that the legacy url is redirected to MFE homepage when
@@ -2302,7 +2302,7 @@ class ForumMFETestCase(ForumsEnableMixin, SharedModuleStoreTestCase):
             expected_url = f"{settings.DISCUSSIONS_MICROFRONTEND_URL}/{str(self.course.id)}"
             assert response.url == expected_url
 
-    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", USE_DISCUSSIONS_MFE_FRONTEND="true")
+    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", USE_DISCUSSIONS_MFE_FRONTEND=True)
     def test_redirect_from_legacy_profile_url_to_new_experience(self):
         """
         Verify that the requested user profile is redirected to MFE learners tab when
@@ -2317,7 +2317,7 @@ class ForumMFETestCase(ForumsEnableMixin, SharedModuleStoreTestCase):
             expected_url = f"{settings.DISCUSSIONS_MICROFRONTEND_URL}/{str(self.course.id)}/learners"
             assert response.url == expected_url
 
-    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", USE_DISCUSSIONS_MFE_FRONTEND="true")
+    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", USE_DISCUSSIONS_MFE_FRONTEND=True)
     def test_redirect_from_legacy_single_thread_to_new_experience(self):
         """
         Verify that a legacy single url is redirected to corresponding MFE thread url when the ENABLE_DISCUSSIONS_MFE
