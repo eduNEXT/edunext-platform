@@ -2280,8 +2280,8 @@ class ForumMFETestCase(ForumsEnableMixin, SharedModuleStoreTestCase):
     Tests that the MFE upgrade banner and MFE is shown in the correct situation with the correct UI
     """
 
-    features_with_enable_mfe_settings = settings.FEATURES.copy()
-    features_with_enable_mfe_settings['ENABLE_MFE_FOR_TESTING'] = True
+    FEATURES_WITH_DISCUSSION_MFE_ENABLED = settings.FEATURES.copy()
+    FEATURES_WITH_DISCUSSION_MFE_ENABLED['ENABLE_MFE_FOR_TESTING'] = True
 
     def setUp(self):
         super().setUp()
@@ -2290,7 +2290,7 @@ class ForumMFETestCase(ForumsEnableMixin, SharedModuleStoreTestCase):
         self.staff_user = AdminFactory.create()
         CourseEnrollmentFactory.create(user=self.user, course_id=self.course.id)
 
-    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", FEATURES=features_with_enable_mfe_settings)
+    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", FEATURES=FEATURES_WITH_DISCUSSION_MFE_ENABLED)
     def test_redirect_from_legacy_base_url_to_new_experience(self):
         """
         Verify that the legacy url is redirected to MFE homepage when
@@ -2305,7 +2305,7 @@ class ForumMFETestCase(ForumsEnableMixin, SharedModuleStoreTestCase):
             expected_url = f"{settings.DISCUSSIONS_MICROFRONTEND_URL}/{str(self.course.id)}"
             assert response.url == expected_url
 
-    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", FEATURES=features_with_enable_mfe_settings)
+    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", FEATURES=FEATURES_WITH_DISCUSSION_MFE_ENABLED)
     def test_redirect_from_legacy_profile_url_to_new_experience(self):
         """
         Verify that the requested user profile is redirected to MFE learners tab when
@@ -2320,7 +2320,7 @@ class ForumMFETestCase(ForumsEnableMixin, SharedModuleStoreTestCase):
             expected_url = f"{settings.DISCUSSIONS_MICROFRONTEND_URL}/{str(self.course.id)}/learners"
             assert response.url == expected_url
 
-    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", FEATURES=features_with_enable_mfe_settings)
+    @override_settings(DISCUSSIONS_MICROFRONTEND_URL="http://test.url", FEATURES=FEATURES_WITH_DISCUSSION_MFE_ENABLED)
     def test_redirect_from_legacy_single_thread_to_new_experience(self):
         """
         Verify that a legacy single url is redirected to corresponding MFE thread url when the ENABLE_DISCUSSIONS_MFE
