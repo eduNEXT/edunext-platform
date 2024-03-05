@@ -2281,7 +2281,7 @@ class ForumMFETestCase(ForumsEnableMixin, SharedModuleStoreTestCase):
     """
 
     features_with_enable_mfe_settings = settings.FEATURES.copy()
-    features_with_enable_mfe_settings['ENABLE_MFE_FOR_TESTING']=True
+    features_with_enable_mfe_settings['ENABLE_MFE_FOR_TESTING'] = True
 
     def setUp(self):
         super().setUp()

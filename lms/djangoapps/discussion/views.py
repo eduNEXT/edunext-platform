@@ -334,7 +334,7 @@ def redirect_thread_url_to_new_mfe(request, course_id, thread_id):
     course_key = CourseKey.from_string(course_id)
     discussions_mfe_enabled = ENABLE_DISCUSSIONS_MFE.is_enabled(course_key)
     redirect_url = None
-    
+
     if discussions_mfe_enabled and use_discussions_mfe(course_key.org):
         mfe_base_url = settings.DISCUSSIONS_MICROFRONTEND_URL
         if thread_id:
