@@ -208,7 +208,7 @@ def use_discussions_mfe(org) -> bool:
     ).is_enabled()
 
     use_discussions = configuration_helpers.get_value_for_org(
-        org, "USE_DISCUSSIONS_MFE_FRONTEND", ENABLE_MFE_FOR_TESTING or False
+        org, "USE_DISCUSSIONS_MFE", ENABLE_MFE_FOR_TESTING or False
     )
 
     return bool(use_discussions)
