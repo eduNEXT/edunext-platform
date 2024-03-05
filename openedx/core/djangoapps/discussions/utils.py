@@ -18,6 +18,7 @@ from xmodule.modulestore.django import modulestore  # lint-amnesty, pylint: disa
 from xmodule.partitions.partitions import ENROLLMENT_TRACK_PARTITION_ID, Group  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.partitions.partitions_service import PartitionService  # lint-amnesty, pylint: disable=wrong-import-order
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from edx_toggles.toggles import SettingDictToggle
 
 log = logging.getLogger(__name__)
 
@@ -202,8 +203,12 @@ def use_discussions_mfe(org) -> bool:
         True if the MFE setting is activated, by default
         the MFE is deactivated
     """
+    ENABLE_MFE_FOR_TESTING = SettingDictToggle(
+        "FEATURES", "ENABLE_MFE_FOR_TESTING", default=False, module_name=__name__
+    ).is_enabled()
+
     use_discussions = configuration_helpers.get_value_for_org(
-        org, "USE_DISCUSSIONS_MFE_FRONTEND", False
+        org, "USE_DISCUSSIONS_MFE_FRONTEND", ENABLE_MFE_FOR_TESTING or False
     )
 
     return bool(use_discussions)

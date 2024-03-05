@@ -272,10 +272,9 @@ def redirect_forum_url_to_new_mfe(request, course_id):
     """
     course_key = CourseKey.from_string(course_id)
     discussions_mfe_enabled = ENABLE_DISCUSSIONS_MFE.is_enabled(course_key)
-    course = get_course_with_access(request.user, 'load', course_key)
 
     redirect_url = None
-    if discussions_mfe_enabled and use_discussions_mfe(course.org):
+    if discussions_mfe_enabled and use_discussions_mfe(course_key.org):
         mfe_base_url = settings.DISCUSSIONS_MICROFRONTEND_URL
         redirect_url = f"{mfe_base_url}/{str(course_key)}"
     return redirect_url
@@ -335,8 +334,8 @@ def redirect_thread_url_to_new_mfe(request, course_id, thread_id):
     course_key = CourseKey.from_string(course_id)
     discussions_mfe_enabled = ENABLE_DISCUSSIONS_MFE.is_enabled(course_key)
     redirect_url = None
-    course = get_course_with_access(request.user, 'load', course_key)
-    if discussions_mfe_enabled and use_discussions_mfe(course.org):
+    
+    if discussions_mfe_enabled and use_discussions_mfe(course_key.org):
         mfe_base_url = settings.DISCUSSIONS_MICROFRONTEND_URL
         if thread_id:
             redirect_url = f"{mfe_base_url}/{str(course_key)}/posts/{thread_id}"
@@ -655,9 +654,8 @@ def user_profile(request, course_key, user_id):
                 'annotated_content_info': context['annotated_content_info'],
             })
         else:
-            course = get_course_with_access(request.user, 'load', course_key)
             discussions_mfe_enabled = ENABLE_DISCUSSIONS_MFE.is_enabled(course_key)
-            if discussions_mfe_enabled and use_discussions_mfe(course.org):
+            if discussions_mfe_enabled and use_discussions_mfe(course_key.org):
                 mfe_base_url = settings.DISCUSSIONS_MICROFRONTEND_URL
                 return redirect(f"{mfe_base_url}/{str(course_key)}/learners")
 
