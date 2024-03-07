@@ -643,7 +643,10 @@ class TestCourseOutline(CourseTestCase):
             expected_block_types
         )
 
-    @override_settings(FEATURES={'ENABLE_EXAM_SETTINGS_HTML_VIEW': True})
+    @override_settings(FEATURES={
+        'ENABLE_EXAM_SETTINGS_HTML_VIEW': True,
+        'ENABLE_MFE_FOR_TESTING': True
+    })
     @patch('cms.djangoapps.models.settings.course_metadata.CourseMetadata.validate_proctoring_settings')
     def test_proctoring_link_is_visible(self, mock_validate_proctoring_settings):
         """

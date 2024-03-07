@@ -19,6 +19,7 @@ FEATURES_WITH_CERTS_ENABLED['CERTIFICATES_HTML_VIEW'] = True
 FEATURES_WITH_EXAM_SETTINGS_ENABLED = FEATURES_WITH_CERTS_ENABLED.copy()
 FEATURES_WITH_EXAM_SETTINGS_ENABLED['ENABLE_EXAM_SETTINGS_HTML_VIEW'] = True
 FEATURES_WITH_EXAM_SETTINGS_ENABLED['ENABLE_PROCTORED_EXAMS'] = True
+FEATURES_WITH_EXAM_SETTINGS_ENABLED['ENABLE_MFE_FOR_TESTING'] = True
 
 FEATURES_WITH_EXAM_SETTINGS_DISABLED = FEATURES_WITH_CERTS_ENABLED.copy()
 FEATURES_WITH_EXAM_SETTINGS_DISABLED['ENABLE_EXAM_SETTINGS_HTML_VIEW'] = False
@@ -179,7 +180,10 @@ class TestExamSettingsView(CourseTestCase, UrlResetMixin):
         alert_nodes = parsed_html.find_class('exam-settings-alert')
         assert len(alert_nodes) == 0
 
-    @override_settings(FEATURES={'ENABLE_EXAM_SETTINGS_HTML_VIEW': True})
+    @override_settings(FEATURES={
+        'ENABLE_EXAM_SETTINGS_HTML_VIEW': True,
+        'ENABLE_MFE_FOR_TESTING': True
+    })
     @patch('cms.djangoapps.models.settings.course_metadata.CourseMetadata.validate_proctoring_settings')
     def test_proctoring_link_is_visible(self, mock_validate_proctoring_settings):
 
