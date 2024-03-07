@@ -839,7 +839,7 @@ class DiscussionLinkTestCase(TabTestCase):
         else:
             expected_link = reverse("forum_form_discussion", args=[str(self.course.id)])
 
-        with self.settings(FEATURES={'ENABLE_DISCUSSION_SERVICE': True}):
+        with self.settings(FEATURES={'ENABLE_DISCUSSION_SERVICE': True, 'ENABLE_MFE_FOR_TESTING': True}):
             with override_waffle_flag(ENABLE_DISCUSSIONS_MFE, toggle_enabled):
                 self.check_discussion(
                     tab_list=self.tabs_with_discussion,
