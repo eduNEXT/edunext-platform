@@ -454,7 +454,8 @@ def get_query_params_if_present(request):
         archived_only (str): if not None, this value will limit the courses returned to archived courses.
             The default value is None.
     """
-    if not request.GET:
+    allowed_query_params = ['search', 'order', 'active_only', 'archived_only']
+    if not any(param in request.GET for param in allowed_query_params):
         return None, None, None, None
     search_query = request.GET.get('search')
     order = request.GET.get('order')
