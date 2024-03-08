@@ -106,16 +106,18 @@ class HomePageCoursesViewTest(CourseTestCase):
 
         expected_response = {
             "archived_courses": [],
-            "courses": [{
-                "course_key": course_id,
-                "display_name": self.course.display_name,
-                "lms_link": f'//{settings.LMS_BASE}/courses/{course_id}/jump_to/{self.course.location}',
-                "number": self.course.number,
-                "org": self.course.org,
-                "rerun_link": f'/course_rerun/{course_id}',
-                "run": self.course.id.run,
-                "url": f'/course/{course_id}',
-            }],
+            "courses": [
+                OrderedDict([
+                    ("course_key", course_id),
+                    ("display_name", self.course.display_name),
+                    ("lms_link", f'//{settings.LMS_BASE}/courses/{course_id}/jump_to/{self.course.location}'),
+                    ("number", self.course.number),
+                    ("org", self.course.org),
+                    ("rerun_link", f'/course_rerun/{course_id}'),
+                    ("run", self.course.id.run),
+                    ("url", f'/course/{course_id}'),
+                ]),
+            ],
             "in_process_course_actions": [],
         }
 
