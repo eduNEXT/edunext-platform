@@ -47,7 +47,7 @@ class TestSurveyReportCommands(ModuleStoreTestCase):
         """
         end_time = datetime.now() + timedelta(days=365)
         end_time_formatted = end_time.strftime('%Y-%m-%d')
-        course_overview = CourseOverviewFactory.create(id=self.first_course.id, start="2019-01-01", 
+        course_overview = CourseOverviewFactory.create(id=self.first_course.id, start="2019-01-01",
                                                        end=end_time_formatted)
         CourseEnrollmentFactory.create(user=self.user, course_id=course_overview.id)
         CourseEnrollmentFactory.create(user=self.user1, course_id=course_overview.id)
