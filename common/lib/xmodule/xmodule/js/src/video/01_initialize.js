@@ -169,7 +169,7 @@ function(VideoPlayer, i18n, moment, _) {
                     _oldOnYouTubeIframeAPIReady = window.onYouTubeIframeAPIReady || undefined;
 
                     window.onYouTubeIframeAPIReady = function() {
-                        window.onYouTubeIframeAPIReady.resolve();
+                         _youtubeApiDeferred.resolve();
                     };
 
                     window.onYouTubeIframeAPIReady.resolve = _youtubeApiDeferred.resolve;
