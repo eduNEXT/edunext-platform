@@ -45,10 +45,7 @@ class TestSurveyReportCommands(ModuleStoreTestCase):
         """
         Test that get_unique_courses_offered returns the correct number of courses.
         """
-        end_time = datetime.now() + timedelta(days=365)
-        end_time_formatted = end_time.strftime('%Y-%m-%d')
-        course_overview = CourseOverviewFactory.create(id=self.first_course.id, start="2019-01-01",
-                                                       end=end_time_formatted)
+        course_overview = CourseOverviewFactory.create(id=self.first_course.id, start="2019-01-01", end="9999-01-01")
         CourseEnrollmentFactory.create(user=self.user, course_id=course_overview.id)
         CourseEnrollmentFactory.create(user=self.user1, course_id=course_overview.id)
         CourseEnrollmentFactory.create(user=self.user2, course_id=course_overview.id)
