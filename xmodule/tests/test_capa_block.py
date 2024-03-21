@@ -17,6 +17,7 @@ import ddt
 import requests
 import webob
 from codejail.safe_exec import SafeExecException
+from django.conf import settings
 from django.test import override_settings
 from django.utils.encoding import smart_str
 from lms.djangoapps.courseware.user_state_client import XBlockUserState
@@ -38,6 +39,10 @@ from xmodule.tests import DATA_DIR
 
 from ..capa_block import RANDOMIZATION, SHOWANSWER
 from . import get_test_system
+
+
+FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS = settings.FEATURES.copy()
+FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS['ENABLE_GRADING_METHOD_IN_PROBLEMS'] = True
 
 
 class CapaFactory:
@@ -723,6 +728,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         # and that this was considered attempt number 2 for grading purposes
         assert block.lcp.context['attempt'] == 2
 
+    @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
     @patch('xmodule.capa.correctmap.CorrectMap.is_correct')
     @patch('xmodule.capa_block.ProblemBlock.get_problem_html')
     def test_submit_problem_correct_last_score(self, mock_html: Mock, mock_is_correct: Mock):
@@ -750,6 +756,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         assert block.lcp.context['attempt'] == 2
         assert block.score == Score(raw_earned=0, raw_possible=1)
 
+    @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
     @patch('xmodule.capa.correctmap.CorrectMap.is_correct')
     @patch('xmodule.capa_block.ProblemBlock.get_problem_html')
     def test_submit_problem_correct_highest_score(self, mock_html: Mock, mock_is_correct: Mock):
@@ -776,6 +783,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         assert block.lcp.context['attempt'] == 2
         assert block.score == Score(raw_earned=1, raw_possible=1)
 
+    @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
     @patch('xmodule.capa.correctmap.CorrectMap.is_correct')
     @patch('xmodule.capa_block.ProblemBlock.get_problem_html')
     def test_submit_problem_correct_first_score(self, mock_html: Mock, mock_is_correct: Mock):
@@ -802,6 +810,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         assert block.lcp.context['attempt'] == 2
         assert block.score == Score(raw_earned=0, raw_possible=1)
 
+    @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
     @patch('xmodule.capa.correctmap.CorrectMap.is_correct')
     @patch('xmodule.capa_block.ProblemBlock.get_problem_html')
     def test_submit_problem_correct_average_score(self, mock_html: Mock, mock_is_correct: Mock):
@@ -1321,6 +1330,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         # and that this is treated as the first attempt for grading purposes
         assert block.lcp.context['attempt'] == 1
 
+    @override_settings(FEATURES={"ENABLE_GRADING_METHOD_IN_PROBLEMS": True})
     def test_rescore_problem_update_grading_method(self):
         block = CapaFactory.create(attempts=0, max_attempts=3)
 
@@ -1391,14 +1401,14 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
             self.assertEqual(result, [])
             block.lcp.calculate_score.assert_not_called()
 
-    def test_update_correctness_updates_attempt(self):
+    def test_update_correctness_list_updates_attempt(self):
         block = CapaFactory.create(correct=True, attempts=0)
 
-        block.update_correctness()
+        block.update_correctness_list()
 
         self.assertEqual(block.lcp.context['attempt'], 1)
 
-    def test_update_correctness_with_history(self):
+    def test_update_correctness_list_with_history(self):
         block = CapaFactory.create(correct=True, attempts=2)
         correct_map = CorrectMap(answer_id='1_2_1', correctness="correct", npoints=1)
         student_answers = {'1_2_1': 'abcd'}
@@ -1406,22 +1416,23 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         block.student_answers_history = [student_answers]
 
         with patch.object(block.lcp, 'get_grade_from_answers', return_value=correct_map):
-            block.update_correctness()
+            block.update_correctness_list()
             self.assertEqual(block.lcp.context['attempt'], 2)
             block.lcp.get_grade_from_answers.assert_called_once_with(student_answers, correct_map)
             self.assertEqual(block.lcp.correct_map_history, [correct_map])
             self.assertEqual(block.lcp.correct_map.get_dict(), correct_map.get_dict())
 
-    def test_update_correctness_without_history(self):
+    def test_update_correctness_list_without_history(self):
         block = CapaFactory.create(correct=True, attempts=1)
         block.correct_map_history = []
         block.student_answers_history = []
 
         with patch.object(block.lcp, 'get_grade_from_answers', return_value=Mock()):
-            block.update_correctness()
+            block.update_correctness_list()
             self.assertEqual(block.lcp.context['attempt'], 1)
             block.lcp.get_grade_from_answers.assert_not_called()
 
+    @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
     def test_get_rescore(self):
         block = CapaFactory.create(done=True, attempts=0, max_attempts=2)
         get_request_dict = {CapaFactory.input_key(): '3.21'}
@@ -1515,7 +1526,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         block.submit_problem(get_request_dict)
 
         # Simulate answering a problem that raises the exception
-        with patch('xmodule.capa.capa_problem.LoncapaProblem.get_grade_from_answers') as mock_rescore:
+        with patch('xmodule.capa.capa_problem.LoncapaProblem.get_grade_from_current_answers') as mock_rescore:
             mock_rescore.side_effect = exception_class('test error \u03a9')
             with pytest.raises(exception_class):
                 block.rescore(only_if_higher=False)
