@@ -729,15 +729,15 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         # and that this was considered attempt number 2 for grading purposes
         assert block.lcp.context['attempt'] == 2
 
-    @patch('xmodule.capa_block.ProblemBlock.set_score_with_grading_method')
+    @patch('xmodule.capa_block.ProblemBlock.get_score_with_grading_method')
     @patch('xmodule.capa.correctmap.CorrectMap.is_correct')
     @patch('xmodule.capa_block.ProblemBlock.get_problem_html')
     def test_submit_problem_with_grading_method_disable(
-        self, mock_html: Mock, mock_is_correct: Mock, mock_set_score: Mock
+        self, mock_html: Mock, mock_is_correct: Mock, mock_get_score: Mock
     ):
         """
         Test that the grading method is disabled by default. Then, the
-        `set_score_with_grading_method` method should not be called, and
+        `get_score_with_grading_method` method should not be called, and
         always the last attempt as the final score.
         """
         block = CapaFactory.create(attempts=0, max_attempts=3)
@@ -752,7 +752,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         assert block.attempts == 1
         assert block.lcp.context['attempt'] == 1
         assert block.score == Score(raw_earned=1, raw_possible=1)
-        mock_set_score.assert_not_called()
+        mock_get_score.assert_not_called()
 
         # Second Attempt
         mock_is_correct.return_value = False
@@ -763,7 +763,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         assert block.attempts == 2
         assert block.lcp.context['attempt'] == 2
         assert block.score == Score(raw_earned=0, raw_possible=1)
-        mock_set_score.assert_not_called()
+        mock_get_score.assert_not_called()
 
         # Third Attempt
         mock_is_correct.return_value = True
@@ -774,7 +774,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         assert block.attempts == 3
         assert block.lcp.context['attempt'] == 3
         assert block.score == Score(raw_earned=1, raw_possible=1)
-        mock_set_score.assert_not_called()
+        mock_get_score.assert_not_called()
 
     @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
     @patch('xmodule.capa.correctmap.CorrectMap.is_correct')
@@ -784,22 +784,22 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
     ):
         """
         Test that the grading method is enabled when submit a problem.
-        Then, the `set_score_with_grading_method` method should be called.
+        Then, the `get_score_with_grading_method` method should be called.
         """
         block = CapaFactory.create(attempts=0)
         mock_html.return_value = "Test HTML"
         mock_is_correct.return_value = True
 
         with patch.object(
-            ProblemBlock, 'set_score_with_grading_method', wraps=block.set_score_with_grading_method
-        ) as mock_set_score:
+            ProblemBlock, 'get_score_with_grading_method', wraps=block.get_score_with_grading_method
+        ) as mock_get_score:
             get_request_dict = {CapaFactory.input_key(): '3.14'}
             block.submit_problem(get_request_dict)
 
             assert block.attempts == 1
             assert block.lcp.context['attempt'] == 1
             assert block.score == Score(raw_earned=1, raw_possible=1)
-            mock_set_score.assert_called()
+            mock_get_score.assert_called()
 
     @patch('xmodule.capa.correctmap.CorrectMap.is_correct')
     @patch('xmodule.capa_block.ProblemBlock.get_problem_html')
@@ -1653,29 +1653,34 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
             new_callable=mock.PropertyMock,
             return_value=True
         ):
-            # Change grading method to 'first_score'
-            block.grading_method = 'first_score'
-            block.rescore(only_if_higher=False)
+            with patch(
+                'xmodule.capa.capa_problem.LoncapaProblem.enable_grading_method',
+                new_callable=mock.PropertyMock,
+                return_value=True
+            ):
+                # Change grading method to 'first_score'
+                block.grading_method = 'first_score'
+                block.rescore(only_if_higher=False)
 
-            mock_publish_grade.assert_called_with(
-                score=Score(raw_earned=0, raw_possible=1), only_if_higher=False
-            )
+                mock_publish_grade.assert_called_with(
+                    score=Score(raw_earned=0, raw_possible=1), only_if_higher=False
+                )
 
-            # Change grading method to 'highest_score'
-            block.grading_method = 'highest_score'
-            block.rescore(only_if_higher=False)
+                # Change grading method to 'highest_score'
+                block.grading_method = 'highest_score'
+                block.rescore(only_if_higher=False)
 
-            mock_publish_grade.assert_called_with(
-                score=Score(raw_earned=1, raw_possible=1), only_if_higher=False
-            )
+                mock_publish_grade.assert_called_with(
+                    score=Score(raw_earned=1, raw_possible=1), only_if_higher=False
+                )
 
-            # Change grading method to 'average_score'
-            block.grading_method = 'average_score'
-            block.rescore(only_if_higher=False)
+                # Change grading method to 'average_score'
+                block.grading_method = 'average_score'
+                block.rescore(only_if_higher=False)
 
-            mock_publish_grade.assert_called_with(
-                score=Score(raw_earned=0.33, raw_possible=1), only_if_higher=False
-            )
+                mock_publish_grade.assert_called_with(
+                    score=Score(raw_earned=0.33, raw_possible=1), only_if_higher=False
+                )
 
     @patch('xmodule.capa_block.ProblemBlock.publish_grade')
     def test_rescore_problem_grading_method_enable_to_disable(self, mock_publish_grade: Mock):
@@ -1702,33 +1707,38 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
             new_callable=mock.PropertyMock,
             return_value=True
         ):
-            # Grading method is 'last_score'
-            assert block.grading_method == 'last_score'
-            assert block.score == Score(raw_earned=1, raw_possible=1)
+            with patch(
+                'xmodule.capa.capa_problem.LoncapaProblem.enable_grading_method',
+                new_callable=mock.PropertyMock,
+                return_value=True
+            ):
+                # Grading method is 'last_score'
+                assert block.grading_method == 'last_score'
+                assert block.score == Score(raw_earned=1, raw_possible=1)
 
-            # Change grading method to 'first_score'
-            block.grading_method = 'first_score'
-            block.rescore(only_if_higher=False)
+                # Change grading method to 'first_score'
+                block.grading_method = 'first_score'
+                block.rescore(only_if_higher=False)
 
-            mock_publish_grade.assert_called_with(
-                score=Score(raw_earned=0, raw_possible=1), only_if_higher=False
-            )
+                mock_publish_grade.assert_called_with(
+                    score=Score(raw_earned=0, raw_possible=1), only_if_higher=False
+                )
 
-            # Change grading method to 'highest_score'
-            block.grading_method = 'highest_score'
-            block.rescore(only_if_higher=False)
+                # Change grading method to 'highest_score'
+                block.grading_method = 'highest_score'
+                block.rescore(only_if_higher=False)
 
-            mock_publish_grade.assert_called_with(
-                score=Score(raw_earned=1, raw_possible=1), only_if_higher=False
-            )
+                mock_publish_grade.assert_called_with(
+                    score=Score(raw_earned=1, raw_possible=1), only_if_higher=False
+                )
 
-            # Change grading method to 'average_score'
-            block.grading_method = 'average_score'
-            block.rescore(only_if_higher=False)
+                # Change grading method to 'average_score'
+                block.grading_method = 'average_score'
+                block.rescore(only_if_higher=False)
 
-            mock_publish_grade.assert_called_with(
-                score=Score(raw_earned=0.33, raw_possible=1), only_if_higher=False
-            )
+                mock_publish_grade.assert_called_with(
+                    score=Score(raw_earned=0.33, raw_possible=1), only_if_higher=False
+                )
 
         # Disabled grading method
         with patch(
@@ -1853,10 +1863,10 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         block.correct_map_history = [correct_map]
         block.student_answers_history = [student_answers]
 
-        with patch.object(block.lcp, 'get_grade_from_answers', return_value=correct_map):
+        with patch.object(block.lcp, 'get_grade_from_current_answers', return_value=correct_map):
             block.update_correctness_list()
             self.assertEqual(block.lcp.context['attempt'], 2)
-            block.lcp.get_grade_from_answers.assert_called_once_with(student_answers, correct_map)
+            block.lcp.get_grade_from_current_answers.assert_called_once_with(student_answers, correct_map)
             self.assertEqual(block.lcp.correct_map_history, [correct_map])
             self.assertEqual(block.lcp.correct_map.get_dict(), correct_map.get_dict())
 
@@ -1865,16 +1875,16 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
         Test that the `update_correctness_list` method does not
         update the correct map history because the history is empty.
 
-        The `get_grade_from_answers` method should not be called.
+        The `get_grade_from_current_answers` method should not be called.
         """
         block = CapaFactory.create(correct=True, attempts=1)
         block.correct_map_history = []
         block.student_answers_history = []
 
-        with patch.object(block.lcp, 'get_grade_from_answers', return_value=Mock()):
+        with patch.object(block.lcp, 'get_grade_from_current_answers', return_value=Mock()):
             block.update_correctness_list()
             self.assertEqual(block.lcp.context['attempt'], 1)
-            block.lcp.get_grade_from_answers.assert_not_called()
+            block.lcp.get_grade_from_current_answers.assert_not_called()
 
     @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
     def test_get_rescore_with_grading_method(self):
@@ -1891,41 +1901,43 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         self.assertEqual(result, Score(raw_earned=1, raw_possible=1))
 
-    def test_set_score_with_grading_method(self):
+    def test_get_score_with_grading_method(self):
         """
-        Test that the `set_score_with_grading_method` method
-        sets the score based on the grading method.
+        Test that the `get_score_with_grading_method` method
+        returns the correct score based on the grading method.
         """
         block = CapaFactory.create(done=True, attempts=0, max_attempts=2)
         get_request_dict = {CapaFactory.input_key(): '3.21'}
         block.submit_problem(get_request_dict)
         get_request_dict = {CapaFactory.input_key(): '3.14'}
         block.submit_problem(get_request_dict)
+        expected_score = Score(raw_earned=1, raw_possible=1)
 
-        block.set_score_with_grading_method(block.score_from_lcp(block.lcp))
+        score = block.get_score_with_grading_method(block.score_from_lcp(block.lcp))
 
-        self.assertEqual(block.score, Score(raw_earned=1, raw_possible=1))
+        self.assertEqual(score, expected_score)
+        self.assertEqual(block.score, expected_score)
 
     @patch('xmodule.capa_block.ProblemBlock.score_from_lcp')
-    def test_set_score_with_grading_method_updates_score(self, mock_score_from_lcp: Mock):
+    def test_get_score_with_grading_method_updates_score(self, mock_score_from_lcp: Mock):
         """
-        Test that the `set_score_with_grading_method` method updates the score.
+        Test that the `get_score_with_grading_method` method returns the correct score.
 
-        Check that the score is updated with the current score and the score
-        history is updated with the current score.
+        Check that the score is returned with the correct score and the score
+        history is updated including that score.
         """
         block = CapaFactory.create(attempts=1)
         current_score = Score(raw_earned=1, raw_possible=1)
         mock_score_from_lcp.return_value = current_score
 
-        block.set_score_with_grading_method(current_score)
+        score = block.get_score_with_grading_method(current_score)
 
-        self.assertEqual(block.score, current_score)
+        self.assertEqual(score, current_score)
         self.assertEqual(block.score_history, [current_score])
 
-    def test_set_score_with_grading_method_calls_grading_method_handler(self):
+    def test_get_score_with_grading_method_calls_grading_method_handler(self):
         """
-        Test that the `set_score_with_grading_method` method calls
+        Test that the `get_score_with_grading_method` method calls
         the grading method handler with the appropriate arguments.
         """
         block = CapaFactory.create(attempts=1)
@@ -1933,28 +1945,13 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         with patch('xmodule.capa_block.GradingMethodHandler') as mock_handler:
             mock_handler.return_value.get_score.return_value = current_score
-            block.set_score_with_grading_method(current_score)
+            block.get_score_with_grading_method(current_score)
             mock_handler.assert_called_once_with(
                 Score(raw_earned=0, raw_possible=1),
                 "last_score",
                 block.score_history,
                 current_score.raw_possible,
             )
-
-    def test_set_score_with_grading_method_sets_calculated_score(self):
-        """
-        Test that the `set_score_with_grading_method` method sets the calculated score.
-
-        The `set_score` method should be called with the calculated score.
-        """
-        block = CapaFactory.create(attempts=1)
-        current_score = Score(raw_earned=1, raw_possible=1)
-
-        with patch('xmodule.capa_block.GradingMethodHandler') as mock_handler:
-            with patch.object(block, 'set_score') as mock_set_score:
-                mock_handler.return_value.get_score.return_value = current_score
-                block.set_score_with_grading_method(current_score)
-                mock_set_score.assert_called_once_with(current_score)
 
     def capa_factory_for_problem_xml(self, xml):  # lint-amnesty, pylint: disable=missing-function-docstring
         class CustomCapaFactory(CapaFactory):

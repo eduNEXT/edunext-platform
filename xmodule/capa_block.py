@@ -1823,9 +1823,8 @@ class ProblemBlock(
             current_score = self.score_from_lcp(self.lcp)
             self.score_history.append(current_score)
             if self.enable_grading_method:
-                self.set_score_with_grading_method(current_score)
-            else:
-                self.set_score(current_score)
+                current_score = self.get_score_with_grading_method(current_score)
+            self.set_score(current_score)
             self.set_last_submission_time()
 
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:
@@ -1899,9 +1898,9 @@ class ProblemBlock(
         }
     # pylint: enable=too-many-statements
 
-    def set_score_with_grading_method(self, current_score: Score) -> None:
+    def get_score_with_grading_method(self, current_score: Score) -> Score:
         """
-        Calculate and set the current score based on the grading method.
+        Calculate and return the current score based on the grading method.
 
         Args:
             current_score (Score): The current score of the LON-CAPA problem.
@@ -1909,8 +1908,9 @@ class ProblemBlock(
         In this method:
             - The current score is obtained from the LON-CAPA problem.
             - The score history is updated adding the current score.
-            - The calculated score is obtained based on the grading method.
-            - The calculated score is set as the current score.
+
+        Returns:
+            Score: The score based on the grading method.
         """
         grading_method_handler = GradingMethodHandler(
             current_score,
@@ -1918,8 +1918,7 @@ class ProblemBlock(
             self.score_history,
             self.max_score(),
         )
-        calculated_score = grading_method_handler.get_score()
-        self.set_score(calculated_score)
+        return grading_method_handler.get_score()
 
     def publish_unmasked(self, title, event_info):
         """
@@ -2238,11 +2237,7 @@ class ProblemBlock(
         event_info['orig_score'] = orig_score.raw_earned
         event_info['orig_total'] = orig_score.raw_possible
         try:
-            if self.enable_grading_method:
-                calculated_score = self.get_rescore_with_grading_method()
-            else:
-                self.update_correctness()
-                calculated_score = self.calculate_score()
+            calculated_score = self.calculate_score()
         except (StudentInputError, ResponseError, LoncapaProblemError) as inst:  # lint-amnesty, pylint: disable=unused-variable
             log.warning("Input error in capa_block:problem_rescore", exc_info=True)
             event_info['failure'] = 'input_error'
@@ -2337,7 +2332,7 @@ class ProblemBlock(
         self.lcp.context['attempt'] = max(self.attempts, 1)
         new_correct_map_list = []
         for student_answers, correct_map in zip(self.student_answers_history, self.correct_map_history):
-            new_correct_map = self.lcp.get_grade_from_answers(student_answers, correct_map)
+            new_correct_map = self.lcp.get_grade_from_current_answers(student_answers, correct_map)
             new_correct_map_list.append(new_correct_map)
         self.lcp.correct_map_history = new_correct_map_list
         if new_correct_map_list:
@@ -2346,7 +2341,12 @@ class ProblemBlock(
     def calculate_score(self):
         """
         Returns the score calculated from the current problem state.
+
+        If the grading method is enabled, the score is calculated based on the grading method.
         """
+        if self.enable_grading_method:
+            return self.get_rescore_with_grading_method()
+        self.update_correctness()
         new_score = self.lcp.calculate_score()
         return Score(raw_earned=new_score['score'], raw_possible=new_score['total'])
 

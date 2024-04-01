@@ -239,6 +239,15 @@ class LoncapaProblem(object):
             if extract_tree:
                 self.extracted_tree = self._extract_html(self.tree)
 
+    @property
+    def enable_grading_method(self) -> bool:
+        """
+        Returns whether the grading method feature is enabled. If the
+        feature is not enabled, the grading method field will not be shown in
+        Studio settings and the default grading method will be used.
+        """
+        return settings.FEATURES.get('ENABLE_GRADING_METHOD_IN_PROBLEMS', False)
+
     def make_xml_compatible(self, tree):
         """
         Adjust tree xml in-place for compatibility before creating
@@ -442,10 +451,7 @@ class LoncapaProblem(object):
 
         # if answers include File objects, convert them to filenames.
         self.student_answers = convert_files_to_filenames(answers)
-        if settings.FEATURES.get("ENABLE_GRADING_METHOD_IN_PROBLEMS", False):
-            new_cmap = self.get_grade_from_answers(answers)
-        else:
-            new_cmap = self.get_grade_from_current_answers(answers)
+        new_cmap = self.get_grade_from_current_answers(answers)
         self.correct_map = new_cmap  # lint-amnesty, pylint: disable=attribute-defined-outside-init
         self.correct_map_history.append(deepcopy(new_cmap))
         return self.correct_map
@@ -469,7 +475,7 @@ class LoncapaProblem(object):
         """
         return all('filesubmission' not in responder.allowed_inputfields for responder in self.responders.values())
 
-    def get_grade_from_current_answers(self, student_answers):
+    def get_grade_from_current_answers(self, student_answers, correct_map: Optional[CorrectMap] = None):
         """
         Gets the grade for the currently-saved problem state, but does not save it
         to the block.
@@ -483,8 +489,7 @@ class LoncapaProblem(object):
 
         Calls the Response for each question in this problem, to do the actual grading.
         """
-        # old CorrectMap
-        oldcmap = self.correct_map
+        oldcmap = correct_map if self.enable_grading_method else self.correct_map
 
         # start new with empty CorrectMap
         newcmap = CorrectMap()
@@ -501,55 +506,15 @@ class LoncapaProblem(object):
 
             # use 'student_answers' only if it is provided, and if it might contain a file
             # submission that would not exist in the persisted "student_answers".
-            if 'filesubmission' in responder.allowed_inputfields and student_answers is not None:
+            # If grading method is enabled, we need to pass each student answers and the
+            # correct map in the history fields.
+            if (
+                "filesubmission" in responder.allowed_inputfields
+                and student_answers is not None
+            ) or self.enable_grading_method:
                 results = responder.evaluate_answers(student_answers, oldcmap)
             else:
                 results = responder.evaluate_answers(self.student_answers, oldcmap)
-            newcmap.update(results)
-
-        return newcmap
-
-    def get_grade_from_answers(
-        self, student_answers: Optional[dict], correct_map: Optional[CorrectMap] = None
-    ) -> CorrectMap:
-        """
-        This method is based on `get_grade_from_current_answers` but it is used when
-        `ENABLE_GRADING_METHOD_IN_PROBLEMS` feature flag is enabled.
-
-        This method optionally receives a `correct_map` to be used instead
-        of the current one. This allows to make a rescore using each of the
-        correct maps stored in the `correct_map_history`.
-
-        Args:
-            student_answers (Optional[dict]): A dictionary with the student answers.
-            correct_map (CorrectMap, optional): A CorrectMap object with the correct answers.
-                Defaults to None.
-
-        Returns:
-            CorrectMap: A CorrectMap object with the results of the grading.
-        """
-        if not correct_map:
-            correct_map = self.correct_map
-
-        newcmap = CorrectMap()
-        # Call each responsetype instance to do actual grading
-        for responder in self.responders.values():
-            # File objects are passed only if responsetype explicitly allows
-            # for file submissions.  But we have no way of knowing if
-            # student_answers contains a proper answer or the filename of
-            # an earlier submission, so for now skip these entirely.
-            # TODO: figure out where to get file submissions when rescoring.
-            if 'filesubmission' in responder.allowed_inputfields:
-                # use 'student_answers' only if it is provided, and if it might contain a file
-                # submission that would not exist in the persisted "student_answers".
-                if student_answers is None:
-                    _ = self.capa_system.i18n.gettext
-                    raise Exception(_("Cannot rescore problems with possible file submissions"))
-                results = responder.evaluate_answers(student_answers, correct_map)
-            elif student_answers is not None:
-                results = responder.evaluate_answers(student_answers, correct_map)
-            else:
-                results = responder.evaluate_answers(self.student_answers, correct_map)
             newcmap.update(results)
 
         return newcmap

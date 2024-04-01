@@ -4,6 +4,8 @@ Test capa problem.
 import textwrap
 import unittest
 
+from django.conf import settings
+from django.test import override_settings
 import pytest
 import ddt
 from lxml import etree
@@ -14,6 +16,10 @@ from xmodule.capa.correctmap import CorrectMap
 from xmodule.capa.responsetypes import LoncapaProblemError
 from xmodule.capa.tests.helpers import new_loncapa_problem
 from openedx.core.djangolib.markup import HTML
+
+
+FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS = settings.FEATURES.copy()
+FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS['ENABLE_GRADING_METHOD_IN_PROBLEMS'] = True
 
 
 @ddt.ddt
@@ -734,10 +740,11 @@ class CAPAProblemReportHelpersTest(unittest.TestCase):
         # function can eventualy be serialized to json without issues.
         assert isinstance(problem.get_question_answers()['1_solution_1'], str)
 
-    def test_get_grade_from_answers_with_student_answers(self):
+    @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
+    def test_get_grade_from_current_answers(self):
         """
         Verify that `responder.evaluate_answers` is called with `student_answers`
-        and `correct_map` sent to `get_grade_from_answers`.
+        and `correct_map` sent to `get_grade_from_current_answers`.
 
         When both arguments are provided, means that the problem is being rescored.
         """
@@ -763,13 +770,14 @@ class CAPAProblemReportHelpersTest(unittest.TestCase):
             responder_mock.allowed_inputfields = ['choicegroup']
             responder_mock.evaluate_answers.return_value = correct_map
 
-            result = problem.get_grade_from_answers(student_answers, correct_map)
+            result = problem.get_grade_from_current_answers(student_answers, correct_map)
             self.assertDictEqual(result.get_dict(), correct_map.get_dict())
             responder_mock.evaluate_answers.assert_called_once_with(student_answers, correct_map)
 
-    def test_get_grade_from_answers_without_student_answers(self):
+    @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
+    def test_get_grade_from_current_answers_without_student_answers(self):
         """
-        Verify that `responder.evaluate_answers` with appropriate arguments.
+        Verify that `responder.evaluate_answers` is called with appropriate arguments.
 
         When `student_answers` is None, `responder.evaluate_answers` should be called with
         the `self.student_answers` instead.
@@ -795,15 +803,16 @@ class CAPAProblemReportHelpersTest(unittest.TestCase):
             problem.responders['responder1'].allowed_inputfields = ['choicegroup']
             problem.responders['responder1'].evaluate_answers.return_value = correct_map
 
-            result = problem.get_grade_from_answers(None, correct_map)
+            result = problem.get_grade_from_current_answers(None, correct_map)
 
             self.assertDictEqual(result.get_dict(), correct_map.get_dict())
-            responder_mock.evaluate_answers.assert_called_once_with({}, correct_map)
+            responder_mock.evaluate_answers.assert_called_once_with(None, correct_map)
 
-    def test_get_grade_from_answers_with_filesubmission(self):
+    @override_settings(FEATURES=FEATURES_WITH_GRADING_METHOD_IN_PROBLEMS)
+    def test_get_grade_from_current_answers_with_filesubmission(self):
         """
         Verify that an exception is raised when `responder.evaluate_answers` is called
-        with `student_answers` as None and `correct_map` sent to `get_grade_from_answers`
+        with `student_answers` as None and `correct_map` sent to `get_grade_from_current_answers`
 
         This ensures that rescore is not allowed if the problem has a filesubmission.
         """
@@ -829,5 +838,5 @@ class CAPAProblemReportHelpersTest(unittest.TestCase):
             responder_mock.evaluate_answers.return_value = correct_map
 
             with self.assertRaises(Exception):
-                problem.get_grade_from_answers(None, correct_map)
+                problem.get_grade_from_current_answers(None, correct_map)
             responder_mock.evaluate_answers.assert_not_called()
