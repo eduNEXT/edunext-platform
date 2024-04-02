@@ -10,6 +10,7 @@ from django.utils.translation import gettext_noop
 
 from lms.djangoapps.discussion.toggles import ENABLE_DISCUSSIONS_MFE
 from openedx.core.djangoapps.discussions.url_helpers import get_discussions_mfe_url
+from openedx.core.djangoapps.discussions.utils import use_discussions_mfe
 from xmodule.tabs import TabFragmentViewMixin
 
 import lms.djangoapps.discussion.django_comment_client.utils as utils
@@ -44,7 +45,7 @@ class DiscussionTab(TabFragmentViewMixin, EnrolledTab):
     @property
     def link_func(self):
         def _link_func(course, reverse_func):
-            if ENABLE_DISCUSSIONS_MFE.is_enabled(course.id):
+            if ENABLE_DISCUSSIONS_MFE.is_enabled(course.id) and use_discussions_mfe(course.org):
                 return get_discussions_mfe_url(course_key=course.id)
             return reverse('forum_form_discussion', args=[str(course.id)])
 

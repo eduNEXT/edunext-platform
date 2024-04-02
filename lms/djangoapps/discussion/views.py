@@ -54,7 +54,8 @@ from openedx.core.djangoapps.discussions.utils import (
     available_division_schemes,
     get_discussion_categories_ids,
     get_divided_discussions,
-    get_group_names_by_id
+    get_group_names_by_id,
+    use_discussions_mfe
 )
 from openedx.core.djangoapps.django_comment_common.models import (
     FORUM_ROLE_ADMINISTRATOR,
@@ -273,7 +274,7 @@ def redirect_forum_url_to_new_mfe(request, course_id):
     discussions_mfe_enabled = ENABLE_DISCUSSIONS_MFE.is_enabled(course_key)
 
     redirect_url = None
-    if discussions_mfe_enabled:
+    if discussions_mfe_enabled and use_discussions_mfe(course_key.org):
         mfe_base_url = settings.DISCUSSIONS_MICROFRONTEND_URL
         redirect_url = f"{mfe_base_url}/{str(course_key)}"
     return redirect_url
@@ -333,7 +334,8 @@ def redirect_thread_url_to_new_mfe(request, course_id, thread_id):
     course_key = CourseKey.from_string(course_id)
     discussions_mfe_enabled = ENABLE_DISCUSSIONS_MFE.is_enabled(course_key)
     redirect_url = None
-    if discussions_mfe_enabled:
+
+    if discussions_mfe_enabled and use_discussions_mfe(course_key.org):
         mfe_base_url = settings.DISCUSSIONS_MICROFRONTEND_URL
         if thread_id:
             redirect_url = f"{mfe_base_url}/{str(course_key)}/posts/{thread_id}"
@@ -653,7 +655,7 @@ def user_profile(request, course_key, user_id):
             })
         else:
             discussions_mfe_enabled = ENABLE_DISCUSSIONS_MFE.is_enabled(course_key)
-            if discussions_mfe_enabled:
+            if discussions_mfe_enabled and use_discussions_mfe(course_key.org):
                 mfe_base_url = settings.DISCUSSIONS_MICROFRONTEND_URL
                 return redirect(f"{mfe_base_url}/{str(course_key)}/learners")
 
