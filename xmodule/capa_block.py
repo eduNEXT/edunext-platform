@@ -503,12 +503,12 @@ class ProblemBlock(
             GRADING_METHOD.HIGHEST_SCORE: _("Highest Score"),
             GRADING_METHOD.AVERAGE_SCORE: _("Average Score"),
         }
-        if self.enable_grading_method:
+        if self.is_grading_method_enabled:
             return display_name[self.grading_method]
         return None
 
     @property
-    def enable_grading_method(self) -> bool:
+    def is_grading_method_enabled(self) -> bool:
         """
         Returns whether the grading method feature is enabled. If the
         feature is not enabled, the grading method field will not be shown in
@@ -570,7 +570,7 @@ class ProblemBlock(
             #   https://github.com/openedx/public-engineering/issues/192
             ProblemBlock.matlab_api_key,
         ])
-        if not self.enable_grading_method:
+        if not self.is_grading_method_enabled:
             non_editable_fields.append(ProblemBlock.grading_method)
         return non_editable_fields
 
@@ -1822,7 +1822,7 @@ class ProblemBlock(
 
             current_score = self.score_from_lcp(self.lcp)
             self.score_history.append(current_score)
-            if self.enable_grading_method:
+            if self.is_grading_method_enabled:
                 current_score = self.get_score_with_grading_method(current_score)
             self.set_score(current_score)
             self.set_last_submission_time()
@@ -2344,7 +2344,7 @@ class ProblemBlock(
 
         If the grading method is enabled, the score is calculated based on the grading method.
         """
-        if self.enable_grading_method:
+        if self.is_grading_method_enabled:
             return self.get_rescore_with_grading_method()
         self.update_correctness()
         new_score = self.lcp.calculate_score()

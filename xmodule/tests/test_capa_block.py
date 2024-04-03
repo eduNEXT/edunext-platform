@@ -817,7 +817,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         # Disabled grading method
         with patch(
-            'xmodule.capa_block.ProblemBlock.enable_grading_method',
+            'xmodule.capa_block.ProblemBlock.is_grading_method_enabled',
             new_callable=mock.PropertyMock,
             return_value=False
         ):
@@ -843,7 +843,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         # Enabled grading method
         with patch(
-            'xmodule.capa_block.ProblemBlock.enable_grading_method',
+            'xmodule.capa_block.ProblemBlock.is_grading_method_enabled',
             new_callable=mock.PropertyMock,
             return_value=True
         ):
@@ -884,7 +884,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         # Enabled grading method
         with patch(
-            'xmodule.capa_block.ProblemBlock.enable_grading_method',
+            'xmodule.capa_block.ProblemBlock.is_grading_method_enabled',
             new_callable=mock.PropertyMock,
             return_value=True
         ):
@@ -910,7 +910,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         # Disabled grading method
         with patch(
-            'xmodule.capa_block.ProblemBlock.enable_grading_method',
+            'xmodule.capa_block.ProblemBlock.is_grading_method_enabled',
             new_callable=mock.PropertyMock,
             return_value=False
         ):
@@ -1633,7 +1633,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         # Disabled grading method
         with patch(
-            'xmodule.capa_block.ProblemBlock.enable_grading_method',
+            'xmodule.capa_block.ProblemBlock.is_grading_method_enabled',
             new_callable=mock.PropertyMock,
             return_value=False
         ):
@@ -1649,12 +1649,12 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         # Enabled grading method
         with patch(
-            'xmodule.capa_block.ProblemBlock.enable_grading_method',
+            'xmodule.capa_block.ProblemBlock.is_grading_method_enabled',
             new_callable=mock.PropertyMock,
             return_value=True
         ):
             with patch(
-                'xmodule.capa.capa_problem.LoncapaProblem.enable_grading_method',
+                'xmodule.capa.capa_problem.LoncapaProblem.is_grading_method_enabled',
                 new_callable=mock.PropertyMock,
                 return_value=True
             ):
@@ -1703,12 +1703,12 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         # Enabled grading method
         with patch(
-            'xmodule.capa_block.ProblemBlock.enable_grading_method',
+            'xmodule.capa_block.ProblemBlock.is_grading_method_enabled',
             new_callable=mock.PropertyMock,
             return_value=True
         ):
             with patch(
-                'xmodule.capa.capa_problem.LoncapaProblem.enable_grading_method',
+                'xmodule.capa.capa_problem.LoncapaProblem.is_grading_method_enabled',
                 new_callable=mock.PropertyMock,
                 return_value=True
             ):
@@ -1742,7 +1742,7 @@ class ProblemBlockTest(unittest.TestCase):  # lint-amnesty, pylint: disable=miss
 
         # Disabled grading method
         with patch(
-            'xmodule.capa_block.ProblemBlock.enable_grading_method',
+            'xmodule.capa_block.ProblemBlock.is_grading_method_enabled',
             new_callable=mock.PropertyMock,
             return_value=False
         ):

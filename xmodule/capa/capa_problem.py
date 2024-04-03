@@ -240,7 +240,7 @@ class LoncapaProblem(object):
                 self.extracted_tree = self._extract_html(self.tree)
 
     @property
-    def enable_grading_method(self) -> bool:
+    def is_grading_method_enabled(self) -> bool:
         """
         Returns whether the grading method feature is enabled. If the
         feature is not enabled, the grading method field will not be shown in
@@ -495,7 +495,7 @@ class LoncapaProblem(object):
         and student_answers_history). The correct map will always be updated, depending on
         the student answers. The student answers will always remain the same over time.
         """
-        oldcmap = correct_map if self.enable_grading_method else self.correct_map
+        oldcmap = correct_map if self.is_grading_method_enabled else self.correct_map
 
         # start new with empty CorrectMap
         newcmap = CorrectMap()
@@ -517,7 +517,7 @@ class LoncapaProblem(object):
             if (
                 "filesubmission" in responder.allowed_inputfields
                 and student_answers is not None
-            ) or self.enable_grading_method:
+            ) or self.is_grading_method_enabled:
                 results = responder.evaluate_answers(student_answers, oldcmap)
             else:
                 results = responder.evaluate_answers(self.student_answers, oldcmap)
