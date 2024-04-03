@@ -488,6 +488,12 @@ class LoncapaProblem(object):
         For rescoring, `student_answers` is None.
 
         Calls the Response for each question in this problem, to do the actual grading.
+
+        When the grading method is enabled, this method is used for rescore. In this case,
+        the `correct_map` and the `student_answers` passed as arguments will be used,
+        corresponding to each pair in the fields that store the history (correct_map_history
+        and student_answers_history). The correct map will always be updated, depending on
+        the student answers. The student answers will always remain the same over time.
         """
         oldcmap = correct_map if self.enable_grading_method else self.correct_map
 
