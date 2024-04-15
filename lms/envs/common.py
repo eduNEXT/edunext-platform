@@ -3183,6 +3183,10 @@ INSTALLED_APPS = [
     # API Documentation
     'drf_yasg',
 
+    "openedx_learning.core.components",
+    "openedx_learning.core.contents",
+    "openedx_learning.core.publishing",
+
     # edx-drf-extensions
     'csrf.apps.CsrfAppConfig',  # Enables frontend apps to retrieve CSRF tokens.
     'xss_utils',

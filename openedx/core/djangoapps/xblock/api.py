@@ -20,6 +20,10 @@ from rest_framework.exceptions import NotFound
 from xblock.core import XBlock
 from xblock.exceptions import NoSuchViewError
 
+from openedx_learning.core.components import api as components_api
+from openedx_learning.core.components.models import Component
+from openedx_learning.core.publishing import api as publishing_api
+
 from openedx.core.djangoapps.xblock.apps import get_xblock_app_config
 from openedx.core.djangoapps.xblock.learning_context.manager import get_learning_context_impl
 from openedx.core.djangoapps.xblock.runtime.blockstore_runtime import BlockstoreXBlockRuntime, xml_for_definition
@@ -271,3 +275,24 @@ def get_handler_url(usage_key, handler_name, user, extra_params=None):
     # can be called by the XBlock from python as well and in that case we don't
     # have access to the request.
     return site_root_url + path + qstring
+
+
+
+def get_component_from_usage_key(usage_key: UsageKeyV2) -> Component:
+    """
+    Fetch the Component object for a given usage key.
+
+    Raises a ObjectDoesNotExist error if no such Component exists.
+
+    This is a lower-level function that will return a Component even if there is
+    no current draft version of that Component (because it's been soft-deleted).
+    """
+    learning_package = publishing_api.get_learning_package_by_key(
+        str(usage_key.context_key)
+    )
+    return components_api.get_component_by_key(
+        learning_package.id,
+        namespace='xblock.v1',
+        type_name=usage_key.block_type,
+        local_key=usage_key.block_id,
+    )
