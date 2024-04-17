@@ -66,6 +66,8 @@ class LanguagePreferenceMiddleware(MiddlewareMixin):
 
             # DarkLangMiddleware has already set this cookie
             if DarkLangConfig.current().enabled and get_user_preference(current_user, DARK_LANGUAGE_KEY):
+                new_lang = get_user_preference(current_user, DARK_LANGUAGE_KEY)
+                lang_pref_helpers.set_language_cookie(request, response, new_lang)
                 return response
 
             anonymous_cookie_lang = getattr(request, '_anonymous_user_cookie_lang', None)
