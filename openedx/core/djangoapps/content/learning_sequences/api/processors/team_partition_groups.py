@@ -41,12 +41,14 @@ class TeamPartitionGroupsOutlineProcessor(OutlineProcessor):
             return
 
         user_partitions = create_team_set_partitions_with_course_id(self.course_key)
+        log.info("[DEBUGGING] User partitions for course %s: %s", self.course_key, user_partitions)
         self.current_user_groups = get_user_partition_groups(
             self.course_key,
             user_partitions,
             self.user,
             partition_dict_key="id",
         )
+        log.info("[DEBUGGING] Groups for current user %s: %s", self.course_key, self.current_user_groups)
 
     def _is_user_excluded_by_partition_group(self, user_partition_groups):
         """
@@ -63,7 +65,7 @@ class TeamPartitionGroupsOutlineProcessor(OutlineProcessor):
         """
         if not CONTENT_GROUPS_FOR_TEAMS.is_enabled(self.course_key):
             return False
-
+        log.info("[DEBUGGING] User partition groups for block: %s", user_partition_groups)
         if not user_partition_groups:
             return False
 
@@ -85,6 +87,7 @@ class TeamPartitionGroupsOutlineProcessor(OutlineProcessor):
         """
         removed_usage_keys = set()
         for section in full_course_outline.sections:
+            log.info("[DEBUGGING] User partition groups for section %s: %s", section.title, section.user_partition_groups)
             remove_all_children = False
             if self._is_user_excluded_by_partition_group(
                 section.user_partition_groups
@@ -92,6 +95,7 @@ class TeamPartitionGroupsOutlineProcessor(OutlineProcessor):
                 removed_usage_keys.add(section.usage_key)
                 remove_all_children = True
             for seq in section.sequences:
+                log.info("[DEBUGGING] User partition groups for sequence %s: %s", seq.title, seq.user_partition_groups)
                 if remove_all_children or self._is_user_excluded_by_partition_group(
                     seq.user_partition_groups
                 ):

@@ -3,6 +3,7 @@ This is where Studio interacts with the learning_sequences application, which
 is responsible for holding course outline data. Studio _pushes_ that data into
 learning_sequences at publish time.
 """
+import logging
 from datetime import timezone
 from typing import List, Tuple
 
@@ -21,6 +22,7 @@ from openedx.core.djangoapps.content.learning_sequences.data import (
 from xmodule.modulestore import ModuleStoreEnum  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.modulestore.django import modulestore  # lint-amnesty, pylint: disable=wrong-import-order
 
+log = logging.getLogger(__name__)
 
 def _remove_version_info(usage_key):
     """
@@ -131,9 +133,12 @@ def _bubbled_up_groups_from_units(group_access_from_units):
     normalized_group_access_dicts = [
         _normalize_group_access_dict(group_access) for group_access in group_access_from_units
     ]
+    log.info(f"[DEBUGGING] Normalized group_access_dicts: {normalized_group_access_dicts}")
     first_unit_group_access = normalized_group_access_dicts[0]
     rest_of_seq_group_access_list = normalized_group_access_dicts[1:]
 
+    log.info(f"[DEBUGGING] First unit group_access: {first_unit_group_access}")
+    log.info(f"[DEBUGGING] Rest of sequence group_access: {rest_of_seq_group_access_list}")
     # If there's only a single Unit, bubble up its group_access.
     if not rest_of_seq_group_access_list:
         return first_unit_group_access
@@ -150,6 +155,7 @@ def _bubbled_up_groups_from_units(group_access_from_units):
             for group_access in rest_of_seq_group_access_list
         )
     }
+    log.info(f"[DEBUGGING] Common group_access: {common_group_access}")
     return common_group_access
 
 
@@ -269,9 +275,11 @@ def _make_section_data(section, unique_sequences):
             section_errors.append(error)
 
         # Bubble up User Partition Group settings from Units if appropriate.
+        log.info(f"[DEBUGGING] Sequence {sequence.display_name_with_default}")
         sequence_upg_from_units = _bubbled_up_groups_from_units(
             [unit.group_access for unit in sequence.get_children()]
         )
+        log.info(f"[DEBUGGING] Bubbled up groups from Units: {sequence_upg_from_units}")
         for user_partition_id, group_ids in sequence_upg_from_units.items():
             # If there's an existing user partition ID set at the sequence
             # level, we respect it, even if it seems nonsensical. The hack of
@@ -306,6 +314,7 @@ def _make_section_data(section, unique_sequences):
                 user_partition_groups=seq_user_partition_groups,
             )
         )
+        log.info(f"[DEBUGGING] Sequence {sequence.location.block_id} with name {sequence.display_name_with_default} has user_partition_groups: {seq_user_partition_groups}")
 
     section_data = CourseSectionData(
         usage_key=_remove_version_info(section.location),
@@ -317,6 +326,7 @@ def _make_section_data(section, unique_sequences):
         ),
         user_partition_groups=section_user_partition_groups,
     )
+    log.info(f"[DEBUGGING] Section {section.location.block_id} with name {section.display_name_with_default} has user_partition_groups: {section_user_partition_groups}")
     return section_data, section_errors, unique_sequences
 
 
