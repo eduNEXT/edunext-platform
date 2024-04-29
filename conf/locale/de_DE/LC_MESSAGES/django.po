@@ -2995,8 +2995,8 @@ msgstr "Deaktiviert"
 #, python-brace-format
 msgid "({number} Question)"
 msgid_plural "({number} Questions)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "({number} Frage)"
+msgstr[1] "({number} Fragen)"
 
 #: lms/djangoapps/course_home_api/outline/views.py
 #, python-brace-format
@@ -3163,7 +3163,7 @@ msgstr "Einschreibungsdatum"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Course starts"
-msgstr ""
+msgstr "Kursstart"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Course ends"
@@ -20887,7 +20887,7 @@ msgid ""
 "Build out your profile to personalize your identity on {platform_name}."
 msgstr ""
 "Bearbeiten Sie Ihre persönlichen Informationen, um Ihr Profil auf der  "
-"{platform_name} zu personalisieren."
+"{platform_name} Lernplattform zu personalisieren."
 
 #: openedx/features/learner_profile/templates/learner_profile/learner_profile.html
 msgid "An error occurred. Try loading the page again."
