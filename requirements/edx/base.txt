@@ -5,6 +5,7 @@
 #    make upgrade
 #
 openedx-learning==0.6.3
+meilisearch==0.30.0
 -e git+https://github.com/openedx/blockstore.git@1.2.1#egg=blockstore==1.2.1
     # via -r requirements/edx/github.in
 -e common/lib/capa
