@@ -11,6 +11,8 @@ Studio APIs cover use cases like adding/deleting/editing blocks.
 import logging
 import threading
 from urllib.parse import urlencode
+from uuid import UUID
+import uuid
 
 from django.urls import reverse
 from django.utils.translation import gettext as _
@@ -183,9 +185,9 @@ def get_block_display_name(block_or_key):
     """
     def_key = resolve_definition(block_or_key)
     use_draft = get_xblock_app_config().get_learning_context_params().get('use_draft')
-    cache = BundleCache(def_key.bundle_uuid, draft_name=use_draft)
-    cache_key = ('block_display_name', str(def_key))
-    display_name = cache.get(cache_key)
+    # cache = BundleCache(None, draft_name=use_draft)
+    # cache_key = ('block_display_name', str(def_key))
+    display_name = block_or_key.display_name
     if display_name is None:
         # Instead of loading the block, just load its XML and parse it
         try:

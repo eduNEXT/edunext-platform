@@ -11,6 +11,7 @@ and won't find the now-invalid cached data.
 
 from datetime import datetime
 from uuid import UUID
+import uuid
 
 from django.conf import settings
 from django.core.cache import caches, InvalidCacheBackendError
@@ -52,7 +53,7 @@ class BundleCache:
         Instantiate this wrapper for the bundle with the specified UUID, and
         optionally the specified draft name.
         """
-        self.bundle_uuid = bundle_uuid
+        self.bundle_uuid = uuid.uuid1()
         self.draft_name = draft_name
 
     def get(self, key_parts, default=None):

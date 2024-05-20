@@ -192,6 +192,7 @@ def searchable_doc_for_course_block(block) -> dict:
     like Meilisearch or Elasticsearch, so that the given course block can be
     found using faceted search.
     """
+    block.usage_key = UsageKey.from_string(str(block.location))
     doc = _fields_from_block(block)
     doc.update(_tags_for_content_object(block.usage_key))
     doc[Fields.type] = DocType.course_block
