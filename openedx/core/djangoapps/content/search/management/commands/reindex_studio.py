@@ -10,6 +10,8 @@ import time
 
 from django.conf import settings
 from django.core.management import BaseCommand, CommandError
+from django.core.paginator import Paginator
+from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 
 from openedx.core.djangoapps.content_libraries import api as lib_api
 from openedx.core.djangoapps.content.search.documents import (
@@ -57,9 +59,7 @@ class Command(MeiliCommandMixin, BaseCommand):
 
         # Get the list of courses
         self.stdout.write("Counting courses...")
-        with store.branch_setting(ModuleStoreEnum.Branch.draft_preferred):
-            all_courses = store.get_courses()
-        num_courses = len(all_courses)
+        num_courses = CourseOverview.objects.count()
 
         # Some counters so we can track our progress as indexing progresses:
         num_contexts = num_courses + num_libraries
@@ -112,28 +112,30 @@ class Command(MeiliCommandMixin, BaseCommand):
 
             ############## Courses ##############
             self.stdout.write("Indexing courses...")
-            for course in all_courses:
-                self.stdout.write(
-                    f"{num_contexts_done + 1}/{num_contexts}. Now indexing course {course.display_name} ({course.id})"
-                )
-                docs = []
+            paginator = Paginator(CourseOverview.objects.only('id', 'display_name'), 1000)
+            for p in paginator.page_range:
+                for course in paginator.page(p).object_list:
+                    self.stdout.write(f"{1}{1}. Now indexing course {course.display_name} ({course.id})")
+                    docs = []
 
-                # Pre-fetch the course with all of its children:
-                course = store.get_course(course.id, depth=None)
+                    # Pre-fetch the course with all of its children:
+                    course = store.get_course(course.id, depth=None)
 
-                def add_with_children(block):
-                    """ Recursively index the given XBlock/component """
-                    doc = searchable_doc_for_course_block(block)
-                    docs.append(doc)  # pylint: disable=cell-var-from-loop
-                    self.recurse_children(block, add_with_children)  # pylint: disable=cell-var-from-loop
+                    def add_with_children(block):
+                        """Recursively index the given XBlock/component."""
+                        doc = searchable_doc_for_course_block(block)
+                        docs.append(doc)
+                        self.recurse_children(block, add_with_children)
 
-                self.recurse_children(course, add_with_children)
+                    # Index course children
+                    self.recurse_children(course, add_with_children)
 
-                if docs:
-                    # Add all the docs in this course at once (usually faster than adding one at a time):
-                    self.wait_for_meili_task(client.index(temp_index_name).add_documents(docs))
-                num_contexts_done += 1
-                num_blocks_done += len(docs)
+                    if docs:
+                        # Add all the docs in this course at once (usually faster than addding one at a time):
+                        self.wait_for_meili_task(client.index(temp_index_name).add_documents(docs))
+                    num_contexts_done += 1
+                    num_blocks_done += len(docs)
+
 
         elapsed_time = time.perf_counter() - start_time
         self.stdout.write(
