@@ -115,7 +115,7 @@ class Command(MeiliCommandMixin, BaseCommand):
             paginator = Paginator(CourseOverview.objects.only('id', 'display_name'), 1000)
             for p in paginator.page_range:
                 for course in paginator.page(p).object_list:
-                    self.stdout.write(f"{1}{1}. Now indexing course {course.display_name} ({course.id})")
+                    self.stdout.write(f"{num_contexts_done + 1}{num_contexts}. Now indexing course {course.display_name} ({course.id})")
                     docs = []
 
                     # Pre-fetch the course with all of its children:
@@ -123,8 +123,13 @@ class Command(MeiliCommandMixin, BaseCommand):
 
                     def add_with_children(block):
                         """Recursively index the given XBlock/component."""
-                        doc = searchable_doc_for_course_block(block)
-                        docs.append(doc)
+                        if block is None:
+                            return
+                        try:
+                            doc = searchable_doc_for_course_block(block)
+                            docs.append(doc)
+                        except:
+                            pass
                         self.recurse_children(block, add_with_children)
 
                     # Index course children
@@ -150,6 +155,8 @@ class Command(MeiliCommandMixin, BaseCommand):
         The main purpose of this is just to wrap the loading of each child in
         try...except. Otherwise block.get_children() would do what we need.
         """
+        if block is None:
+            return
         if block.has_children:
             for child_id in block.children:
                 try:

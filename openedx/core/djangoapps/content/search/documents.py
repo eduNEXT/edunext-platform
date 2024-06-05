@@ -96,7 +96,7 @@ def _fields_from_block(block) -> dict:
         Fields.display_name: xblock_api.get_block_display_name(block),
         Fields.block_type: block.scope_ids.block_type,
         # This is called context_key so it's the same for courses and libraries
-        Fields.context_key: str(block.usage_key.context_key),  # same as lib_key
+        Fields.context_key: f"{block.usage_key.context_key.course}/{block.usage_key.context_key.org}/{block.usage_key.context_key.run}",  # same as lib_key
         Fields.org: str(block.usage_key.context_key.org),
         Fields.breadcrumbs: []
     }
