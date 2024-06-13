@@ -43,6 +43,7 @@ def create_account(request):
 class HelperMixin:
     """
     Contains helper methods for IntegrationTestMixin and IntegrationTest classes below.
+    Test Deprecar FFI-8 Running Test Suit
     """
 
     provider = None
