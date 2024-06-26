@@ -143,7 +143,7 @@ def enroll_email(course_id, student_email, auto_enroll=False, email_students=Fal
     previous_state = EmailEnrollmentState(course_id, student_email)
     enrollment_obj = None
     course_module = modulestore().get_course(course_id, depth=0)
-    email_params['course_image_url'] = course_image_url(course_module, 'course_image')
+    email_params['course_image_url'] = f'{settings.LMS_ROOT_URL}{course_image_url(course_module)}'
     if previous_state.user and previous_state.user.is_active:
         # if the student is currently unenrolled, don't enroll them in their
         # previous mode
