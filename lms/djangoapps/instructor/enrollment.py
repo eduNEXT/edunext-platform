@@ -142,6 +142,8 @@ def enroll_email(course_id, student_email, auto_enroll=False, email_students=Fal
     """
     previous_state = EmailEnrollmentState(course_id, student_email)
     enrollment_obj = None
+    course_module = modulestore().get_course(course_id, depth=0)
+    email_params['course_image_url'] = course_image_url(course_module, 'course_image')
     if previous_state.user and previous_state.user.is_active:
         # if the student is currently unenrolled, don't enroll them in their
         # previous mode
@@ -160,8 +162,6 @@ def enroll_email(course_id, student_email, auto_enroll=False, email_students=Fal
 
         enrollment_obj = CourseEnrollment.enroll_by_email(student_email, course_id, course_mode)
         if email_students:
-            course_module = modulestore().get_course(course_id, depth=0)
-            email_params['course_image_url'] = course_image_url(course_module, 'course_image')
             email_params['message_type'] = 'enrolled_enroll'
             email_params['email_address'] = student_email
             email_params['user_id'] = previous_state.user.id
