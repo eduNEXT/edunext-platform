@@ -785,7 +785,9 @@ openedx-events==9.0.0
     #   -r requirements/edx/kernel.in
     #   edx-event-bus-kafka
     #   edx-event-bus-redis
-openedx-filters==1.6.0
+    #   event-tracking
+    #   ora2
+git+https://github.com/eduNEXT/openedx-filters.git@jipm/add_tenant_aware_filter
     # via
     #   -r requirements/edx/kernel.in
     #   lti-consumer-xblock
