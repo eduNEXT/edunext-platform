@@ -485,6 +485,15 @@ class CourseTabList(List):
         Reverse and Rename Courseware to Course and Course Info to Home Tabs.
         """
         if tabs and len(tabs) > 1:
+            ## Note: this is a temporal hot fix to allow course import from olive+ into nutmeg
+            if tabs[0].get('type') != 'course_info' and tabs[1].get('type') != 'course_info':
+                temp_tab = {
+                    'type': 'course_info', 
+                    'name': 'Home', 
+                    'course_staff_only': False
+                }
+                tabs.insert(1,temp_tab)
+
             if tabs[0].get('type') == 'courseware' and tabs[1].get('type') == 'course_info':
                 tabs[0], tabs[1] = tabs[1], tabs[0]
                 tabs[0]['name'] = _('Home')
