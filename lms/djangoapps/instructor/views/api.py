@@ -2709,6 +2709,7 @@ def send_email(request, course_id):
 
     schedule_dt = None
     if schedule:
+        print(f"-----------------------------------Schedule provided: {schedule}")
         try:
             # convert the schedule from a string to a datetime, then check if its a valid future date and time, dateutil
             # will throw a ValueError if the schedule is no good.

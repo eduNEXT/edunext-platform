@@ -329,7 +329,9 @@ def submit_bulk_course_email(request, course_key, email_id, schedule=None):
     # create the key value by using MD5 hash:
     task_key = hashlib.md5(task_key_stub.encode('utf-8')).hexdigest()
 
+    print('--------------scheduled task', schedule)
     if schedule:
+        print('-------------- correct scheduled task', schedule)
         return schedule_task(request, task_type, course_key, task_input, task_key, schedule)
 
     return submit_task(request, task_type, task_class, course_key, task_input, task_key)

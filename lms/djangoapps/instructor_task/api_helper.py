@@ -502,7 +502,7 @@ def schedule_task(request, task_type, course_key, task_input, task_key, schedule
             task_args=json.dumps(task_args),
             task_due=schedule,
         )
-
+        print(f"-----------------------------Task '{instructor_task.id}' scheduled for execution at '{schedule}'")
         log.info(f"Updating task state of instructor task '{instructor_task.id}' to '{SCHEDULED}'")
         instructor_task.task_state = SCHEDULED
         instructor_task.save()
