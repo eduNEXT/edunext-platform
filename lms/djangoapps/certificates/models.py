@@ -465,8 +465,12 @@ class GeneratedCertificate(models.Model):
         Credentials IDA.
         """
         super().save(*args, **kwargs)
+        if self._meta.proxy:
+            sending_class = self._meta.proxy_for_model
+        else:
+            sending_class = self.__class__
         COURSE_CERT_CHANGED.send_robust(
-            sender=self.__class__,
+            sender=sending_class,
             user=self.user,
             course_key=self.course_id,
             mode=self.mode,
@@ -498,7 +502,7 @@ class GeneratedCertificate(models.Model):
 
         if CertificateStatuses.is_passing_status(self.status):
             COURSE_CERT_AWARDED.send_robust(
-                sender=self.__class__,
+                sender=sending_class,
                 user=self.user,
                 course_key=self.course_id,
                 mode=self.mode,
