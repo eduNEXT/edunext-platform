@@ -51,6 +51,7 @@ from lms.djangoapps.instructor.message_types import (
 from openedx.core.djangoapps.lang_pref import LANGUAGE_KEY
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.user_api.models import UserPreference
+from openedx.core.lib.courses import course_image_url
 from xmodule.modulestore.django import modulestore  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.modulestore.exceptions import ItemNotFoundError  # lint-amnesty, pylint: disable=wrong-import-order
 
@@ -476,6 +477,8 @@ def get_email_params(course, auto_enroll, secure=True, course_key=None, display_
     )
     platform_name = configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
 
+    image_url = f'{settings.LMS_ROOT_URL}{course_image_url(course)}'
+
     # Composition of email
     email_params = {
         'site_name': stripped_site_name,
@@ -485,6 +488,7 @@ def get_email_params(course, auto_enroll, secure=True, course_key=None, display_
         'auto_enroll': auto_enroll,
         'course_url': course_url,
         'course_about_url': course_about_url,
+        'course_image_url': image_url,
         'is_shib_course': is_shib_course,
         'contact_mailing_address': contact_mailing_address,
         'platform_name': platform_name,
