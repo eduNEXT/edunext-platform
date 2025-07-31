@@ -61,7 +61,7 @@ from common.djangoapps.util.milestones_helpers import (
     get_pre_requisite_courses_not_completed,
     is_prerequisite_courses_enabled
 )
-from xmodule.course_block import CATALOG_VISIBILITY_ABOUT, CATALOG_VISIBILITY_CATALOG_AND_ABOUT, CourseBlock  # lint-amnesty, pylint: disable=wrong-import-order
+from xmodule.course_block import CATALOG_VISIBILITY_ABOUT, CATALOG_VISIBILITY_CATALOG_AND_ABOUT, CATALOG_VISIBILITY_NONE, CourseBlock  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.error_block import ErrorBlock  # lint-amnesty, pylint: disable=wrong-import-order
 from xmodule.partitions.partitions import NoSuchUserPartitionError, NoSuchUserPartitionGroupError  # lint-amnesty, pylint: disable=wrong-import-order
 
@@ -395,6 +395,7 @@ def _has_access_course(user, action, courselike):
         return (
             _has_catalog_visibility(courselike, CATALOG_VISIBILITY_CATALOG_AND_ABOUT)
             or _has_staff_access_to_block(user, courselike, courselike.id)
+            or (can_load() and _has_catalog_visibility(courselike, CATALOG_VISIBILITY_NONE))
         )
 
     @function_trace('can_see_about_page')
@@ -408,6 +409,7 @@ def _has_access_course(user, action, courselike):
             _has_catalog_visibility(courselike, CATALOG_VISIBILITY_CATALOG_AND_ABOUT)
             or _has_catalog_visibility(courselike, CATALOG_VISIBILITY_ABOUT)
             or _has_staff_access_to_block(user, courselike, courselike.id)
+            or (can_load() and _has_catalog_visibility(courselike, CATALOG_VISIBILITY_NONE))
         )
 
     checkers = {
