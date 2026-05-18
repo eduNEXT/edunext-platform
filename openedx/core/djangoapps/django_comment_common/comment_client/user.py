@@ -286,7 +286,11 @@ class User(models.Model):
     def retire(self, retired_username):
         course_key = utils.get_course_key(self.attributes.get("course_id"))
         if is_forum_v2_enabled(course_key):
-            forum_api.retire_user(user_id=self.id, retired_username=retired_username, course_id=str(course_key))
+            try:
+                forum_api.retire_user(user_id=self.id, retired_username=retired_username, course_id=str(course_key))
+            except ForumV2RequestError:
+                # User has no forum account (never posted), so there is nothing to retire.
+                pass
         else:
             url = _url_for_retire(self.id)
             params = {'retired_username': retired_username}
